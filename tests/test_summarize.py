@@ -36,7 +36,7 @@ def test_success_normalizes_output():
 
     call = client.calls[0]
     config = call["config"]
-    assert call["model"] == "gemini-3.8-flash"
+    assert call["model"] == "gemini-3.5-flash-lite"
     assert config.response_mime_type == "application/json"
     assert config.response_json_schema is sm.SUMMARY_SCHEMA
     assert config.thinking_config.thinking_level == types.ThinkingLevel.MEDIUM

@@ -18,7 +18,7 @@ GitHub Actions（每天台北時間 07:17）
   │                    4. 相關度 ≥ 4 的取前 10 篇；量少的日子寧缺勿濫
   │                    （語意評分失敗時自動退回關鍵字排序）
   │
-  ├─ summarize.py      Gemini 3.8 Flash 以 structured outputs 逐篇產生固定格式的重點：
+  ├─ summarize.py      Gemini 3.5 Flash-Lite 以 structured outputs 逐篇產生固定格式的重點：
   │                    一句話結論、問題、方法、發現、交易意涵、限制、落地可用性 1–5
   │
   ├─ store.py          寫入 data/papers/YYYY-MM-DD.json ← 唯一的資料來源
@@ -86,7 +86,9 @@ python -m http.server 8000 -d site     # 在 http://localhost:8000 預覽
 
 ## 免費額度
 
-每天的用量是語意排序 1 次（Flash-Lite）加摘要約 10 次（Flash）。兩個模型的免費額度分開計算。GitHub Actions 與 Pages 在 public repo 也免費。
+每天的用量是語意排序 1 次加摘要約 10 次，預設都用 `gemini-3.5-flash-lite`，共用同一個模型的每日額度。免費額度以模型為單位計算，**失敗的請求也算在內**。GitHub Actions 與 Pages 在 public repo 也免費。
+
+摘要原本想用品質稍好的 `gemini-3.8-flash`，但 2026 年 10 月實測它的免費額度每天只有 20 次，而且經常回傳 503 過載，重試幾輪就把當天額度耗光。想試試看的話，在 Variables 設 `SUMMARY_MODEL` = `gemini-3.8-flash`。
 
 Google 沒有公開固定的免費額度數字，而且調整過好幾次。你的實際額度請看 https://aistudio.google.com/rate-limit 。程式對兩種上限的處理方式：
 

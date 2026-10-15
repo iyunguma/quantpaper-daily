@@ -120,7 +120,9 @@ CATEGORY_BONUS = {
 MIN_KEYWORD_SCORE = 8
 
 # ---------------------------------------------------------------- 模型
-# 使用 Gemini API 免費額度。重排與摘要用不同模型，免費額度是分開計算的。
+# 使用 Gemini API 免費額度。免費額度以模型為單位計算，失敗的請求也算在內。
+# 預設重排與摘要都用 Flash-Lite：2026-10 實測 gemini-3.8-flash 免費額度每天只有 20 次，
+# 而且經常回傳 503 過載，一天就把額度耗光；Flash-Lite 則穩定、幾秒就回應。
 # Google 汰換模型很快，模型被停用時到 https://ai.google.dev/gemini-api/docs/models
 # 查新名稱，用 repo 的 Variables 覆蓋即可，不用改程式。
 #
@@ -143,7 +145,7 @@ MIN_RELEVANCE = int(_env("MIN_RELEVANCE", "4"))
 
 # ---------------------------------------------------------------- 摘要
 
-SUMMARY_MODEL = _env("SUMMARY_MODEL", "gemini-3.8-flash")
+SUMMARY_MODEL = _env("SUMMARY_MODEL", "gemini-3.5-flash-lite")
 SUMMARY_THINKING = _env("SUMMARY_THINKING", "medium")
 
 # 思考 token 也算在這個上限內，要留足空間
