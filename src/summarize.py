@@ -1,19 +1,19 @@
-"""把論文交給 Claude，產出結構化的繁體中文重點。"""
+"""把論文交給 Gemini，產出結構化的繁體中文重點。"""
 
 from __future__ import annotations
 
-import base64
 import logging
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
 
 import requests
 
 from config import (
-    ARXIV_DELAY_SECONDS, PDF_MAX_BYTES, SUMMARY_CONCURRENCY, SUMMARY_EFFORT,
-    SUMMARY_MAX_TOKENS, SUMMARY_MODEL, SUMMARY_SOURCE, USER_AGENT,
+    ARXIV_DELAY_SECONDS, PDF_MAX_BYTES, SUMMARY_CONCURRENCY, SUMMARY_MAX_TOKENS,
+    SUMMARY_MODEL, SUMMARY_SOURCE, SUMMARY_THINKING, USER_AGENT,
 )
-from llm import LLMError, structured_call
+from llm import LLMError, QuotaExhausted, structured_call
 
 log = logging.getLogger(__name__)
 
@@ -93,7 +93,8 @@ def normalize(data: dict, paper: dict, source: str) -> dict:
         out["practicality"] = max(1, min(5, int(data.get("practicality", 3))))
     except (TypeError, ValueError):
         out["practicality"] = 3
-    out["tags"] = [str(t).strip() for t in data.get("tags", []) if str(t).strip()][:5]
+    tags = data.get("tags")
+    out["tags"] = [str(t).strip() for t in tags if str(t).strip()][:5] if isinstance(tags, list) else []
     out["ok"] = True
     out["source"] = source
     return out
@@ -125,18 +126,17 @@ def download_pdf(session: requests.Session, paper: dict) -> bytes | None:
         return None
 
 
-def build_content(paper: dict, pdf: bytes | None) -> tuple[str | list[dict], str]:
+def build_content(paper: dict, pdf: bytes | None) -> tuple[str | list, str]:
     if pdf:
         return [
-            {"type": "document", "source": {
-                "type": "base64", "media_type": "application/pdf",
-                "data": base64.standard_b64encode(pdf).decode()}},
-            {"type": "text", "text": _paper_header(paper) + "\n上面附上論文全文 PDF，請依全文撰寫重點。"},
+            {"inline_data": {"mime_type": "application/pdf", "data": pdf}},
+            _paper_header(paper) + "\n上面附上論文全文 PDF，請依全文撰寫重點。",
         ], "pdf"
     return _paper_header(paper) + f"\n摘要：\n{paper['abstract']}", "abstract"
 
 
 def summarize_one(client, paper: dict, pdf: bytes | None = None) -> dict:
+    """額度用完時丟出 QuotaExhausted，其他失敗則回傳標記為失敗的摘要。"""
     content, source = build_content(paper, pdf)
     try:
         data = structured_call(
@@ -146,9 +146,11 @@ def summarize_one(client, paper: dict, pdf: bytes | None = None) -> dict:
             content=content,
             schema=SUMMARY_SCHEMA,
             max_tokens=SUMMARY_MAX_TOKENS,
-            effort=SUMMARY_EFFORT,
+            thinking=SUMMARY_THINKING,
         )
         summary = normalize(data, paper, source)
+    except QuotaExhausted:
+        raise
     except LLMError as exc:
         if pdf:
             log.warning("%s 全文摘要失敗，改用摘要重試：%s", paper["arxiv_id"], exc)
@@ -158,7 +160,8 @@ def summarize_one(client, paper: dict, pdf: bytes | None = None) -> dict:
     return {**paper, "summary": summary}
 
 
-def summarize_all(client, papers: list[dict], source: str = SUMMARY_SOURCE) -> list[dict]:
+def summarize_all(client, papers: list[dict], source: str = SUMMARY_SOURCE,
+                  workers: int = SUMMARY_CONCURRENCY) -> list[dict]:
     pdfs: dict[str, bytes | None] = {}
     if source == "pdf":
         # 依 arXiv 禮儀依序下載，每篇間隔 3 秒
@@ -169,8 +172,24 @@ def summarize_all(client, papers: list[dict], source: str = SUMMARY_SOURCE) -> l
                 time.sleep(ARXIV_DELAY_SECONDS)
             pdfs[p["arxiv_id"]] = download_pdf(session, p)
 
-    with ThreadPoolExecutor(max_workers=SUMMARY_CONCURRENCY) as pool:
-        results = list(pool.map(lambda p: summarize_one(client, p, pdfs.get(p["arxiv_id"])), papers))
+    # 今日額度一用完，還沒開始的論文就不再送出，直接標成失敗
+    lock = threading.Lock()
+    exhausted: list[str] = []
+
+    def work(p: dict) -> dict:
+        if exhausted:
+            return {**p, "summary": failed_summary(p, exhausted[0])}
+        try:
+            return summarize_one(client, p, pdfs.get(p["arxiv_id"]))
+        except QuotaExhausted as exc:
+            with lock:
+                if not exhausted:
+                    exhausted.append(str(exc))
+                    log.error("%s；其餘論文今天不再嘗試，之後可用 --repair 補上", exc)
+            return {**p, "summary": failed_summary(p, str(exc))}
+
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        results = list(pool.map(work, papers))
 
     failed = sum(1 for r in results if is_failed(r["summary"]))
     log.info("摘要完成：成功 %d 篇，失敗 %d 篇", len(results) - failed, failed)

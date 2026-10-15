@@ -1,4 +1,4 @@
-"""端對端流程：去重、同日重跑、dry-run、失敗門檻、修補。arXiv 與 Claude 都以假資料替代。"""
+"""端對端流程：去重、同日重跑、dry-run、失敗門檻、修補。arXiv 與 Gemini 都以假資料替代。"""
 
 import json
 from argparse import Namespace
@@ -111,6 +111,6 @@ def test_seen_ids_ignores_stray_files(tmp_path):
 
 
 def test_missing_api_key_fails_fast(monkeypatch):
-    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
     monkeypatch.setattr(run_daily.build_site, "build", lambda: None)
     assert run_daily.main([]) == 1

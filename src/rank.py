@@ -11,7 +11,7 @@ from functools import lru_cache
 from config import (
     CATEGORY_BONUS, DAILY_COUNT, KEYWORD_WEIGHTS, LOOKBACK_DAYS,
     MIN_KEYWORD_SCORE, MIN_RELEVANCE, NEGATIVE_KEYWORDS, RERANK_MAX_TOKENS,
-    RERANK_MODEL, RERANK_POOL,
+    RERANK_MODEL, RERANK_POOL, RERANK_THINKING,
 )
 from fetch_papers import Paper
 from llm import LLMError, structured_call
@@ -114,17 +114,20 @@ def rerank(client, papers: list[Paper]) -> bool:
             content=f"共 {len(papers)} 篇：\n\n{listing}",
             schema=RERANK_SCHEMA,
             max_tokens=RERANK_MAX_TOKENS,
-            effort="low",
-            thinking={"type": "disabled"},
+            thinking=RERANK_THINKING,
         )
     except LLMError as exc:
         log.warning("語意重排失敗，改用關鍵字排序：%s", exc)
         return False
 
-    scores = {
-        r["arxiv_id"].strip(): (max(0, min(10, int(r["relevance"]))), r.get("reason", ""))
-        for r in data.get("rankings", [])
-    }
+    # Gemini 只保證是合法 JSON，不保證每個欄位都對，格式不對的列當作漏評
+    rows = data.get("rankings")
+    scores = {}
+    for r in rows if isinstance(rows, list) else []:
+        try:
+            scores[str(r["arxiv_id"]).strip()] = (max(0, min(10, int(r["relevance"]))), str(r.get("reason", "")))
+        except (KeyError, TypeError, ValueError, AttributeError):
+            continue
     missing = [p.arxiv_id for p in papers if p.arxiv_id not in scores]
     if len(missing) > len(papers) // 4:
         log.warning("語意重排漏評 %d 篇，結果不可靠，改用關鍵字排序", len(missing))

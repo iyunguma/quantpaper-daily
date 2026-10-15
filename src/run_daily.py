@@ -134,10 +134,10 @@ def main(argv: list[str] | None = None) -> int:
         build_site.build()
         return 0
 
-    from llm import make_client
+    from llm import API_KEY_ENV, make_client
     client = make_client()
     if client is None and not args.dry_run:
-        log.error("找不到環境變數 ANTHROPIC_API_KEY，無法產生摘要")
+        log.error("找不到環境變數 %s，無法產生摘要", API_KEY_ENV)
         return 1
     if client is None:
         log.info("沒有 API key，dry-run 只用關鍵字排序")

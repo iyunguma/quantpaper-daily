@@ -98,12 +98,36 @@ def candidates(real_feed):
     return papers
 
 
-# ---------------------------------------------------------------- 假的 Anthropic client
+# ---------------------------------------------------------------- 假的 Gemini client
 
-def text_response(text, stop_reason="end_turn", thinking=True):
-    blocks = [SimpleNamespace(type="thinking", thinking="…")] if thinking else []
-    blocks.append(SimpleNamespace(type="text", text=text))
-    return SimpleNamespace(content=blocks, stop_reason=stop_reason)
+def text_response(text, finish_reason="STOP"):
+    """模仿 GenerateContentResponse；真正的 resp.text 只含正式輸出，不含思考內容。"""
+    return SimpleNamespace(text=text, candidates=[SimpleNamespace(finish_reason=finish_reason)],
+                           prompt_feedback=None)
+
+
+def blocked_response(reason="PROHIBITED_CONTENT"):
+    return SimpleNamespace(text=None, candidates=[], prompt_feedback=SimpleNamespace(block_reason=reason))
+
+
+def api_error(code, details=(), message="error"):
+    from google.genai import errors
+    body = {"error": {"code": code, "message": message, "status": "TEST", "details": list(details)}}
+    return (errors.ClientError if code < 500 else errors.ServerError)(code, body)
+
+
+def _quota_failure(quota_id):
+    return {"@type": "type.googleapis.com/google.rpc.QuotaFailure", "violations": [{"quotaId": quota_id}]}
+
+
+def daily_quota_error():
+    return api_error(429, [_quota_failure("GenerateRequestsPerDayPerProjectPerModel-FreeTier")],
+                     "You exceeded your current quota")
+
+
+def minute_quota_error(delay="37s"):
+    return api_error(429, [_quota_failure("GenerateRequestsPerMinutePerProjectPerModel-FreeTier"),
+                           {"@type": "type.googleapis.com/google.rpc.RetryInfo", "retryDelay": delay}])
 
 
 class FakeClient:
@@ -112,7 +136,7 @@ class FakeClient:
     def __init__(self, responder):
         self.calls: list[dict] = []
         self._responder = responder
-        self.messages = SimpleNamespace(create=self._create)
+        self.models = SimpleNamespace(generate_content=self._create)
 
     def _create(self, **kwargs):
         self.calls.append(kwargs)

@@ -1,6 +1,7 @@
 import json
 
 import pytest
+from google.genai import types
 
 import rank
 from conftest import NOW, FakeClient, text_response
@@ -46,12 +47,16 @@ def test_seen_papers_are_excluded(candidates):
     assert "2610.20037" not in [p.arxiv_id for p in sel.papers]
 
 
+def paper_ids(kwargs):
+    return [line.split('"')[1] for line in kwargs["contents"].splitlines()
+            if line.startswith("<paper arxiv_id=")]
+
+
 def rerank_client(scores: dict, missing=()):
     def respond(kwargs):
-        ids = [line.split('"')[1] for line in kwargs["messages"][0]["content"].splitlines()
-               if line.startswith("<paper arxiv_id=")]
-        rows = [{"arxiv_id": i, "relevance": scores.get(i, 1), "reason": "測試"} for i in ids if i not in missing]
-        return text_response(json.dumps({"rankings": rows}), thinking=False)
+        rows = [{"arxiv_id": i, "relevance": scores.get(i, 1), "reason": "測試"}
+                for i in paper_ids(kwargs) if i not in missing]
+        return text_response(json.dumps({"rankings": rows}))
     return FakeClient(respond)
 
 
@@ -65,9 +70,9 @@ def test_llm_rerank_orders_and_applies_threshold(candidates):
     assert all(p.relevance >= rank.MIN_RELEVANCE for p in sel.papers)
 
     call = client.calls[0]
-    assert call["model"] == "claude-haiku-5-5"
-    assert call["output_config"]["format"]["type"] == "json_schema"
-    assert call["thinking"] == {"type": "disabled"}
+    assert call["model"] == "gemini-3.5-flash-lite"
+    assert call["config"].response_json_schema is rank.RERANK_SCHEMA
+    assert call["config"].thinking_config.thinking_level == types.ThinkingLevel.MINIMAL
 
 
 def test_llm_failure_falls_back_to_keywords(candidates):
@@ -84,12 +89,28 @@ def test_llm_skipping_many_papers_falls_back(candidates):
     assert sel.method == "keyword"
 
 
+def test_malformed_rows_count_as_missing(candidates):
+    """Gemini 只保證是合法 JSON；分數不是數字的列要當成漏評，而不是讓程式當掉。"""
+    def respond(kwargs):
+        rows = [{"arxiv_id": i, "relevance": "高", "reason": ""} for i in paper_ids(kwargs)]
+        return text_response(json.dumps({"rankings": rows}))
+    sel = rank.select(candidates, seen=set(), client=FakeClient(respond), now=NOW)
+    assert sel.method == "keyword" and sel.papers
+
+
+# Gemini structured outputs 支援的 JSON Schema 子集（ai.google.dev/gemini-api/docs/structured-output）
+GEMINI_SCHEMA_KEYWORDS = {
+    "type", "title", "description", "properties", "required", "additionalProperties",
+    "enum", "format", "minimum", "maximum", "items", "prefixItems", "minItems", "maxItems",
+}
+
+
 def test_schema_uses_only_supported_features():
-    """structured outputs 不支援 minimum / maximum / minLength，物件必須 additionalProperties: false。"""
+    """只用 Gemini 支援的關鍵字；物件一律 additionalProperties: false 且全部欄位必填。"""
     from summarize import SUMMARY_SCHEMA
 
     def walk(node):
-        assert not {"minimum", "maximum", "minLength", "maxLength", "maxItems"} & set(node)
+        assert set(node) <= GEMINI_SCHEMA_KEYWORDS, set(node) - GEMINI_SCHEMA_KEYWORDS
         if node.get("type") == "object":
             assert node["additionalProperties"] is False
             assert set(node["required"]) == set(node["properties"])

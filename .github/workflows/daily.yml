@@ -28,7 +28,8 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # Gemini 免費額度的回應有時要排隊好幾分鐘，留足時間；public repo 的 Actions 不另外收費
+    timeout-minutes: 90
     # deploy-pages 規定部署必須指向 github-pages 環境
     environment:
       name: github-pages
@@ -48,11 +49,18 @@ jobs:
 
       - name: 抓取、排序、摘要、建站
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           SITE_BASE_URL: ${{ steps.pages.outputs.base_url }}
           ARXIV_USER_AGENT: quant-paper-daily/2.0 (+${{ github.server_url }}/${{ github.repository }})
-          # 想改用全文摘要，到 repo 的 Settings → Variables 新增 SUMMARY_SOURCE=pdf
-          SUMMARY_SOURCE: ${{ vars.SUMMARY_SOURCE || 'abstract' }}
+          # 以下可在 repo 的 Settings → Secrets and variables → Actions → Variables 覆蓋；
+          # 沒設定時是空字串，程式會改用 src/config.py 的預設值
+          SUMMARY_SOURCE: ${{ vars.SUMMARY_SOURCE }}
+          SUMMARY_MODEL: ${{ vars.SUMMARY_MODEL }}
+          SUMMARY_THINKING: ${{ vars.SUMMARY_THINKING }}
+          RERANK_MODEL: ${{ vars.RERANK_MODEL }}
+          RERANK_THINKING: ${{ vars.RERANK_THINKING }}
+          DAILY_COUNT: ${{ vars.DAILY_COUNT }}
+          MIN_RELEVANCE: ${{ vars.MIN_RELEVANCE }}
           MODE: ${{ inputs.mode || 'daily' }}
         run: |
           case "$MODE" in

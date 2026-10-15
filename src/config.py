@@ -8,14 +8,20 @@ DATA_DIR = ROOT / "data"
 PAPERS_DIR = DATA_DIR / "papers"
 SITE_DIR = ROOT / "site"
 
+
+def _env(name: str, default: str) -> str:
+    # GitHub Actions 裡沒設定的 Variables 會以空字串傳進來，視同未設定
+    return os.getenv(name) or default
+
+
 # ---------------------------------------------------------------- 抓取
 
 # 每天最多選幾篇
-DAILY_COUNT = int(os.getenv("DAILY_COUNT", "10"))
+DAILY_COUNT = int(_env("DAILY_COUNT", "10"))
 
 # 只考慮最近幾天內首次投稿的論文。arXiv 週五、週六不發佈新論文，
 # 往回看一週可以讓週末那幾期用前幾天沒選上的好文章補位。
-LOOKBACK_DAYS = int(os.getenv("LOOKBACK_DAYS", "7"))
+LOOKBACK_DAYS = int(_env("LOOKBACK_DAYS", "7"))
 
 # 每組查詢向 arXiv 要幾篇（依投稿時間由新到舊）
 QFIN_FETCH = 150
@@ -113,33 +119,44 @@ CATEGORY_BONUS = {
 # 沒有語意重排時（例如未設 API key），關鍵字分數低於此值的不選
 MIN_KEYWORD_SCORE = 8
 
+# ---------------------------------------------------------------- 模型
+# 使用 Gemini API 免費額度。重排與摘要用不同模型，免費額度是分開計算的。
+# Google 汰換模型很快，模型被停用時到 https://ai.google.dev/gemini-api/docs/models
+# 查新名稱，用 repo 的 Variables 覆蓋即可，不用改程式。
+#
+# 思考程度 minimal / low / medium / high：越高越仔細，但越慢、越容易用完額度。
+# 各模型支援的等級不同，例如 gemini-3.8-flash 不支援 minimal。
+
 # ---------------------------------------------------------------- 第二階段：語意重排
-# 關鍵字分數最高的 RERANK_POOL 篇交給便宜的模型逐篇評 0–10 分相關度，
-# 一次請求即可，成本通常不到新台幣一角。失敗時自動退回關鍵字排序。
+# 關鍵字分數最高的 RERANK_POOL 篇交給輕量模型逐篇評 0–10 分相關度，
+# 一次請求即可。失敗時自動退回關鍵字排序。
 
 RERANK_ENABLED = os.getenv("RERANK_ENABLED", "1") != "0"
-RERANK_MODEL = os.getenv("RERANK_MODEL", "claude-haiku-5-5")
+RERANK_MODEL = _env("RERANK_MODEL", "gemini-3.5-flash-lite")
+RERANK_THINKING = _env("RERANK_THINKING", "minimal")
 RERANK_POOL = 40
 RERANK_MAX_TOKENS = 6000
 
 # 語意相關度低於此值的不選。寧可少於十篇，也不硬湊不相關的論文。
 # 設成 0 就會永遠湊滿 DAILY_COUNT。
-MIN_RELEVANCE = int(os.getenv("MIN_RELEVANCE", "4"))
+MIN_RELEVANCE = int(_env("MIN_RELEVANCE", "4"))
 
 # ---------------------------------------------------------------- 摘要
 
-SUMMARY_MODEL = os.getenv("SUMMARY_MODEL", "claude-sonnet-5-5")
-
-# low / medium / high。effort 越高思考越多，品質與費用都會上升。
-SUMMARY_EFFORT = os.getenv("SUMMARY_EFFORT", "medium")
+SUMMARY_MODEL = _env("SUMMARY_MODEL", "gemini-3.8-flash")
+SUMMARY_THINKING = _env("SUMMARY_THINKING", "medium")
 
 # 思考 token 也算在這個上限內，要留足空間
 SUMMARY_MAX_TOKENS = 8000
-SUMMARY_CONCURRENCY = 4
 
-# "abstract"：只讀 arXiv 摘要，便宜，每月約幾美元。
-# "pdf"：下載全文 PDF 給模型讀，重點與數字精準得多，但輸入量大約是 50 倍。
-SUMMARY_SOURCE = os.getenv("SUMMARY_SOURCE", "abstract")
+# 同時摘要幾篇。免費額度的回應常要排隊，同時送出可以縮短總時間；
+# 碰到每分鐘上限時程式會等待重試，調太高只會多等，不會出錯。
+SUMMARY_CONCURRENCY = 3
+
+# "abstract"：只讀 arXiv 摘要。
+# "pdf"：下載全文 PDF 給模型讀，重點與數字精準得多，但輸入量大約是 50 倍，
+#        免費額度的每分鐘 token 上限比較容易碰到。
+SUMMARY_SOURCE = _env("SUMMARY_SOURCE", "abstract")
 PDF_MAX_BYTES = 25 * 1024 * 1024
 
 # 當天摘要失敗比例超過這個值就中止，不覆蓋網站，並讓 GitHub Actions 標成失敗
