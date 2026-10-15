@@ -1,0 +1,87 @@
+name: 每日論文更新
+
+on:
+  schedule:
+    # UTC 23:17 = 台北時間 07:17。避開整點，GitHub 在整點的排程常會延遲。
+    - cron: "17 23 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 執行方式
+        type: choice
+        default: daily
+        options:
+          - daily     # 產生今天這一期；已產生過就只重新部署
+          - force     # 重做今天這一期
+          - repair    # 重新摘要所有失敗的論文
+          - build     # 只重建網站
+
+permissions:
+  contents: write     # 把每日資料存回 repo
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-papers
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    # deploy-pages 規定部署必須指向 github-pages 環境
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - id: pages
+        uses: actions/configure-pages@v6
+
+      - name: 抓取、排序、摘要、建站
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SITE_BASE_URL: ${{ steps.pages.outputs.base_url }}
+          ARXIV_USER_AGENT: quant-paper-daily/2.0 (+${{ github.server_url }}/${{ github.repository }})
+          # 想改用全文摘要，到 repo 的 Settings → Variables 新增 SUMMARY_SOURCE=pdf
+          SUMMARY_SOURCE: ${{ vars.SUMMARY_SOURCE || 'abstract' }}
+          MODE: ${{ inputs.mode || 'daily' }}
+        run: |
+          case "$MODE" in
+            force)  python src/run_daily.py --force ;;
+            repair) python src/run_daily.py --repair ;;
+            build)  python src/run_daily.py --build-only ;;
+            *)      python src/run_daily.py ;;
+          esac
+
+      - name: 把資料存回 repo
+        run: |
+          git config user.name  "paper-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "資料沒有變動"
+            exit 0
+          fi
+          git commit -m "每日論文 $(TZ=Asia/Taipei date +%F)"
+          # 若期間有人推了其他 commit，先 rebase 再推
+          for i in 1 2 3; do
+            git pull --rebase --quiet && git push && exit 0
+            sleep 5
+          done
+          exit 1
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+      - id: deployment
+        uses: actions/deploy-pages@v5

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>{% block title %}{{ site_title }}{% endblock %}</title>
+<meta name="description" content="{{ site_tagline }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site_title }}" href="{{ root }}feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Serif+TC:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ root }}style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="masthead__name" href="{{ root }}index.html">{{ site_title }}</a>
+    <nav aria-label="主要導覽">
+      <a href="{{ root }}index.html"{% if page == 'today' %} aria-current="page"{% endif %}>今日</a>
+      <a href="{{ root }}archive/index.html"{% if page == 'archive' %} aria-current="page"{% endif %}>歸檔</a>
+      <a href="{{ root }}feed.xml">RSS</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+{% block content %}{% endblock %}
+</main>
+
+<footer class="wrap">
+  <div class="colophon">
+    <p>{{ site_tagline }}。論文來源為 <a href="https://arxiv.org">arXiv</a>，重點由 Claude 生成，可能有誤，交易決策前請讀原文。</p>
+    <p>最後更新：{{ generated_at }}（台北時間）</p>
+  </div>
+</footer>
+
+</body>
+</html>

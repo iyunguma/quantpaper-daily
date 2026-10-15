@@ -1,0 +1,455 @@
+/* 量化研究日報 —— 冷調紙灰 × 深墨藍 × 松綠訊號色 */
+
+:root {
+  --ground: #e9ecf1;
+  --surface: #f9fafc;
+  --ink: #1b2432;
+  --ink-soft: #5a6577;
+  --ink-faint: #8b95a5;
+  --rule: #c9d0da;
+  --rule-soft: #dde2e9;
+  --accent: #1f5f52;
+  --accent-wash: #dfeae6;
+
+  --serif: "Noto Serif TC", "Songti TC", Georgia, serif;
+  --sans: "IBM Plex Sans", "Noto Sans TC", -apple-system, "Segoe UI", sans-serif;
+
+  --measure: 64ch;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #151a22;
+    --surface: #1c2230;
+    --ink: #dde3ec;
+    --ink-soft: #98a3b4;
+    --ink-faint: #6b7688;
+    --rule: #333c4c;
+    --rule-soft: #262e3b;
+    --accent: #6cb3a0;
+    --accent-wash: #1e2c2a;
+  }
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  font-feature-settings: "tnum";
+}
+
+a { color: inherit; }
+
+.wrap {
+  width: min(100% - 2.5rem, 56rem);
+  margin-inline: auto;
+}
+
+/* ---------------------------------------------------------- 頁首 */
+
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--ground) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.masthead .wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.85rem;
+}
+
+.masthead__name {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.masthead nav {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.85rem;
+}
+
+.masthead nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+
+.masthead nav a:hover,
+.masthead nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+/* ---------------------------------------------------------- 首屏 */
+
+.hero {
+  padding-block: 4.5rem 3rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero__date {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(2.75rem, 9vw, 5.25rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.hero__weekday {
+  color: var(--ink-faint);
+  font-weight: 400;
+  font-size: 0.4em;
+  letter-spacing: 0.08em;
+  margin-left: 0.6em;
+  vertical-align: 0.55em;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.hero__note {
+  max-width: var(--measure);
+  margin: 1.5rem 0 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+
+.hero__note b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------- 論文清單 */
+
+.papers { padding-block: 1rem 4rem; }
+
+.paper {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 0 1.75rem;
+  padding-block: 3rem;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.paper:last-child { border-bottom: 0; }
+
+.paper__rank {
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink-faint);
+  text-align: right;
+  padding-top: 0.15rem;
+}
+
+.paper__body {
+  border-left: 1px solid var(--rule);
+  padding-left: 1.75rem;
+  min-width: 0;
+}
+
+.paper__title {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0 0.4rem;
+  max-width: var(--measure);
+}
+
+.paper__title-en {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--ink-faint);
+  margin: 0 0 1rem;
+  max-width: var(--measure);
+}
+
+.paper__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.9rem;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-bottom: 1.5rem;
+}
+
+.chip {
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.paper__authors {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 26rem;
+}
+
+.verdict {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin: 0 0 1.75rem;
+  padding: 0.9rem 1.1rem;
+  background: var(--accent-wash);
+  border-left: 3px solid var(--accent);
+  max-width: var(--measure);
+}
+
+.detail {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 0.85rem 1.25rem;
+  margin: 0 0 1.75rem;
+  max-width: calc(var(--measure) + 7rem);
+}
+
+.detail dt {
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  padding-top: 0.3rem;
+}
+
+.detail dd {
+  font-family: var(--serif);
+  font-size: 0.975rem;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.detail dd.is-caveat { color: var(--ink-soft); }
+
+.paper__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.25rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tags li {
+  font-size: 0.75rem;
+  color: var(--accent);
+  background: var(--accent-wash);
+  border-radius: 2px;
+  padding: 0.15rem 0.5rem;
+}
+
+.links {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.links a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.3rem 0.75rem;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* 落地可用性 1–5 */
+
+.pips {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.pips__track {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.pips__track i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid var(--ink-faint);
+}
+
+.pips__track i.on {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.chip--quiet {
+  border-style: dashed;
+  color: var(--ink-faint);
+}
+
+/* 摘要失敗的論文：保留標題與連結，弱化其餘部分 */
+.paper.is-failed .verdict {
+  background: transparent;
+  border-left-color: var(--rule);
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+
+/* ---------------------------------------------------------- 前後期 */
+
+.daynav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 0 4rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--serif);
+  font-size: 1.05rem;
+}
+
+.daynav a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  padding: 0.4rem 0;
+  border-bottom: 1px solid transparent;
+}
+
+.daynav a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+.daynav__older::before { content: "← "; }
+.daynav__newer::after { content: " →"; }
+
+/* ---------------------------------------------------------- 歸檔 */
+
+.archive-list {
+  list-style: none;
+  margin: 0;
+  padding: 2.5rem 0 5rem;
+}
+
+.archive-list li {
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.archive-list a {
+  display: grid;
+  grid-template-columns: 9rem 1fr auto;
+  gap: 1.5rem;
+  align-items: baseline;
+  padding: 1.15rem 0;
+  text-decoration: none;
+}
+
+.archive-list a:hover .archive-list__day { color: var(--accent); }
+
+.archive-list__day {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.archive-list__peek {
+  color: var(--ink-soft);
+  font-size: 0.875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.archive-list__count {
+  color: var(--ink-faint);
+  font-size: 0.8rem;
+}
+
+/* ---------------------------------------------------------- 頁尾與空狀態 */
+
+.empty {
+  max-width: var(--measure);
+  padding: 4rem 0 6rem;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.colophon {
+  border-top: 1px solid var(--rule);
+  padding-block: 2rem 3.5rem;
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  max-width: var(--measure);
+}
+
+.colophon a { color: var(--ink-soft); }
+
+/* ---------------------------------------------------------- 無障礙與響應式 */
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+
+@media (max-width: 42rem) {
+  .hero__weekday {
+    display: block;
+    margin: 0.75rem 0 0;
+    vertical-align: 0;
+  }
+  .paper {
+    grid-template-columns: 2.25rem 1fr;
+    gap: 0 1rem;
+    padding-block: 2.25rem;
+  }
+  .paper__rank { font-size: 1.15rem; }
+  .paper__body { padding-left: 1rem; }
+  .paper__title { font-size: 1.25rem; }
+  .detail { grid-template-columns: 1fr; gap: 0.2rem 0; }
+  .detail dt { padding-top: 0.75rem; }
+  .verdict { padding: 0.8rem 0.9rem; font-size: 1.05rem; }
+  .archive-list a { grid-template-columns: 1fr auto; }
+  .archive-list__peek { display: none; }
+}

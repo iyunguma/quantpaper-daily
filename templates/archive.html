@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}歸檔－{{ site_title }}{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <h1 class="hero__date">歸檔</h1>
+  {% if issues %}
+  <p class="hero__note">共 <b>{{ issue_count }}</b> 期、<b>{{ total_papers }}</b> 篇論文，從 {{ first_date_zh }} 開始。</p>
+  {% else %}
+  <p class="hero__note">還沒有任何一期。第一次執行完成後，每天的論文都會列在這裡。</p>
+  {% endif %}
+</section>
+
+{% if issues %}
+<ul class="archive-list">
+{% for it in issues %}
+  <li>
+    <a href="{{ root }}archive/{{ it.date }}.html">
+      <span class="archive-list__day">{{ it.date_zh }}</span>
+      <span class="archive-list__peek">{{ it.peek }}</span>
+      <span class="archive-list__count">{{ it.count }} 篇</span>
+    </a>
+  </li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

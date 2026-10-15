@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}{% if issue %}{{ issue.date_zh }}－{% endif %}{{ site_title }}{% endblock %}
+
+{% block content %}
+{% if not issue %}
+<section class="hero">
+  <h1 class="hero__date">{{ site_title }}</h1>
+</section>
+<div class="empty">
+  <p>第一期還沒產生。到 GitHub repo 的 Actions 頁面手動執行一次「每日論文更新」，幾分鐘後這裡就會出現當天的論文。</p>
+</div>
+{% else %}
+
+<section class="hero">
+  <h1 class="hero__date">{{ issue.date_zh }}<span class="hero__weekday">{{ issue.weekday }}</span></h1>
+  <p class="hero__note">
+    從最近一週 <b>{{ issue.eligible }}</b> 篇還沒收錄的論文中挑出這 <b>{{ issue.papers|length }}</b> 篇，編號 1 最值得先看。
+    {%- if issue.papers|length < daily_count %}其餘的相關度不夠，寧缺勿濫。{% endif %}
+  </p>
+</section>
+
+<div class="papers">
+{% for p in issue.papers %}
+  {% set s = p.summary %}
+  <article class="paper{% if p.failed %} is-failed{% endif %}" id="p{{ loop.index }}">
+    <div class="paper__rank" aria-hidden="true">{{ "%02d"|format(loop.index) }}</div>
+    <div class="paper__body">
+
+      <h2 class="paper__title">{{ s.get('title_zh') or p.title }}</h2>
+      {% if s.get('title_zh') and s.get('title_zh') != p.title %}
+      <p class="paper__title-en" lang="en">{{ p.title }}</p>
+      {% endif %}
+
+      <div class="paper__meta">
+        <span class="chip">{{ p.category_label }}</span>
+        <span class="paper__authors">{{ p.author_line }}</span>
+        <span>{{ p.published_short }}</span>
+        {% if not p.failed %}
+        <span class="pips">
+          落地可用性
+          <span class="pips__track" role="img" aria-label="{{ s.practicality }} 分，滿分 5 分">
+            {% for i in range(5) %}<i{% if i < s.practicality %} class="on"{% endif %}></i>{% endfor %}
+          </span>
+        </span>
+        {% if p.from_pdf %}<span class="chip chip--quiet">依全文</span>{% endif %}
+        {% endif %}
+      </div>
+
+      <p class="verdict">{{ s.get('verdict', '') }}</p>
+
+      {% if not p.failed %}
+      <dl class="detail">
+        <dt>研究問題</dt><dd>{{ s.get('problem', '') }}</dd>
+        <dt>方法與資料</dt><dd>{{ s.get('method', '') }}</dd>
+        <dt>主要發現</dt><dd>{{ s.get('findings', '') }}</dd>
+        <dt>交易意涵</dt><dd>{{ s.get('implication', '') }}</dd>
+        <dt>要留意</dt><dd class="is-caveat">{{ s.get('caveats', '') }}</dd>
+      </dl>
+      {% endif %}
+
+      <div class="paper__foot">
+        <ul class="tags">
+          {% for tag in s.get('tags', []) %}<li>{{ tag }}</li>{% endfor %}
+        </ul>
+        <div class="links">
+          <a href="{{ p.abs_url }}" rel="noopener">arXiv 頁面</a>
+          <a href="{{ p.pdf_url }}" rel="noopener">PDF</a>
+        </div>
+      </div>
+
+    </div>
+  </article>
+{% endfor %}
+</div>
+
+{% if issue.newer or issue.older %}
+<nav class="daynav" aria-label="切換日期">
+  {% if issue.older %}<a class="daynav__older" href="{{ root }}archive/{{ issue.older }}.html">前一期</a>{% else %}<span></span>{% endif %}
+  {% if issue.newer %}<a class="daynav__newer" href="{{ root }}archive/{{ issue.newer }}.html">後一期</a>{% endif %}
+</nav>
+{% endif %}
+
+{% endif %}
+{% endblock %}
