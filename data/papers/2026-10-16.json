@@ -1,0 +1,480 @@
+{
+  "date": "2026-10-16",
+  "generated_at": "2026-10-16T02:20:04+08:00",
+  "scanned": 240,
+  "eligible": 49,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2610.20104",
+      "title": "What Do Foundation Models for Market Microstructure Learn? A Controlled Study with Synthetic Limit Order Books",
+      "authors": [
+        "Fernando Acero"
+      ],
+      "abstract": "Autoregressive transformers trained on limit order book (LOB) message streams are increasingly proposed as foundation models for market microstructure. Because the generative process of real markets is unknown, these models can be judged only by the realism of their output, leaving open what they actually learn. We make the question answerable by inverting the setup: we train GPT-style models on order flow from simulators whose latent parameters are known, so that the Bayes-optimal predictor, the generating state, and the exact data entropy serve as references. Measured against them, next-token pretraining on order flow implements amortized Bayesian inference over market regimes. The learned predictive matches the exact Bayes optimum to within a millinat per token and approaches the oracle floor even on a nonstationary family whose latent state drifts within an episode, a regime that requires filtering. The latent regime is linearly decodable from frozen activations, well above baselines, so a frozen-model read-out calibrates simulator parameters more accurately than windowed maximum likelihood at a fraction of the cost. In our experiments these capabilities are not produced by scale: capacity and token volume saturate early, and it is the diversity of training regimes, not the token count, that determines generalization to unseen markets. On real NASDAQ data, zero-shot transfer is set by how well the simulator prior covers real flow: an enriched mixture nearly closes the gap to an in-domain baseline, and pretraining beats from-scratch training at every budget across held-out tickers. Known ground truth turns average next-token loss, which is uninformative near the entropy floor, into an exact comparison against the Bayes-optimal and oracle predictors.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-10-14T12:38:49Z",
+      "updated": "2026-10-14T12:38:49Z",
+      "abs_url": "https://arxiv.org/abs/2610.20104",
+      "pdf_url": "https://arxiv.org/pdf/2610.20104v1",
+      "keyword_score": 69,
+      "matched_keywords": [
+        "limit order book",
+        "order flow",
+        "market microstructure",
+        "order book",
+        "transformer",
+        "regime"
+      ],
+      "relevance": 9,
+      "relevance_reason": "研究LOB基礎模型是否學習到市場狀態推斷，有助於高頻交易策略設計。",
+      "summary": {
+        "title_zh": "市場微結構的 Foundation Models 學到了什麼？使用合成 LOB 的控制實驗",
+        "verdict": "透過已知潛在參數的模擬器訓練 Transformer，證實其 next-token 預訓練能實作 amortized Bayesian inference，且泛化能力取決於訓練機制的多元性而非規模。",
+        "problem": "真實市場的生成過程未知，導致以 LOB 訊息流訓練的 autoregressive transformers 只能透過輸出真實性來評估，難以確知其真正學到了什麼。傳統上平均下一個 Token 的損失在接近熵底線時缺乏資訊量，無法與貝氏最佳預測器進行確切比較。",
+        "method": "使用 GPT-style 模型對已知潛在參數的市場模擬器產生的訂單流進行預訓練。實驗涵蓋非平穩市場族群及真實 NASDAQ 資料的 zero-shot 轉移測試。",
+        "findings": "學到的預測器與確切 Bayes optimum 的差距在每個 token 一毫奈特（millinat）以內，即使在需要濾波的非平穩狀態下也接近 oracle 底線。模型容量與 token 數量很快就會飽和，決定對未見過市場泛化能力的是訓練機制的多元性而非 token 數量。",
+        "implication": "凍結模型的 activations 可線性解碼出潛在狀態，能以極低成本比視窗化最大似然法更準確地校準模擬器參數。在真實 NASDAQ 資料上，預訓練在各種預算下皆勝過從頭訓練，zero-shot 轉移表現取決於模擬器先驗對真實資料流的涵蓋程度。",
+        "caveats": "模型能力受限於模擬器先驗對真實市場的涵蓋程度，若先驗不足則 zero-shot 表現仍會受限。",
+        "practicality": 4,
+        "tags": [
+          "Transformer",
+          "限價單簿",
+          "市場微結構",
+          "貝氏推斷",
+          "Foundation Model"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.15488",
+      "title": "AlphaPilot: Multi-Turn Tool-Using LLM Agents for Adaptive Alpha Mining with Reinforcement Learning",
+      "authors": [
+        "Peiqi Jiang",
+        "Fan Zhang",
+        "Xin Xu",
+        "Tianhao Chen",
+        "Can Yang"
+      ],
+      "abstract": "Formulaic alpha mining seeks interpretable expressions that rank assets by future returns. The task is challenging because it demands simultaneous processing of unstructured market descriptions, historical data, and quantitative evaluation of candidate factors, yet most existing methods exploit only a subset of these signals. We introduce AlphaPilot, a reinforcement-learning framework that trains multi-turn tool-using LLM agents for adaptive alpha mining. The agent conditions on market descriptions, proposes factor expressions, queries real-data evaluator feedback, and updates a retained factor pool across turns. This design jointly leverages market text, LLM financial knowledge, real data, and evaluation feedback. At inference time, AlphaPilot performs day-by-day search and pool updates to adapt to shifting market regimes. Across three independent runs in out-of-sample rolling backtests on CSI300 and CSI500, AlphaPilot achieves mean total returns of 42.93% and 54.19%, with mean Sharpe ratios of 2.46 and 2.86, respectively. It attains the highest mean total return, Sharpe, and RankIC among the evaluated methods on both universes.",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-10-11T09:43:01Z",
+      "updated": "2026-10-11T09:43:01Z",
+      "abs_url": "https://arxiv.org/abs/2610.15488",
+      "pdf_url": "https://arxiv.org/pdf/2610.15488v1",
+      "keyword_score": 53,
+      "matched_keywords": [
+        "sharpe ratio",
+        "reinforcement learning",
+        "out-of-sample",
+        "backtest",
+        "llm",
+        "regime"
+      ],
+      "relevance": 9,
+      "relevance_reason": "提出強化學習與工具使用LLM代理進行阿爾法因子挖掘，有實證支持。",
+      "summary": {
+        "title_zh": "AlphaPilot: 結合 Reinforcement Learning 與 Multi-Turn Tool-Using LLM Agents 進行動態 Alpha Mining",
+        "verdict": "利用 RL 訓練具備工具使用能力的 LLM Agent 進行動態 Alpha 挖掘，在 CSI300 與 CSI500 實測中表現優異。",
+        "problem": "公式化 Alpha 挖掘需要同時處理非結構化市場描述、歷史數據與量化評估，但現有方法僅能利用其中一部分訊號。",
+        "method": "提出 AlphaPilot 框架，以 Reinforcement Learning 訓練多輪工具使用 LLM Agent。使用 CSI300 與 CSI500 進行樣本外滾動回測。",
+        "findings": "在 CSI300 與 CSI500 的樣本外滾動回測中，平均總報酬分別達 42.93% 與 54.19%，平均 Sharpe 比率分別為 2.46 與 2.86，各項指標均優於對比方法。",
+        "implication": "此方法可於推論時進行逐日搜尋與因子池更新，適應市場機制轉變。適合直接應用於自動化因子挖掘與動態調整。",
+        "caveats": "論文摘要未提及是否已計入完整的交易成本與滑價影響。",
+        "practicality": 4,
+        "tags": [
+          "大型語言模型",
+          "強化學習",
+          "Alpha 挖掘",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.20037",
+      "title": "Data-Driven Dynamic Portfolio Selection with Vine Copula Simulation and Reinforcement Learning",
+      "authors": [
+        "Gabriël M. J. Gelissen",
+        "Fengyi Yuan"
+      ],
+      "abstract": "We develop a data-driven approach to dynamic portfolio selection that combines vine-copula simulation with reinforcement learning. The investor has constant relative risk aversion and maximises expected terminal utility with a running penalty on the conditional value-at-risk (CVaR) of one-period losses. We estimate a conditional vine model from historical returns and use it to generate joint scenarios for CVaR evaluation and conditional paths for training a recurrent portfolio policy. Under uniform local derivative bounds, we propagate edgewise pair-copula parameter errors through the conditional transforms to obtain power-law stability bounds in Hellinger distance and total variation. In a finite-horizon investment model, we combine these estimates with a marginal and structural approximation budget to bound policy values, optimal values and the true-market loss of policies selected under a fitted model, with separate simulation and numerical optimisation terms. On a seven-asset panel comprising US and Chinese equities and gold, the selected ensemble of ten trained policies achieves a compound annual growth rate of 34.13% and a Sharpe ratio of 2.31 over 22 complete monthly holding periods, exceeding the corresponding values of six classical and vine-based benchmarks. Combining simulated and historical training data reduces monthly target-to-target turnover by 41.5% relative to training on historical data alone, while maintaining comparable growth.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM"
+      ],
+      "published": "2026-10-14T11:45:17Z",
+      "updated": "2026-10-14T11:45:17Z",
+      "abs_url": "https://arxiv.org/abs/2610.20037",
+      "pdf_url": "https://arxiv.org/pdf/2610.20037v1",
+      "keyword_score": 44,
+      "matched_keywords": [
+        "sharpe ratio",
+        "reinforcement learning",
+        "portfolio selection"
+      ],
+      "relevance": 9,
+      "relevance_reason": "結合藤園copula與強化學習進行動態投組配置，回測表現強勁。",
+      "summary": {
+        "title_zh": "結合 Vine Copula 模擬與強化學習的數據驅動動態投資組合選擇",
+        "verdict": "結合 Vine Copula 與強化學習進行動態配置，達 34.13% 報酬與 2.31 夏普值。",
+        "problem": "傳統動態資產配置難以同時建模複雜的尾部相依結構並優化風險調整後報酬。本研究旨在透過結合 Vine Copula 模擬與強化學習，解決最大化終端效用與控制條件風險值（CVaR）的問題。",
+        "method": "採用條件 Vine Copula 模型生成模擬情境以訓練循環強化學習投資組合策略。對象為包含美國、中國股票與黃金的 7 資產面板，回測 22 個完整月度持倉期。",
+        "findings": "十個訓練策略組成的集合達成 34.13% 的複合年均增長率與 2.31 的夏普值，優於六個基準模型。此外，結合模擬與歷史訓練資料可使月度換手率降低 41.5%。",
+        "implication": "此方法能有效平衡報酬與尾部風險，且透過虛擬情境訓練能顯著降低換手率成本。適合應用於多資產的動態配置實務中。",
+        "caveats": "實證僅涵蓋七個資產的小型面板，尚未在大型資產池中驗證其擴展性。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "Copula",
+          "投資組合選擇",
+          "條件風險值",
+          "動態資產配置"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.16524",
+      "title": "Reinforcement Learning with Hawkes-Structured Networks for Market Making",
+      "authors": [
+        "Fernando Acero",
+        "Philipp Plank",
+        "Yufei Zhang"
+      ],
+      "abstract": "Market making under realistic order-flow dynamics is challenging due to the clustered, self-exciting nature of order arrivals, which are naturally modeled by non-Markovian Hawkes processes. We propose a model-free reinforcement learning (RL) framework for market making with general Hawkes order-flow dynamics. We first establish non-asymptotic performance bounds that quantify the loss incurred by approximating the infinite-dimensional Hawkes state using a finite collection of exponentially weighted features. Guided by this analysis, we introduce the Hawkes-Structured Network (HSN), a novel neural architecture that encodes historical order flow through a learnable mixture-of-exponentials filter. HSN is trained end-to-end using model-free RL, jointly optimizing the feature representation and quoting policy directly from reward feedback. Experiments on single- and multi-asset market-making problems with mixture-of-exponentials, power-law, and regime-switching kernels demonstrate that HSN outperforms general-purpose neural architectures, achieving higher trading rewards while implicitly recovering the underlying order-flow intensities.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-fin.CP"
+      ],
+      "published": "2026-10-12T10:14:54Z",
+      "updated": "2026-10-12T10:14:54Z",
+      "abs_url": "https://arxiv.org/abs/2610.16524",
+      "pdf_url": "https://arxiv.org/pdf/2610.16524v1",
+      "keyword_score": 44,
+      "matched_keywords": [
+        "market making",
+        "order flow",
+        "reinforcement learning",
+        "regime"
+      ],
+      "relevance": 9,
+      "relevance_reason": "利用Hawkes過程與強化學習設計造市商策略，具備非同步實證。",
+      "summary": {
+        "title_zh": "結合 Hawkes-Structured Networks 與 Reinforcement Learning 的造市商策略",
+        "verdict": "提出 HSN 架構處理 Hawkes 過程的訂單流，在模型無關的 RL 造市中表現優於一般神經網路。",
+        "problem": "真實訂單流具備群聚與自我激發性質，屬非馬可夫 Hawkes 過程，傳統方法難以處理其無限維狀態。如何有效近似並納入造市商策略是一個挑戰。",
+        "method": "使用模型無關的 Reinforcement Learning 框架，結合 Hawkes-Structured Network (HSN) 透過可學習的指數混合濾波器編碼歷史訂單流。實驗涵蓋單一與多資產造市問題，測試指數混合、冪次法則與狀態切換等核心。",
+        "findings": "實驗證明 HSN 優於一般用途的神經網路架構，能獲得更高的交易報酬，同時隱含地恢復出底層的訂單流強度。論文未報告具體的 Sharpe 或報酬數字。",
+        "implication": "可用於處理具備高頻訂單流特性之市場的造市優化，前提是需要正確設定並訓練混合指數濾波器以捕捉訂單到達率。",
+        "caveats": "論文未提供實際交易成本扣除後的具體績效數據與夏普值。",
+        "practicality": 3,
+        "tags": [
+          "強化學習",
+          "造市商",
+          "Hawkes過程",
+          "高頻交易",
+          "神經網路"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.13126",
+      "title": "MLP-Initialized Reinforcement Learning for Exit Timing in SPX Short-Straddle Portfolios",
+      "authors": [
+        "Jianning Wang",
+        "Robert Ślepaczuk",
+        "Paweł Sakowski"
+      ],
+      "abstract": "This paper studies exit timing for SPX short-straddle portfolios using a two-stage supervised and reinforcement-learning framework. Historical episodes first generate ex-post optimal hold/exit labels for training a multilayer perceptron (MLP) using only contemporaneously available state variables at deployment. The trained MLP then initializes reinforcement-learning actors that are fine-tuned with a risk-aware trading reward. Out-of-sample evaluation over 2024-2026 shows that the supervised MLP substantially outperforms passive holding and representative fixed-time and profit-and-loss-based exit rules. Across seven independent seeds, MLP-initialized Actor-Critic averages 37.54% cumulative return and a Sharpe ratio of 1.705, compared with 35.01% and 1.651 for the supervised MLP. Actor-Critic trained from scratch averages only 0.18% return. These findings show that oracle-guided supervised learning provides a stable foundation for reward-based policy fine-tuning in a sparse and path-dependent option-exit problem.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-10-09T07:21:16Z",
+      "updated": "2026-10-09T07:21:16Z",
+      "abs_url": "https://arxiv.org/abs/2610.13126",
+      "pdf_url": "https://arxiv.org/pdf/2610.13126v1",
+      "keyword_score": 37,
+      "matched_keywords": [
+        "sharpe ratio",
+        "reinforcement learning",
+        "out-of-sample"
+      ],
+      "relevance": 9,
+      "relevance_reason": "提出監督式與強化學習結合的選擇權出場策略，有明確出樣回測。",
+      "summary": {
+        "title_zh": "MLP 初始化強化學習於 SPX Short-Straddle 組合的出場時機",
+        "verdict": "以 MLP 預先訓練初始化 Actor-Critic 模型，有效解決選擇權出場時機的稀疏與路徑相依問題。",
+        "problem": "SPX short-straddle 組合的出場時機難以掌握，傳統固定時間或 PnL 規則表現受限，且從零開始訓練強化學習效果差。",
+        "method": "結合監督式與強化學習的兩階段框架。歷史資料產生事後最佳標籤訓練 MLP，再用其初始化透過風險調整報酬微調的 RL 代理人，樣本期間為 2024-2026 年。",
+        "findings": "MLP 初始化 Actor-Critic 達到平均 37.54% 累積報酬與 1.705 夏普值，優於單純 supervised MLP 的 35.01% 與 1.651 夏普值，而從零訓練的 RL 僅有 0.18% 報酬。",
+        "implication": "使用 oracle 指導的監督式學習作為基礎，能為路徑相依的選擇權出場策略提供穩定的 RL 微調起點。",
+        "caveats": "僅在 2024-2026 年的樣本外資料進行評估。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "選擇權交易",
+          "機器學習",
+          "出場策略"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.17130",
+      "title": "EvoQuantLab: Training-Free Dual-Loop Evolution for Auditable Quantitative Research",
+      "authors": [
+        "Haolin Yang",
+        "Zhiqiang Qian",
+        "Chutian Chen",
+        "Jipeng Zhang",
+        "Zhenghao Zhu",
+        "Tangjia Deng",
+        "Jian Xie",
+        "Shuaishuai Gong",
+        "Yike Guo",
+        "Sirui Han"
+      ],
+      "abstract": "Automated alpha factor discovery is critical for modern quantitative research. While large language models (LLMs) have increasingly been integrated into quantitative workflows, existing agent-based approaches remain highly susceptible to severe backtest overfitting. To address this challenge, we propose EvoQuantLab, a training-free, dual-loop self-evolving framework for robust factor discovery. Instead of relying entirely on LLM generation, EvoQuantLab deploys an inner genetic-programming (GP) loop that dramatically improves token efficiency while evolving typed factor expressions under structural and diversity constraints. An outer diagnosis loop then systematically audits evidence across cycles to drive protocol-level improvements. Furthermore, our evaluation pipeline applies multi-metric validation to rigorously filter out spurious factors before deployment. Extensive out-of-sample experiments across both daily and hourly frequencies -- covering equities and cryptocurrency -- demonstrate the robustness of EvoQuantLab. Specifically, on daily CSI 500 and S&P 500 tasks, EvoQuantLab achieves leading annualized returns of 18.34% and 21.30%, consistently outperforming existing agent baselines. On high-turnover hourly cryptocurrency data, EvoQuantLab delivers a 37.91% annualized return while effectively avoiding execution collapse.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-10-12T17:19:13Z",
+      "updated": "2026-10-14T04:54:13Z",
+      "abs_url": "https://arxiv.org/abs/2610.17130",
+      "pdf_url": "https://arxiv.org/pdf/2610.17130v2",
+      "keyword_score": 29,
+      "matched_keywords": [
+        "out-of-sample",
+        "backtest",
+        "llm",
+        "large language model",
+        "cryptocurrency",
+        "alpha"
+      ],
+      "relevance": 9,
+      "relevance_reason": "免訓練的雙迴圈進化架構進行因子探勘，有效避免過擬合。",
+      "summary": {
+        "title_zh": "EvoQuantLab: 無需訓練的雙迴圈演化用於可稽核量化研究",
+        "verdict": "提出 EvoQuantLab 雙迴圈演化框架，結合 LLM 與基因編程進行因子發掘，有效降低過擬合。",
+        "problem": "現有基於 LLM 的自動化 Alpha 因子發掘方法高度容易遭遇嚴重的回測過擬合。需要更穩健且可稽核的研究流程。",
+        "method": "結合內層基因編程（GP）迴圈與外層診斷稽核迴圈的 EvoQuantLab 框架，在日線與小時線的股票及加密貨幣資料進行樣本外實驗。",
+        "findings": "在 CSI 500 與 S&P 500 日線任務上分別達成 18.34% 與 21.30% 的年化報酬率。在加密貨幣小時線高週轉資料上則達到 37.91% 年化報酬率並避免執行崩潰。",
+        "implication": "可直接應用於自動化 Alpha 因子探勘，其多指標驗證與雙迴圈結構有助於過濾假訊號。適合導入現有的量化研發管線中。",
+        "caveats": "論文未詳細說明交易成本與滑價對高週轉率策略的實際侵蝕程度。",
+        "practicality": 4,
+        "tags": [
+          "自動化因子發掘",
+          "大型語言模型",
+          "基因編程",
+          "機器學習",
+          "過擬合防範"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.14959",
+      "title": "AlphaRLM: Aligning Language Models for Literature-Grounded Symbolic Factor Discovery",
+      "authors": [
+        "Jie Huang",
+        "Yuecheng Hong",
+        "Yao Chen",
+        "Hao Zhong",
+        "Linfeng Xiao",
+        "Xudong Liu",
+        "Hao Xia",
+        "Jianxuan Xin"
+      ],
+      "abstract": "Formulaic alpha mining seeks to discover executable expressions that capture predictive market signals in a vast, noisy search space. Recent LLM-based approaches use prompting, iterative search, or seed-factor evolution, leaving direct factor construction through policy learning less explored. To address this, we introduce AlphaRLM, a reinforcement-learning framework that trains LLMs to construct executable symbolic factors from financial literature without input factor expressions. AlphaRLM incorporates Literature-Guided Operator Assembly (LEGO), which conditions factor construction on literature-derived ideas and executable operators, providing semantic priors for exploration. It further aligns the generation policy with market feedback through executable-validity and grouped-return-separation rewards that capture non-monotonic structures across factor quantiles. Extensive experiments on CSI 300, CSI 1000, and S&P 500 show that AlphaRLM outperforms strong factor-mining and LLM-based baselines in annualized excess return. Notably, the 8B model achieves strong cross-market performance, highlighting the promise of literature-conditioned, market-aligned factor generation.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "q-fin.PM"
+      ],
+      "published": "2026-10-10T14:32:10Z",
+      "updated": "2026-10-14T12:33:55Z",
+      "abs_url": "https://arxiv.org/abs/2610.14959",
+      "pdf_url": "https://arxiv.org/pdf/2610.14959v2",
+      "keyword_score": 8,
+      "matched_keywords": [
+        "llm",
+        "alpha"
+      ],
+      "relevance": 9,
+      "relevance_reason": "基於文獻引導與強化學習的符號化因子發現框架，效能顯著。",
+      "summary": {
+        "title_zh": "AlphaRLM: 對齊語言模型以進行文獻基礎的符號化因子發掘",
+        "verdict": "透過強化學習與文獻引導，訓練 LLM 從金融文本直接生成高效能符號化 Alpha 因子。",
+        "problem": "傳統公式化 Alpha 發掘在龐大且雜訊高的搜尋空間中表現受限，而現有 LLM 方法較少探討直接透過策略學習進行因子建構。",
+        "method": "結合強化學習框架與文獻引導算子組合 (LEGO)，利用文字知識作為語意先驗，並透過可執行有效性與群組報酬分離獎勵來對齊市場回饋。實驗涵蓋 CSI 300、CSI 1000 與 S&P 500 市場。",
+        "findings": "AlphaRLM 在年化超額報酬上超越多個強大的因子發掘與 LLM 基線模型。8B 模型展現出強大的跨市場表現，論文未報告具體的夏普值等細節數字。",
+        "implication": "可將金融文獻與 LLM 結合以自動化探索交易訊號，前提是需要具備支援強固的基礎建設來處理文獻解析與回測。",
+        "caveats": "論文摘要中未提供具體的績效數字與交易成本扣除細節。",
+        "practicality": 4,
+        "tags": [
+          "大語言模型",
+          "強化學習",
+          "因子發掘",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.16151",
+      "title": "Neural Estimation of Irreversibility in Real and Simulated Limit Order Book Paths",
+      "authors": [
+        "Hyeonjun Yeo",
+        "Doohwi Cha",
+        "Yoontae Hwang"
+      ],
+      "abstract": "A path indistinguishable from its own reverse carries no arrow of time, so time irreversibility is a necessary condition for a directed mechanism to be readable from trajectories alone. In finance it has been measured only on scalar series such as returns and volatility. We define the irreversibility rate of a coarse-grained limit order book path as the forward-to-reverse log-density ratio per event, and estimate it from three weeks of Nasdaq market-by-order data with an order-invariant MLP and a temporal convolutional network that receive identical blocks. For NVDA, the order-invariant and order-sensitive estimates are 0.036 and 0.054 nats per event, respectively. Their difference, the ordering increment, is 0.018. A surrogate preserving the coarse one-step transition table recovers 30 percent less irreversibility than the observed paths. The increment is positive for all twelve symbols on every held-out daytime date, and for NVDA in each session window. It changes more than tenfold with the coarse-graining scale. Neither a linear score nor any single feature group reproduces the full fitted rate. A queue-reactive simulator calibrated on the same days matches the market's ordered rate, 0.052 against 0.054, yet its ordering increment is 0.0006 against 0.018, building temporal asymmetry out of block composition instead of block order. We propose the ordering and scale profile of path irreversibility as a benchmark for order book simulators. Code and audit materials are available at https://github.com/hjyeo30/lob-irreversibility.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-10-12T04:21:33Z",
+      "updated": "2026-10-12T04:21:33Z",
+      "abs_url": "https://arxiv.org/abs/2610.16151",
+      "pdf_url": "https://arxiv.org/pdf/2610.16151v1",
+      "keyword_score": 42,
+      "matched_keywords": [
+        "limit order book",
+        "order book"
+      ],
+      "relevance": 8,
+      "relevance_reason": "量化LOB路徑的時間不可逆性，提供微觀結構模擬器的新評估基準。",
+      "summary": {
+        "title_zh": "Neural Estimation of Irreversibility in Real and Simulated Limit Order Book Paths",
+        "verdict": "透過神經網路估算 LOB 路徑不可逆性，發現現有模擬器無法捕捉真實市場的時間順序特徵。",
+        "problem": "金融領域過去僅在報酬率與波動度等純量序列上衡量時間不可逆性，缺乏對限價單簿（LOB）路徑本身的分析。",
+        "method": "使用訂單不變性 MLP 與時間卷積網路（TCN），分析 Nasdaq 三週的 market-by-order 資料，計算前向與反向的對數密度比率作為不可逆性速率。",
+        "findings": "NVDA 的訂單不變與順序敏感估計值分別為 0.036 與 0.054 nats/event，順序增量為 0.018；排隊反應模擬器雖能吻合整體速率（0.052 比 0.054），但順序增量僅有 0.0006。",
+        "implication": "提出的排序與尺度設定可作為評估 LOB 模擬器真實性的基準，幫助檢驗模擬器對時間不對稱性的捕捉能力。",
+        "caveats": "線性分數或單一特徵群組無法完整重現擬合速率，且結果會隨粗粒化尺度產生十倍以上的變化。",
+        "practicality": 3,
+        "tags": [
+          "限價單簿",
+          "時間不可逆性",
+          "神經網路",
+          "市場微結構",
+          "模擬器基準"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.15144",
+      "title": "From Economic Explanation to Performance Improvement in Machine-Learning Portfolios",
+      "authors": [
+        "Yunqi Liang",
+        "Stefan Zohren",
+        "Mihai Cucuringu"
+      ],
+      "abstract": "To extend conventional model-level feature importance to economically meaningful portfolio outcomes and decisions, we propose a local first-order attribution-propagation framework that maps allocation-function feature exposures to local sensitivities of sequential portfolio performance metrics. We relate the propagated attributions to Shapley values defined directly for portfolio objectives and derive statistical inference for Sharpe-ratio attributions. The resulting attribution-guided feature-exposure intervention enables post-training adaptation, translating portfolio-metric explanations into out-of-sample decisions without retraining the underlying allocation model. We further introduce temporal stabilisation and cross-model averaging as complementary regularisation mechanisms. Empirically, the interventions yield statistically significant improvements in net Sharpe ratios across different model classes.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "q-fin.ST"
+      ],
+      "published": "2026-10-10T19:44:27Z",
+      "updated": "2026-10-10T19:44:27Z",
+      "abs_url": "https://arxiv.org/abs/2610.15144",
+      "pdf_url": "https://arxiv.org/pdf/2610.15144v1",
+      "keyword_score": 20,
+      "matched_keywords": [
+        "sharpe ratio",
+        "out-of-sample"
+      ],
+      "relevance": 8,
+      "relevance_reason": "將機器學習特徵重要性映射至投組績效，提升模型可解釋性與調整。",
+      "summary": {
+        "title_zh": "從機器學習投資組合的經濟解釋到績效提升",
+        "verdict": "提出第一階歸因傳播框架，將模型特徵曝光對應至投資組合績效敏感度，實證顯示能顯著改善淨 Sharpe ratio。",
+        "problem": "傳統模型層級的特徵重要性難以直接對應至經濟意義明確的投資組合結果與決策。模型在訓練後缺乏直接利用解釋性結果來改善決策的機制。",
+        "method": "使用區域第一階歸因傳播框架（local first-order attribution-propagation framework），連結 Shapley values 與投資組合目標。結合時間穩定化與跨模型平均，測試多種機器學習模型類別。",
+        "findings": "透過歸因引導的特徵曝光介入，在不同模型類別中皆對淨 Sharpe ratios 產生了統計顯著的改善。詳細的具體數值改善幅度在摘要中未報告具體數字。",
+        "implication": "此方法允許在不重新訓練底層配置模型的情況下進行訓練後適應（post-training adaptation），直接將投資組合解釋轉化為樣本外決策。實務上可用於提升現有配置模型的表現，前提是能正確計算特徵敏感度。",
+        "caveats": "依賴於第一階近似與特徵曝光介入的穩定性，若市場動態劇烈變化，時間穩定化參數可能需要頻繁調整。",
+        "practicality": 4,
+        "tags": [
+          "機器學習",
+          "投資組合管理",
+          "模型解釋性",
+          "Shapley values",
+          "Sharpe ratio"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.17732",
+      "title": "Structured SDEs for Realized GARCH: Continuous-Time Volatility Modelling and Component-Level Analysis",
+      "authors": [
+        "Hongyu Yao",
+        "Zhengyang Chi",
+        "Junbin Gao"
+      ],
+      "abstract": "We propose a structured continuous-time stochastic volatility model for one-day-ahead integrated-variance forecasting. The model introduces a jointly evolving realized-measure state that feeds directly into latent variance dynamics, while correlated Brownian innovations capture return-linked dependence. Parameters are estimated through simulation-based predictive learning, and Monte Carlo simulation forecasts integrated variance. Across 17 equity indices, the proposed model shows strong out-of-sample performance relative to GARCH, GARCH-Itô, Realized GARCH, HAR, and HEAVY benchmarks under QLIKE, MSE, and MAE. Ablation results show that realized-measure feedback provides substantial incremental forecasting value within the proposed framework, while return-linked Brownian dependence contributes more modest complementary gains. The results support incorporating measurement-driven information directly into continuous-time latent volatility dynamics to improve integrated-variance forecasting.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "stat.ML"
+      ],
+      "published": "2026-10-13T05:11:12Z",
+      "updated": "2026-10-13T05:11:12Z",
+      "abs_url": "https://arxiv.org/abs/2610.17732",
+      "pdf_url": "https://arxiv.org/pdf/2610.17732v1",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "out-of-sample"
+      ],
+      "relevance": 8,
+      "relevance_reason": "結合已實現波動率與連續時間隨機波動模型的整合變異數預測。",
+      "summary": {
+        "title_zh": "Structured SDEs 用於 Realized GARCH：連續時間波動度建模與成分級分析",
+        "verdict": "提出結合 realized-measure 回饋與隨機微分方程式的 Realized GARCH 模型，在 17 個股價指數的樣本外預測中擊敗多個基準。",
+        "problem": "如何提升次日整合變異數（integrated variance）的預測準確度，並在連續時間波動度模型中妥善納入已實現量值（realized measure）。",
+        "method": "使用結構化連續時間隨機波動度模型，透過模擬式預測學習（simulation-based predictive learning）估計參數。資料涵蓋 17 個權益指數，並使用 Monte Carlo 模擬進行整合變異數預測。",
+        "findings": "在 QLIKE、MSE 與 MAE 評估指標下，該模型相較於 GARCH、GARCH-Itô、Realized GARCH、HAR 與 HEAVY 基準展現出強健的樣本外表現。消融實驗顯示已實現量值回饋提供了顯著的增量預測價值，而報酬連結的 Brownian 相關性則貢獻了較溫和的互補收益，論文未報告具體的績效數字。",
+        "implication": "此方法能直接將測量驅動的資訊納入連續時間潛在波動度動態中，有助於優化變異數預測模型。實務上可作為現有 Realized GARCH 或 HAR 模型的延伸架構。",
+        "caveats": "論文未提供扣除交易成本後的實際投資組合績效與具體誤差數值。",
+        "practicality": 4,
+        "tags": [
+          "隨機波動度",
+          "Realized GARCH",
+          "時間序列預測",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
