@@ -23,9 +23,10 @@ SYSTEM_PROMPT = """你是一位資深量化交易研究員，為交易員同事�
 各欄位要求：
 - title_zh：標題的完整繁體中文翻譯，一定要翻成中文，不可照抄英文原標題。
     只有三種可以保留英文：系統或模型的專有名稱（如 AlphaPilot、Realized GARCH）、
-    業界慣用的縮寫（如 LLM、LOB、SDE、CVaR、MLP、SPX）、人名衍生的名詞（如 Hawkes、Sharpe、Copula）。
+    業界慣用的縮寫與術語（如 LLM、LOB、SDE、CVaR、MLP、SPX、Alpha）、人名衍生的名詞（如 Hawkes、Sharpe、Copula）。
     其他描述性的英文詞組都要翻譯，例如 Reinforcement Learning 譯為「強化學習」、
-    Foundation Models 譯為「基礎模型」、Market Making 譯為「造市」、Neural Estimation 譯為「神經網路估計」
+    Foundation Models 譯為「基礎模型」、Market Making 譯為「造市」、Neural Estimation 譯為「神經網路估計」、
+    Alpha Mining 譯為「Alpha 因子挖掘」（Alpha 指超額報酬，不可譯成其他意思）
 - verdict：一句話講清楚做了什麼、結論是什麼，40 字以內
 - problem：要解決的問題，2 句以內
 - method：模型、市場、資料頻率、樣本期間，2 到 3 句
