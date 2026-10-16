@@ -54,6 +54,16 @@ def test_mainland_terms_are_replaced():
     assert s["tags"] == ["資料", "強化學習"]
 
 
+@pytest.mark.parametrize("raw,expected", [
+    ("總體宏觀投組", "總體投組"),
+    ("宏觀總體經濟", "總體經濟"),
+    ("最優最佳解", "最佳解"),
+])
+def test_term_fix_does_not_double_words(raw, expected):
+    from terms import fix_terms
+    assert fix_terms(raw) == expected
+
+
 def test_truncated_output_retries_with_bigger_budget():
     responses = iter([text_response('{"title_zh": "截', finish_reason="MAX_TOKENS"),
                       text_response(json.dumps(GOOD))])

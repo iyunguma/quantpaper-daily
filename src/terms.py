@@ -18,4 +18,8 @@ TERM_FIXES = {
 def fix_terms(text: str) -> str:
     for wrong, right in TERM_FIXES.items():
         text = text.replace(wrong, right)
+    # 模型有時兩種說法並用，例如「總體宏觀」，替換後會變成「總體總體」
+    for right in set(TERM_FIXES.values()):
+        while right * 2 in text:
+            text = text.replace(right * 2, right)
     return text
