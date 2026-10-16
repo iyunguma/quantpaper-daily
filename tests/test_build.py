@@ -79,3 +79,18 @@ def test_legacy_v1_issue_still_renders(dirs):
     store.write_issue({"date": "2026-09-03", "scanned": 143, "papers": [legacy]}, papers)
     build_site.build(papers, site)
     assert "中文標題1" in (site / "index.html").read_text(encoding="utf-8")
+
+
+def test_shows_evaluation_and_lookback_window(dirs):
+    papers, site = dirs
+    scored = {**paper(1), "relevance": 9, "value": 7, "relevance_reason": "樣本外檢驗完整，且扣除交易成本。"}
+    legacy = {**paper(2), "relevance": 8, "relevance_reason": "只有相關度"}   # 改版前只有相關度
+    store.write_issue({"date": "2026-10-16", "eligible": 2500, "lookback_days": 365, "papers": [scored, legacy]}, papers)
+    store.write_issue({"date": "2026-10-15", "eligible": 49, "papers": [paper(3)]}, papers)
+    build_site.build(papers, site)
+
+    index = (site / "index.html").read_text(encoding="utf-8")
+    assert "從過去一年 <b>2500</b> 篇" in index
+    assert "樣本外檢驗完整，且扣除交易成本。相關度 9、內容價值 7（滿分 10）" in index
+    assert index.count("評選理由") == 1, "沒有內容價值分數的舊資料不顯示評選理由"
+    assert "從最近一週 <b>49</b> 篇" in (site / "archive" / "2026-10-15.html").read_text(encoding="utf-8")

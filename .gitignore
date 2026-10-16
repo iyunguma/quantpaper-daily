@@ -4,5 +4,5 @@ __pycache__/
 .env
 .pytest_cache/
 site/
-data/papers/*.tmp
+data/*/*.tmp
 .DS_Store

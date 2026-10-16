@@ -43,6 +43,17 @@ def test_success_normalizes_output():
     assert config.max_output_tokens >= 4000, "思考 token 也算在上限內，要留足空間"
 
 
+def test_mainland_terms_are_replaced():
+    data = {**GOOD, "title_zh": "政權切換下的投組最優化", "method": "以高頻數據優化執行",
+            "implication": "宏觀對沖基金可參考",
+            "tags": ["數據", "強化學習"]}
+    s = sm.summarize_one(FakeClient(lambda kw: text_response(json.dumps(data))), PAPER)["summary"]
+    assert s["title_zh"] == "體制轉換下的投組最佳化", "「最優化」要變成「最佳化」，不是「最最佳化」"
+    assert s["method"] == "以高頻資料最佳化執行"
+    assert s["implication"] == "總體避險基金可參考"
+    assert s["tags"] == ["資料", "強化學習"]
+
+
 def test_truncated_output_retries_with_bigger_budget():
     responses = iter([text_response('{"title_zh": "截', finish_reason="MAX_TOKENS"),
                       text_response(json.dumps(GOOD))])

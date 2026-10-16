@@ -45,12 +45,18 @@ REAL_PAPERS = [
 # 邊界案例
 OLD_STYLE = ("q-fin/0701001", "Order Book Dynamics in Old Style Identifiers",
              "q-fin.TR", "A limit order book model with empirical high-frequency data.", "2026-10-14T10:00:00Z")
-TOO_OLD = ("2609.11111", "Statistical Arbitrage with Limit Order Book Signals",
-           "q-fin.TR", "A statistical arbitrage strategy on limit order book data with live trading results.",
-           "2026-09-20T10:00:00Z")
+LAST_MONTH = ("2609.11111", "Statistical Arbitrage with Limit Order Book Signals",
+              "q-fin.TR", "A statistical arbitrage strategy on limit order book data with live trading results.",
+              "2026-09-20T10:00:00Z")
+TOO_OLD = ("2509.22222", "Pairs Trading with Order Flow Imbalance",
+           "q-fin.TR", "A pairs trading strategy driven by order flow imbalance, with backtest and transaction costs.",
+           "2025-09-20T10:00:00Z")
 
 
-def entry_xml(arxiv_id, title, primary, abstract, published, version=1):
+def entry_xml(arxiv_id, title, primary, abstract, published, version=1, comment="", journal_ref=""):
+    ns = 'xmlns:arxiv="http://arxiv.org/schemas/atom"'
+    extra = (f"<arxiv:comment {ns}>{escape(comment)}</arxiv:comment>" if comment else "") + \
+            (f"<arxiv:journal_ref {ns}>{escape(journal_ref)}</arxiv:journal_ref>" if journal_ref else "")
     return f"""
   <entry>
     <id>http://arxiv.org/abs/{arxiv_id}v{version}</id>
@@ -65,6 +71,7 @@ def entry_xml(arxiv_id, title, primary, abstract, published, version=1):
     <link title="pdf" href="http://arxiv.org/pdf/{arxiv_id}v{version}" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="{primary}" scheme="http://arxiv.org/schemas/atom"/>
     <category term="{primary}" scheme="http://arxiv.org/schemas/atom"/>
+    {extra}
   </entry>"""
 
 
@@ -88,7 +95,7 @@ def feed_xml(entries, total=None):
 
 @pytest.fixture
 def real_feed():
-    return feed_xml([entry_xml(*p) for p in REAL_PAPERS + [OLD_STYLE, TOO_OLD]] + [ERROR_ENTRY])
+    return feed_xml([entry_xml(*p) for p in REAL_PAPERS + [OLD_STYLE, LAST_MONTH, TOO_OLD]] + [ERROR_ENTRY])
 
 
 @pytest.fixture

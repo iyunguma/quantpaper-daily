@@ -41,6 +41,19 @@ def short_date(iso_ts: str) -> str:
         return ""
 
 
+def window_zh(days: int) -> str:
+    return {7: "最近一週", 365: "過去一年"}.get(days, f"最近 {days} 天")
+
+
+def evaluation_note(p: dict) -> str:
+    """評選理由與兩個分數；舊資料沒有內容價值分數時不顯示。"""
+    if p.get("relevance") is None or p.get("value") is None:
+        return ""
+    reason = str(p.get("relevance_reason") or "").strip().rstrip("。.")
+    scores = f"相關度 {p['relevance']}、內容價值 {p['value']}（滿分 10）"
+    return f"{reason}。{scores}" if reason else scores
+
+
 def author_line(authors: list[str]) -> str:
     if not authors:
         return "作者未列出"
@@ -58,6 +71,8 @@ def decorate(issues: list[dict]) -> list[dict]:
         issue["older"] = issues[i + 1]["date"] if i + 1 < len(issues) else None
         issue.setdefault("scanned", 0)
         issue.setdefault("eligible", issue.get("scanned", 0))
+        # 舊的期數沒記錄 lookback_days，當時都是往回看一週
+        issue["window_zh"] = window_zh(issue.get("lookback_days", 7))
         for p in issue["papers"]:
             p.setdefault("summary", {})
             p["failed"] = is_failed(p["summary"])
@@ -65,6 +80,7 @@ def decorate(issues: list[dict]) -> list[dict]:
             p["author_line"] = author_line(p.get("authors", []))
             p["published_short"] = short_date(p.get("published", ""))
             p["from_pdf"] = p["summary"].get("source") == "pdf"
+            p["evaluation_note"] = evaluation_note(p)
     return issues
 
 

@@ -6,6 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 PAPERS_DIR = DATA_DIR / "papers"
+EVALUATIONS_DIR = DATA_DIR / "evaluations"
 SITE_DIR = ROOT / "site"
 
 
@@ -19,13 +20,13 @@ def _env(name: str, default: str) -> str:
 # 每天最多選幾篇
 DAILY_COUNT = int(_env("DAILY_COUNT", "10"))
 
-# 只考慮最近幾天內首次投稿的論文。arXiv 週五、週六不發佈新論文，
-# 往回看一週可以讓週末那幾期用前幾天沒選上的好文章補位。
-LOOKBACK_DAYS = int(_env("LOOKBACK_DAYS", "7"))
+# 只考慮這麼多天內首次投稿的論文。不限於最新一批，過去一年內沒收錄過的好論文都可以入選。
+LOOKBACK_DAYS = int(_env("LOOKBACK_DAYS", "365"))
 
-# 每組查詢向 arXiv 要幾篇（依投稿時間由新到舊）
-QFIN_FETCH = 150
-CROSS_FETCH = 100
+# 依投稿時間由新到舊分頁抓取。一年約 2,500 篇（2026-10 實測），每天約 4 次請求。
+# arXiv 規定每次最多 2000 篇；FETCH_MAX 是每組查詢的安全上限。
+FETCH_PAGE_SIZE = 1000
+FETCH_MAX = 10000
 
 # arXiv 要求兩次請求間隔至少 3 秒，並建議標明身分
 ARXIV_API = "https://export.arxiv.org/api/query"
@@ -129,19 +130,26 @@ MIN_KEYWORD_SCORE = 8
 # 思考程度 minimal / low / medium / high：越高越仔細，但越慢、越容易用完額度。
 # 各模型支援的等級不同，例如 gemini-3.8-flash 不支援 minimal。
 
-# ---------------------------------------------------------------- 第二階段：語意重排
-# 關鍵字分數最高的 RERANK_POOL 篇交給輕量模型逐篇評 0–10 分相關度，
-# 一次請求即可。失敗時自動退回關鍵字排序。
+# ---------------------------------------------------------------- 第二階段：語意評估
+# 還沒評估過的論文中，關鍵字分數最高的 RERANK_POOL 篇交給輕量模型，
+# 逐篇評 0–10 分的「交易相關度」與「內容價值」，一次請求即可。
+# 評過的分數存在 data/evaluations/，之後不再重評；當天沒選上的好論文隔天繼續競爭。
+# 評估失敗時改用先前的評分，沒有先前的評分才退回關鍵字排序。
 
 RERANK_ENABLED = os.getenv("RERANK_ENABLED", "1") != "0"
 RERANK_MODEL = _env("RERANK_MODEL", "gemini-3.5-flash-lite")
-RERANK_THINKING = _env("RERANK_THINKING", "minimal")
+# 判斷內容價值需要推理。2026-10 實測 low 時模型常忽略扣分規則，分數也擠在 8 分，所以預設 medium
+RERANK_THINKING = _env("RERANK_THINKING", "medium")
 RERANK_POOL = 40
-RERANK_MAX_TOKENS = 6000
+RERANK_MAX_TOKENS = 16000
 
-# 語意相關度低於此值的不選。寧可少於十篇，也不硬湊不相關的論文。
-# 設成 0 就會永遠湊滿 DAILY_COUNT。
+# 兩個分數任一低於門檻就不選。寧可少於十篇，也不硬湊。
+# 兩個都設成 0 就會盡量湊滿 DAILY_COUNT。
 MIN_RELEVANCE = int(_env("MIN_RELEVANCE", "4"))
+MIN_VALUE = int(_env("MIN_VALUE", "5"))
+
+# 同一主題每天最多幾篇，避免一年份的候選被單一熱門主題佔滿。其他主題不夠時仍會補滿
+MAX_PER_TOPIC = int(_env("MAX_PER_TOPIC", "3"))
 
 # ---------------------------------------------------------------- 摘要
 

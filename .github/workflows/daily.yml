@@ -60,7 +60,10 @@ jobs:
           RERANK_MODEL: ${{ vars.RERANK_MODEL }}
           RERANK_THINKING: ${{ vars.RERANK_THINKING }}
           DAILY_COUNT: ${{ vars.DAILY_COUNT }}
+          LOOKBACK_DAYS: ${{ vars.LOOKBACK_DAYS }}
           MIN_RELEVANCE: ${{ vars.MIN_RELEVANCE }}
+          MIN_VALUE: ${{ vars.MIN_VALUE }}
+          MAX_PER_TOPIC: ${{ vars.MAX_PER_TOPIC }}
           MODE: ${{ inputs.mode || 'daily' }}
         run: |
           case "$MODE" in

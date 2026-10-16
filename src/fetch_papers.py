@@ -7,13 +7,13 @@ import re
 import time
 import xml.etree.ElementTree as ET
 from dataclasses import asdict, dataclass, field
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 import requests
 
 from config import (
-    ARXIV_API, ARXIV_DELAY_SECONDS, CROSS_CATEGORIES, CROSS_FETCH,
-    CROSS_TERMS, QFIN_CATEGORIES, QFIN_FETCH, USER_AGENT,
+    ARXIV_API, ARXIV_DELAY_SECONDS, CROSS_CATEGORIES, CROSS_TERMS, FETCH_MAX,
+    FETCH_PAGE_SIZE, LOOKBACK_DAYS, QFIN_CATEGORIES, USER_AGENT,
 )
 
 log = logging.getLogger(__name__)
@@ -42,10 +42,15 @@ class Paper:
     updated: str
     abs_url: str
     pdf_url: str
+    comment: str = ""                     # 作者附註，常寫頁數、接受的會議、程式碼連結
+    journal_ref: str = ""                 # 已刊登的期刊
     keyword_score: int = 0
     matched_keywords: list[str] = field(default_factory=list)
-    relevance: int | None = None          # 語意重排分數 0–10
-    relevance_reason: str = ""
+    relevance: int | None = None          # 語意評估：交易相關度 0–10
+    value: int | None = None              # 語意評估：內容價值 0–10
+    topic: str = ""                       # 語意評估：主題（rank.TOPICS 之一）
+    evidence: str = ""                    # 語意評估：結論的依據（rank.EVIDENCE 之一）
+    relevance_reason: str = ""            # 兩個分數的評分理由
 
     @property
     def published_dt(self) -> datetime | None:
@@ -98,25 +103,32 @@ def parse_feed(xml_text: str) -> tuple[list[Paper], int]:
             updated=entry.findtext(f"{ATOM}updated", ""),
             abs_url=f"https://arxiv.org/abs/{arxiv_id}",
             pdf_url=pdf_url,
+            comment=_clean(entry.findtext(f"{ARXIV_NS}comment")),
+            journal_ref=_clean(entry.findtext(f"{ARXIV_NS}journal_ref")),
         ))
     return papers, total
 
 
-def build_queries() -> list[tuple[str, int]]:
-    qfin = " OR ".join(f"cat:{c}" for c in QFIN_CATEGORIES)
-    cross = "({}) AND ({})".format(
+def build_queries(now: datetime | None = None) -> list[str]:
+    """兩組查詢，都只取 LOOKBACK_DAYS 天內首次投稿的論文（arXiv 以 UTC 計時）。"""
+    now = now or datetime.now(timezone.utc)
+    since = now - timedelta(days=LOOKBACK_DAYS)
+    window = f"submittedDate:[{since:%Y%m%d%H%M} TO {now + timedelta(days=1):%Y%m%d%H%M}]"
+    qfin = "({}) AND {}".format(" OR ".join(f"cat:{c}" for c in QFIN_CATEGORIES), window)
+    cross = "({}) AND ({}) AND {}".format(
         " OR ".join(f"cat:{c}" for c in CROSS_CATEGORIES),
         " OR ".join(f'abs:"{t}"' for t in CROSS_TERMS),
+        window,
     )
-    return [(qfin, QFIN_FETCH), (cross, CROSS_FETCH)]
+    return [qfin, cross]
 
 
-def query_arxiv(session: requests.Session, search_query: str, max_results: int,
-                attempts: int = 4, sleep=time.sleep) -> list[Paper] | None:
-    """失敗時回傳 None（和「查無結果」的空清單區分開來）。"""
+def query_arxiv(session: requests.Session, search_query: str, max_results: int, start: int = 0,
+                attempts: int = 4, sleep=time.sleep) -> tuple[list[Paper], int] | None:
+    """回傳（這一頁的論文, arXiv 回報的總筆數）；失敗時回傳 None。"""
     params = {
         "search_query": search_query,
-        "start": 0,
+        "start": start,
         "max_results": max_results,
         "sortBy": "submittedDate",
         "sortOrder": "descending",
@@ -124,17 +136,17 @@ def query_arxiv(session: requests.Session, search_query: str, max_results: int,
     for attempt in range(1, attempts + 1):
         wait = ARXIV_DELAY_SECONDS * 2 ** attempt
         try:
-            resp = session.get(ARXIV_API, params=params, timeout=60)
+            resp = session.get(ARXIV_API, params=params, timeout=120)
             if resp.status_code in (429, 500, 502, 503, 504):
                 retry_after = resp.headers.get("Retry-After", "")
                 wait = float(retry_after) if retry_after.isdigit() else wait
                 raise requests.HTTPError(f"HTTP {resp.status_code}")
             resp.raise_for_status()
             papers, total = parse_feed(resp.text)
-            # arXiv 偶爾會回傳 200 但沒有任何 entry；依時間排序的分類查詢不可能真的是空的
+            # arXiv 偶爾會回傳 200 但沒有任何 entry；一整年的分類查詢不可能真的是空的
             if not papers:
                 raise ValueError(f"回應沒有任何論文（totalResults={total}）")
-            return papers
+            return papers, total
         except (requests.RequestException, ET.ParseError, ValueError) as exc:
             if attempt == attempts:
                 log.error("arXiv 查詢失敗，已放棄：%s", exc)
@@ -144,16 +156,35 @@ def query_arxiv(session: requests.Session, search_query: str, max_results: int,
     return None
 
 
-def collect_candidates(session: requests.Session | None = None, sleep=time.sleep) -> list[Paper]:
+def fetch_query(session: requests.Session, search_query: str, sleep=time.sleep) -> list[Paper] | None:
+    """分頁抓完一組查詢。第一頁就失敗回傳 None；之後的頁失敗則保留已抓到的較新論文。"""
+    papers: list[Paper] = []
+    while True:
+        result = query_arxiv(session, search_query, FETCH_PAGE_SIZE, start=len(papers), sleep=sleep)
+        if result is None:
+            if papers:
+                log.warning("只抓到前 %d 篇，較舊的論文今天不列入候選", len(papers))
+            return papers or None
+        batch, total = result
+        papers.extend(batch)
+        # 用實際收到的篇數推進，arXiv 偶爾回傳不足一頁時也不會跳過論文
+        if len(papers) >= min(total, FETCH_MAX):
+            return papers
+        sleep(ARXIV_DELAY_SECONDS)
+
+
+def collect_candidates(session: requests.Session | None = None, sleep=time.sleep,
+                       now: datetime | None = None) -> list[Paper]:
     session = session or requests.Session()
     session.headers.setdefault("User-Agent", USER_AGENT)
 
+    queries = build_queries(now)
     by_id: dict[str, Paper] = {}
     failures = 0
-    for i, (query, n) in enumerate(build_queries()):
+    for i, query in enumerate(queries):
         if i:
             sleep(ARXIV_DELAY_SECONDS)
-        batch = query_arxiv(session, query, n, sleep=sleep)
+        batch = fetch_query(session, query, sleep=sleep)
         if batch is None:
             failures += 1
             continue
@@ -161,6 +192,6 @@ def collect_candidates(session: requests.Session | None = None, sleep=time.sleep
         for p in batch:
             by_id.setdefault(p.arxiv_id, p)
 
-    if failures == len(build_queries()):
+    if failures == len(queries):
         raise FetchError("arXiv 所有查詢都失敗，今天不更新")
     return list(by_id.values())

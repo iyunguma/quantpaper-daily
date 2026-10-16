@@ -1,6 +1,6 @@
 # 量化研究日報
 
-每天早上自動從 arXiv 抓量化交易相關論文，挑出最值得看的（最多十篇），用 Gemini 產生繁體中文重點，發佈成靜態網站與 RSS。
+每天早上從 arXiv 過去一年的量化交易相關論文中，挑出主題對口、內容也扎實的（最多十篇），用 Gemini 產生繁體中文重點，發佈成靜態網站與 RSS。
 
 沒有伺服器、沒有資料庫。排程跑在 GitHub Actions，網站放在 GitHub Pages，每日資料以 JSON 存回 repo。模型使用 Gemini API 的免費額度，整套系統不用花錢。
 
@@ -9,24 +9,28 @@
 ```
 GitHub Actions（每天台北時間 07:17）
   │
-  ├─ fetch_papers.py   向 arXiv 查兩組：q-fin 全分類、資工/統計分類中與交易相關者
-  │                    → 約 250 篇候選
+  ├─ fetch_papers.py   向 arXiv 分頁查兩組過去一年的論文：q-fin 全分類、資工/統計分類中與交易相關者
+  │                    → 約 2,500 篇候選，每天約 4 次請求
   │
-  ├─ rank.py           1. 排除已收錄、超過 7 天的論文
-  │                    2. 關鍵字粗篩，取前 40 篇
-  │                    3. Gemini 3.5 Flash-Lite 逐篇評 0–10 分交易相關度（一次請求）
-  │                    4. 相關度 ≥ 4 的取前 10 篇；量少的日子寧缺勿濫
-  │                    （語意評分失敗時自動退回關鍵字排序）
+  ├─ rank.py           1. 排除已收錄的論文
+  │                    2. 還沒評估過的論文做關鍵字粗篩，取前 40 篇
+  │                    3. Gemini 3.5 Flash-Lite 逐篇標主題與實證依據、評兩個 0–10 分（一次請求）：
+  │                       交易相關度，以及內容價值（實證是否扎實、有沒有新意、結論可不可信）
+  │                       只靠模擬資料的內容價值最高 6 分；績效好到不可信的最高 4 分（不會入選）
+  │                    4. 連同先前評過、還沒收錄的論文一起排名：相關度 ≥ 4 且內容價值 ≥ 5 的，
+  │                       依兩者總分取前 10 篇，同一主題最多 3 篇；不夠就寧缺勿濫
+  │                    （評估失敗時改用先前的評分，再不行才退回關鍵字排序）
   │
   ├─ summarize.py      Gemini 3.5 Flash-Lite 以 structured outputs 逐篇產生固定格式的重點：
   │                    一句話結論、問題、方法、發現、交易意涵、限制、落地可用性 1–5
   │
-  ├─ store.py          寫入 data/papers/YYYY-MM-DD.json ← 唯一的資料來源
+  ├─ store.py          寫入 data/papers/YYYY-MM-DD.json ← 網站內容的唯一來源
+  │                    評分另存 data/evaluations/YYYY-MM-DD.json
   │
   └─ build_site.py     產生今日頁、每日歸檔、歸檔索引、RSS，部署到 GitHub Pages
 ```
 
-哪些論文已經收錄過，直接從 `data/papers/` 推算，不另外維護清單，所以資料不會不同步。
+哪些論文已經收錄過，直接從 `data/papers/` 推算，不另外維護清單，所以資料不會不同步。評過分的論文記在 `data/evaluations/`，不會重評；當天沒選上的好論文，隔天繼續和新評的論文競爭。
 
 ## 設定步驟
 
@@ -54,13 +58,13 @@ GitHub Actions（每天台北時間 07:17）
 
 ```bash
 pip install -r requirements-dev.txt
-python -m pytest                       # 63 項測試，不需要網路與 API key
+python -m pytest                       # 86 項測試，不需要網路與 API key
 
 # 看看今天會選到哪些論文，不產生摘要、不寫任何檔案
 python src/run_daily.py --dry-run      # 沒有 API key 時只用關鍵字排序
 
 export GEMINI_API_KEY=...
-python src/run_daily.py --dry-run      # 有 key 時會加上語意評分，並列出每篇的評分理由
+python src/run_daily.py --dry-run      # 有 key 時會加上語意評估，列出每篇的分數、主題與理由，以及分數分布
 python src/run_daily.py                # 完整跑一次
 python -m http.server 8000 -d site     # 在 http://localhost:8000 預覽
 ```
@@ -72,7 +76,12 @@ python -m http.server 8000 -d site     # 在 http://localhost:8000 預覽
 | 想做的事 | 怎麼改 |
 |---|---|
 | 讀全文 PDF，重點更精準 | Variables：`SUMMARY_SOURCE` = `pdf`（較容易碰到額度上限，見下方） |
-| 一定要湊滿十篇 | Variables：`MIN_RELEVANCE` = `0` |
+| 一定要湊滿十篇 | Variables：`MIN_RELEVANCE` = `0`、`MIN_VALUE` = `0` |
+| 對內容價值更挑剔 | Variables：`MIN_VALUE` 調高（預設 5，滿分 10） |
+| 往回找多久 | Variables：`LOOKBACK_DAYS`（預設 365 天） |
+| 同一主題每天最多幾篇 | Variables：`MAX_PER_TOPIC`（預設 3）。主題清單在 `rank.py` 的 `TOPICS` |
+| 改了評分標準想全部重評 | 把 `rank.py` 的 `RUBRIC_VERSION` 加一，舊的評分會作廢 |
+| 網站上出現中國大陸用語 | 在 `src/terms.py` 的 `TERM_FIXES` 加一行，摘要與評選理由都會自動替換 |
 | 每天篇數 | Variables：`DAILY_COUNT` |
 | 摘要更快、更省額度 | Variables：`SUMMARY_THINKING` = `low` |
 | 摘要更仔細 | Variables：`SUMMARY_THINKING` = `high` |
@@ -109,7 +118,7 @@ Google 沒有公開固定的免費額度數字，而且調整過好幾次。你�
 
 - **只涵蓋 arXiv**。SSRN 與期刊沒有開放 API。arXiv q-fin 已涵蓋大部分量化預印本。
 - **預設只讀摘要**。摘要沒寫的數字不會出現在重點裡；需要的話改用 PDF 模式。
-- **相關度由模型判斷**，偶爾會有見仁見智的取捨。dry-run 會列出每篇的評分理由，方便你調整提示詞。
-- **arXiv 週五、週六不發佈新論文**，週末那幾期由前幾天沒選上的論文補位，數量可能少於十篇。
+- **相關度與內容價值由模型判斷**，偶爾會有見仁見智的取捨。內容價值只根據摘要與 arXiv 附註（頁數、接受的會議、期刊），看不到全文的實驗細節。網站上每篇都列出評選理由，dry-run 也會列出，方便你調整提示詞。
+- **前幾週會先消化過去一年累積的好論文**。之後能選的主要是每天新公告的論文，夠格的不一定有十篇，數量可能變少。
 - **免費額度的內容會被 Google 用於改進產品**（Gemini API 價目頁標示；付費方案不會）。這裡送出的只有公開的 arXiv 標題、摘要與 PDF，以及 `src/` 裡的提示詞。
 - **模型名稱會過期**。Google 汰換模型很快，預設模型被停用時，摘要會全部失敗並在 Actions 記錄裡顯示 404。照「常見調整」用 Variables 換成新模型即可。

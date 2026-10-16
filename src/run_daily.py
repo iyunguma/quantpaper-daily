@@ -16,6 +16,7 @@ from __future__ import annotations
 import argparse
 import logging
 import sys
+from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -24,8 +25,8 @@ sys.path.insert(0, str(Path(__file__).parent))
 import build_site  # noqa: E402
 import store  # noqa: E402
 from config import (  # noqa: E402
-    DAILY_COUNT, MAX_FAILURE_RATIO, PAPERS_DIR, RERANK_ENABLED,
-    SUMMARY_MODEL, SUMMARY_SOURCE,
+    DAILY_COUNT, EVALUATIONS_DIR, LOOKBACK_DAYS, MAX_FAILURE_RATIO, PAPERS_DIR,
+    RERANK_ENABLED, RERANK_MODEL, SUMMARY_MODEL, SUMMARY_SOURCE,
 )
 
 log = logging.getLogger("daily")
@@ -36,9 +37,10 @@ def today_tpe() -> str:
     return datetime.now(TPE).strftime("%Y-%m-%d")
 
 
-def run_today(args, client, papers_dir: Path = PAPERS_DIR) -> int:
+def run_today(args, client, papers_dir: Path = PAPERS_DIR,
+              evaluations_dir: Path = EVALUATIONS_DIR) -> int:
     from fetch_papers import FetchError, collect_candidates
-    from rank import select
+    from rank import RUBRIC_VERSION, evaluation_row, select
     from summarize import is_failed, summarize_all
 
     today = args.date or today_tpe()
@@ -46,7 +48,10 @@ def run_today(args, client, papers_dir: Path = PAPERS_DIR) -> int:
         log.info("%s 這一期已經存在，不重新抓取（要重做請加 --force）", today)
         return 0
 
-    seen = store.seen_ids(papers_dir, exclude_date=today if args.force else None)
+    # --force 重做時，今天原本的論文與評分都當作不存在
+    redo = today if args.force else None
+    seen = store.seen_ids(papers_dir, exclude_date=redo)
+    history = store.load_evaluations(RUBRIC_VERSION, evaluations_dir, exclude_date=redo)
     try:
         candidates = collect_candidates()
     except FetchError as exc:
@@ -57,19 +62,35 @@ def run_today(args, client, papers_dir: Path = PAPERS_DIR) -> int:
         candidates, seen,
         client=client if RERANK_ENABLED else None,
         count=args.count,
+        history=history,
     )
 
     if args.dry_run:
         for i, p in enumerate(selection.papers, 1):
-            rel = f"相關度 {p.relevance:>2}" if p.relevance is not None else ""
-            log.info("%2d. [關鍵字 %3d] %s %s  %s", i, p.keyword_score, rel, p.arxiv_id, p.title[:70])
+            scores = (f"相關度 {p.relevance:>2} 價值 {p.value:>2} {p.topic}／{p.evidence}"
+                      if p.relevance is not None else "")
+            log.info("%2d. [關鍵字 %3d] %s %s  %s", i, p.keyword_score, scores, p.arxiv_id, p.title[:70])
             if p.relevance_reason:
                 log.info("      %s", p.relevance_reason)
+        if selection.evaluated:
+            # 調整提示詞或門檻時看這裡：分數沒拉開、主題太集中都一眼可見
+            values = Counter(p.value for p in selection.evaluated)
+            topics = Counter(p.topic or "未標" for p in selection.evaluated)
+            evidence = Counter(p.evidence or "未標" for p in selection.evaluated)
+            log.info("今天新評 %d 篇的內容價值分布：%s", len(selection.evaluated),
+                     "、".join(f"{v} 分 {n} 篇" for v, n in sorted(values.items(), reverse=True)))
+            log.info("主題分布：%s", "、".join(f"{t} {n} 篇" for t, n in topics.most_common()))
+            log.info("依據分布：%s", "、".join(f"{e} {n} 篇" for e, n in evidence.most_common()))
         log.info("dry-run 結束，沒有產生摘要，也沒有寫入任何檔案")
         return 0
 
+    # 先存評分：就算今天沒有夠格的論文或摘要失敗，評過的也不必重評
+    if selection.evaluated:
+        store.save_evaluations(today, RUBRIC_VERSION, RERANK_MODEL,
+                               [evaluation_row(p) for p in selection.evaluated], evaluations_dir)
+
     if not selection.papers:
-        log.warning("今天沒有夠相關的新論文，不產生新的一期；網站維持顯示上一期")
+        log.warning("今天沒有相關度與內容價值都夠格的論文，不產生新的一期；網站維持顯示上一期")
         return 0
 
     records = summarize_all(client, [p.to_dict() for p in selection.papers])
@@ -84,6 +105,7 @@ def run_today(args, client, papers_dir: Path = PAPERS_DIR) -> int:
         "generated_at": datetime.now(TPE).isoformat(timespec="seconds"),
         "scanned": selection.scanned,
         "eligible": selection.eligible,
+        "lookback_days": LOOKBACK_DAYS,
         "ranking": selection.method,
         "summary_model": SUMMARY_MODEL,
         "summary_source": SUMMARY_SOURCE,

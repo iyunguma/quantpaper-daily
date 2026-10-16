@@ -14,8 +14,8 @@
 <section class="hero">
   <h1 class="hero__date">{{ issue.date_zh }}<span class="hero__weekday">{{ issue.weekday }}</span></h1>
   <p class="hero__note">
-    從最近一週 <b>{{ issue.eligible }}</b> 篇還沒收錄的論文中挑出這 <b>{{ issue.papers|length }}</b> 篇，編號 1 最值得先看。
-    {%- if issue.papers|length < daily_count %}其餘的相關度不夠，寧缺勿濫。{% endif %}
+    從{{ issue.window_zh }} <b>{{ issue.eligible }}</b> 篇還沒收錄的論文中挑出這 <b>{{ issue.papers|length }}</b> 篇，編號 1 最值得先看。
+    {%- if issue.papers|length < daily_count %}其餘的相關度或內容價值不夠，寧缺勿濫。{% endif %}
   </p>
 </section>
 
@@ -55,6 +55,9 @@
         <dt>主要發現</dt><dd>{{ s.get('findings', '') }}</dd>
         <dt>交易意涵</dt><dd>{{ s.get('implication', '') }}</dd>
         <dt>要留意</dt><dd class="is-caveat">{{ s.get('caveats', '') }}</dd>
+        {% if p.evaluation_note %}
+        <dt>評選理由</dt><dd>{{ p.evaluation_note }}</dd>
+        {% endif %}
       </dl>
       {% endif %}
 
