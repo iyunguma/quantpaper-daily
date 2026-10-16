@@ -1,57 +1,111 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T02:29:22+08:00",
-  "scanned": 240,
-  "eligible": 49,
+  "generated_at": "2026-10-16T13:59:58+08:00",
+  "scanned": 2388,
+  "eligible": 2388,
+  "lookback_days": 365,
   "ranking": "llm",
   "summary_model": "gemini-3.5-flash-lite",
   "summary_source": "abstract",
   "papers": [
     {
-      "arxiv_id": "2610.15488",
-      "title": "AlphaPilot: Multi-Turn Tool-Using LLM Agents for Adaptive Alpha Mining with Reinforcement Learning",
+      "arxiv_id": "2608.27734",
+      "title": "What survives honest evaluation? Leakage-safe, search-aware assessment of LLM-driven trading strategy discovery",
       "authors": [
-        "Peiqi Jiang",
-        "Fan Zhang",
-        "Xin Xu",
-        "Tianhao Chen",
-        "Can Yang"
+        "Eray Gençay"
       ],
-      "abstract": "Formulaic alpha mining seeks interpretable expressions that rank assets by future returns. The task is challenging because it demands simultaneous processing of unstructured market descriptions, historical data, and quantitative evaluation of candidate factors, yet most existing methods exploit only a subset of these signals. We introduce AlphaPilot, a reinforcement-learning framework that trains multi-turn tool-using LLM agents for adaptive alpha mining. The agent conditions on market descriptions, proposes factor expressions, queries real-data evaluator feedback, and updates a retained factor pool across turns. This design jointly leverages market text, LLM financial knowledge, real data, and evaluation feedback. At inference time, AlphaPilot performs day-by-day search and pool updates to adapt to shifting market regimes. Across three independent runs in out-of-sample rolling backtests on CSI300 and CSI500, AlphaPilot achieves mean total returns of 42.93% and 54.19%, with mean Sharpe ratios of 2.46 and 2.86, respectively. It attains the highest mean total return, Sharpe, and RankIC among the evaluated methods on both universes.",
-      "primary_category": "cs.CL",
+      "abstract": "Large language models (LLMs) are increasingly used to discover trading strategies, and much of the resulting literature shares a methodological weakness: many candidate strategies are generated, the best is reported, and neither look-ahead bias nor the intensity of the search behind the reported result is corrected for. We present a strategy-discovery system that makes both corrections structural rather than procedural. First, the agent can only act through registry-validated tools whose feature space excludes look-ahead by construction; we show that this guardrail is not redundant with statistical correction: a deliberately leaky oracle posting a Sharpe ratio of 35 survives Deflated Sharpe and probability-of-backtest-overfitting testing completely. Second, the system records every strategy evaluation its search performs and deflates all reported performance by that trial count, tracing how the best in-sample Sharpe ratio climbs with each trial while the deflation threshold, driven by the agent's own search, climbs faster. Across a 453-stock point-in-time US equity universe and a 39-ETF multi-asset universe with realistic transaction, impact, and borrow costs, honest evaluation certifies passive benchmarks (out-of-sample confidence intervals excluding zero), rejects every LLM-discovered strategy (across two frontier models, search budgets up to one hundred candidates, and five repeated runs), catching selection luck, predicted rank degradation, and out-of-sample collapse through complementary instruments, and evaluates a human trader's production rule system under identical instruments. The framework formalizes why pre-registered hypotheses earn lower evidential bars than brute search, and quantifies the sample sizes that credible certification of moderate edges actually requires.",
+      "primary_category": "q-fin.ST",
       "categories": [
-        "cs.CL",
-        "cs.LG"
+        "q-fin.ST"
       ],
-      "published": "2026-10-11T09:43:01Z",
-      "updated": "2026-10-11T09:43:01Z",
-      "abs_url": "https://arxiv.org/abs/2610.15488",
-      "pdf_url": "https://arxiv.org/pdf/2610.15488v1",
-      "keyword_score": 53,
+      "published": "2026-08-27T21:50:28Z",
+      "updated": "2026-08-27T21:50:28Z",
+      "abs_url": "https://arxiv.org/abs/2608.27734",
+      "pdf_url": "https://arxiv.org/pdf/2608.27734v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 59,
       "matched_keywords": [
+        "trading strategy",
         "sharpe ratio",
-        "reinforcement learning",
         "out-of-sample",
         "backtest",
         "llm",
-        "regime"
+        "large language model"
       ],
-      "relevance": 10,
-      "relevance_reason": "使用強化學習與工具調用LLM進行Alpha因子挖掘，回測表現極佳。",
+      "relevance": 8,
+      "value": 9,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "嚴格檢查 LLM 策略發現中的資料洩漏與搜尋偏差，警示性強且方法極佳。",
       "summary": {
-        "title_zh": "AlphaPilot：結合強化學習與多輪工具呼叫 LLM 代理的自適應 Alpha 因子挖掘",
-        "verdict": "提出 AlphaPilot 強化學習框架，結合 LLM 與歷史資料進行自適應因數挖掘，在 CSI300 與 CSI500 滾動回測中表現優異。",
-        "problem": "傳統因數挖掘難以同時處理非結構化市場描述、歷史資料與量化評估。多數現有方法僅能利用其中一部分信號。",
-        "method": "使用結合強化學習與多輪工具使用的大型語言模型代理人。針對 CSI300 與 CSI500 進行日對日搜尋與因數池更新的樣本外滾動回測。",
-        "findings": "在 CSI300 與 CSI500 的三次獨立樣本外滾動回測中，平均總報酬分別達 42.93% 與 54.19%，平均夏普值分別為 2.46 與 2.86，在所有評估方法中總報酬、夏普值與 RankIC 最高。",
-        "implication": "可將 LLM 結合真實市場評估反饋應用於自動化因數挖掘，前提是需要建立穩健的即時資料評估工具鏈。",
-        "caveats": "未詳細討論交易成本與市場衝擊對實際獲利的影響。",
+        "title_zh": "經得起誠實評估嗎？防洩漏、知悉搜尋的LLM驅動交易策略發掘評估",
+        "verdict": "提出防範前視偏誤與搜尋強度的評估框架，結果發現所有LLM發掘的策略在扣除成本後均無法通過檢驗。",
+        "problem": "現有LLM交易策略研究普遍存在未修正前視偏誤與大量搜尋帶來的過擬合問題，導致回測績效嚴重灌水。",
+        "method": "建構強制排除前視偏誤的工具註冊系統，並依據實際搜尋試驗次數進行Deflated Sharpe修正。測試涵蓋453檔美股與39檔ETF的多資產宇宙，納入真實交易與融券成本，評估多個前沿LLM模型與最高100個候選策略的搜尋預算。",
+        "findings": "防禦機制成功抓出選擇運氣與樣本外崩潰，證實被動基準表現，但所有LLM發掘的策略在嚴格檢驗下全數遭到拒絕，未報告具體正向超額報酬數字。",
+        "implication": "此框架凸顯預先註冊假設的必要性，並可用於量化評估真實邊際所需的樣本規模，交易團隊可直接藉此檢視自身策略搜尋流程的過擬合程度。",
+        "caveats": "研究中的LLM策略在搜尋預算達百次規模下全軍覆沒，未能證明現階段LLM能直接產出具備實戰價值的Alpha。",
         "practicality": 4,
         "tags": [
-          "大型語言模型",
-          "強化學習",
-          "因數挖掘",
+          "LLM",
+          "Alpha",
+          "過擬合",
+          "回測檢定",
           "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.15715",
+      "title": "Trading in the Sunshine or in the Shade: Market Impact and Adverse Selection on Hyperliquid",
+      "authors": [
+        "Davide Barone",
+        "Fabrizio Lillo"
+      ],
+      "abstract": "Sunshine trading theory predicts that publicly disclosing trading intentions can reduce adverse selection and attract liquidity provision, lowering execution costs. Evidence is scarce, because explicit preannouncement of large orders is rare in traditional markets. We study Hyperliquid, a fully on-chain limit order book for cryptocurrency perpetual futures, where protocol-native TWAP orders disclose their terms from inception and remain visible while active, a natural form of sunshine trading. Using address-level data, we reconstruct 4.3 million hidden metaorders and compare them with 465,000 visible TWAP executions. The two execution styles differ sharply: hidden metaorders follow front-loaded, U-shaped schedules consistent with transient-impact optimal execution, whereas TWAPs trade nearly uniformly. We test the preannouncement predictions of Admati and Pfleiderer (1991). Visible TWAPs face lower execution costs than comparable hidden metaorders and leave a smaller permanent price impact. Hidden metaorders executed alongside already-visible same-direction TWAP flow incur higher permanent costs: adverse-selection costs shift toward non-announcers. Finally, visible TWAP programs elicit liquidity provision: while active, displayed depth rises and the book tilts toward the absorbing side, the more so the larger the announced order.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-06-14T10:07:34Z",
+      "updated": "2026-06-14T10:07:34Z",
+      "abs_url": "https://arxiv.org/abs/2606.15715",
+      "pdf_url": "https://arxiv.org/pdf/2606.15715v1",
+      "comment": "31 pages, 8 figures",
+      "journal_ref": "",
+      "keyword_score": 58,
+      "matched_keywords": [
+        "limit order book",
+        "optimal execution",
+        "price impact",
+        "order book",
+        "execution cost",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用鏈上高頻資料研究陽光交易理論與逆向選擇，實證題材罕見且扎實。",
+      "summary": {
+        "title_zh": "陽光交易與陰影交易：Hyperliquid 上的市場衝擊與逆向選擇",
+        "verdict": "研究顯示公開揭露交易意圖可降低逆向選擇與執行成本，並能吸引流動性。",
+        "problem": "傳統市場中明確預先宣告大單的情況稀少，導致陽光交易理論的實證研究相當匱乏。",
+        "method": "利用 Hyperliquid 去中心化限價單簿的地址級資料，分析 430 萬筆隱藏式超級訂單與 465,000 筆可見的 TWAP 執行單。",
+        "findings": "可見的 TWAP 執行成本低於可比較的隱藏式超級訂單，且留下較小的永久價格衝擊。隱藏式超級訂單若伴隨同方向的可見 TWAP 流動，會承受更高的永久成本。",
+        "implication": "公開揭露交易意圖可有效降低逆向選擇成本並吸引流動性提供，適合在支援此機制的去中心化交易所應用。",
+        "caveats": "研究樣本侷限於特定加密貨幣永續合約交易所的鏈上資料，其結果能否完全推廣至傳統金融市場仍需驗證。",
+        "practicality": 4,
+        "tags": [
+          "市場衝擊",
+          "逆向選擇",
+          "流動性",
+          "加密貨幣",
+          "高頻交易"
         ],
         "ok": true,
         "source": "abstract"
@@ -72,6 +126,8 @@
       "updated": "2026-10-14T12:38:49Z",
       "abs_url": "https://arxiv.org/abs/2610.20104",
       "pdf_url": "https://arxiv.org/pdf/2610.20104v1",
+      "comment": "Accepted at ACM ICAIF 2026",
+      "journal_ref": "",
       "keyword_score": 69,
       "matched_keywords": [
         "limit order book",
@@ -81,65 +137,78 @@
         "transformer",
         "regime"
       ],
-      "relevance": 9,
-      "relevance_reason": "提出LOB基礎模型的貝氏推論解釋，對微觀結構交易極具助益。",
+      "relevance": 8,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "已接受於 ACM ICAIF 2026，透過合成資料對微結構基礎模型進行深入分析。",
       "summary": {
-        "title_zh": "市場微結構的基礎模型學習到什麼？利用合成限價單簿的受控研究",
-        "verdict": "研究顯示 LOB 自迴歸 Transformer 執行的是攤銷貝氏推論，其泛化能力取決於訓練機制的多元性而非規模。",
-        "problem": "真實市場的生成過程未知，導致無法直接評估 LOB 基礎模型實際學到了什麼。本研究旨在透過已知潛在參數的模擬器來釐清其學習本質。",
-        "method": "使用 GPT 風格的模型對限價單簿訊息流進行下一個 Token 的預訓練，資料來自已知潛在參數的模擬器與真實 NASDAQ 資料。",
-        "findings": "學到的預測模型在每個 Token 的誤差在一個 millinat 以內，且潛在機制可從凍結的活化值中進行線性解碼。實驗顯示模型容量與 Token 數量很快就會飽和，泛化能力取決於訓練機制的多元性而非 Token 數量。",
-        "implication": "凍結模型的讀出值可用於更準確地校準模擬器參數，且預訓練在各種預算下皆優於從頭訓練。前提是模擬器先驗必須能良好覆蓋真實資料流。",
-        "caveats": "零樣本遷移的效果完全取決於模擬器先驗對真實資料流的覆蓋程度。",
+        "title_zh": "市場微結構基礎模型學到了什麼？使用合成限價單簿的控制實驗",
+        "verdict": "透過合成限價單簿驗證，自迴歸 Transformer 在訂單流預訓練中實現了市場體制的貝氏推論，且泛化能力取決於訓練體制的多樣性。",
+        "problem": "真實市場的生成過程未知，導致難以評估限價單簿基礎模型究竟學到了什麼。",
+        "method": "使用已知潛在參數的模擬器生成訂單流，訓練 GPT 風格的模型，並與貝氏最佳預測器、生成狀態及資料熵進行對比。",
+        "findings": "下一個 Token 的預測準確度在毫納（millinat）等級內吻合貝氏最佳解，且潛在體制可從凍結的活化值中線性解碼，未報告具體夏普值或報酬數字。",
+        "implication": "凍結模型的讀出機能更準確且低成本地校準模擬器參數，且預訓練在跨標的表現上優於從頭訓練。",
+        "caveats": "模型能力不取決於規模，而是取決於訓練體制的多樣性。",
         "practicality": 4,
         "tags": [
-          "限價單簿",
           "基礎模型",
+          "限價單簿",
+          "市場微結構",
           "貝氏推論",
-          "市場微結構"
+          "Transformer"
         ],
         "ok": true,
         "source": "abstract"
       }
     },
     {
-      "arxiv_id": "2610.20037",
-      "title": "Data-Driven Dynamic Portfolio Selection with Vine Copula Simulation and Reinforcement Learning",
+      "arxiv_id": "2605.28853",
+      "title": "Financially Guided Deep Portfolio Optimization",
       "authors": [
-        "Gabriël M. J. Gelissen",
-        "Fengyi Yuan"
+        "Rahul Fernandes",
+        "Travis Desell"
       ],
-      "abstract": "We develop a data-driven approach to dynamic portfolio selection that combines vine-copula simulation with reinforcement learning. The investor has constant relative risk aversion and maximises expected terminal utility with a running penalty on the conditional value-at-risk (CVaR) of one-period losses. We estimate a conditional vine model from historical returns and use it to generate joint scenarios for CVaR evaluation and conditional paths for training a recurrent portfolio policy. Under uniform local derivative bounds, we propagate edgewise pair-copula parameter errors through the conditional transforms to obtain power-law stability bounds in Hellinger distance and total variation. In a finite-horizon investment model, we combine these estimates with a marginal and structural approximation budget to bound policy values, optimal values and the true-market loss of policies selected under a fitted model, with separate simulation and numerical optimisation terms. On a seven-asset panel comprising US and Chinese equities and gold, the selected ensemble of ten trained policies achieves a compound annual growth rate of 34.13% and a Sharpe ratio of 2.31 over 22 complete monthly holding periods, exceeding the corresponding values of six classical and vine-based benchmarks. Combining simulated and historical training data reduces monthly target-to-target turnover by 41.5% relative to training on historical data alone, while maintaining comparable growth.",
+      "abstract": "Portfolio optimization in real-world financial markets is notoriously difficult due to non-stationarity, noisy data, and high transaction costs. Standard predict-then-optimize methods first forecast returns and then solve for weights, compounding prediction errors and often failing under regime shifts. We propose an end-to-end framework that directly optimizes differentiable surrogates of key financial metrics (Sharpe ratio, Omega ratio, Conditional Value-at-Risk, and risk parity), allowing neural networks to learn portfolio weights via backpropagation. Our expanding-window walk-forward procedure, applied to 50 S&P 500 stocks from 2007 to 2023, incorporates realistic bid-ask spread costs and rebalances quarterly. On the challenging out-of-sample test period (2022-2023), the best model, an AttentionLSTM with the Omega-CVaR-RiskParity loss, achieves an annualized Sharpe of 0.29 and a total compounded return of +7.86%, while the S&P 500 delivers -4.52% total compounded return and an annualized Sharpe of -0.02. This outperforms the S&P 500 by 12.38 percentage points, while keeping tail risk (CVaR) nearly unchanged. The framework outperforms the equal-weight portfolio, S&P 500, and traditional methods (MVP, HRP, NCO, ERC), demonstrating that embedding financial objectives directly into model training yields robust, economically meaningful outperformance even in adverse market conditions.",
       "primary_category": "q-fin.PM",
       "categories": [
-        "q-fin.PM"
+        "q-fin.PM",
+        "cs.LG"
       ],
-      "published": "2026-10-14T11:45:17Z",
-      "updated": "2026-10-14T11:45:17Z",
-      "abs_url": "https://arxiv.org/abs/2610.20037",
-      "pdf_url": "https://arxiv.org/pdf/2610.20037v1",
-      "keyword_score": 44,
+      "published": "2026-05-16T22:30:15Z",
+      "updated": "2026-09-21T21:55:27Z",
+      "abs_url": "https://arxiv.org/abs/2605.28853",
+      "pdf_url": "https://arxiv.org/pdf/2605.28853v2",
+      "comment": "8 pages, 4 figures. Presented at the IEEE Symposium on Computational Intelligence for Financial Engineering and Economics (CIFEr 2026)",
+      "journal_ref": "2026 IEEE Symposium on Computational Intelligence for Financial Engineering and Economics (CIFEr), 2026, pp. 114-121",
+      "keyword_score": 61,
       "matched_keywords": [
         "sharpe ratio",
-        "reinforcement learning",
-        "portfolio selection"
+        "portfolio optimization",
+        "transaction cost",
+        "risk parity",
+        "out-of-sample",
+        "bid-ask spread"
       ],
-      "relevance": 9,
-      "relevance_reason": "結合藤園copula與強化學習於動態資產配置，具強大實戰價值。",
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "已發表於 CIFEr 2026，直接最佳化金融指標的端到端深度學習表現優於大盤。",
       "summary": {
-        "title_zh": "結合 Vine Copula 模擬與強化學習的資料驅動動態投資組合選擇",
-        "verdict": "結合 Vine Copula 與強化學習進行動態投資組合配置，實證年化報酬率 34.13%、夏普值 2.31。",
-        "problem": "如何在動態投資組合選擇中，同時處理資產間的複雜相依結構，並在最佳化終端效用時納入條件風險值（CVaR）的尾端風險懲罰。",
-        "method": "使用條件 Vine 模型與迴圈神經網路政策，透過歷史報酬估計並生成聯合情境進行強化學習訓練；樣本包含美股、陸股與黃金等七種資產面板，進行 22 個完整月度持有期的回測。",
-        "findings": "十個訓練政策組成的集合模型在 22 個月內達到 34.13% 的複利年化成長率與 2.31 的夏普值，優於六個經典與基於 Vine 的基準模型。結合模擬與歷史訓練資料可將每月資產配置周轉率降低 41.5%。",
-        "implication": "此方法能有效平衡報酬與尾端風險，且混合模擬資料能顯著降低交易周轉率，適合應用於包含跨國多元資產的動態配置策略。",
-        "caveats": "理論分析依賴均勻區域導數邊界等假設，且實證期間僅涵蓋 22 個月度持有期。",
+        "title_zh": "財務導向的深度投資組合最佳化",
+        "verdict": "提出端到端神經網路架構直接最佳化財務指標，在 2022 至 2023 年逆市中擊敗大盤。",
+        "problem": "傳統預測後最佳化的方法容易累積預測誤差，且在市場體制轉換時經常失效。",
+        "method": "使用 AttentionLSTM 模型搭配多項財務損失函數，對 50 檔 SPX 成分股進行 2007 至 2023 年的擴展視窗走步前瞻測試，並納入買賣價差與每季再平衡。",
+        "findings": "Omega-CVaR-RiskParity 損失模型的最佳模型在 2022 至 2023 年樣本外期間實現了 0.29 的年化夏普值與 +7.86% 的總複利報酬率，優於 SPX 大盤的 -4.52% 報酬率與 -0.02 夏普值，超額報酬達 12.38 個百分點。",
+        "implication": "將財務目標直接嵌入模型訓練能提升實戰表現，適合尋求強固資產配置策略的團隊參考。",
+        "caveats": "僅針對 SPX 中的 50 檔股票進行測試，其泛用性仍需在其他資產類別中驗證。",
         "practicality": 4,
         "tags": [
-          "強化學習",
-          "Copula",
-          "投資組合選擇",
-          "CVaR",
+          "投資組合最佳化",
+          "深度學習",
+          "風險平價",
+          "夏普值",
           "資產配置"
         ],
         "ok": true,
@@ -147,46 +216,156 @@
       }
     },
     {
-      "arxiv_id": "2610.16524",
-      "title": "Reinforcement Learning with Hawkes-Structured Networks for Market Making",
+      "arxiv_id": "2607.18001",
+      "title": "AlphaZeroBeta: Deep Reinforcement Learning for Market-Neutral Portfolios",
       "authors": [
-        "Fernando Acero",
-        "Philipp Plank",
-        "Yufei Zhang"
+        "Boris Belyakov"
       ],
-      "abstract": "Market making under realistic order-flow dynamics is challenging due to the clustered, self-exciting nature of order arrivals, which are naturally modeled by non-Markovian Hawkes processes. We propose a model-free reinforcement learning (RL) framework for market making with general Hawkes order-flow dynamics. We first establish non-asymptotic performance bounds that quantify the loss incurred by approximating the infinite-dimensional Hawkes state using a finite collection of exponentially weighted features. Guided by this analysis, we introduce the Hawkes-Structured Network (HSN), a novel neural architecture that encodes historical order flow through a learnable mixture-of-exponentials filter. HSN is trained end-to-end using model-free RL, jointly optimizing the feature representation and quoting policy directly from reward feedback. Experiments on single- and multi-asset market-making problems with mixture-of-exponentials, power-law, and regime-switching kernels demonstrate that HSN outperforms general-purpose neural architectures, achieving higher trading rewards while implicitly recovering the underlying order-flow intensities.",
-      "primary_category": "cs.LG",
+      "abstract": "Market-neutral portfolios aim to generate consistent returns while offsetting systematic market risk. Traditional approaches based on factor models or convex optimization often underperform during market regime shifts or when structural assumptions break down. We propose AlphaZeroBeta, a deep reinforcement learning framework designed to deliver benchmark-relative alpha (excess returns) with near-zero beta (market neutrality). AlphaZeroBeta combines a composite reward function that balances risk-adjusted excess return, benchmark correlation, and transaction costs with a CNN-GRU policy trained end-to-end via Recurrent PPO and evaluated through a rolling walk-forward protocol. Backtests covering 2014-2024 across seven equity indices show that the model achieves higher Sharpe ratios than the baselines while maintaining near-zero benchmark correlations and competitive drawdowns.",
+      "primary_category": "q-fin.PM",
       "categories": [
-        "cs.LG",
+        "q-fin.PM",
         "q-fin.CP"
       ],
-      "published": "2026-10-12T10:14:54Z",
-      "updated": "2026-10-12T10:14:54Z",
-      "abs_url": "https://arxiv.org/abs/2610.16524",
-      "pdf_url": "https://arxiv.org/pdf/2610.16524v1",
-      "keyword_score": 44,
+      "published": "2026-07-20T14:33:47Z",
+      "updated": "2026-07-20T14:33:47Z",
+      "abs_url": "https://arxiv.org/abs/2607.18001",
+      "pdf_url": "https://arxiv.org/pdf/2607.18001v1",
+      "comment": "59 pages, 10 figures. Accepted for publication in Financial Innovation (Springer)",
+      "journal_ref": "",
+      "keyword_score": 59,
       "matched_keywords": [
-        "market making",
-        "order flow",
+        "sharpe ratio",
         "reinforcement learning",
-        "regime"
+        "factor model",
+        "transaction cost",
+        "backtest",
+        "drawdown"
       ],
-      "relevance": 9,
-      "relevance_reason": "提出霍克斯結構網路進行造市強化學習，直接針對訂單流動態。",
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "已接受於 Financial Innovation，提出深度強化學習建立市場中立投資組合。",
       "summary": {
-        "title_zh": "結合霍克斯結構網路與強化學習的造市策略",
-        "verdict": "提出結合霍克斯過程特徵的強化學習造市模型，在多種訂單流動態下均超越一般神經網路。",
-        "problem": "真實訂單流具備群聚與自我激發特性，傳統造市模型難以處理這種非馬可夫的複雜動態。如何有效近似無限維度的霍克斯狀態並進行最佳化是主要難題。",
-        "method": "使用模型無關的強化學習框架，結合具備可學習指數混合濾波器的霍克斯結構網路。實驗涵蓋單一與多資產造市問題，測試了指數混合、冪次法則與體制轉換核心。",
-        "findings": "實驗顯示霍克斯結構網路表現優於通用神經網路架構，能獲得更高的交易回報，同時隱含地還原了底層的訂單流強度。論文未報告具體的夏普值等細節績效數字。",
-        "implication": "適用於需要精確捕捉訂單流群聚特性的造市策略，前提是需要正確設定並訓練此種客製化的神經網路架構。",
-        "caveats": "理論分析依賴於使用有限數量的指數加權特徵來近似無限維度狀態所帶來的誤差界限。",
+        "title_zh": "AlphaZeroBeta：用於市場中性投資組合的深度強化學習",
+        "verdict": "AlphaZeroBeta 運用深度強化學習建構市場中性投資組合，能提升夏普值並維持極低貝塔。",
+        "problem": "傳統基於因子模型或凸最佳化的市場中性投資組合，在市場體制轉換或結構假設失效時表現往往不佳。",
+        "method": "使用 CNN-GRU 策略與遞歸 PPO 進行端到端訓練，結合考量超額報酬、基準相關性與交易成本的複合獎勵函數，以滾動前向測試進行評估。資料涵蓋 2014 至 2024 年七個股票指數。",
+        "findings": "回測顯示該模型相較於基準模型能達到更高的夏普值。同時它維持了接近零的基準相關性與具競爭力的回檔表現，但論文未報告具體的績效數字。",
+        "implication": "可應用於需要追求超額報酬且維持市場中性的部位配置，其獎勵函數設計可直接作為演算法開發參考。",
+        "caveats": "論文未報告具體的績效數值與詳細的交易成本實測資料。",
         "practicality": 4,
         "tags": [
           "強化學習",
+          "市場中性",
+          "投資組合",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.05975",
+      "title": "DeePM: Regime-Robust Deep Learning for Systematic Macro Portfolio Management",
+      "authors": [
+        "Kieran Wood",
+        "Stephen J. Roberts",
+        "Stefan Zohren"
+      ],
+      "abstract": "We propose DeePM (Deep Portfolio Manager), a structured deep-learning macro portfolio manager trained end-to-end to maximize a robust, risk-adjusted utility. DeePM addresses three fundamental challenges in financial learning: (1) it resolves the asynchronous \"ragged filtration\" problem via a Directed Delay (Causal Sieve) mechanism that prioritizes causal impulse-response learning over information freshness; (2) it combats low signal-to-noise ratios via a Macroeconomic Graph Prior, regularizing cross-asset dependence according to economic first principles; and (3) it optimizes a distributionally robust objective where a smooth worst-window penalty serves as a differentiable proxy for Entropic Value-at-Risk (EVaR) - a window-robust utility encouraging strong performance in the most adverse historical subperiods. In large-scale backtests from 2010-2025 on 50 diversified futures with highly realistic transaction costs, DeePM attains net risk-adjusted returns that are roughly twice those of classical trend-following strategies and passive benchmarks, solely using daily closing prices. Furthermore, DeePM improves upon the state-of-the-art Momentum Transformer architecture by roughly fifty percent. The model demonstrates structural resilience across the 2010s \"CTA (Commodity Trading Advisor) Winter\" and the post-2020 volatility regime shift, maintaining consistent performance through the pandemic, inflation shocks, and the subsequent higher-for-longer environment. Ablation studies confirm that strictly lagged cross-sectional attention, graph prior, principled treatment of transaction costs, and robust minimax optimization are the primary drivers of this generalization capability.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "published": "2026-01-09T17:47:32Z",
+      "updated": "2026-01-09T17:47:32Z",
+      "abs_url": "https://arxiv.org/abs/2601.05975",
+      "pdf_url": "https://arxiv.org/pdf/2601.05975v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 57,
+      "matched_keywords": [
+        "transaction cost",
+        "backtest",
+        "transformer",
+        "momentum",
+        "deep learning",
+        "regime"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "總體總體投資組合管理架構完整，考慮強韌性與實際交易成本，實證嚴謹。",
+      "summary": {
+        "title_zh": "DeePM：應用於系統性總體經濟投資組合管理的體制穩健深度學習",
+        "verdict": "提出端到端訓練的總體經濟投資組合管理器 DeePM，透過圖形先驗與分佈穩健最佳化克服雜訊，淨報酬達傳統策略兩倍。",
+        "problem": "金融機器學習面臨非同步資訊過濾、極低訊雜比，以及總體經濟體制轉換導致模型失效等三大挑戰。",
+        "method": "使用定向延遲機制、總體經濟圖形先驗與最差窗口懲罰函數的模型。資料為 50 種多元期貨的每日收盤價，樣本期間為 2010 年至 2025 年。",
+        "findings": "在計入高度真實的交易成本後，DeePM 的淨風險調整後報酬約為傳統趨勢跟隨策略與被動基準的兩倍。同時，其表現較現狀最先進的 Momentum Transformer 架構提升約百分之五十。",
+        "implication": "此方法能有效應用於跨資產總體經濟投資組合，並在多變的總體經濟體制中維持結構性韌性，前提是必須妥善設定圖形先驗與交易成本。",
+        "caveats": "模型依賴每日收盤價與總體經濟圖形結構，若總體經濟關係發生結構性劇變，泛化能力仍可能受考驗。",
+        "practicality": 5,
+        "tags": [
+          "機器學習",
+          "總體經濟",
+          "投資組合管理",
+          "分佈穩健最佳化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.22785",
+      "title": "Robust Market Making with Hawkes Order Flow and Price Impact via Adversarial Reinforcement Learning",
+      "authors": [
+        "Hao Yang",
+        "Zhenguo Xu"
+      ],
+      "abstract": "Market-making strategies in real limit order book markets face substantial model uncertainty and regime-shift risk. Existing adversarial reinforcement learning approaches improve robustness by formulating the Avellaneda--Stoikov market-making problem as a zero-sum game between a market maker and an environmental adversary. However, these approaches typically rely on Poisson order arrivals and neglect trade-induced price impact, limiting their ability to capture important high-frequency market microstructure effects such as clustered order flow, self-excitation, and post-trade price feedback. We extend adversarial reinforcement learning for market making to a more complex environment with Hawkes self-exciting order arrivals and trade-induced price impact. To mitigate the increased non-stationarity introduced by the expanded regime space, we incorporate an LSTM module that explicitly models the temporal structure of recent observations. We further characterize the equilibrium properties of the proposed framework through both game-theoretic analysis and numerical experiments, and introduce a robustness evaluation protocol focused on improvements in the left tail of the return distribution. Experimental results across a range of market regimes show that the proposed method achieves improved left-tail performance in most complex microstructure environments. In particular, the gains are pronounced in regimes with strong Hawkes excitation and low-to-moderate price impact. Bootstrap tests provide no evidence that these improvements are obtained through a stronger terminal directional inventory bias. These results suggest that combining adversarial training with temporal state representation can improve the robustness of reinforcement-learning-based market-making strategies under order-flow self-excitation, price impact, and regime uncertainty.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-09-19T05:32:29Z",
+      "updated": "2026-09-19T05:32:29Z",
+      "abs_url": "https://arxiv.org/abs/2609.22785",
+      "pdf_url": "https://arxiv.org/pdf/2609.22785v1",
+      "comment": "18 pages, 2 figures. Includes theoretical analysis, numerical experiments, and supplementary results in the appendix",
+      "journal_ref": "",
+      "keyword_score": 105,
+      "matched_keywords": [
+        "market making",
+        "limit order book",
+        "order flow",
+        "market microstructure",
+        "market maker",
+        "reinforcement learning"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合對抗式強化學習與 Hawkes 過程，針對左尾風險提供實證與理論分析。",
+      "summary": {
+        "title_zh": "結合 Hawkes 訂單流與價格衝擊的對抗式強化學習強健造市策略",
+        "verdict": "結合對抗式強化學習與 LSTM，在考量 Hawkes 訂單流與價格衝擊下提升造市策略的左尾報酬表現。",
+        "problem": "現有對抗式強化學習造市方法多依賴 Poisson 訂單到達並忽略價格衝擊，無法捕捉高頻市場微結構的叢聚與回饋特性。",
+        "method": "使用 Hawkes 自激發訂單到達與交易引發的價格衝擊環境，結合 LSTM 模組處理時間序列，透過對抗式強化學習進行模型訓練與賽局分析。",
+        "findings": "實驗顯示該方法在多數複雜微結構環境中改善了報酬分佈的左尾表現，特別是在強 Hawkes 激發與中低價格衝擊的體制下效果顯著；拔靴檢定確認此改善並非來自更強的終端方向性庫存偏誤。",
+        "implication": "實務上可透過結合對抗式訓練與時間狀態表示，提升造市策略在訂單流自激發與體制不確定性下的強健性。",
+        "caveats": "論文未報告具體的夏普值或絕對報酬改善數字。",
+        "practicality": 3,
+        "tags": [
+          "強化學習",
           "造市",
-          "霍克斯過程",
-          "神經網路",
+          "限價單簿",
+          "Hawkes 過程",
           "市場微結構"
         ],
         "ok": true,
@@ -194,282 +373,159 @@
       }
     },
     {
-      "arxiv_id": "2610.13126",
-      "title": "MLP-Initialized Reinforcement Learning for Exit Timing in SPX Short-Straddle Portfolios",
+      "arxiv_id": "2606.31387",
+      "title": "Signature-Based Optimal Execution for Statistical Arbitrage with Path-Dependent Trading Signals",
       "authors": [
-        "Jianning Wang",
-        "Robert Ślepaczuk",
-        "Paweł Sakowski"
+        "Gianmarco Morbelli",
+        "Sven Karbach",
+        "Mike Derksen"
       ],
-      "abstract": "This paper studies exit timing for SPX short-straddle portfolios using a two-stage supervised and reinforcement-learning framework. Historical episodes first generate ex-post optimal hold/exit labels for training a multilayer perceptron (MLP) using only contemporaneously available state variables at deployment. The trained MLP then initializes reinforcement-learning actors that are fine-tuned with a risk-aware trading reward. Out-of-sample evaluation over 2024-2026 shows that the supervised MLP substantially outperforms passive holding and representative fixed-time and profit-and-loss-based exit rules. Across seven independent seeds, MLP-initialized Actor-Critic averages 37.54% cumulative return and a Sharpe ratio of 1.705, compared with 35.01% and 1.651 for the supervised MLP. Actor-Critic trained from scratch averages only 0.18% return. These findings show that oracle-guided supervised learning provides a stable foundation for reward-based policy fine-tuning in a sparse and path-dependent option-exit problem.",
+      "abstract": "We develop a signature-based framework for optimal execution in statistical arbitrage strategies with path-dependent predictive signals. Both the alpha process and the trading speed are modelled as linear functionals of the truncated signature of a time-augmented market path, placing signal generation and execution on the same truncated signature basis. This allows the trading rule to react to the realised history of the signal while accounting for temporary impact, inventory exposure, terminal liquidation, and approximate dollar neutrality. The main contribution is a quadratic reduction theorem: within the class of signature-linear trading speeds, the restricted path-dependent execution problem becomes a finite-dimensional concave quadratic programme in the policy coefficients. After running synthetic experiments under a mean-reverting log-spread model, we find that the fitted policy achieves a higher return on turnover than a classical $z$-score threshold benchmark. We show how the same workflow can be deployed on a historical equity pairs-trading backtest, where the fitted signature policy again outperforms the benchmark in accounting terms.",
       "primary_category": "q-fin.TR",
       "categories": [
         "q-fin.TR"
       ],
-      "published": "2026-10-09T07:21:16Z",
-      "updated": "2026-10-09T07:21:16Z",
-      "abs_url": "https://arxiv.org/abs/2610.13126",
-      "pdf_url": "https://arxiv.org/pdf/2610.13126v1",
-      "keyword_score": 37,
+      "published": "2026-06-30T09:16:15Z",
+      "updated": "2026-07-21T11:58:25Z",
+      "abs_url": "https://arxiv.org/abs/2606.31387",
+      "pdf_url": "https://arxiv.org/pdf/2606.31387v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 65,
       "matched_keywords": [
-        "sharpe ratio",
-        "reinforcement learning",
-        "out-of-sample"
+        "statistical arbitrage",
+        "optimal execution",
+        "trading signal",
+        "backtest",
+        "alpha"
       ],
       "relevance": 9,
-      "relevance_reason": "結合監督式預訓練與強化學習優化選擇權退場時機，實證優異。",
+      "value": 7,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "以路徑簽名法處理統計套利之最佳執行，理論推導與歷史回測兼備。",
       "summary": {
-        "title_zh": "SPX 賣出跨式組合出場時機之 MLP 初始化強化學習",
-        "verdict": "以 MLP 初始化強化學習最佳化 SPX 賣出跨式組合出場時機，顯著提升報酬與夏普值。",
-        "problem": "選擇權出場問題具稀疏性且路徑相依，傳統強化學習從零開始訓練成效不佳。如何透過監督式學習輔助強化學習，以決定 SPX 賣出跨式組合的最佳出場時機。",
-        "method": "採用兩階段監督與強化學習框架，先以歷史事後最佳標籤訓練 MLP，再以此初始化結合風險意識交易獎勵的 Actor-Critic 模型。以 SPX 賣出跨式組合進行 2024 至 2026 年的樣本外評估。",
-        "findings": "經七個獨立隨機種子測試，MLP 初始化之 Actor-Critic 平均累積報酬達 37.54%、夏普值 1.705，優於單純 MLP 的 35.01% 與 1.651；從零開始訓練的強化學習平均報酬僅 0.18%。",
-        "implication": "此方法透過預先訓練提供穩定基礎，可有效應用於選擇權動態出場策略。實作時需正確建構歷史狀態變數與風險調整獎勵函數。",
-        "caveats": "樣本外評估期間僅涵蓋 2024 至 2026 年，且策略高度依賴歷史事後最佳標籤的建構品質。",
+        "title_zh": "基於 Signature 的統計套利最佳執行與路徑相依交易訊號",
+        "verdict": "利用截斷 Signature 建立路徑相依的最佳執行框架，在合成與歷史個股配對交易中皆勝過傳統 z-score 門檻基準。",
+        "problem": "統計套利策略在結合路徑相依的預測訊號時，如何將訊號生成與考慮市場衝擊及部位曝險的最佳執行作結合。",
+        "method": "使用時間增廣市場路徑的截斷 Signature，將 Alpha 過程與交易速度建模為其線性泛函。結合均值回歸對數價差模型進行合成實驗，並在歷史個股配對交易進行回測。",
+        "findings": "擬合後的策略在合成實驗中實現了高於傳統 z-score 門檻基準的週轉率報酬。歷史個股配對交易回測也顯示，Signature 策略在會計帳面上同樣優於基準。",
+        "implication": "此方法能直接將路徑相依訊號轉化為二次規劃問題進行求解，適合需要考慮歷史軌跡的統計套利執行。實務上可直接套用於配對交易等策略中。",
+        "caveats": "論文未報告詳細的夏普值與具體報酬數字，僅說明報酬與會計帳面優於基準。",
         "practicality": 4,
         "tags": [
-          "強化學習",
-          "選擇權策略",
-          "出場時機",
-          "多層感知器"
+          "統計套利",
+          "最佳執行",
+          "路徑相依",
+          "市場衝擊",
+          "配對交易"
         ],
         "ok": true,
         "source": "abstract"
       }
     },
     {
-      "arxiv_id": "2610.17130",
-      "title": "EvoQuantLab: Training-Free Dual-Loop Evolution for Auditable Quantitative Research",
+      "arxiv_id": "2607.11888",
+      "title": "Optimal Adaptive Market Making: A Theoretical Framework for High-Yield Liquidity Provision in Perpetual Futures Markets",
       "authors": [
-        "Haolin Yang",
-        "Zhiqiang Qian",
-        "Chutian Chen",
-        "Jipeng Zhang",
-        "Zhenghao Zhu",
-        "Tangjia Deng",
-        "Jian Xie",
-        "Shuaishuai Gong",
-        "Yike Guo",
-        "Sirui Han"
+        "Minmin Zeng",
+        "Yi Liu"
       ],
-      "abstract": "Automated alpha factor discovery is critical for modern quantitative research. While large language models (LLMs) have increasingly been integrated into quantitative workflows, existing agent-based approaches remain highly susceptible to severe backtest overfitting. To address this challenge, we propose EvoQuantLab, a training-free, dual-loop self-evolving framework for robust factor discovery. Instead of relying entirely on LLM generation, EvoQuantLab deploys an inner genetic-programming (GP) loop that dramatically improves token efficiency while evolving typed factor expressions under structural and diversity constraints. An outer diagnosis loop then systematically audits evidence across cycles to drive protocol-level improvements. Furthermore, our evaluation pipeline applies multi-metric validation to rigorously filter out spurious factors before deployment. Extensive out-of-sample experiments across both daily and hourly frequencies -- covering equities and cryptocurrency -- demonstrate the robustness of EvoQuantLab. Specifically, on daily CSI 500 and S&P 500 tasks, EvoQuantLab achieves leading annualized returns of 18.34% and 21.30%, consistently outperforming existing agent baselines. On high-turnover hourly cryptocurrency data, EvoQuantLab delivers a 37.91% annualized return while effectively avoiding execution collapse.",
+      "abstract": "We develop a rigorous theoretical framework for optimal market making in perpetual futures markets with zero maker fees. We model the market maker's problem as a stochastic optimal control problem on a filtered probability space, where the controls are adaptive bid-ask spreads and inventory hedging decisions across two exchanges. Our contributions include: (i) a PnL decomposition theorem separating revenue into spread income, adverse selection loss, inventory carrying cost, hedging friction, and funding rate exposure; (ii) the Hamilton-Jacobi-Bellman equation for the joint spread-inventory-hedging control problem under CARA utility with a verification theorem; (iii) High-APY Regime Theorems characterizing profitable regions via five dimensionless parameters, culminating in a Master APY Formula; (iv) analysis of zero-fee economics on decentralized perpetual exchanges with optimal entry-exit thresholds; (v) optimal cross-exchange hedging policies with funding rate dynamics and a hedge regime trichotomy; (vi) a robustness margin quantifying parameter uncertainty tolerance; (vii) exponential drawdown probability bounds and a universal APY-VaR identity; (viii) ergodic inventory distribution under optimal control with Bayesian adaptive estimation; (ix) Kelly-optimal leverage with ruin boundaries; and (x) multi-pair portfolio allocation with diversification saturation results. Numerical analysis with twenty-three figures reveals phase transitions between profitable and unprofitable regimes. Our framework unifies and extends the Avellaneda-Stoikov, Gueant-Lehalle-Fernandez-Tapia, and Glosten-Milgrom paradigms for modern decentralized venue microstructure.",
       "primary_category": "cs.AI",
       "categories": [
         "cs.AI"
       ],
-      "published": "2026-10-12T17:19:13Z",
-      "updated": "2026-10-14T04:54:13Z",
-      "abs_url": "https://arxiv.org/abs/2610.17130",
-      "pdf_url": "https://arxiv.org/pdf/2610.17130v2",
-      "keyword_score": 29,
+      "published": "2026-04-05T07:21:54Z",
+      "updated": "2026-04-05T07:21:54Z",
+      "abs_url": "https://arxiv.org/abs/2607.11888",
+      "pdf_url": "https://arxiv.org/pdf/2607.11888v1",
+      "comment": "42 pages, 23 figures",
+      "journal_ref": "",
+      "keyword_score": 58,
       "matched_keywords": [
-        "out-of-sample",
-        "backtest",
-        "llm",
-        "large language model",
-        "cryptocurrency",
-        "alpha"
+        "market making",
+        "market maker",
+        "drawdown",
+        "bid-ask spread",
+        "regime",
+        "liquidity"
       ],
       "relevance": 9,
-      "relevance_reason": "提出免訓練的雙迴圈演化框架進行量化因子挖掘，過擬合控制佳。",
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "永續合約零手續費造市的理論框架，公式與極限推導完整但缺乏真實回測。",
       "summary": {
-        "title_zh": "EvoQuantLab：免訓練雙迴圈演化用於可稽核的量化研究",
-        "verdict": "提出免訓練的雙迴圈演化框架 EvoQuantLab，有效解決量化因子探勘的回測過擬合問題。",
-        "problem": "現有的以LLM為基礎的智慧體方法在自動化Alpha因子發現中，極易發生嚴重的回測過擬合。這導致生成的因子在實際應用中表現不佳。",
-        "method": "結合內側基因程式設計迴圈與外側診斷迴圈的雙迴圈框架，涵蓋日線與小時線頻率，測試範圍包含股票（CSI 500、S&P 500）與加密貨幣資料。",
-        "findings": "在每日CSI 500與S&P 500任務中，年化報酬率分別達到18.34%與21.30%；在高週轉率的小時級加密貨幣資料上，年化報酬率達37.91%並避免執行崩潰。",
-        "implication": "此框架可直接應用於自動化因子發掘與多指標驗證，前提是需建置完善的結構與多樣性約束機制。",
-        "caveats": "未詳細說明在極端市場波動下的內部基因程式設計演化穩定性。",
-        "practicality": 5,
-        "tags": [
-          "LLM",
-          "Alpha因子",
-          "基因程式設計",
-          "量化研究",
-          "過擬合防範"
-        ],
-        "ok": true,
-        "source": "abstract"
-      }
-    },
-    {
-      "arxiv_id": "2610.17231",
-      "title": "The Buffett Effect",
-      "authors": [
-        "Pawel Robert Smolinski",
-        "Siddharth Saridevi"
-      ],
-      "abstract": "We study whether stock disclosures by recognizable investors generate abnormal market reactions beyond the reactions produced by comparable but non-recognizable managers. We define the Buffett effect as the incremental abnormal return to a disclosed new position that is attributable to the public recognition of the disclosing investor. We construct a recognition index from Wikipedia pageviews and ProQuest news mentions. Using data from 2000 to 2025 we compare market reaction to disclosures of 24 recognizable discretionary funds with disclosures of 24 matched control funds. New-position disclosures by recognizable managers generate a positive disclosure premium over the filing date and the following trading days, and the premium increases with investor recognition. We construct calendar-time portfolios that mechanically copy each group's disclosed purchases and find that copying the most recognized investors earns a significant alpha that persists for months and does not reverse. The evidence is most consistent with an entangled attention-information channel: investor recognition directs scarce investor attention toward selected disclosures, and the information revealed in those disclosures is then capitalized into prices.",
-      "primary_category": "q-fin.ST",
-      "categories": [
-        "q-fin.ST",
-        "econ.GN",
-        "q-fin.GN"
-      ],
-      "published": "2026-10-12T18:02:01Z",
-      "updated": "2026-10-12T18:02:01Z",
-      "abs_url": "https://arxiv.org/abs/2610.17231",
-      "pdf_url": "https://arxiv.org/pdf/2610.17231v1",
-      "keyword_score": 12,
-      "matched_keywords": [
-        "stock",
-        "alpha"
-      ],
-      "relevance": 9,
-      "relevance_reason": "研究知名投資人持股披露的巴菲特效應與異常報酬，具直接交易價值。",
-      "summary": {
-        "title_zh": "巴菲特效應",
-        "verdict": "知名投資人的持倉揭露能帶來持續的異常報酬，價格反應隨知名度而提升。",
-        "problem": "探討知名投資人的持倉揭露是否能產生超越一般經理人的異常市場反應。釐清此增量異常報酬是否受大眾知名度所驅動。",
-        "method": "使用維基百科瀏覽量與新聞提及次數建構知名度指數。分析 2000 年至 2025 年間 24 檔知名主動型基金與 24 檔對照基金的持倉揭露資料。",
-        "findings": "知名經理人的新倉位揭露在申報日及後續交易日產生正向溢價，且溢價隨知名度增加而提高；複製高知名度投資人的組合可獲取持續數月且未反轉的顯著 alpha，未報告具體績效數字。",
-        "implication": "可用於建構複製知名投資人買進行為的行事曆組合策略，前提是需能即時捕捉並利用其注意力與資訊管道。",
-        "caveats": "知名度指數的建構依賴維基百科瀏覽量與新聞提及次數，可能無法完全衡量真實的市場注意力。",
-        "practicality": 4,
-        "tags": [
-          "持倉揭露",
-          "異常報酬",
-          "行為財務學",
-          "注意力機制"
-        ],
-        "ok": true,
-        "source": "abstract"
-      }
-    },
-    {
-      "arxiv_id": "2610.14959",
-      "title": "AlphaRLM: Aligning Language Models for Literature-Grounded Symbolic Factor Discovery",
-      "authors": [
-        "Jie Huang",
-        "Yuecheng Hong",
-        "Yao Chen",
-        "Hao Zhong",
-        "Linfeng Xiao",
-        "Xudong Liu",
-        "Hao Xia",
-        "Jianxuan Xin"
-      ],
-      "abstract": "Formulaic alpha mining seeks to discover executable expressions that capture predictive market signals in a vast, noisy search space. Recent LLM-based approaches use prompting, iterative search, or seed-factor evolution, leaving direct factor construction through policy learning less explored. To address this, we introduce AlphaRLM, a reinforcement-learning framework that trains LLMs to construct executable symbolic factors from financial literature without input factor expressions. AlphaRLM incorporates Literature-Guided Operator Assembly (LEGO), which conditions factor construction on literature-derived ideas and executable operators, providing semantic priors for exploration. It further aligns the generation policy with market feedback through executable-validity and grouped-return-separation rewards that capture non-monotonic structures across factor quantiles. Extensive experiments on CSI 300, CSI 1000, and S&P 500 show that AlphaRLM outperforms strong factor-mining and LLM-based baselines in annualized excess return. Notably, the 8B model achieves strong cross-market performance, highlighting the promise of literature-conditioned, market-aligned factor generation.",
-      "primary_category": "cs.AI",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "q-fin.PM"
-      ],
-      "published": "2026-10-10T14:32:10Z",
-      "updated": "2026-10-14T12:33:55Z",
-      "abs_url": "https://arxiv.org/abs/2610.14959",
-      "pdf_url": "https://arxiv.org/pdf/2610.14959v2",
-      "keyword_score": 8,
-      "matched_keywords": [
-        "llm",
-        "alpha"
-      ],
-      "relevance": 9,
-      "relevance_reason": "提出結合文獻引導與強化學習的符號化因子發現框架，量化研究必看。",
-      "summary": {
-        "title_zh": "AlphaRLM：結合文獻基礎與強化學習的符號化因子探勘模型",
-        "verdict": "利用強化學習訓練 LLM 根據金融文獻直接建構可執行符號化因子，在多個市場顯著提升年化超額報酬。",
-        "problem": "現有基於 LLM 的公式化 alpha 探勘多依賴提示詞、迭代搜尋或種子因子演化，直接透過策略學習建構因子的研究仍相當不足。",
-        "method": "提出 AlphaRLM 強化學習框架，結合文獻引導算子組裝機制與群組報酬分離獎勵，在 CSI 300、CSI 1000 與 SPX 進行實證。",
-        "findings": "實驗顯示 AlphaRLM 在年化超額報酬上勝過強大的因子探勘與 LLM 基準模型，8B 模型更展現出強健的跨市場表現，未報告具體的夏普值等數字。",
-        "implication": "可用於自動化從文獻萃取交易靈感並轉化為可執行因子，前提是需要建構完善的語意先驗與市場回饋獎勵函數。",
-        "caveats": "論文未提供扣除交易成本後的實際淨績效與換手率細節。",
-        "practicality": 4,
-        "tags": [
-          "強化學習",
-          "因子探勘",
-          "LLM",
-          "量化投資"
-        ],
-        "ok": true,
-        "source": "abstract"
-      }
-    },
-    {
-      "arxiv_id": "2610.16151",
-      "title": "Neural Estimation of Irreversibility in Real and Simulated Limit Order Book Paths",
-      "authors": [
-        "Hyeonjun Yeo",
-        "Doohwi Cha",
-        "Yoontae Hwang"
-      ],
-      "abstract": "A path indistinguishable from its own reverse carries no arrow of time, so time irreversibility is a necessary condition for a directed mechanism to be readable from trajectories alone. In finance it has been measured only on scalar series such as returns and volatility. We define the irreversibility rate of a coarse-grained limit order book path as the forward-to-reverse log-density ratio per event, and estimate it from three weeks of Nasdaq market-by-order data with an order-invariant MLP and a temporal convolutional network that receive identical blocks. For NVDA, the order-invariant and order-sensitive estimates are 0.036 and 0.054 nats per event, respectively. Their difference, the ordering increment, is 0.018. A surrogate preserving the coarse one-step transition table recovers 30 percent less irreversibility than the observed paths. The increment is positive for all twelve symbols on every held-out daytime date, and for NVDA in each session window. It changes more than tenfold with the coarse-graining scale. Neither a linear score nor any single feature group reproduces the full fitted rate. A queue-reactive simulator calibrated on the same days matches the market's ordered rate, 0.052 against 0.054, yet its ordering increment is 0.0006 against 0.018, building temporal asymmetry out of block composition instead of block order. We propose the ordering and scale profile of path irreversibility as a benchmark for order book simulators. Code and audit materials are available at https://github.com/hjyeo30/lob-irreversibility.",
-      "primary_category": "q-fin.TR",
-      "categories": [
-        "q-fin.TR"
-      ],
-      "published": "2026-10-12T04:21:33Z",
-      "updated": "2026-10-12T04:21:33Z",
-      "abs_url": "https://arxiv.org/abs/2610.16151",
-      "pdf_url": "https://arxiv.org/pdf/2610.16151v1",
-      "keyword_score": 42,
-      "matched_keywords": [
-        "limit order book",
-        "order book"
-      ],
-      "relevance": 8,
-      "relevance_reason": "以神經網路評估LOB路徑不可逆性，對高頻訂單流模擬有參考價值。",
-      "summary": {
-        "title_zh": "真實與模擬限價單簿路徑不可逆性的神經網路估計",
-        "verdict": "利用 MLP 與 TCN 估計限價單簿路徑的時間不可逆性速率，發現其可作為檢驗單簿模擬器真實性的基準指標。",
-        "problem": "金融領域過去僅在報酬率與波動度等純量序列上測量時間不可逆性，缺乏對限價單簿路徑結構的深入分析。現有模擬器是否能忠實重現市場的時間不對稱性仍屬未知。",
-        "method": "採用訂單不變性 MLP 與時間卷積網路（TCN），使用那斯達克市場逐筆訂單（market-by-order）資料，分析 12 支股票為期三週的資料，計算前向與反向對數密度比率。",
-        "findings": "以 NVDA 為例，訂單不變性與敏感性估計值分別為每事件 0.036 與 0.054 nats，兩者差額（排序增量）為 0.018；此增量在所有 12 支股票與所有保留交易日時段均為正值。排隊反應模擬器雖能吻合市場總體排序率（0.052 對 0.054），但其排序增量僅 0.0006，顯著低於實際路徑。",
-        "implication": "此方法與指標可用於評估限價單簿模擬器是否真實捕捉了市場的時間動態，開發微結構模擬器時可將路徑不可逆性作為校準基準。",
-        "caveats": "不可逆性速率的值會隨粗粒化尺度（coarse-graining scale）變化超過十倍，對尺度選擇相當敏感。",
+        "title_zh": "最佳化自適應造市：永續合約市場高收益流動性提供之理論框架",
+        "verdict": "建立零掛單費永續合約市場的最佳化造市理論框架，結合跨交易所避險與資金融通率。",
+        "problem": "永續合約市場缺乏能整合零掛單費、跨交易所避險與資金融通率的嚴謹造市理論模型。如何在動態環境下最佳化買賣價差與庫存管理是主要難題。",
+        "method": "建立隨機最佳控制問題，在濾波機率空間下求解 CARA 效用函數的 Hamilton-Jacobi-Bellman 方程。針對去中心化永續合約市場與跨交易所避險策略進行數學推導與數值分析。",
+        "findings": "透過 PnL 分解定理與 APY 公式解析高收益區間的五個無因次參數，並揭示獲利與虧損體制間的相變現象，未報告具體的報酬率或夏普值數字。",
+        "implication": "可應用於去中心化永續合約交易所的造市與跨所避險策略，前提是須精準估計資金融通率動態與參數不確定性。",
+        "caveats": "本文為理論框架與數值分析，缺乏真實歷史高頻資料的回測實證。",
         "practicality": 3,
         "tags": [
-          "限價單簿",
-          "市場微結構",
-          "時間不可逆性",
-          "神經網路估計",
-          "模擬器校準"
+          "造市",
+          "永續合約",
+          "隨機控制",
+          "跨交易所避險",
+          "資金融通率"
         ],
         "ok": true,
         "source": "abstract"
       }
     },
     {
-      "arxiv_id": "2610.15144",
-      "title": "From Economic Explanation to Performance Improvement in Machine-Learning Portfolios",
+      "arxiv_id": "2512.12924",
+      "title": "Interpretable Hypothesis-Driven Trading:A Rigorous Walk-Forward Validation Framework for Market Microstructure Signals",
       "authors": [
-        "Yunqi Liang",
-        "Stefan Zohren",
-        "Mihai Cucuringu"
+        "Gagan Deep",
+        "Akash Deep",
+        "William Lamptey"
       ],
-      "abstract": "To extend conventional model-level feature importance to economically meaningful portfolio outcomes and decisions, we propose a local first-order attribution-propagation framework that maps allocation-function feature exposures to local sensitivities of sequential portfolio performance metrics. We relate the propagated attributions to Shapley values defined directly for portfolio objectives and derive statistical inference for Sharpe-ratio attributions. The resulting attribution-guided feature-exposure intervention enables post-training adaptation, translating portfolio-metric explanations into out-of-sample decisions without retraining the underlying allocation model. We further introduce temporal stabilisation and cross-model averaging as complementary regularisation mechanisms. Empirically, the interventions yield statistically significant improvements in net Sharpe ratios across different model classes.",
-      "primary_category": "q-fin.PM",
+      "abstract": "We develop a rigorous walk-forward validation framework for algorithmic trading designed to mitigate overfitting and lookahead bias. Our methodology combines interpretable hypothesis-driven signal generation with reinforcement learning and strict out-of-sample testing. The framework enforces strict information set discipline, employs rolling window validation across 34 independent test periods, maintains complete interpretability through natural language hypothesis explanations, and incorporates realistic transaction costs and position constraints. Validating five market microstructure patterns across 100 US equities from 2015 to 2024, the system yields modest annualized returns (0.55%, Sharpe ratio 0.33) with exceptional downside protection (maximum drawdown -2.76%) and market-neutral characteristics (beta = 0.058). Performance exhibits strong regime dependence, generating positive returns during high-volatility periods (0.60% quarterly, 2020-2024) while underperforming in stable markets (-0.16%, 2015-2019). We report statistically insignificant aggregate results (p-value 0.34) to demonstrate a reproducible, honest validation protocol that prioritizes interpretability and extends naturally to advanced hypothesis generators, including large language models. The key empirical finding reveals that daily OHLCV-based microstructure signals require elevated information arrival and trading activity to function effectively. The framework provides complete mathematical specifications and open-source implementation, establishing a template for rigorous trading system evaluation that addresses the reproducibility crisis in quantitative finance research. For researchers, practitioners, and regulators, this work demonstrates that interpretable algorithmic trading strategies can be rigorously validated without sacrificing transparency or regulatory compliance.",
+      "primary_category": "q-fin.TR",
       "categories": [
-        "q-fin.PM",
-        "q-fin.ST"
+        "q-fin.TR",
+        "q-fin.CP",
+        "stat.ML"
       ],
-      "published": "2026-10-10T19:44:27Z",
-      "updated": "2026-10-10T19:44:27Z",
-      "abs_url": "https://arxiv.org/abs/2610.15144",
-      "pdf_url": "https://arxiv.org/pdf/2610.15144v1",
-      "keyword_score": 20,
+      "published": "2025-12-15T02:20:42Z",
+      "updated": "2025-12-15T02:20:42Z",
+      "abs_url": "https://arxiv.org/abs/2512.12924",
+      "pdf_url": "https://arxiv.org/pdf/2512.12924v1",
+      "comment": "35 pages, 8 figures, 3 tables. Submitted to Quantitative Finance and Economics",
+      "journal_ref": "",
+      "keyword_score": 77,
       "matched_keywords": [
+        "market microstructure",
+        "algorithmic trading",
         "sharpe ratio",
+        "reinforcement learning",
+        "transaction cost",
         "out-of-sample"
       ],
-      "relevance": 8,
-      "relevance_reason": "提出機器學習投組的特徵歸因與事後調整框架，助於模型最佳化。",
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "採用嚴格樣本外與回卷驗證，納入交易成本，結果保守且具參考價值。",
       "summary": {
-        "title_zh": "從機器學習投組的經濟解釋到績效提升",
-        "verdict": "提出區域一階歸因傳播框架，將模型特徵曝險轉化為投組績效敏感度，實證顯示能顯著提升淨夏普值。",
-        "problem": "傳統的模型層級特徵重要性無法直接對應到有經濟意義的投組決策與績效結果。需要在不重新訓練底層配置模型的情況下，將投組指標解釋轉化為樣本外決策。",
-        "method": "結合區域一階歸因傳播框架與 Shapley 值，推導夏普值歸因的統計推斷，並引入時間穩定化與跨模型平均正則化機制。實證涵蓋不同模型類別。",
-        "findings": "介入調整後的特徵曝險在多個模型類別中，皆使淨夏普值獲得統計顯著的改善，具體績效提升幅度因不同模型而異。",
-        "implication": "可用於已訓練完成的配置模型進行後訓練調適，不需重新訓練底層模型即可改善樣本外決策，前提是需正確計算特徵曝險的敏感度。",
-        "caveats": "依賴一階近似來傳播歸因，在高度非線性或市場劇烈變動時可能存在近似誤差。",
+        "title_zh": "可解釋的假設驅動交易：針對市場微結構訊號的嚴謹推進式驗證框架",
+        "verdict": "提出結合強化學習與嚴謹推進式驗證的市場微結構交易框架，強調防範過擬合與完整可解釋性。",
+        "problem": "量化交易研究中常面臨過擬合與前視偏差的危機，缺乏嚴謹且可複製的驗證協議。",
+        "method": "結合可解釋的假設驅動訊號生成、強化學習與嚴格樣本外測試。使用 2015 至 2024 年美國 100 檔股票的資料，涵蓋 34 個獨立測試期間。",
+        "findings": "系統年化報酬率為 0.55%，夏普值為 0.33，最大回檔僅 -2.76%，貝塔值為 0.058。高波動期間表現較佳（2020-2024 年季度報酬 0.60%），穩定市場則表現較差（2015-2019 年 -0.16%），整體總體結果統計上不顯著（p值 0.34）。",
+        "implication": "提供了一套包含真實交易成本與部位限制的透明驗證範本，特別適合需符合法規遵循的機構使用。",
+        "caveats": "整體總體結果在統計上不顯著，且績效高度依賴市場體制，在低波動的穩定市場中表現欠佳。",
         "practicality": 4,
         "tags": [
-          "機器學習",
-          "投資組合管理",
-          "特徵歸因",
-          "夏普值"
+          "市場微結構",
+          "強化學習",
+          "推進式驗證",
+          "可解釋性",
+          "演算法交易"
         ],
         "ok": true,
         "source": "abstract"

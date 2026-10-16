@@ -1,0 +1,327 @@
+{
+  "date": "2026-10-16",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2609.22785",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "結合對抗式強化學習與 Hawkes 過程，針對左尾風險提供實證與理論分析。"
+    },
+    {
+      "arxiv_id": "2609.11614",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 9,
+      "value": 6,
+      "reason": "使用分配型 DQN 改善體制轉換下的造市表現，但僅在零智力訂單簿模擬。"
+    },
+    {
+      "arxiv_id": "2510.26438",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 9,
+      "value": 4,
+      "reason": "結合脈衝控制與強化學習，但在模擬資料中宣稱夏普值高達 30。"
+    },
+    {
+      "arxiv_id": "2510.27334",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 9,
+      "value": 6,
+      "reason": "探討高頻造市商對中頻交易員的逆向選擇，以模擬訂單簿進行驗證。"
+    },
+    {
+      "arxiv_id": "2511.02016",
+      "topic": "交易執行",
+      "evidence": "只有模擬資料",
+      "relevance": 9,
+      "value": 6,
+      "reason": "提出多代理人強化學習環境研究內生流動性，模擬實驗設計嚴謹。"
+    },
+    {
+      "arxiv_id": "2512.12924",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 8,
+      "reason": "採用嚴格樣本外與回卷驗證，納入交易成本，結果保守且具參考價值。"
+    },
+    {
+      "arxiv_id": "2602.11708",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "加密貨幣動能策略涵蓋多空配置與交易成本，實證完整且表現穩健。"
+    },
+    {
+      "arxiv_id": "2511.15262",
+      "topic": "交易執行",
+      "evidence": "只有模擬資料",
+      "relevance": 9,
+      "value": 6,
+      "reason": "使用佇列反應模型進行最佳執行，方法合理但缺乏真實市場檢驗。"
+    },
+    {
+      "arxiv_id": "2607.09230",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "研究期貨 L2 流動性狀態轉換，結合區塊排列檢定，實證過程扎實。"
+    },
+    {
+      "arxiv_id": "2610.20104",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "已接受於 ACM ICAIF 2026，透過合成資料對微結構基礎模型進行深入分析。"
+    },
+    {
+      "arxiv_id": "2606.09478",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "結合體制轉換波動度與機器學習預測報酬，考慮成本後的經濟效益分析完整。"
+    },
+    {
+      "arxiv_id": "2511.20606",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 5,
+      "reason": "提出配對市場的微結構理論與不可能性定理，偏向理論推導。"
+    },
+    {
+      "arxiv_id": "2610.05740",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "分析訂單簿狀態為連續體而非離散體制，資料龐大且分析嚴謹。"
+    },
+    {
+      "arxiv_id": "2604.24486",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "比較多種深度學習與傳統投資組合模型，混合架構表現穩定。"
+    },
+    {
+      "arxiv_id": "2512.02037",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "波蘭股市統計套利實證，利用 LSTM 進行風險因子複製，結果具參考性。"
+    },
+    {
+      "arxiv_id": "2606.31387",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "以路徑簽名法處理統計套利之最佳執行，理論推導與歷史回測兼備。"
+    },
+    {
+      "arxiv_id": "2609.02677",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "透過偏好誘導與多目標強化學習處理 ESG 投資組合，方法具創新性。"
+    },
+    {
+      "arxiv_id": "2603.20456",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出具適應性粒度注意力的類神經 HMM，高頻訂單流預測實證完整。"
+    },
+    {
+      "arxiv_id": "2602.18912",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "結合情緒特徵與機器學習預測極短線情緒過度反應，分析細緻。"
+    },
+    {
+      "arxiv_id": "2601.02310",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 5,
+      "reason": "提出時序科爾莫哥洛夫-阿諾德網路預測 LOB，扣除成本後績效極高但缺乏足夠穩健性檢驗。"
+    },
+    {
+      "arxiv_id": "2512.23515",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 4,
+      "reason": "宣稱樣本外夏普值達 1.62 至 2.23，績效偏高且依賴 LLM 語意閘道，過擬合風險高。"
+    },
+    {
+      "arxiv_id": "2511.18117",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "推導 Hawkes 驅動訂單簿的擴散極限，純理論與隨機微分方程式推導。"
+    },
+    {
+      "arxiv_id": "2607.15195",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "應用科學物理資訊強化學習進行動態投組，架構完整且考慮成本。"
+    },
+    {
+      "arxiv_id": "2605.25527",
+      "topic": "Alpha 與因子",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 5,
+      "reason": "測試群體感知策略梯度法於高頻交易，但回測設定過於簡化。"
+    },
+    {
+      "arxiv_id": "2605.28853",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "已發表於 CIFEr 2026，直接最佳化金融指標的端到端深度學習表現優於大盤。"
+    },
+    {
+      "arxiv_id": "2609.06085",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "利用 Shapley 值解構價格與交易動態，將深度學習轉化為可解釋的參數模型。"
+    },
+    {
+      "arxiv_id": "2608.27734",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 9,
+      "reason": "嚴格檢查 LLM 策略發現中的資料洩漏與搜尋偏差，警示性強且方法極佳。"
+    },
+    {
+      "arxiv_id": "2607.18001",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "已接受於 Financial Innovation，提出深度強化學習建立市場中立投資組合。"
+    },
+    {
+      "arxiv_id": "2511.12490",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 3,
+      "reason": "宣稱樣本外夏普值高達 13 且年化報酬極高，資料好到不太可信。"
+    },
+    {
+      "arxiv_id": "2610.09691",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "理論探討在 LOB 回饋下的線上造市遺憾值界線，數學推導嚴謹。"
+    },
+    {
+      "arxiv_id": "2609.31260",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "探討全代理人 LOB 的相變與市場衝擊，屬於模擬系統的巨觀現象研究。"
+    },
+    {
+      "arxiv_id": "2608.18195",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 9,
+      "value": 6,
+      "reason": "多層次造市的強化學習方法，在多種模擬噪音與策略市場中進行測試。"
+    },
+    {
+      "arxiv_id": "2606.15715",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "利用鏈上高頻資料研究陽光交易理論與逆向選擇，實證題材罕見且扎實。"
+    },
+    {
+      "arxiv_id": "2607.11888",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 7,
+      "reason": "永續合約零手續費造市的理論框架，公式與極限推導完整但缺乏真實回測。"
+    },
+    {
+      "arxiv_id": "2512.12727",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "外匯預測模型結合多尺度注意力與動態變數選擇，考慮成本後表現穩健。"
+    },
+    {
+      "arxiv_id": "2602.00082",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "中國 REITs 市場的多代理人 LLM 投資系統，實證結果完整且結合微調小模型。"
+    },
+    {
+      "arxiv_id": "2601.05975",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "總體總體投資組合管理架構完整，考慮強韌性與實際交易成本，實證嚴謹。"
+    },
+    {
+      "arxiv_id": "2606.04574",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "加密貨幣市場的配對交易與深度強化學習執行疊加層，穩健性檢驗合格。"
+    },
+    {
+      "arxiv_id": "2603.16904",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "結合量子近似最佳化演算法與基因演算法進行投組再平衡，量子金融應用實例。"
+    },
+    {
+      "arxiv_id": "2512.10913",
+      "topic": "回測與研究方法",
+      "evidence": "看不出來",
+      "relevance": 6,
+      "value": 6,
+      "reason": "針對金融決策中強化學習的系統性文獻回顧，整理全面但偏向綜述性質。"
+    }
+  ]
+}
