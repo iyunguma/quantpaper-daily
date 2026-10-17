@@ -1,0 +1,562 @@
+{
+  "date": "2026-10-17",
+  "generated_at": "2026-10-17T09:21:16+08:00",
+  "scanned": 2386,
+  "eligible": 2376,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2512.18648",
+      "title": "Optimal Signal Extraction from Order Flow: A Matched Filter Perspective on Normalization and Market Microstructure",
+      "authors": [
+        "Sungwoo Kang"
+      ],
+      "abstract": "We establish a general matched filter principle for order flow normalization: optimal normalization must match the scaling behaviour of the signal-generating process. For capacity-constrained institutional investors, market capitalization normalization ($S^{MC}$) is the matched filter; for volume-targeting traders (e.g., VWAP/TWAP algorithms), trading value normalization ($S^{TV}$) is optimal. Monte Carlo simulations confirm this principle works bidirectionally, with matched filters achieving up to $1.99\\times$ higher signal correlation. Empirical validation using 2.7 million stock-day observations from the Korean market (2020--2024) reveals symmetric normalization dominance across investor types: domestic institutional flows predict next-day returns significantly under $S^{MC}$ ($t = 9.65$), while foreign flows exhibit stronger predictability under $S^{TV}$ ($t = 16.35$) -- with no sign reversal at longer horizons, indicating durable private information rather than temporary price impact. These findings motivate the ``Informed Executor'' hypothesis: sophisticated foreign investors possess genuine private information but employ volume-targeting algorithms for stealth execution -- volume-scaling reflects execution methodology, not absence of information. Information-theoretic validation using KL divergence independently corroborates these results. The matched filter principle generalises to any market where signal scaling varies across trader types, with implications for trading algorithms, factor construction, and market microstructure methodology.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP"
+      ],
+      "published": "2025-12-21T08:50:11Z",
+      "updated": "2026-02-20T15:58:56Z",
+      "abs_url": "https://arxiv.org/abs/2512.18648",
+      "pdf_url": "https://arxiv.org/pdf/2512.18648v3",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 52,
+      "matched_keywords": [
+        "order flow",
+        "market microstructure",
+        "price impact",
+        "stock",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出匹配濾波器並透過韓國市場大量資料實證",
+      "summary": {
+        "title_zh": "從訂單流進行最佳訊號提取：正規化與市場微結構的匹配濾波器觀點",
+        "verdict": "依投資人類型選擇匹配的訂單流正規化方式，可大幅提升 Alpha 訊號預測力。",
+        "problem": "不同類型機構投資人的規模與交易行為不同，如何建立通用的訂單流正規化原則以提取最佳訊號。",
+        "method": "結合匹配濾波器理論與蒙地卡羅模擬，並使用 2020 至 2024 年韓國市場 270 萬筆股票日資料進行實證檢驗。",
+        "findings": "蒙地卡羅模擬顯示匹配濾波器可提升高達 1.99 倍的訊號相關性。韓國市場實證顯示，國內機構資金在市值正規化下對次日報酬有顯著預測力（t = 9.65），而外資在交易額正規化下預測力更強（t = 16.35）。",
+        "implication": "開發 Alpha 因子與執行演算法時，應根據不同投資人群體的執行方法與規模限制來調整正規化方式。",
+        "caveats": "實證部分僅基於韓國單一市場的日頻資料，其跨市場的通用性仍需進一步驗證。",
+        "practicality": 4,
+        "tags": [
+          "訂單流",
+          "市場微結構",
+          "Alpha 因子",
+          "演算法交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.34510",
+      "title": "Can AI Make Money in Crypto? Measuring the Gap from Backtests to Real Markets",
+      "authors": [
+        "Xingtong Yu",
+        "Jiarun Zhou",
+        "Guanlin Ding",
+        "Wenkang Wei",
+        "Jiarui Liu",
+        "Chang Zhou",
+        "Fangzhou Ge",
+        "Chenyi Xu",
+        "Xikun Zhang",
+        "Renqiang Luo",
+        "Jie Zhang",
+        "Hong Cheng",
+        "Xinming Zhang",
+        "Hui Zhang",
+        "Yuan Fang"
+      ],
+      "abstract": "AI-based trading methods have rapidly evolved from machine learning and reinforcement learning to large language models (LLMs) and trading agents, yet their performance is still predominantly assessed through historical backtesting. Such evaluations provide limited evidence of whether a method can generalize to unseen future markets or whether its backtested performance can be sustained in realistic trading frictions (e.g., latency, slippage, liquidity constraints, and market impact). We present a unified benchmark that evaluates representative machine learning, reinforcement learning, LLM-based, and agent-based trading methods in cryptocurrency markets through three progressively more realistic stages: historical backtesting, prospective exchange-based paper trading, and real-money live trading. These stages jointly increase temporal realism by moving from historical to unseen future markets, and execution realism by moving from offline simulation toward live trading. This protocol enables us to quantify the backtest-to-realization gap, identify when performance begins to deteriorate, and compare how this gap differs across major classes of AI trading methods. We further provide a unified open-source system supporting all three evaluation stages, together with a public platform that continuously updates benchmark results. Code is available at https://github.com/Starlien95/Awesome-TradingAI.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-28T07:52:52Z",
+      "updated": "2026-09-28T07:52:52Z",
+      "abs_url": "https://arxiv.org/abs/2609.34510",
+      "pdf_url": "https://arxiv.org/pdf/2609.34510v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 55,
+      "matched_keywords": [
+        "reinforcement learning",
+        "live trading",
+        "backtesting",
+        "backtest",
+        "slippage",
+        "llm"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合回測與實盤，量化回測與現實差距",
+      "summary": {
+        "title_zh": "AI 能在加密貨幣市場賺錢嗎？衡量從回測到真實市場的落差",
+        "verdict": "透過三階段評估框架發現，AI 交易策略在導入真實交易摩擦與未來市場後，績效出現顯著落差。",
+        "problem": "現有 AI 交易方法多依賴歷史回測，無法有效評估其泛化至未來未見市場的能力，也難以衡量在真實交易摩擦下的表現。",
+        "method": "建構包含歷史回測、前瞻性交易所模擬交易與真實資金實盤交易的三階段評估基準，針對機器學習、強化學習、LLM 與代理人交易方法在加密貨幣市場進行實測。",
+        "findings": "論文主要指出各類 AI 交易方法在從離線模擬走向實盤交易時，績效皆開始顯著惡化，但未報告具體的報酬率或夏普值等具體績效數字。",
+        "implication": "實盤交易前必須建立包含延遲、滑價與流動性限制的嚴格評估機制，不能僅依賴歷史回測來評估策略的穩健性。",
+        "caveats": "主要限制在於其實驗結果揭露了落差但未提供單一最佳的模型架構解法。",
+        "practicality": 4,
+        "tags": [
+          "加密貨幣",
+          "機器學習",
+          "強化學習",
+          "大型語言模型",
+          "實盤交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.01198",
+      "title": "When large trades are not (automatically) news: liquidity tail risk and price discovery",
+      "authors": [
+        "Umut Çetin",
+        "Mingwei Lin",
+        "Giulia Livieri"
+      ],
+      "abstract": "We examine how heavy-tailed liquidity demand changes price discovery in a sequential limit order book with asymmetric information. In our setting, liquidity suppliers observe aggregate order flow, not its decomposition into informed demand and uninformed liquidity shocks. With heavy-tailed uninformed aggregated order flow, large trades remain plausibly uninformed over a wider range of depths, flattening price impact and slowing learning; sufficiently extreme trades can nevertheless become informative. We characterize equilibrium through a non-linear fixed point equation for the marginal-cost schedule; heavy-tailed uninformed aggregated order flow invalidates the monotonicity and compactness arguments available under Gaussianity. Therefore, we establish fixed-point existence within a tail-controlled class, prove posterior consistency for liquidity suppliers in the presence of endogenous dependent order flow, and derive tail asymptotics for marginal costs, informed demand, and aggregate order flow. Additionally, we obtain eventual informed-demand dominance and eventual monotonicity of the book in the far tails. Empirically, using 10-level AAPL data, we document farther-out crossover diagnostics and persistent bid-ask spreads following large heavy-tailed trades.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.MF"
+      ],
+      "published": "2026-07-01T17:32:54Z",
+      "updated": "2026-07-31T16:37:33Z",
+      "abs_url": "https://arxiv.org/abs/2607.01198",
+      "pdf_url": "https://arxiv.org/pdf/2607.01198v3",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 54,
+      "matched_keywords": [
+        "limit order book",
+        "order flow",
+        "price impact",
+        "order book",
+        "bid-ask spread",
+        "liquidity"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合非線性定價理論與真實資料，推導嚴謹",
+      "summary": {
+        "title_zh": "當大額交易自動不再是新聞：流動性尾部風險與價格發現",
+        "verdict": "證明重尾流動性需求會使大額交易延遲市場學習，並導致持續的買賣價差。",
+        "problem": "在資訊不對稱的限價單簿中，造市者僅能觀察總訂單流而無法分解其組成。當非知情訂單流呈重尾分佈時，大額交易將如何影響價格發現與市場學習？",
+        "method": "建立具序列限價單簿與非對稱資訊的理論模型，透過尾部控制類別證明固定點存在性。實證部分使用 10 檔的 AAPL 資料分析大額交易後的動態與價差。",
+        "findings": "理論上證明重尾非知情訂單流會使大額交易在較寬的深度範圍內被視為非知情，壓平價格衝擊並減緩學習速度；實證記錄了更遠的交叉診斷與大額重尾交易後持續的買賣價差，未報告具體績效數字。",
+        "implication": "提醒實務交易員在處理極端大單時，不能直接假設其帶有強烈資訊含意，需考慮市場重尾特性對價格衝擊的鈍化效果。",
+        "caveats": "理論模型依賴特定的重尾分佈與尾部控制類別假設，且實證僅使用單一標的之部分層級資料。",
+        "practicality": 2,
+        "tags": [
+          "限價單簿",
+          "價格發現",
+          "市場微結構",
+          "流動性風險",
+          "重尾分佈"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.01550",
+      "title": "Is Trend Still Your Friend?: A Microstructural Account of the Demise of Short-Term Trend-Following",
+      "authors": [
+        "Jutta G. Kurth",
+        "Zoltan Eisler",
+        "Adam Rej",
+        "Jean-Philippe Bouchaud"
+      ],
+      "abstract": "Systematic trend following has, on average, been profitable for at least two centuries; yet since approximately 2009, short-term trends have ceased to deliver reliable returns. Using a cross-section of roughly 100 liquid futures contracts spanning 1995-2025, together with an industry-representative CTA proxy, we document the break and characterise its dependence on signal speed and asset class. We evaluate four candidate explanations - capacity constraints, market electronification, a regime change in CTA-versus-order-flow interactions, and a microstructural mechanism - and find that the first three fail on grounds of timing, magnitude, or cross-sectional heterogeneity. Our central empirical finding is that the cross-sectional variable distinguishing degraded from surviving trends is the volatility-normalised tick size: post-2008 trend PnL has collapsed on small-tick contracts across all signal horizons, while remaining essentially intact on large-tick ones. Neither asset class nor liquidity replicates this dichotomy. We interpret this result through a self-fulfilling feedback loop that, in our view, lies at the heart of the trend anomaly itself: trend signals trigger directional trades, whose market impact reinforces the very price moves that generated the signal. Both the profitability and the persistence of trend are sustained by this impact channel, which requires that trend followers can execute aggressively at reasonable cost. We argue that the post-crisis transition to HFT-dominated market making, whose liquidity-withdrawal behaviour in front of predictable directional flow has sharply contrasting consequences for sparse (small-tick) and dense (large-tick) limit order books, has broken this loop on small-tick contracts. On large-tick contracts, residual depth remains sufficient, and the loop continues to operate.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.PM"
+      ],
+      "published": "2026-07-02T00:16:17Z",
+      "updated": "2026-07-02T00:16:17Z",
+      "abs_url": "https://arxiv.org/abs/2607.01550",
+      "pdf_url": "https://arxiv.org/pdf/2607.01550v1",
+      "comment": "20 pages, 21 figures, 11 pages of appendices",
+      "journal_ref": "",
+      "keyword_score": 53,
+      "matched_keywords": [
+        "market making",
+        "limit order book",
+        "order book",
+        "regime",
+        "liquidity",
+        "cross-sectional"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "跨三十年期貨資料，微結構解釋透徹",
+      "summary": {
+        "title_zh": "趨勢還是你的朋友嗎？短期趨勢追蹤失效的微結構解析",
+        "verdict": "2009年後短期趨勢追蹤失效，主因是小跳動點合約的自我實現反饋迴路遭高頻交易破壞。",
+        "problem": "自2009年起短期趨勢追蹤策略不再提供穩定報酬，打破長達兩世紀的規律，需找出其失效根源。",
+        "method": "使用1995至2025年間約100檔流動性期貨契約與產業代表性CTA代理指標，檢驗容量、電子化、訂單流與微結構機制等四項假設。",
+        "findings": "波動度標準化跳動點大小為關鍵區分變數，小跳動點契約的趨勢PnL在2008年後崩潰，大跳動點契約則保持完好，論文未報告具體績效數字。",
+        "implication": "實務上應避開小跳動點合約的短期趨勢策略，大跳動點合約因殘存深度足夠仍可維持反饋迴路。",
+        "caveats": "將現象歸因於高頻交易造市商在不同跳動點訂單簿中的流動性撤出行為。",
+        "practicality": 4,
+        "tags": [
+          "趨勢追蹤",
+          "微結構",
+          "高頻交易",
+          "期貨",
+          "訂單簿"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2511.03628",
+      "title": "LiveTradeBench: Seeking Real-World Alpha with Large Language Models",
+      "authors": [
+        "Haofei Yu",
+        "Fenghai Li",
+        "Jiaxuan You"
+      ],
+      "abstract": "Large language models (LLMs) achieve strong performance across benchmarks--from knowledge quizzes and math reasoning to web-agent tasks--but these tests occur in static settings, lacking real dynamics and uncertainty. Consequently, they evaluate isolated reasoning or problem-solving rather than decision-making under uncertainty. To address this, we introduce LiveTradeBench, a live trading environment for evaluating LLM agents in realistic and evolving markets. LiveTradeBench follows three design principles: (i) Live data streaming of market prices and news, eliminating dependence on offline backtesting and preventing information leakage while capturing real-time uncertainty; (ii) a portfolio-management abstraction that extends control from single-asset actions to multi-asset allocation, integrating risk management and cross-asset reasoning; and (iii) multi-market evaluation across structurally distinct environments--U.S. stocks and Polymarket prediction markets--differing in volatility, liquidity, and information flow. At each step, an agent observes prices, news, and its portfolio, then outputs percentage allocations that balance risk and return. Using LiveTradeBench, we run 50-day live evaluations of 21 LLMs across families. Results show that (1) high LMArena scores do not imply superior trading outcomes; (2) models display distinct portfolio styles reflecting risk appetite and reasoning dynamics; and (3) some LLMs effectively leverage live signals to adapt decisions. These findings expose a gap between static evaluation and real-world competence, motivating benchmarks that test sequential decision making and consistency under live uncertainty.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.AI",
+        "cs.CE",
+        "cs.CL"
+      ],
+      "published": "2025-11-05T16:47:26Z",
+      "updated": "2025-11-05T16:47:26Z",
+      "abs_url": "https://arxiv.org/abs/2511.03628",
+      "pdf_url": "https://arxiv.org/pdf/2511.03628v1",
+      "comment": "16 pages",
+      "journal_ref": "",
+      "keyword_score": 51,
+      "matched_keywords": [
+        "live trading",
+        "backtesting",
+        "llm",
+        "large language model",
+        "liquidity",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "建立即時串流評估環境，實測多個語言模型",
+      "summary": {
+        "title_zh": "LiveTradeBench：使用基礎模型尋求真實世界的Alpha",
+        "verdict": "推出 LiveTradeBench 即時交易環境，評估 21 個 LLM 在動態市場中的表現，發現高評分不等於好交易績效。",
+        "problem": "現有基準測試多為靜態設定，缺乏真實市場動態與不確定性，無法有效評估 LLM 在實際交易中的決策能力。",
+        "method": "使用即時資料串流（包含價格與新聞）、多資產投資組合管理抽象化，以及跨美國股票與 Polymarket 預測市場的多市場評估。進行為期 50 天、涵蓋 21 個不同家族 LLM 的即時評估。",
+        "findings": "研究發現 LMArena 高分數並不代表優異的交易成果，各模型展現出反映風險胃納與推理動態的不同投資組合風格，部分 LLM 能有效利用即時訊號調整決策。未報告具體績效數字。",
+        "implication": "實務上不能僅依賴傳統靜態基準來選擇用於交易的 LLM，必須在即時、充滿不確定性的環境中進行壓力測試。",
+        "caveats": "實驗僅進行 50 天的即時評估，且未明確報告具體的報酬率或夏普值等量化績效指標。",
+        "practicality": 3,
+        "tags": [
+          "LLM",
+          "即時交易",
+          "投資組合管理",
+          "Alpha 因子挖掘",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.15488",
+      "title": "AlphaPilot: Multi-Turn Tool-Using LLM Agents for Adaptive Alpha Mining with Reinforcement Learning",
+      "authors": [
+        "Peiqi Jiang",
+        "Fan Zhang",
+        "Xin Xu",
+        "Tianhao Chen",
+        "Can Yang"
+      ],
+      "abstract": "Formulaic alpha mining seeks interpretable expressions that rank assets by future returns. The task is challenging because it demands simultaneous processing of unstructured market descriptions, historical data, and quantitative evaluation of candidate factors, yet most existing methods exploit only a subset of these signals. We introduce AlphaPilot, a reinforcement-learning framework that trains multi-turn tool-using LLM agents for adaptive alpha mining. The agent conditions on market descriptions, proposes factor expressions, queries real-data evaluator feedback, and updates a retained factor pool across turns. This design jointly leverages market text, LLM financial knowledge, real data, and evaluation feedback. At inference time, AlphaPilot performs day-by-day search and pool updates to adapt to shifting market regimes. Across three independent runs in out-of-sample rolling backtests on CSI300 and CSI500, AlphaPilot achieves mean total returns of 42.93% and 54.19%, with mean Sharpe ratios of 2.46 and 2.86, respectively. It attains the highest mean total return, Sharpe, and RankIC among the evaluated methods on both universes.",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-10-11T09:43:01Z",
+      "updated": "2026-10-11T09:43:01Z",
+      "abs_url": "https://arxiv.org/abs/2610.15488",
+      "pdf_url": "https://arxiv.org/pdf/2610.15488v1",
+      "comment": "25 pages, 9 figures, 20 tables",
+      "journal_ref": "",
+      "keyword_score": 53,
+      "matched_keywords": [
+        "sharpe ratio",
+        "reinforcement learning",
+        "out-of-sample",
+        "backtest",
+        "llm",
+        "regime"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "樣本外滾動回測表現極佳，夏普值近 3",
+      "summary": {
+        "title_zh": "AlphaPilot：透過強化學習訓練多輪工具使用 LLM 代理進行適應性 Alpha 因子挖掘",
+        "verdict": "提出結合 LLM 與強化學習的多輪代理架構進行 Alpha 因子挖掘，在中證 300 與中證 500 迴測中表現優異。",
+        "problem": "傳統公式化 Alpha 因子挖掘難以同時處理非結構化市場描述、歷史資料與量化評估，現有方法僅能利用部分訊號。",
+        "method": "採用基於強化學習的多輪工具使用 LLM 代理架構（AlphaPilot），在每日滾動回測中進行因子搜尋與調整，測試範圍涵蓋中證 300 與中證 500 指數樣本。",
+        "findings": "在 CSI300 與 CSI500 的樣本外滾動回測中，平均總報酬分別達到 42.93% 與 54.19%，平均夏普值分別為 2.46 與 2.86，在所有評估方法中總報酬、夏普值與 RankIC 皆最高。",
+        "implication": "可利用 LLM 的金融知識與真實資料回饋進行動態因子挖掘，適合用來自動適應變動的市場體制。",
+        "caveats": "未在論文中詳細說明實際交易成本的扣除情形。",
+        "practicality": 4,
+        "tags": [
+          "Alpha 因子挖掘",
+          "強化學習",
+          "LLM",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2511.00190",
+      "title": "Deep reinforcement learning for optimal trading with partial information",
+      "authors": [
+        "Andrea Macrì",
+        "Sebastian Jaimungal",
+        "Fabrizio Lillo"
+      ],
+      "abstract": "Reinforcement Learning (RL) has attracted increasing interest in financial applications, including optimal trading and execution. However, the use of RL for optimal trading strategies that exploit latent information in the market has been, to the best of our knowledge, subject to little attention. In this paper, we consider an optimal trading problem in which the trading signal follows an Ornstein-Uhlenbeck process with regime switching parameters. The problem is naturally formulated as a partially observable Markov decision problem, requiring a trader to infer latent information directly from the history of the observable process. We combine recurrent neural networks (RNN) with RL to address both the filtering and trading components of the problem. More specifically, we propose three distinct RL-based approaches, on top of which we incorporate RNN to filter the latent state of the environment where the agent is trading. The first, a one-step approach, directly encodes hidden states from the GRU into the RL trader. The second and third are two-step methods: one that uses posterior regime probability estimates for the mean reverting regimes, while the other relies on forecasts of the next signal value. Through extensive simulations with increasingly complex Markovian regime dynamics for the trading signal's parameters, as well as an empirical application to equity pairs trading, we find that feeding posterior probability estimates on the latent long-run mean reversion regime achieves superior cumulative rewards and exhibits more interpretable strategies, in contrast with the other two approaches. Overall, our results show that the quality and structure of the information supplied to the agent are important for trading performance and policy interpretability.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.CP",
+        "stat.ML"
+      ],
+      "published": "2025-10-31T18:48:59Z",
+      "updated": "2026-10-08T16:38:51Z",
+      "abs_url": "https://arxiv.org/abs/2511.00190",
+      "pdf_url": "https://arxiv.org/pdf/2511.00190v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 53,
+      "matched_keywords": [
+        "reinforcement learning",
+        "pairs trading",
+        "trading signal",
+        "mean reversion",
+        "regime",
+        "neural network"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合隱馬可夫與強化學習，有實證配對交易",
+      "summary": {
+        "title_zh": "結合深度強化學習與部分資訊的最佳化交易",
+        "verdict": "結合遞迴神經網路與強化學習處理部分資訊的最佳化交易，實證顯示輸入後驗機率表現最佳。",
+        "problem": "市場隱含資訊通常無法完全觀測，傳統強化學習難以直接處理這類部分資訊的最佳化交易問題。這需要同時解決狀態過濾與交易策略決策。",
+        "method": "結合遞迴神經網路與強化學習，提出三種結合過濾與交易的方法。應用於模擬的 Ornstein-Uhlenbeck 過程與股票配對交易實證。",
+        "findings": "實證顯示，輸入潛在均值回歸體制的後驗機率估計值能獲得最佳的累積報酬與可解釋性。論文未報告具體的績效數字。",
+        "implication": "證明資訊品質與結構對交易績效至關重要，實務上使用後驗機率過濾隱含狀態優於直接餵入隱藏狀態。",
+        "caveats": "方法依賴複雜的模擬環境與隱含參數設定，且實證缺乏真實交易成本考量。",
+        "practicality": 3,
+        "tags": [
+          "深度強化學習",
+          "遞迴神經網路",
+          "最佳化交易",
+          "配對交易",
+          "部分資訊"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.09230",
+      "title": "When Does Order Flow Matter? State-Dependent L2 Liquidity-State Transitions in Crypto Futures",
+      "authors": [
+        "Joohyoung Jeon"
+      ],
+      "abstract": "Building event-conditioned market models requires separating macro-event labels from persistent microstructure state. We study this distinction in Binance BTCUSDT and ETHUSDT futures from 2023-2026, combining top-20 L2 order book data, trade-flow records, and macro-event windows. We define a supervised discrete L2 liquidity-state transition task, distinct from latent-regime detection and price-direction prediction, and evaluate models in rolling monthly out-of-sample folds with event-clustered validation and blocked permutation tests, admitting each feature layer only if it improves on the layer below it on the same panel. Within these event windows, the first-order predictive signal is the pre-event L2 liquidity state: a coarse pre-event state baseline strongly predicts post-event liquidity regimes, interpretable logit models over continuous L2 features fail to improve on it, and a shallow nonlinear L2 model adds a robust further gain of comparable size to the state baseline's own. The macro-event calendar enters only by locating the windows and supplying matched non-event controls; we use event timing but not the event's label content, so pre-event state competes against an uninformed within-window baseline, not against the event type. Order flow adds further value only when layered on top of the L2 state model, not as a replacement. This value is not robustly cross-symbol: for ETH it is present across calm, mixed, and stressed regimes and largest under stressed pre-event liquidity, whereas BTC shows only isolated five-minute passes and no regime that clears at both horizons. These findings motivate a state-first design principle for market microstructure models. We provide a liquidity-state transition baseline and evaluation protocol that reinforcement-learning, execution-policy, or LLM-based context layers should exceed before their added value is credited.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.LG"
+      ],
+      "published": "2026-07-10T09:21:00Z",
+      "updated": "2026-07-10T09:21:00Z",
+      "abs_url": "https://arxiv.org/abs/2607.09230",
+      "pdf_url": "https://arxiv.org/pdf/2607.09230v1",
+      "comment": "8 pages, 2 figures, 1 table",
+      "journal_ref": "",
+      "keyword_score": 70,
+      "matched_keywords": [
+        "order flow",
+        "market microstructure",
+        "order book",
+        "out-of-sample",
+        "llm",
+        "regime"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "研究期貨 L2 流動性狀態轉換，結合區塊排列檢定，實證過程扎實。",
+      "summary": {
+        "title_zh": "訂單流何時重要？加密貨幣期貨中具狀態依賴的 L2 流動性狀態轉移",
+        "verdict": "事件前的 L2 流動性狀態為核心預測訊號，訂單流僅能作為疊加輔助。",
+        "problem": "如何有效分離總體事件標籤與持續性微結構狀態，並評估其對流動性狀態轉移的預測能力。",
+        "method": "使用幣安 BTCUSDT 與 ETHUSDT 期貨在 2023 至 2026 年的前 20 檔 L2 訂單簿與交易流資料。採用監督式離散 L2 流動性狀態轉移任務，並以滾動月度樣本外進行評估。",
+        "findings": "事件前的 L2 狀態能強烈預測事件後流動性體制，淺層非線性模型可進一步提升表現，而訂單流僅能在此基礎上提供有限價值；未報告具體績效數字。",
+        "implication": "市場微結構模型應採狀態優先設計原則，將此 L2 狀態轉移基線作為強化學習或執行策略必須超越的門檻。",
+        "caveats": "訂單流的增益在跨品種（如 BTC 與 ETH）之間並不具備穩健性。",
+        "practicality": 3,
+        "tags": [
+          "限價單簿",
+          "流動性",
+          "加密貨幣期貨",
+          "微結構",
+          "訂單流"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.05740",
+      "title": "Latent Continuum of Regimes in Limit Order Book Dynamics",
+      "authors": [
+        "Anjali Thawait"
+      ],
+      "abstract": "Market-regime models typically assume a finite set of discrete latent states. We examine whether high frequency limit-order-book dynamics exhibit distinct regime separation or apparent regimes result from discretising an underlying continuum, analysing deep limit-order book data for EURO STOXX 50 index futures across 987 clean trading days from 2022 to 2025 using 30, 45 and 60-second aggregation windows. Market states are represented by symmetric positive definite covariance matrices and analysed under Log-Euclidean and affine-invariant geometries; the resulting state cloud has an effective dimension of approximately 1.4. A causal anomaly layer filters statistical, calendar and rollover contamination, while label-free economic validation evaluates market-state separation independently of volatility-based proxy labels. A 17-method zoo spanning conventional and Riemannian representations, reinforced by full-cloud geometric certificates, consistently favours a continuum over a discrete regime structure. A dominant latent coordinate captures between 83.66% and 85.27% of variation in the covariance-state geometry and tracks VSTOXX without regime labels, remaining stable across years although its average level shifts with market conditions, indicating that conventional regimes are coarse quantisations. A divisive hierarchy spanning macro, macro-subregime, micro and micro-subregime tiers is evaluated using expanding-year walk-forward tests, with out-of-sample performance strongest at the macro tier while finer tiers fail to generalise; continuous fine-scale information nonetheless remains predictive, and its discretisation causes the performance loss. Forecasting performance peaks near ten minutes, reaching a maximum pooled R2_OOS of 0.7483. Overall, the latent stress coordinate defines a stable, low-dimensional geometric continuum that captures market stress and its predictive dynamics.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.CP",
+        "q-fin.MF",
+        "q-fin.ST"
+      ],
+      "published": "2026-10-05T03:44:47Z",
+      "updated": "2026-10-06T11:37:27Z",
+      "abs_url": "https://arxiv.org/abs/2610.05740",
+      "pdf_url": "https://arxiv.org/pdf/2610.05740v2",
+      "comment": "45 pages, 16 figures, 18 tables",
+      "journal_ref": "",
+      "keyword_score": 66,
+      "matched_keywords": [
+        "limit order book",
+        "order book",
+        "high frequency",
+        "out-of-sample",
+        "regime",
+        "futures"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "分析訂單簿狀態為連續體而非離散體制，資料龐大且分析嚴謹。",
+      "summary": {
+        "title_zh": "限價單簿動態中隱含的體制連續統",
+        "verdict": "研究顯示極高頻限價單簿動態呈現連續統而非離散體制，單一主導座標能解釋高達 85.27% 的變異。",
+        "problem": "傳統市場體制模型通常假設有限個離散的隱含狀態，這可能無法真實反映限價單簿動態的本質。",
+        "method": "使用 2022 至 2025 年共 987 個交易日之 EURO STOXX 50 指數期貨深度限價單簿資料，透過 30、45 與 60 秒的彙總窗口，採用對數歐幾里得與仿生不變幾何進行分析。",
+        "findings": "狀態雲的有效維度約為 1.4，主導的隱含座標可捕捉 83.66% 至 85.27% 的共變異數狀態幾何變異，且預測表現峰值出現在約十分鐘，最大樣本外 R 平方達 0.7483。",
+        "implication": "實務上應放棄將市場強行切分為離散體制的做法，改用連續的幾何座標來捕捉市場壓力與動態。",
+        "caveats": "細緻的層級在樣本外測試中無法順利泛化，顯示過度細分反而會損害預測表現。",
+        "practicality": 4,
+        "tags": [
+          "限價單簿",
+          "體制轉換",
+          "市場微結構",
+          "高頻交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.15195",
+      "title": "SciPhy Reinforcement Learning for Portfolio Optimization",
+      "authors": [
+        "Igor Halperin",
+        "Andrey Itkin"
+      ],
+      "abstract": "This paper introduces a dynamic portfolio optimization framework for large institutional investors using Scientific Physics-Informed Reinforcement Learning (SciPhyRL). Formulated in continuous time over an extended state space that includes explicit cumulative costs, the approach leverages offline historical data to learn optimal, distribution-aware strategies. A core innovation reduces the optimization challenge to solving an HJB equation by projecting it onto observed trajectories as a pathwise Hamilton-Jacobi equation. This is solved directly from data using PINN in a single offline sweep, eliminating the need for traditional value or policy iteration. To make the method effective at practical short horizons, the control variable is recast from a continuous trading rate to a discrete target holding. This ensures signal-implied positions are reached immediately, while execution costs are evaluated against a microstructure-grounded quadratic price impact model. Evaluated on a $14$-asset ETF universe using an engineered oracle signal, the learned Gibbs policy yields substantial out-of-sample Sharpe ratio improvements over static and myopic baselines. The results demonstrate that the proposed framework successfully translates known signal quality into a robust, multi-period, and cost-aware allocation mechanism with strictly controlled volatility and turnover.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "math.AP",
+        "math.NA",
+        "q-fin.CP",
+        "q-fin.MF"
+      ],
+      "published": "2026-07-16T16:51:24Z",
+      "updated": "2026-07-16T16:51:24Z",
+      "abs_url": "https://arxiv.org/abs/2607.15195",
+      "pdf_url": "https://arxiv.org/pdf/2607.15195v1",
+      "comment": "69 pages, 8 figures, 10 tables",
+      "journal_ref": "",
+      "keyword_score": 61,
+      "matched_keywords": [
+        "sharpe ratio",
+        "reinforcement learning",
+        "price impact",
+        "portfolio optimization",
+        "out-of-sample",
+        "execution cost"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "應用科學物理資訊強化學習進行動態投組，架構完整且考慮成本。",
+      "summary": {
+        "title_zh": "結合科學物理約束的強化學習於投資組合最佳化",
+        "verdict": "提出科學物理約束強化學習框架解 HJB 方程式，大幅提升多期投資組合的夏普值。",
+        "problem": "大型機構投資人在動態投資組合最佳化中，需要處理連續時間下的累積成本與動態配置問題。",
+        "method": "使用科學物理約束強化學習（SciPhyRL）與物理資訊神經網路（PINN），將 HJB 方程式投影至路徑上的漢彌爾頓-雅可比方程式進行離線求解。資料使用 14 檔 ETF 的歷史資料，搭配工程化 oracle 信號與微結構二次價格衝擊模型。",
+        "findings": "學到的 Gibbs 政策在樣本外取得了顯著的夏普值改善，優於靜態與短視近利（myopic）基準。具體績效數字未在摘要中報告具體數值，但展現了嚴格控制波動度與週轉率的成效。",
+        "implication": "可用於將已知信號品質轉化為具備成本意識的多期資產配置機制，前提是需要正確設定二次價格衝擊模型。實務上能確保信號暗示的部位立即到位。",
+        "caveats": "高度依賴 engineered oracle 信號的品質以及所假設的二次價格衝擊模型。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "投資組合最佳化",
+          "物理資訊神經網路",
+          "動態資產配置",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

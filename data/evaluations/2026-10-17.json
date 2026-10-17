@@ -1,0 +1,327 @@
+{
+  "date": "2026-10-17",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2511.02518",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 6,
+      "reason": "理論模型與數值方法，無真實市場實證"
+    },
+    {
+      "arxiv_id": "2510.25929",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "僅透過模擬環境分析競局，缺乏實證"
+    },
+    {
+      "arxiv_id": "2609.34510",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "結合回測與實盤，量化回測與現實差距"
+    },
+    {
+      "arxiv_id": "2512.15732",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "實盤績效慘跌，分析過擬合與摩擦力極限"
+    },
+    {
+      "arxiv_id": "2607.01198",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "結合非線性定價理論與真實資料，推導嚴謹"
+    },
+    {
+      "arxiv_id": "2605.23007",
+      "topic": "Alpha 與因子",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "模擬回測比特幣策略，缺乏嚴謹實盤檢驗"
+    },
+    {
+      "arxiv_id": "2602.10785",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "雙重樣本外與滑動窗口測試，實證方法完整"
+    },
+    {
+      "arxiv_id": "2602.00776",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "跨資產微結構特徵穩定性分析，含真實回測"
+    },
+    {
+      "arxiv_id": "2512.12420",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "實證檢驗選擇權動態避險，代碼與框架公開"
+    },
+    {
+      "arxiv_id": "2610.15488",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "樣本外滾動回測表現極佳，夏普值近 3"
+    },
+    {
+      "arxiv_id": "2608.27076",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 4,
+      "reason": "十年美股樣本外夏普 2.44，報酬率偏高"
+    },
+    {
+      "arxiv_id": "2607.26245",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提供高頻預測市場資料集，實證分析客觀"
+    },
+    {
+      "arxiv_id": "2607.01550",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "跨三十年期貨資料，微結構解釋透徹"
+    },
+    {
+      "arxiv_id": "2606.14182",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "推導兩個耦合限價訂單簿的 Epps 效應"
+    },
+    {
+      "arxiv_id": "2511.11481",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "考慮風險限制的強化學習投組，實證中規中矩"
+    },
+    {
+      "arxiv_id": "2511.00190",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "結合隱馬可夫與強化學習，有實證配對交易"
+    },
+    {
+      "arxiv_id": "2510.26228",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "利用大型語言模型萃取新聞訊號增強動能策略"
+    },
+    {
+      "arxiv_id": "2610.03128",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "透過文字梯度最佳化策略，跨市場回測完整"
+    },
+    {
+      "arxiv_id": "2605.20636",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "連續計時訊號風格配置，扣除成本後實證完整"
+    },
+    {
+      "arxiv_id": "2605.01384",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "結合 BERT 與 Actor-Critic 進行多資產配置"
+    },
+    {
+      "arxiv_id": "2604.21993",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "利用模擬器偵測流動性侵蝕，無真實市場檢驗"
+    },
+    {
+      "arxiv_id": "2604.19476",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "以語言模型過濾網路邊以增強預測力，實證完整"
+    },
+    {
+      "arxiv_id": "2604.11477",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "長達二十個月的實盤對齊研究，記錄資本消耗"
+    },
+    {
+      "arxiv_id": "2512.18648",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出匹配濾波器並透過韓國市場大量資料實證"
+    },
+    {
+      "arxiv_id": "2512.11765",
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 6,
+      "reason": "推導價格衝擊下最適執行賽局的高頻極限"
+    },
+    {
+      "arxiv_id": "2610.08169",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "運用狀態相依過程建模電力市場訂單流"
+    },
+    {
+      "arxiv_id": "2609.36257",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "推導考慮價格衝擊的選擇權複製偏微分方程"
+    },
+    {
+      "arxiv_id": "2511.12563",
+      "topic": "造市與微結構",
+      "evidence": "看不出來",
+      "relevance": 7,
+      "value": 5,
+      "reason": "提出基礎模型，摘要未交代具體資料來源"
+    },
+    {
+      "arxiv_id": "2511.03628",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "建立即時串流評估環境，實測多個語言模型"
+    },
+    {
+      "arxiv_id": "2610.21081",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "改進擴散模型處理重尾特徵，以真實資料驗證"
+    },
+    {
+      "arxiv_id": "2608.02424",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "透過交換器進行網路內機器學習預測，降延遲"
+    },
+    {
+      "arxiv_id": "2605.19337",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "系統性綜合文獻探討代理人在金融市場應用"
+    },
+    {
+      "arxiv_id": "2603.09164",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出流動性風險框架，透過永續合約資料驗證"
+    },
+    {
+      "arxiv_id": "2603.01344",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "建立流動性提供定價框架，並以真實資料驗證"
+    },
+    {
+      "arxiv_id": "2610.02917",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出輕量級模型進行低延遲預測，實證扎實"
+    },
+    {
+      "arxiv_id": "2606.29556",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 5,
+      "reason": "提出人格條件模擬框架，屬理論探討無實證"
+    },
+    {
+      "arxiv_id": "2605.05739",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "建立代理人系統行為評估方法，回測設計嚴謹"
+    },
+    {
+      "arxiv_id": "2603.15848",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "結合技術指標與情緒分析，實證過程較簡略"
+    },
+    {
+      "arxiv_id": "2511.12120",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "結合多種強化學習演算法進行集成交易實證"
+    },
+    {
+      "arxiv_id": "2511.08571",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 4,
+      "reason": "黃金期貨十年樣本外夏普 2.88，報酬率偏高"
+    }
+  ]
+}
