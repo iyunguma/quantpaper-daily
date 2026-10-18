@@ -1,0 +1,535 @@
+{
+  "date": "2026-10-18",
+  "generated_at": "2026-10-18T09:06:26+08:00",
+  "scanned": 2378,
+  "eligible": 2358,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2608.29025",
+      "title": "Deep Hedging Under Realistic Market Frictions: A Regime-Conditional Empirical Study of Dynamic Option Hedging on Bitcoin Options",
+      "authors": [
+        "Sheryan Kumar"
+      ],
+      "abstract": "Classical option-hedging methods like Black-Scholes delta assume constant, free rebalancing, which real markets don't allow. Deep hedging trains a neural network to handle these frictions directly, and prior work reports strong results. But those comparisons usually pit deep hedging against a frictionless classical baseline on simulated price data. That's not a fair fight, and it leaves open whether the advantage is real. We test this using five years of actual BTC options data from Deribit (2020-2024), comparing Black-Scholes delta, Leland's cost-adjusted hedge, and the Whalley-Wilmott no-trade band against three deep hedging setups: an LSTM and a feedforward network, each trained with a CVaR loss and, in some runs, a penalty for trading too often. All six strategies face the same 5 basis point transaction cost. On 11,546 test episodes from September 2023 to December 2024, Whalley-Wilmott cuts transaction costs significantly versus hourly rebalancing, saving $1.79 per episode against plain BS delta (95% CI [-2.21, -1.39], p < 0.0001) by trading about eight times less often. Its P&L and tail-risk numbers are better too, though not quite significant at this sample size. None of the three deep hedging models beat any classical benchmark on any metric, and all kept trading almost every hour regardless of penalty weight, a twenty-fold range barely moved the needle. A calmer validation period shows Whalley-Wilmott's P&L edge shrinks or disappears there while its cost edge holds, so the result depends on market regime. We think the likely causes are a small training set and the lack of any built-in mechanism for sitting still in the architectures tested. Not a flashy result, but an honest one: a real-data check on a claim mostly supported by simulations so far.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.CP"
+      ],
+      "published": "2026-08-29T03:36:05Z",
+      "updated": "2026-08-29T03:36:05Z",
+      "abs_url": "https://arxiv.org/abs/2608.29025",
+      "pdf_url": "https://arxiv.org/pdf/2608.29025v1",
+      "comment": "14 pages, 6 figures, 4 tables",
+      "journal_ref": "",
+      "keyword_score": 45,
+      "matched_keywords": [
+        "transaction cost",
+        "regime",
+        "hedging",
+        "bitcoin",
+        "neural network",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 9,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "使用五年真實選擇權資料，證明古典方法在摩擦下勝過深層避險。",
+      "summary": {
+        "title_zh": "真實市場摩擦下的深度避險：比特幣選擇權動態選擇權避險的體制條件實證研究",
+        "verdict": "在真實 BTC 選擇權資料與交易成本下，傳統的 Whalley-Wilmott 策略表現優於深度學習避險模型。",
+        "problem": "過往 Deep Hedging 研究多與無摩擦的傳統基準在模擬資料上比較，其優勢在真實市場與摩擦條件下是否真實存在尚待檢驗。",
+        "method": "使用 Deribit 自 2020 至 2024 年的五年實際 BTC 選擇權資料，比較 Black-Scholes delta、Leland 成本調整避險、Whalley-Wilmott 無交易帶策略，以及三種包含 LSTM 與前饋網路並以 CVaR 損失訓練的 Deep Hedging 設定，所有策略皆面對 5 個基點的交易成本。",
+        "findings": "在 11,546 個測試回合中，Whalley-Wilmott 透過降低約 8 倍的交易頻率，相較於普通 BS delta 每回合顯著節省 1.79 美元成本（p < 0.0001），且損益與尾部風險表現較佳。然而，三種 Deep Hedging 模型在任何指標上皆未擊敗傳統基準，且無論懲罰權重如何調整，皆幾乎每小時持續交易。",
+        "implication": "在存在交易成本的真實加密貨幣選擇權市場中，具備無交易帶機制的傳統解析解策略比缺乏靜止機制的類神經網路更容易落地。",
+        "caveats": "模型表現不佳可能歸因於訓練集過小，且所測試的神經網路架構缺乏原生允許「不進行交易」的機制。",
+        "practicality": 4,
+        "tags": [
+          "選擇權避險",
+          "深度學習",
+          "市場微結構",
+          "比特幣選擇權",
+          "交易成本"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.09426",
+      "title": "The Quarter-Hour Effect: Periodic Algorithmic Trading and Return Predictability in Cryptocurrency Futures",
+      "authors": [
+        "Chan Kim",
+        "Peter Reinhard Hansen"
+      ],
+      "abstract": "Cryptocurrency markets exhibit periodic bursts in volatility and volume at one-minute, five-minute, and quarter-hour marks. Using trade data for six Binance perpetual contracts, we link these bursts to algorithmic participation: trade-size roundness declines sharply during them. The Autocorrelation Map, a clock-phase-resolved display, reveals serial dependence in order flow and returns at quarter-hour openings that conventional measures obscure. Opening returns are predictable out of sample, while opening order imbalance predicts returns over four to twelve hours, with much weaker effects at finer clock-time frequencies. Together, these findings characterize periodic algorithmic trading and its cross-frequency variation.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-07-10T13:55:07Z",
+      "updated": "2026-07-16T19:00:40Z",
+      "abs_url": "https://arxiv.org/abs/2607.09426",
+      "pdf_url": "https://arxiv.org/pdf/2607.09426v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 48,
+      "matched_keywords": [
+        "order flow",
+        "algorithmic trading",
+        "cryptocurrency",
+        "futures"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "使用真實交易資料，揭示週期性演算法交易與報酬可預測性。",
+      "summary": {
+        "title_zh": "十五分鐘效應：加密貨幣期貨的週期性演算法交易與報酬可預測性",
+        "verdict": "揭示加密貨幣期貨在刻鐘時刻的週期性演算法交易現象，開盤報酬具樣本外可預測性。",
+        "problem": "加密貨幣市場在特定時間點會出現波動率與交易量的週期性暴增，傳統指標難以捕捉其背後的序列相關性。",
+        "method": "利用六檔 Binance 永續合約的逐筆交易資料，透過 Autocorrelation Map（自相關地圖）分析時鐘相位解析度的訂單流與報酬。",
+        "findings": "十五分鐘開盤時的報酬具備樣本外可預測性，且開盤訂單不平衡可預測四至十二小時的報酬，較細的時鐘頻率效果則顯著較弱。",
+        "implication": "交易員可利用十五分鐘開盤的週期性訂單不平衡來預測中長線報酬，調整造市或執行策略的時機。",
+        "caveats": "論文摘要未報告具體的夏普值或報酬改善等量化績效數字。",
+        "practicality": 4,
+        "tags": [
+          "演算法交易",
+          "加密貨幣期貨",
+          "訂單流",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.00864",
+      "title": "Arbitrage Analysis in Polymarket NBA Markets",
+      "authors": [
+        "Guang Cheng",
+        "Jiaxin Yang",
+        "Haoxuan Zou"
+      ],
+      "abstract": "While decentralized prediction markets like Polymarket have gained significant traction, their market microstructure and high-frequency pricing efficiency remain underexplored. This paper conducts a systematic empirical analysis of algorithmic arbitrage within Polymarket's NBA game markets. By reconstructing continuous market states from over 75 million limit order book snapshots across 173 games, we evaluate the frequency, duration, and profitability of both single-market and combinatorial arbitrage opportunities. Our findings demonstrate profound microstructural efficiency. Single-market anomalies are exceedingly rare, yielding only 7 executable in-game episodes that persist for a median duration of just 3.6 seconds. Combinatorial inefficiencies are more frequent, producing 290 active episodes overwhelmingly concentrated in the final minutes of live play. While combinatorial execution yields a statistically meaningful median return of 101 basis points, we find that the theoretical \"Middle\" jackpot is never empirically realized. Furthermore, execution is severely bottlenecked by shallow order book depth, with 76.9\\% of combinatorial opportunities constrained to an average executable size of just 14.8 shares. Ultimately, while executable mispricings exist, they are structurally bounded by liquidity, confining risk-free extraction strictly to the retail scale.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-04-22T03:01:49Z",
+      "updated": "2026-04-22T03:01:49Z",
+      "abs_url": "https://arxiv.org/abs/2605.00864",
+      "pdf_url": "https://arxiv.org/pdf/2605.00864v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 48,
+      "matched_keywords": [
+        "limit order book",
+        "market microstructure",
+        "order book",
+        "high-frequency",
+        "liquidity",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "基於巨量訂單簿真實快照，分析預測市場套利限制，扎實。",
+      "summary": {
+        "title_zh": "Polymarket NBA 市場的套利分析",
+        "verdict": "Polymarket 的 NBA 市場套利機會極少，且受淺碟流動性限制，僅限散戶規模。",
+        "problem": "去中心化預測市場 Polymarket 的市場微結構與高頻訂價效率尚待探索，本文旨在系統性評估其中的演算法套利機會。",
+        "method": "研究透過重建 173 場比賽中超過 7,500 萬筆限價單簿快照的連續市場狀態。藉此評估單一市場與組合套利機會的頻率、持續時間與獲利能力。",
+        "findings": "單一市場異常極為罕見，僅有 7 次可執行事件且持續時間中位數僅 3.6 秒；組合套利較頻繁，產生 290 次有效事件且中位數報酬達 101 個基點。然而，76.9% 的組合機會受限於平均僅 14.8 股的訂價簿深度。",
+        "implication": "雖然市場存在可執行的錯價，但因流動性嚴重瓶頸，使得風險報酬提取嚴格侷限於散戶規模。",
+        "caveats": "理論上的中間值大獎在實證中從未實現，且受限於極淺的訂價簿深度。",
+        "practicality": 2,
+        "tags": [
+          "預測市場",
+          "套利",
+          "市場微結構",
+          "限價單簿"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.26747",
+      "title": "From Hypotheses to Factors: Constrained LLM Agents in Cryptocurrency Markets",
+      "authors": [
+        "Yikuan Huang",
+        "Zheqi Fan",
+        "Kaiqi Hu",
+        "Yifan Ye"
+      ],
+      "abstract": "LLM agents are promising tools for empirical discovery, but their flexibility can also turn discovery into uncontrolled search. We study how to use agents under a reproducible protocol through cryptocurrency factor discovery. Our framework casts the task as sequential hypothesis search: an agent reads an append-only experiment trace, proposes falsifiable factor hypotheses, and maps them to executable recipes, while a deterministic engine enforces fixed data splits, selection gates, transaction costs, and portfolio tests. Candidate actions are restricted to a point-in-time factor DSL, making both successful and failed hypotheses auditable. A ridge-combined portfolio trained only on 2020--2022 data achieves a 44.55% annualized return and Sharpe ratio of 1.55 in the 2024--2026 pure out-of-sample period after a 5 basis point one-way trading cost.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "q-fin.GN",
+        "q-fin.TR"
+      ],
+      "published": "2026-04-29T14:46:10Z",
+      "updated": "2026-04-29T14:46:10Z",
+      "abs_url": "https://arxiv.org/abs/2604.26747",
+      "pdf_url": "https://arxiv.org/pdf/2604.26747v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 47,
+      "matched_keywords": [
+        "sharpe ratio",
+        "transaction cost",
+        "out-of-sample",
+        "llm",
+        "cryptocurrency",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "樣本外夏普值1.55，採用嚴格資料切分與交易成本檢驗。",
+      "summary": {
+        "title_zh": "從假設到因子：加密貨幣市場中受限制的 LLM 代理",
+        "verdict": "利用受限制的 LLM 代理進行加密貨幣循序假設搜尋與因子挖掘，在樣本外取得顯著的報酬與夏普值。",
+        "problem": "LLM 代理的靈活性容易將經驗性發現變成無法控制的搜尋，缺乏可重現性與可審計性。",
+        "method": "使用基於點對點因子領域特定語言（DSL）與確定性引擎的框架，在加密貨幣市場進行循序假設搜尋。資料訓練區間為 2020 至 2022 年，並在 2024 至 2026 年進行純樣本外測試。",
+        "findings": "透過 Ridge 迴歸組合的連接投組在 2024 至 2026 年純樣本外期間，扣除 5 個基點的單向交易成本後，達到 44.55% 的年化報酬率與 1.55 的夏普值。",
+        "implication": "此框架能有效約束 LLM 進行可審計的因子挖掘，適合直接應用於量化投組的自動化 Alpha 因子開發。",
+        "caveats": "實驗僅針對加密貨幣市場，其加密資產特有的高波動與市場結構可能影響其他資產類別的推廣性。",
+        "practicality": 5,
+        "tags": [
+          "LLM",
+          "Alpha 因子挖掘",
+          "加密貨幣",
+          "量化交易",
+          "投資組合最佳化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2511.02136",
+      "title": "JaxMARL-HFT: GPU-Accelerated Large-Scale Multi-Agent Reinforcement Learning for High-Frequency Trading",
+      "authors": [
+        "Valentin Mohl",
+        "Sascha Frey",
+        "Reuben Leyland",
+        "Kang Li",
+        "George Nigmatulin",
+        "Mihai Cucuringu",
+        "Stefan Zohren",
+        "Jakob Foerster",
+        "Anisoara Calinescu"
+      ],
+      "abstract": "Agent-based modelling (ABM) approaches for high-frequency financial markets are difficult to calibrate and validate, partly due to the large parameter space created by defining fixed agent policies. Multi-agent reinforcement learning (MARL) enables more realistic agent behaviour and reduces the number of free parameters, but the heavy computational cost has so far limited research efforts. To address this, we introduce JaxMARL-HFT (JAX-based Multi-Agent Reinforcement Learning for High-Frequency Trading), the first GPU-accelerated open-source multi-agent reinforcement learning environment for high-frequency trading (HFT) on market-by-order (MBO) data. Extending the JaxMARL framework and building on the JAX-LOB implementation, JaxMARL-HFT is designed to handle a heterogeneous set of agents, enabling diverse observation/action spaces and reward functions. It is designed flexibly, so it can also be used for single-agent RL, or extended to act as an ABM with fixed-policy agents. Leveraging JAX enables up to a 240x reduction in end-to-end training time, compared with state-of-the-art reference implementations on the same hardware. This significant speed-up makes it feasible to exploit the large, granular datasets available in high-frequency trading, and to perform the extensive hyperparameter sweeps required for robust and efficient MARL research in trading. We demonstrate the use of JaxMARL-HFT with independent Proximal Policy Optimization (IPPO) for a two-player environment, with an order execution and a market making agent, using one year of LOB data (400 million orders), and show that these agents learn to outperform standard benchmarks. The code for the JaxMARL-HFT framework is available on GitHub.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.MA"
+      ],
+      "published": "2025-11-03T23:56:15Z",
+      "updated": "2025-11-03T23:56:15Z",
+      "abs_url": "https://arxiv.org/abs/2511.02136",
+      "pdf_url": "https://arxiv.org/pdf/2511.02136v1",
+      "comment": "Code available at: https://github.com/vmohl/JaxMARL-HFT",
+      "journal_ref": "6th ACM International Conference on AI in Finance (ICAIF '25), November 15-18, 2025, Singapore, Singapore. ACM, New York, NY, USA, 9 pages",
+      "keyword_score": 47,
+      "matched_keywords": [
+        "market making",
+        "reinforcement learning",
+        "high-frequency"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "GPU加速高頻多代理人強化學習環境，已獲ICAIF接受。",
+      "summary": {
+        "title_zh": "JaxMARL-HFT：基於GPU加速的大規模多代理強化學習高頻交易框架",
+        "verdict": "推出基於 GPU 加速的開源多代理強化學習高頻交易環境，訓練速度較現有實作大幅提升 240 倍。",
+        "problem": "傳統以代理為基礎的金融市場建模（ABM）難以校準與驗證，而多代理強化學習（MARL）雖可解決此問題但計算成本過高。",
+        "method": "利用 JAX 框架開發 JaxMARL-HFT，針對市場逐筆訂單（MBO）資料，在雙人環境中使用獨立近端政策最佳化（IPPO）演算法進行訓練，涵蓋一年期限價單簿資料共 4 億筆訂單。",
+        "findings": "與同等硬體上的最新參考實作相比，端到端訓練時間減少高達 240 倍。實證顯示訂單執行與造市代理人透過學習能擊敗標準基準。",
+        "implication": "此框架大幅降低計算門檻，使研究人員能對大規模高頻交易資料進行廣泛的超參數搜尋與穩健的 MARL 研究。",
+        "caveats": "未在論文中報告具體的交易報酬數字與扣除交易成本後的淨績效。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "高頻交易",
+          "限價單簿",
+          "造市",
+          "訂單執行"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.29290",
+      "title": "Supply Chain Propagation of Textual Signals: LLM Embeddings and Cross-Sectional Return Predictability",
+      "authors": [
+        "Asef Yılkı"
+      ],
+      "abstract": "This paper proposes a novel asset pricing framework that augments large language model (LLM) embeddings of annual report disclosures with supply chain knowledge graph (KG) propagation. Using FinBERT embeddings of 10-K MD&A sections for 255 S&P 500 firms over 2011-2025, two sets of return predictors are constructed: direct LLM embeddings and network-augmented embeddings, where firm-level signals propagate through inter-firm linkages. Fama-MacBeth cross-sectional regressions reveal that the network-augmented factor (net_pc_5) carries significant return predictability with a Newey-West t-statistic of -2.64, even after controlling for momentum, volatility, and firm size. A long-short portfolio sorted on net_pc_5 achieves an annualized Sharpe ratio of 0.86 and a Fama-French five-factor alpha of 7.27% per year (t = 2.30). The predictive power survives out-of-sample tests, placebo experiments, sector-neutralization, and subsample analysis. The findings suggest that inter-firm network structure contains pricing-relevant information beyond firm-level textual disclosures.",
+      "primary_category": "q-fin.PR",
+      "categories": [
+        "q-fin.PR"
+      ],
+      "published": "2026-06-28T09:26:45Z",
+      "updated": "2026-06-28T09:26:45Z",
+      "abs_url": "https://arxiv.org/abs/2606.29290",
+      "pdf_url": "https://arxiv.org/pdf/2606.29290v1",
+      "comment": "30 pages, 3 figures, 5 tables",
+      "journal_ref": "",
+      "keyword_score": 46,
+      "matched_keywords": [
+        "sharpe ratio",
+        "out-of-sample",
+        "momentum",
+        "llm",
+        "large language model",
+        "cross-sectional"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合供應鏈知識圖譜與LLM嵌入，夏普值0.86，實證完整。",
+      "summary": {
+        "title_zh": "文字訊號的供應鏈傳遞：LLM 嵌入與橫截面報酬可預測性",
+        "verdict": "結合 LLM 與供應鏈知識圖譜傳遞年報文字訊號，建構的多頭空頭投組年化夏普值達 0.86。",
+        "problem": "傳統資產定價模型未能充分利用企業間供應鏈連結，來傳遞與定價文字資訊中的超額報酬訊號。",
+        "method": "使用 FinBERT 萃取 S&P 500 中 255 家企業 2011 至 2025 年間 10-K 年報的 MD&A 區段嵌入，並透過知識圖譜進行網路傳遞與 Fama-MacBeth 橫截面迴歸。",
+        "findings": "網路擴增因子 net_pc_5 具顯著預測力（Newey-West t 統計量為 -2.64），長空投組的年化夏普值為 0.86，Fama-French 五因子模型的年化 Alpha 為 7.27%（t = 2.30）。",
+        "implication": "可將供應鏈網路結構納入文字訊號的 Alpha 因子挖掘中，捕捉跨公司間尚未被即時定價的溢出效應。",
+        "caveats": "僅針對 S&P 500 的 255 家企業進行實證，樣本涵蓋範圍受限於大型股與資料完整性。",
+        "practicality": 4,
+        "tags": [
+          "LLM",
+          "供應鏈",
+          "Alpha 因子挖掘",
+          "資產定價",
+          "自然語言處理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.22113",
+      "title": "Diverse Approaches to Optimal Execution Schedule Generation",
+      "authors": [
+        "Robert de Witt",
+        "Mikko S. Pakkanen"
+      ],
+      "abstract": "We present the first application of MAP-Elites, a quality-diversity algorithm, to trade execution. Rather than searching for a single optimal policy, MAP-Elites generates a diverse portfolio of regime-specialist strategies indexed by liquidity and volatility conditions. Individual specialists achieve 8-10% performance improvements within their behavioural niches, while other cells show degradation, suggesting opportunities for ensemble approaches that combine improved specialists with the baseline PPO policy. Results indicate that quality-diversity methods offer promise for regime-adaptive execution, though substantial computational resources per behavioural cell may be required for robust specialist development across all market conditions. To ensure experimental integrity, we develop a calibrated Gymnasium environment focused on order scheduling rather than tactical placement decisions. The simulator features a transient impact model with exponential decay and square-root volume scaling, fit to 400+ U.S. equities with $R^2>0.02$ out-of-sample. Within this environment, two Proximal Policy Optimization architectures - both MLP and CNN feature extractors - demonstrate substantial improvements over industry baselines, with the CNN variant achieving 2.13 bps arrival slippage versus 5.23 bps for VWAP on 4,900 out-of-sample orders ($21B notional). These results validate both the simulation realism and provide strong single-policy baselines for quality-diversity methods.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.LG"
+      ],
+      "published": "2026-01-29T18:41:52Z",
+      "updated": "2026-01-30T10:51:39Z",
+      "abs_url": "https://arxiv.org/abs/2601.22113",
+      "pdf_url": "https://arxiv.org/pdf/2601.22113v2",
+      "comment": "27 pages, 15 figures, 5 tables, v2: some minor improvements",
+      "journal_ref": "",
+      "keyword_score": 45,
+      "matched_keywords": [
+        "optimal execution",
+        "out-of-sample",
+        "slippage",
+        "regime",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "首次將多樣性演算法應用於最佳執行，模擬環境經大量個股校準。",
+      "summary": {
+        "title_zh": "最佳化交易執行排程產生的多元方法",
+        "verdict": "首次將 MAP-Elites 應用於交易執行，生成適應不同流動性與波動度環境的多元策略組合。",
+        "problem": "傳統方法僅尋求單一最佳執行政策，難以適應多變的市場體制。",
+        "method": "使用品質多樣性演算法 MAP-Elites 結合 PPO（包含 MLP 與 CNN 特徵萃取器），於校準後的 Gymnasium 環境進行訂單排程模擬，資料涵蓋 400 檔以上美國股票。",
+        "findings": "個別專家策略在自身行為生態位中實現 8-10% 的績效提升；在 4,900 筆樣本外訂單（總名目金額 210 億美元）中，CNN 變體達到了 2.13 個基點的到達滑價，優於 VWAP 的 5.23 個基點。",
+        "implication": "品質多樣性能提供體制適應性的執行策略，適合結合強化學習政策建立組合；前提是需要有足夠的模擬環境與計算資源。",
+        "caveats": "跨所有市場條件開發穩健的專家策略，需要為每個行為單元投入大量的計算資源。",
+        "practicality": 4,
+        "tags": [
+          "最佳執行",
+          "強化學習",
+          "演算法交易",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.28323",
+      "title": "Optimal Execution with Passive Market Impact",
+      "authors": [
+        "Alexander Barzykin",
+        "Robert Boyce",
+        "Eyal Neuman",
+        "Sturmius Tuschmann"
+      ],
+      "abstract": "We derive a mesoscopic model for optimal execution with limit orders that incorporates microstructural features of passive price impact. Our framework is based on two empirical observables: the approximately exponential decay of limit-order fill probabilities with distance from the midprice, and the short-term linear response of price changes to order flow imbalance. Combining these ingredients, we obtain a reduced-form passive impact rate that decays exponentially with quote distance. The model describes passive execution at a tactical level, where fills arise from a sequence of quote adjustments that balance execution probability, adverse selection, and opportunity cost. We formulate and solve an optimal liquidation problem in which the trader controls the aggressiveness of passive sell quotes. This generates a trade-off between higher fill intensity and larger accumulated impact on the one hand, and lower impact but greater non-execution risk on the other. Empirical calibration using NASDAQ equities and public FX supports the empirical foundations of the model. We also analyse extensions with heterogeneous decay rates, transient impact, and target execution schedules.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-07-30T14:57:03Z",
+      "updated": "2026-07-30T14:57:03Z",
+      "abs_url": "https://arxiv.org/abs/2607.28323",
+      "pdf_url": "https://arxiv.org/pdf/2607.28323v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 44,
+      "matched_keywords": [
+        "order flow",
+        "optimal execution",
+        "price impact",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "基於市場資料校準被動式價格衝擊模型，解決限價單最佳執行。",
+      "summary": {
+        "title_zh": "具被動市場衝擊的最佳化執行",
+        "verdict": "建構包含被動價格衝擊的微觀結構最佳化執行模型，權衡成交機率與逆向選擇。",
+        "problem": "現有最佳化執行模型往往忽略限價單帶來的被動價格衝擊與微觀結構特徵。",
+        "method": "使用納斯達克股票與外匯公開資料，建構基於限價單成交機率指數衰減與訂單流不平衡線性反應的介觀模型，求解控制被動賣單積極程度的最佳化清算問題。",
+        "findings": "模型成功捕捉成交強度、累積衝擊與非成交風險之間的取捨關係，並透過實證資料驗證了模型基礎，未報告具體績效數字。",
+        "implication": "可用於戰術層級的被動執行策略，協助交易員在掛單距離與逆向選擇風險之間取得平衡。",
+        "caveats": "實證校準雖支持模型基礎，但未提供扣除交易成本後的實際獲利數字。",
+        "practicality": 3,
+        "tags": [
+          "最佳化執行",
+          "限價單",
+          "市場微結構",
+          "演算法交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.13597",
+      "title": "Same Book, Different Fills: Partial Identification of FIFO Execution from Aggregate Order Books",
+      "authors": [
+        "Riya Danait",
+        "Yuliana Zamora",
+        "Ioana Boier"
+      ],
+      "abstract": "Price-level limit order book (L2) data reveal aggregate liquidity but not the ordered queue required by price--time priority. Passive-execution backtests can therefore depend on an unobserved cancellation-allocation rule even when observed prices, quantities, and trades are held fixed. We frame recovery of market-by-order histories from aggregate snapshots as a conditional partial identification problem: multiple histories can reproduce the same aggregate path. Holding that path, reconciled market removals, latent order partitions, and additions fixed, our path-preserving compiler varies only cancellation allocation among front, quantity-weighted-random, and back rules. Within this compiler class, we establish front--back fill ordering for a virtual tagged order during one touch-price spell. We study seven months of synchronized 2025 Tokyo Stock Exchange data for two instruments with different trading activity: RIC 1301.T and RIC 7911.T. Ten-level L2 snapshots provide book states, while L1 trades permit inference of market removals and resting side through reconciliation. Each instrument contributes 1,080 matched five-minute episodes over the same 18 held-out trading days. The aggressive benchmark is invariant across FIFO realizations, but passive execution is sensitive to the cancellation rule. For 1301.T, front rather than back cancellation raises preterminal completion by 8.01 percentage points and reduces implementation shortfall by 1.010 bps. For 7911.T, the corresponding differences are 7.39 percentage points and 0.384 bps. Thus, observationally equivalent aggregate-book paths can imply economically different passive-execution outcomes. Execution policies evaluated from aggregate data should be accompanied by FIFO sensitivity analysis rather than reported as single-point estimates based on an unobservable queue assumption.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "q-fin.TR"
+      ],
+      "published": "2026-09-11T23:08:09Z",
+      "updated": "2026-09-17T01:45:40Z",
+      "abs_url": "https://arxiv.org/abs/2609.13597",
+      "pdf_url": "https://arxiv.org/pdf/2609.13597v2",
+      "comment": "9 pages, 1 figure, 2 tables",
+      "journal_ref": "",
+      "keyword_score": 43,
+      "matched_keywords": [
+        "limit order book",
+        "order book",
+        "backtest",
+        "liquidity",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用聚合訂單簿進行FIFO執行部分識別，日股真實資料驗證。",
+      "summary": {
+        "title_zh": "同一本書、不同的成交：從彙總訂單簿部分辨識先進先出執行",
+        "verdict": "探討 L2 彙總資料在不同取消配置規則下的被動執行差異，指出取消規則會顯著影響成交結果。",
+        "problem": "L2 訂單簿資料缺乏價格時間優先權所需的排隊序列，導致被動執行回測依賴未觀察到的取消配置規則。",
+        "method": "使用路徑保持編譯器在前端、數量加權隨機與後端取消規則間變化，研究 2025 年 7 個月東京證券交易所兩種不同交易活動標的（RIC 1301.T 與 RIC 7911.T）的同步資料。",
+        "findings": "對於 1301.T，前端相較於後端取消可提升 8.01 個百分點的預終端完成率，並減少 1.010 bps 的執行短缺；對於 7911.T，對應差異為 7.39 個百分點與 0.384 bps。",
+        "implication": "從彙總資料評估執行策略時，應進行先進先出敏感度分析，而非依賴單一未觀察排隊假設的點估計。",
+        "caveats": "被動執行對取消規則高度敏感，觀測上等價的彙總簿路徑可能隱含經濟上不同的執行結果。",
+        "practicality": 4,
+        "tags": [
+          "限價單簿",
+          "市場微結構",
+          "執行短缺",
+          "流動性"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.21888",
+      "title": "Short-horizon mean reversion in cryptocurrency markets: a matched cross-market measurement",
+      "authors": [
+        "Nadav A. Kitron",
+        "Jonathan M. Wengrowicz"
+      ],
+      "abstract": "At 15-minute horizons, directional mean reversion is far stronger and more pervasive in cryptocurrency markets than in US equities: scored under one matched, strictly out-of-sample protocol, 90% of 183 Binance pairs carry significant directional reversal against 2.7% of 187 US stocks and ETFs, in every focal coin-year since 2021. The signal lives in signs, not magnitudes: lag-one return autocorrelation is near zero on the major coins, yet simply betting against the previous candle captures most of the effect. US-listed funds whose net asset value is a crypto or metal price inherit their underlying's reversal, including its absence, from their first months of trading; stocks merely correlated with the same underlyings inherit nothing: descriptive evidence that a wrapper's tape reads like the process it wraps, not the venue it prints on. On the originating tape, the reversal concentrates after moves driven by aggressive taker flow and grows with flow intensity, while the order-book depth a move consumes conditions nothing: a conditioning consistent with compensated liquidity provision, not a test that selects it. The gross edge peaks near 1.3 bp per trade against a 5 bp round-trip cost: large enough to detect, too small to clear benchmark spot capture costs. The contrast survives an artifact battery, an exact permutation null, and a frozen six-month holdout, with a class-mean AUC gap of +0.031 as designed and +0.011 (95% CI [+0.008, +0.014]) under the most conservative accounting, clear of zero either way.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.ST"
+      ],
+      "published": "2026-08-22T10:06:04Z",
+      "updated": "2026-08-22T10:06:04Z",
+      "abs_url": "https://arxiv.org/abs/2608.21888",
+      "pdf_url": "https://arxiv.org/pdf/2608.21888v1",
+      "comment": "24 pages, 10 figures. Replication code and frozen results: https://github.com/nadav2/short-horizon-reversion",
+      "journal_ref": "",
+      "keyword_score": 43,
+      "matched_keywords": [
+        "out-of-sample",
+        "mean reversion",
+        "liquidity",
+        "cryptocurrency",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "嚴格樣本外協議跨市場測量加密貨幣均值回歸，實證扎實。",
+      "summary": {
+        "title_zh": "加密貨幣市場的短周期均值回歸：配對跨市場衡量",
+        "verdict": "在 15 分鐘周期下，加密貨幣的反向交易訊號遠強於美國股票，但毛利約 1.3 基點，小於 5 基點的雙向交易成本。",
+        "problem": "加密貨幣市場與傳統美國股票市場在短周期下的方向性均值回歸強度與普遍性是否存在顯著差異。",
+        "method": "採用嚴格的樣本外配對協議，分析 2021 年起 183 個 Binance 交易對與 187 支美國股票及 ETF 在 15 分鐘頻率下的表現。",
+        "findings": "90% 的 Binance 交易對具備顯著的方向性回歸，相較之下美股僅有 2.7%；毛利在每筆交易約達到 1.3 基點的峰值，而雙向交易成本為 5 基點，且保守計算下的 AUC 差距為 +0.011。",
+        "implication": "加密貨幣的價格反轉特性會遺傳給其封裝資產（如 ETF），但僅與標的相關的一般股票則無此現象；雖然訊號顯著，但因交易成本過高，無法直接覆蓋現貨捕捉成本。",
+        "caveats": "毛利峰值約 1.3 基點，小於 5 基點的雙向交易成本，扣除成本後無法實現淨利潤。",
+        "practicality": 3,
+        "tags": [
+          "均值回歸",
+          "加密貨幣",
+          "訂單簿",
+          "市場微結構",
+          "高頻交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
