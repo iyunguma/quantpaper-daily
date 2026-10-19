@@ -1,0 +1,327 @@
+{
+  "date": "2026-10-19",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2605.30464",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "統整貝氏與強健最佳化，理論推導嚴謹"
+    },
+    {
+      "arxiv_id": "2511.17963",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "結合LSTM與PPO進行動態投組，實證完整"
+    },
+    {
+      "arxiv_id": "2610.16151",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 8,
+      "reason": "評估訂單簿時間不可逆性，ICAIF口頭發表"
+    },
+    {
+      "arxiv_id": "2609.38765",
+      "topic": "投組與風險",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "模擬多期債券投組最佳化，未結合真實市場"
+    },
+    {
+      "arxiv_id": "2609.14733",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "小波去雜訊結合注意力機制預測指數，實證完整"
+    },
+    {
+      "arxiv_id": "2606.09454",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 8,
+      "reason": "首次對造市商報價規則進行公理化推導，嚴謹"
+    },
+    {
+      "arxiv_id": "2605.24242",
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 8,
+      "reason": "推導信號自適應的最佳執行明確解，數學嚴謹"
+    },
+    {
+      "arxiv_id": "2604.10194",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "分析強制揭露對寡占造市影響，自然實驗實證"
+    },
+    {
+      "arxiv_id": "2603.29763",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "推導AMM代幣選擇權定價與CEV模型，實證扎實"
+    },
+    {
+      "arxiv_id": "2601.19504",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 4,
+      "reason": "混合AI策略獲利偏高，缺乏扣除成本後細節"
+    },
+    {
+      "arxiv_id": "2601.19369",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出訂單簿幾何剪力模型，高頻資料實證支援"
+    },
+    {
+      "arxiv_id": "2511.18076",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "強化學習投組最佳化，夏普值改善幅度有限"
+    },
+    {
+      "arxiv_id": "2511.20678",
+      "topic": "投組與風險",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "僅在模擬交易環境測試加密貨幣RL投組"
+    },
+    {
+      "arxiv_id": "2511.08608",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "評估思考型LLM選股，發現成本下無顯著優勢"
+    },
+    {
+      "arxiv_id": "2609.31870",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 4,
+      "reason": "報酬與夏普值偏高且beta大，回測疑慮多"
+    },
+    {
+      "arxiv_id": "2609.07989",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "應用貝氏線上變點檢測於訂單流，為實習報告"
+    },
+    {
+      "arxiv_id": "2608.00988",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 8,
+      "reason": "解決長期相關訂單流下的擴散價格佯謬，嚴謹"
+    },
+    {
+      "arxiv_id": "2607.27461",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 4,
+      "reason": "三矩陣策略夏普值極高且過擬合風險未解"
+    },
+    {
+      "arxiv_id": "2606.00060",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "評估成本對比特幣機器學習交易影響，實證扎實"
+    },
+    {
+      "arxiv_id": "2605.19584",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 8,
+      "reason": "定量觀察訂單簿線上造市的遺憾界線，理論嚴謹"
+    },
+    {
+      "arxiv_id": "2603.01820",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "大型深度學習時間序列基準測試，涵蓋成本與穩健"
+    },
+    {
+      "arxiv_id": "2602.00133",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提供預測市場代理人的確定性回測框架，工具實用"
+    },
+    {
+      "arxiv_id": "2601.13421",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 6,
+      "reason": "探討外匯造市中短暫衝擊與風險管理之互動"
+    },
+    {
+      "arxiv_id": "2511.03046",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "應用Vision Transformer預測選擇權波動度"
+    },
+    {
+      "arxiv_id": "2510.22348",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 4,
+      "reason": "夏普值高達2.51且歷時二十年，實證過於理想"
+    },
+    {
+      "arxiv_id": "2510.22206",
+      "topic": "交易執行",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 5,
+      "reason": "於代理人模擬市場中以強化學習最佳化執行策略"
+    },
+    {
+      "arxiv_id": "2610.22522",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "研究自動化市場中不同代理人行為模式的影響"
+    },
+    {
+      "arxiv_id": "2610.20037",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 4,
+      "reason": "報酬率與夏普值偏高，藤Copula投組過擬合風險高"
+    },
+    {
+      "arxiv_id": "2610.10323",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "結合Mamba架構預測已實現波動度，效能佳"
+    },
+    {
+      "arxiv_id": "2610.00619",
+      "topic": "交易執行",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "發現強化學習清算賽局中學到合謀與懲罰機制"
+    },
+    {
+      "arxiv_id": "2609.35359",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "探討配對交易樣本外失效原因，實證務實"
+    },
+    {
+      "arxiv_id": "2609.21173",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "將Actor模型調整應用於高頻交易，延遲極低"
+    },
+    {
+      "arxiv_id": "2608.19389",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "以強化學習求解集中式流動性提供之動態控制"
+    },
+    {
+      "arxiv_id": "2608.12251",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出體制閘控混合專家模型預測波動度，結構清晰"
+    },
+    {
+      "arxiv_id": "2608.04373",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "利用去中心化交易所公開錢包地址預測報酬，新穎"
+    },
+    {
+      "arxiv_id": "2607.28127",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 4,
+      "reason": "報酬提升極大且缺乏詳細成本與過擬合檢驗"
+    },
+    {
+      "arxiv_id": "2607.17428",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出預測市場的均勻損失自動造市商理論模型"
+    },
+    {
+      "arxiv_id": "2606.29347",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出體制閘控注意力機制的適應性金融變壓器"
+    },
+    {
+      "arxiv_id": "2606.13697",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出參考規範多期均異投組最佳化，漸近分析嚴謹"
+    },
+    {
+      "arxiv_id": "2604.21581",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "推導併購合約選擇權定價與最適執行策略，理論完整"
+    }
+  ]
+}

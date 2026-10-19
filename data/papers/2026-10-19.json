@@ -1,0 +1,528 @@
+{
+  "date": "2026-10-19",
+  "generated_at": "2026-10-19T09:19:52+08:00",
+  "scanned": 2380,
+  "eligible": 2350,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2604.23961",
+      "title": "Extended State-dependent Hawkes Process for Limit Order Books: Mathematical Foundation and the Reproduction of Volatility Signature Plots",
+      "authors": [
+        "Akitoshi Kimura"
+      ],
+      "abstract": "This paper proposes an Extended State-Dependent Hawkes Process (ExsdHawkes) to model the intricate dynamics of Limit Order Books (LOBs). Our theoretical contribution lies in relaxing traditional constraints by allowing for state disappearances---a phenomenon frequently observed in high-frequency trading. We mathematically prove, using Karush--Kuhn--Tucker (KKT) conditions, that the maximum likelihood estimation remains separable, justifying an efficient two-step procedure. In the empirical section, we apply our model to three months of high-frequency tick data of Mitsubishi UFJ Financial Group (8306). We demonstrate that ExsdHawkes successfully replicates the characteristic upward slope of the volatility signature plot by capturing the ``local super-criticality'' triggered during disequilibrium states. Crucially, we clarify that the transition out of equilibrium is deterministically triggered by Aggressive Market Orders (AMS/AMB), while Marketable Limit Orders (MLO) function as a critical liquidity-depletion catalyst within the expanded spread. Comparative analysis reveals that models lacking physical constraints (e.g., standard SD-Hawkes) suffer from explosive spectral radii and fail to maintain simulation stability. Our findings suggest that physical consistency is not merely a mathematical nicety, but a prerequisite for accurately modeling macro-level volatility. By enforcing the physical geometry to `pause' the residual accumulation during inadmissible periods, ExsdHawkes maintains statistical integrity where unconstrained models succumb to structural bias and simulation instability.",
+      "primary_category": "stat.AP",
+      "categories": [
+        "stat.AP",
+        "q-fin.MF",
+        "q-fin.TR"
+      ],
+      "published": "2026-04-27T02:08:33Z",
+      "updated": "2026-09-28T15:26:10Z",
+      "abs_url": "https://arxiv.org/abs/2604.23961",
+      "pdf_url": "https://arxiv.org/pdf/2604.23961v3",
+      "comment": "20 pages, 8 figures. This work was supported by JSPS KAKENHI Grant Number JP20K14366 and CREST, JST",
+      "journal_ref": "",
+      "keyword_score": 46,
+      "matched_keywords": [
+        "limit order book",
+        "order book",
+        "high-frequency",
+        "liquidity",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "擴展霍克斯過程模型並用高頻資料校準，理論與實證兼具。",
+      "summary": {
+        "title_zh": "應用於限價單簿的擴展狀態相依 Hawkes 過程：數學基礎與波動率特徵圖的再現",
+        "verdict": "提出能處理狀態消失的擴展狀態相依 Hawkes 模型，成功重現波動率特徵圖的向上斜率。",
+        "problem": "傳統 Hawkes 模型在處理限價單簿的高頻動態時，無法妥善處理狀態消失的現象，且未受約束的模型常導致頻譜半徑爆炸與模擬不穩定。",
+        "method": "使用擴展狀態相依 Hawkes 過程 (ExsdHawkes)，以 Karush-Kuhn-Tucker 條件證明極大似然估計的可分性。資料使用三菱 UFJ 金融集團三個月的高頻 Tick 資料。",
+        "findings": "模型成功透過失衡狀態下觸發的局部超臨界性，重現波動率特徵圖的特徵向上斜率。研究指出，脫離平衡是由主動市價單（AMS/AMB）確定性地觸發，而可成交限價單則在擴大價差中扮演流動性耗竭的催化劑。",
+        "implication": "在 LOB 模型中強制加入實體幾何約束是維持統計完整性與巨集波動率建模的必要前提，可用於提升高頻市場模擬的穩定度。",
+        "caveats": "未報告具體的交易績效數字或獲利改善幅度。",
+        "practicality": 3,
+        "tags": [
+          "限價單簿",
+          "Hawkes",
+          "高頻交易",
+          "微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.24137",
+      "title": "Bridging the Reality Gap in Limit Order Book Simulation",
+      "authors": [
+        "Patrick Noble",
+        "Mathieu Rosenbaum",
+        "Saad Souilmi"
+      ],
+      "abstract": "We introduce a practical, interactive simulator of the limit order book for large-tick assets, designed to produce realistic execution, costs, and P&L. The book state is projected onto a tractable representation based on spread and volume imbalance, enabling robust estimation from market data. Event timing is calibrated to reproduce the fine-scale temporal structure of real markets, revealing a pronounced mode at exchange round-trip latency consistent with simultaneous reactions and latency races among participants. We further incorporate a feedback mechanism that accumulates signed trade flow through a power-law decay kernel, reproducing both concave market impact during execution and partial post-trade reversion. Across several stocks and strategy case studies, the simulator yields realistic behavior where profitability becomes highly sensitive to execution parameters. We present the approach as a practical recipe: project, estimate, validate, adapt, for building realistic limit order book simulations.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-03-25T10:02:03Z",
+      "updated": "2026-03-25T10:02:03Z",
+      "abs_url": "https://arxiv.org/abs/2603.24137",
+      "pdf_url": "https://arxiv.org/pdf/2603.24137v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 45,
+      "matched_keywords": [
+        "limit order book",
+        "order book",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "建立可互動的訂單簿模擬器，並透過市場資料校準，實用性高。",
+      "summary": {
+        "title_zh": "彌補限價單簿模擬中的現實落差",
+        "verdict": "提出一個針對大跳動資產的互動式限價單簿模擬器，能產出逼真的執行成本與損益。",
+        "problem": "現有的限價單簿模擬往往無法真實反映市場執行、成本與損益，存在顯著的現實落差。",
+        "method": "利用價差與委買賣失衡將單簿狀態投影至可處理的表示法，並以冪次衰減核來模擬已成交交易流的回饋機制。針對多檔股票與策略案例進行實證。",
+        "findings": "事件時間的校準成功重現了真實市場的微觀時間結構，在交易所來回延遲處出現明顯峰值。模擬結果顯示交易策略的獲利能力對執行參數高度敏感，論文未報告具體的數值化績效指標。",
+        "implication": "提供了一套包含投影、估計、驗證與調整的實用模擬框架，可用於測試與最佳化高頻交易策略的執行參數。",
+        "caveats": "模型參數的估計與校準可能需要大量的歷史高頻資料與精細的工程處理。",
+        "practicality": 4,
+        "tags": [
+          "限價單簿",
+          "市場微結構",
+          "訂單簿模擬",
+          "市場衝擊"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.31491",
+      "title": "UQ-LOB: Uncertainty-Aware Limit Order Book Mid-Price Forecasting",
+      "authors": [
+        "Derrick Gilchrist Edward Manoharan",
+        "Eljas Linna",
+        "Kestutis Baltakys",
+        "Hao Dong",
+        "Juho Kanniainen"
+      ],
+      "abstract": "Forecasting short-horizon mid-price movements from limit order book (LOB) data is central to algorithmic trading, yet most deep LOB forecasters are point predictors: they output a direction or a displacement, but never indicate which of their forecasts can be trusted. We introduce UQ-LOB, a lightweight, encoder-agnostic uncertainty quantification module that attaches to any pretrained LOB encoder and, in the spirit of attentive neural processes, conditions each forecast on a context set of recently completed windows whose outcomes are already realised. The UQ-regression variant outputs a calibrated Gaussian over the future tick displacement, while the UQ-classification variant outputs a categorical distribution over down/up/stationary. Both expose a scalar confidence (predicted signal-to-noise ratio or class probability) that supports selective prediction. On 5.2 billion LOB events across seven cryptocurrency assets and horizons of 5, 10 and 15 seconds, UQ-regression attains near-nominal 68% interval coverage, and restricting to the most confident 10% of predictions raises directional macro F1 by 0.11-0.15 for UQ-regression and 0.05-0.11 for UQ-classification, at every horizon. On large, economically meaningful moves, the tightest confidence tier reaches a directional F1 of 0.88 (down) and 0.83 (up) at the 5-second horizon.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-25T16:33:23Z",
+      "updated": "2026-09-28T08:23:26Z",
+      "abs_url": "https://arxiv.org/abs/2609.31491",
+      "pdf_url": "https://arxiv.org/pdf/2609.31491v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 44,
+      "matched_keywords": [
+        "limit order book",
+        "algorithmic trading",
+        "order book",
+        "cryptocurrency"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "引入不確定性量化模組預測訂單簿中價，加密貨幣大樣本驗證。",
+      "summary": {
+        "title_zh": "UQ-LOB：具備不確定性感知的中介價預測限價單簿模型",
+        "verdict": "提出 UQ-LOB 模組為 LOB 預測提供不確定性估計，透過選擇性預測顯著提升大波動時的預測準確度。",
+        "problem": "多數深度的限價單簿預測模型僅輸出點預測，無法指示哪些預測結果值得信賴，缺乏對預測不確定性的量化。",
+        "method": "使用輕量且與編碼器無關的不確定性量化模組，結合注意力神經過程，對七種加密貨幣資產的 52 億筆 LOB 事件進行 5、10、15 秒的預測實證。",
+        "findings": "迴歸變體達到近乎標稱的 68% 區間覆蓋率，且限制在信心最高 10% 的預測時，巨集 F1 分數提升 0.11 至 0.15；在經濟意義重大的顯著變動中，5 秒預測期內的最高信心層級達到 F1 0.88（下跌）與 0.83（上漲）。",
+        "implication": "可用於高頻交易的選擇性預測與風控過濾，當模型信心不足時選擇不交易以提高勝率。",
+        "caveats": "主要針對加密貨幣資產進行測試，其效益在傳統資產市場上的表現仍需進一步驗證。",
+        "practicality": 4,
+        "tags": [
+          "限價單簿",
+          "不確定性量化",
+          "高頻交易",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.24242",
+      "title": "Explicit Signal-Adaptive Sequential Optimal Execution Quotes",
+      "authors": [
+        "Fenghui Yu"
+      ],
+      "abstract": "This paper develops a unified explicit solution theory for optimal execution through sequential limit-order placement in a limit order book. Rather than controlling only the trading speed of a metaorder, we determine how individual limit orders should be quoted over time. The model incorporates signal-dependent drift, price impact, inventory risk, and execution risk, with fills modeled by point processes whose intensities depend on the submitted quotes. We formulate four execution criteria: expected terminal wealth, expected terminal wealth with running inventory penalty, CARA utility of terminal wealth, and CARA utility with running inventory penalty. For general price-impact and inventory-penalty functions, we derive the corresponding HJB equations and show that all four problems reduce to a triangular finite-dimensional structure which can be solved explicitly, leading to fully explicit value functions and optimal quotes across all cases. We also prove well-posedness, admissibility, and verification results. The explicit formulas reveal connections between quoting strategies under different criteria, support long-horizon asymptotic analysis, and show numerically that signal-dependent drift can substantially affect optimal execution.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "math.OC",
+        "q-fin.MF"
+      ],
+      "published": "2026-05-22T21:36:45Z",
+      "updated": "2026-06-11T12:41:16Z",
+      "abs_url": "https://arxiv.org/abs/2605.24242",
+      "pdf_url": "https://arxiv.org/pdf/2605.24242v2",
+      "comment": "48 pages, 11 figures",
+      "journal_ref": "",
+      "keyword_score": 42,
+      "matched_keywords": [
+        "limit order book",
+        "optimal execution",
+        "price impact",
+        "order book"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance_reason": "推導信號自適應的最佳執行明確解，數學嚴謹",
+      "summary": {
+        "title_zh": "顯式訊號自適應序列最佳執行報價",
+        "verdict": "推導出限價單簿中序列限價單報價的最佳執行顯式解，證明多種效用與執行準則下的 HJB 方程可化簡為有限維三角結構。",
+        "problem": "在限價單簿中如何透過序列限價單的動態報價來最佳化大單執行，並同時考量訊號相依飄移、價格衝擊、庫存風險與執行風險。",
+        "method": "使用點過程模型化成交強度，並針對終端財富期望值、具運行庫存懲罰之終端財富期望值、CARA 效用及具運行庫存懲罰之 CARA 效用等四種執行準則建立數學模型。",
+        "findings": "論文推導出完全顯式的價值函數與最佳報價，並證明所有問題可化簡為三角有限維結構，數值結果顯示訊號相依飄移會顯著影響最佳執行策略。",
+        "implication": "此顯式解理論能直接應用於量化交易的限價單動態掛單排程，省去數值求解偏微分方程式的沉重計算負擔。",
+        "caveats": "論文主要依賴理論推導與數學證明，未報告具體的真實市場回測夏普值或報酬數字。",
+        "practicality": 4,
+        "tags": [
+          "最佳執行",
+          "限價單簿",
+          "市場微結構",
+          "點過程"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.21173",
+      "title": "Adapting the Actor Model of Concurrency for High-Frequency Trading: Synchronous Message Delivery (fast_send) and a Tick-to-Book Latency Study",
+      "authors": [
+        "Vincent Maciejewski"
+      ],
+      "abstract": "The actor model - state isolation, data-race freedom, and sequential single-message reasoning - has long been dismissed as unsuitable for high-frequency trading (HFT): actors seem to imply many threads, a mailbox per actor, and a heap-allocated message plus a context switch per interaction, overhead incompatible with a microsecond budget. This paper argues the dismissal is wrong for co-located actors, with a deployed, measured implementation: kaspar-hft, an open-source C++20 framework. Four extensions adapt the model for HFT: fast_send, a synchronous delivery mechanism in which the sending thread runs the receiver's handler inline and returns the reply as a value; actor groups, which co-schedule actors on one thread behind a shared mailbox; per-actor selectable mailbox queues; and a memory pool. fast_send has receiver transparency: the handler is written identically for synchronous and asynchronous delivery and does not depend on which was used or which thread runs it. A grouped synchronous chain runs on one thread, cutting scheduler context switches from O(N) to O(1); a thread-local call-chain test detects cyclic invocation on one thread before any lock is taken, while a cycle spread across threads deadlocks. Microbenchmarks put the synchronous round trip at tens of nanoseconds. On a live CME market-data feed (ES, NQ, ZN futures), when the socket-reader thread decodes each packet and updates the book itself, socket-to-book medians for book updates are 0.8-1.1 microseconds, and a fast_send hop is about 1% of that. The shared-queue group also yields a production/simulation duality: the same actor code runs unchanged in live trading and deterministic backtest.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.DC"
+      ],
+      "published": "2026-09-18T00:36:06Z",
+      "updated": "2026-10-05T00:29:08Z",
+      "abs_url": "https://arxiv.org/abs/2609.21173",
+      "pdf_url": "https://arxiv.org/pdf/2609.21173v2",
+      "comment": "31 pages, 4 figures. Companion paper on the market-data arrival process in preparation",
+      "journal_ref": "",
+      "keyword_score": 40,
+      "matched_keywords": [
+        "live trading",
+        "high-frequency",
+        "backtest",
+        "futures"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "將Actor模型調整應用於高頻交易，延遲極低",
+      "summary": {
+        "title_zh": "高頻交易的並行Actor模型改造：同步訊息傳遞（fast_send）與逐筆到訂單簿延遲研究",
+        "verdict": "透過同步訊息傳遞改造Actor模型，實現高頻交易微秒級延遲。",
+        "problem": "傳統Actor模型因執行緒開銷與記憶體分配過大，長期被認為不適用於微秒級敏感的高頻交易。本研究旨在透過架構擴展來克服此效能瓶頸。",
+        "method": "使用開源C++20框架kaspar-hft，透過fast_send同步傳遞、Actor群組、可選信箱佇列與記憶體池四項擴展進行改造。實測對象包含CME的ES、NQ、ZN期貨真實市場資料與行情餵入。",
+        "findings": "微基準測試顯示同步來回時間僅需數十奈秒；在CME即時行情測試中，socket到訂單簿的中位數延遲降至0.8至1.1微秒，而fast_send跳躍僅佔其中的1%。共用佇列群組更實現了實盤交易與確定性回測的程式碼雙重性。",
+        "implication": "此框架證明Actor模型能應用於超低延遲系統，開發者可直接採用此開源架構來確保高頻交易策略在實盤與回測時的一致性。",
+        "caveats": "跨執行緒的循環呼叫仍可能導致死結，需要在工程設計上嚴格防範。",
+        "practicality": 5,
+        "tags": [
+          "高頻交易",
+          "Actor模型",
+          "低延遲",
+          "C++20",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.04373",
+      "title": "Public Trader Identity: Adverse Selection and Return Predictability",
+      "authors": [
+        "Daojing Zhai"
+      ],
+      "abstract": "Informed traders are supposed to need anonymity: they profit by hiding among the uninformed. A decentralized exchange now publishes the counterparty. Every committed order, cancellation, rejection, and fill carries a persistent pseudonymous wallet address. We reconstruct the full-depth limit order book from a record of 17.1 billion messages and 14.3 million aggressive orders by 147,113 wallets, covering $84.3 billion in taker notional. We report three findings. First, informativeness is a persistent wallet attribute. Wallets ranked by the price movement following their aggressive orders retain that ordering across adjacent ten-day windows, with a rank correlation of 0.52. Second, the ranking predicts returns. Adding the live activity of the highest-ranked wallets to a standard anonymous benchmark of prices, quotes, and order flow raises the out-of-sample R2 for one-second returns to 12.31%, a 13.2% gain (t = 9.2) that is 1.6 times the largest of 200 activity-matched placebo cohorts. Third, measured at realized trades rather than at every sampled moment, the increment grows from 1.43 to 2.47 percentage points of R2. Public wallet histories therefore carry short-horizon price information that anonymous order-book data leave unmeasured.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.PR"
+      ],
+      "published": "2026-08-05T02:24:55Z",
+      "updated": "2026-08-23T04:05:14Z",
+      "abs_url": "https://arxiv.org/abs/2608.04373",
+      "pdf_url": "https://arxiv.org/pdf/2608.04373v3",
+      "comment": "40 pages, 8 figures, 15 tables",
+      "journal_ref": "",
+      "keyword_score": 40,
+      "matched_keywords": [
+        "limit order book",
+        "order flow",
+        "order book",
+        "out-of-sample"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用去中心化交易所公開錢包地址預測報酬，新穎",
+      "summary": {
+        "title_zh": "公開交易員身份：逆向選擇與報酬可預測性",
+        "verdict": "去中心化交易所的錢包地址標識揭露了知情交易，利用公開錢包歷史能顯著提升短線報酬預測力。",
+        "problem": "知情交易員通常需要匿名性來隱藏身分，但在公開錢包地址的去中心化交易所中，這種假設是否成立、交易員身分是否帶有持久的價格資訊需要檢驗。",
+        "method": "利用去中心化交易所的 171 億筆訊息與 1430 萬筆主動單資料進行限價單簿重建，涵蓋 147,113 個錢包與 843 億美元的成交金額。",
+        "findings": "錢包的資訊含量具有持續性，相鄰十日窗口的排序等級相關係數為 0.52。將頂尖錢包的即時活動加入基準模型中，可將一秒報酬的樣本外 R平方提升至 12.31%，增幅達 13.2%（t = 9.2）。",
+        "implication": "實務上可將去中心化交易所的錢包歷史與地址行為納入短線 Alpha 因子，藉此捕捉傳統匿名訂單簿無法衡量的知情流動性。",
+        "caveats": "本研究基於特定去中心化交易所的公開錢包資料，其結果未必能完全類比於傳統匿名機制的金融市場。",
+        "practicality": 4,
+        "tags": [
+          "市場微結構",
+          "限價單簿",
+          "去中心化交易所",
+          "逆向選擇",
+          "Alpha因子"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.03080",
+      "title": "MintEval: Do LLMs Implement the Trading Strategy You Asked For? A Behavioural-Equivalence Benchmark for Natural-Language-to-Strategy Code",
+      "authors": [
+        "Siyu Wang",
+        "Yifan Wang",
+        "Yuecheng He"
+      ],
+      "abstract": "Large language models are moving from producing trading signals to writing the code that executes them. The failure mode of the second role is silent: generated code runs, a backtest plots, yet the risk logic that the trader described is not the logic being executed. Existing code benchmarks test functional correctness on unit tests and finance benchmarks test forecasting; neither measures whether an implementation behaves like the strategy that was asked for. We introduce MintEval, a benchmark in which reference strategies are generated programmatically from a library of composable building blocks, back-translated into colloquial trader instructions, and re-implemented by the model under test. Generated and reference programs are executed bar by bar on identical market data and frictions, and compared on their actions rather than on code similarity or profit: alpha is differenced away. MintEval v0 contains 800 tasks on BTCUSDT 15-minute data, stratified by an execution-measured state-span complexity tau that is decoupled from description length. Low-cost models reach a mean ActionMatch of at most 0.544 and reproduce at most 0.087 of tasks exactly; on a stratified subset of 200 tasks a frontier model (Claude Opus 5.5) reaches 0.889 and reproduces 0.575 exactly, yet still fails silently on 0.275 of tasks. Given a menu of building blocks, models identify the strategy almost perfectly, yet 79.2% of the implementations whose specification was read correctly diverge on more than 10% of active bars. The LLM judge of a recent strategy-generation benchmark, applied verbatim, accepts every one of these silent failures.",
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.CL",
+        "cs.LG",
+        "q-fin.TR"
+      ],
+      "published": "2026-10-02T10:01:26Z",
+      "updated": "2026-10-02T10:01:26Z",
+      "abs_url": "https://arxiv.org/abs/2610.03080",
+      "pdf_url": "https://arxiv.org/pdf/2610.03080v1",
+      "comment": "5 pages, 3 figures, benchmark code and evaluation harness available at https://github.com/spearmintai/minteval. Siyu Wang and Varstern Yifan Wang contributed equally, Yifig Wang is corresponding author",
+      "journal_ref": "",
+      "keyword_score": 46,
+      "matched_keywords": [
+        "trading strategy",
+        "trading signal",
+        "backtest",
+        "llm",
+        "large language model",
+        "alpha"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出基準檢驗LLM程式碼行為一致性，發現重大靜默失敗問題。",
+      "summary": {
+        "title_zh": "MintEval：LLM 有實作你要求的交易策略嗎？針對自然語言轉策略程式碼的行為等價性基準",
+        "verdict": "透過行為等價性基準 MintEval 檢測發現，LLM 實作交易策略時普遍存在嚴重的靜默失效問題。",
+        "problem": "現有程式碼與金融基準無法檢測 LLM 產生的程式碼是否真正符合交易員所描述的風險邏輯。這會導致靜默失效，即程式碼與回測能正常執行，但執行的邏輯卻與要求不符。",
+        "method": "提出 MintEval 基準，利用可組合的建構區塊產生參考策略並反譯為口語指令，在 BTCUSDT 15 分鐘資料上逐 K 棒比較模型實作與參考策略的行為動作。",
+        "findings": "低成本模型的平均 ActionMatch 最高為 0.544、精確重現率最高 0.087；頂尖模型（Claude Opus 5.5）ActionMatch 達 0.889、精確重現率 0.575，但仍有 0.275 的任務出現靜默失效。此外，79.2% 的正確理解實作在超過 10% 的活躍 K 棒上出現行為分歧，現有 LLM 評審無法攔截這些錯誤。",
+        "implication": "實務上不應盲目信任 LLM 產生的交易策略程式碼，必須透過行為層級的逐 K 棒對帳與驗證來防止靜默失效。",
+        "caveats": "目前版本僅基於 BTCUSDT 的 15 分鐘資料進行測試。",
+        "practicality": 4,
+        "tags": [
+          "大型語言模型",
+          "程式碼生成",
+          "量化交易",
+          "基準測試",
+          "策略回測"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.23808",
+      "title": "Equity Strategy Backtesting: Luck or Edge? The MinervaScore as a Statistical Robustness Grade",
+      "authors": [
+        "Maria Laura Santoni",
+        "Vincent Jouanne",
+        "Matthew L. Scullin"
+      ],
+      "abstract": "Backtests of trading strategies are often selected after many parameter trials. A strong historical result can therefore reflect search luck rather than a persistent signal. Standard summaries such as return, Sharpe ratio, and drawdown do not record how many candidates were tried, whether the selected rule survives out-of-sample validation, or whether the available history is long enough to support the result. This paper describes the MinervaScore, a post-selection robustness grade for trading strategies. The score combines four established validation quantities: Deflated Sharpe Ratio, Probability of Backtest Overfitting, Superior Predictive Ability, and Minimum Track Record Length, with a regime-stability diagnostic. These components are converted into signed margins from their admissibility thresholds, aggregated into a raw score, and then mapped to a 0-100 display. The display is tied to a binary Robustness Seal: scores of 80 or higher are shown only when all five gates pass. The calibration uses 359,062 production backtest records. The score is intended to rank statistical support, not to estimate the probability of future profit. In synthetic markets with known ground truth, the MinervaScore separates true signal from lucky backtest outcomes, with an AUROC of 0.989 at the headline difficulty. Its improvement over the GT-Score proxy and the gates-passed baseline is modest, and it remains close to the corrected DSR-alone baseline. In a pre-registered test on unseen real-market data, the score showed no significant forward relationship in a population with limited surviving edge (Spearman rho_s = 0.013, one-sided permutation p = 0.40). We therefore present the MinervaScore as an auditable validation and reporting layer, rather than as evidence of demonstrated real-market predictability.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST"
+      ],
+      "published": "2026-08-24T20:17:28Z",
+      "updated": "2026-08-26T07:17:15Z",
+      "abs_url": "https://arxiv.org/abs/2608.23808",
+      "pdf_url": "https://arxiv.org/pdf/2608.23808v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 46,
+      "matched_keywords": [
+        "sharpe ratio",
+        "out-of-sample",
+        "backtesting",
+        "backtest",
+        "drawdown",
+        "regime"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出策略回測統計穩健性評分，結合多項檢定，實用性高。",
+      "summary": {
+        "title_zh": "權益類策略回測：運氣還是Alpha？MinervaScore作為統計穩健性評級",
+        "verdict": "提出 MinervaScore 評估回測過擬合，在合成資料中表現優異但在真實市場未顯示預測力。",
+        "problem": "交易策略回測常經過大量參數嘗試，歷史強勁表現可能只是搜尋帶來的運氣而非持久信號，傳統指標無法記錄嘗試次數與過擬合風險。",
+        "method": "結合 Deflated Sharpe Ratio、Probability of Backtest Overfitting、Superior Predictive Ability、Minimum Track Record Length 與體制轉換穩定性診斷，轉換為 0 到 100 分的評分系統。使用 359,062 筆生產回測紀錄進行校準與實證。",
+        "findings": "在已知真實情況的合成市場中，MinervaScore 在主打難度下的 AUROC 達到 0.989，能有效區分真實信號與幸運回測。然而在未見過的真實市場預先註冊測試中，Spearman 相關係數為 0.013，單尾排列檢定 p 值為 0.40，無顯著正向關係。",
+        "implication": "MinervaScore 適合作用於內部審計、驗證與報告的基礎設施，用來評估統計支持度而非預估未來獲利，實際交易前仍需謹慎評估。",
+        "caveats": "在真實市場資料中未能表現出顯著的前瞻預測能力。",
+        "practicality": 3,
+        "tags": [
+          "回測過擬合",
+          "Alpha 因子挖掘",
+          "統計檢定",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.14199",
+      "title": "PolyBench: Benchmarking LLM Forecasting and Trading Capabilities on Live Prediction Market Data",
+      "authors": [
+        "Pu Cheng",
+        "Juncheng Liu",
+        "Yunshen Long"
+      ],
+      "abstract": "Predicting real-world events from live market signals demands systems that fuse qualitative news with quantitative order-book dynamics under strict temporal discipline -- a challenge existing benchmarks fail to capture. We present \\textbf{PolyBench}, a multimodal benchmark derived from Polymarket that records point-in-time cross-sections of 38,666 binary prediction markets spanning 4,997 events, synchronously coupling each snapshot with a Central Limit Order Book (CLOB) state and a real-time news stream. Using PolyBench, we evaluate seven state-of-the-art Large Language Models -- spanning open- and closed-source families -- generating 36,165 predictions under identical, timestamp-locked market states collected between February 6 and 12, 2026. Our multidimensional framework assesses directional accuracy, our proposed Confidence-Weighted Return (CWR), Annualized Percentage Yield (APY), and Sharpe ratio via realistic order-book execution simulation. The results reveal a pronounced performance divergence: only two of seven models achieve positive financial returns -- MiMo-V2-Flash at \\textbf{17.6%} CWR and Gemini-3-Flash at 6.2% CWR -- while the remaining five incur losses despite uniformly high stated confidence. These findings highlight the gap between surface-level language fluency and genuine probabilistic reasoning under live market uncertainty, and establish PolyBench as a contamination-proof, financially-grounded evaluation standard for future LLM research. Our dataset and code available at \\underline{\\href{https://github.com/PolyBench/PolyBench}{https://github.com/PolyBench/PolyBench}}.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-04-03T06:25:21Z",
+      "updated": "2026-04-03T06:25:21Z",
+      "abs_url": "https://arxiv.org/abs/2604.14199",
+      "pdf_url": "https://arxiv.org/pdf/2604.14199v1",
+      "comment": "16 pages, 4 figures, 6 tables",
+      "journal_ref": "",
+      "keyword_score": 45,
+      "matched_keywords": [
+        "limit order book",
+        "sharpe ratio",
+        "order book",
+        "llm",
+        "large language model"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "基於真實預測市場資料評估LLM交易與預測能力，基準嚴格。",
+      "summary": {
+        "title_zh": "PolyBench：在即時預測市場資料上評估大語言模型的預測與交易能力",
+        "verdict": "提出 PolyBench 基準測試，評估七款 LLM 在預測市場的表現，僅兩款模型取得正報酬。",
+        "problem": "現有基準無法捕捉在嚴格時間紀律下，將定性新聞與量化訂單簿動態相結合以預測真實世界事件的需求。",
+        "method": "使用來自 Polymarket 的 38,666 個二元預測市場與 4,997 個事件的跨截面資料，結合 CLOB 狀態與即時新聞串流。評估七款開源與閉源的 LLM，在 2026 年 2 月 6 日至 12 日期間進行 36,165 次預測並模擬訂單簿執行。",
+        "findings": "僅兩款模型取得正報酬：MiMo-V2-Flash 達到 17.6% 的信心加權報酬（CWR）與 Gemini-3-Flash 的 6.2% CWR，其餘五款模型皆虧損。結果顯示表面語言流利度與即時市場不確定性下的真實機率推理存在明顯落差。",
+        "implication": "可用於檢驗 LLM 在真實金融與預測市場中的決策能力，但需注意多數模型在實際交易中可能面臨虧損風險。",
+        "caveats": "評估期間僅約一週（2026年2月6日至12日），樣本時間較短。",
+        "practicality": 4,
+        "tags": [
+          "預測市場",
+          "LLM",
+          "量化交易",
+          "基準測試",
+          "限價單簿"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.29763",
+      "title": "Option Pricing on Automated Market Maker Tokens",
+      "authors": [
+        "Philip Z. Maymin"
+      ],
+      "abstract": "We derive the stochastic price process for tokens whose sole price discovery mechanism is a constant-product automated market maker (AMM). When the net flow into the pool follows a diffusion, the token price follows a constant elasticity of variance (CEV) process, nesting Black-Scholes as the limiting case of infinite liquidity. We obtain closed-form European option prices and introduce liquidity-adjusted Greeks. The CEV structure generates a leverage effect -- volatility rises as price falls -- whose normalized implied volatility skew depends only on the pool's weighting parameter, not on pool depth: Black-Scholes underprices 20%-out-of-the-money puts by roughly 6% in implied volatility terms at every pool depth, while the absolute pricing discrepancy vanishes as pools deepen. Empirically, after controlling for pool depth and flow volatility, realized return variance across 90 Bittensor subnets exhibits a strongly negative price elasticity, decisively rejecting geometric Brownian motion and consistent with the CEV prediction. A complementary delta-hedged backtest across 82 subnets confirms near-identical hedging errors at the money, consistent with the prediction that pricing differences are concentrated in the wings.",
+      "primary_category": "q-fin.PR",
+      "categories": [
+        "q-fin.PR",
+        "q-fin.ST",
+        "q-fin.TR"
+      ],
+      "published": "2026-03-31T14:03:00Z",
+      "updated": "2026-03-31T14:03:00Z",
+      "abs_url": "https://arxiv.org/abs/2603.29763",
+      "pdf_url": "https://arxiv.org/pdf/2603.29763v1",
+      "comment": "33 pages, 9 figures, 3 tables",
+      "journal_ref": "",
+      "keyword_score": 42,
+      "matched_keywords": [
+        "market maker",
+        "backtest",
+        "liquidity",
+        "implied volatility",
+        "hedging",
+        "option pricing"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "推導AMM代幣選擇權定價與CEV模型，實證扎實",
+      "summary": {
+        "title_zh": "自動造市商代幣的選擇權定價",
+        "verdict": "推導常數乘積自動造市商代幣的隨機價格過程，發現其符合變異數固定彈性模型，且布萊克-舒爾斯模型會低估深度價外賣權。",
+        "problem": "傳統選擇權定價模型假設資產價格遵循幾何布朗運動，但以自動造市商為唯一價格發現機制的代幣是否適用，需要明確的隨機價格過程與閉形式解。",
+        "method": "利用常數乘積自動造市商的淨資金流動假設，推導出變異數固定彈性（CEV）過程，並對 Bittensor 的 90 個子網路進行實證檢定與 82 個子網路的 Delta 避險回測。",
+        "findings": "布萊克-舒爾斯模型在隱含波動率方面將 20% 價外賣權低估了約 6%；對 90 個 Bittensor 子網路的實證顯示實現報酬變異數具有強烈負價格彈性，且 82 個子網路的 Delta 避險回測證實價平處的避險誤差幾近相同。",
+        "implication": "交易員在定價自動造市商代幣的選擇權時，必須考慮流動性與槓桿效應帶來的波動率傾斜，不能直接套用標準布萊克-舒爾斯模型。",
+        "caveats": "模型假設資金流動遵循擴散過程，且僅適用於以常數乘積自動造市商為唯一價格發現機制的代幣。",
+        "practicality": 4,
+        "tags": [
+          "選擇權定價",
+          "自動造市商",
+          "流動性",
+          "波動率微笑"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
