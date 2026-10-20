@@ -1,0 +1,533 @@
+{
+  "date": "2026-10-20",
+  "generated_at": "2026-10-20T09:52:20+08:00",
+  "scanned": 2390,
+  "eligible": 2350,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2606.09454",
+      "title": "Axiomatic Market Making",
+      "authors": [
+        "Frank M. V. Feys"
+      ],
+      "abstract": "This paper axiomatizes the bid-ask market maker's quoting rule. A quoting rule maps the maker's state, namely inventory, belief, variance, trade intensity, and informed-trader fraction, to a bid-ask pair. Eight natural axioms, together with six environmental assumptions on the maker's inventory cost, force a unique three-parameter family: the mid-quote is linear in inventory, and the spread decomposes additively into inventory and adverse-selection components. Each of the three parameters is identified from a distinct moment of the observable quoting rule, with the three identifications mutually decoupled. The eight axioms partition into a four-axiom indispensable core, one structural choice, and three modularity extensions. Two structural corollaries follow: the latent inventory cost function is recoverable from the limit order book, and a sharp phase transition separates a functioning regime from a frozen one. A closing meta-theorem identifies four features invariant across all admissible structural primitives within the axiom system. To our knowledge, this is the first forced-uniqueness axiomatization of the quoting rule.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "econ.TH",
+        "q-fin.TR"
+      ],
+      "published": "2026-06-08T13:04:06Z",
+      "updated": "2026-06-08T13:04:06Z",
+      "abs_url": "https://arxiv.org/abs/2606.09454",
+      "pdf_url": "https://arxiv.org/pdf/2606.09454v1",
+      "comment": "66 pages, 3 figures",
+      "journal_ref": "",
+      "keyword_score": 42,
+      "matched_keywords": [
+        "market making",
+        "limit order book",
+        "market maker",
+        "order book",
+        "regime"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "首次對造市商報價規則進行公理化推導，嚴謹",
+      "summary": {
+        "title_zh": "公理化造市",
+        "verdict": "透過公理化推導造市商報價規則，證明其在特定假設下收斂至唯一的參數位。",
+        "problem": "現有文獻缺乏對造市商報價規則的公理化基礎，無法從理論上強制推導出具唯一性的報價函數。",
+        "method": "提出八項自然公理與六項環境假設，將造市商狀態對應至買賣價差對，並透過可觀察的報價規則動差識別三個模型參數；本論文為理論研究，未列出具體市場、資料頻率與樣本期間。",
+        "findings": "未報告具體績效數字。研究發現中價隨庫存呈線性變化，價差可加總分解為庫存與逆向選擇成份，且潛在的庫存成本函數可從限價單簿中恢復。",
+        "implication": "可用於理論推導與檢驗造市商的真實報價行為與庫存成本，前提是市場資料能精確對應模型所需的狀態變數。",
+        "caveats": "本研究為純理論的公理化推導，缺乏實際交易資料的實證檢驗與回測。",
+        "practicality": 2,
+        "tags": [
+          "造市",
+          "限價單簿",
+          "微結構",
+          "公理化模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.19584",
+      "title": "Online Market Making and the Value of Observing the Order Book",
+      "authors": [
+        "Davide Maran",
+        "Marcello Restelli"
+      ],
+      "abstract": "We study an online market-making problem in which a learner sequentially posts bid and ask prices for a single asset while interacting with traders holding private valuations. Unlike existing online learning formulations that assume fully censored feedback, we introduce an action-dependent feedback model inspired by real limit order books: when a trade occurs, the trader's valuation remains hidden, whereas when no trade occurs, informative feedback about supply and demand is revealed. We show that this additional information fundamentally changes the learnability of the problem. In the stochastic setting with i.i.d. market prices, we propose an elimination-based algorithm that achieves $O(\\sqrt T)$ regret with high probability, without requiring any smoothness assumptions on the distribution of trader valuations. We then extend this result to a broad class of mean-reverting price processes by considering both local, autoregressive dynamics and a weaker global drift condition based on cumulative deviations from the mean. Under either assumption, we establish high-probability $O(\\sqrt T)$ regret bounds, relying on a new concentration inequality of independent interest. Finally, in the adversarial setting with oblivious prices, we design an explore-then-perturb algorithm that guarantees $O(T^{2/3})$ regret in expectation. Our results quantify the value of observing the order book in online market making and demonstrate that even limited, action-dependent feedback can substantially improve regret guarantees compared to standard bandit feedback models.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "published": "2026-05-19T09:26:01Z",
+      "updated": "2026-05-19T09:26:01Z",
+      "abs_url": "https://arxiv.org/abs/2605.19584",
+      "pdf_url": "https://arxiv.org/pdf/2605.19584v1",
+      "comment": "Accepted at COLT2026",
+      "journal_ref": "",
+      "keyword_score": 41,
+      "matched_keywords": [
+        "market making",
+        "limit order book",
+        "order book"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "定量觀察訂單簿線上造市的遺憾界線，理論嚴謹",
+      "summary": {
+        "title_zh": "線上造市與觀察限價單簿的價值",
+        "verdict": "探討造市商在不同市場環境下利用限價單簿反饋的線上學習演算法，證明其可顯著改善遺憾值。",
+        "problem": "現有線上學習假設完全截尾的回饋，未考慮限價單簿中未成交時所透露的供需資訊對造市問題的影響。",
+        "method": "提出行動相依回饋模型，針對隨機設定、均值回歸價格程序及對抗性設定，分別設計消除型演算法與探索後擾動演算法。",
+        "findings": "在隨機設定與均值回歸價格下皆能以高機率達到 O(∕T) 的遺憾值，在對抗性設定下其期望遺憾值為 O(T^(2/3))，未報告具體績效數字。",
+        "implication": "實證限價單簿的未成交反饋能實質提升造市策略的學習效率，適用於需要動態調整買賣報價的造市商。",
+        "caveats": "理論分析基於特定的價格動態與回饋假設，實際市場的複雜雜訊可能影響收斂速度。",
+        "practicality": 3,
+        "tags": [
+          "造市",
+          "限價單簿",
+          "線上學習",
+          "強化學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.29468",
+      "title": "The Convergence Rate of Stochastic Tracking with Application to Optimal Execution",
+      "authors": [
+        "Marcel Nutz",
+        "Moritz Voss"
+      ],
+      "abstract": "We study the quadratic tracking problem of a general stochastic target process with absolutely continuous controls, with and without terminal constraint. We derive explicit, non-asymptotic upper bounds in terms of a Besov-type modulus of the target. These bounds yield sharp explicit rates that specialize to the square-root order for semimartingale targets. We then apply these results to a generalized Obizhaeva--Wang execution model with random terminal inventory. We first develop a Hilbert-space approach to characterize its optimal strategy, which includes jumps. To avoid such trading spikes, one regularizes the problem by a quadratic trading-rate penalty with coefficient $\\varepsilon$. We then show that the regularized optimal execution cost---and therefore the excess price impact cost of the regularized optimal strategy---converges at the sharp rate $O(\\sqrt{\\varepsilon})$. Since the regularized optimal strategy is not available in closed form, we further construct a nearly optimal strategy which is readily implementable and shares the same approximation rate.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.MF"
+      ],
+      "published": "2026-08-29T23:47:21Z",
+      "updated": "2026-08-29T23:47:21Z",
+      "abs_url": "https://arxiv.org/abs/2608.29468",
+      "pdf_url": "https://arxiv.org/pdf/2608.29468v1",
+      "comment": "44 pages, 1 figure",
+      "journal_ref": "",
+      "keyword_score": 39,
+      "matched_keywords": [
+        "optimal execution",
+        "price impact",
+        "execution cost"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance_reason": "推導隨機追蹤與最佳執行的收斂率，數學推導嚴謹的理論論文。",
+      "summary": {
+        "title_zh": "隨機追蹤的收斂速率及其在最佳執行上的應用",
+        "verdict": "推導出廣義 Obizhaeva--Wang 執行模型中最佳策略的 O(−−−\n−−−\n−\n−\n−\nΕ) 收斂速率，並建構出可落實的近似最佳策略。",
+        "problem": "研究具備絕對連續控制的二次追蹤問題，並解決廣義 Obizhaeva--Wang 執行模型中包含跳躍的交易峰值問題。",
+        "method": "利用 Hilbert 空間方法刻劃最佳策略，並透過二次交易速率懲罰項對模型進行正則化，分析其理論收斂速率。",
+        "findings": "論文未報告具體績效數字，主要貢獻在於證明正則化最佳執行成本與超額價格衝擊成本能以尖銳的 O(−−\nΕ) 速率收斂。",
+        "implication": "可直接應用於機構級的最佳執行演算法設計，透過建構的近似最佳策略避免實務上的交易峰值。",
+        "caveats": "理論推導基於特定的市場衝擊與隨機目標假設，未包含真實資料的實證檢驗。",
+        "practicality": 3,
+        "tags": [
+          "最佳執行",
+          "市場衝擊",
+          "隨機控制",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.18481",
+      "title": "AlphaForgeBench: Benchmarking End-to-End Trading Strategy Design with Large Language Models",
+      "authors": [
+        "Wentao Zhang",
+        "Mingxuan Zhao",
+        "Jincheng Gao",
+        "Jieshun You",
+        "Huaiyu Jia",
+        "Yilei Zhao",
+        "Bo An",
+        "Shuo Sun"
+      ],
+      "abstract": "The rapid advancement of Large Language Models (LLMs) has led to a surge of financial benchmarks, evolving from static knowledge evaluation toward interactive trading simulations. However, existing frameworks for evaluating real-time trading largely overlook a critical failure mode: the severe behavioral instability of LLMs in sequential decision-making under financial uncertainty. Through extensive experiments, we show that when deployed as trading agents, LLMs exhibit extreme run-to-run variance, generate inconsistent action sequences even under deterministic decoding, and frequently produce irrational action flipping across adjacent time steps. We attribute these behaviors to the stateless autoregressive nature of LLMs, which lack persistent memory of prior actions, together with their sensitivity to continuous-to-discrete action mappings in portfolio allocation tasks. These deficiencies fundamentally undermine the reliability and reproducibility of many existing online and offline trading benchmarks. To address these limitations, we propose AlphaForgeBench, a principled evaluation framework that redefines LLMs as quantitative researchers rather than stochastic trading agents. Instead of producing discrete trading actions, AlphaForgeBench requires models to generate executable alpha factors and compose factor-based trading strategies grounded in financial knowledge. This paradigm decouples reasoning from execution mechanics, enabling deterministic and reproducible evaluation while remaining aligned with real-world quantitative research workflows. Extensive experiments across multiple state-of-the-art LLMs demonstrate that AlphaForgeBench eliminates execution-induced instability and provides a rigorous benchmark for evaluating financial reasoning, strategy formulation, and alpha discovery. Webpage at https://finbrain-lab-hkustgz.github.io/AlphaForgeBench",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.AI"
+      ],
+      "published": "2026-02-10T14:29:33Z",
+      "updated": "2026-05-27T14:41:33Z",
+      "abs_url": "https://arxiv.org/abs/2602.18481",
+      "pdf_url": "https://arxiv.org/pdf/2602.18481v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 44,
+      "matched_keywords": [
+        "trading strategy",
+        "llm",
+        "large language model",
+        "alpha"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "指出LLM作為交易代理人的行為不穩定性，並提出新評估框架。",
+      "summary": {
+        "title_zh": "AlphaForgeBench：使用大型語言模型進行端到端交易策略設計的基準測試",
+        "verdict": "將 LLM 定位為量化研究員而非直接交易代理，透過生成 Alpha 因子來解決序列決策中的行為不穩定問題。",
+        "problem": "現有即時交易評估框架忽略了 LLM 在金融不確定性下進行序列決策時的嚴重行為不穩定性，表現為極端的高變異數與非理性動作反轉。",
+        "method": "提出 AlphaForgeBench 評估框架，將 LLM 從直接輸出交易動作轉為生成可執行的 Alpha 因子與組合策略；測試了多個最新 LLM，涵蓋金融推理與因子挖掘任務。",
+        "findings": "實驗顯示 LLM 作為交易代理時具有極高的每次運行變異數與不一致的動作序列，而 AlphaForgeBench 透過解耦推理與執行機制消除了此類不穩定性。論文未報告具體的夏普值或報酬等具體績效數字。",
+        "implication": "實務上應避免讓 LLM 直接進行端到端交易下單，改為利用 LLM 進行 Alpha 因子挖掘與策略構建，較符合真實量化研究工作流程。",
+        "caveats": "主要限制在於模型雖能生成因子，但其策略在實際市場中的扣除成本後績效仍需進一步實證。",
+        "practicality": 3,
+        "tags": [
+          "大型語言模型",
+          "Alpha 因子",
+          "量化研究",
+          "交易策略",
+          "基準測試"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.01820",
+      "title": "Deep Learning for Financial Time Series: A Large-Scale Benchmark of Risk-Adjusted Performance",
+      "authors": [
+        "Adir Saly-Kaufmann",
+        "Kieran Wood",
+        "Jan Peter-Calliess",
+        "Stefan Zohren"
+      ],
+      "abstract": "We present a large scale benchmark of modern deep learning architectures for a financial time series prediction and position sizing task, with a primary focus on Sharpe ratio optimization. Evaluating linear models, recurrent networks, transformer based architectures, state space models, and recent sequence representation approaches, we assess out of sample performance on a daily futures dataset spanning commodities, equity indices, bonds, and FX spanning 2010 to 2025. Our evaluation goes beyond average returns and includes statistical significance, downside and tail risk measures, breakeven transaction cost analysis, robustness to random seed selection, and computational efficiency. We find that models explicitly designed to learn rich temporal representations consistently outperform linear benchmarks and generic deep learning models, which often lead the ranking in standard time series benchmarks. Hybrid models such as VSN with LSTM, a combination of Variable Selection Networks (VSN) and LSTMs, achieves the highest overall Sharpe ratio, while VSN with xLSTM and LSTM with PatchTST exhibit superior downside adjusted characteristics. xLSTM demonstrates the largest breakeven transaction cost buffer, indicating improved robustness to trading frictions.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.LG"
+      ],
+      "published": "2026-03-02T12:52:50Z",
+      "updated": "2026-03-02T12:52:50Z",
+      "abs_url": "https://arxiv.org/abs/2603.01820",
+      "pdf_url": "https://arxiv.org/pdf/2603.01820v1",
+      "comment": "43 pages, 27 figures, 11 tables",
+      "journal_ref": "",
+      "keyword_score": 41,
+      "matched_keywords": [
+        "sharpe ratio",
+        "transaction cost",
+        "transformer",
+        "deep learning",
+        "futures"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "大型深度學習時間序列基準測試，涵蓋成本與穩健",
+      "summary": {
+        "title_zh": "金融時間序列的深度學習：風險調整後績效的大規模基準測試",
+        "verdict": "基準測試顯示，VSN 與 LSTM 混合模型在期貨預測中獲得最高 Sharpe 值。",
+        "problem": "現有文獻缺乏針對風險調整後績效的大規模深度學習基準測試，且常忽略交易摩擦與尾部風險的評估。研究旨在對此進行全面檢視。",
+        "method": "評估線性模型、循環神經網路、Transformer、狀態空間模型與序列表示方法；採用 2010 至 2025 年涵蓋商品、股票指數、債券與外匯的日頻期貨資料集。",
+        "findings": "VSN 與 LSTM 混合模型達到最高的整體 Sharpe 值，VSN 與 xLSTM 及 LSTM 與 PatchTST 則具備優異的下檔調整特徵；xLSTM 展現最大的損益平衡交易成本緩衝區。論文未報告具體績效數字。",
+        "implication": "專門設計以學習豐富時間特徵的混合模型在期貨交易中具備優勢，可作為模型選擇的參考基準。實際運用時仍需依據具體摩擦成本進行調整。",
+        "caveats": "資料頻率為日頻期貨，高頻交易情境下的泛化能力仍需進一步驗證。",
+        "practicality": 4,
+        "tags": [
+          "深度學習",
+          "時間序列",
+          "基準測試",
+          "期貨",
+          "Alpha 因子挖掘"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.01431",
+      "title": "Do Prediction Markets Forecast Cryptocurrency Volatility? Evidence from Kalshi Macro Contracts",
+      "authors": [
+        "Hardhik Mohanty",
+        "Bhaskar Krishnamachari"
+      ],
+      "abstract": "Daily probability changes in Kalshi macro prediction markets forecast cryptocurrency realized volatility through two distinct channels. The monetary policy channel, measured by Fed rate repricing on KXFED contracts, predicts Bitcoin volatility in sample with t = 3.63 and p < 0.001 but exhibits regime dependence tied to the 2024-2025 rate-cutting cycle. The recession risk signal from KXRECSSNBER proves more stable out of sample, delivering an MSFE ratio of 0.979 with Clark-West p = 0.020. The inflation channel, measured by CPI repricing on KXCPI contracts, predicts altcoin volatility for Ethereum, Solana, Cardano, and Chainlink with t-statistics ranging from -2.1 to -3.4 and out-of-sample gains for Ethereum at MSFE = 0.959 with p = 0.010 and Solana at p = 0.048. Both the Bitcoin--Fed-dovish and Chainlink--CPI specifications survive Benjamini-Hochberg correction at q = 0.05. Orthogonalization and baseline comparisons against Fed Funds futures, Treasury yields, and the Deribit implied volatility index confirm that these signals carry information not embedded in conventional financial instruments. The sample covers ten Kalshi event series and six cryptocurrency assets over January 2023 to March 2026.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.RM"
+      ],
+      "published": "2026-04-01T22:12:49Z",
+      "updated": "2026-04-01T22:12:49Z",
+      "abs_url": "https://arxiv.org/abs/2604.01431",
+      "pdf_url": "https://arxiv.org/pdf/2604.01431v1",
+      "comment": "14 pages, 4 figures, 6 tables",
+      "journal_ref": "",
+      "keyword_score": 40,
+      "matched_keywords": [
+        "out-of-sample",
+        "realized volatility",
+        "regime",
+        "implied volatility",
+        "cryptocurrency",
+        "bitcoin"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "使用預測市場資料預測加密貨幣波動度，檢定嚴謹且具跨市場實證。",
+      "summary": {
+        "title_zh": "預測市場能預測加密貨幣波動率嗎？來自 Kalshi 總體經濟合約的證據",
+        "verdict": "Kalshi 預測市場的每日機率變動可透過貨幣政策與通膨管道預測加密貨幣實現波動率。",
+        "problem": "傳統金融工具是否無法完全捕捉加密貨幣波動率的某些總體經濟預測資訊。",
+        "method": "使用 Kalshi 總體經濟事件合約與六種加密貨幣資產的日資料，樣本期間為 2023 年 1 月至 2026 年 3 月。",
+        "findings": "聯準會利率重訂價預測比特幣波動率（t = 3.63, p < 0.001），衰退風險訊號提供樣本外 MSFE 比率 0.979（p = 0.020），CPI 重訂價則預測山寨幣波動率（t 值在 -2.1 至 -3.4 之間，以太坊 MSFE = 0.959, p = 0.010）。",
+        "implication": "預測市場訊號包含傳統金融工具未嵌入的資訊，可用於提升波動率預測模型的表現。",
+        "caveats": "貨幣政策管道對聯準會降息循環的體制轉換呈現依賴性。",
+        "practicality": 4,
+        "tags": [
+          "預測市場",
+          "加密貨幣",
+          "波動率預測",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.04062",
+      "title": "Smart Predict--then--Optimize Paradigm for Portfolio Optimization in Real Markets",
+      "authors": [
+        "Wang Yi",
+        "Takashi Hasuike"
+      ],
+      "abstract": "Improvements in return forecast accuracy do not always lead to proportional improvements in portfolio decision quality, especially under realistic trading frictions and constraints. This paper adopts the Smart Predict--then--Optimize (SPO) paradigm for portfolio optimization in real markets, which explicitly aligns the learning objective with downstream portfolio decision quality rather than pointwise prediction accuracy. Within this paradigm, predictive models are trained using an SPO-based surrogate loss that directly reflects the performance of the resulting investment decisions. To preserve interpretability and robustness, we employ linear predictors built on return-based and technical-indicator features and integrate them with portfolio optimization models that incorporate transaction costs, turnover control, and regularization. We evaluate the proposed approach on U.S. ETF data (2015--2025) using a rolling-window backtest with monthly rebalancing. Empirical results show that decision-focused training consistently improves risk-adjusted performance over predict--then--optimize baselines and classical optimization benchmarks, and yields strong robustness during adverse market regimes (e.g., the 2020 COVID-19). These findings highlight the practical value of the Smart Predict--then--Optimize paradigm for portfolio optimization in realistic and non-stationary financial environments.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM"
+      ],
+      "published": "2026-01-07T16:28:30Z",
+      "updated": "2026-01-12T08:26:54Z",
+      "abs_url": "https://arxiv.org/abs/2601.04062",
+      "pdf_url": "https://arxiv.org/pdf/2601.04062v3",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 40,
+      "matched_keywords": [
+        "portfolio optimization",
+        "transaction cost",
+        "backtest",
+        "regime",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "採用SPO範式對齊投組決策與預測，考量交易成本並進行穩健回測。",
+      "summary": {
+        "title_zh": "真實市場中投資組合最佳化的智慧預測後最佳化範式",
+        "verdict": "採用決策導向的智慧預測後最佳化範式，直接以投資績效為學習目標，提升風險調整後報酬。",
+        "problem": "報酬預測準確度的提升，在真實交易摩擦與限制下，未必能帶動投資組合決策品質的等比例改善。",
+        "method": "結合基於報酬與技術指標特徵的線性預測器，並納入交易成本、換手率控制與正規化之投資組合最佳化模型；使用美國ETF資料（2015年至2025年）進行滾動視窗與按月再平衡的回測。",
+        "findings": "決策導向的訓練方式在風險調整後績效上持續優於傳統的預測後最佳化基準與古典最佳化基準，並在如2020年新冠疫情等不利市場體制轉換期間展現強健性，論文未報告具體的報酬數字與夏普值。",
+        "implication": "實務上可透過將機器學習目標與下游投資組合決策直接對齊，來改善真實市場環境下的投資表現。",
+        "caveats": "論文未提供具體的績效數字與交易成本細節，實際部署時需驗證其在特定成本假設下的有效性。",
+        "practicality": 4,
+        "tags": [
+          "投資組合最佳化",
+          "機器學習",
+          "預測後最佳化",
+          "交易成本"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2512.22476",
+      "title": "AutoQuant: An Auditable Expert-System Framework for Execution-Constrained Auto-Tuning in Cryptocurrency Perpetual Futures",
+      "authors": [
+        "Kaihong Deng"
+      ],
+      "abstract": "Backtests of cryptocurrency perpetual futures are sensitive to execution timing, funding alignment, trading costs, and reuse of evaluation windows during parameter search. In high-friction markets, attractive results may therefore reflect hidden implementation choices as much as signal quality. Using BTC/USDT, ETH/USDT, SOL/USDT, and AVAX/USDT perpetual contracts, this study examines whether an auditable execution-aware configuration-selection pipeline can reduce performance overestimation and expose parameter fragility more clearly than naive one-stage tuning. This paper proposes AutoQuant, an expert-system-style decision-support framework for configuration selection. AutoQuant encodes strict execution timing, funding visibility, cost realism, and feasibility constraints as explicit rules; combines Bayesian search with two-stage screening across windows and cost scenarios; and exports deterministic artifacts with accounting-invariant checks for traceability. The resulting governance protocol selects and documents configurations within a pre-specified signal family under strict semantics. Empirically, fee-only and zero-cost backtests materially inflate apparent performance relative to fully costed runs with funding and slippage. Two-stage screening does not guarantee higher returns; in the BTC anchor case and several replications, it more often surfaces lower-drawdown or less extreme alternatives under identical strict semantics. Same-budget optimizer comparison, module and screening-policy ablations, funding-rule diagnostics, inferential checks, cross-asset replications, and third-party replay checks position AutoQuant as auditable validation infrastructure for configuration selection under explicit execution and cost assumptions. The experiments use small-account simulations under linear costs and exclude market impact and institutional capacity constraints.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2025-12-27T05:46:43Z",
+      "updated": "2026-08-07T05:23:32Z",
+      "abs_url": "https://arxiv.org/abs/2512.22476",
+      "pdf_url": "https://arxiv.org/pdf/2512.22476v3",
+      "comment": "",
+      "journal_ref": "Expert Systems with Applications (2026), Article 133924",
+      "keyword_score": 40,
+      "matched_keywords": [
+        "backtest",
+        "slippage",
+        "drawdown",
+        "cryptocurrency",
+        "futures"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探討加密貨幣永續合約回測中的成本與過擬合問題，已刊登於Expert Systems。",
+      "summary": {
+        "title_zh": "AutoQuant：加密貨幣永續合約中具執行限制之自動調校的稽核式專家系統框架",
+        "verdict": "提出 AutoQuant 框架以嚴格執行與成本假設進行參數調校，能減少績效高估並揭露參數脆弱性。",
+        "problem": "加密貨幣永續合約回測對執行時機、資金費率與交易成本極度敏感， naive 單階段調校常因隱含實作選擇而高估策略表現。",
+        "method": "提出名為 AutoQuant 的專家系統決策支援框架，將執行時機、資金可見性與成本限制編碼為明確規則，結合貝氏搜尋與兩階段篩選，針對 BTC、ETH、SOL、AVAX 永續合約進行實證。",
+        "findings": "純手續費與零成本回測會大幅膨脹表面績效，兩階段篩選不保證提高報酬，但能在嚴格語意下選出較低回檔的替代方案，論文未報告具體績效數字。",
+        "implication": "可用作參數配置的稽核驗證基礎設施，確保策略在明確成本與執行假設下的真實穩健性。",
+        "caveats": "實驗僅採用線性成本的小帳戶模擬，並未考量市場衝擊與機構級容量限制。",
+        "practicality": 4,
+        "tags": [
+          "自動調校",
+          "加密貨幣永續合約",
+          "回測過擬合",
+          "專家系統",
+          "貝氏搜尋"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.02126",
+      "title": "Hedging market risk and uncertainty via a robust portfolio approach",
+      "authors": [
+        "Adele Ravagnani",
+        "Mattia Chiappari",
+        "Andrea Flori",
+        "Piero Mazzarisi",
+        "Marco Patacca"
+      ],
+      "abstract": "Shorting for hedging exposes to risk when the market dynamics is uncertain. Managing uncertainty and risk exposure is key in portfolio management practice. This paper develops a robust framework for dynamic minimum-variance hedging that explicitly accounts for forecast uncertainty in volatility and covariance estimation to achieve empirical stability and reduced turnover, further improving other standard performance metrics. The approach combines high-frequency realized variance and covariance measures, autoregressive models for multi-step volatility forecasting, and a box-uncertainty robust optimization scheme. We derive a closed-form solution for the robust hedge ratio, which adjusts the standard minimum-variance hedge by incorporating variance and covariance forecast uncertainty. Using a diversified sample of equity, bond, and commodity ETFs over 2016-2024, we show that robust hedge ratios are more stable and entail lower turnover than standard dynamic hedges. While overall variance reduction is comparable, the robust approach improves downside protection and risk-adjusted performance, particularly when transaction costs are considered. Bootstrap evidence supports the statistical significance of these gains.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM"
+      ],
+      "published": "2026-04-02T15:02:21Z",
+      "updated": "2026-07-08T15:41:30Z",
+      "abs_url": "https://arxiv.org/abs/2604.02126",
+      "pdf_url": "https://arxiv.org/pdf/2604.02126v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 39,
+      "matched_keywords": [
+        "high-frequency",
+        "volatility forecasting",
+        "transaction cost",
+        "covariance estimation",
+        "hedging",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "發展穩健動態最小變異數避險框架，考慮預測不確定性與交易成本。",
+      "summary": {
+        "title_zh": "透過穩健投資組合方法避險市場風險與不確定性",
+        "verdict": "提出納入預測不確定性的穩健避險框架，有效降低換手率並提升考量交易成本後的績效。",
+        "problem": "放空避險在市場動態充滿不確定性時會暴露於風險中。如何在投資組合管理中有效管理預測不確定性與風險暴露是關鍵難題。",
+        "method": "結合高頻實現變異數與共變異數度量、多步自我迴歸模型與盒狀不確定性穩健最佳化方案，並導出穩健避險比率的封閉解。使用 2016-2024 年股票、債券與商品 ETF 樣本進行實證分析。",
+        "findings": "研究顯示穩健避險比率較標準動態避險更穩定且換手率較低。整體變異數降低幅度與標準方法相當，但該方法改善了下檔保護與風險調整後績效。拔靴法證實了這些績效提升具有統計顯著性，但論文未報告具體報酬數字。",
+        "implication": "適用於需要動態避險的實務操作，特別在考量交易成本時能展現優勢。實作時需要建構高頻共變異數估計與穩健最佳化模型。",
+        "caveats": "雖然有效降低換手率與提升下檔保護，但整體變異數的降低幅度與標準方法相比並無顯著優勢。",
+        "practicality": 5,
+        "tags": [
+          "動態避險",
+          "穩健最佳化",
+          "高頻變異數",
+          "風險管理",
+          "投資組合"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.27113",
+      "title": "Active Portfolio Management in Concentrated Equity Markets",
+      "authors": [
+        "Brian Ceco",
+        "Xiaofei Shi",
+        "Ting-Kam Leonard Wong"
+      ],
+      "abstract": "The equal-weighted portfolio is a passive, rule-based strategy that has historically been difficult to outperform, delivering higher returns than the capitalization-weighted \"market\" benchmark across many markets and periods. Stochastic portfolio theory (SPT) reveals that this relative performance is regime dependent, with the equal-weighted portfolio underperforming during periods of increasing market concentration and high correlations, particularly market bubbles. These observations have motivated us to formulate and solve a stochastic control problem in which an investor actively allocates between the equal-weighted and market portfolios. The investor bases their allocation decisions on forecasts made under a flexible stochastic diversity--dispersion (SDD) model. Using a quadratic surrogate for implementation frictions, we characterize the optimal allocation through a linear forward--backward SDE and obtain an explicit \"aiming in front of a moving target\" representation of the optimal trading rate, in the spirit of Gârleanu and Pedersen. The penalty parameters are calibrated in sample to match the cumulative wealth effect of proportional transaction costs, while out-of-sample performance is evaluated with those costs deducted directly from portfolio wealth. Using historical S&P 500 data, we show that a mean-reverting SDD specification reproduces several empirical features of market diversity and dispersion. In out-of-sample backtests from 1995 to 2024, the resulting strategies deliver higher cumulative net returns than both the equal-weighted and market portfolios, and higher information ratios than the equal-weighted portfolio after 15-basis-point proportional transaction costs.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "math.OC",
+        "q-fin.MF"
+      ],
+      "published": "2026-09-22T22:08:37Z",
+      "updated": "2026-10-14T13:43:21Z",
+      "abs_url": "https://arxiv.org/abs/2609.27113",
+      "pdf_url": "https://arxiv.org/pdf/2609.27113v2",
+      "comment": "31 pages, 11 figures",
+      "journal_ref": "",
+      "keyword_score": 38,
+      "matched_keywords": [
+        "transaction cost",
+        "out-of-sample",
+        "backtest",
+        "regime",
+        "equity market",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "運用隨機投資組合理論在集中化市場中進行主動配置，考量交易成本。",
+      "summary": {
+        "title_zh": "集中股票市場中的主動式投資組合管理",
+        "verdict": "利用隨機多樣性模型動態配置等權重與市值加權投資組合，扣除成本後績效更佳。",
+        "problem": "等權重投資組合在歷史上常勝過市值加權基準，但在市場集中度上升與泡沫期間表現落後。投資人需要解決如何在這些體制轉換中動態調整配置的問題。",
+        "method": "運用隨機投資組合理論與隨機多樣性-分散模型，建立隨機控制問題並透過線性前向-後向 SDE 求解最佳交易速率。使用 1995 至 2024 年的 S&P 500 歷史資料進行樣本外回測。",
+        "findings": "均值回歸的隨機多樣性-分散模型能重現市場多樣性特徵。在 1995 至 2024 年的樣本外回測中，扣除 15 基點的比例交易成本後，該策略的累積淨報酬高於等權重與市值加權投資組合，資訊比率也高於等權重投資組合。",
+        "implication": "此策略提供明確的最佳交易速率與摩擦成本處理方式，實務上可直接應用於大盤與等權重指數的動態配置以提升風險調整後報酬。",
+        "caveats": "模型表現依賴特定的隨機多樣性-分散參數校準，且績效高度取決於實際交易成本的假設。",
+        "practicality": 4,
+        "tags": [
+          "隨機投資組合理論",
+          "主動式管理",
+          "市場集中度",
+          "交易成本"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
