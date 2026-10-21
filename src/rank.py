@@ -16,7 +16,7 @@ from config import (
 )
 from fetch_papers import Paper
 from llm import LLMError, structured_call
-from terms import fix_terms
+from terms import clean_text
 
 log = logging.getLogger(__name__)
 
@@ -190,7 +190,7 @@ def _scores(row) -> tuple[int, int, str, str, str]:
         value = min(value, SIMULATION_VALUE_CAP)
     if row.get("implausible") is True:
         value = min(value, IMPLAUSIBLE_VALUE_CAP)
-    return (clamp(row["relevance"]), value, fix_terms(str(row.get("reason", ""))),
+    return (clamp(row["relevance"]), value, clean_text(str(row.get("reason", ""))),
             topic if topic in TOPICS else "", evidence if evidence in EVIDENCE else "")
 
 

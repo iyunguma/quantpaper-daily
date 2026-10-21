@@ -140,3 +140,20 @@ def test_quota_exhausted_stops_remaining_calls():
     assert [r["arxiv_id"] for r in out] == [p["arxiv_id"] for p in papers]
     assert all(sm.is_failed(r["summary"]) for r in out)
     assert "額度" in out[-1]["summary"]["error"]
+
+
+@pytest.mark.parametrize("raw,expected", [
+    ("能模擬市場微結構軌跡，40 字以內。", "能模擬市場微結構軌跡。"),
+    ("十年樣本外、扣成本後夏普 1.2（30 字以內）", "十年樣本外、扣成本後夏普 1.2"),
+    ("RL 投組勝過基準,40字內", "RL 投組勝過基準"),
+    ("把訊息壓縮到 40 字以內的表示法，再送進模型。", "把訊息壓縮到 40 字以內的表示法，再送進模型。"),
+])
+def test_echoed_length_limit_is_removed(raw, expected):
+    from terms import clean_text
+    assert clean_text(raw) == expected
+
+
+def test_summary_drops_echoed_length_limit():
+    data = {**GOOD, "verdict": "RL 投組在七資產樣本外勝過基準，40 字以內。"}
+    s = sm.summarize_one(FakeClient(lambda kw: text_response(json.dumps(data))), PAPER)["summary"]
+    assert s["verdict"] == "RL 投組在七資產樣本外勝過基準。"

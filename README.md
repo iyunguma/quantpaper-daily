@@ -58,7 +58,7 @@ GitHub Actions（每天台北時間 07:17）
 
 ```bash
 pip install -r requirements-dev.txt
-python -m pytest                       # 91 項測試，不需要網路與 API key
+python -m pytest                       # 97 項測試，不需要網路與 API key
 
 # 看看今天會選到哪些論文，不產生摘要、不寫任何檔案
 python src/run_daily.py --dry-run      # 沒有 API key 時只用關鍵字排序

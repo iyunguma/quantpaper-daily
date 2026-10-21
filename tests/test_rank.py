@@ -267,3 +267,8 @@ def test_rerank_asks_for_reason_before_scores():
     assert props.index("evidence") < props.index("implausible") < props.index("reason") \
         < props.index("relevance") < props.index("value")
     assert set(rank.RERANK_SCHEMA["properties"]["rankings"]["items"]["properties"]["topic"]["enum"]) == set(rank.TOPICS)
+
+
+def test_reason_drops_echoed_length_limit():
+    row = {"arxiv_id": "x", "relevance": 8, "value": 7, "reason": "十年樣本外，扣成本後夏普 1.2，30 字以內。"}
+    assert rank._scores(row)[2] == "十年樣本外，扣成本後夏普 1.2。"

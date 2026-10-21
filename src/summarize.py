@@ -14,7 +14,7 @@ from config import (
     SUMMARY_MODEL, SUMMARY_SOURCE, SUMMARY_THINKING, USER_AGENT,
 )
 from llm import LLMError, QuotaExhausted, structured_call
-from terms import fix_terms
+from terms import clean_text, fix_terms
 
 log = logging.getLogger(__name__)
 
@@ -94,7 +94,7 @@ def is_failed(summary: dict | None) -> bool:
 
 
 def normalize(data: dict, paper: dict, source: str) -> dict:
-    out = {field: fix_terms(str(data.get(field) or "").strip()) for field in TEXT_FIELDS}
+    out = {field: clean_text(str(data.get(field) or "")) for field in TEXT_FIELDS}
     out["title_zh"] = out["title_zh"] or paper["title"]
     if not out["verdict"]:
         raise LLMError("verdict 是空的")
