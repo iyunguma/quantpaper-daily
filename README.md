@@ -27,7 +27,7 @@ GitHub Actions（每天台北時間 07:17）
   ├─ store.py          寫入 data/papers/YYYY-MM-DD.json ← 網站內容的唯一來源
   │                    評分另存 data/evaluations/YYYY-MM-DD.json
   │
-  └─ build_site.py     產生今日頁、每日歸檔、歸檔索引、RSS，部署到 GitHub Pages
+  └─ build_site.py     產生今日頁、每日歸檔、歸檔索引、主題頁、RSS，部署到 GitHub Pages
 ```
 
 哪些論文已經收錄過，直接從 `data/papers/` 推算，不另外維護清單，所以資料不會不同步。評過分的論文記在 `data/evaluations/`，不會重評；當天沒選上的好論文，隔天繼續和新評的論文競爭。
@@ -58,7 +58,7 @@ GitHub Actions（每天台北時間 07:17）
 
 ```bash
 pip install -r requirements-dev.txt
-python -m pytest                       # 89 項測試，不需要網路與 API key
+python -m pytest                       # 91 項測試，不需要網路與 API key
 
 # 看看今天會選到哪些論文，不產生摘要、不寫任何檔案
 python src/run_daily.py --dry-run      # 沒有 API key 時只用關鍵字排序
@@ -79,7 +79,7 @@ python -m http.server 8000 -d site     # 在 http://localhost:8000 預覽
 | 一定要湊滿十篇 | Variables：`MIN_RELEVANCE` = `0`、`MIN_VALUE` = `0` |
 | 對內容價值更挑剔 | Variables：`MIN_VALUE` 調高（預設 5，滿分 10） |
 | 往回找多久 | Variables：`LOOKBACK_DAYS`（預設 365 天） |
-| 同一主題每天最多幾篇 | Variables：`MAX_PER_TOPIC`（預設 3）。主題清單在 `rank.py` 的 `TOPICS` |
+| 同一主題每天最多幾篇 | Variables：`MAX_PER_TOPIC`（預設 3）。主題清單在 `rank.py` 的 `TOPIC_SLUGS`（右邊是主題頁的檔名） |
 | 改了評分標準想全部重評 | 把 `rank.py` 的 `RUBRIC_VERSION` 加一，舊的評分會作廢 |
 | 網站上出現中國大陸用語 | 在 `src/terms.py` 的 `TERM_FIXES` 加一行，摘要與評選理由都會自動替換 |
 | 每天篇數 | Variables：`DAILY_COUNT` |

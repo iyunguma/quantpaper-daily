@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}{{ topic.name }}－{{ site_title }}{% endblock %}
+
+{% block content %}
+<section class="hero wrap">
+  <p class="hero__kicker">Topic</p>
+  <h1 class="hero__title">{{ topic.name }}</h1>
+  <p class="hero__note">共 <b>{{ topic.entries|length }}</b> 篇，新的在前。點標題回到當天那一期看完整重點。</p>
+</section>
+
+<nav class="topic-nav wrap" aria-label="切換主題">
+  <ul>
+  {% for t in topics %}
+    <li><a href="{{ root }}topics/{{ t.slug }}.html"{% if t.slug == topic.slug %} aria-current="page"{% endif %}>{{ t.name }}<small>{{ t.entries|length }}</small></a></li>
+  {% endfor %}
+  </ul>
+</nav>
+
+<section class="wrap">
+  <ol class="entry-list">
+  {% for e in topic.entries %}
+    {% set p = e.paper %}
+    {% set s = p.summary %}
+    <li>
+      <p class="entry__meta">
+        <span>{{ e.date_zh }}</span>
+        <span>第 {{ e.rank }} 篇</span>
+        <span>arXiv {{ p.category_label }}</span>
+      </p>
+      <h2 class="entry__title"><a href="{{ root }}archive/{{ e.date }}.html#p{{ e.rank }}">{{ s.get('title_zh') or p.title }}</a></h2>
+      {% if s.get('title_zh') and s.get('title_zh') != p.title %}
+      <p class="entry__en" lang="en">{{ p.title }}</p>
+      {% endif %}
+      {% if s.get('verdict') %}<p class="entry__verdict">{{ s.verdict }}</p>{% endif %}
+    </li>
+  {% endfor %}
+  </ol>
+</section>
+{% endblock %}

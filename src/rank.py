@@ -66,11 +66,18 @@ def keyword_score(paper: Paper, now: datetime | None = None) -> Paper:
 # 改了下面的評分標準就把這個數字加一：先前存下的評分會作廢，論文重新評估
 RUBRIC_VERSION = 1
 
-# 模型替每篇標一個主題，選稿時同一主題每天最多 MAX_PER_TOPIC 篇
-TOPICS = [
-    "造市與微結構", "交易執行", "Alpha 與因子", "投組與風險",
-    "波動度與衍生品", "回測與研究方法", "其他",
-]
+# 模型替每篇標一個主題，選稿時同一主題每天最多 MAX_PER_TOPIC 篇。
+# 右邊是網站主題頁的檔名；改主題名稱時檔名不要動，舊連結才不會失效
+TOPIC_SLUGS = {
+    "造市與微結構": "microstructure",
+    "交易執行": "execution",
+    "Alpha 與因子": "alpha",
+    "投組與風險": "portfolio",
+    "波動度與衍生品": "volatility",
+    "回測與研究方法": "methods",
+    "其他": "other",
+}
+TOPICS = list(TOPIC_SLUGS)
 
 # 模型只負責標出結論的依據、績效是否好到不可信，分數上限由程式套用。
 # 實測 Flash-Lite 不太遵守提示詞裡的分數上限，但這類分類相當可靠

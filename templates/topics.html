@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}主題－{{ site_title }}{% endblock %}
+
+{% block content %}
+<section class="hero wrap">
+  <p class="hero__kicker">Topics</p>
+  <h1 class="hero__title">主題</h1>
+  {% if topics %}
+  <p class="hero__note">{{ issue_count }} 期共 <b>{{ total_papers }}</b> 篇論文，分成 <b>{{ topics|length }}</b> 個主題。主題由模型評選時標註，看的是論文要解決的交易問題，不是用了什麼方法。</p>
+  {% else %}
+  <p class="hero__note">還沒有任何一期。第一次執行完成後，論文會依主題列在這裡。</p>
+  {% endif %}
+</section>
+
+{% if topics %}
+<section class="wrap">
+  <ul class="archive-list">
+  {% for t in topics %}
+    <li>
+      <a href="{{ root }}topics/{{ t.slug }}.html">
+        <span class="archive-list__day">{{ t.name }}</span>
+        <span class="archive-list__peek">{{ t.peek }}</span>
+        <span class="archive-list__count">{{ t.count }} 篇</span>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% endblock %}

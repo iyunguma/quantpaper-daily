@@ -15,6 +15,7 @@ from config import (
     CATEGORY_LABELS, DAILY_COUNT, FEED_DAYS, PAPERS_DIR, ROOT, SITE_BASE_URL, SITE_DIR,
     SITE_TAGLINE, SITE_TITLE,
 )
+from rank import TOPIC_SLUGS
 from store import list_issues
 from summarize import is_failed
 
@@ -22,6 +23,9 @@ log = logging.getLogger(__name__)
 
 TPE = timezone(timedelta(hours=8))
 WEEKDAYS = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"]
+
+# 退回關鍵字排序的那幾天沒有主題；主題清單改名後，舊名稱也歸到這裡
+UNSORTED, UNSORTED_SLUG = "未分類", "unsorted"
 
 
 def zh_date(iso: str) -> str:
@@ -77,11 +81,23 @@ def decorate(issues: list[dict]) -> list[dict]:
             p.setdefault("summary", {})
             p["failed"] = is_failed(p["summary"])
             p["category_label"] = CATEGORY_LABELS.get(p.get("primary_category", ""), p.get("primary_category", ""))
+            p["topic_slug"] = TOPIC_SLUGS.get(p.get("topic") or "")
             p["author_line"] = author_line(p.get("authors", []))
             p["published_short"] = short_date(p.get("published", ""))
             p["from_pdf"] = p["summary"].get("source") == "pdf"
             p["evaluation_note"] = evaluation_note(p)
     return issues
+
+
+def group_by_topic(issues: list[dict]) -> list[dict]:
+    """依 TOPICS 的順序分組，只列有論文的主題。主題內新到舊，同一期依名次。"""
+    names = {slug: name for name, slug in TOPIC_SLUGS.items()} | {UNSORTED_SLUG: UNSORTED}
+    entries: dict[str, list[dict]] = {slug: [] for slug in names}
+    for issue in issues:
+        for rank, p in enumerate(issue["papers"], 1):
+            entries[p["topic_slug"] or UNSORTED_SLUG].append(
+                {"paper": p, "date": issue["date"], "date_zh": issue["date_zh"], "rank": rank})
+    return [{"name": names[slug], "slug": slug, "entries": e} for slug, e in entries.items() if e]
 
 
 def build_feed(issues: list[dict]) -> str:
@@ -128,6 +144,7 @@ def build(papers_dir: Path = PAPERS_DIR, site_dir: Path = SITE_DIR) -> None:
     if site_dir.exists():
         shutil.rmtree(site_dir)        # 清掉舊檔，避免刪掉的資料殘留在網站上
     (site_dir / "archive").mkdir(parents=True)
+    (site_dir / "topics").mkdir()
     shutil.copy(ROOT / "templates" / "style.css", site_dir / "style.css")
 
     common = {
@@ -159,5 +176,18 @@ def build(papers_dir: Path = PAPERS_DIR, site_dir: Path = SITE_DIR) -> None:
         env.get_template("archive.html").render(issues=rows, page="archive", root="../", **common),
         encoding="utf-8")
 
+    topics = group_by_topic(issues)
+    topic_tpl = env.get_template("topic.html")
+    for t in topics:
+        (site_dir / "topics" / f"{t['slug']}.html").write_text(
+            topic_tpl.render(topic=t, topics=topics, page="topics", root="../", **common), encoding="utf-8")
+    topic_rows = [{
+        "name": t["name"], "slug": t["slug"], "count": len(t["entries"]),
+        "peek": "；".join((e["paper"]["summary"].get("title_zh") or e["paper"]["title"]) for e in t["entries"][:2]),
+    } for t in topics]
+    (site_dir / "topics" / "index.html").write_text(
+        env.get_template("topics.html").render(topics=topic_rows, page="topics", root="../", **common),
+        encoding="utf-8")
+
     (site_dir / "feed.xml").write_text(build_feed(issues), encoding="utf-8")
-    log.info("網站已產生：%d 期、%d 篇", len(issues), common["total_papers"])
+    log.info("網站已產生：%d 期、%d 篇、%d 個主題", len(issues), common["total_papers"], len(topics))
