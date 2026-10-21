@@ -1,0 +1,528 @@
+{
+  "date": "2026-10-21",
+  "generated_at": "2026-10-21T09:39:05+08:00",
+  "scanned": 2405,
+  "eligible": 2355,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2610.25802",
+      "title": "Amortized Neural Filtering for Calibrated Posteriors in Statistical Arbitrage",
+      "authors": [
+        "Minkey Chang"
+      ],
+      "abstract": "Statistical arbitrage trades on an estimate of the state of a residual spread, and conventional practice discards the uncertainty of that estimate. We keep the uncertainty and use it in the trading decision. A Neural Filter Estimator (NFE) is trained on simulated paths of a mean-reverting process whose innovation law is selected by testing candidates against real residuals; once trained, it returns the posterior over the latent state of every spread in a cross-section in one forward pass. Three results follow. On simulated paths with known truth, every practical estimator, ours included, falls in one narrow band of accuracy well below an estimator given full information, so the posterior gains no accuracy over a point estimate; its contribution is a correct account of its own uncertainty. On Korean equities, net of costs, the conventional point estimate forecasts about a thousand basis points per holding period more than it realizes, and the amortized methods cut that gap by a factor of roughly two to eight. Sizing positions from the posterior on the same learned factors as the end-to-end Attention Factor Model matches the Sharpe ratio of those factors under the base rule within the period's noise, at no more risk.",
+      "primary_category": "q-fin.GN",
+      "categories": [
+        "q-fin.GN",
+        "q-fin.RM",
+        "q-fin.ST"
+      ],
+      "published": "2026-10-19T05:15:23Z",
+      "updated": "2026-10-20T08:04:35Z",
+      "abs_url": "https://arxiv.org/abs/2610.25802",
+      "pdf_url": "https://arxiv.org/pdf/2610.25802v2",
+      "comment": "Accepted at the 7th ACM International Conference on AI in Finance (ICAIF '26), oral presentation. 9 pages, 3 figures, 5 tables. Code: https://github.com/minkeymouse/nfe , v2: fixes Figure 1 in the HTML version",
+      "journal_ref": "",
+      "keyword_score": 36,
+      "matched_keywords": [
+        "statistical arbitrage",
+        "sharpe ratio",
+        "factor model"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "統計套利神經濾波器校準後驗，ICAIF 口頭發表",
+      "summary": {
+        "title_zh": "統計套利中用於校準後驗分佈的攤銷神經濾波",
+        "verdict": "將殘差價差的估計不確定性納入統計套利決策，能有效縮小預期與實際報酬的落差。",
+        "problem": "傳統實務在進行統計套利時會捨棄狀態估計的不確定性。這會導致部位規模設定失准，拉大預期績效與實際實現報酬的差距。",
+        "method": "提出神經濾波器估計器（NFE），在均值回歸過程的模擬路徑上進行訓練，並以真實殘差檢定創新律。適用於跨資產橫截面，在單次前向傳遞中輸出潛在狀態的後驗分佈。",
+        "findings": "在模擬路徑上，後驗分佈未提升點估計的準確度，其價值在於正確反映不確定性。在韓國股市中，相較於傳統點估計的預期與實現報酬落差，攤銷方法將該差距縮小了 2 到 8 倍不等。",
+        "implication": "交易員可直接利用此方法透過後驗分佈來調整部位規模，在不增加風險的情況下達到與基準模型相當的夏普值。",
+        "caveats": "後驗分佈的實質貢獻在於正確計入不確定性而非提高預測準確度。",
+        "practicality": 4,
+        "tags": [
+          "統計套利",
+          "神經濾波",
+          "不確定性量化",
+          "均值回歸"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2511.07434",
+      "title": "RL-Exec: Impact-Aware Reinforcement Learning for Opportunistic Optimal Liquidation, Outperforms TWAP and a Book-Liquidity VWAP on BTC-USD Replays",
+      "authors": [
+        "Enzo Duflot",
+        "Stanislas Robineau"
+      ],
+      "abstract": "We study opportunistic optimal liquidation over fixed deadlines on BTC-USD limit-order books (LOB). We present RL-Exec, a PPO agent trained on historical replays augmented with endogenous transient impact (resilience), partial fills, maker/taker fees, and latency. The policy observes depth-20 LOB features plus microstructure indicators and acts under a sell-only inventory constraint to reach a residual target. Evaluation follows a strict time split (train: Jan-2020; test: Feb-2020) and a per-day protocol: for each test day we run ten independent start times and aggregate to a single daily score, avoiding pseudo-replication. We compare the agent to (i) TWAP and (ii) a VWAP-like baseline allocating using opposite-side order-book liquidity (top-20 levels), both executed on identical timestamps and costs. Statistical inference uses one-sided Wilcoxon signed-rank tests on daily RL-baseline differences with Benjamini-Hochberg FDR correction and bootstrap confidence intervals. On the Feb-2020 test set, RL-Exec significantly outperforms both baselines and the gap increases with the execution horizon (+2-3 bps at 30 min, +7-8 bps at 60 min, +23 bps at 120 min). Code: github.com/Giafferri/RL-Exec",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "cs.LG",
+        "q-fin.TR"
+      ],
+      "published": "2025-10-30T20:25:49Z",
+      "updated": "2025-10-30T20:25:49Z",
+      "abs_url": "https://arxiv.org/abs/2511.07434",
+      "pdf_url": "https://arxiv.org/pdf/2511.07434v1",
+      "comment": "8 pages main text, 3 appendix pages, 10 figures",
+      "journal_ref": "",
+      "keyword_score": 35,
+      "matched_keywords": [
+        "reinforcement learning",
+        "order book",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "考慮衝擊的 RL 清算，嚴謹 OOS 檢驗與基準對比",
+      "summary": {
+        "title_zh": "RL-Exec：考慮市場衝擊的強化學習機會型最佳清算模型，在 BTC-USD 歷史回放中表現優於 TWAP 與流動性 VWAP",
+        "verdict": "提出結合內生短暫衝擊與限價單簿特徵的 RL 演算法，在比特幣清算任務中顯著優於傳統基準。",
+        "problem": "如何在固定期限內進行機會型最佳清算，同時考量市場衝擊、部分成交與手續費等微結構摩擦。",
+        "method": "使用 PPO 代理模型與深度 20 層限價單簿特徵、微結構指標，針對 BTC-USD 歷史資料進行回放訓練與嚴格的時間切分驗證（2020 年 1 月訓練、2 年 2 月測試）。",
+        "findings": "RL-Exec 在測試集中顯著優於 TWAP 與流動性 VWAP 基準，超額報酬隨執行時間拉長而增加，30 分鐘時提升 2 至 3 個基點，60 分鐘提升 7 至 8 個基點，120 分鐘更提升 23 個基點。",
+        "implication": "此方法適合應用於大型部位的動態執行，在長執行區間能有效利用訂單簿深度降低成本。",
+        "caveats": "僅在單一加密貨幣（BTC-USD）的特定單月歷史資料進行驗證，跨資產與不同市況的穩健性仍需擴大測試。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "演算法交易",
+          "訂單簿",
+          "市場衝擊"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.19227",
+      "title": "M3: A State-Event Generative Foundation Model for Market Microstructure Dynamics",
+      "authors": [
+        "Yanzhi Zhang",
+        "Yu Ma",
+        "Yilin Cheng",
+        "Jian Li",
+        "Yitong Duan"
+      ],
+      "abstract": "Market microstructure simulation aims to model how liquidity, prices, and order flow evolve in electronic financial markets. Since market data reveal only one realized trajectory, many important questions are inherently counterfactual and require realistic trajectory-level simulation. Existing financial generative models, however, often model order events and market states, such as the LOB, in isolation, overlooking the dynamic interaction between order flow and liquidity in market microstructure. We propose the \\textbf{M3} (\\underline{M}arket \\underline{M}icrostructure \\underline{M}odel), a state-event generative foundation model for market microstructure dynamics. \\textbf{M3} learns to generate future order-flow trajectories, while accounting for the evolving interaction between order events and limit-order-book liquidity. Trained on large-scale order-level real stock market data, \\textbf{M3} exhibits predictable scaling behavior, reproduces key market stylized facts, and enables practical simulation-based applications including forecasting, stress testing, and market-impact analysis. These results suggest a scalable foundation-model paradigm for counterfactual market simulation at the microstructure level.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "cs.LG"
+      ],
+      "published": "2026-07-29T12:46:38Z",
+      "updated": "2026-07-29T12:46:38Z",
+      "abs_url": "https://arxiv.org/abs/2608.19227",
+      "pdf_url": "https://arxiv.org/pdf/2608.19227v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 38,
+      "matched_keywords": [
+        "order flow",
+        "market microstructure",
+        "liquidity",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "建立市場微結構狀態事件生成基礎模型，模擬訂單流與流動性互動。",
+      "summary": {
+        "title_zh": "M3：用於市場微結構動態的狀態事件生成式基礎模型",
+        "verdict": "提出名為 M3 的生成式基礎模型，能模擬考慮訂單流與流動性互動的市場微結構軌跡，40 字以內。",
+        "problem": "現有金融生成模型常將訂單事件與市場狀態（如限價單簿）獨立建模，忽略了兩者之間的動態互動，無法有效進行反事實模擬。",
+        "method": "採用狀態事件生成式基礎模型 M3，使用大規模逐筆訂單真實股票市場資料進行訓練。",
+        "findings": "M3 展現出可預測的規模化行為，能重現關鍵的市場風格化事實，並支援預測、壓力測試與市場衝擊分析等應用，論文未報告具體績效數字。",
+        "implication": "可用於建構反事實市場模擬器，進行策略壓力測試與衝擊分析，前提是需要有足夠算力來訓練與推論基礎模型。",
+        "caveats": "論文未提供實際交易策略的回測績效與扣除成本後的表現。",
+        "practicality": 3,
+        "tags": [
+          "市場微結構",
+          "基礎模型",
+          "生成式模型",
+          "限價單簿",
+          "模擬"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.04004",
+      "title": "Structural Limits of OHLCV-Based Intraday Momentum Signals in MNQ Futures: A Systematic Falsification Study",
+      "authors": [
+        "Mathias Mesfin"
+      ],
+      "abstract": "This paper tests whether common intraday momentum signals built from OHLCV data generate a tradable edge in Micro E-Mini Nasdaq 100 (MNQ) futures after realistic execution costs. Fourteen signal families were evaluated on 947 trading days of five-minute data from 2021-2025 under expanding-window walk-forward validation. Each signal had to clear five criteria: T-statistic >= 2.0 on out-of-sample net returns, >= 30 trades per out-of-sample fold, positive net returns after instrument-appropriate friction, consistent direction across test years (2023, 2024, 2025), and permutation p < 0.001 where applicable. None passed all five. The failures divide into three groups. Eleven families fail because gross return before friction is 0.07-1.50 points, below the 2.0-point friction floor. Three clear friction but fail elsewhere: the Opening Range Breakout long (T = 0.88, year-unstable), the VVG classifier reversal (T = 1.26, year-unstable), and gap continuation short (gross +16.53 pts, T = 1.46, fails year stability and per-fold sample minimum). Two positive controls confirm the methodology detects genuine edge: the RTH Confluence Signal (OOS T = 3.11, mean net +11.82 pts, N = 196) and London Session Signal B (OOS T = 4.30, mean net +4.09 pts, N = 247, p = 0.000025).",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.CP",
+        "q-fin.ST"
+      ],
+      "published": "2026-05-05T17:24:54Z",
+      "updated": "2026-09-15T21:42:05Z",
+      "abs_url": "https://arxiv.org/abs/2605.04004",
+      "pdf_url": "https://arxiv.org/pdf/2605.04004v3",
+      "comment": "17 pages, 4 figures. Revised: corrected T-statistics to net-return basis; updated London Signal B to walk-forward OOS figures (N=247, T=4.30); corrected Wen et al. citation; split Bailey et al. into two references; corrected MGC friction; year-stability tables updated to OOS years only; replication disclosures added",
+      "journal_ref": "",
+      "keyword_score": 38,
+      "matched_keywords": [
+        "out-of-sample",
+        "execution cost",
+        "momentum",
+        "futures"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "系統性檢驗OHLCV動能訊號在交易成本下的表現，屬於扎實的虛偽性研究。",
+      "summary": {
+        "title_zh": "微型那斯達克期貨中基於 OHLCV 的日內動能訊號之結構性極限：系統性否證研究",
+        "verdict": "測試 14 種 OHLCV 日內動能訊號，扣除真實交易成本後全數陣亡，無法產生穩定 Alpha。",
+        "problem": "探討常見的日內 OHLCV 動能訊號在微型那斯達克期貨（MNQ）中，於計入實際交易成本後是否仍具備可交易的優勢。",
+        "method": "評估 14 個訊號家族，使用 2021 至 2025 年共 947 個交易日的 5 分鐘高頻資料，採用擴展視窗的向前走勢驗證（walk-forward validation）。",
+        "findings": "沒有任何一個訊號通過所有五項嚴格檢驗標準。其中 11 個家族因毛報酬低於 2.0 點的摩擦成本而失敗，其餘 3 個雖突破成本但未能在年分穩定度或樣本數上達標；不過兩個正向對照組顯示方法確實能偵測到真實優勢（OOS T 值分別為 3.11 與 4.30）。",
+        "implication": "純粹依賴常規 OHLCV 資料的日內動能策略在 MNQ 上難以直接獲利，開發時必須納入更嚴格的摩擦成本與跨年度穩健性檢驗。",
+        "caveats": "本研究僅針對 MNQ 期貨的 14 種特定 OHLCV 訊號家族進行測試。",
+        "practicality": 4,
+        "tags": [
+          "日內動能",
+          "期貨",
+          "回測檢驗",
+          "交易成本",
+          "Alpha 因子挖掘"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.13126",
+      "title": "MLP-Initialized Reinforcement Learning for Exit Timing in SPX Short-Straddle Portfolios",
+      "authors": [
+        "Jianning Wang",
+        "Robert Ślepaczuk",
+        "Paweł Sakowski"
+      ],
+      "abstract": "This paper studies exit timing for SPX short-straddle portfolios using a two-stage supervised and reinforcement-learning framework. Historical episodes first generate ex-post optimal hold/exit labels for training a multilayer perceptron (MLP) using only contemporaneously available state variables at deployment. The trained MLP then initializes reinforcement-learning actors that are fine-tuned with a risk-aware trading reward. Out-of-sample evaluation over 2024-2026 shows that the supervised MLP substantially outperforms passive holding and representative fixed-time and profit-and-loss-based exit rules. Across seven independent seeds, MLP-initialized Actor-Critic averages 37.54% cumulative return and a Sharpe ratio of 1.705, compared with 35.01% and 1.651 for the supervised MLP. Actor-Critic trained from scratch averages only 0.18% return. These findings show that oracle-guided supervised learning provides a stable foundation for reward-based policy fine-tuning in a sparse and path-dependent option-exit problem.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-10-09T07:21:16Z",
+      "updated": "2026-10-09T07:21:16Z",
+      "abs_url": "https://arxiv.org/abs/2610.13126",
+      "pdf_url": "https://arxiv.org/pdf/2610.13126v1",
+      "comment": "13 pages, 3 figures, 8 tables. Full version of the paper accepted at ACM ICAIF 2026 (Milan, November 14-17, 2026)",
+      "journal_ref": "",
+      "keyword_score": 37,
+      "matched_keywords": [
+        "sharpe ratio",
+        "reinforcement learning",
+        "out-of-sample"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "使用MLP初始化強化學習來處理選擇權部位出場時機，已獲ICAIF接受。",
+      "summary": {
+        "title_zh": "以MLP初始化強化學習來決定SPX賣出勒式組合的出場時機",
+        "verdict": "提出結合監督式學習與強化學習的兩階段框架，有效提升 SPX 賣出勒式組合的出場時機決策。",
+        "problem": "選擇權出場時機具備稀疏性與路徑依賴特性，傳統強化學習從零開始訓練成效極差。",
+        "method": "使用歷史資料產生事後最佳出場標籤來訓練 MLP，再以此初始化透過風險意識獎勵進行微調的 Actor-Critic 強化學習模型。評估標的為 SPX 選擇權，樣本期間為 2024 至 2026 年。",
+        "findings": "在七個獨立隨機種子下，MLP 初始化之 Actor-Critic 平均累積報酬達 37.54%、夏普值為 1.705；純監督式 MLP 為 35.01% 與 1.651；從零開始訓練的 Actor-Critic 則僅有 0.18% 報酬。",
+        "implication": "利用監督式預訓練來引導強化學習策略，能解決路徑依賴選擇權問題中的探索難題，可直接應用於選擇權動態出場管理。",
+        "caveats": "樣本期間涵蓋 2024 至 2026 年，可能受特定市場體制影響，且未詳細說明交易成本假設。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "選擇權",
+          "MLP",
+          "出場時機",
+          "SPX"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2510.26228",
+      "title": "ChatGPT in Systematic Investing -- Enhancing Risk-Adjusted Returns with LLMs",
+      "authors": [
+        "Nikolas Anic",
+        "Andrea Barbon",
+        "Ralf Seiz",
+        "Carlo Zarattini"
+      ],
+      "abstract": "This paper investigates whether large language models (LLMs) can improve cross-sectional momentum strategies by extracting predictive signals from firm-specific news. We combine daily U.S. equity returns for S&P 500 constituents with high-frequency news data and use prompt-engineered queries to ChatGPT that inform the model when a stock is about to enter a momentum portfolio. The LLM evaluates whether recent news supports a continuation of past returns, producing scores that condition both stock selection and portfolio weights. An LLM-enhanced momentum strategy outperforms a standard long-only momentum benchmark, delivering higher Sharpe and Sortino ratios both in-sample and in a truly out-of-sample period after the model's pre-training cut-off. These gains are robust to transaction costs, prompt design, and portfolio constraints, and are strongest for concentrated, high-conviction portfolios. The results suggest that LLMs can serve as effective real-time interpreters of financial news, adding incremental value to established factor-based investment strategies.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "q-fin.PR"
+      ],
+      "published": "2025-10-30T08:06:37Z",
+      "updated": "2025-10-30T08:06:37Z",
+      "abs_url": "https://arxiv.org/abs/2510.26228",
+      "pdf_url": "https://arxiv.org/pdf/2510.26228v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 53,
+      "matched_keywords": [
+        "high-frequency",
+        "transaction cost",
+        "out-of-sample",
+        "momentum",
+        "llm",
+        "large language model"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用大型語言模型萃取新聞訊號增強動能策略",
+      "summary": {
+        "title_zh": "量化投資中的 ChatGPT：利用 LLM 提升風險調整後報酬",
+        "verdict": "利用 LLM 解讀公司新聞來強化動能策略，能有效提升 Sharpe 與 Sortino 比率。",
+        "problem": "探討大型語言模型（LLM）是否能從個股新聞中萃取預測訊號，進而改善傳統的橫截面動能策略。",
+        "method": "結合 S&P 500 成分股的每日報酬與高頻新聞資料，利用提示工程引導 ChatGPT 評估新聞是否支持動能延續，產生條件化選股與權重分數。",
+        "findings": "LLM 強化動能策略表現優於標準做多動能基準，在樣本內與超越模型預訓練截止點的樣本外期間皆能提供更高的 Sharpe 與 Sortino 比率，且在扣除交易成本後依然穩健。",
+        "implication": "LLM 可作為即時解讀金融新聞的有效工具，為現有的因子投資策略增添額外價值，適合高確信度的集中式投資組合。",
+        "caveats": "績效增益高度依賴提示詞設計，且在不同提示下可能存在不確定性。",
+        "practicality": 4,
+        "tags": [
+          "LLM",
+          "動能策略",
+          "Alpha 因子",
+          "新聞情緒"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.17555",
+      "title": "Volatility-Aware Extreme Event Detection in High-Frequency Financial Markets",
+      "authors": [
+        "Maorufa Zaman",
+        "Haris Md Sahed"
+      ],
+      "abstract": "Predicting extreme price movements in high-frequency financial markets is a challenging task due to non-stationarity, heavy-tailed return distributions, and severe class imbalance. In particular, rare but impactful events are often difficult to detect using conventional modeling approaches, which typically treat extreme movements as isolated observations. This study proposes a volatility-aware approach for extreme event detection using high-frequency Bitcoin limit order book (LOB) data. Motivated by empirical evidence of volatility clustering, the target formulation is extended to incorporate both large future returns and high-volatility regimes. This redefinition increases the proportion of informative samples and aligns the learning objective with the underlying market dynamics. Using a tree-based model (XGBoost) with time-series cross-validation and imbalance-aware evaluation, the proposed method achieves a Precision-Recall AUC of approximately 0.40, significantly outperforming the baseline formulation with a PR-AUC of around 0.06. This represents more than a sixfold improvement in detecting rare events. The results highlight that target design plays a critical role in financial machine learning, often exceeding the impact of model complexity. By incorporating volatility structure into the labeling process, the proposed approach provides a more effective and realistic framework for extreme event detection in high-frequency cryptocurrency markets.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-20T05:01:18Z",
+      "updated": "2026-07-20T05:01:18Z",
+      "abs_url": "https://arxiv.org/abs/2607.17555",
+      "pdf_url": "https://arxiv.org/pdf/2607.17555v1",
+      "comment": "7 pages, 3 figures. Preprint",
+      "journal_ref": "",
+      "keyword_score": 45,
+      "matched_keywords": [
+        "limit order book",
+        "order book",
+        "high-frequency",
+        "regime",
+        "cryptocurrency",
+        "bitcoin"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "透過調整標籤納入波動度結構，顯著提升極端事件檢測表現。",
+      "summary": {
+        "title_zh": "高頻金融市場中考慮波動率的極端事件偵測",
+        "verdict": "將波動率結構納入標籤設計，顯著提升高頻極端事件預測能力。",
+        "problem": "高頻金融市場的極端價格變動具備非平穩性、厚尾分佈與嚴重的類別不平衡，傳統模型將極端變動視為孤立觀察值而難以偵測。",
+        "method": "使用比特幣限價單簿的高頻資料，透過 XGBoost 結合時間序列交叉驗證，並將目標變數擴展為結合未來大報酬與高波動率體制。",
+        "findings": "方法的 Precision-Recall AUC 達到約 0.40，顯著優於基準 формулюation 的 0.06，實現超過六倍的偵測效能提升。",
+        "implication": "在金融機器學習中，精心設計的目標變數（標籤）通常比模型複雜度更能發揮關鍵影響，可應用於高頻加密貨幣市場的風險管理。",
+        "caveats": "本研究僅針對比特幣高頻限價單簿資料進行實證，尚未驗證其他資產類別的泛化能力。",
+        "practicality": 4,
+        "tags": [
+          "極端事件偵測",
+          "限價單簿",
+          "高頻交易",
+          "機器學習",
+          "波動率"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.16930",
+      "title": "Repurposing Deep Limit Order Book Forecasting for Scenario-Conditioned Market Impact Modeling",
+      "authors": [
+        "Eljas Linna",
+        "Kestutis Baltakys",
+        "Derrick Manoharan",
+        "Alexandros Iosifidis",
+        "Juho Kanniainen"
+      ],
+      "abstract": "Deep Limit Order Book forecasting models capture nonlinear market dynamics, but their ability to quantify the effects of counterfactual order book messages has not been systematically validated. We introduce a model-agnostic framework that compares a trained forecaster's predictive distributions before and after injecting mechanically valid counterfactual messages, defining short-horizon model-implied market impact. A Transformer-based forecaster recovered scenario rankings with a Spearman correlation of 0.99 and 97.2% directional agreement with realized historical outcomes among non-neutral scenarios. Observation-level analysis further showed that estimated impacts captured incremental sequence-dependent variation beyond scenario identity and the pre-event forecast. These results provide evidence that pretrained Limit Order Book forecasters can be repurposed for scenario-conditioned response modeling without retraining.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-09-15T10:06:03Z",
+      "updated": "2026-09-15T10:06:03Z",
+      "abs_url": "https://arxiv.org/abs/2609.16930",
+      "pdf_url": "https://arxiv.org/pdf/2609.16930v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 37,
+      "matched_keywords": [
+        "limit order book",
+        "order book",
+        "transformer"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "將深度訂單簿預測模型轉用於情境條件市場衝擊建模，方法具創新性。",
+      "summary": {
+        "title_zh": "將深度限價單簿預測模型轉用於情境條件式市場衝擊建模",
+        "verdict": "利用已訓練的深度限價單簿預測模型進行反事實訊息注入，有效評估短期市場衝擊。",
+        "problem": "深度限價單簿預測模型雖能捕捉非線性動態，但其量化反事實訂單簿訊息效果的能力尚未獲系統性驗證。",
+        "method": "採用模型無關的框架，比較注入機械有效反事實訊息前後的預測分佈，使用基於 Transformer 的預測模型進行實證。",
+        "findings": "非中性情境的Spearman相關係數達0.99，與歷史實際結果的方向一致性達97.2%。未報告具體績效數字。",
+        "implication": "預訓練的限價單簿預測模型無須重新訓練即可轉用於情境條件式反應建模，可用於評估訂單衝擊。",
+        "caveats": "僅驗證了短期內模型隱含的市場衝擊，未包含實際交易成本的完整損益模擬。",
+        "practicality": 3,
+        "tags": [
+          "限價單簿",
+          "Transformer",
+          "市場衝擊",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.29086",
+      "title": "Realistic Market Impact Modeling for Reinforcement Learning Trading Environments",
+      "authors": [
+        "Lucas Riera Abbade",
+        "Anna Helena Reali Costa"
+      ],
+      "abstract": "Reinforcement learning (RL) has shown promise for trading, yet most open-source backtesting environments assume negligible or fixed transaction costs, causing agents to learn trading behaviors that fail under realistic execution. We introduce three Gymnasium-compatible trading environments -- MACE (Market-Adjusted Cost Execution) stock trading, margin trading, and portfolio optimization -- that integrate nonlinear market impact models grounded in the Almgren-Chriss framework and the empirically validated square-root impact law. Each environment provides pluggable cost models, permanent impact tracking with exponential decay, and comprehensive trade-level logging. We evaluate five DRL algorithms (A2C, PPO, DDPG, SAC, TD3) on the NASDAQ-100, comparing a fixed 10 bps baseline against the AC model with Optuna-tuned hyperparameters. Our results show that (i) the cost model materially changes both absolute performance and the relative ranking of algorithms across all three environments; (ii) the AC model produces dramatically different trading behavior, e.g., daily costs dropping from $200k to $8k with turnover falling from 19% to 1%; (iii) hyperparameter optimization is essential for constraining pathological trading, with costs dropping up to 82%; and (iv) algorithm-cost model interactions are strongly environment-specific, e.g., DDPG's OOS Sharpe jumps from -2.1 to 0.3 under AC in margin trading while SAC's drops from -0.5 to -1.2. We release the full suite as an open-source extension to FinRL-Meta.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CE"
+      ],
+      "published": "2026-03-30T23:57:11Z",
+      "updated": "2026-04-04T01:18:06Z",
+      "abs_url": "https://arxiv.org/abs/2603.29086",
+      "pdf_url": "https://arxiv.org/pdf/2603.29086v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 36,
+      "matched_keywords": [
+        "reinforcement learning",
+        "portfolio optimization",
+        "transaction cost",
+        "backtesting",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "RL 交易環境引入平方根衝擊模型與成本校準",
+      "summary": {
+        "title_zh": "適用於強化學習交易環境的真實市場衝擊建模",
+        "verdict": "提出三個整合非線性市場衝擊模型的 Gymnasium 交易環境，證實成本模型會顯著改變深度強化學習代理人的表現與排序。",
+        "problem": "多數開源回測環境假設交易成本可忽略或固定，導致代理人學到的交易行為在真實執行時失效。現有環境缺乏對 Almgren-Chriss 模型與平方根衝擊定律等非線性市場衝擊的支援。",
+        "method": "開發 MACE 股票交易、保證金交易與投資組合最佳化等三個 Gymnasium 相容環境，在 NASDAQ-100 資料上評估 A2C、PPO、DDPG、SAC、TD3 五種深度強化學習演算法，並比較固定 10 個基點與經過 Optuna 調參的 Almgren-Chriss 成本模型。",
+        "findings": "成本模型大幅改變了演算法的絕對績效與相對排名。Almgren-Chriss 模型使每日成本從 20 萬美元降至 8,000 美元，周轉率從 19% 降至 1%；超參數最佳化可使成本大減高達 82%，且演算法與成本模型的互動具高度環境特異性。",
+        "implication": "回測時必須納入非線性市場衝擊與動態成本模型，否則訓練出的強化學習策略在真實市場將嚴重過擬合並面臨高額執行成本。",
+        "caveats": "實證結果高度依賴所採用的 Almgren-Chriss 模型參數設定與平方根衝擊定律假設。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "市場衝擊",
+          "交易環境",
+          "演算法交易",
+          "成本模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.09219",
+      "title": "AlgoXpert Alpha Research Framework. A Rigorous IS WFA OOS Protocol for Mitigating Overfitting in Quantitative Strategies",
+      "authors": [
+        "The Anh Pham",
+        "Bao Chan Nguyen",
+        "Nguyet Nguyen Thi"
+      ],
+      "abstract": "Transitioning a strategy from backtest to live trading is a common failure point for quantitative systems due to parameter overfitting, selection bias, and sensitivity to regime changes. This paper presents the AlgoXpert Alpha Research Framework, a standardized protocol that evaluates strategies across three stages: In Sample (IS), which focuses on stable parameter regions instead of single optima; Walk Forward Analysis (WFA) using rolling windows and purge gaps to reduce information leakage, supported by majority pass and catastrophic veto rules; and Out of Sample (OOS) testing under strict parameter lock with no further tuning. The framework applies a defense in depth structure that includes structural safeguards such as cliff veto, execution controls such as spread and leverage guards, and equity protection mechanisms such as circuit breakers and a kill switch. A case study on USDJPY M5 intraday data demonstrates how to detect overfitting through performance decay and drawdown behavior across chronological stages. A post validation comparison of four alpha variants (v1 to v4) shows rank reversal when the objective changes from maximizing Sharpe to minimizing maximum drawdown, highlighting the trade off between risk adjusted performance and tail risk control.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM"
+      ],
+      "published": "2026-03-10T05:40:23Z",
+      "updated": "2026-03-10T05:40:23Z",
+      "abs_url": "https://arxiv.org/abs/2603.09219",
+      "pdf_url": "https://arxiv.org/pdf/2603.09219v1",
+      "comment": "Alpha Research Framework; Walk-Forward Analysis; Purged Validation; Pa rameter Stability; Backtest Overfitting; Selection Bias; Execution-Aware Backtesting; Stress Testing; Kill Switch; Out-of-Sample Verification. 19 Pages, 2 figures",
+      "journal_ref": "",
+      "keyword_score": 35,
+      "matched_keywords": [
+        "live trading",
+        "backtest",
+        "drawdown",
+        "regime",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "嚴謹的 IS-WFA-OOS 框架防範過擬合",
+      "summary": {
+        "title_zh": "AlgoXpert Alpha 研究框架：用於緩解量化策略過擬合的嚴格 IS WFA OOS 協議",
+        "verdict": "提出一整套標準化過濾與回測協議，透過 IS、WFA 到 OOS 嚴格控管過擬合與尾部風險。",
+        "problem": "量化策略從回測轉入實盤交易時，常因參數過擬合、選擇偏誤與體制轉換敏感度而失敗。",
+        "method": "採用 AlgoXpert Alpha 研究框架，透過樣本內（IS）、滾動視窗與清除間隙的步進前瞻分析（WFA）、以及參數鎖定的樣本外（OOS）三階段評估。以 USDJPY M5 日內資料進行個案研究與四種 Alpha 變體的比較。",
+        "findings": "個案研究展示如何透過效能衰退與回撤行為檢測過擬合，四種 Alpha 變體在將目標從最大化 Sharpe 轉為最小化最大回撤時出現排名反轉，論文未報告具體的報酬數字。",
+        "implication": "此框架的防禦縱深結構可用於實盤前的策略檢驗，有助於評估風險調整後報酬與尾部風險控制之間的取捨。",
+        "caveats": "論文主要著重於框架與流程的建立，缺乏具體的獲利與夏普值改善等量化績效資料。",
+        "practicality": 4,
+        "tags": [
+          "過擬合",
+          "步進前瞻分析",
+          "量化策略",
+          "風險管理",
+          "Alpha 因子"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

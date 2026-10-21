@@ -1,0 +1,327 @@
+{
+  "date": "2026-10-21",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2610.27751",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "印尼與比特幣資產配置，實證完整"
+    },
+    {
+      "arxiv_id": "2610.26789",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 6,
+      "reason": "預測市場多代理人造市，ICAIF 2026"
+    },
+    {
+      "arxiv_id": "2610.27100",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "檢驗生成式 LOB 模型市場衝擊"
+    },
+    {
+      "arxiv_id": "2610.25468",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "Reddit 嵌入對波動度預測增益微弱"
+    },
+    {
+      "arxiv_id": "2610.25495",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "條件擴散模型預測 LOB，表現具競爭力"
+    },
+    {
+      "arxiv_id": "2606.12612",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "啟發式投組最佳化數學推導，嚴謹"
+    },
+    {
+      "arxiv_id": "2606.05882",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 5,
+      "reason": "代理人模型探討知情交易與造市商獲利"
+    },
+    {
+      "arxiv_id": "2605.06060",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "AMM 價格追蹤穩定性數學證明與模擬"
+    },
+    {
+      "arxiv_id": "2603.17692",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "匿名化 LLM 投資組合，夏普 1.4"
+    },
+    {
+      "arxiv_id": "2603.19288",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "深度學習聯合報酬與風險建模，實證完整"
+    },
+    {
+      "arxiv_id": "2512.17923",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "LLM 檢測選擇權 Gamma 曝險，已刊登"
+    },
+    {
+      "arxiv_id": "2610.25802",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "統計套利神經濾波器校準後驗，ICAIF 口頭發表"
+    },
+    {
+      "arxiv_id": "2609.33799",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "預言機參數化 AMM 損失分解與回測"
+    },
+    {
+      "arxiv_id": "2608.13096",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "流動匹配生成 LOB，效率與擬真度高"
+    },
+    {
+      "arxiv_id": "2606.25466",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 4,
+      "value": 5,
+      "reason": "加密貨幣高頻互動有向網路分析"
+    },
+    {
+      "arxiv_id": "2605.24564",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "緩和 LLM 回測前視偏誤，EMNLP 2026"
+    },
+    {
+      "arxiv_id": "2604.03948",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "預測切線投組以最大化樣本外夏普值"
+    },
+    {
+      "arxiv_id": "2603.29086",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "RL 交易環境引入平方根衝擊模型與成本校準"
+    },
+    {
+      "arxiv_id": "2603.20247",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 6,
+      "reason": "多代理人系統自動挖掘可解釋 Alpha 因子"
+    },
+    {
+      "arxiv_id": "2603.09301",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "評估 LLM 投組最佳化能力之基準框架"
+    },
+    {
+      "arxiv_id": "2602.01388",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "結合物理資訊 KAN 與 DRL 進行投組最佳化"
+    },
+    {
+      "arxiv_id": "2601.17021",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 3,
+      "reason": "夏普值提升 119%，績效高得不太可信"
+    },
+    {
+      "arxiv_id": "2512.07154",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "考慮市場衝擊的亞式選擇權評價與數值解"
+    },
+    {
+      "arxiv_id": "2510.22685",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "結合代理人模型與 TABL 生成合成 LOB"
+    },
+    {
+      "arxiv_id": "2609.33767",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "選擇權深度學習加入希臘字母歸納偏誤"
+    },
+    {
+      "arxiv_id": "2609.13825",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 4,
+      "reason": "報酬率高達 163% 且未說明成本，過度宣傳"
+    },
+    {
+      "arxiv_id": "2606.25986",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "LOB 預測的推論計算邊界與低延遲架構"
+    },
+    {
+      "arxiv_id": "2606.26173",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "LLM 驅動演化生成與改善交易程式"
+    },
+    {
+      "arxiv_id": "2604.13458",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "結合高頻與 LLM 辨識敘事分析系統性風險"
+    },
+    {
+      "arxiv_id": "2607.16194",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "RL 引導多目標最佳化應用於投組，已刊登"
+    },
+    {
+      "arxiv_id": "2603.09219",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "嚴謹的 IS-WFA-OOS 框架防範過擬合"
+    },
+    {
+      "arxiv_id": "2601.03799",
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 7,
+      "reason": "Uniswap 瞬時價格衝擊下最適執行推導"
+    },
+    {
+      "arxiv_id": "2512.16251",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "結合分析師共識的深度學習資產訂價模型"
+    },
+    {
+      "arxiv_id": "2512.08124",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "加密貨幣相對排名類神經網路投組，已刊登"
+    },
+    {
+      "arxiv_id": "2511.16657",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 4,
+      "reason": "結合總經與技術變數進行外匯預測，未出版"
+    },
+    {
+      "arxiv_id": "2511.07434",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "考慮衝擊的 RL 清算，嚴謹 OOS 檢驗與基準對比"
+    },
+    {
+      "arxiv_id": "2610.03369",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "深入剖析執行 RL 模型的訓練穩定性與失敗模式"
+    },
+    {
+      "arxiv_id": "2609.37963",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "標記法分解 AMM 流動性提供者主被動盈虧落差"
+    },
+    {
+      "arxiv_id": "2608.18022",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "迴旋穩定 Lévy 過程的熵值風險價值投組最佳化"
+    },
+    {
+      "arxiv_id": "2608.02917",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "將 AMM 視為可驗證投組產品並進行回測"
+    }
+  ]
+}
