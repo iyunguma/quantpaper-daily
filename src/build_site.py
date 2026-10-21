@@ -133,6 +133,7 @@ def build(papers_dir: Path = PAPERS_DIR, site_dir: Path = SITE_DIR) -> None:
     common = {
         "site_title": SITE_TITLE,
         "site_tagline": SITE_TAGLINE,
+        "site_base_url": SITE_BASE_URL,
         "total_papers": sum(len(i["papers"]) for i in issues),
         "issue_count": len(issues),
         "daily_count": DAILY_COUNT,

@@ -2,8 +2,9 @@
 {% block title %}歸檔－{{ site_title }}{% endblock %}
 
 {% block content %}
-<section class="hero">
-  <h1 class="hero__date">歸檔</h1>
+<section class="hero wrap">
+  <p class="hero__kicker">Archive</p>
+  <h1 class="hero__title">歸檔</h1>
   {% if issues %}
   <p class="hero__note">共 <b>{{ issue_count }}</b> 期、<b>{{ total_papers }}</b> 篇論文，從 {{ first_date_zh }} 開始。</p>
   {% else %}
@@ -12,16 +13,18 @@
 </section>
 
 {% if issues %}
-<ul class="archive-list">
-{% for it in issues %}
-  <li>
-    <a href="{{ root }}archive/{{ it.date }}.html">
-      <span class="archive-list__day">{{ it.date_zh }}</span>
-      <span class="archive-list__peek">{{ it.peek }}</span>
-      <span class="archive-list__count">{{ it.count }} 篇</span>
-    </a>
-  </li>
-{% endfor %}
-</ul>
+<section class="wrap">
+  <ul class="archive-list">
+  {% for it in issues %}
+    <li>
+      <a href="{{ root }}archive/{{ it.date }}.html">
+        <span class="archive-list__day">{{ it.date_zh }}<small>{{ it.weekday }}</small></span>
+        <span class="archive-list__peek">{{ it.peek }}</span>
+        <span class="archive-list__count">{{ it.count }} 篇</span>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</section>
 {% endif %}
 {% endblock %}

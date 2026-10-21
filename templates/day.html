@@ -3,34 +3,68 @@
 
 {% block content %}
 {% if not issue %}
-<section class="hero">
-  <h1 class="hero__date">{{ site_title }}</h1>
+<section class="hero wrap">
+  <h1 class="hero__title">{{ site_title }}</h1>
+  <p class="hero__note">{{ site_tagline }}。</p>
 </section>
-<div class="empty">
-  <p>第一期還沒產生。到 GitHub repo 的 Actions 頁面手動執行一次「每日論文更新」，幾分鐘後這裡就會出現當天的論文。</p>
-</div>
+
+<section class="feature wrap">
+  <div class="feature__art">{% include "_orb.svg" %}</div>
+  <div class="feature__card">
+    <h2 class="feature__title">尚未出刊</h2>
+    <p class="feature__verdict">第一期還沒產生。到 GitHub repo 的 Actions 頁面手動執行一次「每日論文更新」，幾分鐘後這裡就會出現當天的論文。</p>
+  </div>
+</section>
 {% else %}
 
-<section class="hero">
-  <h1 class="hero__date">{{ issue.date_zh }}<span class="hero__weekday">{{ issue.weekday }}</span></h1>
+<section class="hero wrap">
+  <p class="hero__kicker">{{ issue.weekday }}</p>
+  <h1 class="hero__title">{{ issue.date_zh }}</h1>
   <p class="hero__note">
     從{{ issue.window_zh }} <b>{{ issue.eligible }}</b> 篇還沒收錄的論文中挑出這 <b>{{ issue.papers|length }}</b> 篇，編號 1 最值得先看。
     {%- if issue.papers|length < daily_count %}其餘的相關度或內容價值不夠，寧缺勿濫。{% endif %}
   </p>
 </section>
 
-<div class="papers">
+{% if issue.papers %}
+{% set top = issue.papers[0] %}
+<section class="feature wrap" aria-label="今日首選">
+  <div class="feature__art">{% include "_orb.svg" %}</div>
+  <div class="feature__card">
+    <p class="feature__label">今日首選 · No.01</p>
+    <h2 class="feature__title">{{ top.summary.get('title_zh') or top.title }}</h2>
+    <p class="feature__verdict">{{ top.summary.get('verdict', '') }}</p>
+    <a class="btn" href="#p1">閱讀重點</a>
+  </div>
+</section>
+{% endif %}
+
+{% if issue.papers|length > 1 %}
+<section class="overview wrap" aria-labelledby="overview-title">
+  <h2 class="section-title" id="overview-title">本期速覽</h2>
+  <ol class="overview__grid">
+  {% for p in issue.papers %}
+    <li>
+      <a class="brief" href="#p{{ loop.index }}">
+        <span class="brief__art" aria-hidden="true"><span class="brief__rank">{{ "%02d"|format(loop.index) }}</span></span>
+        <span class="brief__body">
+          <span class="brief__topic">{{ p.get('topic') or p.category_label }}</span>
+          <span class="brief__title">{{ p.summary.get('title_zh') or p.title }}</span>
+        </span>
+      </a>
+    </li>
+  {% endfor %}
+  </ol>
+</section>
+{% endif %}
+
+<section class="papers wrap" aria-labelledby="papers-title">
+<h2 class="section-title" id="papers-title">論文重點</h2>
 {% for p in issue.papers %}
   {% set s = p.summary %}
   <article class="paper{% if p.failed %} is-failed{% endif %}" id="p{{ loop.index }}">
-    <div class="paper__rank" aria-hidden="true">{{ "%02d"|format(loop.index) }}</div>
-    <div class="paper__body">
-
-      <h2 class="paper__title">{{ s.get('title_zh') or p.title }}</h2>
-      {% if s.get('title_zh') and s.get('title_zh') != p.title %}
-      <p class="paper__title-en" lang="en">{{ p.title }}</p>
-      {% endif %}
-
+    <div class="paper__head">
+      <span class="paper__rank" aria-hidden="true">{{ "%02d"|format(loop.index) }}</span>
       <div class="paper__meta">
         <span class="chip">{{ p.category_label }}</span>
         <span class="paper__authors">{{ p.author_line }}</span>
@@ -45,41 +79,45 @@
         {% if p.from_pdf %}<span class="chip chip--quiet">依全文</span>{% endif %}
         {% endif %}
       </div>
+    </div>
 
-      <p class="verdict">{{ s.get('verdict', '') }}</p>
+    <h3 class="paper__title">{{ s.get('title_zh') or p.title }}</h3>
+    {% if s.get('title_zh') and s.get('title_zh') != p.title %}
+    <p class="paper__title-en" lang="en">{{ p.title }}</p>
+    {% endif %}
 
-      {% if not p.failed %}
-      <dl class="detail">
-        <dt>研究問題</dt><dd>{{ s.get('problem', '') }}</dd>
-        <dt>方法與資料</dt><dd>{{ s.get('method', '') }}</dd>
-        <dt>主要發現</dt><dd>{{ s.get('findings', '') }}</dd>
-        <dt>交易意涵</dt><dd>{{ s.get('implication', '') }}</dd>
-        <dt>要留意</dt><dd class="is-caveat">{{ s.get('caveats', '') }}</dd>
-        {% if p.evaluation_note %}
-        <dt>評選理由</dt><dd>{{ p.evaluation_note }}</dd>
-        {% endif %}
-      </dl>
+    <p class="verdict">{{ s.get('verdict', '') }}</p>
+
+    {% if not p.failed %}
+    <dl class="detail">
+      <dt>研究問題</dt><dd>{{ s.get('problem', '') }}</dd>
+      <dt>方法與資料</dt><dd>{{ s.get('method', '') }}</dd>
+      <dt>主要發現</dt><dd>{{ s.get('findings', '') }}</dd>
+      <dt>交易意涵</dt><dd>{{ s.get('implication', '') }}</dd>
+      <dt>要留意</dt><dd class="is-caveat">{{ s.get('caveats', '') }}</dd>
+      {% if p.evaluation_note %}
+      <dt>評選理由</dt><dd>{{ p.evaluation_note }}</dd>
       {% endif %}
+    </dl>
+    {% endif %}
 
-      <div class="paper__foot">
-        <ul class="tags">
-          {% for tag in s.get('tags', []) %}<li>{{ tag }}</li>{% endfor %}
-        </ul>
-        <div class="links">
-          <a href="{{ p.abs_url }}" rel="noopener">arXiv 頁面</a>
-          <a href="{{ p.pdf_url }}" rel="noopener">PDF</a>
-        </div>
+    <div class="paper__foot">
+      <ul class="tags">
+        {% for tag in s.get('tags', []) %}<li>{{ tag }}</li>{% endfor %}
+      </ul>
+      <div class="links">
+        <a class="btn btn--ghost btn--small" href="{{ p.abs_url }}" rel="noopener">arXiv 頁面</a>
+        <a class="btn btn--small" href="{{ p.pdf_url }}" rel="noopener">PDF</a>
       </div>
-
     </div>
   </article>
 {% endfor %}
-</div>
+</section>
 
 {% if issue.newer or issue.older %}
-<nav class="daynav" aria-label="切換日期">
-  {% if issue.older %}<a class="daynav__older" href="{{ root }}archive/{{ issue.older }}.html">前一期</a>{% else %}<span></span>{% endif %}
-  {% if issue.newer %}<a class="daynav__newer" href="{{ root }}archive/{{ issue.newer }}.html">後一期</a>{% endif %}
+<nav class="daynav wrap" aria-label="切換日期">
+  {% if issue.older %}<a class="daynav__older" href="{{ root }}archive/{{ issue.older }}.html">前一期<span class="daynav__date">{{ issue.older }}</span></a>{% endif %}
+  {% if issue.newer %}<a class="daynav__newer" href="{{ root }}archive/{{ issue.newer }}.html">後一期<span class="daynav__date">{{ issue.newer }}</span></a>{% endif %}
 </nav>
 {% endif %}
 

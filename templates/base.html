@@ -9,32 +9,62 @@
 <link rel="alternate" type="application/rss+xml" title="{{ site_title }}" href="{{ root }}feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Serif+TC:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ root }}style.css">
 </head>
-<body>
+<body id="top">
 
-<header class="masthead">
-  <div class="wrap">
-    <a class="masthead__name" href="{{ root }}index.html">{{ site_title }}</a>
-    <nav aria-label="主要導覽">
-      <a href="{{ root }}index.html"{% if page == 'today' %} aria-current="page"{% endif %}>今日</a>
-      <a href="{{ root }}archive/index.html"{% if page == 'archive' %} aria-current="page"{% endif %}>歸檔</a>
-      <a href="{{ root }}feed.xml">RSS</a>
-    </nav>
-  </div>
+<header class="masthead wrap">
+  <a class="brand" href="{{ root }}index.html">
+    <span class="brand__zh">{{ site_title }}</span>
+    <span class="brand__en" lang="en">Quant Paper Daily</span>
+  </a>
+  <nav aria-label="主要導覽">
+    <a href="{{ root }}index.html"{% if page == 'today' %} aria-current="page"{% endif %}>今日</a>
+    <a href="{{ root }}archive/index.html"{% if page == 'archive' %} aria-current="page"{% endif %}>歸檔</a>
+    <a href="{{ root }}feed.xml">RSS</a>
+  </nav>
 </header>
 
-<main class="wrap">
+<main>
 {% block content %}{% endblock %}
 </main>
 
-<footer class="wrap">
-  <div class="colophon">
-    <p>{{ site_tagline }}。論文來源為 <a href="https://arxiv.org">arXiv</a>，重點由 Gemini 生成，可能有誤，交易決策前請讀原文。</p>
-    <p>最後更新：{{ generated_at }}（台北時間）</p>
+<section class="subscribe wrap" aria-labelledby="subscribe-title">
+  <h2 class="section-title" id="subscribe-title">訂閱每日更新</h2>
+  <p class="subscribe__note">每天台北時間早上七點多出刊。把這個網址加進 RSS 閱讀器，新的一期會自動送到。</p>
+  <div class="subscribe__row">
+    <input class="subscribe__url" type="text" readonly aria-label="RSS 網址"
+           value="{{ site_base_url ~ '/feed.xml' if site_base_url else 'feed.xml' }}">
+    <a class="btn" href="{{ root }}feed.xml">訂閱</a>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap site-foot__grid">
+    <div>
+      <p class="site-foot__brand">{{ site_title }}</p>
+      <p>{{ site_tagline }}。</p>
+    </div>
+    <div>
+      <h3>資料來源</h3>
+      <p>論文來源為 <a href="https://arxiv.org">arXiv</a>，重點由 Gemini 生成，可能有誤，交易決策前請讀原文。</p>
+    </div>
+    <div>
+      <h3>最後更新</h3>
+      <p>{{ generated_at }}（台北時間）</p>
+    </div>
   </div>
 </footer>
+
+<nav class="rail" aria-label="快速連結">
+  <a href="{{ root }}feed.xml" aria-label="RSS 訂閱">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="19" r="2.2" fill="currentColor"/><path d="M3 10.5a10.5 10.5 0 0 1 10.5 10.5M3 3.5A17.5 17.5 0 0 1 20.5 21" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+  </a>
+  <a href="#top" aria-label="回到頂端">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5.5 11.5 12 5l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</nav>
 
 </body>
 </html>
