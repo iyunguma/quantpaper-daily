@@ -1,0 +1,537 @@
+{
+  "date": "2026-10-22",
+  "generated_at": "2026-10-22T09:34:05+08:00",
+  "scanned": 2404,
+  "eligible": 2344,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2610.28863",
+      "title": "A game-theoretic analysis of the market microstructure in decentralized exchanges with concentrated liquidity",
+      "authors": [
+        "Mikhail Belokon",
+        "Rostislav Berezovskiy"
+      ],
+      "abstract": "We study strategic liquidity provision in decentralized exchanges with concentrated liquidity as a mean-field game. Liquidity providers choose the width of their price range and when to rebalance it, pay a transaction cost at each rebalancing, and share the fees collected at each tick in proportion to their liquidity, so that each provider's income depends on the state of the population. We formulate the problem as a controlled continuous-time Markov chain on a finite state space. In an averaged version of the game, in which a rebalanced position is re-centered at a draw from the long-run law of the price, a mean-field equilibrium exists. Because each provider's share of the fees falls as competing liquidity is added, the equilibrium liquidity profile is unique. For the exact dynamics, with rebalancing at the range boundary and fast execution, we obtain closed forms for the optimal width, the value function and the stationary law of a position, together with a critical volatility above which provision does not pay. Free entry holds a pool strictly below this threshold, at a margin set by the rebalancing cost. The critical volatility is computed from the fee tier, traded volume, active-tick liquidity and price alone, with no fitted parameter. On two and a half years of hourly data from five WETH/USDC pools on Ethereum and Base, it tracks realized volatility. On the Ethereum $0.3\\%$ pool the ratio of realized to critical volatility is less than one, and optimal value $w^*$ exists. On the standard Uniswap fee tiers the critical volatility coincides with the on-chain implied volatility of the pool.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF"
+      ],
+      "published": "2026-10-20T19:34:49Z",
+      "updated": "2026-10-20T19:34:49Z",
+      "abs_url": "https://arxiv.org/abs/2610.28863",
+      "pdf_url": "https://arxiv.org/pdf/2610.28863v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 44,
+      "matched_keywords": [
+        "market microstructure",
+        "transaction cost",
+        "realized volatility",
+        "liquidity",
+        "implied volatility"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "推導去中心化交易所流動性提供者的賽局模型，並用多個真實 pool 資料驗證，理論與實證俱佳。",
+      "summary": {
+        "title_zh": "去中心化交易所中集中式流動性的市場微結構賽局理論分析",
+        "verdict": "將集中式流動性造市建構為平均場賽局，導出最佳區間寬度與臨界波動率，實證顯示能有效對應鏈上已實現波動率。",
+        "problem": "流動性提供者在去中心化交易所中面臨動態的價格範圍選擇與重新平衡成本，且其收益取決於全體參與者的行為，缺乏一個能納入策略互動的均衡模型。",
+        "method": "使用控制連續時間馬可夫鏈在有限狀態空間上建立平均場賽局模型。分析 Ethereum 與 Base 鏈上 5 個 WETH/USDC 池長達 2 年半的小時級資料。",
+        "findings": "推導出最佳區間寬度、價值函數與持倉平穩律的封閉解，並得出一個臨界波動率，當波動率高於此值時造市將無利可圖。在 Ethereum 的 0.3% 費率池中，已實現波動率與臨界波動率的比值小於 1，且存在最佳寬度。",
+        "implication": "可用於評估去中心化交易所中流動性提供者的動態策略與資金成本，並透過費率、交易量與價格直接計算出造市的波動率上限，無需擬合參數。",
+        "caveats": "模型假設了特定的重新平衡邊界與快速執行，真實市場中的無常損失與 Gas 費動態可能與理論假設存在落差。",
+        "practicality": 4,
+        "tags": [
+          "去中心化交易所",
+          "限價單簿",
+          "賽局理論",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.21846",
+      "title": "Where Backtests and Live Trading Part Ways: Six Defects from One Intraday System",
+      "authors": [
+        "Alex Vidovich",
+        "Zivana Zerjal"
+      ],
+      "abstract": "Backtests of intraday strategies can drift away from what the live system actually does; in our case, the drift never showed in summary statistics. We report six defects found while running one intraday US equity system live and comparing its live days with their backtest replay. Three came from data: a default feed that carried a small fraction of real opening volume, historical prices adjusted for dividends that live orders never see, and data the live system downloaded but the backtest never did. Two came from code: a sizing step that exceeded a limit the live account enforces, and UTC timestamps read as New York time. One came from configuration: settings that were switched on but never reached the code that places orders. For each we give the symptom, the size of the error, the cause and the test or control that now guards against it. All six sat where two paths that should agree had drifted apart. We close with a ten-point checklist. We make no claim about whether the system is profitable.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.TR"
+      ],
+      "published": "2026-10-15T13:24:52Z",
+      "updated": "2026-10-15T13:24:52Z",
+      "abs_url": "https://arxiv.org/abs/2610.21846",
+      "pdf_url": "https://arxiv.org/pdf/2610.21846v1",
+      "comment": "8 pages. Also posted on SSRN, DOI 10.2139/ssrn.7517378. The paper makes no claim about whether the system is profitable",
+      "journal_ref": "",
+      "keyword_score": 32,
+      "matched_keywords": [
+        "live trading",
+        "backtest"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "深入檢討實盤交易與回測分歧的六大缺陷，提供極具實務價值的 10 點檢核清單。",
+      "summary": {
+        "title_zh": "回測與實盤的分歧：單一日內系統的六大缺陷",
+        "verdict": "揭露實盤與回測分歧的六大缺陷，涵蓋資料、程式與設定問題，並提出十點檢查清單。",
+        "problem": "日內策略的回測結果常與實盤表現偏離，且這種偏離往往無法從總體統計資料中看出。",
+        "method": "透過執行一個美股日內系統並比較其實盤交易日與回測重播，作者分析了六大缺陷的症狀、誤差規模、成因與防範控制。",
+        "findings": "論文未報告具體績效數字。主要發現六大缺陷中，三個源自資料（預設資訊源僅帶有極小開盤量、除權息調整價、回測漏下載實盤資料）、兩個源自程式碼（部位大小超出實盤限制、UTC 時間戳被誤讀為紐約時間），以及一個源自設定（啟用但未傳遞至下單程式碼的設定）。",
+        "implication": "對量化交易團隊而言，建立回測與實盤的一致性檢查至關重要，可直接導入文末的十點檢查清單來防範類似誤差。",
+        "caveats": "作者明言未對該系統是否具備獲利能力做出任何宣稱。",
+        "practicality": 5,
+        "tags": [
+          "回測",
+          "實盤交易",
+          "市場微結構",
+          "交易系統"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.28753",
+      "title": "Understanding the Inner Workings of a State-Space Foundation Model for Limit Order Books",
+      "authors": [
+        "Valentin Mohl",
+        "Alexandre Bismuth",
+        "Aramis Marti-Shahandeh",
+        "George Nigmatulin",
+        "Kang Li",
+        "Stefan Zohren",
+        "Jakob Foerster",
+        "Mihai Cucuringu",
+        "Anisoara Calinescu"
+      ],
+      "abstract": "Autoregressive foundation models offer state-of-the-art capabilities to simulate the market by generating the message flow of limit order books (LOBs). Yet, without understanding their inner workings, research directions are hard to narrow and practical use in real-world trading environments remains uncertain. This study therefore asks what these models actually learn about market microstructure. We find that, similarly to games where sequence models build an internal representation of the board, an 8.2M-parameter Mamba-3 state-space model trained autoregressively on the tokenized message stream of eight large-cap US equities learns an internal representation of the market and its dynamics. In particular, order-flow imbalance, a central driver of short-horizon price moves, is decodable at $R^2 \\approx 0.59$, far above controls and baselines. This representation extends to unseen stocks, suggesting that these models learn general representations rather than ticker-specific patterns. The model also generalizes across metrics beyond order-flow imbalance: results hold across traded volume and volatility. Additionally, the representation is causally steerable: pushing the state along a feature's axis shifts the model's next-message beliefs as that feature implies, monotonically in dose, consistent with the emergence of a world model.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.LG"
+      ],
+      "published": "2026-10-20T18:01:16Z",
+      "updated": "2026-10-20T18:01:16Z",
+      "abs_url": "https://arxiv.org/abs/2610.28753",
+      "pdf_url": "https://arxiv.org/pdf/2610.28753v1",
+      "comment": "Accepted at the 7th ACM International Conference on AI in Finance (ICAIF '26), November 14-17, 2026, Milan, Italy",
+      "journal_ref": "",
+      "keyword_score": 57,
+      "matched_keywords": [
+        "limit order book",
+        "market microstructure",
+        "order book",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "使用美國大型股真實 LOB 資料訓練 Mamba 模型，實證扎實且已獲 ICAIF '26 接受。",
+      "summary": {
+        "title_zh": "理解限價單簿狀態空間基礎模型的內部運作",
+        "verdict": "透過 Mamba-3 模型發現限價單簿基礎模型會自發學習市場內部表徵，具備通用性與因果操控性。",
+        "problem": "自迴歸基礎模型雖能模擬限價單簿訊息流，但其內部運作機制不明，阻礙了其實際交易應用的可靠評估。這項研究旨在探討這些模型實際學到了哪些市場微結構特性。",
+        "method": "採用 820 萬參數的 Mamba-3 狀態空間模型，針對 8 檔美國大型股的代幣化訊息流進行自迴歸訓練，分析其內部隱藏狀態的表現。",
+        "findings": "研究發現訂單流不平衡的可解碼度 R平方約為 0.59 且遠高於基準值，此表徵可推廣至未見過的股票、交易量與波動度指標，且模型狀態具備因果可操控性。",
+        "implication": "證明自迴歸基礎模型能習得通用的市場動態與世界模型，未來可透過操縱內部狀態來引導模型預測，適合作為高階市場模擬的基礎。",
+        "caveats": "本研究側重於模型內部表徵與因果操控分析，尚未直接在實單交易中驗證其扣除成本後的獲利能力。",
+        "practicality": 3,
+        "tags": [
+          "狀態空間模型",
+          "限價單簿",
+          "基礎模型",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.17937",
+      "title": "BacktestBench: Benchmarking Large Language Models for Automated Quantitative Strategy Backtesting",
+      "authors": [
+        "Zhensheng Wang",
+        "Wenmian Yang",
+        "Qingtai Wu",
+        "Lequan Ma",
+        "Yiquan Zhang",
+        "Weijia Jia"
+      ],
+      "abstract": "Quantitative backtesting is essential for evaluating trading strategies but remains hampered by high technical barriers and limited scalability. While Large Language Models (LLMs) offer a transformative path to automate this complex, interdisciplinary workflow through advanced code generation, tool usage, and agentic planning, the practical realization is significantly challenged by the current lack of a large-scale benchmark dedicated to automated quantitative backtesting, which hinders progress in this field. To bridge this critical gap, we introduce BacktestBench, the first large-scale benchmark for automated quantitative backtesting. Built from over 6 million real market records, it comprises 18,246 meticulously annotated question-answering pairs across four task categories: metrics calculation, ticker selection, strategy selection, and parameter confirmation. We also propose AutoBacktest, a robust multi-agent baseline that translates natural language strategies into reproducible backtests by coordinating a Summarizer for semantic factor extraction, a Retriever for validated SQL generation, and a Coder for Python backtesting implementation. Our evaluation on 23 mainstream LLMs, complemented by targeted ablations, identifies key factors that influence end-to-end performance and highlights the importance of grounded verification and standardized indicator representations.",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-05-18T06:52:08Z",
+      "updated": "2026-05-25T03:26:13Z",
+      "abs_url": "https://arxiv.org/abs/2605.17937",
+      "pdf_url": "https://arxiv.org/pdf/2605.17937v2",
+      "comment": "This paper has been accepted by KDD 2026 (Datasets and Benchmarks Track)",
+      "journal_ref": "",
+      "keyword_score": 33,
+      "matched_keywords": [
+        "backtesting",
+        "backtest",
+        "llm",
+        "large language model"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "建立自動化量化回測的大型基準測試，已獲 KDD 接受，對研究方法很有幫助。",
+      "summary": {
+        "title_zh": "BacktestBench：評估大型語言模型自動化量化策略回測之基準",
+        "verdict": "提出 BacktestBench 基準與 AutoBacktest 多代理人系統，評估 LLM 自動化回測表現。",
+        "problem": "量化回測技術門檻高且擴展性受限，且目前缺乏專門針對自動化量化回測的大規模基準來推動發展。",
+        "method": "利用超過 600萬筆真實市場紀錄建構 BacktestBench，包含 18,246 個標註問答對，涵蓋四大任務。並提出結合語義萃取、SQL 生成與 Python 回測實作的 AutoBacktest 多代理人基線，對 23 個主流 LLM 進行評估。",
+        "findings": "透過 23 個主流 LLM 的評估與消融實驗，識別出影響端到端效能的關鍵因素，並強調基礎驗證與標準化指標表示的重要性。未報告具體績效數字。",
+        "implication": "可利用多代理人系統將自然語言策略轉換為可重現的回測，前提是需要穩健的驗證機制與標準化指標表示。",
+        "caveats": "實證結果主要依賴模型在基準測試上的表現，實際交易中的穩健性仍受限於模型程式碼生成的正確性。",
+        "practicality": 3,
+        "tags": [
+          "大型語言模型",
+          "量化回測",
+          "代理人系統",
+          "自動化交易",
+          "策略評估"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.03128",
+      "title": "Trading Strategy Optimization via Textual Gradient",
+      "authors": [
+        "Chaoqun Yang",
+        "Qian Wang",
+        "Fengbin Zhu",
+        "Xinyu Lin",
+        "Bingsheng He",
+        "Roger Zimmermann",
+        "Tat-Seng Chua"
+      ],
+      "abstract": "Quantitative trading strategy design aims to discover trading programs from historical data that remain effective in future markets, which can be viewed as a black-box program optimization problem. LLM-based textual gradients offer a promising approach by providing explicit optimization directions for iterative strategy refinement. However, directly applying textual gradients faces two challenges: (1) optimization is myopic, underutilizing experience from previous evaluations; and (2) aggregate backtest feedback overlooks temporal robustness, potentially favoring strategies that perform well only in specific market periods. To address these challenges, we propose TradeGrad, an experience-guided textual-gradient framework for robust trading strategy optimization. TradeGrad leverages accumulated optimization experience to estimate textual gradients and employs multi-scale revisions for both strategy exploration and refinement. It further introduces the Cross-Period Robust Objective (CPRO), which emphasizes performance in unfavorable historical periods to promote temporal robustness. Experiments on cross-sectional and time-series strategy design in Chinese A-share and U.S. equity markets show that TradeGrad achieves the best in-sample and out-of-sample performance across all four settings. Notably, its Chinese cross-sectional strategy achieves 27.99% annualized return, 12.19% maximum drawdown, and a Sharpe ratio of 1.63, approximately 68% higher than the CSI 300 benchmark. Further analyses validate the proposed components and show consistent improvements in both in-sample and out-of-sample performance throughout optimization. The code is available at https://github.com/transcend-0/TradeGrad.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-10-02T10:48:35Z",
+      "updated": "2026-10-06T06:04:49Z",
+      "abs_url": "https://arxiv.org/abs/2610.03128",
+      "pdf_url": "https://arxiv.org/pdf/2610.03128v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 52,
+      "matched_keywords": [
+        "trading strategy",
+        "sharpe ratio",
+        "out-of-sample",
+        "backtest",
+        "llm",
+        "drawdown"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "透過文字梯度最佳化策略，跨市場回測完整",
+      "summary": {
+        "title_zh": "透過文字梯度進行交易策略最佳化",
+        "verdict": "提出 TradeGrad 框架透過經驗引導與跨期穩健目標最佳化交易策略，中國 A 股橫截面策略夏普值達 1.63。",
+        "problem": "基於 LLM 的文字梯度最佳化方法存在近視性且未善用歷史經驗，且聚合的回測回饋忽略了時間穩健性。",
+        "method": "使用 TradeGrad 框架結合歷史最佳化經驗與多尺度修正，並引入跨期穩健目標（CPRO）；測試中國 A 股與美國股市的橫截面與時間序列策略。",
+        "findings": "中國 A 股橫截面策略實現 27.99% 年化報酬率、12.19% 最大回檔，夏普值為 1.63，較 CSI 300 基準高出約 68%，且在樣本內外皆有一致的效能提升。",
+        "implication": "此方法能有效提升 LLM 進行策略迭代的穩健性，可應用於自動化 Alpha 因子挖掘與程式交易策略生成。",
+        "caveats": "策略在不同市場與時期的實際過度擬合風險仍需透過嚴格的樣本外檢驗來控制。",
+        "practicality": 4,
+        "tags": [
+          "LLM",
+          "Alpha 因子挖掘",
+          "策略最佳化",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.19476",
+      "title": "Cross-Stock Predictability via LLM-Augmented Semantic Networks",
+      "authors": [
+        "Yikuan Huang",
+        "Zheqi Fan",
+        "Kaiqi Hu",
+        "Yifan Ye"
+      ],
+      "abstract": "Text-based financial networks are increasingly used to study cross-stock return predictability. A common approach constructs links from similarities in firms' disclosure embeddings, but such networks often contain spurious edges because textual proximity does not necessarily imply economic connection. We propose a two-stage framework that first builds a sparse candidate graph from 10-K embeddings and then uses a large language model to classify and filter candidate edges according to their economic relations. The refined graph is used to aggregate pair-level mean-reversion signals into stock-level trading signals with relation-aware and distance-based weights. In a backtest on S&P 500 constituents from 2011 to 2019, LLM-based edge filtering improves the long-short Sharpe ratio from 0.742 to 0.820 and reduces maximum drawdown from $-$10.47% to $-$7.85%. These results suggest that LLM-based reasoning can improve the economic fidelity of text-derived financial networks and strengthen cross-stock predictability.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "q-fin.GN",
+        "q-fin.ST"
+      ],
+      "published": "2026-04-21T13:59:30Z",
+      "updated": "2026-04-26T05:10:37Z",
+      "abs_url": "https://arxiv.org/abs/2604.19476",
+      "pdf_url": "https://arxiv.org/pdf/2604.19476v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 52,
+      "matched_keywords": [
+        "sharpe ratio",
+        "trading signal",
+        "backtest",
+        "llm",
+        "large language model",
+        "drawdown"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "以語言模型過濾網路邊以增強預測力，實證完整",
+      "summary": {
+        "title_zh": "透過LLM擴增語意網路實現跨股票可預測性",
+        "verdict": "利用LLM過濾財報語意網路的雜訊邊，提升跨股票均值迴歸策略的夏普值。",
+        "problem": "基於10-K財報嵌入相似性建構的文字金融網路常包含假邊，因為文字相近不等於經濟關聯。如何提升網路的經濟真實性以增強跨股票預測性是個難題。",
+        "method": "提出兩階段框架，先由10-K嵌入建構稀疏候選圖，再利用LLM根據經濟關係分類並過濾候選邊。透過具備關係感知與距離權重的圖形將配對均值迴歸訊號聚合為股票層級交易訊號，回測S&P 500成分股（2011至2019年）。",
+        "findings": "LLM邊緣過濾將多空夏普值從0.742提升至0.820，並將最大回檔從-10.47%降低至-7.85%。",
+        "implication": "可用於最佳化基於圖神經網路或文本網路的統計套利策略，前提是需要承擔呼叫LLM的運算成本與延遲。",
+        "caveats": "LLM推論成本高昂且可能受限於財報文字的時效性。",
+        "practicality": 4,
+        "tags": [
+          "LLM",
+          "文字網路",
+          "統計套利",
+          "跨股票預測",
+          "Alpha 因子"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.00475",
+      "title": "End-to-End Parametric Portfolio Policies for Cross-Asset Futures Timing: When Do AI Models Beat Simple Rules?",
+      "authors": [
+        "Austin Pollok",
+        "Kevin Robik"
+      ],
+      "abstract": "Timing-based tilts across asset classes can drive much of the risk and return of a diversified cross-asset portfolio. The standard approach forecasts returns and then optimizes weights. We instead study an end-to-end AI-based policy that maps market states directly to portfolio weights, and we then ask when this one-step modeling approach outperforms simple rules-based strategies. We train these policies on the sixteen most liquid CME futures, where an edge is unlikely to be due to illiquidity, using a differentiable Sharpe ratio loss function, and we benchmark them against equal weighting, risk parity, and time-series momentum. The learned policies rank above the rules on the pooled cross-asset portfolio and in several sub-asset classes, but not uniformly. In gross terms, an LSTM and a transformer-based architecture perform comparably out-of-sample, but diverge when we consider transaction costs. The transformer generates the stronger learned policy, trades far less than the LSTM, and matches or exceeds equal weighting through moderate cost.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.PM",
+        "q-fin.TR"
+      ],
+      "published": "2026-07-01T05:49:41Z",
+      "updated": "2026-07-01T05:49:41Z",
+      "abs_url": "https://arxiv.org/abs/2607.00475",
+      "pdf_url": "https://arxiv.org/pdf/2607.00475v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 47,
+      "matched_keywords": [
+        "sharpe ratio",
+        "transaction cost",
+        "risk parity",
+        "out-of-sample",
+        "transformer",
+        "momentum"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "使用期貨資料進行端到端策略評估，並考量交易成本。",
+      "summary": {
+        "title_zh": "跨資產期貨擇時的端到端參數化投資組合策略：AI 模型何時能打敗簡單規則？",
+        "verdict": "探討端到端 AI 投資組合策略在跨資產期貨的表現，Transformer 架構在考量交易成本後能匹配或超越等權重策略。",
+        "problem": "傳統方法透過預測報酬再進行權重最佳化，本研究旨在探討直接將市場狀態對應至投資組合權重的端到端模型，何時能勝過簡單的規則策略。",
+        "method": "使用全球 16 個流動性最好的 CME 期貨資料，採用可微分的 Sharpe ratio 損失函數訓練 LSTM 與 Transformer 模型的端到端策略，並與等權重、風險平價及時間序列動能進行基準比較。",
+        "findings": "學習型策略在整合的跨資產投資組合與多個子資產類別中排名高於規則策略，但並非全面勝出。在毛報酬下 LSTM 與 Transformer 表現相近，但在計入交易成本後分歧，Transformer 交易頻率遠低於 LSTM。",
+        "implication": "Transformer 架構的端到端策略在適度交易成本下具備實戰價值，能提供比傳統兩階段預測更穩健的權重配置。",
+        "caveats": "模型優勢並非在所有子資產類別中都一致，且績效高度受交易成本與模型架構影響。",
+        "practicality": 4,
+        "tags": [
+          "投資組合配置",
+          "期貨",
+          "Transformer",
+          "機器學習",
+          "交易成本"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.03799",
+      "title": "Optimal execution on Uniswap v2/v3 under transient price impact",
+      "authors": [
+        "Bastien Baude",
+        "Damien Challet",
+        "Ioane Muni Toke"
+      ],
+      "abstract": "We study the optimal liquidation of a large position on Uniswap v2 and Uniswap v3 in discrete time. The instantaneous price impact is derived from the AMM pricing rule. Transient impact is modeled to capture either exponential or approximately power-law decay, together with a permanent component. In the Uniswap v2 setting, we obtain optimal strategies in closed-form under general price dynamics. For Uniswap v3, we consider a two-layer liquidity framework, which naturally extends to multiple layers. We address the problem using dynamic programming under geometric Brownian motion dynamics and approximate the solution numerically using a discretization scheme. We obtain optimal strategies akin to classical ones in the LOB literature, with features specific to Uniswap. In particular, we show how the liquidity profile influences them.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF"
+      ],
+      "published": "2026-01-07T10:56:22Z",
+      "updated": "2026-08-24T08:23:32Z",
+      "abs_url": "https://arxiv.org/abs/2601.03799",
+      "pdf_url": "https://arxiv.org/pdf/2601.03799v2",
+      "comment": "33 pages, 20 figures, 1 table",
+      "journal_ref": "",
+      "keyword_score": 35,
+      "matched_keywords": [
+        "optimal execution",
+        "price impact",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance_reason": "Uniswap 瞬時價格衝擊下最適執行推導",
+      "summary": {
+        "title_zh": "在暫態價格衝擊下 Uniswap v2 與 v3 的最佳執行",
+        "verdict": "推導 Uniswap v2 與 v3 在考慮暫態與永久價格衝擊下的最佳清算策略，並發現其性質類似於傳統極限訂單簿模型。",
+        "problem": "如何在去中心化交易所 Uniswap v2 與 v3 上進行大型部位的最佳清算，同時考量自動造市商的定價規則與價格衝擊？",
+        "method": "使用離散時間動態規劃，結合幾何布朗運動價格動態，並透過離散化方案進行數值求解，分別探討 Uniswap v2 與 v3 的流動性框架。",
+        "findings": "在 Uniswap v2 下透過通用價格動態導出封閉形式的最佳策略；在 Uniswap v3 下建立多層流動性框架，發現其最佳策略類似於傳統極限訂單簿文獻中的策略，且流動性分佈會顯著影響執行結果。未報告具體績效數字。",
+        "implication": "可用於去中心化交易所的大型部位清算與演算法交易設計，但需要精確估計流動性分佈與價格衝擊參數。",
+        "caveats": "模型依賴於對暫態與永久價格衝擊以及流動性設定的假設，未涵蓋所有真實市場的複雜摩擦力。",
+        "practicality": 3,
+        "tags": [
+          "自動造市商",
+          "最佳執行",
+          "市場微結構",
+          "動態規劃"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.03369",
+      "title": "Mixture-of-Experts for Cryptocurrency Order Execution: Training Stability, Tail Risk, and Failure Modes",
+      "authors": [
+        "Alexander Ardaiz",
+        "Varun Budati",
+        "Ali Habibnia"
+      ],
+      "abstract": "Deep reinforcement-learning policies for order execution can vary substantially across training seeds, so apparent architectural gains may reflect favourable training realisations rather than reproducible properties of the architecture. We evaluate vanilla Double Deep Q-Learning (DDQL), K-means-partitioned mixtures of DDQL experts at $K \\in \\{2, 4, 8\\}$, and dense networks parameter-matched to the $K{=}4$ and $K{=}8$ expert budgets on 5-minute mean-aggregated BTC/USDT limit order book data from Binance. No learned configuration significantly improves mean implementation shortfall over DDQL. Under the reported specification, all have higher mean shortfall than TWAP (0.39 bps) and immediate liquidation (0.21 bps) in an environment whose frictionless replay and terminal-urgency penalty make early liquidation nearly costless; 11/100 vanilla-DDQL runs, versus none in either MoE $K{\\geq}4$ arm, converge to a policy that waits until forced liquidation. We then decompose this specification on a device-matched baseline. Annealed exploration alone eliminates observed collapses (12/100 to 0/100; exact McNemar $p{=}4.9{\\times}10^{-4}$), matching the elimination under expert partitioning. Combining annealed exploration with the aligned reward restores collapse in 19/30 runs; with all three specification changes, it rises to 48/100. In this environment, expert partitioning is unnecessary to suppress collapse and appears to mask a training-specification failure rather than confer an intrinsic performance benefit. No MoE $K{=}8$ run collapses under any of the six specifications tested. Across-seed dispersion is lowest at $K{=}8$ but non-monotone and not robust to family-wise adjustment, while within-policy tail risk worsens monotonically with $K$. The apparent attribution of the failure mode reverses between 30 and 100 seeds, illustrating the importance of repeated-seed evaluation.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.LG"
+      ],
+      "published": "2026-10-02T14:27:26Z",
+      "updated": "2026-10-13T07:19:27Z",
+      "abs_url": "https://arxiv.org/abs/2610.03369",
+      "pdf_url": "https://arxiv.org/pdf/2610.03369v2",
+      "comment": "v2 corrects inactivity and occupancy accounting, router features and warm-up description; adds evaluation-routing and realised-exploration diagnostics from existing logs; clarifies IS proceeds, the terminal-state DDQL update, terminology and notation; adds page numbers. No new training results. 9 pages, 3 tables, 1 figure",
+      "journal_ref": "",
+      "keyword_score": 34,
+      "matched_keywords": [
+        "limit order book",
+        "order book",
+        "cryptocurrency"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "深入剖析執行 RL 模型的訓練穩定性與失敗模式",
+      "summary": {
+        "title_zh": "加密貨幣訂單執行的混合專家模型：訓練穩定性、尾端風險與失敗模式",
+        "verdict": "研究顯示，加密貨幣訂單執行中使用 Mixture-of-Experts 未能顯著改善平均執行短缺，且尾端風險隨專家數量增加而惡化。",
+        "problem": "深度強化學習策略在訂單執行中常因訓練隨機性而有顯著差異，導致架構上的改進可能只是幸運的訓練結果而非可重現的特性。",
+        "method": "評估傳統 Double Deep Q-Learning、K-means 分割的 DDQL 混合專家模型（$K \\in \\{2, 4, 8\\}$）以及參數規模匹配的密集網路，使用幣安 5 分鐘平均聚合的 BTC/USDT 限價單簿資料。",
+        "findings": "所有學習型配置均未顯著改善平均執行短缺，且在特定摩擦力極小的環境下，其平均短缺皆高於 TWAP 的 0.39 bps 與立即清算模型的 0.21 bps。未報告具體夏普值與報酬數字，但指出 $K=8$ 時的尾端風險呈現單調惡化。",
+        "implication": "實務上不應盲目採用 Mixture-of-Experts 架構來提升穩定性，應優先透過退火探索（Annealed Exploration）等訓練設定來解決策略崩潰問題。",
+        "caveats": "本研究所使用的環境具有摩擦力極小的特性，可能影響模型在真實高摩擦成本市場中的表現。",
+        "practicality": 2,
+        "tags": [
+          "強化學習",
+          "訂單執行",
+          "混合專家模型",
+          "限價單簿",
+          "加密貨幣"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.00885",
+      "title": "Optimal Trading of Microstructure Mean Reversion",
+      "authors": [
+        "Lucas Rabechini Amaral"
+      ],
+      "abstract": "At the scale of seconds the observed mid carries a stationary, mean-reverting error around a latent efficient price. We build an order book whose own flow produces that error and solve for the trading rule that maximises the long-run average profit rate net of the bid-ask spread. In a liquid large-tick asset the spread is one tick or two, and it is exactly the parity of the mid on the half-tick grid: tight at a half-integer, open at an integer. One coordinate therefore carries the problem: the gap $G$ between the mid and the efficient price; the price is an exogenous Brownian martingale, and $G$ is observable. The mid is a pure jump process whose move intensities lean toward the efficient price. Under one balanced-response condition, which equalises the book's corrective drift across parities, mean reversion of $G$ is a theorem: its conditional mean and stationary covariance are exactly those of an Ornstein-Uhlenbeck process with reversion rate $α$ and stationary standard deviation $s_G$. Its paths are not: the mid jumps. Passage times are therefore evaluated on the Gaussian diffusion those two moments define, at an error we bound on the reward side and leave heuristic on the timing side. A symmetric band of half-width $θ$ buys when the gap reaches $-θ$, sells at $+θ$, and holds inside; on the surrogate it is optimal among all admissible strategies, on the jump process itself that reduction remains a conjecture. With $φ$ the tight-book half-spread, the optimal half-width and its profit rate are $θ^*(θ^*-φ)=s_G^2$ and $R^*=αs_G\\sqrt{2/π}\\,e^{-θ^{*2}/2s_G^2}$. Threshold times margin equals the stationary variance of the gap. Trading as soon as the gap covers the spread earns zero: all profit is the option value of waiting.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.MF"
+      ],
+      "published": "2026-08-01T22:23:23Z",
+      "updated": "2026-08-01T22:23:23Z",
+      "abs_url": "https://arxiv.org/abs/2608.00885",
+      "pdf_url": "https://arxiv.org/pdf/2608.00885v1",
+      "comment": "26 pages, 5 figures",
+      "journal_ref": "",
+      "keyword_score": 34,
+      "matched_keywords": [
+        "order book",
+        "mean reversion",
+        "bid-ask spread"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "推導微結構均值回歸的最適交易規則，屬於嚴謹的理論與數學推導。",
+      "summary": {
+        "title_zh": "微結構均值回歸的最佳化交易",
+        "verdict": "建立限價單簿模型推導微結構均值回歸的最佳交易帶寬，證明利潤源自等待的選擇權價值。",
+        "problem": "在秒級時間尺度下，中間價繞著隱含有效價格存在平穩的均值回歸誤差。如何在扣除買賣價差後，求解最大化長期平均利潤率的交易規則。",
+        "method": "建立基於限價單流動的理論模型，分析大跳動資產與純跳躍過程的中間價。推導出以半寬 theta 為基礎的對稱帶狀交易策略與解析解。",
+        "findings": "未報告具體績效數字。模型推導出最佳半寬度與利潤率的解析解，證明門檻值與邊際乘積等於差距的平穩變異數，且 gap 覆蓋價差時立即交易將賺取零利潤。",
+        "implication": "提供高頻交易中基於均值回歸的最佳進出點解析解，適用於設計帶狀造市策略。前提是需滿足模型中的平衡反應條件。",
+        "caveats": "策略的最佳性在真實的跳躍過程本身上仍屬猜想，僅在近似的高斯擴散過程獲得證明。",
+        "practicality": 3,
+        "tags": [
+          "微結構",
+          "均值回歸",
+          "限價單簿",
+          "高頻交易",
+          "統計套利"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "date": "2026-10-22",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2610.28753",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "使用美國大型股真實 LOB 資料訓練 Mamba 模型，實證扎實且已獲 ICAIF '26 接受。"
+    },
+    {
+      "arxiv_id": "2610.28863",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "推導去中心化交易所流動性提供者的賽局模型，並用多個真實 pool 資料驗證，理論與實證俱佳。"
+    },
+    {
+      "arxiv_id": "2608.00885",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 7,
+      "reason": "推導微結構均值回歸的最適交易規則，屬於嚴謹的理論與數學推導。"
+    },
+    {
+      "arxiv_id": "2606.09104",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 4,
+      "reason": "樣本外夏普值達 1.72 且總報酬高，但屬於審查中論文，績效略顯過高需持保留態度。"
+    },
+    {
+      "arxiv_id": "2605.28359",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "針對 LLM 交易代理人提出防資料洩漏基準測試，並進行 Barra 風險歸因分析，方法嚴謹。"
+    },
+    {
+      "arxiv_id": "2604.18821",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "分析大量商業化結構型策略的歷史回測與實盤表現，實證完整且具實務指引價值。"
+    },
+    {
+      "arxiv_id": "2604.13260",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 4,
+      "reason": "宣稱月度多空 alpha 達 2.03% 且 t 值極高，績效與資訊比率偏向過度擬合。"
+    },
+    {
+      "arxiv_id": "2604.09060",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 4,
+      "reason": "20 年回測宣稱完美對抗崩盤並創造超額 alpha，績效好到不太可信。"
+    },
+    {
+      "arxiv_id": "2602.00948",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出多代理人生態遊戲框架來模擬策略演化，屬於研究工具性質，缺乏實際績效主張。"
+    },
+    {
+      "arxiv_id": "2601.15597",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "結合統計學與神經網路進行共變異數矩陣非線性收縮，實證邏輯清晰且結果合理。"
+    },
+    {
+      "arxiv_id": "2512.19986",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出納入共變異數結構的投影算子進行投資組合最佳化，實證明確且可作為模組替換。"
+    },
+    {
+      "arxiv_id": "2510.21156",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "考慮交易成本與隨機波動率的投資組合選擇，使用深度學習求解 HJB 方程，有數值實驗支援。"
+    },
+    {
+      "arxiv_id": "2610.24562",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 6,
+      "reason": "研究序列造市中的無悔收入最大化與庫存限制，理論推導嚴謹。"
+    },
+    {
+      "arxiv_id": "2610.21057",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 6,
+      "reason": "探討外部交易成本下的自動造市商損失與再平衡問題，數學推導扎實。"
+    },
+    {
+      "arxiv_id": "2608.10410",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "提出量化投資策略管線的自動綜合框架，著重於方法論與驗證協議，無直接實盤績效。"
+    },
+    {
+      "arxiv_id": "2607.13916",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "利用複雜度衡量指標偵測加密貨幣交易所的異常交易模式，已刊登於 Entropy。"
+    },
+    {
+      "arxiv_id": "2607.03858",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出變異數比率的頻譜廣義化模型，在多個面板資料上恢復長期動態的化石事實，實證完整。"
+    },
+    {
+      "arxiv_id": "2608.26127",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出基於圖神經網路的隱含波動率建模來預測實現波動率，實證扎實且表現優於基準。"
+    },
+    {
+      "arxiv_id": "2606.03108",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 6,
+      "reason": "提出自主代理人強化學習的共演化框架，主要在數學與程式碼生成領域驗證，金融應用需轉化。"
+    },
+    {
+      "arxiv_id": "2605.17937",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "建立自動化量化回測的大型基準測試，已獲 KDD 接受，對研究方法很有幫助。"
+    },
+    {
+      "arxiv_id": "2605.17724",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "嚴格比較 LSTM 與梯度提升在期貨高頻資料上的表現，結論指出無顯著預測優勢，實證誠實。"
+    },
+    {
+      "arxiv_id": "2603.16886",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "對多重時間跨度價格預測進行 918 次控制實驗，實證嚴謹且指出多數模型缺乏方向性技能。"
+    },
+    {
+      "arxiv_id": "2602.14827",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 4,
+      "reason": "利用量子近似最佳化演算法進行投資組合配置，宣稱夏普值高達 1.81，但存在高達 76.8% 的交易週轉率。"
+    },
+    {
+      "arxiv_id": "2512.23021",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "改進共變異數矩陣估計以確保半正定並控制頻譜條件，在長期回测中改善夏普值。"
+    },
+    {
+      "arxiv_id": "2512.20216",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "結合 ESG 情感分析與時間序列預測斯里蘭卡新興市場，已發表於會議，但應用範圍較偏狹。"
+    },
+    {
+      "arxiv_id": "2511.17621",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 4,
+      "value": 5,
+      "reason": "將造市機制應用於多代理人 LLM 系統協調，主要提升推理準確度，對交易的直接幫助有限。"
+    },
+    {
+      "arxiv_id": "2610.21846",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "深入檢討實盤交易與回測分歧的六大缺陷，提供極具實務價值的 10 點檢核清單。"
+    },
+    {
+      "arxiv_id": "2609.35867",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "提出可重播的 LOB 訊息生成方法，確保閉環模擬的一致性，僅使用模擬與歷史片段驗證。"
+    },
+    {
+      "arxiv_id": "2609.05235",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "系統性研究 LLM 適應選項對比特幣價格預測的影響，消融實驗完整。"
+    },
+    {
+      "arxiv_id": "2608.28252",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出基於檢索增強 LLM 引導的專家切換投資組合管理框架，跨市場實證表現良好。"
+    },
+    {
+      "arxiv_id": "2607.28410",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "研究 LLM 進行母訂單執行的階層式框架，實證顯示優於傳統演算法基準。"
+    },
+    {
+      "arxiv_id": "2607.17991",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 7,
+      "reason": "建立預測市場中的最佳造市隨機控制框架，推導 HJB 方程並證明解的存在唯一性。"
+    },
+    {
+      "arxiv_id": "2607.16450",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "分析台灣相關 ETF 的重尾與非對稱波動率，並進行 CVaR 與均異最佳化，實證扎實。"
+    },
+    {
+      "arxiv_id": "2607.13353",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "探討深度避險是否屬於強化學習的觀念辨析文章，無實證但對理解方法論有幫助。"
+    },
+    {
+      "arxiv_id": "2606.19517",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "比較預測市場與期權價格的定價差距，實證發現持續性價差與均值回歸現象。"
+    },
+    {
+      "arxiv_id": "2605.24878",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 7,
+      "reason": "研究風險敏感造市的熵正規化 Bellman 策略，數學推導嚴謹並透過數值實驗支持。"
+    },
+    {
+      "arxiv_id": "2605.24285",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "結合長期記憶性與粗糙波動率進行波動率預測，實證顯示在壓力期間有顯著預測提升。"
+    },
+    {
+      "arxiv_id": "2604.26063",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "提出調整成交量與價格的 MACD 交易策略，實證顯示優於傳統 MACD，但方法相對傳統。"
+    },
+    {
+      "arxiv_id": "2604.23608",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "探討非獨特時間與市場不完全性的理論文章，對高頻交易的時間同步觀念有啟發。"
+    },
+    {
+      "arxiv_id": "2603.07752",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 7,
+      "reason": "研究現貨外匯造市中的動態滑價控制與拒絕回饋，採用動態規劃與近似方法，理論完整。"
+    }
+  ]
+}
