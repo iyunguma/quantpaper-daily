@@ -1,0 +1,548 @@
+{
+  "date": "2026-10-24",
+  "generated_at": "2026-10-24T09:38:16+08:00",
+  "scanned": 2400,
+  "eligible": 2330,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2601.23172",
+      "title": "A unified theory of order flow, market impact, and volatility",
+      "authors": [
+        "Johannes Muhle-Karbe",
+        "Youssef Ouazzani Chahdi",
+        "Mathieu Rosenbaum",
+        "Grégoire Szymanski"
+      ],
+      "abstract": "We propose a microstructural model for the order flow in financial markets that distinguishes between {\\it core orders} and {\\it reaction flow}, both modeled as Hawkes processes. This model has a natural scaling limit that reconciles a number of salient empirical properties: persistent signed order flow, rough trading volume and volatility, and power-law market impact. In our framework, all these quantities are pinned down by a single statistic $H_0$, which measures the persistence of the core flow. Specifically, the signed flow converges to the sum of a fractional process with Hurst index $H_0$ and a martingale, while the limiting traded volume is a rough process with Hurst index $H_0-1/2$. No-arbitrage constraints imply that volatility is rough, with Hurst parameter $2H_0-3/2$, and that the price impact of trades follows a power law with exponent $2-2H_0$. The analysis of signed order flow data yields an estimate $H_0 \\approx 3/4$. This is not only consistent with the square-root law of market impact, but also turns out to match estimates for the roughness of traded volumes and volatilities remarkably well.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "math.PR",
+        "q-fin.MF",
+        "q-fin.TR",
+        "stat.AP"
+      ],
+      "published": "2026-01-30T16:56:48Z",
+      "updated": "2026-02-02T08:09:10Z",
+      "abs_url": "https://arxiv.org/abs/2601.23172",
+      "pdf_url": "https://arxiv.org/pdf/2601.23172v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 32,
+      "matched_keywords": [
+        "order flow",
+        "price impact",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "建立訂單流、市場衝擊與波動度的統一理論，解釋粗糙波動性，理論與實證俱佳。",
+      "summary": {
+        "title_zh": "訂單流、市場衝擊與波動率的統一理論",
+        "verdict": "以 Hawkes 過程區分核心訂單與反應流，透過單一統計量 $H_0$ 統一解釋訂單流持續性、粗糙波動率與平方根市場衝擊律。",
+        "problem": "現有市場微結構模型難以同時且一致地解釋訂單流的持續性、交易量與波動率的粗糙性，以及冪次法則的市場衝擊。",
+        "method": "建構結合核心訂單與反應流的 Hawkes 過程微結構模型，並推導其數學極限。分析市場的實際訂單流資料進行參數估計。",
+        "findings": "實證分析顯示核心流持續性參數 $H_0 \times \text{approx} \times 3/4$，此結果完美吻合市場衝擊的平方根定律，並與交易量及波動率的粗糙度估計高度一致。",
+        "implication": "這套理論架構有助於量化交易員在估計價格衝擊與波動率時維持無套利約束，前提是必須準確估計訂單流的 Hurst 指數。",
+        "caveats": "模型高度依賴數學簡化與特定極限定理，實際應用時可能受限於複雜的市場噪音。",
+        "practicality": 3,
+        "tags": [
+          "市場微結構",
+          "Hawkes過程",
+          "市場衝擊",
+          "波動率",
+          "訂單流"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.23749",
+      "title": "From Alpha to Execution: Trading Horizons, Regimes, and Schedules under Concave Impact and Hurst Scaling",
+      "authors": [
+        "Dnyanesh Kulkarni",
+        "Revant Nayar"
+      ],
+      "abstract": "Classical execution models assume linear impact, diffusive prices, and an exogenous horizon. We study execution under concave power-law impact and Hurst-scaled price fluctuations, and make two contributions. First, we choose the execution horizon by maximizing the Sharpe ratio of the trade's realized P&L. Price moves during the execution window are part of that P&L, so executing more slowly reduces its variance, and because impact is concave it can also lower cost per share. Urgency comes only from alpha realized while the order is being worked. The problem is governed by the signs of two quantities: (i) the duration elasticity of impact $a$, which under a structural prior equals the impact-persistence gap $β- H$ and can take either sign; and (ii) the net urgency $ν$, the rate of alpha realization net of exposure relief. When $ν$ keeps its sign over the window, an interior optimum exists, to leading order in $T/t_f$, only when both are positive; otherwise the order should be worked at the fastest or slowest admissible pace. In the interior regime the first-order condition involves no impact coefficient, order size or volume, and the objective is flat: for a large-cap example, the window within 1% of maximal Sharpe spans more than an order of magnitude. Second, given the window, we derive the schedule shape by convex programming under an envelope cost. For any increasing per-share cost of delay $w(t)$, the KKT solution is $φ\\propto (λ- w(t))_+^{1/β}$. For a Hurst-scaled envelope $w \\propto t^H$, the normalized schedule depends only on $(β, H)$, has a closed form via the incomplete beta function, is front-loaded, and tapers smoothly to zero, saving 10-17% of envelope cost relative to a constant-rate (TWAP) schedule of equal duration. Whether it uses the whole window depends on a single dimensionless robustness level, for which we give a calibration.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "math.OC",
+        "q-fin.MF",
+        "q-fin.PM"
+      ],
+      "published": "2026-10-16T16:55:06Z",
+      "updated": "2026-10-16T16:55:06Z",
+      "abs_url": "https://arxiv.org/abs/2610.23749",
+      "pdf_url": "https://arxiv.org/pdf/2610.23749v1",
+      "comment": "19 pages, 5 figures, 4 tables, including an appendix",
+      "journal_ref": "",
+      "keyword_score": 31,
+      "matched_keywords": [
+        "sharpe ratio",
+        "regime",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance_reason": "在凹性衝擊與赫斯特標度下推導最佳執行時域與排程，數學推導完整。",
+      "summary": {
+        "title_zh": "從 Alpha 到執行：在凹性衝擊與 Hurst 標度下的交易視界、體制與排程",
+        "verdict": "透過最大化夏普值來決定執行視界，並利用凸規劃導出最佳委託排程，可較 TWAP 節省 10-17% 的成本。",
+        "problem": "傳統執行模型多假設線性衝擊與外生視界，未能在考慮凹性價格衝擊、價格長記憶性與 Alpha 實現速率下，將執行視界與排程做最佳化整合。",
+        "method": "結合凹性冪次法則衝擊與 Hurst 標度價格波動，透過夏普值最大化與凸規劃求解。適用於高頻與低頻交易的演算法執行框架。",
+        "findings": "當淨急迫性與衝擊持續性滿足特定條件時存在內部最佳解，其夏普值目標函數在極大範圍內保持平坦。對於 Hurst 標度包絡，正規化排程呈前置型且平滑遞減至零，相較於同等時間的常數速率（TWAP）排程，可節省 10-17% 的包絡成本。",
+        "implication": "交易員可利用夏普值最大化來動態調整執行視界，並透過導出的閉形式排程來降低交易成本，前提是必須準確估計 Hurst 參數與衝擊彈性。",
+        "caveats": "模型假設高度依賴特定參數（如衝擊持續性與 Hurst 參數）的正確校準，若估計失準可能導致執行策略過於激進或保守。",
+        "practicality": 4,
+        "tags": [
+          "演算法交易",
+          "市場衝擊",
+          "交易成本",
+          "最佳化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.10407",
+      "title": "SOTA: Stock Options Trading Agents Guided by Option-Implied Return Distributions",
+      "authors": [
+        "Yizhen Xie",
+        "Mengyang Liu"
+      ],
+      "abstract": "As option markets grow and AI advances, agentic systems for option trading are gaining increasing attention. Language-model-based agents can reason over contextual information such as news, but option trading presents a particularly challenging decision problem: a single stock can have thousands of contracts, and the agent must decide both which contracts to trade and how to combine them. Existing approaches often sidestep this complexity by restricting the policy to a fixed strategy structure, such as a straddle, limiting their ability to switch strategies as market conditions change. We present SOTA (Stock Options Trading Agents), an agentic trading framework for structured option-strategy selection. SOTA abstracts the large option universe into strategy-level decisions while deterministic resolvers handle portfolio implementation. We develop SOTA by post-training Qwen3.8-27B with supervised fine-tuning followed by reinforcement learning. SOTA is evaluated on options on nine large-cap U.S. equities and SPY against rule-based and machine-learning strategy selectors in the same trading environment. Over a six-month out-of-sample period, SOTA earns an 18.3% total return with a Sharpe ratio of 1.60 and a maximum drawdown of 8.96%. We also document an asymmetric role of news: news improves frontier-teacher trajectories, but retaining news during reinforcement learning reduces out-of-sample return from 18.3% to -2.7%.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "q-fin.PM",
+        "q-fin.TR"
+      ],
+      "published": "2026-10-07T16:55:05Z",
+      "updated": "2026-10-07T16:55:05Z",
+      "abs_url": "https://arxiv.org/abs/2610.10407",
+      "pdf_url": "https://arxiv.org/pdf/2610.10407v1",
+      "comment": "Accepted at the NeurIPS 2026 Agenthon Workshop",
+      "journal_ref": "",
+      "keyword_score": 31,
+      "matched_keywords": [
+        "sharpe ratio",
+        "reinforcement learning",
+        "out-of-sample",
+        "drawdown",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合大語言模型與選擇權隱含報酬分布進行策略選取，樣本外表現合理且獲頂會工作坊接受。",
+      "summary": {
+        "title_zh": "SOTA：以期權隱含報酬分配導向的股票期權交易Agent",
+        "verdict": "透過微調大型語言模型結合強化學習進行期權策略選擇，半年樣本外報酬率達 18.3%、夏普值 1.60。",
+        "problem": "單一股票擁有數千種期權合約，Agent 面臨如何選擇合約與組合策略的複雜決策難題，且傳統方法常受限於固定策略結構無法隨市場調整。",
+        "method": "提出 SOTA 框架，將大型期權宇宙抽象化為策略層級決策並由確定性解析器處理投資組合實作；採用 Qwen3.8-27B 進行監督微調與強化學習後訓練。評估標的包含美國九檔大型權值股與 SPY。",
+        "findings": "在六個月的樣本外期間內，SOTA 獲得 18.3% 的總報酬率、1.60 的夏普值以及 8.96% 的最大回檔。研究亦發現新聞具非對稱角色：新聞雖能提升教師模型的軌跡，但在強化學習期間保留新聞會使樣本外報酬率從 18.3% 降至 -2.7%。",
+        "implication": "此方法能動態選擇期權策略並避開手動設定策略結構的限制，適合想將大型語言模型導入衍生性金融商品交易的團隊。",
+        "caveats": "在強化學習階段加入新聞資訊反而會大幅降低樣本外績效，顯示如何正確結合非結構化文字與強化學習仍具挑戰。",
+        "practicality": 4,
+        "tags": [
+          "期權交易",
+          "基礎模型",
+          "強化學習",
+          "Alpha 因子挖掘"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.03598",
+      "title": "When a Correct Reward Is Not Enough: Diagnosing and Guiding PPO in an Analytically Solved Broker-Trader Game",
+      "authors": [
+        "Siu Tung Wong",
+        "Carlo Campajola"
+      ],
+      "abstract": "Reinforcement learning (RL) is increasingly used for financial optimal-control problems when complex dynamics make analytical strategies difficult to obtain. There are financial mathematics literactures which provides many solved models whose equations and controls could evaluate and guide learning; we ask whether RL can exploit these results. We place a proximal policy optimisation (PPO) agent in an analytically solved continuous-time broker--trader game. PPO replaces the broker and chooses its trading speed while interacting with an informed trader and stochastic uninformed order flow. We derive a finite-step reward from the broker's continuous-time payoff and verify its discrete implementation through grid refinement and an exact one-step identity. With zero uninformed flow, a validation-selected PPO--FFNN approaches the reference action. With stochastic uninformed flow, the tested PPO--FFNN and PPO--LSTM remain inaccurate, although supervised learning confirms that their actors can represent the action. Monte Carlo diagnostics show that their critics do not reliably rank nearby actions; potential-based reward shaping also gives no reliable improvement. Under partial information, a causal certainty-equivalent controller based on the broker's observable history remains close to the reference, while PPO has larger errors and lower payoffs. Finally, we freeze the analytical policy and train PPO to adjust it after the execution cost changes. Halving the cost yields a repeatable improvement that closes \\(2.22\\%\\) of the gap to the changed-cost reference. The analytical solution therefore provides both a benchmark for diagnosing RL and a useful starting policy for adaptation.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.AI"
+      ],
+      "published": "2026-10-02T17:03:29Z",
+      "updated": "2026-10-02T17:03:29Z",
+      "abs_url": "https://arxiv.org/abs/2610.03598",
+      "pdf_url": "https://arxiv.org/pdf/2610.03598v1",
+      "comment": "8 pages; accepted for publication at ICAIF 2026",
+      "journal_ref": "",
+      "keyword_score": 31,
+      "matched_keywords": [
+        "order flow",
+        "reinforcement learning",
+        "execution cost"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance_reason": "在解析解已知的經紀商交易員賽局中診斷 PPO 表現，指出強化學習在財務上的極限與失准處。",
+      "summary": {
+        "title_zh": "當正確的獎勵函數仍不夠：在可解析求解的經紀商-交易員賽局中診斷與引導PPO",
+        "verdict": "研究顯示PPO在複雜金融賽局中常因Critic評估失準而表現不佳，但可作為解析解的動態調整工具。",
+        "problem": "強化學習在金融最佳化控制中常面臨學習成效不彰的問題，且缺乏有效的診斷與引導機制來評估其偏差來源。",
+        "method": "使用PPO（包含FFNN與LSTM架構），在可解析求解的連續時間經紀商-交易員賽局中進行模擬與測試。",
+        "findings": "在無隨機無知訂單流時PPO可逼近參考動作，但在隨機無知訂單流下PPO與LSTM表現不準確，且蒙地卡羅診斷顯示其Critic無法可靠排序相鄰動作。將分析策略凍結並訓練PPO在成本減半後進行調整，可彌補2.22%至新成本參考解的差距。",
+        "implication": "解析解能作為診斷強化學習的基準，並可作為成本變動時進行策略適應的良好起始點。",
+        "caveats": "在部分資訊與隨機訂單流下，PPO的Critic無法準確對動作評分，導致其整體報酬偏低。",
+        "practicality": 3,
+        "tags": [
+          "強化學習",
+          "PPO",
+          "最佳化控制",
+          "市場微結構",
+          "經紀商交易員賽局"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.29018",
+      "title": "Liquidity-Based Audit of Algorithmic Trading Strategies",
+      "authors": [
+        "Irene Aldridge"
+      ],
+      "abstract": "We show that net demand for liquidity by algo strategies is identifiable from its trade and price history alone, with no knowledge of its signal or optimization problem. An exact multi-period regret decomposition implies that the sign of this statistic classifies a linear strategy as a net liquidity consumer or provider, recovering the Kyle (1985) informed-trader/market-maker dichotomy from observables alone. Under an AR(1) cost process, the same statistic equals the product of strategy size and the squared Roll (1984) implied spread, making the correction a direct proxy for prevailing illiquidity. Extending to endogenous price impact and aggregating across N correlated strategies yields a liquidity-balance condition whose violation produces welfare loss scaling as N squared, a closed-form fire-sale externality. We calibrate to CRSP equity data (2016-2025), tracking implied spreads through the COVID-19 and 2022 rate-shock episodes, with an estimator computable in O(Tnd) time.",
+      "primary_category": "econ.EM",
+      "categories": [
+        "econ.EM",
+        "cs.LG",
+        "q-fin.CP",
+        "q-fin.RM",
+        "stat.ML"
+      ],
+      "published": "2026-06-27T17:35:21Z",
+      "updated": "2026-08-13T17:50:20Z",
+      "abs_url": "https://arxiv.org/abs/2606.29018",
+      "pdf_url": "https://arxiv.org/pdf/2606.29018v2",
+      "comment": "32 pages",
+      "journal_ref": "",
+      "keyword_score": 31,
+      "matched_keywords": [
+        "algorithmic trading",
+        "price impact",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "從歷史交易與價格資料識別演化策略的流動性需求，實證涵蓋多年 CRSP 資料。",
+      "summary": {
+        "title_zh": "基於流動性的演算法交易策略稽核",
+        "verdict": "僅憑交易與價格歷史即可識別演算法的流動性淨需求，並量化其引發的拋售外部性。",
+        "problem": "傳統上難以在不了解內部訊號或最佳化問題的情況下，評估演算法交易策略對市場流動性的實際角色與系統性衝擊。",
+        "method": "運用多期後悔分解與 AR(1) 成本過程推導流動性平衡條件。使用 CRSP 股票市場資料（2016至2025年）進行實證檢定，涵蓋 COVID-19 與 2022 年升息期間。",
+        "findings": "證明淨流動性需求可從歷史價格與交易中完全識別，且流動性平衡條件遭到違反時會產生隨策略數量平方擴大的拋售外部性福利損失；未報告具體績效數字。",
+        "implication": "實務上可用此 $O(Tnd)$ 複雜度的估計器來監控策略的流動性衝擊與系統性風險。前提是須符合線性策略與特定成本過程的假設。",
+        "caveats": "模型建立在 AR(1) 成本過程與線性策略的理想化假設上。",
+        "practicality": 4,
+        "tags": [
+          "流動性",
+          "演算法交易",
+          "市場微結構",
+          "系統性風險"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.28898",
+      "title": "Model Predictive Control For Trade Execution",
+      "authors": [
+        "Thomas P. McAuliffe",
+        "Samuel Liew",
+        "Yuchao Li",
+        "Andrey Ushenin",
+        "Chihang Wang",
+        "Alexandros Tasos",
+        "Jack Pearce",
+        "Dimitris Tasoulis",
+        "Dimitri P. Bertsekas",
+        "Theodoros Tsagaris"
+      ],
+      "abstract": "We address the problem of executing large client orders in continuous double-auction markets under time and liquidity constraints. We propose a model predictive control (MPC) framework that balances three competing objectives: order completion, market impact, and opportunity cost. Our algorithm is guided by a trading schedule (such as time-weighted average price or volume-weighted average price) but allows for deviations to reduce the expected execution cost, with due regard to risk. Our MPC algorithm executes the order progressively, and at each decision step it solves a fast quadratic program that trades off expected transaction cost against schedule deviation, while incorporating a residual cost term derived from a simple base policy. Approximate schedule adherence is maintained through explicit bounds, while variance constraints on deviation provide direct risk control. The resulting system is modular, data-driven, and suitable for deployment in production trading infrastructure. Using six months of NASDAQ 'level 3' data and simulated orders, we show that our MPC approach reduces schedule shortfall by approximately 40-50% relative to spread-crossing benchmarks and achieves significant reductions in slippage. Moreover, augmenting the base policy with predictive price information further enhances performance, highlighting the framework's flexibility for integration with forecasting components.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-03-30T18:25:52Z",
+      "updated": "2026-03-30T18:25:52Z",
+      "abs_url": "https://arxiv.org/abs/2603.28898",
+      "pdf_url": "https://arxiv.org/pdf/2603.28898v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 31,
+      "matched_keywords": [
+        "transaction cost",
+        "execution cost",
+        "slippage",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出模型預測控制演算法執行大單，使用半年納斯達克 L3 資料回測，兼具實用性與理論基礎。",
+      "summary": {
+        "title_zh": "應用於交易執行的模型預測控制",
+        "verdict": "提出模型預測控制架構執行大單，較基準減少約 40-50% 的排程落差。",
+        "problem": "在連續雙向競價市場中，如何在時間與流動性限制下執行大型客戶訂單，並平衡訂單完成度、市場衝擊與機會成本。",
+        "method": "使用模型預測控制架構，於每個決策步驟求解二次規劃問題，權衡預期交易成本與排程偏差。使用 NASDAQ 六個月的 Level 3 資料與模擬訂單進行實證。",
+        "findings": "相比於跨價差基準，MPC 方法將排程落差減少了約 40-50%，並大幅降低滑價。將基礎策略結合預測性價格資訊可進一步提升表現。",
+        "implication": "此架構具模組化且適合部署於生產環境，可彈性整合價格預測元件來改善交易執行品質。",
+        "caveats": "實證結果是基於模擬訂單得出。",
+        "practicality": 4,
+        "tags": [
+          "模型預測控制",
+          "交易執行",
+          "市場衝擊",
+          "演算法交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.19419",
+      "title": "RAmmStein: Regime Adaptation in Mean-reverting Markets with Stein Thresholds -- Optimal Impulse Control in Concentrated AMMs",
+      "authors": [
+        "Pranay Anchuri"
+      ],
+      "abstract": "Concentrated liquidity provision in decentralized exchanges presents a fundamental Impulse Control problem. Liquidity Providers (LPs) face a non-trivial trade-off between maximizing fee accrual through tight price-range concentration and minimizing the friction costs of rebalancing, including gas fees and swap slippage. Existing methods typically employ heuristic or threshold strategies that fail to account for market dynamics. This paper formulates liquidity management as an optimal control problem and derives the corresponding Hamilton-Jacobi-Bellman quasi-variational inequality (HJB-QVI). We present an approximate solution RAmmStein, a Deep Reinforcement Learning method that incorporates the mean-reversion speed (theta) of an Ornstein-Uhlenbeck process among other features as input to the model. We demonstrate that the agent learns to separate the state space into regions of action and inaction. We further extend the framework with RAmmStein-Width, which jointly optimizes rebalancing timing and position width via a 6-action DDQN. We evaluate the framework using high-frequency 1Hz Coinbase trade data comprising over 6.8M trades on a realistic environment (10M TVL, 1% default width). Experimental results show that RAmmStein achieves a net ROI of 1.60%, the highest among all realistic (non-omniscient) strategies, while greedy strategies lose up to -8.4% to gas costs. Notably, the agent reduces rebalancing frequency by 85% compared to greedy rebalancing. RAmmStein-Width discovers extreme parsimony on its own, executing only 9 rebalances and $40 in gas, and degrades more slowly than all active strategies at elevated gas costs. Our results demonstrate that regime-aware laziness can significantly improve capital efficiency by preserving the returns that would otherwise be eroded by the operational costs.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-fin.TR"
+      ],
+      "published": "2026-02-23T01:25:16Z",
+      "updated": "2026-03-07T03:43:02Z",
+      "abs_url": "https://arxiv.org/abs/2602.19419",
+      "pdf_url": "https://arxiv.org/pdf/2602.19419v2",
+      "comment": "13 pages, 2 figures, 5 tables, 1 algorithm; an earlier version submitted to Designing DeFi workshop (https://www.designingdefi.xyz/)",
+      "journal_ref": "",
+      "keyword_score": 31,
+      "matched_keywords": [
+        "reinforcement learning",
+        "high-frequency",
+        "slippage",
+        "regime",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "將集中流動性造市公式化為最佳脈衝控制問題，並以高頻資料進行真實環境驗證。",
+      "summary": {
+        "title_zh": "RAmmStein：結合 Stein 閾值的均值回歸市場體制調適——集中式自動化造市商的最佳脈衝控制",
+        "verdict": "利用深度強化學習結合均值回歸速度進行集中流動性最佳化，實現 1.60% 淨投資報酬率並大幅降低調整頻率。",
+        "problem": "去中心化交易所的流動性提供者在極端價格區間集中流動性時，面臨手續費收益與高昂再平衡摩擦成本（如 Gas 費與滑價）之間的權衡。",
+        "method": "將流動性管理建模為最佳控制問題並推導 HJB-QVI，提出以 Ornstein-Uhlenbeck 過程的均值回歸速度為特徵的深層強化學習方法 RAmmStein。使用 Coinbase 高頻 1Hz 資料進行模擬評估。",
+        "findings": "RAmmStein 達到 1.60% 的淨投資報酬率，為所有非全知策略中最高，且相較貪婪策略減少了 85% 的再平衡頻率。貪婪策略因 Gas 成本虧損高達 -8.4%，而擴展的 RAmmStein-Width 僅執行 9 次再平衡且 Gas 成本僅 40 美元。",
+        "implication": "透過體制感知降低交易頻率能有效保護報酬，免受作業成本侵蝕，可直接應用於去中心化交易所的造市策略。",
+        "caveats": "實驗假設了特定的流動池環境與 Gas 成本結構，實際部署時可能受鏈上動態與極端滑價影響。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "自動化造市商",
+          "最佳控制",
+          "高頻交易",
+          "加密貨幣"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.07085",
+      "title": "QuantaAlpha: An Evolutionary Framework for LLM-Driven Alpha Mining",
+      "authors": [
+        "Jun Han",
+        "Shuo Zhang",
+        "Wei Li",
+        "Yifan Dong",
+        "Tu Hu",
+        "Yumo Zhu",
+        "Xiaomin Yu",
+        "Xin Guo",
+        "Zhaowei Liu",
+        "Kunyi Wang",
+        "Jingping Liu",
+        "Tianyi Jiang",
+        "Ruichuan An",
+        "Sen Hu",
+        "Zhi Yang",
+        "Ronghao Che",
+        "Huacan Wang"
+      ],
+      "abstract": "Financial markets are noisy and non-stationary, making alpha mining highly sensitive to backtest noise and regime shifts. While recent agentic frameworks improve automation, they often lack controllable multi-round search and reliable reuse of validated experience. To address these challenges, we propose QuantaAlpha, an evolutionary alpha mining framework that treats each end-to-end mining run as a trajectory and improves factors via trajectory-level mutation and crossover. QuantaAlpha localizes suboptimal steps for targeted revision and recombines complementary high-reward segments to reuse effective patterns, enabling structured exploration and refinement across iterations. During factor generation, it enforces semantic consistency across hypothesis, factor expression, and executable code, and constrains the complexity and redundancy of the generated factor to mitigate crowding. Extensive experiments on CSI 300 show consistent gains over strong baselines and prior agentic systems. Using GPT-5.2, QuantaAlpha achieves an IC of 0.0472 with ARR of 4.68% and MDD of 11.8%. Moreover, factors mined on CSI 300 transfer effectively to CSI 500 and the S&P 500, delivering about 40.28% and 19.1% cumulative excess return over four years, respectively, which indicates strong robustness under market distribution shifts.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "cs.AI",
+        "q-fin.CP"
+      ],
+      "published": "2026-02-06T08:08:04Z",
+      "updated": "2026-05-18T16:57:08Z",
+      "abs_url": "https://arxiv.org/abs/2602.07085",
+      "pdf_url": "https://arxiv.org/pdf/2602.07085v3",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 32,
+      "matched_keywords": [
+        "backtest",
+        "llm",
+        "regime",
+        "alpha"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出演化式因子挖掘框架，跨市場泛化能力佳，實證扎實。",
+      "summary": {
+        "title_zh": "QuantaAlpha：基於基礎模型驅動 Alpha 因子挖掘的演化框架",
+        "verdict": "提出 QuantaAlpha 演化框架，透過軌跡級別的變異與交配來改善 Alpha 因子，在多個市場展現良好穩健性。",
+        "problem": "金融市場具雜訊與非平穩性，傳統 Alpha 因子挖掘容易受回測雜訊與體制轉換影響，且現有代理框架缺乏可控的多輪搜尋與經驗再利用。",
+        "method": "使用 QuantaAlpha 演化框架與 GPT-5.2 模型，針對 CSI 300 日資料進行因子挖掘與跨市場驗證。",
+        "findings": "使用 GPT-5.2 的 QuantaAlpha 達到 0.0472 的 IC、4.68% 的年化報酬率與 11.8% 的最大回撤。挖掘出的因子能有效轉移至 CSI 500 與 S&P 500，四年內分別帶來約 40.28% 與 19.1% 的累積超額報酬。",
+        "implication": "可用於自動化 Alpha 因子生成與跨市場策略部署，前提是需要串接具備足夠推理能力的大型語言模型。",
+        "caveats": "模型依賴 GPT-5.2 等高階基礎模型，實際落地時的 API 成本與呼叫延遲可能限制高頻應用的可行性。",
+        "practicality": 4,
+        "tags": [
+          "Alpha 因子挖掘",
+          "基礎模型",
+          "演化演算法",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.22893",
+      "title": "Universal Diffusion Models for Implied Volatility Surfaces: Learning Shared Dynamics Across Stocks",
+      "authors": [
+        "Mingzhi Yang",
+        "Sheng Wang",
+        "Chao Zhang",
+        "Ruikun Li"
+      ],
+      "abstract": "Modeling the dynamics of option implied volatility surface (IVS) is crucial for pricing, hedging, and risk-managing option portfolios. We develop a universal conditional diffusion model that learns to jointly generate next-day IVS increments and the underlying stock's returns. The model is trained on pooled data from 50 stocks and evaluated on a test set comprising 50 in-sample stocks and 50 out-of-sample stocks excluded from training. The training objective is primarily the minimization of MSE, with the variants that jointly impose surface smoothness, and that penalize the presence of static-arbitrage, which are all economically meaningful constraints. Across in-sample and out-of-sample stocks, our diffusion model outperforms the VolGAN benchmark in reducing arbitrage violations, improving stock risk prediction, and aligning explained variance ratios by the first three principal components. The fact that the model extrapolates well to stocks that are excluded from training indicates that the learned dynamics can be shared across stocks. These findings support a universal conditional diffusion as a credible framework for multi-stock implied volatility surface scenario generation.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP"
+      ],
+      "published": "2026-09-19T08:51:28Z",
+      "updated": "2026-09-25T09:43:06Z",
+      "abs_url": "https://arxiv.org/abs/2609.22893",
+      "pdf_url": "https://arxiv.org/pdf/2609.22893v2",
+      "comment": "9 pages, 5 figures, 4 tables; updated the references. Code is available at https://github.com/mzyang-code/Universal-Diffusion-for-IVS",
+      "journal_ref": "",
+      "keyword_score": 31,
+      "matched_keywords": [
+        "out-of-sample",
+        "implied volatility",
+        "hedging",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "開發跨股票的通用條件擴散模型來生成隱含波動率表面，實證嚴謹且程式碼公開。",
+      "summary": {
+        "title_zh": "隱含波動率曲面的通用擴散模型：學習跨股票的共用動態",
+        "verdict": "開發通用條件擴散模型聯合生成隔日隱含波動率曲面增量與股票報酬，能有效降低無套利違規並泛化至樣本外股票。",
+        "problem": "如何聯合建模選擇權隱含波動率曲面與標的股票的動態，以用於訂價、避險與風險管理。",
+        "method": "使用條件擴散模型聯合生成隱含波動率曲面增量與股票報酬。模型在 50 支股票的合併資料上進行訓練，並在 50 支樣本內與 50 支樣本外股票上進行評估，訓練目標包含最小化均方誤差、表面平滑性與靜態套利懲罰。",
+        "findings": "在樣本內與樣本外股票中，此擴散模型在減少套利違規、改善股票風險預測以及對齊前三個主成分解釋變異數比率方面，均優於 VolGAN 基準模型。",
+        "implication": "該模型能將學到的動態推廣至未參與訓練的股票，適合作為多檔股票隱含波動率曲面的情境生成框架。",
+        "caveats": "論文未報告具體的交易績效數字或夏普值。",
+        "practicality": 4,
+        "tags": [
+          "擴散模型",
+          "隱含波動率曲面",
+          "衍生性金融商品",
+          "情境生成"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.07946",
+      "title": "Simple Dynamic Stock/Bond/Gold Portfolios",
+      "authors": [
+        "Nikhil Devanathan",
+        "Alexandros E. Tzikas",
+        "Stephen P. Boyd"
+      ],
+      "abstract": "For more than four decades, the 60/40 stock/bond portfolio has served as a benchmark for delivering reasonable returns without excessive risk. More recently, a 50/30/20 stock/bond/alternative portfolio has been suggested. We use gold as the alternative and as an inflation hedge. In this paper we ask: how much improvement over these benchmark fixed-weight portfolios can be obtained using widely available public data and standard methods from quantitative finance? We restrict ourselves to long-only dynamic portfolios of stocks, bonds, and gold, plus cash, rebalancing monthly, using only publicly available data. We evaluate portfolios on the conventional metrics: return, volatility, Sharpe ratio (computed in excess of the federal funds rate), drawdown, and turnover, in addition to consistency of performance over time, judged by the consistency of the realized annual volatility. Over the 20--year period 2006--2026, using a conservative estimate of trading costs, we show that all risk-adjusted and drawdown metrics are improved using simple volatility control, where we dynamically mix the fixed-weight portfolios with cash so as to target a fixed volatility. This method relies on a simple estimate of portfolio volatility derived from past returns. We also demonstrate that more sophisticated portfolios based on convex optimization---similar to those used in quantitative hedge funds---yield further substantial improvement in return and risk-adjusted return. We consider two such portfolios, one that uses a simple estimate of future returns based on past returns, and one that forecasts future returns based on past returns and just a handful of widely available public economic data. These portfolios also outperform a suite of standard risk-based allocation methods, such as risk parity and minimum variance, evaluated on the same assets and data.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "math.OC"
+      ],
+      "published": "2026-09-07T19:58:36Z",
+      "updated": "2026-09-07T19:58:36Z",
+      "abs_url": "https://arxiv.org/abs/2609.07946",
+      "pdf_url": "https://arxiv.org/pdf/2609.07946v1",
+      "comment": "42 pages, 7 figures, 18 tables",
+      "journal_ref": "",
+      "keyword_score": 31,
+      "matched_keywords": [
+        "sharpe ratio",
+        "risk parity",
+        "drawdown",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用公開資料與簡單波動度控制改善股債金配置，實證期長達二十年且考量交易成本。",
+      "summary": {
+        "title_zh": "簡單的動態股票、債券與黃金投資組合",
+        "verdict": "透過波動度控制與凸最佳化動態調整股債金資產配置，能顯著改善傳統固定權重投資組合的風險調整後報酬。",
+        "problem": "探討在僅使用公開資料與標準量化方法的限制下，動態調整股票、債券、黃金與現金的投資組合能比傳統固定權重基準帶來多少改善。",
+        "method": "使用股票、債券、黃金與現金組成的只能做多之動態投資組合，以月頻率再平衡，評估期間為 2006 年至 2026 年共 20 年，並扣除保守估計的交易成本。",
+        "findings": "簡單的波動度控制方法改善了所有風險調整與回撤指標；基於凸最佳化的精密投資組合則進一步大幅提升了報酬率與風險調整後報酬，且表現優於風險平價與最小變異數等標準風險配置方法。",
+        "implication": "實務上可透過簡單的歷史波動度估計與現金混和來達成波動度控制，或進一步利用總體經濟公開資料進行凸最佳化配置以提升績效。",
+        "caveats": "使用的方法依賴歷史報酬與少數公開總體經濟資料來預測未來，其成效可能受限於未來市場體制的轉變。",
+        "practicality": 4,
+        "tags": [
+          "資產配置",
+          "凸最佳化",
+          "波動度控制",
+          "風險平價"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "date": "2026-10-24",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2610.31141",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 3,
+      "reason": "樣本外夏普高達 16 至 63，不合常理，疑似存在方法學盲點或資料錯誤。"
+    },
+    {
+      "arxiv_id": "2610.30564",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "探討新聞時效性對機器學習與大語言模型投組分配的影響，實證完整。"
+    },
+    {
+      "arxiv_id": "2610.30891",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 9,
+      "value": 6,
+      "reason": "推導競爭造市賽局的純策略納許均衡，並以模擬驗證，理論推導嚴謹。"
+    },
+    {
+      "arxiv_id": "2602.07085",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出演化式因子挖掘框架，跨市場泛化能力佳，實證扎實。"
+    },
+    {
+      "arxiv_id": "2601.23172",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "建立訂單流、市場衝擊與波動度的統一理論，解釋粗糙波動性，理論與實證俱佳。"
+    },
+    {
+      "arxiv_id": "2601.07131",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 2,
+      "reason": "因前視偏誤撤回，作者自行發現資料洩漏問題。"
+    },
+    {
+      "arxiv_id": "2512.20082",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "結合微調大語言模型、檢索增強與強化學習進行情緒分析，已獲會議接受。"
+    },
+    {
+      "arxiv_id": "2512.05868",
+      "topic": "Alpha 與因子",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "使用脈冲神經網路預測高頻價格跳空，透過模擬回測，方法具創新性。"
+    },
+    {
+      "arxiv_id": "2511.05861",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "研究不完全市場下的時間一致性均衡投組選擇，使用二次BSDE系統，理論嚴謹。"
+    },
+    {
+      "arxiv_id": "2511.00047",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 3,
+      "value": 7,
+      "reason": "結合 Graph-BERT 與 GRU 偵測動態加密貨幣交易網路中的金融詐欺，實證扎實。"
+    },
+    {
+      "arxiv_id": "2610.23749",
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 8,
+      "reason": "在凹性衝擊與赫斯特標度下推導最佳執行時域與排程，數學推導完整。"
+    },
+    {
+      "arxiv_id": "2610.10407",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "結合大語言模型與選擇權隱含報酬分布進行策略選取，樣本外表現合理且獲頂會工作坊接受。"
+    },
+    {
+      "arxiv_id": "2610.03598",
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 8,
+      "reason": "在解析解已知的經紀商交易員賽局中診斷 PPO 表現，指出強化學習在財務上的極限與失准處。"
+    },
+    {
+      "arxiv_id": "2609.22893",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "開發跨股票的通用條件擴散模型來生成隱含波動率表面，實證嚴謹且程式碼公開。"
+    },
+    {
+      "arxiv_id": "2609.12793",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出具備倒數第二層垂直融合的混合 LSTM 架構進行金融預測，跨市場驗證充分。"
+    },
+    {
+      "arxiv_id": "2609.07946",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "利用公開資料與簡單波動度控制改善股債金配置，實證期長達二十年且考量交易成本。"
+    },
+    {
+      "arxiv_id": "2608.04305",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "針對風險感知 Q 學習提出自適應訓練控制器，降低貝爾曼殘差，實證完整。"
+    },
+    {
+      "arxiv_id": "2607.23068",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "精簡神經網路以降低變異數拖曳，已刊登於 ICAIF 期刊且程式碼公開。"
+    },
+    {
+      "arxiv_id": "2607.04280",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 9,
+      "value": 6,
+      "reason": "利用極小化限價單簿模型進行反事實消融實驗，探討市場衝擊平方根律的成因。"
+    },
+    {
+      "arxiv_id": "2607.01705",
+      "topic": "Alpha 與因子",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "證明 MACD 型交易訊號可由潛在動量飄移的濾波估計自然導出，數學推導扎實。"
+    },
+    {
+      "arxiv_id": "2606.29018",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "從歷史交易與價格資料識別演化策略的流動性需求，實證涵蓋多年 CRSP 資料。"
+    },
+    {
+      "arxiv_id": "2606.16269",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 6,
+      "reason": "重新詮釋交易符號長記憶性與平方根律價格衝擊的理論推導。"
+    },
+    {
+      "arxiv_id": "2605.30643",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 9,
+      "value": 6,
+      "reason": "提出公司債造市中品質調整命中率目標的隨機控制框架，模擬設定合理。"
+    },
+    {
+      "arxiv_id": "2604.08356",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "引入最低政權效能評估系統性投資策略的耐久度，對因子衰減風險提出實用診斷工具。"
+    },
+    {
+      "arxiv_id": "2604.02743",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "利用選擇權資料與粗糙波動度模型增強已實現波動率預測，實證扎實。"
+    },
+    {
+      "arxiv_id": "2603.28898",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出模型預測控制演算法執行大單，使用半年納斯達克 L3 資料回測，兼具實用性與理論基礎。"
+    },
+    {
+      "arxiv_id": "2603.21330",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出結合研究評估與實盤部署的模組化量化交易基礎架構，具備工程價值。"
+    },
+    {
+      "arxiv_id": "2603.19944",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "評估大語言模型在股票投資的表現，指出其推理錯誤與需要人類監督的必要性。"
+    },
+    {
+      "arxiv_id": "2603.15947",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出超自適應動量動態學求解三次基數限制投組最佳化，有效避免二次化失真，實證完整。"
+    },
+    {
+      "arxiv_id": "2602.23330",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "以多代理人大語言模型系統將投資分析分解為細粒度任務，並在控制資料洩漏下回測。"
+    },
+    {
+      "arxiv_id": "2602.19419",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "將集中流動性造市公式化為最佳脈衝控制問題，並以高頻資料進行真實環境驗證。"
+    },
+    {
+      "arxiv_id": "2602.07023",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "評估大語言模型代理人在股票市場模擬中的行為一致性，探討其切換策略是否符合行為財務學。"
+    },
+    {
+      "arxiv_id": "2601.18811",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "使用變分量子電路進行動態投組最佳化，證明量子強化學習理論上的可行性與實務延遲限制。"
+    },
+    {
+      "arxiv_id": "2601.13082",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "量化敵意新聞對大語言模型驅動之演算法交易系統的貨幣風險，已獲頂會接受。"
+    },
+    {
+      "arxiv_id": "2601.01709",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "擴展 QLBS 框架並提出複製學習選擇權訂價，強調實現避險結果的重要性。"
+    },
+    {
+      "arxiv_id": "2511.21221",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "運用遷移學習進行投組最佳化，結合跨市場資訊漸近達到最大夏普值。"
+    },
+    {
+      "arxiv_id": "2511.07110",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "將大語言模型特徵蒸餾至小型模型以進行強化學習造市，已獲 AAAI 接受。"
+    },
+    {
+      "arxiv_id": "2610.25604",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "針對限價單簿基礎模型提出對抗式後訓練，改善真實感並獲 ICAIF 接受。"
+    },
+    {
+      "arxiv_id": "2609.18019",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出無需模型的被動執行演算法 Shadow-PPOV，透過一整年 CME 期貨資料回測，實證非常扎實。"
+    },
+    {
+      "arxiv_id": "2608.23308",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出 FIDES 協議來協調大語言模型交易策略的自然語言、程式碼與績效，發現普遍存在自我評估過度樂觀問題。"
+    }
+  ]
+}
