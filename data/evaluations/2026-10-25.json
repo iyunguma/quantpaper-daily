@@ -1,0 +1,327 @@
+{
+  "date": "2026-10-25",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2608.17715",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 4,
+      "value": 6,
+      "reason": "評估信用風險解釋模型，實證完整。"
+    },
+    {
+      "arxiv_id": "2608.00647",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 4,
+      "value": 4,
+      "reason": "僅使用固定種子代理人模擬，無真實市場資料。"
+    },
+    {
+      "arxiv_id": "2607.21170",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "結合拓撲資料分析與情感分數，實證完整。"
+    },
+    {
+      "arxiv_id": "2607.19497",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "推導趨勢追蹤系統性質並以實盤檢驗，嚴謹。"
+    },
+    {
+      "arxiv_id": "2607.10960",
+      "topic": "交易執行",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 5,
+      "reason": "僅在封閉式模擬器中訓練，無真實市場回測。"
+    },
+    {
+      "arxiv_id": "2607.01377",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "直接估計訂單流價格衝擊係數，實證扎實。"
+    },
+    {
+      "arxiv_id": "2607.00581",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "ICML發表，端到端決策導向學習，實證完整。"
+    },
+    {
+      "arxiv_id": "2606.06823",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 4,
+      "reason": "績效增幅過大且缺乏成本考量，略顯誇大。"
+    },
+    {
+      "arxiv_id": "2605.24031",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "無套利限制下的隱含波動度表面重建，實證完整。"
+    },
+    {
+      "arxiv_id": "2606.00071",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "綜述比特幣預測文獻並點出方法學缺陷，具參考價值。"
+    },
+    {
+      "arxiv_id": "2605.13407",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "結合向量量化與財務先驗，實證扎實。"
+    },
+    {
+      "arxiv_id": "2603.19716",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "推導帶有清算約束的最佳避險比例，結合模擬驗證。"
+    },
+    {
+      "arxiv_id": "2603.20271",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "分析投資人類型間的資訊傳遞，實證完整但alpha有限。"
+    },
+    {
+      "arxiv_id": "2603.10299",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "ICLR工作坊發表，利用大型語言模型進行波動度預測。"
+    },
+    {
+      "arxiv_id": "2602.14439",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "推導ESG約束下投資組合的漸近夏普值，理論與實證兼備。"
+    },
+    {
+      "arxiv_id": "2601.07992",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "提出假日期測試以檢測總經預測大型語言模型的前視偏誤。"
+    },
+    {
+      "arxiv_id": "2601.06090",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "利用相關性特徵結構進行適應性投資組合配置，實證扎實。"
+    },
+    {
+      "arxiv_id": "2512.02036",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "已刊登於期刊，結合基本面與技術面的混合模型。"
+    },
+    {
+      "arxiv_id": "2610.17130",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 4,
+      "reason": "報酬率偏高且為代理人系統，需留意過擬合。"
+    },
+    {
+      "arxiv_id": "2609.38869",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "結合SHAP與歷史類比提升模型預測解釋的忠實度。"
+    },
+    {
+      "arxiv_id": "2609.24175",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "使用群體相對策略最佳化微調模型進行資產排序。"
+    },
+    {
+      "arxiv_id": "2609.00731",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "探討自主代理人經驗資產定價的方法學與評估標準。"
+    },
+    {
+      "arxiv_id": "2608.29669",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "利用語言模型構建空間資產定價模型，方法創新。"
+    },
+    {
+      "arxiv_id": "2608.24703",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "比較多種群聚演算法在領先落後關係上的交易表現。"
+    },
+    {
+      "arxiv_id": "2608.00127",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "建立超出布朗運動的回撤風險蒙地卡羅框架，實用。"
+    },
+    {
+      "arxiv_id": "2607.26405",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "設計多貨幣自動化造市商並以真實外匯資料驗證，實證扎實。"
+    },
+    {
+      "arxiv_id": "2607.20762",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "大規模審計去中心化交易所路由次優性，實證詳盡。"
+    },
+    {
+      "arxiv_id": "2607.03082",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "評估主動型ETF的投組最佳化與尾部風險，實證完整。"
+    },
+    {
+      "arxiv_id": "2606.07059",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "推導市場衝擊的結構性恆等式，理論推導嚴謹。"
+    },
+    {
+      "arxiv_id": "2604.17593",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出高維均異變數投資的後篩選兩階段框架，嚴謹。"
+    },
+    {
+      "arxiv_id": "2603.13638",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "建立因果訊號工程框架，無過度擬合宣稱，嚴謹。"
+    },
+    {
+      "arxiv_id": "2603.02620",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "探討最佳化器作為隱含先驗對財務預測的影響，深入。"
+    },
+    {
+      "arxiv_id": "2602.23784",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 9,
+      "value": 4,
+      "reason": "宣稱模型表現極佳但僅基於模擬回測。"
+    },
+    {
+      "arxiv_id": "2603.06587",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "提出考量資金缺口的強化學習選擇權避險代理人。"
+    },
+    {
+      "arxiv_id": "2512.05907",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "結合檢索增強生成與模型進行共同基金投組配置。"
+    },
+    {
+      "arxiv_id": "2512.03123",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "引入隨機熱力學建模價格衝擊與無套利條件，推導嚴謹。"
+    },
+    {
+      "arxiv_id": "2511.00665",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 3,
+      "reason": "單一資產短期回測且報酬過高，樣本外過擬合。"
+    },
+    {
+      "arxiv_id": "2610.22727",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "結合最佳運輸與擴散模型預測極限訂單簿供應，扎實。"
+    },
+    {
+      "arxiv_id": "2610.09613",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "應用殘差學習深化資產定價神經網路模型，表現佳。"
+    },
+    {
+      "arxiv_id": "2610.04221",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出具備分布不確定性的強健增強型指數追蹤投資組合。"
+    }
+  ]
+}

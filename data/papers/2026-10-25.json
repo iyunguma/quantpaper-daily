@@ -1,0 +1,528 @@
+{
+  "date": "2026-10-25",
+  "generated_at": "2026-10-25T09:13:57+08:00",
+  "scanned": 2395,
+  "eligible": 2315,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2511.07110",
+      "title": "Two Heads are Better than One: Distilling Large Language Model Features Into Small Models with Feature Decomposition and Mixture",
+      "authors": [
+        "Tianhao Fu",
+        "Xinxin Xu",
+        "Weichen Xu",
+        "Jue Chen",
+        "Ruilong Ren",
+        "Bowen Deng",
+        "Xinyu Zhao",
+        "Jian Cao",
+        "Xixin Cao"
+      ],
+      "abstract": "Market making (MM) through Reinforcement Learning (RL) has attracted significant attention in financial trading. With the development of Large Language Models (LLMs), more and more attempts are being made to apply LLMs to financial areas. A simple, direct application of LLM as an agent shows significant performance. Such methods are hindered by their slow inference speed, while most of the current research has not studied LLM distillation for this specific task. To address this, we first propose the normalized fluorescent probe to study the mechanism of the LLM's feature. Based on the observation found by our investigation, we propose Cooperative Market Making (CMM), a novel framework that decouples LLM features across three orthogonal dimensions: layer, task, and data. Various student models collaboratively learn simple LLM features along with different dimensions, with each model responsible for a distinct feature to achieve knowledge distillation. Furthermore, CMM introduces an Hájek-MoE to integrate the output of the student models by investigating the contribution of different models in a kernel function-generated common feature space. Extensive experimental results on four real-world market datasets demonstrate the superiority of CMM over the current distillation method and RL-based market-making strategies.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2025-11-10T13:57:05Z",
+      "updated": "2026-01-29T13:22:04Z",
+      "abs_url": "https://arxiv.org/abs/2511.07110",
+      "pdf_url": "https://arxiv.org/pdf/2511.07110v3",
+      "comment": "accepted by AAAI2026",
+      "journal_ref": "",
+      "keyword_score": 31,
+      "matched_keywords": [
+        "market making",
+        "reinforcement learning",
+        "llm",
+        "large language model"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "將大語言模型特徵蒸餾至小型模型以進行強化學習造市，已獲 AAAI 接受。",
+      "summary": {
+        "title_zh": "三個臭皮匠勝過一個諸葛亮：透過特徵分解與混合將基礎模型特徵蒸餾至小型模型",
+        "verdict": "提出 CMM 框架將基礎模型特徵沿三個維度解耦並蒸餾至小型學生模型，改善造市效率",
+        "problem": "直接將基礎模型作為強化學習代理人用於造市時面臨推論速度過慢的問題，且目前針對此特定任務的模型蒸餾研究相當匱乏。",
+        "method": "使用強化學習與基礎模型，針對四個真實世界的市場資料集進行實驗，提出 Cooperative Market Making (CMM) 框架與 Hájek-MoE。",
+        "findings": "在四個真實世界的市場資料集上進行了廣泛實驗，結果顯示 CMM 優於現有的蒸餾方法與基於強化學習的造市策略，但原文未報告具體的效能數字。",
+        "implication": "此方法能將基礎模型的強大特徵轉移至輕量化模型，有助於解決高頻造市中的延遲問題，適合需要快速推論的實戰場景。",
+        "caveats": "論文未提供具體的績效數字與交易成本考量，其實際收益仍需進一步驗證。",
+        "practicality": 3,
+        "tags": [
+          "強化學習",
+          "造市",
+          "模型蒸餾",
+          "基礎模型",
+          "專家混合模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.25604",
+      "title": "Adversarial Post-Training of Foundation Models for High-Frequency Trading",
+      "authors": [
+        "Alexandre Bismuth",
+        "Kang Li",
+        "Aramis Marti-Shahandeh",
+        "Valentin Mohl",
+        "Jakob Foerster",
+        "Anisoara Calinescu"
+      ],
+      "abstract": "While autoregressive foundation models trained on limit order book (LOB) data show state-of-the-art performance for market simulation, pre-training with cross-entropy neither penalizes the compounding of sampling errors over free-running rollouts nor targets desired market properties. We introduce a post-training method for LOB foundation models using a Wasserstein generative adversarial network (GAN) objective. A critic, trained online on rollouts through the true, non-differentiable matching engine, guides updates from evolution strategies over rank-4 LoRA perturbations of the pre-trained generator, under a KL trust region. For efficiency, we use EGGROLL (Evolution Guided GeneRal Optimisation via Low-rank Learning), a memory-efficient variant of evolution strategies. On a held-out panel, adversarial post-training improves LOB-Bench realism by 17.6% (WS-21) and 17.0% (Mean-$L_1$), while selection-matched random-perturbation and compute-matched continued-pre-training controls yield no improvement. Post-training is thus a necessary stage that more pre-training does not replace. Per-position divergence measurements show that it slows error accumulation over 500-message rollouts from $3.1\\times$ to $2.3\\times$. Adversarial post-training is also inexpensive, requiring under 50M training tokens and 12 GPU-hours per seed, three orders of magnitude below the 48B-token pre-training budget. Ablations over critic inputs, optimizers, and the population-rollout trade-off, together with an analysis of reward hacking, yield practical design guidelines for adversarial post-training.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-10-19T00:15:10Z",
+      "updated": "2026-10-19T00:15:10Z",
+      "abs_url": "https://arxiv.org/abs/2610.25604",
+      "pdf_url": "https://arxiv.org/pdf/2610.25604v1",
+      "comment": "Accepted at the 7th ACM International Conference on AI in Finance (ICAIF '26), Milan, Italy. 9 pages, 5 figures, 4 tables. Code: https://github.com/alexandre-bismuth/WGAN-Post-Training",
+      "journal_ref": "",
+      "keyword_score": 30,
+      "matched_keywords": [
+        "limit order book",
+        "order book",
+        "high-frequency"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "針對限價單簿基礎模型提出對抗式後訓練，改善真實感並獲 ICAIF 接受。",
+      "summary": {
+        "title_zh": "高頻交易之基礎模型對抗式後訓練",
+        "verdict": "透過對抗式後訓練修正限價單簿基礎模型的模擬誤差，顯著提升市場真實度。",
+        "problem": "交叉熵預訓練無法抑制自由執行模擬時的抽樣誤差累積，亦未針對目標市場特性進行調整。",
+        "method": "運用 Wasserstein GAN 目標函數與 EGGROLL 演進策略，在 KL 信賴域下透過 LoRA 對基礎模型進行對抗式後訓練。",
+        "findings": "在 LOB-Bench 真實性指標上提升 17.6%（WS-21）與 17.0%（Mean-$L_1$），並將 500 筆訊息的誤差累積從 3.1 倍降至 2.3 倍。單一亂數種子僅需少於 50M 訓練代幣與 12 GPU 小時。",
+        "implication": "後訓練是不可或缺且成本低廉的階段，能有效改善高頻交易市場模擬器的品質，適合用於策略測試。",
+        "caveats": "需要透過消融實驗與謹慎設計來防範對抗訓練中的獎勵遭駭問題。",
+        "practicality": 4,
+        "tags": [
+          "基礎模型",
+          "限價單簿",
+          "GAN",
+          "高頻交易",
+          "市場模擬"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.18019",
+      "title": "Model-Free Passive Execution via Order-Level Shadowing",
+      "authors": [
+        "Vincent Maciejewski"
+      ],
+      "abstract": "Automated execution algorithms are organized into schedule-based and liquidity-seeking families. This paper concerns the first, whose members -- Time-Weighted Average Price (TWAP), Volume-Weighted Average Price (VWAP), Percentage of Volume (POV) and Implementation Shortfall -- are all model-based: each derives its decisions from an explicit model, forecast, schedule or control rule. We introduce Shadow-PPOV, a passive POV whose order-placement rate is set from observed order flow rather than from traded volume. Placing a passive order to fill efficiently conventionally involves an order-book model and a fill prediction. Shadow-PPOV replaces that prediction with tracking: on observing a third-party add, it may transmit its own limit order at the same price on the same venue, recording a single association between the observed order's exchange identifier and its own. Cancellation is then identifier-driven -- the shadow is withdrawn when the order it follows ends, at once on a cancel and after a brief grace window on a trade. The placement decision is thus model-free: price and venue are read off the observed order. Model-free is not information-free. Shadow-PPOV reads every order-book message and places only where a participant has just committed capital, while computing nothing from what it reads. Information is inherited from the flow rather than derived from a model. We evaluate Shadow-PPOV on a full calendar year of replayed Chicago Mercantile Exchange (CME) ES futures in a deterministic market-replay simulator, reporting its slippage and latency sensitivity and comparing it against the aggressive equivalent POV. We propose it as a model-free benchmark for passive-order placement, against which a predictive placement model can be scored. The algorithm and the order-book simulator are implemented in the open-source kaspar-hft project.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.CP"
+      ],
+      "published": "2026-09-16T02:16:13Z",
+      "updated": "2026-09-16T02:16:13Z",
+      "abs_url": "https://arxiv.org/abs/2609.18019",
+      "pdf_url": "https://arxiv.org/pdf/2609.18019v1",
+      "comment": "29 pages, 6 figures. Code and order-book simulator https://github.com/vincent212/kaspar-hft",
+      "journal_ref": "",
+      "keyword_score": 30,
+      "matched_keywords": [
+        "order flow",
+        "slippage",
+        "liquidity",
+        "futures"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出無需模型的被動執行演算法 Shadow-PPOV，透過一整年 CME 期貨資料回測，實證非常扎實。",
+      "summary": {
+        "title_zh": "透過訂單層級跟隨的無模型被動式執行",
+        "verdict": "提出名為 Shadow-PPOV 的無模型被動式成交量佔比演算法，透過跟隨市場參與者下單來降低滑價，未報告具體報酬數字。",
+        "problem": "傳統的排程式執行演算法（如 TWAP、VWAP、POV）均仰賴明確的模型、預測或控制規則來決定掛單，過程複雜且易受預測誤差影響。",
+        "method": "使用芝商所 ES 期貨整整一年的歷史資料進行確定性市場重播模擬，評估 Shadow-PPOV 的滑價與延遲敏感度，並與主動式 POV 進行比較。",
+        "findings": "透過觀察第三方掛單並在相同價格與交易所發送限價單，以識別碼驅動取消機制來管理委託單。論文評估了其滑價與延遲敏感度，未報告具體績效數字。",
+        "implication": "可作為被動式委託單放置的無模型基準，供交易員用來評估及檢定具預測性的掛單模型。",
+        "caveats": "實作依賴特定的市場重播模擬器與訂單層級資訊，且未提供扣除交易成本後的實際獲利數字。",
+        "practicality": 3,
+        "tags": [
+          "演算法交易",
+          "限價單簿",
+          "訂單流",
+          "被動式執行"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.19497",
+      "title": "The Science and Practice of Trend-Following Systems",
+      "authors": [
+        "Artur Sepp",
+        "Vladimir Lucic"
+      ],
+      "abstract": "We present a unified approach to designing trend-following (TF) systems and classify them into European, American, and Time Series Momentum categories. For European TF systems, we derive an exact relationship between profit-and-loss, autocorrelation, and drift in volatility-normalized returns. We analyze the expected return under fractional ARFIMA processes and show that TF systems are profitable when the long-term autocorrelation is positive, even under short-term mean reversion. In the frequency domain, the expected return is represented as a Poisson-kernel reading of the analytical or empirical spectrum of the volatility-normalized returns: the system profits at zero drift when the kernel-weighted spectral mass exceeds one, so trend-following alpha is excess spectral mass at low frequencies. Longer lookbacks benefit in addition from the squared drift of the return process. We derive the closed-form Sharpe ratio, with the excess kurtosis of the innovations entering through a single loading, and the net Sharpe ratio and cost-optimal span under trading costs. Under white noise, we derive the closed-form skewness of aggregated TF returns, which is positive at every horizon and peaks near half the filter span. Monte Carlo experiments confirm the analytical results. We show that the positive skewness of TF returns is structural under various model assumptions. Empirically, we evaluate the systems on liquid contracts, and show that all TF systems are strongly correlated and our analytical results can be applied for their performance attribution. Our results enable design, simulation, and performance attribution of TF systems from trend persistence, mean reversion, drift, and skewness.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.MF"
+      ],
+      "published": "2026-07-21T18:16:01Z",
+      "updated": "2026-07-21T18:16:01Z",
+      "abs_url": "https://arxiv.org/abs/2607.19497",
+      "pdf_url": "https://arxiv.org/pdf/2607.19497v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 30,
+      "matched_keywords": [
+        "sharpe ratio",
+        "mean reversion",
+        "momentum",
+        "empirical",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "推導趨勢追蹤系統性質並以實盤檢驗，嚴謹。",
+      "summary": {
+        "title_zh": "趨勢追蹤系統的科學與實務",
+        "verdict": "建構統一的趨勢追蹤系統框架，推導出夏普值與成本最佳化跨距的解析解。",
+        "problem": "如何統一設計並分類不同的趨勢追蹤系統，並在考慮交易成本與波動度正規化的前提下，量化其獲利來源與報酬分佈？",
+        "method": "使用分數階 ARFIMA 過程與頻域頻譜分析，探討歐式、美式與時間序列動能系統，並透過蒙地卡羅模擬與流動性合約進行實證分析。",
+        "findings": "當長期自相關係數為正且濾波器權重頻譜質量大於一时，趨勢追蹤系統便能獲利。論文推導出封閉形式的夏普值，並指出其報酬在所有投資期界下均呈現結構性的正偏態。",
+        "implication": "可用於趨勢追蹤系統的設計、模擬與績效歸因，並能根據交易成本計算出成本最佳化的跨距。",
+        "caveats": "論文未在內文中報告具體的真實交易績效數字。",
+        "practicality": 4,
+        "tags": [
+          "趨勢追蹤",
+          "時間序列動能",
+          "頻譜分析",
+          "夏普值",
+          "績效歸因"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.13407",
+      "title": "Vector-Quantized Discrete Latent Factors Meet Financial Priors: Dynamic Cross-Sectional Stock Ranking Prediction for Portfolio Construction",
+      "authors": [
+        "Namhyoung Kim",
+        "Jae Wook Song"
+      ],
+      "abstract": "Predicting cross-sectional stock returns is challenging due to low signal-to-noise ratios and evolving market regimes. Classical factor models offer interpretability but limited flexibility, while deep learning models achieve strong performance yet often underutilize financial priors. We address this gap with PRISM-VQ (PRior-Informed Stock Model with Vector Quantization), a dynamic factor framework that integrates expert prior factors, vector-quantized discrete latent factors learned from cross-sectional structure, and a structure-conditioned Mixture-of-Experts to generate time-varying factor loadings. Vector quantization acts as an information bottleneck that suppresses noise while capturing robust market structure, with discrete codes serving both as latent factors and as routing signals for temporal expert specialization. Experiments on CSI 300 and S&P 500 show consistent improvements in cross-sectional return prediction and portfolio performance over strong baselines while preserving interpretability. Our code is available at https://github.com/finxlab/PRISM-VQ.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CE",
+        "q-fin.ST"
+      ],
+      "published": "2026-05-13T12:02:53Z",
+      "updated": "2026-05-13T12:02:53Z",
+      "abs_url": "https://arxiv.org/abs/2605.13407",
+      "pdf_url": "https://arxiv.org/pdf/2605.13407v1",
+      "comment": "IJCAI 2026 Accepted Paper including Technical Appendix",
+      "journal_ref": "",
+      "keyword_score": 30,
+      "matched_keywords": [
+        "factor model",
+        "deep learning",
+        "regime",
+        "cross-sectional",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合向量量化與財務先驗，實證扎實。",
+      "summary": {
+        "title_zh": "向量量化離散潛在因子結合財務先驗：用於投資組合建構的動態橫截面股票排序預測",
+        "verdict": "提出 PRISM-VQ 模型結合專家先驗與向量量化離散潛在因子，在 CSI 300 與 SPX 提升橫截面股票預測與投資組合表現。",
+        "problem": "橫截面股票報酬預測面臨低訊噪比與市場體制轉換的挑戰。傳統因子模型可解釋性高但彈性不足，深度學習模型表現強大卻常未充分利用財務先驗。",
+        "method": "使用 PRISM-VQ 動態因子框架，整合專家先驗因子、向量量化離散潛在因子與結構條件混合專家模型。實驗涵蓋 CSI 300 與 SPX 資料集。",
+        "findings": "在 CSI 300 與 SPX 的實驗顯示，相較於強基準模型，該方法在橫截面報酬預測與投資組合績效上皆有持續改善，並維持了模型的可解釋性。",
+        "implication": "可用於改善多因子選股模型，透過向量量化作為資訊瓶頸來抑制雜訊並提供路由信號。程式碼已開源可供實作。",
+        "caveats": "論文摘要未報告具體的報酬率、夏普值或誤差改善幅度的絕對數字。",
+        "practicality": 4,
+        "tags": [
+          "機器學習",
+          "向量量化",
+          "多因子模型",
+          "投資組合建構",
+          "Alpha 因子"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.26405",
+      "title": "Multi-Currency AMMs for Decentralized FOREX Markets: Feasibility & Optimal Design",
+      "authors": [
+        "Reina Ke Xin Li",
+        "Andreas Park",
+        "Andreas Veneris",
+        "Srisht Fateh Singh"
+      ],
+      "abstract": "Most currency pairs lack a direct liquid market, so international foreign exchange relies on routing transactions through a dominant vehicle currency. Multi-currency automated market makers (AMMs) offer an alternative by sharing liquidity across many currency pairs, facilitating direct cross-currency trade while exploiting liquidity consolidation. This paper studies a multi-currency pool design that minimizes trading cost. Under a constant-mean AMM architecture, equilibrium trading costs reflect the trade-off between reduced price impact from consolidated liquidity and increased impermanent loss from joint return risk. This work derives closed-form costs, characterizes optimal pool weights, and shows that the optimized multi-currency pool dominates the status quo over a range of market parameters. It then formulates the system-level problem of partitioning currencies into multi-currency pools, which is solved using a hierarchical agglomerative clustering algorithm. Empirically, using exchange rate and trade data for 43 currencies over 2008-2023, the algorithm runs in 1.6 seconds and produces pools with geographic and economic structure. Notably, this reduces realized costs by ~13% relative to the status quo of vehicle-currency routing, with gains stable through episodes of global financial stress.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-07-29T02:36:36Z",
+      "updated": "2026-07-29T02:36:36Z",
+      "abs_url": "https://arxiv.org/abs/2607.26405",
+      "pdf_url": "https://arxiv.org/pdf/2607.26405v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 29,
+      "matched_keywords": [
+        "market maker",
+        "price impact",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "設計多貨幣自動化造市商並以真實外匯資料驗證，實證扎實。",
+      "summary": {
+        "title_zh": "去中心化外匯市場的多幣別自動造市商：可行性與最佳設計",
+        "verdict": "提出多幣別自動造市商架構，透過集中流動性降低外匯交易成本達 13%。",
+        "problem": "多數貨幣對缺乏直接的流動市場，國際外匯通常需要透過主流車輛貨幣進行路由交易，導致額外摩擦成本。",
+        "method": "採用常數均值自動造市商架構，推導閉形式交易成本並建立最佳化權重；利用階層凝聚分群演算法進行貨幣分組。實證使用 2008 年至 2023 年間 43 種貨幣的匯率與交易資料。",
+        "findings": "最佳化後的多幣別流動性池相較於現行車輛貨幣路由，其實現成本降低了約 13%，且在 全球金融壓力期間收益依然保持穩定。",
+        "implication": "去中心化外匯市場可藉由多幣別流動性池整合來提升資本效率，適合用於最佳化跨國匯兌路由。",
+        "caveats": "模型未將流動性提供者的無常損失與動態風險進行完整的動態回測考量。",
+        "practicality": 4,
+        "tags": [
+          "自動造市商",
+          "外匯市場",
+          "流動性整合",
+          "分群演算法"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.20762",
+      "title": "Quantifying Sub-Optimality in Routing for Automated Market Makers",
+      "authors": [
+        "Weiye Xi",
+        "Ciamac C. Moallemi"
+      ],
+      "abstract": "We provide a large-scale empirical audit of DEX routing using 2.98 million WETH-USDC swaps on Ethereum. Comparing realized routes with optimized benchmarks, we measure an average shortfall of 2.02 bps per trade or \\$24 million. To attribute losses, we introduce three reproducible optimal benchmarks: a Support-Constrained Optimum (SCO) that evaluates split quality conditional on the pools actually used; a Full-Venue Optimum (FVO) that considers all available pools to quantify the value of broader pool access; and a Gas-Aware FVO (G-FVO) that augments FVO with gas costs to capture the trade-off between additional pool usage and gas expenditure. Computing these benchmarks at scale is enabled by a bisection-based algorithm for optimal routing across multiple pools for the same token pair. Two regularities emerge. First, information timeliness is crucial: moving from execution-time state to one-block lagged state optimization significantly raises mean shortfall and additional delays further degrade performance, albeit with diminishing increments; evaluated on the same stale snapshots, realized routes lie closer to optimal, indicating timing-mismatch as a key component. Second, inefficiency is heterogeneous and heavy-tailed: small trades suffer higher percentage losses, while a few extreme outliers dominate the aggregate dollar shortfalls. Finally, we demonstrate that sandwiching attacks drive a significant fraction of routing sub-optimality. Our benchmark protocol and algorithm offer a rigorous, reproducible basis for evaluating and improving information-timely, gas-aware routing.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-07-22T22:28:18Z",
+      "updated": "2026-07-22T22:28:18Z",
+      "abs_url": "https://arxiv.org/abs/2607.20762",
+      "pdf_url": "https://arxiv.org/pdf/2607.20762v1",
+      "comment": "21 pages. Accepted at the 5th Workshop on Decentralized Finance (DeFi 2026), held in association with Financial Cryptography and Data Security 2026",
+      "journal_ref": "",
+      "keyword_score": 29,
+      "matched_keywords": [
+        "market maker",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "大規模審計去中心化交易所路由次優性，實證詳盡。",
+      "summary": {
+        "title_zh": "自動造市商交易路由的次最佳化量化分析",
+        "verdict": "透過分析以太坊上的 WETH-USDC 交易，發現 DEX 路由平均每筆產生 2.02 個基點的落差，主因包含資訊時效性與三明治攻擊。",
+        "problem": "去中心化交易所的交易路由是否存在效率落差？具體損失金額與成因為何？",
+        "method": "利用以太坊上 298 萬筆 WETH-USDC 交易進行大規模實證稽核，引入支援受限最佳、全場館最佳與考量 Gas 的全場館最佳三種基準模型，並開發二分法演算法進行多池最佳化路由。",
+        "findings": "每筆交易平均落差為 2.02 個基點或總計 2,400 萬美元；資訊時效性至關重要，且無效率具異質性與厚尾特徵，小額交易的百分比損失較高，三明治攻擊也是導致路由次最佳化的重要因素。",
+        "implication": "交易系統必須極力降低延遲以確保資訊即時性，並在路由演算法中妥善處理 Gas 成本與三明治攻擊防護。",
+        "caveats": "本研究主要針對以太坊上的 WETH-USDC 單一交易對進行分析，結論未必能完全推廣至其他鏈或流動性較差的交易對。",
+        "practicality": 4,
+        "tags": [
+          "自動造市商",
+          "訂單路由",
+          "去中心化交易所",
+          "市場微結構",
+          "MEV"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.09613",
+      "title": "Residual Learning in Empirical Asset Pricing",
+      "authors": [
+        "Dexin Peng",
+        "Xiaoyu Wang"
+      ],
+      "abstract": "Shallow models are special cases of deep models, and deep models theoretically have the potential to outperform the shallow ones. However, the existing empirical asset pricing literature provides strong benchmarks for shallow models. Residual learning allows neural network models in asset pricing to go deeper by preserving and refining their shallow counterparts. The out-of-sample Sharpe ratio for value-weighted long-short portfolios of deep residual models (2.07) is higher than that for the corresponding shallow ones (1.92) and more than twice that of the deep feedforward models (0.89). We show that model depth is a source of additional economic value in asset pricing. Residual learning can be used to deepen other neural-network-based asset pricing models if they contain intermediate layers. Our design also provides one way to scale asset pricing models, making native \"large asset pricing models\" more feasible.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "cs.LG"
+      ],
+      "published": "2026-10-07T07:55:38Z",
+      "updated": "2026-10-07T07:55:38Z",
+      "abs_url": "https://arxiv.org/abs/2610.09613",
+      "pdf_url": "https://arxiv.org/pdf/2610.09613v1",
+      "comment": "58 pages, 8 figures",
+      "journal_ref": "",
+      "keyword_score": 28,
+      "matched_keywords": [
+        "sharpe ratio",
+        "out-of-sample",
+        "neural network",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "應用殘差學習深化資產定價神經網路模型，表現佳。",
+      "summary": {
+        "title_zh": "實證資產定價中的殘差學習",
+        "verdict": "利用殘差學習深化神經網路資產定價模型，有效提升多空投資組合的 Out-of-sample 夏普值。",
+        "problem": "現有實證資產定價文獻中，淺層模型表現強勢，而深層模型在理論上雖具潛力卻難以超越。",
+        "method": "透過殘差學習架構保留並精進淺層模型，應用於實證資產定價預測。使用價值加權多空投資組合進行外樣本評估。",
+        "findings": "深層殘差模型的 Out-of-sample 夏普值達 2.07，高於淺層模型的 1.92，且為深層前饋模型的 2 倍以上（0.89）。研究證實模型深度是資產定價中額外經濟價值的來源。",
+        "implication": "殘差學習可用於深化其他含中間層的神經網路資產定價模型，為建構原生大型資產定價模型提供可行路徑。",
+        "caveats": "未詳細說明交易成本與換手率對具體績效數字的影響。",
+        "practicality": 4,
+        "tags": [
+          "機器學習",
+          "資產定價",
+          "神經網路",
+          "殘差學習",
+          "量化投資"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.23068",
+      "title": "Neural Network-Driven Volatility Drag Mitigation under Aggressive Leverage",
+      "authors": [
+        "Christian Bongiorno",
+        "Efstratios Manolakis",
+        "Rosario Nunzio Mantegna"
+      ],
+      "abstract": "This paper introduces a compact reformulation of a modular end-to-end neural network for global minimum-variance portfolio optimization that decouples model complexity from both look-back window length and universe size. A five-parameter hyperbolic weighted moving average combined with a saturating exponential replaces the original 2,400-parameter lag-transformation layer, and a bidirectional gated-recurrent-unit eigencleaning module together with a streamlined marginal-volatility network reduce total learnable parameters from 39,586 to just 2,175. In out-of-sample tests against state-of-the-art nonlinear-shrinkage and risk-parity benchmarks, the compact network attains the lowest realized portfolio variance without compromising expected return. Under long-only constraints, the variance reduction supports substantially higher leverage while maintaining comparable drawdown control. Validation in a high-fidelity trading simulator that incorporates realistic margin-call dynamics confirms enhanced over-leverage resilience. These findings demonstrate that end-to-end variance-minimization architectures can achieve substantial parameter efficiency and robust capital-efficiency gains without sacrificing risk-adjusted performance.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "cs.LG"
+      ],
+      "published": "2026-07-25T06:32:26Z",
+      "updated": "2026-07-25T06:32:26Z",
+      "abs_url": "https://arxiv.org/abs/2607.23068",
+      "pdf_url": "https://arxiv.org/pdf/2607.23068v1",
+      "comment": "7 pages, 2 figures, 1 table. Published in ICAIF '25. Code: https://github.com/bongiornoc/RIEnet",
+      "journal_ref": "Proceedings of the 6th ACM International Conference on AI in Finance (ICAIF '25), pp. 449-455, 2025",
+      "keyword_score": 31,
+      "matched_keywords": [
+        "portfolio optimization",
+        "out-of-sample",
+        "drawdown",
+        "neural network"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "精簡神經網路以降低變異數拖曳，已刊登於 ICAIF 期刊且程式碼公開。",
+      "summary": {
+        "title_zh": "在積極槓桿下利用神經網路驅動的波動率拖累緩解",
+        "verdict": "提出輕量化端到端神經網路進行最小變異投組最佳化，在大幅降低參數的同時降低實現變異數。",
+        "problem": "傳統深度學習投組最佳化模型參數過多，且複雜度受限於回溯視窗長度與資產池大小。在積極槓桿下容易面臨波動率拖累與追繳保證金風險。",
+        "method": "使用 5 個參數的雙曲線加權移動平均與飽和指數，結合雙向 GRU 特徵清理模組，將模型參數從 39,586 個大幅縮減至 2,175 個。利用高效能交易模擬器在真實保證金動態下進行樣本外測試。",
+        "findings": "該輕量化網路在與最先進的非線性收縮與風險平價基準對比的樣本外測試中，實現了最低的實現投組變異數且未損害預期報酬。在僅做多限制下，變異數的降低支援了顯著更高的槓桿，同時維持可比較的回檔控制，並經高保真交易模擬器確認增強了抗過度槓桿能力。",
+        "implication": "此架構能有效提升參數效率與資本配置效率，適合需要高槓桿且重視波動率控制的實務操作。前提是需在考量真實保證金動態的環境下進行參數調校。",
+        "caveats": "論文未報告具體的夏普值或絕對報酬數字，僅強調變異數與抗過度槓桿表現。",
+        "practicality": 4,
+        "tags": [
+          "投組最佳化",
+          "神經網路",
+          "波動率控制",
+          "槓桿交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.08356",
+      "title": "Measuring Strategy-Decay Risk: Minimum Regime Performance and the Durability of Systematic Investing",
+      "authors": [
+        "Nolan Alexander",
+        "Frank Fabozzi"
+      ],
+      "abstract": "Systematic investment strategies are exposed to a subtle but pervasive vulnerability: the progressive erosion of their effectiveness as market regimes change. Traditional risk measures, designed to capture volatility or drawdowns, overlook this form of structural fragility. This article introduces a quantitative framework for assessing the durability of systematic strategies through minimum regime performance (MRP), defined as the lowest realized risk-adjusted return across distinct historical regimes. MRP serves as a lower bound on a strategy's robustness, capturing how performance deteriorates when underlying relationships weaken or competitive pressures compress alpha. Applied to a broad universe of established factor strategies, the measure reveals a consistent trade-off between efficiency and resilience -- strategies with higher long-term Sharpe ratios do not always exhibit higher MRPs. By translating the persistence of investment efficacy into a measurable quantity, the framework provides investors with a practical diagnostic for identifying and managing strategy-decay risk, a novel dimension of portfolio fragility that complements traditional measures of market and liquidity risk.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM",
+        "q-fin.PM",
+        "stat.AP"
+      ],
+      "published": "2026-04-09T15:21:07Z",
+      "updated": "2026-04-09T15:21:07Z",
+      "abs_url": "https://arxiv.org/abs/2604.08356",
+      "pdf_url": "https://arxiv.org/pdf/2604.08356v1",
+      "comment": "Code: https://github.com/nolanalexander/minimum_regime_performance",
+      "journal_ref": "",
+      "keyword_score": 31,
+      "matched_keywords": [
+        "sharpe ratio",
+        "drawdown",
+        "regime",
+        "liquidity",
+        "alpha"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "引入最低政權效能評估系統性投資策略的耐久度，對因子衰減風險提出實用診斷工具。",
+      "summary": {
+        "title_zh": "衡量策略衰退風險：最低體制績效與系統化投資的持久性",
+        "verdict": "提出最低體制績效（MRP）評估策略衰退風險，發現效率與韌性存有取捨。",
+        "problem": "傳統風險指標忽略了市場體制轉變時，策略有效性逐漸侵蝕的結構性脆弱。這導致投資人難以衡量策略衰退風險。",
+        "method": "提出最低體制績效（MRP）計量框架，代表不同歷史體制中的最低實現風險調整後報酬。將此框架應用於廣泛的傳統因子策略進行分析。",
+        "findings": "研究發現效率與韌性之間存在一致的取捨關係，長期夏普值較高的策略不一定展現較高的 MRP。論文未報告具體績效數字。",
+        "implication": "該框架為投資人提供實用的診斷工具，可用來識別並管理策略衰退風險，作為傳統風險指標的補充。",
+        "caveats": "該指標主要基於歷史事後資料，對未來體制變化的預測能力仍需進一步驗證。",
+        "practicality": 3,
+        "tags": [
+          "風險管理",
+          "因子投資",
+          "體制轉換",
+          "量化投資"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
