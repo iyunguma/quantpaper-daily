@@ -1,0 +1,528 @@
+{
+  "date": "2026-10-26",
+  "generated_at": "2026-10-26T09:14:53+08:00",
+  "scanned": 2397,
+  "eligible": 2307,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2601.07852",
+      "title": "Utility-Weighted Forecasting and Calibration for Risk-Adjusted Decisions under Trading Frictions",
+      "authors": [
+        "Craig S Wright"
+      ],
+      "abstract": "Forecasting accuracy is routinely optimised in financial prediction tasks even though investment and risk-management decisions are executed under transaction costs, market impact, capacity limits, and binding risk constraints. This paper treats forecasting as an econometric input to a constrained decision problem. A predictive distribution induces a decision rule through a utility objective combined with an explicit friction operator consisting of both a cost functional and a feasible-set constraint system. The econometric target becomes minimisation of expected decision loss net of costs rather than minimisation of prediction error. The paper develops a utility-weighted calibration criterion aligned to the decision loss and establishes sufficient conditions under which calibrated predictive distributions weakly dominate uncalibrated alternatives. An empirical study using a pre-committed nested walk-forward protocol on liquid equity index futures confirms the theory: the proposed utility-weighted calibration reduces realised decision loss by over 30\\% relative to an uncalibrated baseline ($t$-stat -30.31) for loss differential and improves the Sharpe ratio from -3.62 to -2.29 during a drawdown regime. The mechanism is identified as a structural reduction in the frequency of binding constraints (from 16.0\\% to 5.1\\%), preventing the \"corner solution\" failures that characterize overconfident forecasts in high-friction environments.",
+      "primary_category": "econ.EM",
+      "categories": [
+        "econ.EM",
+        "q-fin.CP",
+        "q-fin.PM",
+        "q-fin.TR"
+      ],
+      "published": "2026-01-09T01:11:21Z",
+      "updated": "2026-01-09T01:11:21Z",
+      "abs_url": "https://arxiv.org/abs/2601.07852",
+      "pdf_url": "https://arxiv.org/pdf/2601.07852v1",
+      "comment": "76 pages; 12 figures",
+      "journal_ref": "",
+      "keyword_score": 28,
+      "matched_keywords": [
+        "sharpe ratio",
+        "transaction cost",
+        "drawdown",
+        "regime",
+        "futures",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 9,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "在摩擦力下將預測對齊決策問題，推導嚴謹且實證顯著降低決策損失。",
+      "summary": {
+        "title_zh": "交易摩擦下基於效用加權的預測與校準以進行風險調整決策",
+        "verdict": "將預測目標轉為最小化扣除成本後的決策損失，實證顯示能有效降低高摩擦環境下的決策失敗率。",
+        "problem": "傳統金融預測多以最小化預測誤差為目標，忽略了交易成本、市場衝擊與風險限制等實際交易摩擦。",
+        "method": "結合效用目標函數與包含成本泛函及可行集合限制的摩擦算子，使用流動性良好的股價指數期貨，採用預先提交的巢狀走步向前（walk-forward）協定進行實證。",
+        "findings": "提出的效用加權校準相較於未校準基準，實現的決策損失減少超過 30%（損失差額的 t 統計量為 -30.31），並在回檔體制中將 Sharpe ratio 從 -3.62 改善至 -2.29。其機制在於結構性地降低限制條件觸發頻率（從 16.0% 降至 5.1%）。",
+        "implication": "在存在交易摩擦的資產配置中，應將決策目標直接納入預測模型的校準流程中，以避免過度自信預測導致的角落解失敗。",
+        "caveats": "實證結果可能受限於所選的特定股價指數期貨與樣本期間的回檔特性。",
+        "practicality": 4,
+        "tags": [
+          "交易摩擦",
+          "風險管理",
+          "模型校準",
+          "投資組合最佳化",
+          "Sharpe"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.22727",
+      "title": "OrderFlowDiT: Transport-Regularized Diffusion Transformer for Probabilistic Limit-Order Supply Forecasting",
+      "authors": [
+        "Jung Hun Phee",
+        "Tucker Balch"
+      ],
+      "abstract": "We study the conditional distribution of limit-order volume submitted over the next five minutes, given the current order book and recent order flow. The task requires capturing price placement, total volume, and predictive uncertainty jointly. Coordinate-wise diffusion losses do not explicitly account for price displacement, while normalizing fields to unit mass removes information about total volume. Agreement on selected summary statistics also does not establish fidelity to the joint field distribution. We introduce OrderFlowDiT, a conditional Diffusion Transformer for unnormalized bid and ask volume-at-price fields, trained with an unbalanced optimal-transport (UOT) auxiliary loss. We also develop a full-field evaluation framework that combines a transport cost sensitive to price placement and total volume with proper scoring rules and calibration diagnostics. In the primary comparison on 1950 validation conditions across 30 U.S. equities, adding UOT reduces full-field transport cost by 45.8% and the transport energy score by 26.1% relative to training with mean squared error alone. Both measures improve for every stock. These findings support incorporating price geometry and volume into generative modeling, with field accuracy and predictive uncertainty evaluated together.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "q-fin.TR"
+      ],
+      "published": "2026-10-15T22:56:40Z",
+      "updated": "2026-10-15T22:56:40Z",
+      "abs_url": "https://arxiv.org/abs/2610.22727",
+      "pdf_url": "https://arxiv.org/pdf/2610.22727v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 28,
+      "matched_keywords": [
+        "order flow",
+        "order book",
+        "transformer",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合最佳運輸與擴散模型預測極限訂單簿供應，扎實。",
+      "summary": {
+        "title_zh": "OrderFlowDiT：用於限價單供給機率預測之傳輸正則化 Diffusion Transformer",
+        "verdict": "提出結合非平衡最佳化傳輸輔助損失的 OrderFlowDiT 模型，能有效預測未來五分鐘的限價單委託量分佈，全域傳輸成本大幅降低 45.8%。",
+        "problem": "現有坐標式擴散損失無法明確考量價格位移，而將場域歸一化為單位質量則會遺失總量資訊，難以同時捕捉價格配置、總量與預測不確定性。",
+        "method": "使用條件式 Diffusion Transformer（DiT）針對未正規化的買賣價量場域進行建模，並加入非平衡最佳化傳輸（UOT）輔助損失。資料涵蓋 30 檔美國股票共 1950 種驗證條件。",
+        "findings": "相比僅使用均方誤差訓練，加入 UOT 輔助損失後，全域傳輸成本降低 45.8%，傳輸能量分數降低 26.1%，且該改善在所有測試股票中皆成立。",
+        "implication": "此方法能提供精確的限價單簿供給機率預測，有助於造市商更精準掌握訂單流動性與價格幾何關係。",
+        "caveats": "論文主要依據模型評估指標進行驗證，未報告實際交易策略的夏普值或扣除成本後的超額報酬。",
+        "practicality": 4,
+        "tags": [
+          "Diffusion Transformer",
+          "限價單簿",
+          "訂單流",
+          "最佳化傳輸",
+          "流動性預測"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.04712",
+      "title": "Convex Modeling of Price Cross-Impact over Time",
+      "authors": [
+        "Vincent Yinjun-Wang",
+        "Madeleine Udell"
+      ],
+      "abstract": "Transaction costs can make or break a trading strategy, particularly in relative-value trading of commodity and macro markets, where edges are a few basis points. Price impact is a central component of transaction cost. Price impact models usually include self-impact (a trade in a contract moves that contract's price) but omit two well-documented effects: cross-impact (a trade in one contract also moves the prices of related contracts) and transient impact (price impact decays over time, so an unwind recovers part of the entry cost). A model without these effects overprices the impact of relative-value trades, whose correlated legs are built and unwound over days, and so forgoes potentially profitable trades. This paper models both effects with a convex quadratic cost. In each period, a positive semidefinite matrix built from volatility, volume, and correlation forecasts couples trades across contracts. A power-law decay kernel then couples trades across periods. The resulting cost admits no price manipulation even when liquidity varies over the planning horizon. The model is demonstrated empirically on calendar spread trading of crude oil futures around the commodity index roll.",
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC",
+        "q-fin.CP",
+        "q-fin.PM",
+        "q-fin.RM"
+      ],
+      "published": "2026-09-04T04:32:55Z",
+      "updated": "2026-09-04T04:32:55Z",
+      "abs_url": "https://arxiv.org/abs/2609.04712",
+      "pdf_url": "https://arxiv.org/pdf/2609.04712v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 28,
+      "matched_keywords": [
+        "trading strategy",
+        "price impact",
+        "transaction cost",
+        "liquidity",
+        "futures"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "以凸二次成本模型捕捉價格交叉與瞬時衝擊，實證於期貨合約。",
+      "summary": {
+        "title_zh": "隨時間推移價格交叉衝擊的凸最佳化模型",
+        "verdict": "提出結合跨資產交叉衝擊與暫時性遞減的凸二次成本模型，有效改善相對價值交易的成本估計。",
+        "problem": "傳統價格衝擊模型忽略了跨資產交叉衝擊與隨時間遞減的暫時性衝擊，導致相對價值交易的成本被高估而錯失獲利機會。",
+        "method": "使用結合波動度、成交量與相關性預測的正半定矩陣來連結合約，並透過冪律遞減核心連結不同期間。以原油期貨行事曆價差交易進行實證。",
+        "findings": "論文未報告具體績效數字，但成功展示該模型在不隨時間產生價格操縱的情況下，能正確對多合約、多期間的相對價值交易成本進行凸最佳化建模。",
+        "implication": "適用於需要跨期與跨合約建構部位的相對價值交易策略，能更精確評估交易成本並尋找被低估的套利機會。",
+        "caveats": "模型依賴準確的波動度、成交量與相關性預測，若預測失準將直接影響成本估計的品質。",
+        "practicality": 4,
+        "tags": [
+          "交易成本",
+          "價格衝擊",
+          "凸最佳化",
+          "期貨價差",
+          "相對價值交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.15770",
+      "title": "Learning Stock Trading Policies via Barycenter-Based Adversarial Inverse Reinforcement Learning",
+      "authors": [
+        "Arishi Orra",
+        "Himanshu Choudhary",
+        "Manoj Thakur"
+      ],
+      "abstract": "Designing effective trading strategies using reinforcement learning remains challenging due to delayed and noisy rewards, poor exploration, and the difficulty of enforcing explicit risk constraints. In this work, we propose BRaG, a barycenter-based adversarial inverse reinforcement learning framework for stock trading that learns trading behavior from multiple heterogeneous expert strategies. BRaG aggregates expert demonstrations using a performance-weighted Wasserstein barycenter, yielding a stable pseudo-expert representation that captures shared structure across diverse trading styles. This representation is used to pretrain a trading policy via adversarial imitation learning, which alleviates unstable exploration during reinforcement learning. The pretrained policy is subsequently refined using reinforcement learning with true market rewards. To ensure risk-aware decision-making, BRaG incorporates control barrier functions that constrain action execution and regularize policy learning to satisfy drawdown limits. We evaluate the proposed approach on four major global equity markets, including the US, UK, Indian, and Taiwanese indices. Across all the markets, the proposed approach achieves stronger performance than both classical trading rules and recent deep reinforcement learning methods, while exhibiting more stable risk characteristics.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "published": "2026-08-16T14:45:28Z",
+      "updated": "2026-08-16T14:45:28Z",
+      "abs_url": "https://arxiv.org/abs/2608.15770",
+      "pdf_url": "https://arxiv.org/pdf/2608.15770v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 28,
+      "matched_keywords": [
+        "reinforcement learning",
+        "drawdown",
+        "stock",
+        "equity market"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "透過對抗式逆強化學習模仿專家策略並加入控制障礙函數，跨四大市場實證。",
+      "summary": {
+        "title_zh": "基於重心之對抗式逆向強化學習的 BRaG 股票交易策略學習",
+        "verdict": "提出 BRaG 框架透過重心與對抗式模仿學習，在多個全球市場展現優於傳統與深度強化學習的表現。",
+        "problem": "強化學習設計交易策略時面臨獎勵延遲與雜訊高、探索不良，以及難以強制執行明確風險限制的挑戰。",
+        "method": "本文提出 BRaG 框架，利用效能加權的 Wasserstein 重心聚合多個異質專家策略進行預訓練，並結合控制障礙函數限制回檔。實證評估涵蓋美國、英國、印度與台灣四大全球股票市場。",
+        "findings": "該方法在四個主要全球股票市場中，皆取得優於傳統交易規則與近期深度強化學習方法的表現，且具備更穩健的風險特徵；論文未報告具體績效數字。",
+        "implication": "此方法能利用異質專家經驗加速學習並透過控制障礙函數限制回檔，適合應用於需要嚴格風險控管的交易系統。",
+        "caveats": "論文未明確報告交易成本假設與具體的量化績效數字。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "逆向強化學習",
+          "模仿學習",
+          "風險管理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.25811",
+      "title": "Hierarchical Graph Learning for Calendar Spread Strategies in Commodity Futures Markets",
+      "authors": [
+        "Yoonsik Hong",
+        "Diego Klabjan"
+      ],
+      "abstract": "Commodity futures can be represented hierarchically, with underlying assets at the upper level and individual futures contracts at the lower level. Entities at each level can be connected by edges reflecting inherent correlations, with cross-level edges capturing contract-to-underlying asset connections. Building on our observations of these structures, we propose a hierarchical graph learning approach for calendar spread (CS) strategies in commodity futures markets, addressing two significant gaps in the machine-learning literature: (i) the absence of learning-based methods for CS strategies in futures markets, and (ii) the lack of consideration of maturity-dependent interrelationships across commodity futures. We first establish the efficacy of CS strategies by analytically showing that CS strategies can possess higher risk-adjusted returns, measured by the information ratio, and lower risk, measured by variance and delta, than long-only strategies. We then introduce a method to convert learning-based predictions into CS positions. Next, we develop a hierarchical graph learning method that predicts futures price movements by utilizing the maturity-dependent interrelationships, thereby yielding a CS trading algorithm. Empirical results on commodity futures markets traded on the Chicago Mercantile Exchange Group demonstrate that our method outperforms benchmark models in both prediction and trading performance. We find that maturity-dependent interrelationships across commodity futures are instrumental in prediction and that CS trading based on hierarchical graph learning is effective for statistical arbitrage.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.CE",
+        "cs.LG",
+        "q-fin.PM",
+        "q-fin.PR"
+      ],
+      "published": "2026-06-24T13:25:15Z",
+      "updated": "2026-06-24T13:25:15Z",
+      "abs_url": "https://arxiv.org/abs/2606.25811",
+      "pdf_url": "https://arxiv.org/pdf/2606.25811v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 28,
+      "matched_keywords": [
+        "statistical arbitrage",
+        "futures",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出商品期貨行事曆價差的分層圖學習策略，CME 實證表現優異。",
+      "summary": {
+        "title_zh": "應用階層式圖形學習於商品期貨市場之跨期價差策略",
+        "verdict": "提出階層式圖形學習模型進行商品期貨跨期價差策略，實證顯示在預測與交易績效上皆優於基準模型。",
+        "problem": "機器學習文獻中缺乏針對期貨跨期價差策略的學習型方法，且忽略了商品期貨之間具備到期日相依的相互關聯性。",
+        "method": "使用階層式圖形學習方法預測期貨價格走勢並轉化為跨期價差部位，研究對象為芝商所集團交易的商品期貨市場，資料頻率與樣本期間論文未明確指出。",
+        "findings": "實證結果顯示該方法在預測與交易績效上皆擊敗基準模型，並證實商品期貨間的到期日相依相互關聯性對預測至關重要，但論文未報告具體的報酬或風險數字。",
+        "implication": "此方法證明利用階層式圖結構捕捉期貨合約與底層資產關係可行，適合用於統計套利。",
+        "caveats": "論文未提供具體的實證績效數值與詳細的交易成本假設。",
+        "practicality": 3,
+        "tags": [
+          "圖形學習",
+          "商品期貨",
+          "跨期價差",
+          "統計套利"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.24366",
+      "title": "The Anatomy of a Decentralized Prediction Market: Microstructure Evidence from the Polymarket Order Book",
+      "authors": [
+        "Philipp D. Dubach"
+      ],
+      "abstract": "We study the microstructure of Polymarket, the largest on-chain prediction market, using a continuous tick-level archive of the public order-book feed (30 billion events over 52 days) joined to the authoritative on-chain trade record. On a pre-registered stratified panel of 600 markets we report eight stylized facts: a longshot spread premium; a depth profile closer to uniform than to top-of-book; a null block-clock alignment effect; broad maker-wallet diversity with a concentrated tail; category-conditional effective-spread differences; a sub-50 ms median archive-ingestion delay with a multi-second tail; a self-counterparty wash share with median 1% and a 22% upper tail (well below Cong et al. 2023's 25-70% for unregulated crypto venues -- a sanity bound, not an apples-to-apples reference); and a cross-sectional depth profile explained by market duration, price level, and volume, with no residual time-to-close effect. The paper also contributes a measurement result: trade direction inferred from Polymarket's public order-book feed agrees with on-chain ground truth on only ~59% of buckets (panel mean 0.615, 95% CI [0.58, 0.65]), well below the ~80% Lee-Ready accuracy on Nasdaq. The effective half-spread changes sign between feed- and on-chain trade directions on 67%/50% of markets across two 7-day windows; Kyle's lambda on 60%/43%. Microstructure work on Polymarket therefore needs to source trade direction from on-chain OrderFilled events; we release a replication package that performs the join.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.GT",
+        "q-fin.GN"
+      ],
+      "published": "2026-04-27T12:01:14Z",
+      "updated": "2026-05-14T14:44:36Z",
+      "abs_url": "https://arxiv.org/abs/2604.24366",
+      "pdf_url": "https://arxiv.org/pdf/2604.24366v2",
+      "comment": "16 pages, 9 figures, 5 tables. JEL: G14, G12, G19, C58, L86. v2: scope narrowing in Section 3, SF2 redone with full per-level depth profile, SF8 reframed (time-to-close coefficient becomes NS once duration and p(1-p) are controlled). Replication: https://github.com/philippdubach/polymarket-microstructure ; Zenodo DOI 10.5281/zenodo.19811426",
+      "journal_ref": "",
+      "keyword_score": 28,
+      "matched_keywords": [
+        "order book",
+        "cross-sectional"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "對去中心化預測市場 Polymarket 進行微觀結構實證，資料龐大分析深入。",
+      "summary": {
+        "title_zh": "去中心化預測市場的解剖：來自 Polymarket 限價單簿的微結構實證",
+        "verdict": "剖析 Polymarket 微結構，並發現鏈下與鏈上交易方向辨識存在顯著落差。",
+        "problem": "去中心化預測市場的微結構特性與鏈上交易紀錄的真實性缺乏系統性研究。公開訂單簿推導出的交易方向常與鏈上實際情況不符。",
+        "method": "使用 Polymarket 的持續逐筆限價單簿封存資料（52天內30億筆事件）結合鏈上交易紀錄，對600個預測市場的分層樣本進行實證分析。",
+        "findings": "歸納出長尾價差溢價與中位數1%自我交易佔比等八項風格化事實。測量結果顯示公開訂單簿推導的交易方向與鏈上真實資料吻合度僅約59%。",
+        "implication": "進行微結構研究時必須以鏈上 OrderFilled 事件為準來判斷交易方向，作者並釋出了包含資料串接的複製套件。",
+        "caveats": "研究發現高度依賴 Polymarket 的特定資料結構，結果未必能直接適用於其他去中心化交易所。",
+        "practicality": 4,
+        "tags": [
+          "去中心化預測市場",
+          "限價單簿",
+          "市場微結構",
+          "區塊鏈"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.15947",
+      "title": "Hyper-Adaptive Momentum Dynamics for Native Cubic Portfolio Optimization: Avoiding Quadratization Distortion in Higher-Order Cardinality-Constrained Search",
+      "authors": [
+        "Greg Serbarinov"
+      ],
+      "abstract": "We study cubic cardinality-constrained portfolio optimization, a higher-order extension of the standard Markowitz formulation where three-way sector co-movement terms augment the quadratic risk-return objective. Classical heuristics like simulated annealing (SA) and tabu search require Rosenberg quadratization of these cubic interactions. This inflates the variable count from n to 5n and introduces penalty terms that substantially distort the augmented search landscape. In contrast, Hyper-Adaptive Momentum Dynamics (HAMD) operates directly on the native higher-order objective using a hybrid pipeline combining continuous Hamiltonian search, exact cardinality-preserving projection, and iterated local search (ILS). On a cubic portfolio benchmark under matched 60-second CPU budgets, HAMD achieves substantially lower decoded native cubic objective values than SA and tabu search, yielding single-seed relative improvements of 87.9%, 71.2%, 59.5%, and 46.9% at n = 200, 300, 500, and 1000. In a detailed three-seed study at n = 200, HAMD attains a median native objective of 195.65 (zero variance), while SA and tabu yield 1208.07. Decoded-feasibility analysis shows SA satisfies all exact cardinality and Rosenberg auxiliary constraints, yet decodes to a native objective 80-88% worse than HAMD, demonstrating a surrogate-distortion effect rather than simple infeasibility. Exact calibration on small instances (n = 20, 25, 30) confirms HAMD finds the provably global optimum in 9/9 trials. These results demonstrate that native higher-order search offers a substantial advantage over quadratized surrogate optimization for constrained cubic portfolio problems.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "q-fin.MF",
+        "q-fin.PM",
+        "q-fin.RM"
+      ],
+      "published": "2026-03-16T21:53:00Z",
+      "updated": "2026-03-16T21:53:00Z",
+      "abs_url": "https://arxiv.org/abs/2603.15947",
+      "pdf_url": "https://arxiv.org/pdf/2603.15947v1",
+      "comment": "15 pages, 0 figures, 10 tables. Reference implementation and benchmark reproduction scripts available at: https://github.com/symplectic-opt/hamd-community",
+      "journal_ref": "",
+      "keyword_score": 31,
+      "matched_keywords": [
+        "portfolio optimization",
+        "momentum"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出超自適應動量動態學求解三次基數限制投組最佳化，有效避免二次化失真，實證完整。",
+      "summary": {
+        "title_zh": "原生三次投資組合最佳化的超自適應動態動能：避免高階基數約束搜尋中的二次化失真",
+        "verdict": "提出超自適應動態動能法（HAMD）直接求解原生三次投資組合最佳化，避免傳統二次化帶來的失真，效能顯著優於模擬退火與禁忌搜尋。",
+        "problem": "傳統的模擬退火與禁忌搜尋在求解包含三次共同波動項的三次基數約束投資組合時，必須進行 Rosenberg 二次化，這會膨脹變數並扭曲搜尋景觀。",
+        "method": "結合連續哈密頓搜尋、精確基數保持投影與迭代區域搜尋（ILS）的混合管線（HAMD），直接對原生高階目標函數進行最佳化，並在 60 秒 CPU 預算下與傳統演算法進行基準測試。",
+        "findings": "在 n = 200、300、500 與 1000 時，HAMD 的解碼原生三次目標值分別比模擬退火與禁忌搜尋獲得 87.9%、71.2%、59.5% 與 46.9% 的相對改善；在小樣本測試中於 9/9 次試驗皆找到可證明的全域最佳解。",
+        "implication": "面對高階非線性約束的投資組合問題，直接使用原生高階搜尋能有效繞過代理模型失真，適合應用於複雜的風險模型配置。",
+        "caveats": "論文主要聚焦於計算目標值與演算法效率的比較，未包含實際市場交易成本與真實歷史資料的績效驗證。",
+        "practicality": 3,
+        "tags": [
+          "投資組合最佳化",
+          "動態動能",
+          "演算法交易",
+          "最佳化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.13082",
+      "title": "Adversarial News and Lost Profits: Manipulating Headlines in LLM-Driven Algorithmic Trading",
+      "authors": [
+        "Advije Rizvani",
+        "Giovanni Apruzzese",
+        "Pavel Laskov"
+      ],
+      "abstract": "Large Language Models (LLMs) are increasingly adopted in the financial domain. Their exceptional capabilities to analyse textual data make them well-suited for inferring the sentiment of finance-related news. Such feedback can be leveraged by algorithmic trading systems (ATS) to guide buy/sell decisions. However, this practice bears the risk that a threat actor may craft \"adversarial news\" intended to mislead an LLM. In particular, the news headline may include \"malicious\" content that remains invisible to human readers but which is still ingested by the LLM. Although prior work has studied textual adversarial examples, their system-wide impact on LLM-supported ATS has not yet been quantified in terms of monetary risk. To address this threat, we consider an adversary with no direct access to an ATS but able to alter stock-related news headlines on a single day. We evaluate two human-imperceptible manipulations in a financial context: Unicode homoglyph substitutions that misroute models during stock-name recognition, and hidden-text clauses that alter the sentiment of the news headline. We implement a realistic ATS in Backtrader that fuses an LSTM-based price forecast with LLM-derived sentiment (FinBERT, FinGPT, FinLLaMA, and six general-purpose LLMs), and quantify monetary impact using portfolio metrics. Experiments on real-world data show that manipulating a one-day attack over 14 months can reliably mislead LLMs and reduce annual returns by up to 17.7 percentage points. To assess real-world feasibility, we analyze popular scraping libraries and trading platforms and survey 27 FinTech practitioners, confirming our hypotheses. We notified trading platform owners of this security issue.",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "published": "2026-01-19T14:19:04Z",
+      "updated": "2026-01-19T14:19:04Z",
+      "abs_url": "https://arxiv.org/abs/2601.13082",
+      "pdf_url": "https://arxiv.org/pdf/2601.13082v1",
+      "comment": "This work has been accepted for publication at the IEEE Conference on Secure and Trustworthy Machine Learning (SaTML). The final version will be available on IEEE Xplore",
+      "journal_ref": "",
+      "keyword_score": 31,
+      "matched_keywords": [
+        "algorithmic trading",
+        "llm",
+        "large language model",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "量化敵意新聞對大語言模型驅動之演算法交易系統的貨幣風險，已獲頂會接受。",
+      "summary": {
+        "title_zh": "對抗性新聞與錯失利潤：在LLM驅動的演算法交易中操縱標題",
+        "verdict": "攻擊者利用人類無法察覺的新聞標題操縱手段，能使LLM驅動的交易系統年化報酬率大減達17.7個百分點。",
+        "problem": "採用LLM進行情緒分析的演算法交易系統，容易遭受對抗性新聞標題的攻擊，但先前研究尚未量化其帶來的實際金錢風險。",
+        "method": "使用Backtrader實作真實的演算法交易系統，結合LSTM價格預測與FinBERT、FinGPT、FinLLaMA及六個通用LLM的情緒分析。評估Unicode同形字替換與隱藏文字條款兩種操縱手法，使用14個月真實資料進行評估。",
+        "findings": "實驗顯示單日攻擊能可靠地誤導LLM，並使年化報酬率降低高達17.7個百分點。",
+        "implication": "使用LLM進行新聞情緒分析的交易系統必須加強輸入驗證與資料淨化，防範隱藏的對抗性文字操縱。實務上具備高度威脅性，需防範爬蟲與資料來源遭到污染。",
+        "caveats": "攻擊者需要能夠在單日內篡改股票相關新聞標題。",
+        "practicality": 4,
+        "tags": [
+          "基礎模型",
+          "演算法交易",
+          "自然語言處理",
+          "風險管理",
+          "對抗性攻擊"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.23308",
+      "title": "FIDES: A Concordance Protocol for LLM-Generated Trading Strategies",
+      "authors": [
+        "Arther Tian",
+        "Alex Ding",
+        "Simon Wu",
+        "Aaron Chan"
+      ],
+      "abstract": "An LLM asked for a trading strategy returns three artifacts at once: a natural-language rationale, an executable implementation, and once run, a track record. Whether these are the same object is rarely checked. We present FIDES, a measurement protocol that treats them as three views to be reconciled rather than one deliverable to be graded. Through dual delivery, a single model call returns both a natural-language strategy with an explicit claimed edge and a self-contained strategy(df) function. FIDES executes the code in a sandbox against a lag-one out-of-sample backtest and scores three concordance gaps: say to do, do to real, and say to result. On 8 liquid US ETFs across four models plus a two-stage elicitation arm, 40 strategies, 2023 to 2024 out-of-sample, three findings stand out. First, concordance does not predict profit: only 2 of 40 strategies beat buy-and-hold, and a plain sma(50,200) rule outperforms every model's mean Sharpe. Second, self-assessment is badly calibrated: 32 of 40 strategies claim to beat buy-and-hold and exactly one does. Third, swapping the language-code judge for a second model flips say to do on more than half of items. Injecting Close.shift(-1) drops do to real by 0.33 on average, while our runtime future-information probe fired on neither clean nor injected code. We frame FIDES as a protocol for measurement fidelity, not a claim about market performance.",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-08-24T14:28:07Z",
+      "updated": "2026-08-24T14:28:07Z",
+      "abs_url": "https://arxiv.org/abs/2608.23308",
+      "pdf_url": "https://arxiv.org/pdf/2608.23308v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 30,
+      "matched_keywords": [
+        "trading strategy",
+        "out-of-sample",
+        "backtest",
+        "llm"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出 FIDES 協議來協調大語言模型交易策略的自然語言、程式碼與績效，發現普遍存在自我評估過度樂觀問題。",
+      "summary": {
+        "title_zh": "FIDES：LLM 生成交易策略的一致性協議",
+        "verdict": "提出 FIDES 協議檢驗 LLM 交易策略的一致性，發現其邏輯、程式與回測結果常不一致且無法擊敗大盤。",
+        "problem": "利用 LLM 生成交易策略時，自然語言邏輯、可執行程式碼與回測表現往往缺乏一致性檢驗。",
+        "method": "採用 FIDES 檢測協議，在 8 檔流動性佳的美國 ETF 上測試 4 個模型與 2 階段引導，樣本期間為 2023 至 2024 年。",
+        "findings": "40 個策略中僅 2 個打敗買進持有，傳統 SMA 策略的平均 Sharpe 更優於所有模型的平均表現；32 個宣稱能打敗大盤的策略中只有 1 個真正做到。",
+        "implication": "LLM 自我評估能力嚴重失準且策略表現不佳，實務上不宜直接盲目依賴模型生成的交易策略。",
+        "caveats": "本研究定位於測量保真度協議而非市場實戰效能評估。",
+        "practicality": 2,
+        "tags": [
+          "LLM",
+          "交易策略",
+          "回測",
+          "模型評估"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.00581",
+      "title": "Decision-focused Sparse Tangent Portfolio Optimization",
+      "authors": [
+        "Haeun Jeon",
+        "Seunghoon Choi",
+        "Hyunglip Bae",
+        "Yongjae Lee",
+        "Woo Chang Kim"
+      ],
+      "abstract": "Sparse tangent portfolio optimization aims to learn an interpretable, low-cardinality portfolio in the tangency direction of the mean-variance frontier. However, the associated cardinality-constrained formulation is NP-hard, and standard predict-then-optimize pipelines often misalign forecasting accuracy with downstream portfolio quality. We propose an end-to-end decision-focused learning framework that reformulates Sharpe ratio maximization as a Disciplined Parametrized Programming (DPP)-compliant convex programming layer and replaces discrete selection with a smooth top-$k$ operator enforcing an exact cardinality $k$. This enables gradient flow through prediction, asset selection, and re-optimization, allowing the predictive model to directly optimize portfolio performance. Across four major equity markets, our method achieves competitive and often superior out-of-sample Sharpe ratios compared with historical and prediction-focused baselines, with particularly strong gains in larger asset universes. Our \\href{https://github.com/feuerwerksh/Diffble-card-SR}{code} is publicly available.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-01T08:06:07Z",
+      "updated": "2026-07-01T08:06:07Z",
+      "abs_url": "https://arxiv.org/abs/2607.00581",
+      "pdf_url": "https://arxiv.org/pdf/2607.00581v1",
+      "comment": "ICML 2026",
+      "journal_ref": "",
+      "keyword_score": 30,
+      "matched_keywords": [
+        "sharpe ratio",
+        "portfolio optimization",
+        "out-of-sample",
+        "equity market"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "ICML發表，端到端決策導向學習，實證完整。",
+      "summary": {
+        "title_zh": "決策導向的稀疏切線連接組合最佳化",
+        "verdict": "提出端到端決策導向學習框架，直接將夏普值最大化納入最佳化層，在大型資產池中取得更佳的樣本外夏普值。",
+        "problem": "基數限制的連接組合最佳化為 NP-hard 問題，且傳統的預測後最佳化流程常導致預測準確度與下游連接組合品質脫節。",
+        "method": "結合 Disciplined Parametrized Programming 與平滑 top-k 算子以強制執行確切基數，應用於四個主要股票市場的權益資產。",
+        "findings": "跨四個主要股票市場，此方法達成具競爭力且通常優於歷史與預測導向基準的樣本外夏普值，在大型資產特別有強勁增長。",
+        "implication": "可直接應用於需要基數限制與可解釋性的連接組合建構，透過端到端梯度流改善下游報酬。",
+        "caveats": "論文摘要未報告具體的數值改善幅度與交易成本假設。",
+        "practicality": 4,
+        "tags": [
+          "連接組合最佳化",
+          "機器學習",
+          "夏普值",
+          "稀疏模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

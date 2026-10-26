@@ -1,0 +1,327 @@
+{
+  "date": "2026-10-26",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2610.31903",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "以狀態相依 Hawkes 模型探討造市與部位限制，實證完整。"
+    },
+    {
+      "arxiv_id": "2610.32237",
+      "topic": "Alpha 與因子",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 4,
+      "reason": "僅探討情緒深度注入的強化學習交易策略，未見真實市場回測與嚴謹成本考量。"
+    },
+    {
+      "arxiv_id": "2610.23901",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "利用深度神經網路區分商業房貸違約型態，實證紮實。"
+    },
+    {
+      "arxiv_id": "2609.04712",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "以凸二次成本模型捕捉價格交叉與瞬時衝擊，實證於期貨合約。"
+    },
+    {
+      "arxiv_id": "2608.27295",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "利用時變多工圖神經網路評估全球銀行系統風險，方法與實證完整。"
+    },
+    {
+      "arxiv_id": "2608.17342",
+      "topic": "Alpha 與因子",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 5,
+      "reason": "結合傅立葉類神經算子與混合專家模型預測加密貨幣，但過度依賴模擬交易。"
+    },
+    {
+      "arxiv_id": "2608.15770",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "透過對抗式逆強化學習模仿專家策略並加入控制障礙函數，跨四大市場實證。"
+    },
+    {
+      "arxiv_id": "2608.02985",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "深入探討大型語言模型回測中的時間洩漏問題，推導嚴謹且具實務指引。"
+    },
+    {
+      "arxiv_id": "2607.25199",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提出自主驗證框架檢驗大型語言模型產生的選擇權定價程式碼。"
+    },
+    {
+      "arxiv_id": "2607.19279",
+      "topic": "Alpha 與因子",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 5,
+      "reason": "以高斯玻色子取樣進行資產分群與統計套利，僅於模擬環境驗證。"
+    },
+    {
+      "arxiv_id": "2607.06166",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "探討預測市場中適當投注策略，並透過 Kalshi 進行真實市場試驗。"
+    },
+    {
+      "arxiv_id": "2606.25811",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出商品期貨行事曆價差的分層圖學習策略，CME 實證表現優異。"
+    },
+    {
+      "arxiv_id": "2606.08569",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "以歐式賣權建構 p-index 風險衡量指標，涵蓋多國指數實證。"
+    },
+    {
+      "arxiv_id": "2606.01553",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出基於典型相關分析的高維度轉換因子模型結構變遷檢定。"
+    },
+    {
+      "arxiv_id": "2606.00061",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "探討大型語言模型在引入索羅斯反身性理論後之預測表現，實驗設計獨特。"
+    },
+    {
+      "arxiv_id": "2605.28850",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "研究大型語言模型交易代理人在市場壓力下的行為對齊與表示動態。"
+    },
+    {
+      "arxiv_id": "2604.24366",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "對去中心化預測市場 Polymarket 進行微觀結構實證，資料龐大分析深入。"
+    },
+    {
+      "arxiv_id": "2604.02921",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "透過監督式微調修正大型語言模型的報酬預測外推偏誤，實證完整。"
+    },
+    {
+      "arxiv_id": "2603.27539",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "探討金融多代理人系統的評估缺陷，提出協調損益平衡點等指標。"
+    },
+    {
+      "arxiv_id": "2603.20965",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "以輕量級監督式聚合器結合多個零樣本大型語言模型輸出進行財報分類。"
+    },
+    {
+      "arxiv_id": "2601.13435",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "提出可學習的小波 Transformer 模型進行長短倉交易與報酬最佳化。"
+    },
+    {
+      "arxiv_id": "2601.07852",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 9,
+      "reason": "在摩擦力下將預測對齊決策問題，推導嚴謹且實證顯著降低決策損失。"
+    },
+    {
+      "arxiv_id": "2601.03802",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "系統性比較量子與傳統機器學習在金融預測與實盤模擬的表現。"
+    },
+    {
+      "arxiv_id": "2512.14992",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "結合貝氏最佳化與深度強化學習進行 ESG 金融投組管理。"
+    },
+    {
+      "arxiv_id": "2511.20837",
+      "topic": "波動度與衍生品",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "利用受限深度學習在不完全市場中對選擇權進行定價與避險，數值實驗良好。"
+    },
+    {
+      "arxiv_id": "2512.04099",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "探討部分多元 Transformer 於加密貨幣預測，並指出了統計指標與交易績效的脫節。"
+    },
+    {
+      "arxiv_id": "2511.06177",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "檢驗 SPY 高頻價格序列的推拉反應異常，揭露日內微觀結構異象。"
+    },
+    {
+      "arxiv_id": "2610.24544",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "評估 TimeGAN 產生情境在 Rachev 比率投組配置中的模型風險。"
+    },
+    {
+      "arxiv_id": "2610.11917",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "在 Wasserstein 模糊度下探討多期均值期望值投組最佳化，數學推導完整。"
+    },
+    {
+      "arxiv_id": "2610.01325",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "結合 PPO 與混合體制感知策略進行風險控制交易，實證穩健。"
+    },
+    {
+      "arxiv_id": "2609.39420",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "專門針對可執行演算法交易程式碼微調語言模型，評估方法具參考價值。"
+    },
+    {
+      "arxiv_id": "2609.27024",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "探討預測水準在加密貨幣波動度預測中損失選擇與模型選擇的角色。"
+    },
+    {
+      "arxiv_id": "2608.27575",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "利用粗糙 Bergomi 模型對比特幣反向選擇權進行定價與校準，實證紮實。"
+    },
+    {
+      "arxiv_id": "2608.24786",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 3,
+      "reason": "樣本外夏普值高達 4.31 至 5.76，績效高得不太可信，疑似存在過擬合。"
+    },
+    {
+      "arxiv_id": "2608.15841",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "提出自監督輔助任務自動發現機制以穩定股票交易強化學習，多市場實證。"
+    },
+    {
+      "arxiv_id": "2607.16970",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 7,
+      "reason": "探討訂單簿市場中的群聚與流動性，證明基本面錨定的穩定效果。"
+    },
+    {
+      "arxiv_id": "2607.11328",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 7,
+      "reason": "建立具備商譽回饋機制的策略性場外造市商隨機控制模型。"
+    },
+    {
+      "arxiv_id": "2606.09003",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "以平均場模型研究中心化交易所對權益證明區塊鏈經濟的影響。"
+    },
+    {
+      "arxiv_id": "2606.08379",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "提出具備政策平滑機制的雙目標確定性演員評論家模型進行最佳執行。"
+    },
+    {
+      "arxiv_id": "2606.04258",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "給出預期投組的最佳化決策理論定義與 LQG 分解，推導嚴謹但偏理論。"
+    }
+  ]
+}
