@@ -1,0 +1,535 @@
+{
+  "date": "2026-10-27",
+  "generated_at": "2026-10-27T10:11:07+08:00",
+  "scanned": 536,
+  "eligible": 502,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2602.01817",
+      "title": "Do designated market makers provide liquidity during downward extreme price movements?",
+      "authors": [
+        "Mario Bellia",
+        "Kim Christensen",
+        "Aleksey Kolokolov",
+        "Loriana Pelizzon",
+        "Roberto Renò"
+      ],
+      "abstract": "We study the trading activity of designated market makers (DMMs) in electronic markets using a unique dataset with audit-trail information on trader classification. DMMs may either adhere to their market-making agreements and offer immediacy during periods of heavy selling pressure, or they might lean-with-the-wind to profit from private information. We test these competing theories during extreme (downward) price movements, which we detect using a novel methodology. We show that DMMs provide liquidity when the selling pressure is concentrated on a single stock, but consume liquidity (leaving liquidity provision to slower traders) when several stocks are affected.",
+      "primary_category": "econ.EM",
+      "categories": [
+        "econ.EM"
+      ],
+      "published": "2026-02-02T08:48:15Z",
+      "updated": "2026-02-02T08:48:15Z",
+      "abs_url": "https://arxiv.org/abs/2602.01817",
+      "pdf_url": "https://arxiv.org/pdf/2602.01817v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 27,
+      "matched_keywords": [
+        "market maker",
+        "liquidity",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用帶有交易者分類的獨家稽核資料，實證分析指定造市商在極端價格變動下的行為。",
+      "summary": {
+        "title_zh": "指定造市商在價格極端下跌時是否提供流動性？",
+        "verdict": "研究顯示個股暴跌時指定造市商會提供流動性，但市場全面下跌時則會消耗流動性。",
+        "problem": "指定造市商在面臨沈重賣壓時，究竟會履行協議提供流動性，還是順勢操作以獲取私有資訊利潤？本研究旨在檢驗這兩種競爭理論。",
+        "method": "作者利用電子市場中包含交易員分類稽核追蹤資訊的獨特資料集，透過新穎方法偵測極端價格下跌事件，藉此分析指定造市商在不同賣壓情境下的交易行為。",
+        "findings": "研究發現，當賣壓集中於單一股票時，指定造市商會提供流動性；但當多檔股票受影響時，他們會消耗流動性並將提供責任留給慢速交易員。文中未報告具體績效數字。",
+        "implication": "交易員在設計造市策略或評估市場深度時，必須考量賣壓是個股特異性還是系統性的，因為造市商的行為模式在此兩種情境下完全相反。",
+        "caveats": "本研究依賴特定市場的內部稽核追蹤資料，其結論應用於其他交易所時需考量不同市場微結構的差異。",
+        "practicality": 3,
+        "tags": [
+          "指定造市商",
+          "流動性",
+          "市場微結構",
+          "極端價格移動"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.15412",
+      "title": "From Feedback Loops to Policy Updates: Reinforcement Fine-Tuning for LLM-Based Alpha Factor Discovery",
+      "authors": [
+        "Lingzhe Zhang",
+        "Tong Jia",
+        "Yunpeng Zhai",
+        "Zixuan Xie",
+        "Chiming Duan",
+        "Minghua He",
+        "Philip S. Yu",
+        "Ying Li"
+      ],
+      "abstract": "Modern quantitative trading increasingly relies on systematic models to extract predictive signals from large-scale financial data, where alpha factor discovery plays a central role in transforming market observations into tradable signals. Recent LLM-based methods have shown promise in automating factor generation, but most of them still rely on prompt-level generation--evaluation--feedback loops for iterative optimization. As the loop becomes longer, repeatedly appended historical candidates and feedback can cause context explosion, increase inference cost, dilute useful information, and introduce feedback drift. Moreover, these methods often depend on very large LLMs whose stable generation preferences may lead to structurally similar expressions, redundant candidates, and search stagnation. To address these limitations, we propose \\textsc{QuantEvolver}, a self-evolving alpha factor discovery framework based on reinforcement fine-tuning. Instead of accumulating feedback in the prompt, \\textsc{QuantEvolver} converts executable quantitative evaluation into policy updates, enabling a Miner LLM to internalize historical optimization experience through parameter learning. Specifically, \\textsc{QuantEvolver} constructs high-quality seed factors, builds diverse seed--time-window training tasks, generates executable Factor DSL expressions, evaluates them through Regime Backtest, and optimizes the Miner LLM with Diversity-Complementarity Reward. During training, high-quality factors are continuously accumulated in a Mined Factor Database, which serves as the final discovered factor library. Extensive experiments on three realistic market benchmarks demonstrate the effectiveness of \\textsc{QuantEvolver}, which consistently improves the primary evaluation metric of each task over existing LLM-based alpha factor discovery baselines, produces higher-quality and more complementary factor pools.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-05-14T20:54:40Z",
+      "updated": "2026-05-14T20:54:40Z",
+      "abs_url": "https://arxiv.org/abs/2605.15412",
+      "pdf_url": "https://arxiv.org/pdf/2605.15412v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 26,
+      "matched_keywords": [
+        "backtest",
+        "llm",
+        "regime",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用強化微調進行Alpha因子的自主探索，將評估轉化為參數更新。",
+      "summary": {
+        "title_zh": "從回饋迴圈到策略更新：基於強化微調的 LLM Alpha 因子挖掘",
+        "verdict": "提出 QuantEvolver 框架，利用強化微調將評估結果轉化為模型參數更新，解決 LLM 自動挖掘 Alpha 因子的上下文爆炸與搜尋停滯問題。",
+        "problem": "現有基於 LLM 的 Alpha 因子挖掘多依賴提示詞層級的迭代最佳化，容易導致上下文爆炸、推論成本增加、回饋漂移以及搜尋停滯。",
+        "method": "提出 QuantEvolver 框架，使用 Miner LLM 生成因子 DSL 表達式，透過體制回測進行評估，並結合多樣性與互補性獎勵進行強化微調，在多個真實市場基準進行實證。",
+        "findings": "實驗顯示 QuantEvolver 持續改善了各項任務的主要評估指標，相較於現有基於 LLM 的 Alpha 因子挖掘基準，能產生品質更高且更具互補性的因子池，但論文未報告具體的報酬或夏普值數字。",
+        "implication": "此方法可將因子挖掘經驗內部化至模型參數中，減少對長提示詞的依賴，適合用於自動化量化研究管線。",
+        "caveats": "模型依賴強化微調，訓練成本與超參數設計可能需要大量工程調校。",
+        "practicality": 4,
+        "tags": [
+          "LLM",
+          "Alpha 因子挖掘",
+          "強化學習",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.22745",
+      "title": "Reading the News Without Hindsight: NoLBERT Topics and the Cross-Section of Stock Returns",
+      "authors": [
+        "Kevin Foley",
+        "Jonathan Hartadi",
+        "Shivesh Prakash",
+        "Charishma Takkallapalli",
+        "Swapnil Vatsal"
+      ],
+      "abstract": "Language models that read financial news are usually trained on text from the same years used to test them, so a backtest can reward hindsight. We build news topics from NoLBERT, an encoder pretrained only on text published between 1976 and 1995, adapted into a sentence encoder by contrastive fine-tuning on passages of the same article, with no labels or returns. We compare it with LDA, MiniLM and FinBERT readers on 1.26 million articles from 2012 to 2024, convert each reader's topics into attention shocks and stock exposures, and forecast the returns of the 1,000 largest US stocks with eight models at three rebalancing frequencies. Models are fitted on 2013-2019, choices are made on 2020-2021, and 2022-2024 is held out. The experiment with the best validation score loses money at every frequency. Measuring attention shocks against the past 63 trading days instead of 5 raises the test rank IC of every reader. NoLBERT gives the most stable topics and forecasts about as well as LDA. An equal-weight combination of all readers and models earns a monthly net Sharpe ratio of 1.12, significant against zero before adjusting for the search but not against a price-only benchmark.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "cs.CL",
+        "cs.LG",
+        "q-fin.PM"
+      ],
+      "published": "2026-10-15T23:27:49Z",
+      "updated": "2026-10-15T23:27:49Z",
+      "abs_url": "https://arxiv.org/abs/2610.22745",
+      "pdf_url": "https://arxiv.org/pdf/2610.22745v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 25,
+      "matched_keywords": [
+        "sharpe ratio",
+        "backtest",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "使用無後見之明的文字編碼器建構新聞主題並預測股票報酬，實證完整且考慮樣本外表現。",
+      "summary": {
+        "title_zh": "避免後見之明的財經新聞閱讀：NoLBERT 主題與股票橫斷面報酬",
+        "verdict": "使用歷史預訓練的 NoLBERT 提取新聞主題，建構注意力衝擊來預測美國大型股報酬。",
+        "problem": "財經語言模型通常在與測試期相同的年份文字上進行訓練，導致回測存在後見之明偏差。這篇論文旨在探討如何透過避免後見之明的情境來評估新聞文字對股票報酬的預測能力。",
+        "method": "使用僅在 1976 至 1995 年文本上預訓練的 NoLBERT 編碼器，並透過對比微調適應為句子編碼器。針對 2012 至 2024 年間的 126 萬篇新聞文章，比較 LDA、MiniLM、FinBERT 與 NoLBERT，在 8 種模型與 3 種再平衡頻率下預測前 1,000 大美國股票報酬。",
+        "findings": "驗證分數最佳的模型在所有頻率下皆虧損。將注意力衝擊的測量窗口從過去 5 個交易日改為 63 個交易日，可提升所有閱讀器的測試排序 IC。所有閱讀器與模型的等權重組合可獲得 1.12 的月度淨夏普值，但在調整搜索前顯著，且無法打敗純價格基準。",
+        "implication": "嚴格避免後見之明的文字模型在單獨使用時預測效果有限，但透過集成多種模型可取得正的夏普值。實務上建構新聞因子時，延長注意力衝擊的基準窗口有助於提升測試表現。",
+        "caveats": "表現最佳的組合在扣除多重檢定與搜索成本後，並未顯著優於純價格基準。",
+        "practicality": 3,
+        "tags": [
+          "自然語言處理",
+          "新聞情緒",
+          "量化投資",
+          "橫斷面報酬",
+          "替代資料"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.26662",
+      "title": "AllPath: Layered Verification for a Deployed, Self-Revising LLM Trading Agent under Human-Gated and Autonomous Regimes",
+      "authors": [
+        "Tian Zhang",
+        "Meng Li"
+      ],
+      "abstract": "LLM trading agents are evaluated almost exclusively in backtests and autonomous benchmark harnesses. Deployment, where actions are irreversible, raises a different question: who verifies the agent's actions, and which failures can each verifier structurally catch? We report on AllPath, a personal LLM trading agent deployed against a live paper-brokerage account. The system watches positions through a deterministic rules engine, and each night it reviews its own day and proposes revisions to its own trading strategies. Verification is split across three layers. Code verifies what must not depend on judgment: deterministic gates enforce risk limits and block any strategy revision that fails an integrity check. The agent verifies itself within fixed bounds: its nightly review has an iteration cap and no tools that can act. A human verifies judgment, through approval screens that show the current state of each proposal. We also compared two verification policies for the agent's self-revisions on the live system: two and a half weeks with every self-revision human-gated, then five weeks with reflection revisions auto-applied behind the same code gates, while the operator's chat channel stayed human-gated throughout. Each layer caught a different kind of failure. The code gates rejected no proposal; their role was keeping revisions consistent. The human rejected two proposals that passed every code check, both over a disagreement about the market, and later removed 11 of the 19 rules the agent had added on its own, at a median lag of eight days. The most instructive production incidents, such as strategies silently left unmonitored, passed every gate; the operator found them by hand, and the fix each time was an interface change that makes the condition visible. We contribute the layered architecture, the two-regime account, and a production incident taxonomy, none observable in a backtest.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-10-19T16:18:52Z",
+      "updated": "2026-10-19T16:18:52Z",
+      "abs_url": "https://arxiv.org/abs/2610.26662",
+      "pdf_url": "https://arxiv.org/pdf/2610.26662v1",
+      "comment": "Accepted to the 3rd Workshop on LLMs and Generative AI in Finance (AI4F) at ACM ICAIF 2026 (non-archival). 11 pages, 3 figures, 5 tables. Code: https://github.com/dukesky/allpath-trading-agent",
+      "journal_ref": "",
+      "keyword_score": 24,
+      "matched_keywords": [
+        "backtest",
+        "llm",
+        "regime"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探討部署在真實紙本經紀帳戶中、具備自我修正能力的大型語言模型交易代理人的分層驗證機制。",
+      "summary": {
+        "title_zh": "AllPath：部署中且具自我修正能力的LLM交易代理之分層驗證架構",
+        "verdict": "提出名為 AllPath 的分層驗證架構，在實盤紙上交易中結合程式碼閘道、自我檢查與人工審核來管理 LLM 交易代理的行為。",
+        "problem": "LLM 交易代理在實盤部署時，動作具備不可逆性，現有的回測與基準測試無法回答誰來驗證代理的行為以及各驗證者的結構性盲點。",
+        "method": "採用 AllPath 系統，結合確定性規則引擎與三層驗證架構（程式碼閘道、有限制的自我檢查、人工審核介面），於實盤紙上交易帳戶進行兩階段測試（人工審核與部分自動套用）。",
+        "findings": "程式碼閘道未拒絕任何提案；人工否決了 2 個通過程式碼檢查的提案，並在後續手動移除代理自行新增的 19 條規則中的 11 條（中位數落後 8 天）。未報告具體績效數字。",
+        "implication": "實盤部署不能只依賴自動化閘道，對於市場判斷的分歧與介面隱形問題，仍需透過人工介入與視覺化改善來修正。",
+        "caveats": "部分重要生產環境事件（如策略悄悄未受監控）無法被現有閘道攔截，需靠人工手動發現。",
+        "practicality": 4,
+        "tags": [
+          "LLM",
+          "交易代理",
+          "風險管理",
+          "實盤部署",
+          "自動化驗證"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.18120",
+      "title": "Tradable Itô Signatures: A Model-Free, Interpretable Framework for Dynamic Hedging",
+      "authors": [
+        "Xin Guo",
+        "Binnan Wang",
+        "Ruixun Zhang"
+      ],
+      "abstract": "We propose an interpretable machine-learning framework for dynamic hedging using the Itô signature transform, which turns asset-price paths into a set of linear features that universally represent nonlinear functions on time-series. We show that each discretized Itô signature component can be perfectly replicated by a simple self-financing strategy using only the underlying assets and cash, which turns Itô signature components into tradable and transparent hedging bases. This allows nonlinear derivative payoffs to be approximated by linear combinations of signature terms and hedged through the corresponding combination of trading strategies. We further establish a new approximation result for the Itô signature and derive theoretical bounds for both in-sample and out-of-sample hedging errors. Our method is computationally efficient, easy to implement, and avoids the estimation of future conditional expectations, which makes it attractive for real-world applications. In simulations, our method delivers strong sample efficiency at substantially lower computational cost than neural-network benchmarks. In an empirical study of S\\&P 500 index options, it performs robustly across vanilla and path-dependent contracts, with the signature-kernel weighted version providing further gains by localizing estimation to similar historical market paths. Overall, the paper identifies the Itô signature as a practical, transparent, and model-agnostic implementation framework for dynamic hedging.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "q-fin.MF",
+        "stat.ML"
+      ],
+      "published": "2026-07-14T16:49:18Z",
+      "updated": "2026-07-14T16:49:18Z",
+      "abs_url": "https://arxiv.org/abs/2608.18120",
+      "pdf_url": "https://arxiv.org/pdf/2608.18120v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 24,
+      "matched_keywords": [
+        "out-of-sample",
+        "hedging",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出可交易的伊藤簽章框架進行動態避險，結合理論邊界與選擇權實證，具備實用價值。",
+      "summary": {
+        "title_zh": "可交易的 Itô 簽章：動態避險的無模型、可解釋框架",
+        "verdict": "提出基於 Itô 簽章的動態避險框架，能以自我融資策略完全複製簽章分量，具備高效且可解釋的優勢。",
+        "problem": "傳統動態避險需要估計未來的條件期望值，且非線性衍生性商品報酬的避險常面臨計算複雜與模型誤設的問題。",
+        "method": "運用 Itô 簽章轉換將資產價格路徑轉為線性特徵，建構可交易的避險基礎。針對 S&P 500 指數選擇權進行實證研究，涵蓋標準與路徑相依合約。",
+        "findings": "在模擬中展現極佳的樣本效率，且計算成本較神經網路基準低很多。在 S&P 500 選擇權實證中表現穩健，加入簽章核函數加權更能透過局部的歷史市場路徑進一步提升績效，論文未報告具體的數值報酬率。",
+        "implication": "避險策略無需估計條件期望值且具備透明性，可直接應用於標準與路徑相依選擇權的動態避險。",
+        "caveats": "實證部分依賴歷史市場路徑的相似性，若遭遇前所未有的極端市場結構轉變可能影響效果。",
+        "practicality": 4,
+        "tags": [
+          "動態避險",
+          "衍生性商品",
+          "機器學習",
+          "特徵工程"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.18046",
+      "title": "EvoMarket: A High-Fidelity and Scalable Financial Market Simulator",
+      "authors": [
+        "Muyao Zhong",
+        "Zhenhua Yang",
+        "Yuxiang Liu",
+        "Ke Tang",
+        "Peng Yang"
+      ],
+      "abstract": "High-fidelity, scalable market simulation is a key instrument for mechanism evaluation, stress testing, and counterfactual policy analysis. Yet existing simulators rarely achieve \\emph{mechanism fidelity} beyond single-asset intraday settings, \\emph{microstructure fidelity} against historical limit order books (LOB), and \\emph{computational tractability} at market scale in a single system. This paper presents \\textit{EvoMarket}, a discrete-event, multi-agent financial market simulator designed for intervention-oriented experiments in multi-asset and cross-day environments. EvoMarket couples a high-throughput execution core (optimized LOB data structures, hierarchical scheduling under propagation delays, and asynchronous per-asset matching) with explicit institutional mechanisms (market calendars, opening call auctions, price limits, and T+1 settlement). To avoid expensive black-box calibration, EvoMarket introduces an Oracle-guided in-run self-calibration mechanism that interprets microstructure discrepancy as missing order flow and synthesizes corrective orders at recording checkpoints. Experiments on China A-share order-flow and LOB data show close replay alignment over five trading days, fidelity gains from budgeted in-run calibration across depth levels, broad agent order-space coverage, and scalable performance under increasing input order rates and market breadth. We further demonstrate cross-asset linkage and event-study style intervention evaluation that produces structured dependence and interpretable event-time responses.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE",
+        "cs.MA"
+      ],
+      "published": "2026-04-20T10:10:58Z",
+      "updated": "2026-04-20T10:10:58Z",
+      "abs_url": "https://arxiv.org/abs/2604.18046",
+      "pdf_url": "https://arxiv.org/pdf/2604.18046v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 24,
+      "matched_keywords": [
+        "limit order book",
+        "order flow",
+        "order book"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出高擬真與可擴展的金融市場模擬器，支援多資產與跨日環境的干預性實驗。",
+      "summary": {
+        "title_zh": "EvoMarket：高逼真度與可擴展的金融市場模擬器",
+        "verdict": "提出 EvoMarket 模擬器，結合高效能執行核心與自我校準機制，實現高逼真度的跨日市場模擬。",
+        "problem": "現有模擬器難以在單一系統中同時達成多資產跨日的機制逼真度、歷史限價單簿的微觀結構逼真度與計算可擴展性。",
+        "method": "採用離散事件多代理人金融市場模擬器 EvoMarket，結合高效能執行核心與預言機引導的執行中自我校準機制，以中國A股訂單流與限價單簿資料進行為期五個交易日的實驗。",
+        "findings": "未報告具體績效數字，但實驗顯示其在五個交易日內達到緊密的歷史回放對齊，透過動態校準顯著提升各深度層級的逼真度，並具備良好的可擴展性與跨資產聯動能力。",
+        "implication": "可用於市場機制的壓力測試、反事實政策分析與交易策略評估，前提是需要建立高通量的代理人模擬環境。",
+        "caveats": "論文主要展示系統框架與逼真度，未提供具體的交易損益或回測績效數字。",
+        "practicality": 3,
+        "tags": [
+          "市場模擬",
+          "限價單簿",
+          "多代理人系統",
+          "微觀結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2512.02261",
+      "title": "TradeTrap: Are LLM-based Trading Agents Truly Reliable and Faithful?",
+      "authors": [
+        "Lewen Yan",
+        "Jilin Mei",
+        "Tianyi Zhou",
+        "Lige Huang",
+        "Jie Zhang",
+        "Dongrui Liu",
+        "Jing Shao"
+      ],
+      "abstract": "LLM-based trading agents are increasingly deployed in real-world financial markets to perform autonomous analysis and execution. However, their reliability and robustness under adversarial or faulty conditions remain largely unexamined, despite operating in high-risk, irreversible financial environments. We propose TradeTrap, a unified evaluation framework for systematically stress-testing both adaptive and procedural autonomous trading agents. TradeTrap targets four core components of autonomous trading agents: market intelligence, strategy formulation, portfolio and ledger handling, and trade execution, and evaluates their robustness under controlled system-level perturbations. All evaluations are conducted in a closed-loop historical backtesting setting on real US equity market data with identical initial conditions, enabling fair and reproducible comparisons across agents and attacks. Extensive experiments show that small perturbations at a single component can propagate through the agent decision loop and induce extreme concentration, runaway exposure, and large portfolio drawdowns across both agent types, demonstrating that current autonomous trading agents can be systematically misled at the system level. Our code is available at https://github.com/Yanlewen/TradeTrap.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2025-12-01T23:06:42Z",
+      "updated": "2025-12-01T23:06:42Z",
+      "abs_url": "https://arxiv.org/abs/2512.02261",
+      "pdf_url": "https://arxiv.org/pdf/2512.02261v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 24,
+      "matched_keywords": [
+        "backtesting",
+        "llm",
+        "drawdown",
+        "equity market"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "建立評估框架來系統性壓力測試大型語言模型交易代理人在對抗或錯誤條件下的可靠性。",
+      "summary": {
+        "title_zh": "TradeTrap：基於LLM的交易代理是否真正可靠且忠實？",
+        "verdict": "TradeTrap 評估框架顯示，基於 LLM 的交易代理在系統層級受到微小干擾時，會導致極端部位集中與重大投資組合回撤。",
+        "problem": "高風險的金融環境中，基於 LLM 的自主交易代理在對抗或錯誤條件下的可靠性與穩健性尚未被充分檢驗。",
+        "method": "提出 TradeTrap 評估框架對適應性與程序性自主交易代理進行壓力測試，涵蓋市場情報、策略制定、投資組合帳本處理與交易執行四個核心組件。採用美國股市歷史資料進行封閉迴圈回測。",
+        "findings": "實驗顯示，單一組件的小干擾會在代理決策迴圈中擴散，引發極端部位集中、失控曝險與大型投資組合回撤，論文未報告具體的報酬或夏普值數字。",
+        "implication": "實務上部署 LLM 交易代理前，必須強化其對系統層級干擾與對抗性攻擊的防禦，否則容易在極端情況下遭受災難性損失。",
+        "caveats": "論文主要指出漏洞與壓力測試結果，但未提供具體的防禦或補救機轉。",
+        "practicality": 3,
+        "tags": [
+          "LLM",
+          "交易代理",
+          "穩健性",
+          "壓力測試",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.27051",
+      "title": "Propose, Don't Judge: An Anytime-Valid Referee for LLM Agents That Mine Investment Factors",
+      "authors": [
+        "Bo Qu",
+        "Mingguang Chen",
+        "Licheng Wang"
+      ],
+      "abstract": "Language-model agents now run the whole of quantitative factor research: they propose investment factors, backtest them, select the survivors and retire them. We ask which of those jobs an agent should keep. Our answer is governed self-evolution: the agent may propose, and a frozen statistical referee that the agent cannot touch must judge. The referee scores each candidate only on market outcomes revealed after submission, by betting, so its false-discovery guarantee holds at every stopping time for any proposal policy. We cross three proposers (a script, a bandit and a language model) with this referee and with three deliberately leaky ones, in a synthetic world with planted truth, a probe-authoring environment and a ten-year walk-forward on the CSI 500. Who judges sets the number of false admissions: the frozen referee admits 5-11 times fewer sub-threshold factors than the leaky referees under a scripted proposer, and no proposer closes that gap. Who proposes sets the yield: the language model beats the script, matches the bandit, and adds the one capability a bandit lacks, writing its own diagnostic probes. The certificate's price is time: an admitted true factor waits about 500 trading days, and the certified portfolio's Sharpe ratio therefore trails an ungated one. Judging belongs to the procedure; proposing and instrument-making belong to the agent.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "q-fin.PM",
+        "q-fin.ST"
+      ],
+      "published": "2026-09-22T20:43:44Z",
+      "updated": "2026-09-22T20:43:44Z",
+      "abs_url": "https://arxiv.org/abs/2609.27051",
+      "pdf_url": "https://arxiv.org/pdf/2609.27051v1",
+      "comment": "37 pages, 7 figures, 26 tables. JEL: G11, G14, C58",
+      "journal_ref": "",
+      "keyword_score": 23,
+      "matched_keywords": [
+        "sharpe ratio",
+        "backtest",
+        "llm"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探討由大型語言模型代理人開採投資因子時，採用凍結統計裁判來保證假發現率的機制。",
+      "summary": {
+        "title_zh": "提出而不評判：用於挖掘投資因子的LLM代理之隨時有效裁判",
+        "verdict": "由凍結的統計裁判把關可大幅降低偽發現率，但真實因子的確認需等待約 500 個交易日，導致證書投資組合的夏普值落後未把關者。",
+        "problem": "LLM代理在量化因子研究中常一手包辦提案與評估，容易造成過擬合與偽發現，因此需要探討代理該負責哪些工作。",
+        "method": "結合三種提案者與具備虛假發現保證的凍結統計裁判，在 CSI 500 上進行十年步進式實證與模擬環境測試。",
+        "findings": "在腳本提案者下，凍結裁判的偽發現因子錄取量比有漏洞的裁判少 5 至 11 倍。被錄取的真實因子平均需等待約 500 個交易日，且憑證投資組合的夏普值落後於未設閘門的組合。",
+        "implication": "評估工作應交給獨立的統計程序，而提案與診斷工具製作則可交給代理，以降低因子挖掘的過擬合風險。",
+        "caveats": "嚴格的裁判機制需要付出長達約 500 個交易日的等待時間成本，導致短期夏普值表現較差。",
+        "practicality": 4,
+        "tags": [
+          "LLM",
+          "Alpha因子挖掘",
+          "量化研究",
+          "回測過擬合"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.02985",
+      "title": "Temporal Leakage in LLM Backtesting: Measurement, Validation, and Adjusted Scores",
+      "authors": [
+        "Zeyu Zhang",
+        "Bradly C. Stadie"
+      ],
+      "abstract": "The standard check for contamination in LLM backtests is simple: compare scores before and after the training cutoff. We show this check is uninformative. Four flagship models fail it on questions they cannot have memorized: every scored question resolved after their cutoffs. The reason is structural. Models legitimately know more about times near their cutoff, so recency mimics leakage, and we prove no passive backtest can separate the two from genuine skill. Measurement, not just detection, requires information from outside the backtest. We supply it in two forms. A known cutoff identifies leakage at the boundary; a matched clean control identifies it globally and yields a leakage-adjusted score. We also derive where leakage hides: it concentrates on outcomes that surprised the crowd and were well covered in training, and partial memorization is disproportionately rewarded. We validate the estimators against ground truth by planting leakage in twin models, where they recover the injected dose and return null on clean questions. Deployed on frontier models, they detect one cutoff-localized signature and, at the audit's power floor, clear five models whose apparent advantages were recency alone. Backtests need not be discarded; they need one defensible reference.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL",
+        "stat.ML"
+      ],
+      "published": "2026-08-04T00:45:54Z",
+      "updated": "2026-08-04T00:45:54Z",
+      "abs_url": "https://arxiv.org/abs/2608.02985",
+      "pdf_url": "https://arxiv.org/pdf/2608.02985v1",
+      "comment": "12 pages main content, 45 pages in total",
+      "journal_ref": "",
+      "keyword_score": 28,
+      "matched_keywords": [
+        "backtesting",
+        "backtest",
+        "llm"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "深入探討大型語言模型回測中的時間洩漏問題，推導嚴謹且具實務指引。",
+      "summary": {
+        "title_zh": "LLM 回測中的時間資料洩漏：衡量、驗證與調整後分數",
+        "verdict": "證明傳統回測檢查無法區分模型真正能力與近期資訊，並提出透過控制組來修正資料洩漏的方法。",
+        "problem": "LLM 回測中標準的污染檢查無效，且被動回測無法將模型對近期事件的正常理解與真實資料洩漏區分開來。",
+        "method": "透過理論證明與植入洩漏的雙胞胎模型進行驗證，分析頂級模型在訓練截止日期前後的表現。",
+        "findings": "四大旗艦模型在所有截點後解析的問題上皆未能通過傳統檢查，研究發現資料洩漏集中在市場意外且訓練覆蓋率高的大眾結果上。",
+        "implication": "回測不需要捨棄，但需要一個可辯護的外部參考基準或匹配的乾淨控制組來校正分數。",
+        "caveats": "需要額外的資訊（如已知截點或匹配控制組）才能有效衡量與調整洩漏。",
+        "practicality": 3,
+        "tags": [
+          "LLM",
+          "回測",
+          "機器學習",
+          "資料洩漏"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.20319",
+      "title": "Implementation Risk in Portfolio Backtesting: A Previously Unquantified Source of Error",
+      "authors": [
+        "Dong Yin",
+        "Takeshi Miki",
+        "Vladislav Lesnichenko",
+        "Vasyl Gural"
+      ],
+      "abstract": "Portfolio backtesting is the primary tool for evaluating investment strategies before deployment, yet practitioners implicitly assume that different engines produce identical results for the same strategy. we formalise implementation risk, the systematic divergence in backtested portfolio metrics arising solely from differences in how engines implement the same logical strategy, and propose four metrics grounded in metrology to quantify it: engine sensitivity, implementation uncertainty interval, divergence amplification factor, and conclusion stability index. we execute 15 benchmark strategies through five independent open-source engines on 30 non-overlapping stratified asset buckets comprising 180 s&p 500 stocks under four transaction-cost regimes. at zero cost, all five engines agree exactly (maximum divergence 0.000%), isolating transaction-cost implementation as the sole source of disagreement. under nonzero costs, divergence is structured and predictable (spearman rho = 0.93 with cost intensity), remaining below 0.75 percentage points for most strategies but reaching 3.71% for high-turnover rotation strategies. source-code forensics uncovered seven previously undocumented defects across three engines, abstracted into a five-category failure-mode taxonomy. all engines agree on the sign of every performance metric (conclusion stability index = 1), so implementation risk does not alter investment decisions for the strategies studied but introduces measurable ambiguity in performance attribution. code and benchmark data are publicly available.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "cs.CE",
+        "q-fin.RM"
+      ],
+      "published": "2026-03-19T23:28:29Z",
+      "updated": "2026-03-19T23:28:29Z",
+      "abs_url": "https://arxiv.org/abs/2603.20319",
+      "pdf_url": "https://arxiv.org/pdf/2603.20319v1",
+      "comment": "Submitted to Financial Innovation. 8 sections, 2 appendices, 24 figures, 10 tables",
+      "journal_ref": "",
+      "keyword_score": 26,
+      "matched_keywords": [
+        "backtesting",
+        "regime",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "量化投資組合回測中的實作風險，透過五個開源引擎找出隱含差異與程式碼缺陷。",
+      "summary": {
+        "title_zh": "投資組合回測的實作風險：先前未被量化的誤差來源",
+        "verdict": "不同的回測引擎在處理交易成本時會產生實作風險，在高週轉策略下會導致績效分歧。",
+        "problem": "實務界常隱含假設不同回測引擎對相同策略會產出相同結果。本研究旨在填補缺乏量化評估實作風險（即引擎實作差異所致的系統性分歧）的空白。",
+        "method": "提出四個計量學指標來量化實作風險，並在 4 種交易成本體制下，於 180 檔 S&P 500 股票的 30 個資產區塊中，透過 5 個獨立開源引擎執行 15 個基準策略。",
+        "findings": "在零成本時所有引擎完全一致，非零成本下的分歧與成本強度呈顯著正相關（Spearman 相關係數 0.93），多數策略分歧低於 0.75 個百分點，但高週轉輪動策略高達 3.71%。程式碼鑑識發現 7 個缺陷，但所有引擎對效能指標的正負號有一致共識（結論穩定度指數為 1）。",
+        "implication": "實作風險雖不會改變投資決策的方向，但會對績效歸因引入可測量的模糊性，團隊需嚴格檢視回測引擎的交易成本實作。",
+        "caveats": "研究所選用的資產與策略範圍仍有一定限制，未能涵蓋所有類型的金融商品。",
+        "practicality": 4,
+        "tags": [
+          "回測",
+          "交易成本",
+          "實作風險",
+          "績效歸因"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
