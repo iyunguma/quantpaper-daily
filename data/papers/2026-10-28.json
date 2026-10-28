@@ -1,0 +1,521 @@
+{
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T10:19:35+08:00",
+  "scanned": 2423,
+  "eligible": 2313,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2610.33400",
+      "title": "Tracking High-Frequency Trading Activity in China and Its Effects on Market Quality",
+      "authors": [
+        "Li Guo",
+        "Frank Weikai Li",
+        "Ding Qi",
+        "Lijian Sun"
+      ],
+      "abstract": "We develop a new order-level proxy for high-frequency trading (HFT) activity based on precise order placement and study its effects on market quality. With quotes updating multiple times per second, millisecond-level order-book access makes high-frequency traders more likely to submit active exact-match orders, defined as limit orders priced exactly at the prevailing best opposite-side quote. Using Shenzhen Stock Exchange data, we validate the proxy: active exact-match orders respond faster to quote updates, cancel more rapidly, concentrate when depth imbalance is favorable and spreads are narrow, and predict mid-quote returns from 100 milliseconds through ten minutes. A difference-in-differences design exploiting cross-channel variation in order dissemination latency at the market open shows that lower latency increases active exact-match shares. This variation yields plausibly causal evidence that latency-induced HFT raises short-horizon price variation, wide-spread incidence, and adverse-selection exposure, while realized spreads decline and pricing error falls modestly. Unlike developed markets, China's T+1 constraint, absence of maker-taker rebates, and limits on rapid quote revision tilt speed advantages toward directional liquidity taking, highlighting how market design shapes the channel through which speed affects market quality.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-10-24T02:22:20Z",
+      "updated": "2026-10-24T02:22:20Z",
+      "abs_url": "https://arxiv.org/abs/2610.33400",
+      "pdf_url": "https://arxiv.org/pdf/2610.33400v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 31,
+      "matched_keywords": [
+        "high-frequency",
+        "liquidity",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用深交所訂單資料分析高頻交易活動與市場品質，因果推論具體。",
+      "summary": {
+        "title_zh": "追蹤中國高頻交易活動及其對市場品質的影響",
+        "verdict": "提出基於訂單層級的高頻交易代理變數，發現在中國市場結構下，速度優勢反而推升了短期價格波動與逆選擇風險。",
+        "problem": "在缺乏直接高頻交易識別標籤的市場中，如何建立精確的代理變數來追蹤高頻交易活動，並評估其對市場品質的因果影響。",
+        "method": "利用深圳證券交易所的毫秒級限價單簿資料與訂單發布延遲的差異化設計，研究主動精確匹配單（active exact-match orders）的行為與市場效應。",
+        "findings": "主動精確匹配單能對報價更新反應更快、取消更迅速，且能預測從 100 毫秒到 10 分鐘的中間價報酬。因果推論顯示，延遲降低會提高此類高頻交易佔比，進而增加短期價格波動、價差擴大機率與逆選擇風險，同時實現價差下降、定價誤差微幅減少。",
+        "implication": "中國市場的 T+1 限制、無造市者回扣及報價修改限制，使得速度優勢偏向方向性流動性消耗，顯示市場設計會根本改變高頻交易對市場品質的影響機制。",
+        "caveats": "研究結果高度依賴中國特定的市場微觀結構與制度限制，未必能直接推廣至歐美發達市場。",
+        "practicality": 3,
+        "tags": [
+          "高頻交易",
+          "限價單簿",
+          "市場微結構",
+          "流動性",
+          "訂單流"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.02002",
+      "title": "Hawkes-Driven OTC Market Making: Volterra-Riccati Approximation",
+      "authors": [
+        "Alexander Barzykin"
+      ],
+      "abstract": "We formulate an over-the-counter (OTC) market-making problem in which request-for-quote (RFQ) arrivals are modelled by general Hawkes kernels and fills are controlled thinnings of the exogenous request flow. The modelling choice is motivated by spot-FX RFQ data: after filtering and transforming to seasonality-adjusted RFQ activity time, two-way activity in major currency pairs exhibits large fitted branching ratios and multi-scale persistence. For general Hawkes kernels the control problem is path-dependent: the relevant state contains the order-flow history, or equivalently the forward curve of conditional future RFQ intensities. Exact Markovian lifting is available for exponential kernels, but it becomes high-dimensional for mixtures of exponentials and impractical for long-memory kernels. We therefore develop a hierarchy of Volterra-Riccati approximations. The first level replaces random future request flow by its conditional Volterra forecast; the second adds a covariance correction for intensity uncertainty; the third updates the quote rule with the realized Hawkes memory, or equivalently with the post-request conditional forecast curve. The approximation hierarchy is validated in an exponential Hawkes benchmark, where the exact lifted HJB can be solved numerically. The state-feedback Volterra-Riccati policy closely tracks the exact benchmark, especially in directional regimes, while a memory-free Poisson policy suffers substantial regret. We then apply the same state-feedback rule to a power-law-like RFQ memory model. A directional RFQ burst changes the conditional forecast of future flow and is converted by the continuation-value shadow price into a persistent quote skew. The resulting endogenous OTC quote impact inherits the long-memory decay of the RFQ forecast response and improves inventory and P&L risk control relative to a no-conditioning Poisson benchmark.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM",
+        "q-fin.MF"
+      ],
+      "published": "2026-08-03T10:04:12Z",
+      "updated": "2026-08-25T20:43:56Z",
+      "abs_url": "https://arxiv.org/abs/2608.02002",
+      "pdf_url": "https://arxiv.org/pdf/2608.02002v2",
+      "comment": "24 pages, 7 figures",
+      "journal_ref": "",
+      "keyword_score": 26,
+      "matched_keywords": [
+        "market making",
+        "regime"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "使用外匯報價資料校準 Hawkes 模型並發展近似造市策略，實證扎實。",
+      "summary": {
+        "title_zh": "Hawkes 驅動的場外造市：Volterra-Riccati 近似法",
+        "verdict": "利用 Volterra-Riccati 近似解決具備長記憶性 Hawkes 模型的場外造市問題，提升風控與 P&L 表現。",
+        "problem": "在具備一般 Hawkes 核心（具備大分支比與多尺度持續性）的場外 RFQ 造市中，控制問題具路徑相依性，高維狀態空間導致精確馬可夫提升法不切實際。",
+        "method": "使用現貨外匯 RFQ 資料，透過 Volterra-Riccati 近似階層（包含條件預測、共變異數修正與記憶更新）進行狀態回饋控制，適用於指數與長記憶 Hawkes 模型。",
+        "findings": "在指數 Hawkes 基準測試中，狀態-回饋 Volterra-Riccati 策略能緊密追蹤精確基準，而無記憶的 Poisson 策略則承受顯著遺憾。未報告具體的夏普值或報酬數字。",
+        "implication": "此方法能將定向 RFQ 暴衝轉化為持續的報價偏斜，改善庫存與 P&L 風險控制，適用於場外造市的報價調整。",
+        "caveats": "近似階層的實作複雜度高，且其效能高度依賴 Hawkes 記憶模型的配適品質。",
+        "practicality": 3,
+        "tags": [
+          "造市",
+          "Hawkes",
+          "場外交易",
+          "長記憶",
+          "最佳化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.23833",
+      "title": "Beyond De Prado and Cotton: Hierarchical and Iterative Methods for General Mean-Variance Portfolios",
+      "authors": [
+        "Bernd Johannes Wuebben"
+      ],
+      "abstract": "Hierarchical Risk Parity (De Pardo) and the Schur-complement generalization of Cotton are among the most widely adopted regularised portfolio construction methods, yet both are signal-blind: they solve only the minimum-variance problem and cannot accommodate an arbitrary expected-return forecast. This paper introduces three methods that incorporate alpha signals into hierarchical and regularised portfolio construction. HRP-$μ$ is a hierarchical allocator that accepts an arbitrary signal $μ$ and nests standard HRP when $γ= 0$ and $μ=\\mathbf{1}$. It preserves the tree-based structure of HRP while extending it beyond the minimum-variance setting. HRP-$Σμ$ strengthens this construction by replacing inverse-variance representatives with recursive local mean-variance optima, thereby using richer within-cluster covariance information at the same $O(N^2)$ asymptotic cost. CRISP (Correlation-Regularised Iterative Shrinkage Portfolios) is an iterative solver for $P_γw = μ$ with $P_γ= (1-γ)\\operatorname{diag}(Σ) + γΣ$, so that $γ$ interpolates between a diagonal portfolio rule and full Markowitz. At convergence, CRISP is Markowitz applied to a variance-preserving shrunk covariance-diagonal variances unchanged, off-diagonal correlations shrunk-with $γ$ tuned for out-of-sample Sharpe rather than covariance-estimation loss. In Monte Carlo experiments across multiple covariance regimes and estimation ratios, HRP-$μ$ and HRP-$Σμ$ both outperform plain HRP with HRP-$Σμ$ consistently improving on HRP-$μ$. CRISP at intermediate $γ$ is the dominant method in both regimes, outperforming HRP, Cotton, Ledoit-Wolf shrinkage, direct Markowitz, and the signal-aware hierarchical methods.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM"
+      ],
+      "published": "2026-04-26T18:38:53Z",
+      "updated": "2026-04-26T18:38:53Z",
+      "abs_url": "https://arxiv.org/abs/2604.23833",
+      "pdf_url": "https://arxiv.org/pdf/2604.23833v1",
+      "comment": "93 pages, 8 figures",
+      "journal_ref": "",
+      "keyword_score": 26,
+      "matched_keywords": [
+        "risk parity",
+        "out-of-sample",
+        "regime",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出將 Alpha 訊號納入層級式與正規化投組配置的方法，蒙地卡羅與實證完整。",
+      "summary": {
+        "title_zh": "超越 De Prado 與 Cotton：通用均異投資組合的階層式與迭代式方法",
+        "verdict": "提出將 Alpha 訊號納入階層式與正規化投資組合構建的三種新方法，蒙地卡羅實證顯示 CRISP 與 HRP-Σμ 表現優於傳統 HRP。",
+        "problem": "現有的階層式風險平價與 Schur 補集廣義化方法僅能解決最小變異數問題，無法納入任意的預期報酬預測（即訊號盲點）。",
+        "method": "提出 HRP-μ、HRP-Σμ 與 CRISP 三種新方法，在多種共變異數體制與估計比例下進行蒙地卡羅實驗。",
+        "findings": "在模擬實驗中，HRP-μ 與 HRP-Σμ 的表現均優於傳統 HRP，且 HRP-Σμ 恆優於 HRP-μ。CRISP 在中等 γ 值時表現最具主導地位，勝過 HRP、Cotton、Ledoit-Wolf 縮減、直接馬可維茲及其他具訊號意識的階層式方法，論文未報告具體的夏普值或報酬數字。",
+        "implication": "可用於將 Alpha 訊號整合進階層式與共變異數縮減的投資組合建構中，特別是 CRISP 能直接針對樣本外夏普值進行調校。",
+        "caveats": "實證結果基於蒙地卡羅模擬實驗，未在真實市場資料中進行驗證。",
+        "practicality": 4,
+        "tags": [
+          "資產配置",
+          "馬可維茲",
+          "階層式風險平價",
+          "共變異數矩陣",
+          "Alpha"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.22069",
+      "title": "Liquidity provision in CLMMs: evidence from transactions data",
+      "authors": [
+        "Andrey Urusov",
+        "Rostislav Berezovskiy",
+        "Anatoly Krestenko",
+        "Andrei Kornilov"
+      ],
+      "abstract": "The emergence of Concentrated Liquidity Market Makers (CLMMs) has made liquidity provision on decentralized exchanges an active and risk-sensitive task. However, the standalone profitability of liquidity provision remains unclear for liquidity providers (LPs) who neither hedge their inventory risk nor receive off-pool profits. This paper studies the actual outcomes of LP activity using historical transaction-level data from WETH/USD liquidity pools on the Base chain across the Uniswap, Aerodrome, PancakeSwap and SushiSwap protocols. We propose a methodology for reconstructing LP PnL dynamics from on-chain events and introduce an original metric that captures both the terminal state of LP capital and its path over time. Based on this framework, we estimate the share of successful LPs, classify their behavior and develop a taxonomy of 15 position types as structural components of PnL. We further identify a distinct class of multi-LPs operating across several pools and show that the dominant profitable position configurations are concentrated around the current pool price. The results show that only about one out of six LPs avoids losses in the selected market segment, raising an open question about the true economic motives of LP participation. Evidence also suggests that successful LPs often close positions before the full range is traversed, making observed behavior closer to profit-target-based strategies.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.MF"
+      ],
+      "published": "2026-04-23T20:48:47Z",
+      "updated": "2026-04-23T20:48:47Z",
+      "abs_url": "https://arxiv.org/abs/2604.22069",
+      "pdf_url": "https://arxiv.org/pdf/2604.22069v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 26,
+      "matched_keywords": [
+        "market maker",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "使用鏈上交易資料評估集中流動性造市商獲利狀況，實證扎實。",
+      "summary": {
+        "title_zh": "集中流動性造市商 (CLMMs) 的流動性提供：來自交易資料的實證",
+        "verdict": "只有約六分之一的流動性提供者在無避險下能避免虧損，且獲利部位集中於現價附近。",
+        "problem": "去中心化交易所中集中流動性造市商的獨立流動性提供者，在未進行部位避險且無池外利潤時的真實獲利能力不明。本研究旨在釐清其真實的損益狀況。",
+        "method": "使用 Base 鏈上 Uniswap、Aerodrome、PancakeSwap 與 SushiSwap 協議的 WETH/USD 流動性池歷史交易層級資料，重建流動性提供者的損益動態，並提出捕捉資金終端狀態與路徑的新指標。",
+        "findings": "研究發現僅約六分之一的流動性提供者在該市場區段中避免虧損。成功的造市者通常在價格走完完整區間前平倉，行為偏向停利策略，且獲利部位高度集中於當前價格附近。",
+        "implication": "實證顯示在未避險與無額外收益下，單純提供流動性極易遭遇虧損，策略設計應更專注於動態調整與停利機制。",
+        "caveats": "樣本僅限特定鏈上的 WETH/USD 交易對，且未將複雜的池外獎勵納入全面計算。",
+        "practicality": 3,
+        "tags": [
+          "去中心化金融",
+          "造市",
+          "流動性提供",
+          "區塊鏈資料"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.13913",
+      "title": "AlphaSeek: Trajectory-Level Self-Iterative Factor Mining Framework for Multi-Source Financial Data",
+      "authors": [
+        "Qilu Zhu",
+        "Zijun Lu",
+        "Jianmin Zhu",
+        "Ning Chen",
+        "Shuo Yin",
+        "Simon Fong"
+      ],
+      "abstract": "With the rapid rise of large language models, LLM-driven quantitative factor mining has become an increasingly active research area. However, existing methods still suffer from subjective direction design, limited integration of up-to-date multi-source information, semantic drift, factor redundancy, and the absence of an end-to-end feedback loop from factor discovery to portfolio backtesting. To address these limitations, we propose AlphaSeek, an end-to-end factor mining framework for quantitative investment that integrates automated direction discovery, trajectory-level factor evolution mining and self-iterative portfolio optimization. AlphaSeek first collects and summarizes multi-source financial information to identify promising mining directions. It then performs trajectory-level factor mining by extending the optimization unit from a single factor expression to a complete research trajectory covering hypothesis generation, factor construction, validation, backtesting, and feedback. Based on this design, we introduce evolution operators - parallel direction expansion, mutation and crossover - to improve search diversity, refinement quality and factor robustness. Finally, AlphaSeek constructs a self-iterative factor portfolio, allowing newly discovered factors to interact with an existing state-of-the-art(SOTA) factor library under redundancy-aware constraints. Experiments on CSI300 show that AlphaSeek achieves the strongest overall strategy-level performance on CSI300 with ARR of 8.28%, IR of 1.29 and MDD of 6.28%, while remaining competitive on factor predictive metrics with IC of 0.0454, while factors mined on CSI300 also achieve strong time-series return performance on CSI500 than other models, suggesting promising cross-market transferability under a zero-shot setting.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE"
+      ],
+      "published": "2026-08-14T03:34:36Z",
+      "updated": "2026-08-14T03:34:36Z",
+      "abs_url": "https://arxiv.org/abs/2608.13913",
+      "pdf_url": "https://arxiv.org/pdf/2608.13913v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 23,
+      "matched_keywords": [
+        "portfolio optimization",
+        "backtesting",
+        "llm",
+        "large language model"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出軌跡層級自我迭代因子開採框架，整合多源財務資訊與投資組合回測。",
+      "summary": {
+        "title_zh": "AlphaSeek：基於多源金融資料的軌跡層級自我迭代 Alpha 因子挖掘框架",
+        "verdict": "提出大語言模型全自動 Alpha 因子挖掘框架，在 CSI300 實證表現優異。",
+        "problem": "現有大語言模型驅動的 Alpha 因子挖掘方法存在主觀方向設計、多源資訊整合有限、語意漂移、因子冗餘及缺乏端到端回測回饋迴圈的問題。",
+        "method": "提出 AlphaSeek 框架整合自動化方向發現與涵蓋假設至回饋的完整軌跡層級因子演化。並透過演化運算與具冗餘約束的自我迭代投資組合最佳化，以 CSI300 進行實證。",
+        "findings": "在 CSI300 實測中達到年化報酬率 8.28%、資訊比率 1.29 與最大回檔 6.28%，因子預測資訊係數為 0.0454。同時在 CSI500 展現良好的零樣本跨市場轉移能力。",
+        "implication": "適用於自動化生成與篩選 Alpha 因子，並透過自我迭代架構整合至現有因子庫。可在降低人工幹預下提升策略強健性。",
+        "caveats": "依賴複雜的大語言模型自動化管線與演化運算，實際落地需評估計算成本。",
+        "practicality": 4,
+        "tags": [
+          "Alpha 因子挖掘",
+          "大型語言模型",
+          "投資組合最佳化",
+          "自動化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.05668",
+      "title": "F$^2$Agent: Financial Fusion of Agentic Intelligence for Multimodal Trading",
+      "authors": [
+        "Changshuo Liu",
+        "Yanzheng Jin",
+        "Shangfeng Cai",
+        "Peng Fang",
+        "Xiaokui Xiao",
+        "Beng Chin Ooi"
+      ],
+      "abstract": "With increasingly diverse and heterogeneous information sources, effectively leveraging multimodal data is becoming pivotal for high-quality financial trading. Although recent advancements in Large Language Model (LLM)-based agents have enabled the ingestion of multimodal inputs, existing methods fail to capture nuanced cross-modal dependencies and remain vulnerable to market noise, due to limited multimodal modeling, ineffective fusion mechanisms, and inadequate robustness. To address these challenges, we propose F$^2$Agent, a novel multimodal agentic paradigm driven by the Financial Fusion of Agentic Intelligence. F$^2$Agent first deploys a hierarchy of specialized agents to comprehensively extract modality-specific signals. It further introduces a modality-aware adaptive fusion mechanism coupled with noise-robust consistency regularization to dynamically capture fine-grained inter-modality dependencies and generate noise-resilient trading signals. Extensive experiments on six stocks and cryptocurrency assets demonstrate that F$^2$Agent consistently outperforms 16 competitive baselines across multiple trading metrics, with over 20% relative improvement in annualized return on average. Notably, F$^2$Agent delivers returns of 120.48% on GOOG and 148.41% on TSLA, demonstrating its efficacy and robustness in varying market dynamics.",
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.MM"
+      ],
+      "published": "2026-08-06T07:05:17Z",
+      "updated": "2026-08-06T07:05:17Z",
+      "abs_url": "https://arxiv.org/abs/2608.05668",
+      "pdf_url": "https://arxiv.org/pdf/2608.05668v1",
+      "comment": "32 pages, 12 figures, 19 tables",
+      "journal_ref": "",
+      "keyword_score": 23,
+      "matched_keywords": [
+        "trading signal",
+        "llm",
+        "large language model",
+        "cryptocurrency",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出結合代理人智慧與多模態融合機制的交易範式，在多項資產上進行廣泛實驗。",
+      "summary": {
+        "title_zh": "F$^2$Agent：用於多模態交易之代理智慧金融融合",
+        "verdict": "提出 F$^2$Agent 多模態代理架構，在多檔股票與加密貨幣交易中顯著提升報酬率。",
+        "problem": "現有基於 LLM 的代理無法有效捕捉跨模態依賴性，且在處理異質資訊時易受市場雜訊干擾。",
+        "method": "採用 F$^2$Agent 代理範式，透過分層專業代理擷取特定模態訊號，並結合模態感知自適應融合機制與抗噪一致性正則化。實證涵蓋 6 檔股票與加密貨幣資產。",
+        "findings": "顯著優於 16 個競爭基準，平均年化報酬率相對提升超過 20%。在 GOOG 與 TSLA 分別交出 120.48% 與 148.41% 的報酬率表現。",
+        "implication": "可應用於整合多模態資訊的量化交易系統，前提是需具備完善的代理協同與特徵融合工程基礎。",
+        "caveats": "論文摘要未提及實際交易成本與詳細的資料頻率設定。",
+        "practicality": 3,
+        "tags": [
+          "智慧代理",
+          "多模態交易",
+          "大型語言模型",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.36491",
+      "title": "Simple Portfolios that Deliver Consistent Decent Returns",
+      "authors": [
+        "Oskar Edén Wallberg",
+        "Alexander Karolin"
+      ],
+      "abstract": "Portfolio construction has been studied extensively in both academia and industry. Its applications range from pension funds and hedge funds to private savings. The academic literature centers on methodology, commonly evaluated in settings that allow short selling, leverage, and frequent trading. Industry, on the other hand, operates under real constraints, but its data and methods are proprietary and largely unpublished. Neither is directly available to the private investor. This paper is an empirical study of established portfolio construction methods in the setting of the private investor. We consider a small investable universe of liquid US ETFs, where trading is monthly and carries a cost, and neither shorting nor leverage is permitted. Portfolio construction is posed as a convex optimization problem, its inputs are estimated from public data, and every parameter is interpretable. We denote such portfolios simple. We show that simple portfolios of as few as three ETFs deliver consistent and decent returns, without tuning to the backtest period. To find them, we have developed a framework, which we share publicly, able to backtest hundreds of portfolios on a standard laptop over a twenty year period or longer. When no return forecast is made, portfolios are constructed from risk alone, using methods such as risk parity and minimum volatility, built on a statistical factor model fitted with expectation maximization. When a forecast is made, we combine the Markowitz formulation with momentum signals and ridge regression. We report what works and what each component adds, weighing its gain against its complexity and the effort it demands of the investor. The findings are supported by numerical experiments over the past two decades, and the proposed portfolios outperform the standard 60/40 allocation.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM"
+      ],
+      "published": "2026-10-27T01:45:09Z",
+      "updated": "2026-10-27T01:45:09Z",
+      "abs_url": "https://arxiv.org/abs/2610.36491",
+      "pdf_url": "https://arxiv.org/pdf/2610.36491v1",
+      "comment": "71 pages, 27 figures. Code available at https://github.com/AlexEmrik/consistent-decent-returns. Risk model package available at https://github.com/oskaredenwallberg/covforge and via pip install covforge",
+      "journal_ref": "",
+      "keyword_score": 38,
+      "matched_keywords": [
+        "factor model",
+        "risk parity",
+        "backtest",
+        "momentum",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "長達二十年美國 ETF 實證，方法明確且開源程式碼，實務價值高。",
+      "summary": {
+        "title_zh": "交付穩定且可觀報酬的簡單資產組合",
+        "verdict": "探討私人投資人在真實限制下，如何利用簡單模型建構打敗 60/40 配置的資產組合。",
+        "problem": "學術界與業界的資產配置方法多有理想假設，無法直接套用於私人投資人。私人投資人面臨月度交易、成本摩擦及無法放空槓桿的真實限制。",
+        "method": "以美國流動性 ETF 為投資標的進行月度回測，涵蓋過去二十年以上資料。採用凸最佳化問題求解，結合期望最大化統計因子模型與 Markowitz 動能回歸。",
+        "findings": "僅需三檔 ETF 的簡單配置即能提供穩定報酬且無需針對回測期間微調，表現優於標準 60/40 配置，但論文未報告具體績效數字。",
+        "implication": "提供具高度可解釋性且考慮交易成本的實用框架，適合私人投資人直接嘗試複製與應用。",
+        "caveats": "實證僅限於美國流動性 ETF 且為月度調整，未考慮更廣泛的資產類別或高頻情境。",
+        "practicality": 5,
+        "tags": [
+          "資產配置",
+          "風險平價",
+          "ETF",
+          "凸最佳化",
+          "動能策略"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.06166",
+      "title": "When do prophets profit in prediction markets?",
+      "authors": [
+        "Anri Gu",
+        "Nicole Kagan",
+        "Alec Sun",
+        "Jibang Wu",
+        "Haifeng Xu"
+      ],
+      "abstract": "Prediction markets aggregate dispersed beliefs into prices that act as probabilistic forecasts of uncertain events. Classical theory establishes how a better-than-market forecast can yield positive trading profit. However, it hinges crucially on the specific automated market maker (AMM) design, and is not applicable to popular exchanges today which are based on central limit order books. This paper fills that gap. For any prediction market and any proper scoring rule $S$, we exhibit a ``proper'' betting strategy that depends only on the forecaster's prediction $\\mathbf{p}$ and the market price $\\mathbf{q}$, and earns positive expected profit \\emph{whenever} $\\mathbf{p}$ outperforms $\\mathbf{q}$ under $S$ and the market has sufficient liquidity. Moreover, this proper betting is essentially the only strategy with such robust profitability guarantee. Our proof rests on a decomposition of expected profit that strictly generalizes the classical AMM guarantee and also explains how strategies can profit even without an accuracy edge. Empirically, across thousands of forecasts by AI models, proper betting is the only strategy that reliably converts accuracy into profit, and we further identify systematic forecasting personas and show how the optimal proper strategy varies across them. For feasibility demonstration, we run a monthlong live pilot test on Kalshi; the encouraging preliminary results show that proper betting can survive real-world spreads, fees, discrete fills, and limited liquidity.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CE",
+        "cs.GT"
+      ],
+      "published": "2026-07-07T11:41:46Z",
+      "updated": "2026-09-23T01:00:07Z",
+      "abs_url": "https://arxiv.org/abs/2607.06166",
+      "pdf_url": "https://arxiv.org/pdf/2607.06166v3",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 28,
+      "matched_keywords": [
+        "limit order book",
+        "market maker",
+        "order book",
+        "liquidity"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探討預測市場中適當投注策略，並透過 Kalshi 進行真實市場試驗。",
+      "summary": {
+        "title_zh": "預測市場中的先知何時能獲利？",
+        "verdict": "提出適用於中央限價訂單簿預測市場的適當投注策略，實證顯示能有效將AI模型準確度轉化為利潤。",
+        "problem": "古典理論的獲利保證僅適用於特定的自動造市商設計，無法應用於當前主流的中央限價訂單簿預測市場。",
+        "method": "使用賽局理論與機率預測模型，針對數千個AI模型的預測結果進行實證分析，並在Kalshi平台進行為期一個月的實際試點測試。",
+        "findings": "適當投注策略是唯一能可靠將預測準確度轉化為利潤的策略。為期一個月的Kalshi實價測試顯示，該策略能夠克服現實世界的買賣價差、手續費、離散成交與流動性限制。",
+        "implication": "可用於將AI模型的預測機率轉化為具體的交易策略，前提是市場具備足夠的流動性且預測表現確實優於市場價格。",
+        "caveats": "策略的獲利性仍高度依賴市場是否具備足夠的流動性。",
+        "practicality": 4,
+        "tags": [
+          "預測市場",
+          "限價訂單簿",
+          "賽局理論",
+          "人工智慧"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.27575",
+      "title": "Pricing and Calibration of Bitcoin Inverse Options via the Rough Bergomi Model",
+      "authors": [
+        "Riccardo Caruso"
+      ],
+      "abstract": "Bitcoin inverse options, traded on the Deribit exchange and settled in the underlying cryptocurrency rather than in fiat currency, combine extreme and genuinely rough volatility dynamics with a non-linear, currency-dependent payoff structure. This paper develops and empirically validates a pricing and calibration framework for these instruments based on the rough Bergomi (rBergomi) model of Bayer, Friz and Gatheral (2016). We adapt the rBergomi dynamics to the inverse payoff max(S_T - K, 0)/S_T, and implement and compare three computational pipelines that differ in the simulation scheme for the driving fractional Brownian motion (coarse-grid Cholesky vs. the Hybrid Scheme of Bennedsen et al., 2017) and in the Monte Carlo pricing estimator (plain log-Euler vs. the Mixed Estimator of McCrickerd and Pakkanen, 2018). The model is calibrated to thirty implied volatility surfaces extracted from Deribit trade data between May 2022 and March 2025, spanning seven major market-stress events and nine baseline regimes stratified by volatility level. The Hybrid and Mixed pipeline is simultaneously the most accurate (mean unweighted RMSE 22.83 percentage points, versus 41.76 pp for the Cholesky and Euler benchmark) and the fastest (17 seconds per snapshot, a 20-fold speed-up). The calibrated Hurst exponent is consistently close to the lower bound of the search space (H approximately equal to 0.01--0.06 in most regimes), confirming that Bitcoin's volatility is genuinely rough, and calibration error scales approximately linearly with the level of at-the-money implied volatility (Pearson r = 0.89).",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "q-fin.MF"
+      ],
+      "published": "2026-08-27T18:03:58Z",
+      "updated": "2026-08-27T18:03:58Z",
+      "abs_url": "https://arxiv.org/abs/2608.27575",
+      "pdf_url": "https://arxiv.org/pdf/2608.27575v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 27,
+      "matched_keywords": [
+        "regime",
+        "implied volatility",
+        "cryptocurrency",
+        "bitcoin"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用粗糙 Bergomi 模型對比特幣反向選擇權進行定價與校準，實證紮實。",
+      "summary": {
+        "title_zh": "透過 Rough Bergomi 模型定價與校準比特幣反向選擇權",
+        "verdict": "本研究利用 Rough Bergomi 模型對 Deribit 比特幣反向選擇權進行定價與校準，混合模擬與混合估計器方案效能最佳。",
+        "problem": "比特幣反向選擇權結合了極端且真實的粗糙波動度動態，以及非線性、與加密貨幣幣別相關的報酬結構，傳統定價與校準框架難以有效處理。",
+        "method": "採用 Rough Bergomi 模型調整反向選擇權報酬，使用 Deribit 在 2022 年 5 月至 2025 年 3 月間的 30 個隱含波動度表面進行校準，並比較多種模擬與 Monte Carlo 估計管道。",
+        "findings": "Hybrid 與 Mixed 管道同時最具準確性（平均未加權 RMSE 為 22.83 個百分點，基準為 41.76 個百分點）且速度最快（每個快照 17 秒，加速 20 倍）。校準出的 Hurst 指數持續接近搜尋下限（H 約 0.01 至 0.06），證實比特幣波動度確實具有粗糙特性，校準誤差與價平隱含波動度呈線性縮放（Pearson r = 0.89）。",
+        "implication": "交易員可採用 Hybrid 與 Mixed 模擬管道來對加密貨幣反向選擇權進行快速且準確的定價與校準。此方法在處理跨不同波動度體制的極端波動時具備實務價值。",
+        "caveats": "校準誤差隨著價平隱含波動度水準上升而顯著增加，高波動時期的定價誤差仍偏高。",
+        "practicality": 4,
+        "tags": [
+          "選擇權定價",
+          "隨機波動度",
+          "加密貨幣",
+          "Monte Carlo 模擬"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.18843",
+      "title": "TEMPO: Temporal Enforcement via Mode-Separated Policy Optimization for Trustworthy LLM Backtesting",
+      "authors": [
+        "Zeyu Zhang",
+        "Bradly C. Stadie"
+      ],
+      "abstract": "Backtesting large language models on historical events requires reasoning exclusively from information available before a specified cutoff date. Yet models routinely leak post-cutoff knowledge from pre-training into their reasoning, inflating apparent accuracy and undermining evaluation validity. Prompt-based constraints fail when suppressed content is causally related to the prediction, and knowledge unlearning cannot address this problem because temporal compliance is instance-specific: the same fact may be legitimate evidence for one cutoff date and a violation for another. Rather than erasing knowledge, the model must learn temporal discipline: selecting evidence conditioned on each instance's cutoff date. We propose TEMPO (Temporal Enforcement via Mode-separated Policy Optimization), which trains this discipline via two contributions: (1) a two-mode reward where a leakage mode drives post-cutoff claims to zero as a hard prerequisite before a performance mode optimizes task performance; and (2) a GRPO-based training pipeline that enables the model to discover temporally valid reasoning strategies. We prove that training monotonically decreases leakage, converges to the leak-free optimum, and improves task performance once compliance is achieved. On three prediction tasks and two models, TEMPO reduces leakage from 2~13% to 0.6~3.7% across all conditions, with task performance improving 6~13% where strong pre-cutoff signals exist and maintained where the prediction task is inherently difficult from valid information alone.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-05-13T05:01:37Z",
+      "updated": "2026-05-13T05:01:37Z",
+      "abs_url": "https://arxiv.org/abs/2605.18843",
+      "pdf_url": "https://arxiv.org/pdf/2605.18843v1",
+      "comment": "9 pages in main context",
+      "journal_ref": "",
+      "keyword_score": 27,
+      "matched_keywords": [
+        "backtesting",
+        "llm",
+        "large language model"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出TEMPO強化學習架構來消除大型語言模型回測時的資訊洩漏，實證嚴謹。",
+      "summary": {
+        "title_zh": "TEMPO：透過模式分離策略最佳化進行時間強制以實現可信的LLM回測",
+        "verdict": "提出 TEMPO 訓練方法解決 LLM 回測中的知識洩漏，將洩漏降至 0.6% 至 3.7% 並提升任務表現。",
+        "problem": "LLM 在進行歷史事件回測時常洩漏預訓練時的 cutoff date 後知識，導致評估無效。傳統提示詞約束與知識抹除無法針對不同實例的時間合規性進行有效控制。",
+        "method": "提出 TEMPO（Temporal Enforcement via Mode-separated Policy Optimization）方法，包含雙模式獎勵與基於 GRPO 的訓練管線。針對三個預測任務與兩個模型進行評估。",
+        "findings": "TEMPO 將所有條件下的知識洩漏從 2-13% 降至 0.6-3.7%。在存在強烈 pre-cutoff 訊號的任務中，任務表現提升了 6-13%，在困難任務中則維持表現。",
+        "implication": "可用於確保 LLM 歷史回測與預測評估的真實性，避免模型利用未來資訊造假。前提是需要實作 TEMPO 的雙模式獎勵與 GRPO 訓練流程。",
+        "caveats": "若預測任務本身僅依靠有效資訊難度極高，TEMPO 只能維持表現而無法帶來額外效能提升。",
+        "practicality": 4,
+        "tags": [
+          "LLM",
+          "回測",
+          "強化學習",
+          "模型評估"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "date": "2026-10-28",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2610.37324",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "使用 LOBSTER 資料檢驗狀態依賴 Hawkes 造市策略，實證完整。"
+    },
+    {
+      "arxiv_id": "2610.34787",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "探討整數價位對訂單簿的影響，使用納斯達克真實資料進行實證。"
+    },
+    {
+      "arxiv_id": "2610.36491",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "長達二十年美國 ETF 實證，方法明確且開源程式碼，實務價值高。"
+    },
+    {
+      "arxiv_id": "2610.36921",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出深度學習運算美式選擇權定價，推導嚴謹且有基準比較。"
+    },
+    {
+      "arxiv_id": "2610.36083",
+      "topic": "Alpha 與因子",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 5,
+      "reason": "結合知識圖譜與 LLM 進行金融情緒分析，僅依賴模擬驗證。"
+    },
+    {
+      "arxiv_id": "2610.33400",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "利用深交所訂單資料分析高頻交易活動與市場品質，因果推論具體。"
+    },
+    {
+      "arxiv_id": "2610.34153",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "長樣本實證顯示報酬校準未能提升報酬，檢驗嚴格。"
+    },
+    {
+      "arxiv_id": "2606.01477",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 8,
+      "reason": "證明 Avellaneda-Stoikov 與 Cartea-Jaimungal 框架等價，理論推導嚴謹。"
+    },
+    {
+      "arxiv_id": "2605.11717",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "探討交易成本下最適控制問題的連續性，純理論推導。"
+    },
+    {
+      "arxiv_id": "2603.11408",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "結合大型語言模型多維情緒訊號預測原油期貨，實證完整。"
+    },
+    {
+      "arxiv_id": "2603.04441",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出因果隱馬可夫模型進行資產配置，夏普值高但樣本外表現合理。"
+    },
+    {
+      "arxiv_id": "2512.17936",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "結合機器學習與模糊多準則決策，實證完整但方法偏雜湊。"
+    },
+    {
+      "arxiv_id": "2610.33453",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "嚴格的樣本外檢驗顯示機器學習無法擊敗隨機漫步，現實檢驗扎實。"
+    },
+    {
+      "arxiv_id": "2610.33438",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "使用輝達選擇權資料編譯隱含波動度表面，樣本外檢驗嚴格。"
+    },
+    {
+      "arxiv_id": "2609.36631",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "提出點差門檻 Hawkes 模型配適訂單簿，實證完整且有對照。"
+    },
+    {
+      "arxiv_id": "2609.26606",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 5,
+      "reason": "建立期權市場造市與退佣設計模型，僅有數值模擬結果。"
+    },
+    {
+      "arxiv_id": "2609.08881",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "分析歐洲禁空令的流動性影響，實證模型完整。"
+    },
+    {
+      "arxiv_id": "2609.02525",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "透過結構模擬探討轉換摩擦與訂單流記憶性，缺乏真實市場檢驗。"
+    },
+    {
+      "arxiv_id": "2609.00943",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "考慮跳躍成分來預測極端流動性風險，實證完整且具系統性意義。"
+    },
+    {
+      "arxiv_id": "2608.23915",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "研究常數函數造市商經濟體的均衡性質，純理論推導。"
+    },
+    {
+      "arxiv_id": "2608.02002",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "使用外匯報價資料校準 Hawkes 模型並發展近似造市策略，實證扎實。"
+    },
+    {
+      "arxiv_id": "2608.00858",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 2,
+      "value": 2,
+      "reason": "論文已被作者撤回，結果由其他編號收錄。"
+    },
+    {
+      "arxiv_id": "2607.27063",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "建構代理人網絡模型解釋A股動能與反轉，結合模擬與實證。"
+    },
+    {
+      "arxiv_id": "2609.20192",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "研究槓桿與流動性危機的自我生成，主要依賴模型模擬。"
+    },
+    {
+      "arxiv_id": "2607.09461",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提出利用一階條件求解動態規劃的深度學習演算法，方法論創新。"
+    },
+    {
+      "arxiv_id": "2607.04278",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提出 certainty equivalent learning 演算法解高維動態規劃，方法創新。"
+    },
+    {
+      "arxiv_id": "2606.31675",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "實證分析預測市場結算操縱現象，結合模型與 Polymarket 真實資料。"
+    },
+    {
+      "arxiv_id": "2606.23070",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "透過代理人模型探討集中流動性 AMM 的動態費率，無真實策略回測。"
+    },
+    {
+      "arxiv_id": "2606.15473",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "結合大型語言模型與貝氏濾波器量化代理人模型風險，框架具原創性。"
+    },
+    {
+      "arxiv_id": "2606.13812",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "利用 LLM 扮演財務長預測經濟與企業情緒，實證設計新穎。"
+    },
+    {
+      "arxiv_id": "2605.27977",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "評估深度學習對美國債券指數的短期預測，實證結果客觀中肯。"
+    },
+    {
+      "arxiv_id": "2605.10428",
+      "topic": "造市與微結構",
+      "evidence": "看不出來",
+      "relevance": 7,
+      "value": 5,
+      "reason": "提出事件永續合約分類學，無新實證資料與回測。"
+    },
+    {
+      "arxiv_id": "2604.23833",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出將 Alpha 訊號納入層級式與正規化投組配置的方法，蒙地卡羅與實證完整。"
+    },
+    {
+      "arxiv_id": "2604.22069",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "使用鏈上交易資料評估集中流動性造市商獲利狀況，實證扎實。"
+    },
+    {
+      "arxiv_id": "2603.29751",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "研究去中心化 AI 子網的大小市值溢價，扣除交易成本後的實證完整。"
+    },
+    {
+      "arxiv_id": "2603.21672",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "探討結構性中斷下的因子風險溢酬誤學，實證分析深入。"
+    },
+    {
+      "arxiv_id": "2603.14072",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "透過波動率代理變數解構市場相關性時間尺度，實證嚴謹。"
+    },
+    {
+      "arxiv_id": "2602.12490",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "結合 Transformer 與新聞文本估計系統性風險 CoVaR，方法與實證完整。"
+    },
+    {
+      "arxiv_id": "2601.16274",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出混頻資料的非線性目標因子模型，兼具模擬與實證檢驗。"
+    },
+    {
+      "arxiv_id": "2601.02677",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出統一的多模態大型語言模型進行股票預測與系統性風險評估，表現顯著提升。"
+    }
+  ]
+}
