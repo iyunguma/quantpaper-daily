@@ -1,0 +1,521 @@
+{
+  "date": "2026-10-29",
+  "generated_at": "2026-10-29T10:30:30+08:00",
+  "scanned": 2418,
+  "eligible": 2298,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2610.29663",
+      "title": "Lineage-Aware Search Control for LLM-Based Evolutionary Factor Mining",
+      "authors": [
+        "Xintong Liu",
+        "Chenkai Zhang",
+        "Yanzhao Ma",
+        "Peng Yang"
+      ],
+      "abstract": "Formulaic alpha factor mining searches for symbolic expressions that transform market data into predictive signals. Recent LLM-based evolutionary factor mining methods use large language models as semantic variation operators. Under the conventional LLM-EA paradigm, stochastic variation and fitness-based selection can leave the search weakly directed and concentrated around a narrow set of structurally similar factors. We argue that these limitations arise because current methods mainly organize search at the individual and population levels, leaving lineage-level control underused. A lineage connects successive factor variants through evolutionary descent. We propose LineageEvo, which uses lineage in two coupled forms of search control: (1) lineage-conditioned LLM variation, which distills Lineage-Scoped Search Experience into operator-specific priors and fuses them with global operator priors, providing persistent, lineage-relevant guidance for LLM generation; and (2) lineage-stratified search allocation, which balances factor quality against lineage concentration by distributing the search budget across lineages during evolutionary search. Together, these mechanisms make semantic variation more direction aware and prevent branches from dominating the evolution, thereby promoting the discovery of predictive and diverse factors. We evaluate LineageEvo on CSI 500 and S&P 500 in terms of factor predictiveness, portfolio performance, search efficiency, and lineage- and expression-level diversity. LineageEvo achieves the strongest predictive performance on both markets, while LSPS produces a more balanced lineage distribution and a structurally broader factor pool. The results support lineage as a useful intermediate unit for controlling LLM-based evolutionary factor search.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-10-21T12:40:52Z",
+      "updated": "2026-10-21T12:40:52Z",
+      "abs_url": "https://arxiv.org/abs/2610.29663",
+      "pdf_url": "https://arxiv.org/pdf/2610.29663v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 25,
+      "matched_keywords": [
+        "llm",
+        "large language model",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出基因演化因子採礦的譜系感知控制，實證完整。",
+      "summary": {
+        "title_zh": "基於血統感知搜尋控制的LLM演化式Alpha因子挖掘",
+        "verdict": "提出 LineageEvo 透過血統層級控制改善 LLM 演化式 Alpha 因子挖掘，在 CSI 500 與 S&P 500 上取得最強預測表現。",
+        "problem": "傳統基於 LLM 的演化式方法在尋找公式化 Alpha 因子時，缺乏血統層級的控制，導致搜尋方向薄弱且高度集中於結構相似的少數因子。",
+        "method": "結合血統條件式 LLM 變異與血統分層搜尋分配的 LineageEvo 模型；評估市場包含 CSI 500 與 S&P 500；使用日頻或其他未明列的高頻市場資料與演化世代資料。",
+        "findings": "LineageEvo 在兩個市場上皆達成最強的預測效能，同時 LSPS 機制能產生更平衡的血統分佈與結構更廣泛的因子池。",
+        "implication": "血統可作為有效的中間單位來引導 LLM 進行演化式 Alpha 因子搜尋，實務上可用於提升因子庫的多樣性與預測力。",
+        "caveats": "論文未報告具體的報酬率、夏普值或計算成本等具體績效數字。",
+        "practicality": 4,
+        "tags": [
+          "Alpha因子挖掘",
+          "基礎模型",
+          "演化演算法",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.30446",
+      "title": "End-to-End Neural Shrinkage of Indefinite Pairwise Correlation Matrices for Small-Cap-Inclusive Portfolios",
+      "authors": [
+        "Christian Bongiorno",
+        "Lorenzo Villassero"
+      ],
+      "abstract": "Small-cap-inclusive equity universes contain recently listed and intermittently traded securities, so enforcing a common look-back discards a substantial fraction of the available information. Pairwise-complete estimation preserves the longest overlap for each asset pair, but the resulting correlation matrix can be indefinite because its entries are computed on different samples. This prevents direct use in Markowitz optimization and falls outside the assumptions of standard random-matrix shrinkage. We adapt a rotation-invariant neural covariance estimator to this setting. The model computes mask-aware marginal moments and a pairwise correlation matrix proxy, processes its signed spectrum, and uses a bidirectional gated recurrent unit conditioned on factor-aligned effective sample lengths derived from the overlap matrix and eigenvector loadings. It maps all eigenvalues, including negative ones, to a positive inverse spectrum. The reconstructed covariance is positive definite and is trained end-to-end to minimize five-day realized global-minimum-variance risk. We evaluate 26 expanding-window models from 2000 to 2025 on up to 1,500 U.S. equities in a closing-auction simulator with point-in-time selection, commissions, financing, corporate actions, and market impact. Across the 26-year out-of-sample period, the neural estimator reduces annualized five-day volatility by approximately 20\\% and increases the Sharpe ratio by approximately 40\\% relative to the next-best covariance estimator. These improvements are consistent across realized risk, risk-adjusted performance, and drawdown control, remain after the modeled execution frictions, and are supported by a 99.9\\% Model Confidence Set that retains only the neural estimator.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "cs.LG",
+        "q-fin.ST"
+      ],
+      "published": "2026-08-31T08:36:09Z",
+      "updated": "2026-08-31T08:36:09Z",
+      "abs_url": "https://arxiv.org/abs/2608.30446",
+      "pdf_url": "https://arxiv.org/pdf/2608.30446v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 25,
+      "matched_keywords": [
+        "sharpe ratio",
+        "out-of-sample",
+        "drawdown"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "神經網路協方差收縮法，長期回測且考量交易成本。",
+      "summary": {
+        "title_zh": "包含小型股的投資組合中未定義成對相關矩陣的端到端神經收縮方法",
+        "verdict": "提出旋轉不變神經共變異數估計器處理小型股資料的不完整性，在 26 年回測中降低約 20% 年化波動度並提升約 40% 夏普值。",
+        "problem": "小型股資產池包含新上市與交易不連續的標的，若強制使用共同回溯期會丟失大量資訊，而成對完整估計產生的相關矩陣可能為不定矩陣，無法直接用於馬可維茲最佳化。",
+        "method": "採用旋轉不變神經共變異數估計器，結合雙向閘道迴圈單元與特徵值對應處理，以最小化五日實現全域最低變異數風險為目標進行端到端訓練。評估 2000 年至 2025 年間最多 1,500 檔美國股票。",
+        "findings": "在 26 年樣本外期間，神經估計器相較於次佳共變異數估計器，將五日年化波動度降低約 20%，夏普值提升約 40%，且在模型信賴集中為唯一保留的估計器。",
+        "implication": "此方法可直接應用於包含流動性差異大之小型股的投資組合建構，能有效處理資料不對齊與不定矩陣問題。",
+        "caveats": "模型依賴複雜的深度學習架構與龐大的歷史資料訓練，實務上面臨較高的工程與運算成本。",
+        "practicality": 4,
+        "tags": [
+          "投資組合最佳化",
+          "共變異數矩陣",
+          "神經網路",
+          "小型股",
+          "風險管理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.24019",
+      "title": "Empirical Confirmation of the Square-Root Law of Market Impact in a U.S. Large-Cap Equity",
+      "authors": [
+        "Aniket Vasaikar"
+      ],
+      "abstract": "We test the square-root law (SRL) of market impact on a single U.S. large-capitalisation equity, Apple Inc. (AAPL), using the full Nasdaq TotalView-ITCH market-by-order feed over 178 trading days (2 December 2024 -- 19 August 2025; ~0.5 billion events). Without broker-tagged parent orders, we reconstruct metaorders from the anonymous tape and calibrate impact as $I/σ_D = c\\,(Q/V_D)^{1/2}$ with the exponent fixed at the universal value $1/2$. We find $c_{\\rm raw} = 0.69$ (bias-corrected $c_{\\rm eff} = 0.34$), conditional impact tracking $Q^{1/2}$, and a size-distribution tail exponent $β= 1.54 \\pm 0.15$ -- both consistent with the worldwide cross-section. A direct model comparison decisively prefers the square-root form over linear ($Δ{\\rm AIC}=22$) and logarithmic impact, and the prefactor holds ($c_{\\rm raw} \\in [0.63, 0.77]$) across every reconstruction setting. Two structural tests confirm the impact is genuine: shuffling trade signs collapses directional impact to chance (86% to 51%); and scrambling event chronology destroys the SRL (0 of 80 calibrations remain viable). The underlying order flow is long-memory ($γ=0.66$) while the price stays diffusive (Hurst 0.49) -- the two ingredients of the universality theories. The prefactor is stable across 32 weekly walk-forward re-calibrations. To our knowledge this is the first confirmation of the square-root law on a U.S. equity derived purely from anonymous order flow, without broker-tagged parent orders.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.ST"
+      ],
+      "published": "2026-06-22T23:52:00Z",
+      "updated": "2026-06-22T23:52:00Z",
+      "abs_url": "https://arxiv.org/abs/2606.24019",
+      "pdf_url": "https://arxiv.org/pdf/2606.24019v1",
+      "comment": "6 pages, 10 figures. Independent research",
+      "journal_ref": "",
+      "keyword_score": 24,
+      "matched_keywords": [
+        "order flow",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "美股極大樣本實證確認平方根定律，微結構分析扎實。",
+      "summary": {
+        "title_zh": "美國大型股市場衝擊平方根定律的實證確認",
+        "verdict": "透過 Nasdaq 逐筆資料重建母訂單，證實蘋果公司（AAPL）符合市場衝擊平方根定律。",
+        "problem": "在缺乏券商標記母訂單的匿名逐筆成交資料下，市場衝擊的平方根定律是否依然適用？",
+        "method": "使用 Nasdaq TotalView-ITCH 完整逐筆資料，針對蘋果公司（AAPL）在 178 個交易日內約 0.5 億筆事件進行重建與校準。",
+        "findings": "模型比較顯示平方根定律優於線性與對數衝擊（ΔAIC=22），修正後的預因子為 0.34，且訂單大小分佈尾部指數為 1.54。",
+        "implication": "實證支援了無標記資料下的母訂單重建方法，且預因子在滾動測試中表現穩定，可直接應用於交易成本預估。",
+        "caveats": "本研究僅針對單一美國大型股（AAPL）進行實證檢驗。",
+        "practicality": 4,
+        "tags": [
+          "市場衝擊",
+          "限價單簿",
+          "訂單流",
+          "交易成本"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.01477",
+      "title": "Avellaneda-Stoikov and Cartea-Jaimungal as One Framework: A Forced Uniqueness Theorem for Inventory Market Making",
+      "authors": [
+        "Frank M. V. Feys"
+      ],
+      "abstract": "In inventory market making, the running-penalty coefficient $φ$ of the Cartea-Jaimungal framework and the risk-aversion parameter $γ$ of the Avellaneda-Stoikov framework are typically treated as independent free parameters, calibrated separately. We show that they are in fact not independent. A small set of axioms on the market maker's dynamic preference functional, namely cash-additivity, normalization, concavity, strong dynamic consistency, and law-invariance, forces the preference functional to be the entropic certainty-equivalent on liquidation-adjusted terminal wealth, parametrized by a single positive scalar $γ$. The Avellaneda-Stoikov framework is the unique representative of this axiom class. The Cartea-Jaimungal framework is its second-order Taylor expansion in inventory magnitude, with the running coefficient forced to $φ= γσ^2/2$ and (under a mild regularity condition on the liquidation cost) the terminal coefficient forced to $α= \\frac{1}{2}L''(0)$. The two frameworks, typically presented as competing alternatives with the choice between them driven by tractability, are different manifestations of a single underlying object. The forced relation is invertible, $γ= 2φ/σ^2$, giving a consistency cross-check on independently calibrated desk parameters.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "q-fin.RM",
+        "q-fin.TR"
+      ],
+      "published": "2026-05-31T22:32:48Z",
+      "updated": "2026-06-09T02:42:38Z",
+      "abs_url": "https://arxiv.org/abs/2606.01477",
+      "pdf_url": "https://arxiv.org/pdf/2606.01477v3",
+      "comment": "63 pages, 1 figure (two panels). Submitted to Mathematical Finance",
+      "journal_ref": "",
+      "keyword_score": 27,
+      "matched_keywords": [
+        "market making",
+        "market maker"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "證明 Avellaneda-Stoikov 與 Cartea-Jaimungal 框架等價，理論推導嚴謹。",
+      "summary": {
+        "title_zh": "Avellaneda-Stoikov 與 Cartea-Jaimungal 的單一框架：庫存造市的強制唯一性定理",
+        "verdict": "證明 Avellaneda-Stoikov 與 Cartea-Jaimungal 模型本質上為同一框架，並推導出參數間的強制數學關係式。",
+        "problem": "文獻中通常將 Cartea-Jaimungal 框架的罰分係數與 Avellaneda-Stoikov 框架的風險趨避參數視為獨立的自由參數並分別進行校準。",
+        "method": "透過對造市商動態偏好泛函設定一組公理（現金可加性、歸一化、凹性、強動態一致性與律不變性），數學推導其底層偏好結構與模型間的泰勒展開關係。",
+        "findings": "推導出 Cartea-Jaimungal 的執行罰分係數被迫為 $φ= γσ^2/2$，終端係數被迫為 $α= \frac{1}{2}L''(0)$，兩個框架實為同一基礎物件的不同展現，且此關係可逆（$γ= 2φ/σ^2$）。文中未報告具體績效數字。",
+        "implication": "這為不同造市台獨立校準的參數提供了交叉檢驗的基準，可用於確保模型設定的一致性。",
+        "caveats": "此定理建立在一組特定的動態偏好公理與二階泰勒展開近似之上，依賴於理論推導。",
+        "practicality": 3,
+        "tags": [
+          "造市",
+          "庫存管理",
+          "量化金融",
+          "數學建模"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.06088",
+      "title": "PriceSeer: Evaluating Large Language Models in Real-Time Stock Prediction",
+      "authors": [
+        "Bohan Liang",
+        "Zijian Chen",
+        "Qi Jia",
+        "Kaiwei Zhang",
+        "Kaiyuan Ji",
+        "Guangtao Zhai"
+      ],
+      "abstract": "Stock prediction, a subject closely related to people's investment activities in fully dynamic and live environments, has been widely studied. Current large language models (LLMs) have shown remarkable potential in various domains, exhibiting expert-level performance through advanced reasoning and contextual understanding. In this paper, we introduce PriceSeer, a live, dynamic, and data-uncontaminated benchmark specifically designed for LLMs performing stock prediction tasks. Specifically, PriceSeer includes 110 U.S. stocks from 11 industrial sectors, with each containing 249 historical data points. Our benchmark implements both internal and external information expansion, where LLMs receive extra financial indicators, news, and fake news to perform stock price prediction. We evaluate six cutting-edge LLMs under different prediction horizons, demonstrating their potential in generating investment strategies after obtaining accurate price predictions for different sectors. Additionally, we provide analyses of LLMs' suboptimal performance in long-term predictions, including the vulnerability to fake news and specific industries. The code and evaluation data will be open-sourced at https://github.com/BobLiang2113/PriceSeer.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "cs.LG"
+      ],
+      "published": "2025-12-31T08:35:46Z",
+      "updated": "2025-12-31T08:35:46Z",
+      "abs_url": "https://arxiv.org/abs/2601.06088",
+      "pdf_url": "https://arxiv.org/pdf/2601.06088v1",
+      "comment": "7 pages, 6 figures",
+      "journal_ref": "",
+      "keyword_score": 27,
+      "matched_keywords": [
+        "llm",
+        "large language model",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "建立即時且無資料汙染的美國股票預測基準，並開源程式碼與評估資料。",
+      "summary": {
+        "title_zh": "PriceSeer：評估大型語言模型在即時股票預測中的表現",
+        "verdict": "推出即時且無資料汙染的 PriceSeer 基準測試，評估六個最先進的 LLM 進行股票預測的表現。",
+        "problem": "現有股票預測缺乏動態、即時且無資料汙染的基準，難以全面評估 LLM 在真實環境中的預測能力與對假新聞的抵抗力。",
+        "method": "建構包含 11 個產業 110 檔美國股票的基準測試（每檔含 249 個歷史資料點），結合財經指標、新聞與假新聞進行多時間跨度評估，測試六個最先進的 LLM。",
+        "findings": "論文主要分析了不同產業與時間跨度下 LLM 的預測表現，並點出其在長期預測表現不佳及易受假新聞影響的弱點，未報告具體績效數字。",
+        "implication": "可用於檢視內部導入的 LLM 在財經資訊處理與預測上的極限，作為模型選擇的參考依據。",
+        "caveats": "論文未提供明確的報酬率或夏普值等量化交易績效，僅著眼於預測準確度與基準評估。",
+        "practicality": 3,
+        "tags": [
+          "大型語言模型",
+          "股票預測",
+          "基準測試",
+          "自然語言處理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.33453",
+      "title": "Cross-Bond Panel Learning for Next-Day Price Forecasting of Chinese Convertible Bonds: A Reality Check",
+      "authors": [
+        "Derun Zhong",
+        "Guolian Wang",
+        "Shiqing Wang",
+        "Hongjie Feng"
+      ],
+      "abstract": "Recent advances in financial machine learning have prompted growing interest in applying deep neural networks to convertible bond valuation and forecasting. However, existing studies often focus on in-sample valuation fit or cross-sectional return rankings, leaving out-of-sample next-day price forecasting insufficiently benchmarked against persistence. This paper provides a comprehensive empirical reality check on cross-bond panel learning for Chinese convertible bonds. Using a daily panel of 73,806 observations across 100 A-share convertible bonds from 2022 to 2025, we evaluate whether cross-bond neural architectures reliably outperform the random walk under strict temporal splitting, boundary purging, fold-specific preprocessing, and dependence-aware inference. On the 29,514-observation holdout, the random walk achieves an RMSE of 2.3577 CNY. Five-seed ensembles of small and large price-change MLPs yield RMSEs of 2.3619 and 2.3645 CNY, with negative out-of-sample R^2 values (-0.0035 and -0.0057) and target-date clustered HAC p-values of 0.453 and 0.248. Ten-day circular block-bootstrap intervals span zero, while direct price-level training degrades performance substantially. Although cross-bond pooling provides a variance-stabilizing shrinkage effect over single-bond estimation (lowering test RMSE for 79 of 90 individual bonds), it fails to produce an aggregate forecast advantage over persistence. Error decomposition reveals that failure is not uniform: five highly volatile, clause-sensitive bonds account for 74.4% of the model's total excess squared error. Without contemporaneous equity market information or explicit contractual event conditioning, deep panel architectures do not deliver incremental next-day predictability over persistence.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP"
+      ],
+      "published": "2026-10-24T05:15:41Z",
+      "updated": "2026-10-24T05:15:41Z",
+      "abs_url": "https://arxiv.org/abs/2610.33453",
+      "pdf_url": "https://arxiv.org/pdf/2610.33453v1",
+      "comment": "19 pages, 2 figures, 10 tables. Supported by the National Undergraduate Innovation and Entrepreneurship Training Program of Tongji University (Project No. 202510247114)",
+      "journal_ref": "",
+      "keyword_score": 26,
+      "matched_keywords": [
+        "out-of-sample",
+        "cross-sectional",
+        "neural network",
+        "equity market",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "嚴格的樣本外檢驗顯示機器學習無法擊敗隨機漫步，現實檢驗扎實。",
+      "summary": {
+        "title_zh": "中國可轉換債券次日價格預測的跨債券面板學習：一場實證現實檢驗",
+        "verdict": "深度學習模型在中國可轉債次日價格預測上無法打敗隨機漫步模型。",
+        "problem": "現有研究多著重樣本內擬合或橫斷面報酬排序，缺乏對次日價格預測在嚴格時間切分下與持續性基準的對比檢驗。",
+        "method": "使用 2022 至 2025 年 100 檔 A 股可轉債共 73,806 筆觀察值的每日面板資料，評估跨債券類神經網路架構在嚴格時間切分與防資料洩漏處理下的表現。",
+        "findings": "在 29,514 筆樣本外測試中，隨機漫步模型 RMSE 為 2.3577 人民幣，而大小型 MLP 模型 RMSE 分別為 2.3619 與 2.3645 人民幣，樣本外 R 平方為負值（-0.0035 與 -0.0057），HAC p 值分別為 0.453 與 0.248。五檔高波動且受條款影響的可轉債佔了模型總超額平方誤差的 74.4%。",
+        "implication": "缺乏同步股票市場資訊或明確契約事件條件時，跨債券深度面板架構無法對次日價格提供超越持續性基準的預測能力。實務上不建議直接將此模型用於次日可轉債價格預測。",
+        "caveats": "未納入同步股票市場資訊或明確合約事件條件，可能限制了模型的預測表現。",
+        "practicality": 2,
+        "tags": [
+          "可轉換債券",
+          "機器學習",
+          "價格預測",
+          "面板資料",
+          "量化研究"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.13715",
+      "title": "Event-Time Order-Flow Memory, Operational-Time Impact, and Subordinated Market Observables",
+      "authors": [
+        "Christopher Angstmann",
+        "Tim Gebbie"
+      ],
+      "abstract": "We consider two canonical market-microstructure regularities: the long-memory of trade signs and the square-root law of meta-order impact. The point is not to propose new empirical laws, but to separate the clocks on which existing laws are defined. The sign-memory law is an event-time statement about the ordering and fragmentation of hidden orders. The square-root impact law is an operational-time statement about front motion in a locally linear latent order book. Starting from a discrete-time random-walk bid/ask reaction--diffusion order book with a separate event clock, we identify an event-time imbalance reduction, derive the operational-time front and impact equations in the locally linear regime, and then subordinate both sign and impact observables to calendar time. Fractional or tempered clock effects enter through this event-to-calendar projection, not through a different operational-time impact mechanism. This gives a compact clock-aware framework in which event-time sign persistence, operational-time square-root impact, and anomalous calendar-time effects appear as distinct but compatible consequences of a common order-book representation.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cond-mat.stat-mech",
+        "math-ph",
+        "q-fin.MF"
+      ],
+      "published": "2026-09-12T05:00:57Z",
+      "updated": "2026-09-12T05:00:57Z",
+      "abs_url": "https://arxiv.org/abs/2609.13715",
+      "pdf_url": "https://arxiv.org/pdf/2609.13715v1",
+      "comment": "Accepted to JSTAT; 6 Pages, 1 Figure; streamlined and clarified https://arxiv.org/abs/2606.16269 to an explicit and by construction event, operational, and calendar-time hierarchy",
+      "journal_ref": "J. Stat. Mech. (2026) 103402",
+      "keyword_score": 24,
+      "matched_keywords": [
+        "order book",
+        "regime",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "區分事件時間與營運時間的微觀結構規律，已刊登於期刊。",
+      "summary": {
+        "title_zh": "事件時間委託單流記憶、營運時間衝擊與叢屬市場可觀察量",
+        "verdict": "本文建立了一個結合事件、營運與行事曆時間的統一市場微結構理論框架。",
+        "problem": "如何在統一的理論架構下，合理解釋交易符號的長記憶性與大型委託單衝擊的平方根定律？",
+        "method": "作者從離散時間隨機漫步的買賣價反應擴散 LOB 模型出發，分離事件時鐘與營運時鐘，推導出事件時間的不平衡度約簡與營運時間的衝擊方程式。",
+        "findings": "本文為理論推導性質的計量金融論文，聚焦於數學建模與時鐘投影，因此未報告具體績效數字。",
+        "implication": "提供了理解市場微結構中時間尺度轉換的理論工具，有助於深化對跨時間維度委託單流動態的認識。",
+        "caveats": "本研究純屬理論與數學推導，尚未透過真實市場資料進行實證檢驗。",
+        "practicality": 2,
+        "tags": [
+          "市場微結構",
+          "委託單流",
+          "價格衝擊",
+          "LOB"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.01599",
+      "title": "Latent-Regime Bias Auditing for Volatility Forecasting",
+      "authors": [
+        "Arthur Chagas",
+        "Pedro Bento",
+        "Yan Aquino",
+        "Arthur Buzelin",
+        "Wagner Meira",
+        "Cristiano Arbex Valle"
+      ],
+      "abstract": "Volatility forecasts are commonly evaluated with aggregate accuracy metrics such as RMSE and MAE, but these metrics can hide conditional failures that matter for risk management. This paper proposes a model-agnostic audit framework for evaluating whether volatility forecasts remain reliable across latent market regimes. We learn time-series representations of market-state windows, cluster them into regimes using only training information, assign regimes out of sample, and compare aggregate forecast behavior with regime-conditional bias, tail-underprediction, and underprediction-sensitive economic losses. Applied to daily volatility forecasting across cryptocurrency and ETF assets, the audit shows that models with competitive aggregate accuracy can still exhibit substantial regime-specific bias and severe tail underprediction. The results suggest that volatility forecasting should be evaluated not only by average error, but also by where and how forecasts become unreliable. Our framework shifts forecast evaluation from asking which model is most accurate on average to identifying the market regimes in which apparently accurate forecasts fail conditionally. Reproducibility: https://github.com/arthurchagas1/Latent-Regime-Bias-Auditing-for-Volatility-Forecasting",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-08-03T02:09:39Z",
+      "updated": "2026-08-03T02:09:39Z",
+      "abs_url": "https://arxiv.org/abs/2608.01599",
+      "pdf_url": "https://arxiv.org/pdf/2608.01599v1",
+      "comment": "Accepted for publication at the IEEE Conference on Computational Intelligence for Financial Engineering & Economics (CIFEr 2026)",
+      "journal_ref": "",
+      "keyword_score": 24,
+      "matched_keywords": [
+        "volatility forecasting",
+        "regime",
+        "cryptocurrency"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出模型無關的稽核框架，評估波動率預測在潛在市場體制下的條件式偏差與尾部低估。",
+      "summary": {
+        "title_zh": "波動度預測的潛在體制偏差稽核",
+        "verdict": "提出一種模型無關的稽核框架，用於評估波動度預測在不同潛在市場體制下的條件性偏差與尾部低估風險。",
+        "problem": "傳統的聚合準確度指標（如 RMSE 與 MAE）無法揭露風險管理中至關重要的條件性預測失效。模型在整體表現競爭的情況下，可能仍存在顯著的特定體制偏差與尾部低估。",
+        "method": "利用時間序列表示法對市場狀態視窗進行建模，並僅使用訓練資訊將其分群為不同體制，隨後在樣本外進行指派，評估加密貨幣與 ETF 資產的日頻波動度預測。",
+        "findings": "實證顯示，具有競爭力聚合準確度的模型仍可能展現出實質的體制特定偏差與嚴重的尾部低估。論文未報告具體績效數字。",
+        "implication": "交易員在評估波動度預測模型時，應轉變為檢視模型在哪些市場體制下會失效，而非僅看平均誤差。此框架可直接應用於現有預測模型的風險稽核。",
+        "caveats": "該框架著重於稽核與識別失效，並未直接提出解決潛在體制偏差的改善模型。",
+        "practicality": 4,
+        "tags": [
+          "波動度預測",
+          "體制轉換",
+          "風險管理",
+          "模型評估"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.25378",
+      "title": "Yau's Affine-Normal Descent for Large-Scale Unrestricted Higher-Moment Portfolio Optimization",
+      "authors": [
+        "Ya-Juan Wang",
+        "Yi-Shuai Niu",
+        "Artan Sheshmani",
+        "Shing-Tung Yau"
+      ],
+      "abstract": "Unrestricted mean-variance-skewness-kurtosis portfolio optimization can capture asymmetry and tail risk, but sample-moment formulations become computationally impractical when the asset universe is large: they produce dense nonconvex quartic objectives with prohibitive coskewness and cokurtosis tensors and anisotropic, ill-conditioned level sets. We develop a structure-exploiting algorithm based on Yau's affine-normal descent that follows affine-normal directions of the current level set while working directly with the return matrix. The method avoids explicit higher-order tensors and exploits the quartic structure for exact sample oracles, derivative evaluation, and exact line search. We also provide theory for the reduced simplex formulation, including regularity and convexity conditions that separate data-map geometry from investor preference coefficients. Computational results show a clear implementation split: a direct configuration is effective on the standard small benchmark, whereas a preconditioned conjugate-gradient configuration with stall recovery becomes the preferred large-scale implementation by the upper end of the hundreds and remains competitive as the asset universe moves into the thousands. On a 5-minute A-share panel with 5,440 stocks, the method makes direct full-universe comparisons with exact mean-variance portfolios feasible and shows on the baseline split that the incremental value of higher moments is strongest at moderate return targets.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "cs.CE",
+        "math.OC",
+        "q-fin.CP"
+      ],
+      "published": "2026-04-28T08:42:43Z",
+      "updated": "2026-04-28T08:42:43Z",
+      "abs_url": "https://arxiv.org/abs/2604.25378",
+      "pdf_url": "https://arxiv.org/pdf/2604.25378v1",
+      "comment": "46 pages, 4 figures, 11 tables, 1 algorithm",
+      "journal_ref": "",
+      "keyword_score": 24,
+      "matched_keywords": [
+        "portfolio optimization",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "開發結構性演算法進行大規模不受限制的高階動差投資組合最佳化，並在A股面板上進行實證。",
+      "summary": {
+        "title_zh": "利用 Yau 的仿射正態下降法進行大規模無限制高階動差投資組合最佳化",
+        "verdict": "提出 Yau 仿射正態下降法，解決大規模投資組合中高階動差的計算瓶頸，適用於數千檔資產。",
+        "problem": "無限制的均值-變異數-偏度-峰度投資組合最佳化能捕捉非對稱性與尾端風險，但當資產規模龐大時，樣本動會產生密集的非凸四次目標函數與高難度的共偏度與共峰度張量，導致計算上不可行。",
+        "method": "使用基於 Yau 仿射正態下降法的結構化演算法，直接處理報酬矩陣並避開顯式高階張量。資料採用 A 股 5 分鐘頻率面板資料，包含 5,440 檔股票進行實證。",
+        "findings": "直接配置適用於標準小規模基準，而帶有停滯恢復機率的前處理共軛梯度配置在大規模（數百至數千檔資產）表現更佳。在baseline分割上，高階動差的增量價值在適度的報酬目標下最強，文中未報告具體的夏普值或報酬數字。",
+        "implication": "此方法使直接對全資產宇宙進行精確的高階動差投資組合最佳化變得可行，可用於需要納入偏度與峰度的實務交易系統中。",
+        "caveats": "高階動差的增量價值主要在適度報酬目標下顯現，且實務上需要良好的前處理共軛梯度配置來處理大規模資產。",
+        "practicality": 4,
+        "tags": [
+          "投資組合最佳化",
+          "高階動差",
+          "仿射正態下降",
+          "演算法交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.00080",
+      "title": "The GT-Score: A Robust Objective Function for Reducing Overfitting in Data-Driven Trading Strategies",
+      "authors": [
+        "Alexander Sheppert"
+      ],
+      "abstract": "Overfitting remains a critical challenge in data-driven financial modeling, where machine learning (ML) systems learn spurious patterns in historical prices and fail out of sample and in deployment. This paper introduces the GT-Score, a composite objective function that integrates performance, statistical significance, consistency, and downside risk to guide optimization toward more robust trading strategies. This approach directly addresses critical pitfalls in quantitative strategy development, specifically data snooping during optimization and the unreliability of statistical inference under non-normal return distributions. Using historical stock data for 50 S&P 500 companies spanning 2010-2024, we conduct an empirical evaluation that includes walk-forward validation with nine sequential time splits and a Monte Carlo study with 15 random seeds across three trading strategies. In walk-forward validation, GT-Score improves the generalization ratio (validation return divided by training return) by 98% relative to baseline objective functions. Paired statistical tests on Monte Carlo out-of-sample returns indicate statistically detectable differences between objective functions (p < 0.01 for comparisons with Sortino and Simple), with small effect sizes. These results suggest that embedding an anti-overfitting structure into the objective can improve the reliability of backtests in quantitative research. Reproducible code and processed result files are provided as supplementary materials.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "cs.LG"
+      ],
+      "published": "2026-01-22T05:16:47Z",
+      "updated": "2026-01-22T05:16:47Z",
+      "abs_url": "https://arxiv.org/abs/2602.00080",
+      "pdf_url": "https://arxiv.org/pdf/2602.00080v1",
+      "comment": "",
+      "journal_ref": "Journal of Risk and Financial Management, 19(1), 60",
+      "keyword_score": 24,
+      "matched_keywords": [
+        "out-of-sample",
+        "backtest",
+        "stock",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出GT分數作為減少資料驅動交易策略過適的強健目標函數，已發表於審查期刊。",
+      "summary": {
+        "title_zh": "GT-Score：減少資料驅動交易策略過擬合的穩健目標函數",
+        "verdict": "提出名為 GT-Score 的複合目標函數以減少過擬合，在 walk-forward 驗證中將泛化比率提升 98%。",
+        "problem": "資料驅動的金融建模在歷史價格中容易學習到虛假特徵，導致策略在樣本外與實際部署時失效，且非常態報酬分配也影響統計推斷的可靠性。",
+        "method": "使用結合效能、統計顯著性、一致性與下檔風險的 GT-Score 目標函數。研究採用 50 檔 S&P 500 公司從 2010 年至 2024 年的歷史股票資料，進行含九個連續時間分割的 walk-forward 驗證以及 15 個隨機亂數種子的 Monte Carlo 研究。",
+        "findings": "在 walk-forward 驗證中，GT-Score 將泛化比率（驗證報酬除以訓練報酬）相對於基準目標函數提升了 98%。Monte Carlo 樣本外報酬的成對統計檢定顯示目標函數之間有統計顯著差異（與 Sortino 和 Simple 相比 p < 0.01），但效果量偏小。",
+        "implication": "將防過擬合結構嵌入目標函數中，有助於提高量化研究中回測的可靠性，適合在策略最佳化階段直接替換傳統目標函數。",
+        "caveats": "Monte Carlo 研究中顯示效果量較小，其實際交易的經濟效益仍受限於較小的影響程度。",
+        "practicality": 4,
+        "tags": [
+          "過擬合",
+          "目標函數",
+          "機器學習",
+          "量化策略",
+          "回測驗證"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

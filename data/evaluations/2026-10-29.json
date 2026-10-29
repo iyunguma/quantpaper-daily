@@ -1,0 +1,327 @@
+{
+  "date": "2026-10-29",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2512.14134",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "韓國市場實證，說明機構買入強度與異常報酬。"
+    },
+    {
+      "arxiv_id": "2512.07867",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 5,
+      "reason": "透過LLM生成總體情境做壓力測試，方法前瞻但實用待證。"
+    },
+    {
+      "arxiv_id": "2511.12129",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "S&P 500實證，結合機器學習動態選股，已發表於會議。"
+    },
+    {
+      "arxiv_id": "2511.08621",
+      "topic": "其他",
+      "evidence": "看不出來",
+      "relevance": 3,
+      "value": 5,
+      "reason": "推出金融專屬微調大型語言模型套件，偏NLP應用。"
+    },
+    {
+      "arxiv_id": "2610.29663",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出基因演化因子採礦的譜系感知控制，實證完整。"
+    },
+    {
+      "arxiv_id": "2610.11691",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "建構市場衝擊的微觀基礎理論，推導嚴謹但偏理論。"
+    },
+    {
+      "arxiv_id": "2610.00147",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "探討貝氏與資訊限制下的投資組合最佳化，理論與實證並重。"
+    },
+    {
+      "arxiv_id": "2609.01183",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "核能與能源選擇權波動度風險溢酬實證，未計入成本。"
+    },
+    {
+      "arxiv_id": "2608.30446",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "神經網路協方差收縮法，長期回測且考量交易成本。"
+    },
+    {
+      "arxiv_id": "2609.05491",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出漸近式神經網路計算隱含波動度，運算速度快。"
+    },
+    {
+      "arxiv_id": "2607.10934",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "凱爾模型的多維隨機流動性理論推導，偏數學與微結構。"
+    },
+    {
+      "arxiv_id": "2607.08199",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "預測市場波動度結構化模型，結合實際合約資料。"
+    },
+    {
+      "arxiv_id": "2607.04221",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "限價訂單簿中知情交易參與不確定性的均衡分析，偏理論。"
+    },
+    {
+      "arxiv_id": "2606.15502",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "預訓練神經網路進行選擇權訂價，誤差帶有保證，速度快。"
+    },
+    {
+      "arxiv_id": "2606.00624",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "結合總體經濟的階層式注意力時間序列預測模型，實證扎實。"
+    },
+    {
+      "arxiv_id": "2605.24490",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 5,
+      "reason": "多代理人LLM決策系統進行資產配置，回測績效高但過擬合待評估。"
+    },
+    {
+      "arxiv_id": "2604.14793",
+      "topic": "其他",
+      "evidence": "看不出來",
+      "relevance": 1,
+      "value": 4,
+      "reason": "LLM文獻回顧框架，與實際交易策略無直接關係。"
+    },
+    {
+      "arxiv_id": "2604.22818",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "探討AI代理人表示同質性對市場系統性不穩定之影響，純模擬。"
+    },
+    {
+      "arxiv_id": "2604.18602",
+      "topic": "其他",
+      "evidence": "只有模擬資料",
+      "relevance": 4,
+      "value": 5,
+      "reason": "模擬市場中LLM代理人的投機與適應行為，偏行為經濟學模擬。"
+    },
+    {
+      "arxiv_id": "2602.12030",
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 5,
+      "reason": "強化學習中時間非齊次波動度規避的理論與玩具範例。"
+    },
+    {
+      "arxiv_id": "2512.00346",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "隨機因子模型中投資組合選擇的收斂速率數學推導。"
+    },
+    {
+      "arxiv_id": "2511.02469",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 4,
+      "value": 6,
+      "reason": "模擬政策辯論預測貨幣政策決策，已接受於國際會議。"
+    },
+    {
+      "arxiv_id": "2610.31074",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "探討方向正確的專家觀點對投資組合最佳化的影響，簡明實用。"
+    },
+    {
+      "arxiv_id": "2610.25445",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "特徵函數估計量的交易成本模型偏差修正，具備實證與計算優勢。"
+    },
+    {
+      "arxiv_id": "2610.21145",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "使用ADE方法對美國商品選擇權進行數值定價，推導與基準比較完整。"
+    },
+    {
+      "arxiv_id": "2610.07985",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "二場反應擴散訂單簿中有限買賣價差的分析模型。"
+    },
+    {
+      "arxiv_id": "2610.01115",
+      "topic": "Alpha 與因子",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出統計套利中的認證Alpha容量理論，探討學習時間與殘餘資訊。"
+    },
+    {
+      "arxiv_id": "2609.13715",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "區分事件時間與營運時間的微觀結構規律，已刊登於期刊。"
+    },
+    {
+      "arxiv_id": "2609.04569",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "量子電路學習建模比特幣已實現波動度，已刊登於期刊。"
+    },
+    {
+      "arxiv_id": "2609.03552",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "熵因子模型用於強健投資組合複製，經危機考驗表現佳。"
+    },
+    {
+      "arxiv_id": "2608.18299",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "內生化市場條件化表示的均衡模型，架構龐大且數學深入。"
+    },
+    {
+      "arxiv_id": "2608.14134",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "光學量子退火與傳統求解器在因子投組最佳化的實證比較。"
+    },
+    {
+      "arxiv_id": "2608.06618",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "結合因子與圖模型的投資組合多元化框架，實證表現穩健。"
+    },
+    {
+      "arxiv_id": "2608.05373",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "結合市場體制偵測日內選擇權操縱，實證涵蓋多個市場。"
+    },
+    {
+      "arxiv_id": "2608.02355",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "運用路徑簽名進行路徑投資組合最佳化，理論深刻且有實證維度權衡。"
+    },
+    {
+      "arxiv_id": "2607.08525",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "採用雙重差分法評估AMM協議費變動對流動性提供之因果影響。"
+    },
+    {
+      "arxiv_id": "2607.06121",
+      "topic": "交易執行",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "探討強化學習能否發現價格操縱，使用Almgren-Chriss模擬環境。"
+    },
+    {
+      "arxiv_id": "2606.24019",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "美股極大樣本實證確認平方根定律，微結構分析扎實。"
+    },
+    {
+      "arxiv_id": "2606.19550",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "探討因子模型績效對測試資產建構方式之高度依賴性，實證完整。"
+    },
+    {
+      "arxiv_id": "2606.01650",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "評估選出最高夏普值資產後的修正估計法，模擬與比較具參考價值。"
+    }
+  ]
+}
