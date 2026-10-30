@@ -1,0 +1,528 @@
+{
+  "date": "2026-10-30",
+  "generated_at": "2026-10-30T10:40:19+08:00",
+  "scanned": 2417,
+  "eligible": 2287,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2603.13252",
+      "title": "When Alpha Breaks: Two-Level Uncertainty for Safe Deployment of Cross-Sectional Stock Rankers",
+      "authors": [
+        "Ursina Sanderink"
+      ],
+      "abstract": "Cross-sectional ranking models are often deployed as if point predictions were sufficient: the model outputs scores and the portfolio follows the induced ordering. Under non-stationarity, rankers can fail during regime shifts. In the AI Stock Forecaster, a LightGBM ranker performs well overall at a 20-day horizon, yet the 2024 holdout coincides with an AI thematic rally and sector rotation that breaks the signal at longer horizons and weakens 20d. This motivates treating deployment as two decisions: (i) whether the strategy should trade at all, and (ii) how to control risk within active trades. We adapt Direct Epistemic Uncertainty Prediction (DEUP) to ranking by predicting rank displacement and defining an epistemic uncertainty signal ehat relative to a point-in-time (PIT-safe) baseline. Empirically, ehat is structurally coupled with signal strength (median correlation between ehat and absolute score is about 0.6 across 1,865 dates), so inverse-uncertainty sizing de-levers the strongest signals and degrades performance. To address this, we propose a two-level deployment policy: a strategy-level regime-trust gate G(t) that decides whether to trade (AUROC around 0.72 overall and 0.75 in FINAL) and a position-level epistemic tail-risk cap that reduces exposure only for the most uncertain predictions. The operational policy, trade only when G(t) is at least 0.2, apply volatility sizing on active dates, and cap the top epistemic tail, improves risk-adjusted performance in the 20d policy comparison and indicates DEUP adds value mainly as a tail-risk guard rather than a continuous sizing denominator.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "q-fin.PM"
+      ],
+      "published": "2026-02-24T14:02:24Z",
+      "updated": "2026-02-24T14:02:24Z",
+      "abs_url": "https://arxiv.org/abs/2603.13252",
+      "pdf_url": "https://arxiv.org/pdf/2603.13252v1",
+      "comment": "34 pages, 14 tables. Cross-sectional equity ranking; uncertainty-based abstention and tail-risk capping under regime shifts",
+      "journal_ref": "",
+      "keyword_score": 24,
+      "matched_keywords": [
+        "regime",
+        "cross-sectional",
+        "stock",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出兩階段決策政策，處理報酬預測的不確定性",
+      "summary": {
+        "title_zh": "當Alpha失效：用於橫截面股票排序模型安全部署的雙層不確定性",
+        "verdict": "提出雙層部署策略以應對模型在體制轉換時的失效，透過策略級過濾與部位級尾部風險限制來提升風險調整後報酬。",
+        "problem": "橫截面排序模型在非平穩市場與體制轉換（如類股輪動）時容易失效，將點預測視為足夠的傳統作法在2024年的回測中導致訊號崩解。",
+        "method": "使用 LightGBM 進行 20 天期橫截面股票排序，搭配改編自 Direct Epistemic Uncertainty Prediction (DEUP) 的排序位移預測方法，並在 1,865 個交易日的資料上進行實證。",
+        "findings": "不確定性訊號與絕對分數高度耦合（中位數相關性約 0.6），因此直接依據不確定性調整部位大小會降低績效。改用策略級過濾閘門（AUROC 約 0.72 至 0.75）與部位級尾部風險限制後，能有效改善 20 天期策略的風險調整後表現。",
+        "implication": "DEUP 的價值在於作為尾部風險的防護網而非連續性的部位縮放分母，在市場體制轉換時可用於決定是否暫停交易。",
+        "caveats": "不確定性訊號與模型分數強烈耦合，若未經處理直接用於反向不確定性加權會適得其反。",
+        "practicality": 4,
+        "tags": [
+          "機器學習",
+          "Alpha 因子挖掘",
+          "不確定性預估",
+          "風險管理",
+          "體制轉換"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.04959",
+      "title": "AlphaPADI: Formulaic Alpha Discovery via Pool-Aware Hierarchical Discrete Diffusion",
+      "authors": [
+        "Yanzheng Jin",
+        "Pengyang Shao",
+        "Yunshan Ma",
+        "Haowen Pan",
+        "Naixin Zhai",
+        "Chen-Hui Song",
+        "Fei Shen",
+        "Kenji Kawaguchi"
+      ],
+      "abstract": "Formulaic alpha discovery seeks symbolic expressions that predict cross-sectional asset returns. In deployment, multiple formulas are combined into an alpha pool, where each formula is valued through the complementary information it contributes to joint predictive performance. While Reinforcement Learning and Generative Flow Networks have emerged as promising paradigms for generating formulaic alphas, existing frameworks face three related challenges. First, generating formulas individually leaves pool context and inter-formula complementarity outside the generative state. Second, formula-wise generation lacks a unified mechanism for preserving and revising structures at different levels. Third, pool-level rewards jointly reflect predictive performance and redundancy but cannot be differentiated directly through symbolic evaluation to train the generator. To overcome these challenges, we introduce AlphaPADI (Formulaic Alpha Discovery via Pool-Aware Hierarchical Discrete Diffusion), a novel framework built around three components: (1) grammar-constrained buffer initialization that constructs syntactically valid pool candidates, (2) pool-aware hierarchical diffusion that reconstructs complete pools at multiple structural scales under the current pool context, and (3) reward-guided pool refinement that evaluates joint predictive performance and inner diversity, updates the elite buffer, and trains the reverse model through reconstruction and preference learning. Empirical results on the Chinese and U.S. stock markets demonstrate that AlphaPADI outperforms the evaluated baselines in both predictive and portfolio performance, thereby validating pool-aware generation as an effective framework for automated alpha discovery.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE",
+        "q-fin.CP"
+      ],
+      "published": "2026-10-04T05:07:27Z",
+      "updated": "2026-10-08T10:01:57Z",
+      "abs_url": "https://arxiv.org/abs/2610.04959",
+      "pdf_url": "https://arxiv.org/pdf/2610.04959v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 23,
+      "matched_keywords": [
+        "reinforcement learning",
+        "cross-sectional",
+        "stock",
+        "empirical",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出集區感知擴散模型發掘公式化因子，實證完整",
+      "summary": {
+        "title_zh": "AlphaPADI：基於池感知階層式離散擴散的公式化 Alpha 因子挖掘",
+        "verdict": "提出 AlphaPADI 框架，利用階層式離散擴散與獎勵引導來生成具有互補性的 Alpha 因子池，實證優於現有方法。",
+        "problem": "現有 Alpha 因子挖掘方法獨立生成單一公式，忽略了因子池的整體上下文與互補性，且池層級的獎勵無法直接用於微分訓練生成器。",
+        "method": "使用 AlphaPADI 框架包含語法約束緩衝區初始化、池感知階層式擴散與獎勵引導池最佳化；應用於中國與美國股票市場。",
+        "findings": "在中國與美國股票市場的實證結果顯示，AlphaPADI 在預測與投資組合績效上皆優於評估的基準模型，但未報告具體的報酬率或夏普值數字。",
+        "implication": "可直接應用於自動化 Alpha 因子挖掘，考量因子間的互補性與冗餘度以建構更佳的因子池。",
+        "caveats": "論文未提供具體的績效數字與交易成本考量細節。",
+        "practicality": 3,
+        "tags": [
+          "Alpha 因子挖掘",
+          "擴散模型",
+          "量化投資",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.14205",
+      "title": "CAST: A Cross-Asset State-Space Trading System for Drawdown Control in Stock Markets",
+      "authors": [
+        "Yu Peng",
+        "Matloob Khushi",
+        "Josiah Poon"
+      ],
+      "abstract": "Managing drawdown, the peak-to-trough decline in an investment portfolio's value, is a precondition for long-term survival in practical investment management. However, mainstream stock forecasting methods predominantly optimize returns or Sharpe ratios under the independent and identically distributed (i.i.d.) assumption. Real markets do not follow this assumption, triggering catastrophic drawdowns. We propose a cross-asset state-space trading system (CAST), consisting of two components: The predictor, Cross-Asset Collaborative Kalman Filter (CoKF), estimates each asset's latent state online, coupling all assets through their correlations and adaptively fusing multiple integrated-random-walk orders. The controller, Model Predictive Control (MPC), converts the predictor's forecast into trades, using forecast uncertainty as an explicit risk penalty that controls drawdown. We evaluate CAST on four real-world stock markets over a 15-year test window and show that it consistently occupies the return-drawdown Pareto frontier, achieving strong risk-adjusted performance while maintaining substantially lower maximum drawdown than competitive baselines. A stress test across crisis periods further demonstrates robust behavior under market shocks and distribution shift. Because the predictor and controller interact only through the predicted price path, both are plug-and-play, making CAST a modular, interpretable trading system. The code is available at https://github.com/FanBroWell/CAST",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE",
+        "q-fin.RM"
+      ],
+      "published": "2026-09-13T00:30:35Z",
+      "updated": "2026-09-13T00:30:35Z",
+      "abs_url": "https://arxiv.org/abs/2609.14205",
+      "pdf_url": "https://arxiv.org/pdf/2609.14205v1",
+      "comment": "Accepted at IEEE International Conference on Data Mining (ICDM 2026)",
+      "journal_ref": "",
+      "keyword_score": 23,
+      "matched_keywords": [
+        "sharpe ratio",
+        "drawdown",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "15 年市場資料實證，控制回撤表現優異，已獲 ICDM 接受",
+      "summary": {
+        "title_zh": "CAST：用於股市回檔控制的跨資產狀態空間交易系統",
+        "verdict": "提出結合跨資產卡爾曼濾波器與模型預測控制的交易系統，有效控制回檔並維持強健表現。",
+        "problem": "主流股票預測方法常假設獨立同分佈並專注於最佳化報酬或夏普值，導致真實市場中遭遇災難性回檔。如何有效管理投資組合的峰谷回檔是長期生存的前提。",
+        "method": "使用跨資產協同卡爾曼濾波器與模型預測控制（MPC），針對四個真實世界的股票市場進行為期 15 年的測試。",
+        "findings": "持續佔據報酬與回檔的柏 Pareto 邊界，在維持顯著較低的最大回檔的同時達到強健的風險調整表現，且在壓力測試中展現對市場衝擊與分佈偏移的穩健行為。",
+        "implication": "預測器與控制器僅透過預測價格路徑互動，兩者皆為即插即用，具備模組化與可解釋性，可直接應用於實際交易系統中。",
+        "caveats": "論文摘要中未報告具體的報酬率或夏普值等明確績效數字。",
+        "practicality": 4,
+        "tags": [
+          "狀態空間模型",
+          "回檔控制",
+          "跨資產",
+          "模型預測控制",
+          "風險管理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.12455",
+      "title": "EVOQUANT: Self-Evolving Verifier-Guided Strategy Optimization for Robust Quantitative Trading",
+      "authors": [
+        "Jie Mao",
+        "Changlun Li",
+        "Xiang Li",
+        "Qiqi Duan",
+        "Jinhui Yuan",
+        "Xiang Liu",
+        "Yuyu Luo",
+        "Jing Tang",
+        "Xiaowen Chu"
+      ],
+      "abstract": "Quantitative strategy optimization remains largely manual, requiring domain experts to identify weak signals, tune risk-control rules, and repeatedly validate iterative revisions. Large language models can accelerate this process, but directly relying on them to rewrite trading strategies often introduces hallucinated edits, strategy drift, and backtest overfitting. We propose EVOQUANT, a self-Evolving Verifier-guided framework for strategy Optimization in Quantitative trading. Our method utilizes LLMs to deeply diagnose performance bottlenecks, generates semantically controlled candidate edits, selects the best strategy through a multi-stage verification pipeline, and distills optimization experience into reusable knowledge for continual self-improvement. We evaluate our method using seven representative strategies: four from the A-share market and three from the Crypto market. Experimental results show that our method significantly improves the Sharpe ratio across all tested strategies: the average test Sharpe increases from -0.298 to 0.538, and the best-performing strategy achieves a 199% relative improvement. Ablation studies and stress tests under stricter conditions further validate the effectiveness and robustness of the framework. Overall, this work transforms quantitative strategy optimization from costly manual trial and error into an automated and verifiable iterative paradigm, offering a new path for applying large language models to financial strategy research.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CE"
+      ],
+      "published": "2026-07-14T07:34:01Z",
+      "updated": "2026-09-10T02:12:15Z",
+      "abs_url": "https://arxiv.org/abs/2607.12455",
+      "pdf_url": "https://arxiv.org/pdf/2607.12455v3",
+      "comment": "13 pages, 6 figures, 3 tables",
+      "journal_ref": "",
+      "keyword_score": 23,
+      "matched_keywords": [
+        "sharpe ratio",
+        "backtest",
+        "llm",
+        "large language model"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "大語言模型自動最佳化量化策略，A 股與加密貨幣實證",
+      "summary": {
+        "title_zh": "EVOQUANT：基於自我演化驗證器引導的量化交易策略穩健最佳化",
+        "verdict": "利用 LLM 結合多階段驗證管線自動最佳化量化策略，平均測試夏普值從 -0.298 提升至 0.538。",
+        "problem": "量化策略最佳化高度依賴人工，直接使用 LLM 修改程式碼常導致幻覺、策略飄移及回測過擬合。",
+        "method": "提出 EVOQUANT 框架，利用 LLM 診斷效能瓶頸、產生語意受控的候選修改，並透過多階段驗證管線選出最佳策略。評估涵蓋 A 股與加密貨幣市場的 7 個代表性策略。",
+        "findings": "所有測試策略的平均夏普值從 -0.298 顯著提升至 0.538，表現最佳的策略達到 199% 的相對改善幅度。",
+        "implication": "可將量化策略最佳化從人工試誤轉為自動化且可驗證的迭代範式，適合用於策略的自動調校與除錯。",
+        "caveats": "仍需依賴多階段驗證管線來過濾 LLM 的幻覺編輯與防止過擬合。",
+        "practicality": 4,
+        "tags": [
+          "量化交易",
+          "大型語言模型",
+          "策略最佳化",
+          "回測過擬合"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.06405",
+      "title": "Funding-Aware Optimal Market Making for Perpetual DEXs",
+      "authors": [
+        "Nam Anh Le"
+      ],
+      "abstract": "This paper studies optimal liquidity provision for perpetual contracts when the funding rate is a stochastic state variable. The core extension to classical market making is the coupling between inventory and funding payments: inventory creates both mark-to-market exposure and a state-dependent funding cash flow. A reduced inventory-funding control problem is formulated, solved with a monotone finite-difference Hamilton-Jacobi-Bellman scheme, and bid and ask quote offsets are recovered from discrete inventory value differences. Funding is calibrated on Hyperliquid ETH, BTC, and SOL perpetual data. Gaussian OU funding is retained as a tractable diffusion baseline, while OU-plus-jump diagnostics document the heavy-tailed funding innovations that should enter a future extension. In 100-seed holdout simulations under two official-fill proxy calibrations, the funding-aware HJB improves mean ETH/BTC performance while lowering inventory RMS relative to classical Avellaneda-Stoikov. SOL gains are positive versus unscaled AS but are not a Pareto improvement once a risk-scaled AS diagnostic is included.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF"
+      ],
+      "published": "2026-05-07T15:13:00Z",
+      "updated": "2026-05-07T15:13:00Z",
+      "abs_url": "https://arxiv.org/abs/2605.06405",
+      "pdf_url": "https://arxiv.org/pdf/2605.06405v1",
+      "comment": "21 pages",
+      "journal_ref": "",
+      "keyword_score": 23,
+      "matched_keywords": [
+        "market making",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合資金費率的最適造市模型，使用以太坊等永續合約實證",
+      "summary": {
+        "title_zh": "永續去中心化交易所之資金費率感知最佳造市",
+        "verdict": "結合資金費率隨機變數的最佳造市模型，在 ETH 與 BTC 表現優於傳統模型。",
+        "problem": "經典造市模型未考慮永續合約中部位與資金費率付款之間的耦合關係。資金費率的隨機特性會同時影響市值曝險與狀態相依的資金現金流。",
+        "method": "建立降維的部位與資金控制問題，利用單調有限差分 HJB 方案求解並推導買賣報價偏移。使用 Hyperliquid 的 ETH、BTC 與 SOL 永續合約資料進行高斯 OU 資金費率校準，並透過 100 種子樣本外模擬進行驗證。",
+        "findings": "在 ETH 與 BTC 的模擬中，考慮資金費率的 HJB 模型相較於傳統 Avellaneda-Stoikov 模型改善了平均績效並降低了部位均方根。對於 SOL 雖然優於未縮放的基準，但在納入風險縮放基準後並未形成全面改進。",
+        "implication": "此方法適合永續去中心化交易所的造市商在動態資金費率環境下調整報價，前提是必須準確校準資金費率的隨機過程。",
+        "caveats": "資金費率具有明顯的厚尾與跳躍特徵，但目前模型僅使用高斯 OU 假設，尚未納入跳躍項。",
+        "practicality": 4,
+        "tags": [
+          "造市",
+          "永續合約",
+          "資金費率",
+          "HJB 方程式",
+          "去中心化交易所"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2512.15720",
+      "title": "Hidden Order in Trades Predicts the Size of Price Moves",
+      "authors": [
+        "Mainak Singha"
+      ],
+      "abstract": "Financial markets exhibit an apparent paradox: while directional price movements remain largely unpredictable--consistent with weak-form efficiency--the magnitude of price changes displays systematic structure. Here we demonstrate that real-time order-flow entropy, computed from a 15-state Markov transition matrix at second resolution, predicts the magnitude of intraday returns without providing directional information. Analysis of 38.5 million SPY trades over 36 trading days reveals that conditioning on entropy below the 5th percentile increases subsequent 5-minute absolute returns by a factor of 2.89 (t = 12.41, p < 0.0001), while directional accuracy remains at 45.0%--statistically indistinguishable from chance (p = 0.12). This decoupling arises from a fundamental symmetry: entropy is invariant under sign permutation, detecting the presence of informed trading without revealing its direction. Walk-forward validation across five non-overlapping test periods confirms out-of-sample predictability, and label-permutation placebo tests yield z = 14.4 against the null. These findings suggest that information-theoretic measures may serve as volatility state variables in market microstructure, though the limited sample (36 days, single instrument) requires extended validation.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.ST",
+        "stat.AP",
+        "stat.ME"
+      ],
+      "published": "2025-12-02T23:20:46Z",
+      "updated": "2025-12-02T23:20:46Z",
+      "abs_url": "https://arxiv.org/abs/2512.15720",
+      "pdf_url": "https://arxiv.org/pdf/2512.15720v1",
+      "comment": "Hidden order in trades predicts the size of intraday price moves but not the direction, consistent with entropy's permutation symmetry. 38.5M SPY trades, 5-fold walk-forward validation, z=14.4 under label-permutation placebo tests, using a transparent intraday trading rule to quantify economic impact. Feedback welcome",
+      "journal_ref": "",
+      "keyword_score": 24,
+      "matched_keywords": [
+        "market microstructure",
+        "out-of-sample"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "3850 萬筆 SPY 交易實證，熵預測價格變動幅度",
+      "summary": {
+        "title_zh": "交易中的隱藏順序可預測價格變動幅度",
+        "verdict": "利用即時訂單流熵值可預測日內報酬絕對值，但無法預測方向。",
+        "problem": "金融市場方向性價格變動難以預測，但價格變動的幅度是否具備系統性結構？",
+        "method": "使用 SPY 在 36 個交易日內的 3,850 萬筆交易資料，於秒級頻率下透過 15 狀態馬可夫轉移矩陣計算即時訂單流熵值。",
+        "findings": "當熵值低於第 5 百分位時，隨後 5 分鐘的絕對報酬增加了 2.89 倍（t = 12.41, p < 0.0001），而方向準確率維持在 45.0%（p = 0.12）。",
+        "implication": "資訊理論度量可作為市場微中的波動率體制變數，適用於波動率預測或風險控管。",
+        "caveats": "樣本僅涵蓋 36 天與單一標的，仍需擴大樣本進行驗證。",
+        "practicality": 4,
+        "tags": [
+          "訂單流",
+          "市場微結構",
+          "熵",
+          "波動率預測"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.19789",
+      "title": "Contagion on the Trading Floor: How Adversarial Signals Spread in Multi-Agent Trading Systems",
+      "authors": [
+        "Qi Rong Sua",
+        "Junhao Dong",
+        "Nguyen Duc Thai",
+        "Yuqing Wen",
+        "Cheston Tan",
+        "Yew-Soon Ong"
+      ],
+      "abstract": "Multi-agent trading systems built on large language models (LLMs) are beginning to appear in quantitative finance, yet their robustness to adversarial inputs is largely unknown. We study the vulnerability of LLM trading stacks to black-box, input-only attacks that enter solely via admissible social-media feeds. We introduce the Generic Multi-Agent Trading System (GMATS), a framework that captures modern multiagent trading architectures and instantiate a class of black-box poisoning attackers that treat an LLM as a post generator and inject budget-constrained, plausibly benign social-media content into the analyst's evidence stream. We define contagion metrics that trace how adversarial content propagates through the stack, including belief-shift scores at analyst and coordinator layers and attack-clean deltas on standard backtest metrics. Experiments on a safe offline benchmark with historical market and social data show that even simple input-only attackers can materially degrade risk-return profiles, sharply reducing Sharpe ratios. At the same time, we find that suitably designed multi-agent topologies and coordinator prompts can dampen adversarial shocks and improve average robustness under identical poisoning budgets.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-17T06:54:59Z",
+      "updated": "2026-09-17T06:54:59Z",
+      "abs_url": "https://arxiv.org/abs/2609.19789",
+      "pdf_url": "https://arxiv.org/pdf/2609.19789v1",
+      "comment": "Published in ECML PKDD 2026. 25 pages, including 7 pages of supplementary material",
+      "journal_ref": "Machine Learning and Knowledge Discovery in Databases. Research Track, ECML PKDD 2026, LNCS 16946, Springer (2027) 206-223",
+      "keyword_score": 23,
+      "matched_keywords": [
+        "sharpe ratio",
+        "backtest",
+        "llm",
+        "large language model"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "研究多代理人交易系統對對抗性社群媒體訊號的脆弱性與蔓延效應，已發表於ECML PKDD。",
+      "summary": {
+        "title_zh": "交易大廳的感染：對抗性訊號如何在多代理人交易系統中擴散",
+        "verdict": "探討大型語言模型多代理人交易系統對社群媒體黑箱投毒攻擊的脆弱性，發現精良拓樸與提示詞可提升抗震能力。",
+        "problem": "應用大型語言模型建構的多代理人交易系統，其對社群媒體等外部對抗性輸入的強韌性仍屬未知。研究旨在評估此類系統面臨黑箱投毒攻擊時的脆弱性。",
+        "method": "提出通用多代理人交易系統框架與黑箱投毒攻擊者模型，在歷史市場與社群資料的離線基準上進行實驗，追蹤信念轉移與回測指標的變化。",
+        "findings": "實驗顯示簡單的輸入端攻擊會顯著惡化風險報酬組態並大幅降低夏普值，但適當設計的多代理人拓樸與協調者提示詞能抑制衝擊；論文未報告具體績效數字。",
+        "implication": "實務上部署大型語言模型交易系統時，必須防範社群媒體的對抗性輸入，並透過多代理人拓樸與提示詞設計來增強強韌性。",
+        "caveats": "實驗僅限於安全的離線基準測試，真實市場中的動態防禦效果仍需驗證。",
+        "practicality": 3,
+        "tags": [
+          "大型語言模型",
+          "多代理人系統",
+          "對抗性攻擊",
+          "機器學習交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.05255",
+      "title": "An Emerging Retail Portfolio Management Application: Personalized, Tax-Aware Reinforcement Learning with Natural Language Goals",
+      "authors": [
+        "Ramin Pishehvar"
+      ],
+      "abstract": "Retail investors lack access to the kind of personalized, tax-aware portfolio management that institutional clients take for granted -- existing robo-advisors use static, rule-based allocation, and institutional-grade systems require account minimums and technology stacks unavailable to individual investors. We present a fully built, integration-tested application that closes this gap: a FastAPI backend and web dashboard that let a user describe an investment goal in plain language (e.g. \"I want steady growth but need to sell some shares next month for a down payment\"), routes that goal to one of six investment mandates, and produces a live, broker-integrated portfolio recommendation from athree-phase reinforcement learning system -- a self-supervised cross-asset encoder, a Mixture-of-Experts (MoE) allocation policy with a learned intent router, and a lightweight LoRA adapter that personalizes recommendations from an individual's revealed brokerage behavior without retraining the shared model. The system is functionally complete and integration-tested end-to-end against a live brokerage API (Alpaca, paper-trading mode), including multi-user authentication, a trust first preview-before-apply confirmation flow, daily email digests, and an auditable action-integrity chain, but has not yet been opened to real end-users; we report this honestly as an emerging, pre-deployment application with a concrete path to full deployment, alongside 14-day walk-forward backtests (bootstrapped confidence intervals included) as preliminary, pre-deployment validation rather than production performance. We also report several practical engineering lessons -- silently-inactive integration paths, hanging third-party API calls, and the value of end-to-end empirical verification over trusting checkpoint metadata -- that we believe generalize to other applied RL systems built on external, live data sources.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CR"
+      ],
+      "published": "2026-08-05T16:20:11Z",
+      "updated": "2026-08-05T16:20:11Z",
+      "abs_url": "https://arxiv.org/abs/2608.05255",
+      "pdf_url": "https://arxiv.org/pdf/2608.05255v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 23,
+      "matched_keywords": [
+        "reinforcement learning",
+        "backtest",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "為散戶建構個人化、具備稅務意識且以自然語言目標驅動的強化學習投資組合管理應用。",
+      "summary": {
+        "title_zh": "新興散戶投資組合管理應用：結合自然語言目標與個人化、具稅務意識的強化學習",
+        "verdict": "透過強化學習與自然語言達成個人化資產配置，目前為完成整合測試的預部署系統。",
+        "problem": "現有機器理財顧問僅能提供靜態規則配置，散戶缺乏具備稅務意識且高度個人化的投資組合管理工具。",
+        "method": "建構包含自我監督跨資產編碼器、具備意圖路由器的專家混合配置策略與 LoRA 個人化適配器的三階段強化學習系統，串接 Alpaca 模擬交易 API 進行 14 天往前走步回測。",
+        "findings": "未報告具體的夏普值或報酬數字，僅提供包含拔靴信賴區間的 14 天往前走步回測作為預部署驗證，並總結了 API 整合與端到端驗證的工程經驗。",
+        "implication": "展示了將自然語言指令轉化為券商實單操作的完整工程架構，適合想實作智慧理財系統的團隊作為參考。",
+        "caveats": "系統目前仍處於預部署階段，僅完成模擬交易測試，尚未通過真實市場與真實用戶的考驗。",
+        "practicality": 3,
+        "tags": [
+          "強化學習",
+          "資產配置",
+          "自然語言處理",
+          "機器理財顧問"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.21696",
+      "title": "What Does Deep Hedging Actually Learn? Delta Corrections, Regime Fragility, and Symbolic Distillation",
+      "authors": [
+        "Kirill Zernikov"
+      ],
+      "abstract": "This paper studies empirical deep hedging for S&P 500 index options under a local downside-shortfall reward. It moves beyond performance comparison by asking what the learned hedge does, when it fails, and whether it can be made auditable. TD3 agents are compared with a daily-updated Black-Scholes delta hedge on the same option episodes. In walk-forward tests from 2015 to 2023, the agents usually learn a systematic delta haircut relative to Black-Scholes. The correction is explained by spot-implied-volatility co-movement and often improves accumulated reward and terminal downside variance, but it is regime-fragile: 2022 exposes losses in adverse daily states, while 2023 shows that underhedging can raise ordinary variance when option P&L is spot-dominated and the volatility channel is unusually weak. Symbolic regression distills the neural policies into compact formulas that can be traded out of sample; these formulas preserve much of the reward, downside-variance, and CVaR advantage over Black-Scholes, and sometimes sharpen it, but inherit the same fragility in difficult regimes.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM",
+        "q-fin.CP",
+        "q-fin.PR"
+      ],
+      "published": "2026-05-20T19:56:30Z",
+      "updated": "2026-05-20T19:56:30Z",
+      "abs_url": "https://arxiv.org/abs/2605.21696",
+      "pdf_url": "https://arxiv.org/pdf/2605.21696v1",
+      "comment": "34 pages, 11 figures, 18 tables. Code and replication package: https://github.com/Kirill-ZG/Interpretable-Empirical-Deep-Hedging",
+      "journal_ref": "",
+      "keyword_score": 23,
+      "matched_keywords": [
+        "regime",
+        "hedging",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "符號蒸餾解析深度避險策略，實證檢驗選擇權 Delta 修正",
+      "summary": {
+        "title_zh": "深度避險實際學到了什麼？Delta 修正、體制脆弱性與符號蒸餾",
+        "verdict": "探討深度避險在 SPX 選擇權的行為，發現其學到 Delta 削減，並可用符號迴歸蒸餾出可交易的公式。",
+        "problem": "深度避險模型學到了什麼策略、何時會失效，以及是否能做到可審計？",
+        "method": "使用 TD3 代理人在 2015 至 2023 年的 SPX 選擇權步行向前測試中，針對區域下檔虧損報酬進行每日避險，並與 Black-Scholes Delta 避險進行比較。",
+        "findings": "代理人通常學到相對於 Black-Scholes 的系統性 Delta 削減，能改善累積報酬與終端下檔變異數，但在 2022 年逆境中暴露虧損，且在 2023 年波動度通道較弱時會提高一般變異數；符號迴歸蒸餾出的緊湊公式保留了大部份的報酬與 CVaR 優勢。",
+        "implication": "利用符號迴歸將神經網路政策轉化為明確公式是可行的，能保留多數避險優勢並提高可審計性。",
+        "caveats": "模型具有體制脆弱性，在困難的市場體制下容易失效。",
+        "practicality": 4,
+        "tags": [
+          "深度學習",
+          "避險",
+          "選擇權",
+          "強化學習",
+          "符號迴歸"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.37324",
+      "title": "Optimal Order Placement under a State-Dependent Hawkes Process Limit Order Book model",
+      "authors": [
+        "Jonathan Chávez Casillas",
+        "Li Gan"
+      ],
+      "abstract": "We study optimal quote placement for a market maker facing order flow modeled by a state-dependent Hawkes process. A block-based linear demand specification links market-order counts to execution volumes, providing the demand moments required by a continuous time discrete state dynamic programming formulation. Under a quadratic terminal inventory penalty, we characterize inventory-dependent quotes and derive backward recursions for the coefficients of a quadratic value function. Numerical experiments using LOBSTER data examine quote distributions, inventory exposure, and terminal wealth. The implemented strategy yields higher aggregate terminal wealth than fixed-spread benchmarks at one and three ticks, but lower wealth than the two-tick benchmark. These results illustrate the framework's numerical implementation and distinguish terminal-wealth comparisons from evaluation under the inventory-penalized objective.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.CP",
+        "q-fin.MF"
+      ],
+      "published": "2026-10-27T14:35:01Z",
+      "updated": "2026-10-27T14:35:01Z",
+      "abs_url": "https://arxiv.org/abs/2610.37324",
+      "pdf_url": "https://arxiv.org/pdf/2610.37324v1",
+      "comment": "44 pages, 11 Figures",
+      "journal_ref": "",
+      "keyword_score": 60,
+      "matched_keywords": [
+        "limit order book",
+        "order flow",
+        "market maker",
+        "order book"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "使用 LOBSTER 資料檢驗狀態依賴 Hawkes 造市策略，實證完整。",
+      "summary": {
+        "title_zh": "在狀態相依 Hawkes 過程限價單簿模型下的最佳掛單策略",
+        "verdict": "以狀態相依 Hawkes 過程模型化造市商的訂單流，並推導二次終端庫存懲罰下的最佳報價。",
+        "problem": "造市商面對由狀態相依 Hawkes 過程驅動的訂單流時，如何決定最佳的掛單位置以平衡庫存與終端財富。",
+        "method": "使用連續時間離散狀態動態規劃公式，結合區塊式線性需求規格與二次終端庫存懲罰。利用 LOBSTER 資料進行數值實驗。",
+        "findings": "實作策略在總體終端財富表現上優於一檔與三檔的固定價差基準，但遜於兩檔的固定價差基準，具體績效未報告進一步的夏普值或誤差改善數字。",
+        "implication": "此框架提供了一種數值實作方法來決定庫存相依的報價，但實際應用時需仔細調整與固定價差基準的比較基準。",
+        "caveats": "策略在總體終端財富表現上未能全面擊敗所有固定價差基準（例如兩檔基準）。",
+        "practicality": 3,
+        "tags": [
+          "造市",
+          "限價單簿",
+          "Hawkes",
+          "最佳執行",
+          "動態規劃"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

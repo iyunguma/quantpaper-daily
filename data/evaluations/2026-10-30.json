@@ -1,0 +1,327 @@
+{
+  "date": "2026-10-30",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2610.38442",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "高頻訂單簿資料實證，改善市價衝擊曲線"
+    },
+    {
+      "arxiv_id": "2605.11180",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "美股高頻資料實證，估計資訊總價值"
+    },
+    {
+      "arxiv_id": "2605.05089",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "結合動態控制與歷史回測，實證完整"
+    },
+    {
+      "arxiv_id": "2605.00854",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 5,
+      "value": 4,
+      "reason": "純模擬模型，僅展示泡沫與崩盤動態"
+    },
+    {
+      "arxiv_id": "2603.23300",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "S&P 500 資料實證，具備代理人架構與夏普值最佳化"
+    },
+    {
+      "arxiv_id": "2603.10137",
+      "topic": "交易執行",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "Heston 模型模擬路徑，結合集成不確定性與避險"
+    },
+    {
+      "arxiv_id": "2603.05862",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 4,
+      "reason": "僅使用人工市場模擬，分析槓桿 ETF 與期貨套利"
+    },
+    {
+      "arxiv_id": "2603.13252",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出兩階段決策政策，處理報酬預測的不確定性"
+    },
+    {
+      "arxiv_id": "2602.20856",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "聯集估計特徵與跨資產溢出，樣本外表現穩定"
+    },
+    {
+      "arxiv_id": "2601.07687",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "美股資料實證，改善協方差矩陣預測與追蹤誤差"
+    },
+    {
+      "arxiv_id": "2601.03215",
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "推導最適控制與隨機弗雷德霍姆方程式，理論嚴謹"
+    },
+    {
+      "arxiv_id": "2512.20850",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出隱式時間離散化與政策迭代，證明黏性解收斂"
+    },
+    {
+      "arxiv_id": "2512.15720",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "3850 萬筆 SPY 交易實證，熵預測價格變動幅度"
+    },
+    {
+      "arxiv_id": "2512.07886",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 3,
+      "value": 5,
+      "reason": "區塊鏈鏈上資料實證，檢驗比特幣網路摩擦與貨幣流通速度"
+    },
+    {
+      "arxiv_id": "2511.19186",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出碳懲罰組合保險策略，有部分資訊隨機濾波推導"
+    },
+    {
+      "arxiv_id": "2510.27132",
+      "topic": "波動度與衍生品",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "BSM 方程式深度學習解法，僅作數值實驗"
+    },
+    {
+      "arxiv_id": "2610.20366",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "貝氏決策理論建立在線體制偵測，數值模擬驗證"
+    },
+    {
+      "arxiv_id": "2610.04959",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出集區感知擴散模型發掘公式化因子，實證完整"
+    },
+    {
+      "arxiv_id": "2609.34474",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "結合深度學習與核方法進行避險，實證表現穩健"
+    },
+    {
+      "arxiv_id": "2609.31578",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "數學推導神經網路在隨機積分與演算法交易的應用"
+    },
+    {
+      "arxiv_id": "2609.22639",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "應用美國大選博弈市場進行配對交易，樣本外表現良好"
+    },
+    {
+      "arxiv_id": "2609.14205",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "15 年市場資料實證，控制回撤表現優異，已獲 ICDM 接受"
+    },
+    {
+      "arxiv_id": "2608.08405",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "探討交易策略容量與擁擠效應的實驗設計，推導嚴謹"
+    },
+    {
+      "arxiv_id": "2608.01208",
+      "topic": "波動度與衍生品",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "氣候避險評估，使用半合成資料進行模型型強化學習"
+    },
+    {
+      "arxiv_id": "2607.12455",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "大語言模型自動最佳化量化策略，A 股與加密貨幣實證"
+    },
+    {
+      "arxiv_id": "2607.08907",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "採連續雙向競價訂單簿代理人模型，僅為模擬實驗"
+    },
+    {
+      "arxiv_id": "2609.05434",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提出反射式倒向隨機微分方程式的深度學習解法與誤差分析"
+    },
+    {
+      "arxiv_id": "2606.16840",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "加密貨幣極端尾端依賴圖模型，實證系統性風險"
+    },
+    {
+      "arxiv_id": "2605.26890",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "轉型能源市場非線性預測，結合 VAR 與循環神經網路"
+    },
+    {
+      "arxiv_id": "2605.21696",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "符號蒸餾解析深度避險策略，實證檢驗選擇權 Delta 修正"
+    },
+    {
+      "arxiv_id": "2605.06405",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "結合資金費率的最適造市模型，使用以太坊等永續合約實證"
+    },
+    {
+      "arxiv_id": "2604.28124",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出基於矩陣光譜的風險降低方法，真實資料實證"
+    },
+    {
+      "arxiv_id": "2604.16773",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出拓撲風險平價，適用於市場中性與因子投資組合"
+    },
+    {
+      "arxiv_id": "2605.05211",
+      "topic": "回測與研究方法",
+      "evidence": "看不出來",
+      "relevance": 6,
+      "value": 7,
+      "reason": "綜述大型語言模型在股票預測與避險基金應用的文獻"
+    },
+    {
+      "arxiv_id": "2603.24933",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "結合機器學習與分類推斷加密貨幣推文的情緒預測"
+    },
+    {
+      "arxiv_id": "2603.24154",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出路徑簽名與 SigSwap 作為路徑相依風險管制的理論架構"
+    },
+    {
+      "arxiv_id": "2602.01022",
+      "topic": "其他",
+      "evidence": "只有模擬資料",
+      "relevance": 4,
+      "value": 6,
+      "reason": "使用大型語言模型校準行為參數，代理人模擬實驗"
+    },
+    {
+      "arxiv_id": "2601.12990",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出特徵對齊生成對抗網路，改善合成資料的實際回測表現"
+    },
+    {
+      "arxiv_id": "2601.11375",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "推導去中心化金融中流動性提供者的市場衝擊函數與定價"
+    },
+    {
+      "arxiv_id": "2601.10279",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出逐步選擇資產定價模型的方法，已獲管理科學期刊接受"
+    }
+  ]
+}
