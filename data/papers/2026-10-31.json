@@ -1,0 +1,524 @@
+{
+  "date": "2026-10-31",
+  "generated_at": "2026-10-31T10:26:46+08:00",
+  "scanned": 2417,
+  "eligible": 2279,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2610.26456",
+      "title": "Regime-Aware Interpretable Ranking for Sector Rotation",
+      "authors": [
+        "Kelvin J. L. Koa",
+        "Ziling Liu",
+        "Xinyang Li",
+        "Shuowei Feng",
+        "Ruoyu Liang",
+        "Mathieu Giroux",
+        "Eugene Y. Wen",
+        "Xuan Yao",
+        "Ke-Wei Huang",
+        "Hugo Lamarre"
+      ],
+      "abstract": "Sector rotation is a common decision in benchmark-relative portfolio management, where portfolio managers rank sectors for overweight and underweight positions. We formulate this task as ranking sector actions by expected future risk-adjusted active performance, measured with forward sector-benchmark Sharpe ratios. Such rankings should preserve temporal information, express model outputs through economically familiar signal characteristics, account for changes in signal relevance across macroeconomic environments, and capture dependencies among sectors. We propose RegimeRank, an interpretable sector-ranking model that represents fundamental and technical signals through expert-defined temporal characteristics, conditions them on learned macro factors via cross-attention, and models cross-sector dependencies through self-attention. Expected-gradient attributions identify the contributions of individual signal-transformation pairs, while macroeconomic and cross-sector attention maps provide diagnostics of the learned conditioning and relational structure. We evaluate RegimeRank on weekly S&P 500 data from 2002 to 2024 under combinatorial purged cross-validation, where it outperforms representative ranking and machine-learning baselines across multiple ranking metrics. Ablation studies support the contributions of latent macro states, regime conditioning, and cross-sector modelling, while attribution and attention analyses illustrate the temporal characteristics, macro states, and sector relationships underlying its rankings.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "cs.LG",
+        "q-fin.CP"
+      ],
+      "published": "2026-10-19T14:10:27Z",
+      "updated": "2026-10-19T14:10:27Z",
+      "abs_url": "https://arxiv.org/abs/2610.26456",
+      "pdf_url": "https://arxiv.org/pdf/2610.26456v1",
+      "comment": "ICAIF 2026 (Oral)",
+      "journal_ref": "",
+      "keyword_score": 22,
+      "matched_keywords": [
+        "sharpe ratio",
+        "regime"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合總體經濟與注意力機制的產業輪動模型，實證完整且已獲 ICAIF 接受。",
+      "summary": {
+        "title_zh": "考慮體制轉換且具可解釋性的類股輪動排序模型",
+        "verdict": "提出 RegimeRank 模型，透過總體經濟體制調節與自我注意力機制進行類股排序，表現優於基準。",
+        "problem": "類股輪動排序需同時保留時間資訊、反映經濟訊號特徵、適應不同總體經濟環境，並捕捉類股間的相依性。",
+        "method": "使用 RegimeRank 模型，以 2002 至 2024 年 S&P 500 週度資料進行組合式淨化交叉驗證，結合基礎面與技術面專家特徵、交互注意力與自我注意力機制。",
+        "findings": "在多項排序指標上優於具代表性的排序與機器學習基準模型，消融實驗證實了潛在總體經濟狀態、體制調節與跨類股建模的有效性，未報告具體績效數字。",
+        "implication": "可用於基準相對投資組合管理中的類股超配與低配決策，提供具可解釋性的總體經濟狀態與類股關聯診斷。",
+        "caveats": "論文未提供扣除交易成本後的實際淨報酬數字。",
+        "practicality": 4,
+        "tags": [
+          "類股輪動",
+          "投資組合管理",
+          "機器學習",
+          "體制轉換",
+          "注意力機制"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.06947",
+      "title": "FactorBench: A Portfolio-Aware Benchmark for Automated Factor Mining",
+      "authors": [
+        "Zhuohan Wang",
+        "Carmine Ventre"
+      ],
+      "abstract": "Factor mining seeks to discover signals from financial data that predict future asset returns and guide portfolio construction. Automated factor mining now spans genetic programming, reinforcement learning, generative models, and large language model agents. Yet it remains unclear whether advances across these paradigms yield more generalizable, distinct, and economically useful financial signals. We introduce FactorBench, a portfolio-aware benchmark comparing roughly five thousand mined factors from nine automated mining methods across five equity markets. A shared data and evaluation contract supports both symbolic expressions and executable Python factors, connecting heterogeneous discovery algorithms to common signal combination and portfolio construction procedures. FactorBench traces the outputs of mining systems across three levels: factor validity, temporal generalization, and predictiveness beyond measured risk and style exposures; within- and across-method pool distinctness, including similarity to the benchmark Alpha101; and composite-signal quality and after-cost long-only and long--short portfolio performance. After systematically assessing whether advances in factor mining translate into signal quality and portfolio performance, FactorBench finds that no paradigm consistently dominates.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "cs.LG"
+      ],
+      "published": "2026-10-03T10:57:37Z",
+      "updated": "2026-10-03T10:57:37Z",
+      "abs_url": "https://arxiv.org/abs/2610.06947",
+      "pdf_url": "https://arxiv.org/pdf/2610.06947v1",
+      "comment": "30 pages, 21 figures, 8 tables",
+      "journal_ref": "",
+      "keyword_score": 22,
+      "matched_keywords": [
+        "reinforcement learning",
+        "large language model",
+        "equity market"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出 FactorBench 比較多種自動因子挖掘方法，跨市場實證完整。",
+      "summary": {
+        "title_zh": "FactorBench：一個用於自動化Alpha因子挖掘的投資組合感知基準",
+        "verdict": "比較九種自動化Alpha因子挖掘方法，發現無單一範式能持續佔據主導地位。",
+        "problem": "各類自動化Alpha因子挖掘的進展是否真正提升訊號的泛化能力、獨特性與經濟價值，目前仍不明朗。",
+        "method": "涵蓋五個股票市場，評估來自九種自動化挖掘方法的約五千個Alpha因子，透過統一的資料與評估合約進行多維度檢驗。",
+        "findings": "透過評估因子有效性、時間泛化、風格曝險後的預測力、與Alpha101的相似度及扣除成本後的投資組合績效，發現沒有單一範式能持續勝出。",
+        "implication": "實務界在導入自動化Alpha因子挖掘時，不應盲目追求特定機器學習範式，必須透過完整的投資組合建構與成本檢驗來把關。",
+        "caveats": "該基準雖全面評估多種方法，但未深入探討個別市場的微觀結構差異。",
+        "practicality": 4,
+        "tags": [
+          "Alpha因子挖掘",
+          "機器學習",
+          "投資組合",
+          "基準測試"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.25258",
+      "title": "Robust Hedging Valuation Adjustment for Deep Hedging Policies under Market Frictions",
+      "authors": [
+        "Takayuki Sakuma"
+      ],
+      "abstract": "Hedging a derivative position under transaction costs and market frictions requires a trading rule that adapts to changing conditions. Deep hedging trains a neural policy for this task but policy training does not determine whether a trading desk can afford to run the policy. We apply robust hedging valuation adjustment (HVA) as a post-training valuation-adjustment layer that evaluates tracking-loss CVaR together with explicit funding and margin add-ons. The funding and margin add-ons share the same KL uncertainty set as HVA. For each policy, a single common-stress tilt computes HVA, funding and margin jointly and a trading desk can get one internally consistent reserve instead of the three separately. We compare classical hedge policies with learned hedge specifications across three market environments with different liquidity. No single specification dominates in every market. Under the strict tracking-risk budget, gamma-wide classical bands are selected in High and Middle Liquidity while sparse learned execution is selected in Low Liquidity. At looser validation budgets wider classical bands are generally selected.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM",
+        "q-fin.CP",
+        "q-fin.PR"
+      ],
+      "published": "2026-07-28T03:59:19Z",
+      "updated": "2026-07-28T03:59:19Z",
+      "abs_url": "https://arxiv.org/abs/2607.25258",
+      "pdf_url": "https://arxiv.org/pdf/2607.25258v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 22,
+      "matched_keywords": [
+        "transaction cost",
+        "liquidity",
+        "hedging"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "對深度避險策略套用穩健 HVA 調整層，實證評估不同流動性環境。",
+      "summary": {
+        "title_zh": "市場摩擦下深度避險策略的穩健避險評價調整",
+        "verdict": "提出結合追蹤損失 CVaR 與資金、保證金加項的穩健 HVA 層，為深度避險策略提供一致的準備金評估。",
+        "problem": "在交易成本與市場摩擦下，深度避險的類神經網路策略雖能適應動態市況，但訓練過程無法評估交易台是否負擔得起執行成本。",
+        "method": "使用穩健避險評價調整（HVA）作為訓練後的評價調整層，在三種流動性不同的市場環境中，比較傳統避險策略與學習型避險規範。",
+        "findings": "論文未報告具體績效數字。發現在嚴格追蹤風險預算下，高與中流動性市場選擇廣泛的 gamma 區間傳統策略，低流動性市場則選擇稀疏的學習型執行策略。",
+        "implication": "交易台可透過共同壓力傾斜聯合計算 HVA、資金與保證金，獲得內部一致的準備金，有助於評估深度避險策略的可行性。",
+        "caveats": "論文未提供具體的財務績效數字來證明其實際獲利能力。",
+        "practicality": 3,
+        "tags": [
+          "深度避險",
+          "市場摩擦",
+          "評價調整",
+          "流動性",
+          "風險管理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.22625",
+      "title": "FlashFolio: A GPU-Accelerated Solver for Portfolio Optimization",
+      "authors": [
+        "Yilun Jiang",
+        "Haihao Lu",
+        "Zedong Peng",
+        "Jinwen Yang"
+      ],
+      "abstract": "We present FlashFolio, a GPU-accelerated solver for single-period and multi-period portfolio optimization with factor-based risk modeling, bid-offer spread costs, and nonlinear market impact. These models are widely used in portfolio construction and optimal execution, but become computationally challenging at large scale, especially in the multi-period setting. We benchmark FlashFolio against MOSEK on instances constructed from realistic market inputs. FlashFolio delivers consistent runtime improvements, achieving speedups of up to 12.9x in the single-period setting and 48x in the multi-period setting, while also exhibiting stronger robustness on challenging multi-period instances. Our results show that GPU-based optimization can help improve the practicality of large-scale portfolio optimization.",
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC",
+        "cs.CE"
+      ],
+      "published": "2026-04-24T14:53:38Z",
+      "updated": "2026-04-24T14:53:38Z",
+      "abs_url": "https://arxiv.org/abs/2604.22625",
+      "pdf_url": "https://arxiv.org/pdf/2604.22625v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 22,
+      "matched_keywords": [
+        "optimal execution",
+        "portfolio optimization"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出 GPU 加速的投組最佳化求解器 FlashFolio，實務執行效率高。",
+      "summary": {
+        "title_zh": "FlashFolio：一個用於投資組合最佳化的 GPU 加速求解器",
+        "verdict": "FlashFolio 透過 GPU 加速大型投資組合最佳化，單期與多期問題分別達到 12.9 倍與 48 倍的加速。",
+        "problem": "包含因子風險模型、買賣價差與非線性市場衝擊的單期與多期投資組合最佳化，在大規模下計算極具挑戰性。",
+        "method": "使用基於 GPU 的求解器 FlashFolio，針對真實市場輸入建構的實例進行基準測試，與 MOSEK 進行比較。",
+        "findings": "FlashFolio 展現一致的執行時間改善，在單期設定中達到最高 12.9 倍的加速，在多期設定中達到 48 倍的加速，且在具挑戰性的多期實例中表現出更強的穩健性。",
+        "implication": "可用於提升大規模投資組合最佳化與最佳執行問題的計算效率，縮短重新平衡的延遲。",
+        "caveats": "論文未報告扣除實際交易成本後的真實獲利數字，僅著重於運算效能與加速比。",
+        "practicality": 4,
+        "tags": [
+          "投資組合最佳化",
+          "GPU加速",
+          "市場衝擊",
+          "高效能計算"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.31390",
+      "title": "AlphaOpsBench: Benchmarking End-to-End Alpha Strategy Operationalization in Prediction Markets",
+      "authors": [
+        "Huaiyu Jia",
+        "Mingxuan Zhao",
+        "Jincheng Gao",
+        "Zifan Peng",
+        "Wentao Zhang",
+        "Siguang Li",
+        "Shuo Sun"
+      ],
+      "abstract": "Large language models increasingly generate quantitative trading strategies, yet existing benchmarks assume standardized assets, numerical features, or directly compilable strategy representations---assumptions that prediction-market strategies violate, since a coarse idea may leave the traded outcome, causal information source, signal definition, threshold, sizing, order policy, exit, and settlement behavior unspecified. We introduce \\textsc{AlphaOpsBench}, which evaluates end-to-end operationalization from source-grounded economic hypotheses to auditable executable programs over 581 source-preserving strategy records and a lifecycle-scale Polymarket dataset with 1.28 million binary markets, 183.6 million cleaned executions, settlement evidence, and limit-order-book history, comparing Direct generation against a Staged design-then-code protocol. In a corrected independent-generation study over 36 controlled tasks and 24 preregistered real strategies, strict end-to-end validity remains rare: Direct and Staged obtain 35/180 and 20/180 canonical passes on the controlled cohort and no confirmed pass on the real cohort, and repeated generations vary substantially in model-owned economic choices. By contrast, 775,725 of 783,655 scheduled historical replays complete, showing that replayability is a far weaker property than source-faithful operationalization. Financial outcomes depend on the declared execution model and available historical evidence, and fee and liquidity experiments show that execution costs alter subsequent trading paths rather than acting only as ex-post deductions. \\textsc{AlphaOpsBench} thus separates strategy fidelity, behavioral validity, historical executability, and financial performance in an evidence-aware benchmark for LLM-based quantitative research in prediction markets.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE"
+      ],
+      "published": "2026-09-25T15:20:59Z",
+      "updated": "2026-09-25T15:20:59Z",
+      "abs_url": "https://arxiv.org/abs/2609.31390",
+      "pdf_url": "https://arxiv.org/pdf/2609.31390v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 26,
+      "matched_keywords": [
+        "execution cost",
+        "llm",
+        "large language model",
+        "liquidity",
+        "alpha"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "針對預測市場中的Alpha策略營運化進行基準測試，揭露真實策略的可執行性挑戰。",
+      "summary": {
+        "title_zh": "AlphaOpsBench：預測市場中端對端 Alpha 策略實作化之基準測試",
+        "verdict": "評估 LLM 在預測市場中將經濟假設轉化為可執行策略的能力，發現嚴格的端對端有效性極低，且重播可行性遠高於策略忠實度。",
+        "problem": "現有基準假設資產標準化且特徵為數值型，但預測市場策略常省略交易標的、訊號定義、部位大小等細節，導致 LLM 難以直接產出完整策略。",
+        "method": "引入 AlphaOpsBench 基準測試，包含 581 筆策略紀錄與 Polymarket 資料集（含 128 萬個二元市場、1.836 億筆成交與限價單簿歷史），比較直接生成與分階段設計再編碼的協定。",
+        "findings": "在控制任務與真實策略中，直接生成與分階段方法在控制組僅分別獲得 35/180 與 20/180 的典型通過次數，真實策略組則無一通過；但在歷史回測中，排程回測完成率高達 775,725/783,655。",
+        "implication": "雖然回測容易執行，但確保 LLM 產出的經濟邏輯與來源忠實度極具挑戰，且執行成本會實質改變交易路徑而非僅作事後扣除。",
+        "caveats": "LLM 在模型擁有的經濟選擇上變異性極大，且真實策略組的端對端有效性為零。",
+        "practicality": 2,
+        "tags": [
+          "預測市場",
+          "基礎模型",
+          "Alpha 因子挖掘",
+          "回測",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.11602",
+      "title": "The Physics of Price Discovery: Deconvolving Information, Volatility, and the Critical Breakdown of Signal during Retail Herding",
+      "authors": [
+        "Sungwoo Kang"
+      ],
+      "abstract": "How information transmits through prices -- and why this transmission breaks down -- remains poorly understood. We combine regularized deconvolution with Hawkes process analysis to study the impulse response structure of investor flows in the Korean equity market (January 2020 -- February 2025). Three findings emerge: foreign and institutional flows drive permanent price discovery while individual flows provide contrarian liquidity; individual investor surges are predominantly panic-driven and exhibit near-explosive self-excitation; and during herding episodes, institutional price impact deteriorates sharply in small-cap stocks while large-cap stocks maintain resilience. These results reframe market efficiency as a state variable -- conditional on both herding intensity and firm size -- rather than a structural constant.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST"
+      ],
+      "published": "2026-01-08T10:42:22Z",
+      "updated": "2026-02-24T16:51:42Z",
+      "abs_url": "https://arxiv.org/abs/2601.11602",
+      "pdf_url": "https://arxiv.org/pdf/2601.11602v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 23,
+      "matched_keywords": [
+        "price impact",
+        "liquidity",
+        "stock",
+        "equity market"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合常態化去旋積與霍克斯過程分析韓國股市資訊傳遞，實證扎實。",
+      "summary": {
+        "title_zh": "價格發現的物理學：在散戶群聚行為期間解構資訊、波動度與訊號的關鍵崩潰",
+        "verdict": "利用正規化反摺積與 Hawkes process 分析南韓股市，發現散戶群聚會導致小型股的機構價格衝擊惡化。",
+        "problem": "資訊如何在價格中傳遞以及此傳遞為何會崩潰，目前仍所知有限。",
+        "method": "結合正規化反摺積與 Hawkes process 分析南韓股市投資人資金流向。資料頻率未明，樣本期間為 2020 年 1 月至 2025 年 2 月。",
+        "findings": "外資與法人資金驅動永久性價格發現，散戶則提供逆勢流動性；散戶暴增具恐慌驅動及近乎爆炸性的自我激發特性；在群聚事件期間，小型股的機構價格衝擊急劇惡化，大型股則保持韌性。未報告具體績效數字。",
+        "implication": "市場效率應被視為一個條件變數而非結構常數，取決於群聚強度與公司規模。交易策略需在散戶群聚時動態調整對小型股的曝險。",
+        "caveats": "論文未提供具體的交易策略報酬或夏普值等量化績效資料。",
+        "practicality": 3,
+        "tags": [
+          "價格發現",
+          "Hawkes",
+          "市場微結構",
+          "流動性",
+          "群聚行為"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.00616",
+      "title": "Latent Flow Matching for Arbitrage-Aware Implied Volatility Surface Generation",
+      "authors": [
+        "Oscar Brooks",
+        "Dusica Bajalica",
+        "Yating Liu",
+        "Imen Ben Tahar"
+      ],
+      "abstract": "We propose an arbitrage-aware latent flow-matching framework for unconditional implied volatility surface generation. The method first compresses high-dimensional surfaces into a low-dimensional latent space using a variational autoencoder regularized by differentiable calendar-spread, call-spread and butterfly-arbitrage penalties. A flow-matching model then learns to transport a Gaussian prior toward the empirical latent distribution, and generated latent samples are decoded back into volatility surfaces. We evaluate the approach using marginal and surface-level Wasserstein distances, smile and skew diagnostics, pointwise quantile surfaces, financially interpretable shape metrics, and static no-arbitrage tests. The proposed model closely reproduces the empirical distribution and the main maturity-moneyness structures, achieves the best performance in the extreme Q99 regime, and generates 90.8% of surfaces satisfying all tested static no-arbitrage conditions. Overall, the results show that latent flow matching provides a favorable balance between distributional similarity, tail preservation, and financial consistency without requiring post-sampling reweighting.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "q-fin.MF"
+      ],
+      "published": "2026-08-01T12:11:09Z",
+      "updated": "2026-10-16T20:07:37Z",
+      "abs_url": "https://arxiv.org/abs/2608.00616",
+      "pdf_url": "https://arxiv.org/pdf/2608.00616v3",
+      "comment": "9 pages, 6 figures. Accepted at ICAIF '26 (7th ACM International Conference on AI in Finance), Nov 14-17, 2026, Milan, Italy",
+      "journal_ref": "",
+      "keyword_score": 22,
+      "matched_keywords": [
+        "regime",
+        "implied volatility",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出具套利意識的潛在流動匹配模型生成隱含波動度表面， ICAIF 接受。",
+      "summary": {
+        "title_zh": "結合潛在流動匹配與無套利機制的隱含波動率曲面生成",
+        "verdict": "提出結合流動匹配與無套利懲罰的生成模型，能有效產出符合金融約束的隱含波動率曲面。",
+        "problem": "如何確保無條件生成的隱含波動率曲面同時具備良好的分佈相似性、尾部保留能力以及靜態無套利一致性。",
+        "method": "使用變分自動編碼器將高維曲面壓縮至低維潛在空間，並加入可微分的行事曆價差、買權價差與蝶式價差套利懲罰進行正規化。接著利用流動匹配模型將高斯先驗分佈對應至經驗潛在分佈。",
+        "findings": "模型在極端 Q99 體制中取得最佳表現，且有 90.8% 的生成曲面滿足所有測試的靜態無套利條件，具體績效數字未包含夏普值或報酬率。",
+        "implication": "此方法可在不需要後續樣本重新加權的情況下，直接生成符合財務邏輯的波動率曲面，適用於衍生性金融商品定價與風險管理。",
+        "caveats": "僅驗證了靜態無套利條件，未納入動態交易成本與實際回測績效。",
+        "practicality": 3,
+        "tags": [
+          "隱含波動率",
+          "生成模型",
+          "無套利",
+          "波動率曲面",
+          "選擇權定價"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.05900",
+      "title": "Derivative-Informed Operator Learning for Finance: On-the-Fly Greeks, Surfaces, Hedging, and Control",
+      "authors": [
+        "Miquel Noguer I Alonso"
+      ],
+      "abstract": "Financial decision systems require fast surrogate models for pricing, calibration, hedging, XVA, stress testing, and portfolio optimization. Standard neural surrogates reproduce prices or risk quantities, but downstream tasks depend as much on derivatives: deltas, vegas, curve and credit-spread sensitivities, exposure and objective gradients. We formulate a derivative-informed operator-learning framework in which the learned map -- a neural operator, random-feature operator, or finite-dimensional surrogate -- is trained both to match a high-fidelity pricing or risk operator and to match directional Fréchet derivatives generated on the fly. The framework combines operator learning, adjoint algorithmic differentiation, tangent sensitivity equations, random sketching of Jacobian actions, and no-arbitrage constraints. We derive error bounds showing derivative accuracy controls local stress errors, hedging error, and optimizer instability, and that discrete-time hedging error is also governed by second-order (gamma) accuracy. A Black--Scholes network over eight seeds shows a tuned derivative weight cuts vega error by 40\\% and delta error by 15\\% while modestly improving prices, but not an unsupervised second-order Greek. Heston and Bates random-feature experiments reduce stochastic-volatility and jump-parameter sensitivity errors by 60--76\\%. A random-feature DeepONet/Galerkin operator mapping instantaneous-volatility curves to dense price surfaces reduces out-of-sample JVP error by 44\\% and price RMSE by 23\\% over eight seeds; it also shows derivative consistency alone does not remove no-arbitrage violations, so economic constraints must be imposed explicitly. The framework gives a disciplined route from value-only surrogates to derivative-aware engines that output differentiable instruments for hedging, risk, and control.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF"
+      ],
+      "published": "2026-06-04T09:06:18Z",
+      "updated": "2026-06-04T09:06:18Z",
+      "abs_url": "https://arxiv.org/abs/2606.05900",
+      "pdf_url": "https://arxiv.org/pdf/2606.05900v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 22,
+      "matched_keywords": [
+        "portfolio optimization",
+        "out-of-sample",
+        "hedging"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "導數知情算子學習應用於期權訂價與希臘字母計算，創新且實證完整。",
+      "summary": {
+        "title_zh": "金融領域的導數導向運算子學習：即時 Greeks、波動率曲面、避險與控制",
+        "verdict": "提出結合導數的運算子學習框架，訓練時同時配適價格與 Fréchet 導數，顯著提升 Greeks 精度與避險表現。",
+        "problem": "標準神經網路替代模型僅能配適價格或風險值，但下游任務如避險與投資組合最佳化高度依賴 Greeks 等導數資訊，且數值微分易產生不穩定與誤差。",
+        "method": "使用神經運算子、隨機特徵運算子與有限維替代模型，結合伴隨演算法微分、切線敏感度方程式及無套利限制，在 Black-Scholes、Heston 與 Bates 模型上進行實證。",
+        "findings": "Black-Scholes 網路實驗顯示調整導數權重可將 vega 誤差降低 40%、delta 誤差降低 15%；Heston 與 Bates 隨機特徵實驗將隨機波動率與跳躍參數敏感度誤差降低 60 至 76%；隨機特徵 DeepONet 降低樣本外 JVP 誤差 44% 與價格 RMSE 23%。",
+        "implication": "可用於建構具備可微分特性的定價與風險引擎，直接輸出可用於避險與動態控制的 Greeks，前提是必須明確施加無套利經濟限制。",
+        "caveats": "單純依靠導數一致性並無法消除無套利違規，必須額外施加經濟約束條件。",
+        "practicality": 4,
+        "tags": [
+          "運算子學習",
+          "Greeks",
+          "衍生性金融商品",
+          "避險",
+          "神經網路"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.23959",
+      "title": "When Alpha Disappears: A One-Switch Benchmark for Decision-Time Leakage in Financial Backtests",
+      "authors": [
+        "Fan Zhang",
+        "Zhen Li",
+        "Sijia Peng",
+        "Yu Chen"
+      ],
+      "abstract": "We introduce When Alpha Disappears, a paired evaluation benchmark for diagnosing decision-time leakage in financial machine-learning backtests. Rather than treating leakage as a binary property, the benchmark estimates protocol-induced inflation by toggling one evaluation convention at a time around a clean $t{+}1$-open reference, while holding the data panel, walk-forward split, model family, horizon, portfolio rule, and cost convention fixed. Across two daily-OHLCV equity panels, six model families, and yearly tests from 2016--2024, we find that inflation is highly selective: centered temporal features and same-day-open execution with post-open daily-bar information cause large and stable increases in both predictive and trading metrics, whereas global normalization, future-informed graph structure, and same-day-close execution are weak in most settings. The benchmark is diagnostic rather than a claim of tradable alpha, and is intended to make evaluation assumptions, failure modes, and protocol fragility directly measurable.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM",
+        "q-fin.TR"
+      ],
+      "published": "2026-05-12T01:28:10Z",
+      "updated": "2026-05-12T01:28:10Z",
+      "abs_url": "https://arxiv.org/abs/2605.23959",
+      "pdf_url": "https://arxiv.org/pdf/2605.23959v1",
+      "comment": "19 pages, including figures, tables, and the appendix",
+      "journal_ref": "",
+      "keyword_score": 22,
+      "matched_keywords": [
+        "backtest",
+        "alpha"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "建立配對評估基準診斷機器學習回測中的決策時間洩漏，方法實用。",
+      "summary": {
+        "title_zh": "當 Alpha 消失：金融回測中決策時間洩漏的一鍵基準測試",
+        "verdict": "提出一鍵基準測試來診斷機器學習回測中的決策時間洩漏，發現中心化時間特徵與同日開盤執行會造成顯著的績效膨脹。",
+        "problem": "金融機器學習回測中常存在決策時間洩漏，但缺乏系統性診斷協定引發的績效膨脹的方法。",
+        "method": "使用兩個日線 OHLCV 股票面板資料、六種模型家族，在 2016 至 2024 年的年度測試中，透過在乾淨的 t+1 開盤參考點周圍一次切換一個評估慣例來估計膨脹程度。",
+        "findings": "中心化時間特徵與包含開盤後日線資訊的同日開盤執行，會導致預測與交易指標出現大幅且穩定的增長；而全域標準化、前瞻圖結構與同日收盤執行的影響在多數設定下較弱。論文未報告具體績效數字。",
+        "implication": "此基準可用於量化評估假設與協定脆弱性，有助於研究員在實戰前抓出回測過度配適與時間洩漏。",
+        "caveats": "本基準具診斷性質，並非聲稱能產生可交易的 Alpha。",
+        "practicality": 4,
+        "tags": [
+          "回測檢定",
+          "機器學習",
+          "過度配適",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.31903",
+      "title": "Optimal Size in Market Making under State-Dependent Hawkes Process",
+      "authors": [
+        "Jonathan Chávez Casillas",
+        "Li Gan"
+      ],
+      "abstract": "We study market making with a parametric model of executed volume that accounts for quote placement and state-dependent order flow. Executed volume is expressed as the product of an average order size, an exponential demand function, and a Prony-series multiplier depending on quote depth, market-order count constructed from a state-dependent Hawkes model. An approximation result for finite Prony sums on a compact state domain provides a mathematical basis for the representation. An empirical study of limit-order-book data examines the calibrated demand and intensity models, sensitivity to inventory restrictions, and the resulting placement policies. In retrospective evaluations conditional on realised order-flow paths, the selected calibration achieves higher terminal utility than a baseline while respecting the prescribed inventory bound. The comparisons also distinguish the contribution of trading revenues from that of inventory control. The resulting closed-form volume specification takes placement levels as inputs and can therefore be used with alternative quoting rules.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.CP",
+        "q-fin.MF"
+      ],
+      "published": "2026-10-22T20:59:01Z",
+      "updated": "2026-10-22T20:59:01Z",
+      "abs_url": "https://arxiv.org/abs/2610.31903",
+      "pdf_url": "https://arxiv.org/pdf/2610.31903v1",
+      "comment": "35 pages, 13 Figures",
+      "journal_ref": "",
+      "keyword_score": 39,
+      "matched_keywords": [
+        "market making",
+        "order flow",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "以狀態相依 Hawkes 模型探討造市與部位限制，實證完整。",
+      "summary": {
+        "title_zh": "基於狀態相依 Hawkes 程序的造市最佳委託量",
+        "verdict": "提出結合狀態相依訂單流的造市模型，回測顯示在符合庫存限制下可提升終端效用。",
+        "problem": "如何在造市中建模考量報價位置與狀態相依訂單流的成交量，以最佳化委託策略。",
+        "method": "運用狀態相依 Hawkes 模型與 Prony 級數乘數建立成交量的參數化模型，使用限價單簿資料進行實證檢定。",
+        "findings": "回顧性評估顯示，所選的校準方法在符合庫存限制的前提下，達到了比基準更高的終端效用，並釐清了交易收益與庫存控制各自的貢獻。具體績效數字未報告。",
+        "implication": "此封閉形式的成交量規格可直接將報價水準作為輸入值，適用於各種替代的報價規則。",
+        "caveats": "實證評估依賴於特定的回顧性路徑，且未提供扣除交易成本後的實際報酬數字。",
+        "practicality": 3,
+        "tags": [
+          "造市",
+          "限價單簿",
+          "Hawkes",
+          "訂單流"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "date": "2026-10-31",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2610.39205",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "時間有序評估、實證嚴謹，證明稀疏編碼有助於分散風險。"
+    },
+    {
+      "arxiv_id": "2610.38988",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "平均場博弈結合 SPDE 訂單簿模型，數學推導完整。"
+    },
+    {
+      "arxiv_id": "2601.08571",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "以 Hilbert-Huang 轉換與馬可夫鏈分析全球股市體制，實證扎實。"
+    },
+    {
+      "arxiv_id": "2601.11602",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "結合常態化去旋積與霍克斯過程分析韓國股市資訊傳遞，實證扎實。"
+    },
+    {
+      "arxiv_id": "2601.03654",
+      "topic": "投組與風險",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "提出量子 Ridgelet 神經網路與 QAOA 投組最佳化，缺乏真實市場檢驗。"
+    },
+    {
+      "arxiv_id": "2512.24621",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "嚴格因果限制下的高頻特徵建構，實證顯示在特定體制有效。"
+    },
+    {
+      "arxiv_id": "2512.21798",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "評估 TimeGAN 與 VAE 生成合成財務資料的效用，實證完整。"
+    },
+    {
+      "arxiv_id": "2511.17479",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "檢視高頻資料時間聚合後的隨機性，方法模型自由且具參考價值。"
+    },
+    {
+      "arxiv_id": "2610.29500",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "稽核 LLM 因子挖掘的指標與樣本外表現，指出既有研究盲點。"
+    },
+    {
+      "arxiv_id": "2610.26456",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "結合總體經濟與注意力機制的產業輪動模型，實證完整且已獲 ICAIF 接受。"
+    },
+    {
+      "arxiv_id": "2610.24384",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "提出 CEEMDAN 與波動度調變 LSTM 的混合預測模型，實證涵蓋多個市場。"
+    },
+    {
+      "arxiv_id": "2610.13162",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "推導無短賣限制下的動態均異投組熵正規化，數學推導嚴謹。"
+    },
+    {
+      "arxiv_id": "2610.06947",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出 FactorBench 比較多種自動因子挖掘方法，跨市場實證完整。"
+    },
+    {
+      "arxiv_id": "2609.28090",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "建立清洗對照基準以校準 LLM 回測稽核能力，設計嚴謹。"
+    },
+    {
+      "arxiv_id": "2609.02014",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "應用時間一致性深度避險與譜風險度量，強化學習訓練過程具參考價值。"
+    },
+    {
+      "arxiv_id": "2608.00616",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出具套利意識的潛在流動匹配模型生成隱含波動度表面， ICAIF 接受。"
+    },
+    {
+      "arxiv_id": "2607.26188",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "分析比特幣減半週期指標的衰退與冪次定律，實證具啟發性但需轉換。"
+    },
+    {
+      "arxiv_id": "2607.25258",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "對深度避險策略套用穩健 HVA 調整層，實證評估不同流動性環境。"
+    },
+    {
+      "arxiv_id": "2606.22206",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 4,
+      "value": 5,
+      "reason": "追蹤以太坊主網與 Layer 2 交易速度與手續費演進，偏向基礎設施分析。"
+    },
+    {
+      "arxiv_id": "2606.16059",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 8,
+      "reason": "評估 Mojo 語言在金融運算效能與可重複性上的應用，實務價值高。"
+    },
+    {
+      "arxiv_id": "2606.08283",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "多代理人 LLM 框架進行商品 ETF 配置，扣除成本後有微幅優勢。"
+    },
+    {
+      "arxiv_id": "2606.08228",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出拒絕後追蹤取樣法衡量去中心化交易所被拒決訂單的市場軌跡。"
+    },
+    {
+      "arxiv_id": "2606.06413",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "建立內化與外化機制的經紀商競局模型並導出封閉解，理論嚴謹。"
+    },
+    {
+      "arxiv_id": "2606.06190",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出三時間框架馬可夫轉換 GARCH 模型捕捉匯率波動，實證扎實。"
+    },
+    {
+      "arxiv_id": "2606.05900",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "導數知情算子學習應用於期權訂價與希臘字母計算，創新且實證完整。"
+    },
+    {
+      "arxiv_id": "2605.22215",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 5,
+      "reason": "結合特徵簽名、LSTM 與圖神經網路生成合成時間序列，中規中矩。"
+    },
+    {
+      "arxiv_id": "2605.19742",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "推導 Glosten-Milgrom 模型中的隱私補貼與買賣價差封閉解。"
+    },
+    {
+      "arxiv_id": "2605.15767",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 5,
+      "reason": "以哈密頓方法將市場價格視為非諧振子來解釋過度波動，偏理論。"
+    },
+    {
+      "arxiv_id": "2605.23962",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "探討預訓練 Transformer 在股票報酬預測的應用，增量改進。"
+    },
+    {
+      "arxiv_id": "2605.11640",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "分析 Polymarket 歷史成交紀錄的行為集中度與識別極限。"
+    },
+    {
+      "arxiv_id": "2605.23959",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "建立配對評估基準診斷機器學習回測中的決策時間洩漏，方法實用。"
+    },
+    {
+      "arxiv_id": "2604.22625",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出 GPU 加速的投組最佳化求解器 FlashFolio，實務執行效率高。"
+    },
+    {
+      "arxiv_id": "2604.20406",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "研究具命中率目標的 OTC 債券造市 HJB 方程，推導嚴謹。"
+    },
+    {
+      "arxiv_id": "2604.10402",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出風險敏感的專家路由框架進行 ETF 波動度預測，實證表現良好。"
+    },
+    {
+      "arxiv_id": "2604.14206",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "低資料與體制轉換下的半監督三明治訓練投組最佳化框架。"
+    },
+    {
+      "arxiv_id": "2603.25217",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出基於元件的 CAViaR 尾部風險溢出模型，實證完整且有基準檢定。"
+    },
+    {
+      "arxiv_id": "2603.22596",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出串聯式合約的自動造市商機制，維持聯合分佈一致性，理論完整。"
+    },
+    {
+      "arxiv_id": "2603.19380",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 8,
+      "reason": "量化新興市場小型股指數的存活者偏差，實證嚴謹且影響重大。"
+    },
+    {
+      "arxiv_id": "2603.13613",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "透過有界資訊幾何處理極端離群值以進行穩健順序追蹤，跨領域應用。"
+    },
+    {
+      "arxiv_id": "2603.09789",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "結合 LSTM 與量子電路生長機進行波動度預測，量子輔助訓練設計具新意。"
+    }
+  ]
+}
