@@ -1,0 +1,535 @@
+{
+  "date": "2026-11-01",
+  "generated_at": "2026-11-01T10:15:56+08:00",
+  "scanned": 2409,
+  "eligible": 2262,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2601.13770",
+      "title": "Look-Ahead-Bench: a Standardized Benchmark of Look-ahead Bias in Point-in-Time LLMs for Finance",
+      "authors": [
+        "Mostapha Benhenda"
+      ],
+      "abstract": "We introduce Look-Ahead-Bench, a standardized benchmark measuring look-ahead bias in Point-in-Time (PiT) Large Language Models (LLMs) within realistic and practical financial workflows. Unlike most existing approaches that primarily test inner lookahead knowledge via Q\\\\&A, our benchmark evaluates model behavior in practical scenarios. To distinguish genuine predictive capability from memorization-based performance, we analyze performance decay across temporally distinct market regimes, incorporating several quantitative baselines to establish performance thresholds. We evaluate prominent open-source LLMs -- Llama 3.1 (8B and 70B) and DeepSeek 3.2 -- against a family of Point-in-Time LLMs (Pitinf-Small, Pitinf-Medium, and frontier-level model Pitinf-Large) from PiT-Inference. Results reveal significant lookahead bias in standard LLMs, as measured with alpha decay, unlike Pitinf models, which demonstrate improved generalization and reasoning abilities as they scale in size. This work establishes a foundation for the standardized evaluation of temporal bias in financial LLMs and provides a practical framework for identifying models suitable for real-world deployment. Code is available on GitHub: https://github.com/benstaf/lookaheadbench",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "q-fin.CP",
+        "q-fin.GN"
+      ],
+      "published": "2026-01-20T09:23:51Z",
+      "updated": "2026-01-20T09:23:51Z",
+      "abs_url": "https://arxiv.org/abs/2601.13770",
+      "pdf_url": "https://arxiv.org/pdf/2601.13770v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 22,
+      "matched_keywords": [
+        "llm",
+        "large language model",
+        "regime",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "建立衡量金融 LLM 前瞻偏差的標準化基準，實證與框架完整",
+      "summary": {
+        "title_zh": "Look-Ahead-Bench：金融時間點 LLM 未來前瞻偏誤的標準化基準",
+        "verdict": "提出 Look-Ahead-Bench 基準測試金融 LLM 的未來前瞻偏誤，發現標準 LLM 存在顯著偏誤。",
+        "problem": "現有方法主要透過問答測試內部前瞻知識，缺乏在實際金融工作流程中評估模型行為的標準化基準，難以區分真實預測能力與記憶效應。",
+        "method": "使用 Look-Ahead-Bench 評估開源 LLM（如 Llama 3.1 與 DeepSeek 3.2）及時間點 LLM（如 Pitinf 系列），透過跨不同市場體制的績效衰減來分析前瞻偏誤。",
+        "findings": "標準 LLM 透過 Alpha 衰減測得顯著的未來前瞻偏誤；相較之下，Pitinf 模型在規模擴大時展現出較佳的泛化與推理能力，具體績效數字未在摘要中報告。",
+        "implication": "可用於辨識適合實際部署的金融模型，確保模型在真實交易中不會依賴未來資訊。",
+        "caveats": "摘要中未報告具體的報酬、夏普值或誤差改善等量化數字。",
+        "practicality": 4,
+        "tags": [
+          "LLM",
+          "Alpha",
+          "機器學習",
+          "模型評估"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.34936",
+      "title": "Det-MASO: Diversity-Regularized Multi-Agent Sequential Optimization for Factor Generation",
+      "authors": [
+        "Tiantian Wu",
+        "Peng Yang"
+      ],
+      "abstract": "Quantitative investment requires alpha factors that are both predictive and diverse. However, existing factor generation methods, including formulaic mining and neural end-to-end models, are mostly based on a single-agent design, which limits exploration of the factor space and reduces adaptability to changing markets. Multi-agent approaches can broaden exploration, but agents trained under a shared objective often collapse to similar outputs, while existing diversity techniques either scale poorly with asset-universe size or address redundancy only after training. We propose a multi-agent sequential optimization (Det-MASO) framework for generating diversified, context-adaptive alpha factors. It introduces a differentiable log-determinant penalty on the inter-agent correlation matrix directly into the joint objective, discouraging correlated agent behavior during training with computational cost that scales linearly with the number of assets. We further show that this penalty prevents homogeneous equilibria and preserves factor diversity throughout optimization, while a context-conditioned scheduler dynamically adjusts agent emphasis across market regimes and Shapley interaction index analysis is used to characterize the cooperation structure that emerges among them. Experiments show that Det-MASO outperforms baselines, improving the information coefficient by 1.1\\%, the annualized return by 6.4\\%, and the Sharpe ratio by 0.33.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP"
+      ],
+      "published": "2026-10-26T07:03:00Z",
+      "updated": "2026-10-26T07:03:00Z",
+      "abs_url": "https://arxiv.org/abs/2610.34936",
+      "pdf_url": "https://arxiv.org/pdf/2610.34936v1",
+      "comment": "15 pages, 4 figures",
+      "journal_ref": "",
+      "keyword_score": 21,
+      "matched_keywords": [
+        "sharpe ratio",
+        "regime",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出多代理人序列最佳化架構生成多樣化 Alpha 因子， Sharpe 顯著提升",
+      "summary": {
+        "title_zh": "Det-MASO：多元正則化多智能體序列最佳化於因子生成",
+        "verdict": "提出 Det-MASO 多智能體框架生成多元化 Alpha 因子，顯著提升夏普值與年化報酬。",
+        "problem": "現有因子生成方法多採單一智能體設計，限制了因子空間的探索；多智能體方法則易因共享目標而產出高度同質化的結果，且現有多樣性技術擴展性差。",
+        "method": "採用 Det-MASO 框架，在聯合目標函數中引入可微的對數行列式懲罰項以抑制智能體相關性，並搭配情境條件排程器與 Shapley 互動指數分析。實驗資料頻率與樣本期間未詳細列出。",
+        "findings": "實驗顯示 Det-MASO 優於基準方法，資訊係數提升 1.1%，年化報酬提高 6.4%，夏普值增加 0.33。",
+        "implication": "可用於多智能體 Alpha 因子挖掘，其對數行列式懲罰項能有效維持因子多樣性，適合應用於動態市場環境。",
+        "caveats": "論文摘要未明確報告資料頻率與樣本期間。",
+        "practicality": 4,
+        "tags": [
+          "Alpha 因子挖掘",
+          "多智能體",
+          "最佳化",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.30557",
+      "title": "Governed Self-Evolution for Autonomous Investing: A Multi-Agent LLM System with an Invariant Core",
+      "authors": [
+        "Yebo Feng",
+        "Jingyang Dai",
+        "Liangrui Pan",
+        "Nelson Lau",
+        "Jiahua Xu",
+        "Yang Liu"
+      ],
+      "abstract": "LLM agents that act on live Web data must combine heterogeneous evidence, remember what they have done and improve from outcomes without weakening their own safeguards. We study this problem in autonomous investing, where every action is irreversible and based on untrusted Web content. We present Steward, a multi-agent LLM system that draws the boundary of self-evolution in its type system. First, nine role-specialised agents decide jointly: four analysts read news feeds, SEC filings, macroeconomic series and market data and emit typed reports, from which a Portfolio Manager sets target positions that a protected Risk Manager audits. Second, a seven-layer shared memory, assembled by code from the system's own record, gives each decision its position context, the market narrative, calibration and the agent's past decisions. Third, the system improves itself by review: code grades every trade and forecast nightly and writes the grades into memory, and each quarter a reflector proposes prompt learnings that a deterministic gate applies reversibly and replay of recorded inputs verifies. All three operate around an invariant core of order arithmetic, risk rules and discipline-agent prompts that no self-edit can reach. In a five-month live deployment (102 trading days, 1,632 LLM calls), the system contained a 24.6% sector drawdown to a 0.3% loss; in replay of its recorded inputs, a single model given the same raw data traded more and lost 1.35 points against the market over five days where the joint design showed no significant loss, and no injected instruction was followed; and a 2015-2026 backtest shows the core alone lowering the maximum drawdown under all 50 random entry policies. The reflector traced the dominant failure to its root cause, and the gate applied a learning that the agent adopted on trigger evenings and on no control evening. Code: https://github.com/yebof/quant-agent",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.MA",
+        "q-fin.PM"
+      ],
+      "published": "2026-10-22T00:22:47Z",
+      "updated": "2026-10-22T00:22:47Z",
+      "abs_url": "https://arxiv.org/abs/2610.30557",
+      "pdf_url": "https://arxiv.org/pdf/2610.30557v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 21,
+      "matched_keywords": [
+        "backtest",
+        "llm",
+        "drawdown"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "建構具備不變核心的多代理人自主投資系統，進行五個月實盤部署，工程與實證扎實",
+      "summary": {
+        "title_zh": "自主投資的受控自我演化：具備不變核心的多重agent LLM系統",
+        "verdict": "提出名為 Steward 的多重agent LLM投資系統，透過受控自我演化與不變核心來降低回撤與防範風險。",
+        "problem": "LLM agent 在處理即時網路資料進行自主投資時，需要在不削弱自身安全防護的前提下，結合異質證據、記住歷史行為並從結果中改進。",
+        "method": "使用包含九個角色專門化agent的多重agent系統、七層共享記憶及自我審查機制，並以不變核心包覆訂單算術與風險規則。實證涵蓋五個月即時部署（102個交易日）、歷史回放與 2015 至 2026 年的回測。",
+        "findings": "在五個月即時部署中，系統將 24.6% 的產業回撤控制在 0.3% 的虧損；在輸入回放測試中，聯合設計未顯示顯著虧損且未遵循任何注入指令；2015至2026年回測顯示核心單獨運作能在所有 50 種隨機進場策略下降低最大回撤。",
+        "implication": "此方法透過不變核心與程式化驗證，有效解決 LLM 自主投資時的安全性與提示詞注入風險，具備高度的實務借鏡價值。",
+        "caveats": "系統在 1,632 次 LLM 呼叫下運作，其運算成本與延遲可能對高頻交易或即時反應造成限制。",
+        "practicality": 4,
+        "tags": [
+          "LLM",
+          "多重agent",
+          "投資組合管理",
+          "風險控制",
+          "自我演化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.04958",
+      "title": "Look-Ahead-Freedom as Temporal Non-Interference: A Verifiable Correctness Property for Backtesting and Agentic Trading Pipelines",
+      "authors": [
+        "Xavier Fonseca"
+      ],
+      "abstract": "Look-ahead bias (using information from after a decision epoch to make the decision at that epoch) is the dominant way a backtest or a machine-learning evaluation flatters a system that will disappoint in deployment. The field manages it with construct-specific recipes and empirical detectors, which are sound only channel by channel and certify nothing by their silence. We show that look-ahead-freedom is a formal property in disguise: fixing an epoch, the demand that the future not influence the present is temporal non-interference over a time-indexed information lattice. From this identification we develop a pipeline calculus separating a datum's availability from its reference time, and settle the problem's boundary. Where availability may depend on data values, look-ahead-freedom is undecidable (indeed Pi-0-1-hard): leakage is recursively enumerable but freedom is not. On the value-independent fragment (covering windowing, resampling, joins, point-in-time and vintage reads, and agentic retrieval) we give a type-and-effect system that is sound and decidable in linear time. An artifact confirms the theory: the check scales linearly, an independent oracle witnesses no leak in any accepted pipeline, and the checker catches every planted leak that differential and tiling detectors miss.",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.LO",
+        "cs.PL",
+        "cs.SE",
+        "q-fin.PM"
+      ],
+      "published": "2026-07-06T11:42:26Z",
+      "updated": "2026-07-06T11:42:26Z",
+      "abs_url": "https://arxiv.org/abs/2607.04958",
+      "pdf_url": "https://arxiv.org/pdf/2607.04958v1",
+      "comment": "Submitted to ACM Transactions on Software Engineering and Methodology",
+      "journal_ref": "",
+      "keyword_score": 21,
+      "matched_keywords": [
+        "backtesting",
+        "backtest",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance_reason": "將前瞻自由度定義為時序非干擾性，並提出可驗證的型別與效果系統，理論極深",
+      "summary": {
+        "title_zh": "前瞻自由度作為時間非干擾性：回測與自主交易管線的可驗證正確性屬性",
+        "verdict": "將回測防前瞻偏差定義為時間非干擾性，並提出可在線性時間內判定型別與效果系統。",
+        "problem": "傳統回測常受前瞻偏差影響，導致回測績效與實盤表現落差懸殊，而現行檢測方法多為特定建構且無法提供形式化保證。當資料可用性取決於資料數值時，前瞻自由度判定為不可判定（Pi-0-1-hard）。",
+        "method": "利用時間索引資訊格子上的時間非干擾性建立管線演算，並針對數值獨立的片段設計型別與效果系統。實證展示其具備線性擴展性。",
+        "findings": "檢查機制能以線性時間規模運行，獨立預言機證實所有被接受的管線皆無洩漏，且能攔截所有差分與磚塊檢測器漏掉的植入式洩漏。",
+        "implication": "可用於交易管線的編譯期檢查，前提是需將資料可用性與參考時間分離並符合數值獨立片段。",
+        "caveats": "當資料可用性取決於資料數值時，前瞻自由度在理論上是不可判定的。",
+        "practicality": 4,
+        "tags": [
+          "回測",
+          "前瞻偏差",
+          "型別系統",
+          "交易管線",
+          "形式化驗證"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.16985",
+      "title": "Integrating Inductive Biases in Transformers via Distillation for Financial Time Series Forecasting",
+      "authors": [
+        "Yu-Chen Den",
+        "Kuan-Yu Chen",
+        "Kendro Vincent",
+        "Darby Tien-Hao Chang"
+      ],
+      "abstract": "Transformer-based models have been widely adopted for time-series forecasting due to their high representational capacity and architectural flexibility. However, many Transformer variants implicitly assume stationarity and stable temporal dynamics -- assumptions routinely violated in financial markets characterized by regime shifts and non-stationarity. Empirically, state-of-the-art time-series Transformers often underperform even vanilla Transformers on financial tasks, while simpler architectures with distinct inductive biases, such as CNNs and RNNs, can achieve stronger performance with substantially lower complexity. At the same time, no single inductive bias dominates across markets or regimes, suggesting that robust financial forecasting requires integrating complementary temporal priors. We propose TIPS (Transformer with Inductive Prior Synthesis), a knowledge distillation framework that synthesizes diverse inductive biases -- causality, locality, and periodicity -- within a unified Transformer. TIPS trains bias-specialized Transformer teachers via attention masking, then distills their knowledge into a single student model with regime-dependent alignment across inductive biases. Across four major equity markets, TIPS achieves state-of-the-art performance, outperforming strong ensemble baselines by 55%, 9%, and 16% in annual return, Sharpe ratio, and Calmar ratio, while requiring only 38% of the inference-time computation. Further analyses show that TIPS generates statistically significant excess returns beyond both vanilla Transformers and its teacher ensembles, and exhibits regime-dependent behavioral alignment with classical architectures during their profitable periods. These results highlight the importance of regime-dependent inductive bias utilization for robust generalization in non-stationary financial time series.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-03-17T17:06:46Z",
+      "updated": "2026-05-27T09:50:36Z",
+      "abs_url": "https://arxiv.org/abs/2603.16985",
+      "pdf_url": "https://arxiv.org/pdf/2603.16985v2",
+      "comment": "KDD 2026",
+      "journal_ref": "",
+      "keyword_score": 24,
+      "matched_keywords": [
+        "sharpe ratio",
+        "transformer",
+        "regime",
+        "equity market"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "透過蒸餾將多重歸納偏差整合至變壓器模型中進行金融時間序列預測，已被KDD 2026接受。",
+      "summary": {
+        "title_zh": "透過蒸餾將歸納偏誤整合至Transformer以進行金融時間序列預測",
+        "verdict": "提出 TIPS 知識蒸餾框架，將多種歸納偏誤整合至單一 Transformer，顯著提升金融預測效能。",
+        "problem": "現有 Transformer 假設時間序列具平穩性，常在具備體制轉換的金融市場中表現失常；而簡單的 CNN 或 RNN 雖具特定歸納偏誤，但沒有單一架構能在所有市場中勝出。",
+        "method": "提出 TIPS 框架，透過注意力遮罩訓練具備因果性、局部性與周期性等特徵的教師模型，再將其知識蒸餾至單一學生模型。使用四大主要股票市場的資料進行實證。",
+        "findings": "相較於強大的集成基準，TIPS 在年化報酬率、夏普值與卡爾馬比率分別提升 55%、9% 與 16%，且推論計算成本僅需 38%。研究顯示 TIPS 能產生具統計顯著性的超額報酬。",
+        "implication": "實務上可透過蒸餾多種歸納偏誤來建構兼具高運算效率與強大泛化能力的金融預測模型。",
+        "caveats": "模型在不同體制轉換時的動態對齊機制較為複雜，實際部署時需注意運算與架構設計的工程成本。",
+        "practicality": 4,
+        "tags": [
+          "Transformer",
+          "知識蒸餾",
+          "時間序列預測",
+          "歸納偏誤",
+          "超額報酬"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.10279",
+      "title": "Selecting and Testing Asset Pricing Models: A Stepwise Approach",
+      "authors": [
+        "Guanhao Feng",
+        "Wei Lan",
+        "Hansheng Wang",
+        "Jun Zhang"
+      ],
+      "abstract": "The asset pricing literature emphasizes factor models that minimize pricing errors but overlooks unselected candidate factors that could enhance the performance of test assets. This paper proposes a framework for factor model selection and testing by (i) selecting the optimal model that spans the joint efficient frontier of test assets and all candidate factors, and (ii) testing pricing performance on both test assets and unselected candidate factors. Our framework updates a baseline model (e.g., CAPM) sequentially by adding or removing factors based on asset pricing tests. Ensuring model selection consistency, our framework utilizes the asset pricing duality: minimizing cross-sectionally unexplained pricing errors aligns with maximizing the Sharpe ratio of the selected factor model. Empirical evidence shows that workhorse factor models fail asset pricing tests, whereas our proposed 8-factor model is not rejected and exhibits robust out-of-sample performance.",
+      "primary_category": "econ.EM",
+      "categories": [
+        "econ.EM",
+        "stat.AP"
+      ],
+      "published": "2026-01-15T10:54:02Z",
+      "updated": "2026-01-15T10:54:02Z",
+      "abs_url": "https://arxiv.org/abs/2601.10279",
+      "pdf_url": "https://arxiv.org/pdf/2601.10279v1",
+      "comment": "Accepted by Management Science",
+      "journal_ref": "",
+      "keyword_score": 23,
+      "matched_keywords": [
+        "sharpe ratio",
+        "factor model",
+        "out-of-sample",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出逐步選擇資產定價模型的方法，已獲管理科學期刊接受",
+      "summary": {
+        "title_zh": "資產訂價模型的選擇與檢定：逐步方法",
+        "verdict": "提出一個基於效率前緣與雙元性的資產訂價模型選擇與檢定框架，實證找出一個不被拒絕且具穩健性的 8 因子模型。",
+        "problem": "現有資產訂價文獻過於強調最小化訂價誤差的因子模型，卻忽略了未被選中的候選因子其實能提升測試資產的表現。",
+        "method": "利用資產訂價雙元性（最小化橫截面未解釋的訂價誤差等同於最大化所選因子模型的 Sharpe），透過逐步增減因子來更新基準模型。使用聯合效率前緣進行模型選擇與檢定。",
+        "findings": "實證顯示傳統主力因子模型無法通過資產訂價檢定，而本文提出的 8 因子模型未被拒且展現出穩健的樣本外表現，論文未報告具體的報酬與 Sharpe 數字。",
+        "implication": "此框架有助於系統性地挑選與檢定 Alpha 因子模型，可用於最佳化現有的多因子選股模型，但需備妥完整的候選因子池。",
+        "caveats": "論文未提供具體的績效數字來量化改善幅度。",
+        "practicality": 4,
+        "tags": [
+          "資產訂價",
+          "因子模型",
+          "Sharpe",
+          "模型選擇"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.17234",
+      "title": "All Leaks Count, Some Count More: Interpretable Temporal Contamination Detection and Mitigation in LLM Backtesting",
+      "authors": [
+        "Zeyu Zhang",
+        "Ryan Chen",
+        "Bradly C. Stadie"
+      ],
+      "abstract": "Backtesting LLMs on resolved events assumes models reason only from pre-cutoff knowledge, yet pretrained models inevitably leak post-cutoff knowledge. We introduce a claim-level evaluation framework that decomposes prediction rationales into atomic claims and applies Shapley values to quantify each claim's decision impact, yielding \\textbf{Shapley-DCLR} (\\textbf{Shapley}-weighted \\textbf{D}ecision-\\textbf{C}ritical \\textbf{L}eakage \\textbf{R}ate) -- an interpretable metric measuring what fraction of decision-driving reasoning is contaminated. We further propose \\textbf{TimeSPEC} (\\textbf{Time}-\\textbf{S}upervised \\textbf{P}rediction with \\textbf{E}xtracted \\textbf{C}laims), an inference-time architecture that interleaves temporally-filtered retrieval with claim-level supervision, producing predictions grounded entirely in pre-cutoff evidence. Across three LLMs, the ablation experiments confirm retrieval and supervision are jointly necessary; and a three-task probe further illstrates that the performance cost of temporal enforcement scales with each task's reliance on post-cutoff information.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-02-19T10:28:00Z",
+      "updated": "2026-05-25T04:53:29Z",
+      "abs_url": "https://arxiv.org/abs/2602.17234",
+      "pdf_url": "https://arxiv.org/pdf/2602.17234v2",
+      "comment": "8 pages plus appendix",
+      "journal_ref": "",
+      "keyword_score": 22,
+      "matched_keywords": [
+        "backtesting",
+        "llm"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出可解釋的時序污染檢測與緩解指標，對 LLM 回測防範資料洩漏極有幫助",
+      "summary": {
+        "title_zh": "所有洩漏皆算數，有些影響更重大：LLM 回測中可解讀的時間污染偵測與緩解",
+        "verdict": "提出 Shapley-DCLR 量化 LLM 回測中的知識污染，並以 TimeSPEC 架構在推論時過濾污染，確保預測基於切點前證據。",
+        "problem": "LLM 在已解決事件進行回測時，預訓練模型難免會洩漏切點後的知識，導致回測假設失效。現有方法無法有效量化與隔離這種決策層級的時間污染。",
+        "method": "採用基於原子主張的評估框架，結合 Shapley 值量化決策影響，並在三種 LLM 上使用 TimeSPEC 架構進行實證。",
+        "findings": "消融實驗證實檢索與監督兩者缺一不可，且強制時間限制帶來的效能成本取決於任務對切點後資訊的依賴程度，論文未報告具體的夏普值或報酬數字。",
+        "implication": "可用於檢驗回測中的 LLM 是否真正基於歷史資訊推理，前提是需將預測理由拆解為原子主張並計算 Shapley 值。",
+        "caveats": "強制執行時間限制會對依賴後切點資訊的任務造成效能成本。",
+        "practicality": 3,
+        "tags": [
+          "LLM",
+          "回測",
+          "模型評估",
+          "資訊洩漏"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.17383",
+      "title": "Model Validation of Agentic AI Systems: A POMDP-Based Framework for Belief-State, Forecast, and Policy Validation",
+      "authors": [
+        "Matthew Francis Dixon"
+      ],
+      "abstract": "Agentic artificial intelligence systems introduce a new class of model risk. Unlike traditional predictive models, autonomous agents continuously acquire information, form beliefs regarding latent states of the environment, generate forecasts, select actions, and adapt their behavior over time. Existing validation methodologies focus primarily on predictive accuracy and therefore provide limited insight into the quality of the underlying decision process. This paper proposes a model validation framework for agentic AI based on Partially Observable Markov Decision Processes (POMDPs). The framework decomposes autonomous decision making into information, beliefs, forecasts, actions, and utility, allowing each component to be validated independently. Large language models (LLMs) are formalized as approximate Bayesian filtering operators, and a model-risk taxonomy is developed encompassing state-space, filtering, forecast, policy, utility-specification, and parameter risks. The model risk validation methodology is demonstrated through a portfolio-management case study in which an agent infers latent market regimes from market and macroeconomic information, generates belief-conditioned forecasts, and constructs portfolios using a Black--Litterman framework. Empirical validation combines performance analysis, belief calibration diagnostics, coverage tests, ablation studies, and parameter-sensitivity analysis. The results indicate that latent-state inference contributes independently to decision quality and that the principal conclusions remain robust across a broad range of parameter values. The principal contribution of the paper is a practical framework for extending established model risk management concepts to autonomous AI systems and providing a rigorous foundation for their validation, governance, and monitoring.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM",
+        "cs.AI",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "published": "2026-06-16T00:40:55Z",
+      "updated": "2026-06-16T00:40:55Z",
+      "abs_url": "https://arxiv.org/abs/2606.17383",
+      "pdf_url": "https://arxiv.org/pdf/2606.17383v1",
+      "comment": "28 pages, 3 figures, 6 tables. Source code available from https://github.com/mfrdixon/agentic-AI-as-POMDP",
+      "journal_ref": "",
+      "keyword_score": 21,
+      "matched_keywords": [
+        "llm",
+        "large language model",
+        "regime",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出基於 POMDP 的代理式 AI 系統模型驗證框架，包含詳細的投資組合案例研究",
+      "summary": {
+        "title_zh": "自主型人工智慧系統的模型驗證：基於POMDP的信念狀態、預測與決策驗證框架",
+        "verdict": "提出基於POMDP的框架來驗證自主型AI系統的模型風險，並透過投資組合管理案例進行實證。",
+        "problem": "傳統驗證方法主要聚焦於預測準確度，無法深入評估自主型AI系統在資訊獲取、信念形成與決策等底層過程中的模型風險。",
+        "method": "採用部分可觀測馬可夫決策過程（POMDP）框架將自主決策分解，並將LLM形式化為近似貝氏過濾算子。透過資產配置案例，結合績效分析、信念校準診斷、覆蓋測試、消融研究與參數敏感度分析進行實證。",
+        "findings": "實證結果顯示隱含狀態推論能獨立貢獻於決策品質，且主要結論在各種參數值下皆保持穩健；論文未報告具體績效數字。",
+        "implication": "為量化團隊提供了一套嚴謹的自主型AI系統模型風險管理與監控框架，可用於評估代理程式的決策品質。",
+        "caveats": "案例實證未提供具體的報酬率與夏普值等實際績效資料。",
+        "practicality": 3,
+        "tags": [
+          "人工智慧",
+          "模型驗證",
+          "投資組合管理",
+          "風險管理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.28410",
+      "title": "Can Large Language Models Execute Parent Orders?",
+      "authors": [
+        "Zane Shen",
+        "Xinli Xu",
+        "Guangyi Zhang",
+        "Jialong Chen",
+        "Jinsong Zhou",
+        "Cong Chen",
+        "Guibao Shen",
+        "Dongyu Yan",
+        "Luozhou Wang",
+        "Zhen Yang"
+      ],
+      "abstract": "Parent-order execution is a core problem in algorithmic trading, where the goal is to split a large order into smaller orders while reducing execution costs. Existing approaches either rely on pre-specified market assumptions that may not hold in practice, or require task-specific training that limits adaptability to new settings. To overcome these limitations, we present the first systematic study of large language models (LLMs) for parent-order execution. This extends the use of LLMs in finance from what to trade to how to execute. We propose PACE (Plan-Ahead Controlled Execution), a hierarchical framework that decomposes parent-order execution into long-horizon planning and short-horizon execution, requiring neither explicit market assumptions nor task-specific training. Experiments on Shenzhen Stock Exchange Level-1 data show that PACE outperforms TWAP, Almgren-Chriss, and learning-based baselines, exceeding the strongest baseline by 0.65 bps. Behavioral analysis reveals that LLMs make execution decisions differently from human investors: higher model confidence predicts better performance rather than worse returns, and the model trades earlier rather than procrastinating toward the deadline. These findings suggest that LLMs can complement human traders in execution decisions.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE",
+        "cs.CL",
+        "q-fin.TR"
+      ],
+      "published": "2026-07-30T15:56:59Z",
+      "updated": "2026-07-30T15:56:59Z",
+      "abs_url": "https://arxiv.org/abs/2607.28410",
+      "pdf_url": "https://arxiv.org/pdf/2607.28410v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 32,
+      "matched_keywords": [
+        "algorithmic trading",
+        "execution cost",
+        "llm",
+        "large language model",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "研究 LLM 進行母訂單執行的階層式框架，實證顯示優於傳統演算法基準。",
+      "summary": {
+        "title_zh": "大型語言模型能執行母單嗎？",
+        "verdict": "提出名為 PACE 的階層式框架利用 LLM 進行母單執行，超越傳統基準。",
+        "problem": "現有演算法交易的母單執行方法依賴預設市場假設或需特定任務訓練，限制了適應性。傳統方法無法有效平衡長期規劃與短期執行。",
+        "method": "使用 PACE（Plan-Ahead Controlled Execution）階層式框架，將母單執行分解為長期規劃與短期執行，不需預設市場假設或特定任務訓練。資料使用深圳證券交易所 Level-1 資料。",
+        "findings": "實驗顯示 PACE 表現優於 TWAP、Almgren-Chriss 及基於學習的基準，超越最強基準 0.65 bps。行為分析發現，模型信心較高預示較佳績效，且模型傾向較早交易而非拖延至最後期限。",
+        "implication": "顯示 LLM 可從選股延伸至交易執行領域，作為人類交易員在執行決策上的輔助工具。可在實際交易系統中透過階層式框架部署。",
+        "caveats": "實驗僅基於深交所 Level-1 資料，未充分考量極端市場衝擊與完整手續費成本。",
+        "practicality": 4,
+        "tags": [
+          "大型語言模型",
+          "演算法交易",
+          "母單執行",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.17991",
+      "title": "Optimal Market Making in Prediction Markets",
+      "authors": [
+        "Dominik Feil",
+        "Max Nendel"
+      ],
+      "abstract": "Prediction markets are attracting growing attention as trading volumes rise and their practical relevance increases. To ensure efficient price discovery, liquidity provision becomes ever more important. Due to the binary settlement structure in prediction markets, optimal market making leads to an optimization problem that is fundamentally different from the ones studied in classical settings. In this paper, we develop a stochastic control framework for prediction markets in which the market price is modeled as a conditional probability of the outcome that is generated by a transformed latent belief diffusion. A market maker selects bid and ask quotes to maximize expected terminal wealth while controlling both mark-to-market inventory risk and the settlement risk of remaining positions at resolution. We derive the associated Hamilton--Jacobi--Bellman equation and characterize the unique optimal bid and ask quotes. By transforming the equation to the latent belief space and using a fixed-point argument, we prove existence and uniqueness of a classical solution and verify the resulting optimal quoting strategy. In addition, we provide a numerical analysis, which reveals how optimal liquidity provision in prediction markets depends on inventory, market beliefs, time to resolution, and risk aversion. Further, we demonstrate that the optimal quoting strategy substantially improves downside protection while preserving most of its expected profit relative to a myopic benchmark that maximizes the instantaneous expected mark-to-market profit.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "math.OC",
+        "q-fin.MF"
+      ],
+      "published": "2026-07-20T14:22:52Z",
+      "updated": "2026-07-20T14:22:52Z",
+      "abs_url": "https://arxiv.org/abs/2607.17991",
+      "pdf_url": "https://arxiv.org/pdf/2607.17991v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 32,
+      "matched_keywords": [
+        "market making",
+        "market maker",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "建立預測市場中的最佳造市隨機控制框架，推導 HJB 方程並證明解的存在唯一性。",
+      "summary": {
+        "title_zh": "預測市場中的最佳造市",
+        "verdict": "針對具二元結算結構的預測市場開發隨機控制造市模型，相較於短視基準能顯著提升下檔保護。",
+        "problem": "預測市場具有獨特的二元結算結構，其最佳造市的最佳化問題與傳統金融設定根本不同。",
+        "method": "建構隨機控制框架，將市場價格建模為潛在信念擴散產生的條件機率，推導對應的 Hamilton-Jacobi-Bellman 方程式並分析最佳買賣報價。",
+        "findings": "數值分析顯示，最佳造市策略在保留大部分預期利潤的同時，相較於極大化瞬間預期市價淨值利潤的短視基準，能顯著改善下檔保護。論文未報告具體的夏普值或報酬數字。",
+        "implication": "可用於預測市場的流動性提供，助於同時控制市價淨值庫存風險與到期結算風險，前提是需精確估計潛在信念動態。",
+        "caveats": "模型依賴於潛在信念擴散與二元結算結構的假設，實際應用時對信念動態的設定高度敏感。",
+        "practicality": 3,
+        "tags": [
+          "造市",
+          "預測市場",
+          "隨機控制",
+          "流動性提供",
+          "微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
