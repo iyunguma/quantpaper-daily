@@ -1,0 +1,524 @@
+{
+  "date": "2026-11-02",
+  "generated_at": "2026-11-02T10:34:04+08:00",
+  "scanned": 2406,
+  "eligible": 2249,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2610.29500",
+      "title": "Auditing LLM Alpha-Factor Mining: Metric Provenance and Full-Cohort Reanalysis",
+      "authors": [
+        "Yufeng He"
+      ],
+      "abstract": "Reliable evaluation of LLM-based alpha mining requires more than positive backtest summaries. We audit a preserved project at three levels: historical run counters, outcome retention, and a separately scoped public reanalysis. Three historical runs report 67, 20, and 11 keep decisions, but the comparison mixes metric populations: a mean over kept candidates is compared with a mean of per-round maxima, and successful evaluations with all returned outcomes. These artifacts cannot identify an architecture advantage. A released 1,837-expression catalog also excludes non-positive OOS outcomes, making its zero-reversal rate non-informative. We then account for all 1,047 unique expressions in a frozen, IS-screened preserved pool using forty A-shares and 2024-2025 rank associations. A versioned public-operator correction yields 923 scorable records, 99 with insufficient valid dates, and 25 unsupported, without modifying the other 990 prior diagnostics. Among scorable records, 671 have positive and 252 negative signed mean rank-IC. Simple untrained references also show positive associations, so this distribution does not establish incremental agent skill or profitability. The case study motivates explicit metric grains, immutable cohort accounting, and provenance-aware interpretation rather than architectural rankings from incomplete records.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE"
+      ],
+      "published": "2026-10-21T09:51:35Z",
+      "updated": "2026-10-21T09:51:35Z",
+      "abs_url": "https://arxiv.org/abs/2610.29500",
+      "pdf_url": "https://arxiv.org/pdf/2610.29500v1",
+      "comment": "5 pages, 4 tables. Accepted for poster presentation at the AI4F Workshop at ACM ICAIF 2026 (non-archival); attendance confirmation pending",
+      "journal_ref": "",
+      "keyword_score": 22,
+      "matched_keywords": [
+        "backtest",
+        "llm",
+        "alpha"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "稽核 LLM 因子挖掘的指標與樣本外表現，指出既有研究盲點。",
+      "summary": {
+        "title_zh": "審計 LLM Alpha 因子挖掘：指標來源與完整世代重新分析",
+        "verdict": "審計顯示 LLM 因子挖掘專案存在指標混淆與倖存者偏差，無法證明其具備真實的代理人技能或獲利能力。",
+        "problem": "基於 LLM 的 Alpha 因子挖掘常依賴正向的回測摘要，缺乏可靠且一致的評估標準。先前專案的歷史執行記錄與公開目錄存在指標母體混雜與排除負向樣本的問題。",
+        "method": "作者稽核歷史執行計數、結果保留機制及公開重分析。使用中國 A 股與 2024 至 2025 年的排名關聯性，對 1,047 個獨特表達式組成的凍結樣本池進行重新分析。",
+        "findings": "在 923 筆可計分記錄中，671 筆具有正向、252 筆具有負向的符號平均 Rank-IC，但簡單的未訓練基準也顯示正向關聯，因此無法確立邊際代理人技能。未報告具體績效數字。",
+        "implication": "研究強調在進行架構排名時，必須明確指標粒度、進行不可變動的世代會計及具備來源意識的解讀。實務上不能直接依賴未經過濾完整樣本的 LLM 挖礦結果。",
+        "caveats": "公開目錄排除了樣本外負向結果，導致零反轉率無法提供有效資訊。",
+        "practicality": 2,
+        "tags": [
+          "大語言模型",
+          "Alpha 因子挖掘",
+          "回測審計",
+          "量化研究"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.04576",
+      "title": "ReSGA: A Large Tail Risk Model for Learning Value-at-Risk and Expected Shortfall",
+      "authors": [
+        "Yichi Zhang",
+        "Ke Zhu",
+        "Zhoufan Zhu"
+      ],
+      "abstract": "Learning Value-at-Risk (VaR) and Expected Shortfall (ES) is important for managing financial risks effectively. Existing approaches with limited parameters are vulnerable to model misspecification in the era of big data. To address this limitation, we propose a large tail risk model, the retrieval-enhanced self-grouping autoencoder (ReSGA), which is designed with millions of parameters to exploit the rich cross-sectional dependence and long-term temporal dynamics of assets using their characteristics. Applied to monthly US equity returns from 1926 to 2023 with 153 firm characteristics, ReSGA outperforms twelve econometric and machine learning competitors in terms of out-of-sample loss and statistical backtesting. In addition, its forecast advantages can translate into significant economic gains from long-short decile portfolios that are constructed by a new size-enhanced left-side momentum strategy. To clarify the role of complexity, we further conduct a systematic scaling analysis and demonstrate that improvements in joint VaR-ES forecasting are primarily driven by data complexity rather than model complexity. Finally, our analyses of group-importance and transfer-learning exhibit the interpretability and cross-market generalizability of ReSGA.",
+      "primary_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "econ.EM",
+        "q-fin.RM"
+      ],
+      "published": "2026-06-03T08:11:45Z",
+      "updated": "2026-06-03T08:11:45Z",
+      "abs_url": "https://arxiv.org/abs/2606.04576",
+      "pdf_url": "https://arxiv.org/pdf/2606.04576v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 21,
+      "matched_keywords": [
+        "out-of-sample",
+        "backtesting",
+        "momentum",
+        "cross-sectional"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "長期跨年度美國股票實證，模型規模大且基準比較完整。",
+      "summary": {
+        "title_zh": "ReSGA：用於學習風險值與預期短缺的大型尾部風險模型",
+        "verdict": "提出 ReSGA 大型模型預測尾部風險，實證展現優異預測與經濟效益。",
+        "problem": "現有參數有限的方法在大資料時代容易面臨模型錯誤指定的風險。這使得準確預測 VaR 與 ES 成為一項挑戰。",
+        "method": "提出檢索增強自群組自動編碼器（ReSGA）模型。使用 1926 至 2023 年美國月度股票報酬率與 153 種企業特徵進行實證，並與 12 個計量與機器學習競爭模型進行對比。",
+        "findings": "ReSGA 在樣本外損失與統計回測中均優於 12 個競爭對手。其預測優勢可轉化為規模增強左側動能策略的顯著經濟收益，論文未報告具體績效改善數字。",
+        "implication": "可用於機構級的尾部風險管理與投資組合建構。前提是需要備妥龐大的企業特徵資料集與工程支援。",
+        "caveats": "研究顯示聯合 VaR 與 ES 預測的改善主要由資料複雜度驅動，而非單純的模型複雜度。",
+        "practicality": 4,
+        "tags": [
+          "尾部風險",
+          "風險值",
+          "自動編碼器",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.10711",
+      "title": "Cross-Sectional Asset Retrieval via Future-Aligned Soft Contrastive Learning",
+      "authors": [
+        "Hyeongmin Lee",
+        "Chanyeol Choi",
+        "Jihoon Kwon",
+        "Yoon Kim",
+        "Alejandro Lopez-Lira",
+        "Wonbin Ahn",
+        "Justin Xu",
+        "Srijan Sood",
+        "Qingsong Wen",
+        "Chun-Li Yang",
+        "Yongjae Lee"
+      ],
+      "abstract": "Asset retrieval (finding similar assets in a financial universe) is central to quantitative investment decision-making. Existing approaches define similarity through historical price patterns or sector classifications, but such backward-looking criteria provide no guarantee about future behavior. We argue that effective asset retrieval should be future-aligned: the retrieved assets should be those most likely to exhibit correlated future returns. To this end, we propose Future-Aligned Soft Contrastive Learning (FASCL), a representation learning framework whose soft contrastive loss uses pairwise future return correlations as continuous supervision targets. We further introduce an evaluation protocol designed to directly assess whether retrieved assets share similar future trajectories. Experiments on 5,631 US-listed securities against 14 baselines show that FASCL attains the best future return correlation at every retrieval depth and the best rank information coefficient at every depth and horizon, leads on trend consistency in 13 of 16 cells, and gives the highest gross Sharpe ratio in a spread trading backtest at every basket size. Code is available at https://github.com/HyeongminLEE/fascl .",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE",
+        "cs.AI"
+      ],
+      "published": "2026-02-11T10:17:52Z",
+      "updated": "2026-09-17T06:45:17Z",
+      "abs_url": "https://arxiv.org/abs/2602.10711",
+      "pdf_url": "https://arxiv.org/pdf/2602.10711v2",
+      "comment": "14 pages, 3 figures, 10 tables",
+      "journal_ref": "",
+      "keyword_score": 21,
+      "matched_keywords": [
+        "sharpe ratio",
+        "backtest",
+        "cross-sectional"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出前瞻對比學習進行資產檢索，美股實證完整且績效指標強。",
+      "summary": {
+        "title_zh": "透過未來對齊的軟對比學習進行橫截面資產檢索",
+        "verdict": "提出 FASCL 架構，以未來報酬相關性作為監督目標進行資產檢索，在多項指標與價差交易回測中勝過基準。",
+        "problem": "現有資產檢索依賴歷史價格型態或產業分類等回顧性標準，無法保證資產未來的行為表現。如何確保檢索出的資產具有高度相關的未來報酬是核心挑戰。",
+        "method": "使用 Future-Aligned Soft Contrastive Learning (FASCL) 表示學習框架，透過軟對比損失函數以兩兩未來報酬相關性作為連續監督目標。對象涵蓋 5,631 檔美國上市證券，並與 14 種基準進行比較。",
+        "findings": "FASCL 在所有檢索深度下皆取得最佳未來報酬相關性與最佳排序資訊係數（Rank IC），在 16 個趨勢一致性格子中贏了 13 個，並在各種籃子大小的價差交易回測中獲得最高毛夏普值。",
+        "implication": "此方法能直接找出未來報酬走勢相似的資產，非常適合應用於統計套利與價差交易的配對選股。程式碼已開源，可直接下載複製並進行實證測試。",
+        "caveats": "回測結果為毛夏普值（gross Sharpe ratio），未明確報告扣除交易成本後的淨績效。",
+        "practicality": 5,
+        "tags": [
+          "對比學習",
+          "資產檢索",
+          "統計套利",
+          "量化投資",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.06499",
+      "title": "Cross-Market Alpha: Testing Short-Term Trading Factors in the U.S. Market via Double-Selection LASSO",
+      "authors": [
+        "Jin Du",
+        "Alexander Walter",
+        "Maxim Ulrich"
+      ],
+      "abstract": "We test whether 168 short-horizon price-volume signals from the Alpha191 library, originally developed for China's retail-dominated A-share market, contain pricing information for S&P 500 stocks from 2002 to 2022 beyond 153 established U.S. factors. Using the double-selection LASSO of Feng et al. (2020), 17 signals receive significant stochastic discount factor (SDF) loadings in the baseline test-asset design. Their robustness is uneven. Only three signals (a multi-horizon moving-average ratio, a directional-pressure ratio, and a price-gap correlation) remain significant with a finer test-asset grid and under Elastic Net and principal-component control selection; six more pass most checks, and the remaining eight depend on the specification. Robust signals are concentrated in volume-price interaction and short-term mean reversion, whereas volatility-based signals are fragile.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST"
+      ],
+      "published": "2026-01-10T09:20:52Z",
+      "updated": "2026-09-23T10:00:51Z",
+      "abs_url": "https://arxiv.org/abs/2601.06499",
+      "pdf_url": "https://arxiv.org/pdf/2601.06499v3",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 21,
+      "matched_keywords": [
+        "mean reversion",
+        "stock",
+        "alpha"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "以雙重選擇 LASSO 嚴格檢驗 A 股因子在美股的穩健性，實證扎實。",
+      "summary": {
+        "title_zh": "跨市場 Alpha：透過雙重選擇 LASSO 檢驗美股市場的短期交易因子",
+        "verdict": "探討 A 股短週期價量因子在美股的適用性，發現僅少數價量與均值迴歸訊號具穩健性。",
+        "problem": "中國散戶市場的短週期價量因子是否能跨市場應用於美國 S&P 500 股票？這些訊號是否能提供既有美國因子以外的定價資訊？",
+        "method": "使用 Alpha191 資料庫中 168 個短週期價量訊號與 153 個美國已知因子，應用雙重選擇 LASSO 模型。資料範圍涵蓋 2002 至 2022 年間的 S&P 500 股票。",
+        "findings": "在基準測試中有 17 個訊號獲得顯著的隨機折現因子載重，但穩健性參差不齊。僅 3 個訊號在多種檢驗下維持顯著，主要集中於價量互動與短期均值迴歸。論文未報告具體夏普值或報酬等具體績效數字。",
+        "implication": "跨市場因子挖掘可行，但多數訊號對模型設定敏感。實務操作時應嚴格過濾，聚焦於價量互動與均值迴歸類型的因子。",
+        "caveats": "多數訊號的穩健性差且高度依賴規格設定，波動率相關訊號特別脆弱。",
+        "practicality": 4,
+        "tags": [
+          "跨市場 Alpha",
+          "機器學習",
+          "變數選擇",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.24878",
+      "title": "Entropy-Regularized Certainty-Equivalent Bellman Policies for Risk-Sensitive Market Making",
+      "authors": [
+        "Tenghan Zhong"
+      ],
+      "abstract": "We study a finite-inventory risk-sensitive market making problem in which a dealer controls bid and ask quotes, faces Brownian midprice risk, and receives liquidity-taking orders through point processes with quote-dependent intensities. The objective is the certainty equivalent induced by exponential utility with terminal and running inventory penalties. We introduce an exact discrete entropy-regularized Bellman operator that applies log-sum-exp regularization to deterministic-action certainty-equivalent scores, rather than to a risk-neutral one-step reward. This distinction is essential because the exponential certainty equivalent does not commute with quote randomization. For time step \\(h\\) and entropy parameter \\(λ\\), we prove uniform convergence to the unregularized continuous-time risk-sensitive value at rate \\[ O\\bigl(h+λ(1+|\\logλ|)\\bigr). \\] We also prove certainty-equivalent performance bounds for the induced Gibbs policies under a fresh-sampling relaxed implementation, in which quote marks are sampled at potential fill events rather than frozen over a time step. Under a quadratic growth condition on the Hamiltonian in the relevant quote coordinates, these policies concentrate around the unregularized optimal quote set. Finally, we show that a lower-cost Hamiltonian-Gibbs proxy satisfies a certainty-equivalent performance bound of the same order as the exact Bellman Gibbs policy. Numerical experiments in an Avellaneda--Stoikov specification support the predicted scaling for discretization error, entropy bias, policy gap, quote concentration, and exact-versus-proxy consistency.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.MF"
+      ],
+      "published": "2026-05-24T05:43:16Z",
+      "updated": "2026-05-24T05:43:16Z",
+      "abs_url": "https://arxiv.org/abs/2605.24878",
+      "pdf_url": "https://arxiv.org/pdf/2605.24878v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 32,
+      "matched_keywords": [
+        "market making",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "研究風險敏感造市的熵正規化 Bellman 策略，數學推導嚴謹並透過數值實驗支持。",
+      "summary": {
+        "title_zh": "應用熵正規化確定性等價貝爾曼政策於風險敏感造市",
+        "verdict": "提出精確的離散熵正規化貝爾曼算子解決風險敏感造市問題，並證明收斂性與具備效能邊界。",
+        "problem": "傳統造市問題中，指數效用產生的確定性等價無法與報價隨機化交換，導致難以直接應用標準的熵正規化技術。",
+        "method": "建構有限庫存、布朗中間價風險與點過程流動性消耗的風險敏感造市模型，採用離散熵正規化貝爾曼算子，並在 Avellaneda-Stoikov 框架下進行數值實驗。",
+        "findings": "證明了解析解與政策在時段 h 與熵參數 λ 下的均勻收斂率為 O(h+λ(1+|log λ|))，且 Gibbs 政策在二次成長條件下能集中於未正規化的最佳報價集，數值實驗支持此理論收斂。",
+        "implication": "此方法能有效平衡風險敏感造市中的探索與開發，可直接應用於高頻造市策略的動態報價最佳化。",
+        "caveats": "模型假設前提包含對相關報價座標的漢彌爾頓函數具備二次成長條件。",
+        "practicality": 4,
+        "tags": [
+          "造市",
+          "強化學習",
+          "風險管理",
+          "微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.07752",
+      "title": "Dynamic slippage control and rejection feedback in spot FX market making",
+      "authors": [
+        "Alexander Barzykin"
+      ],
+      "abstract": "We study an OTC FX market-making problem, built on the Avellaneda-Stoikov tradition, in which a dealer streams size-dependent quotes on a discrete ladder and manages inventory risk over a finite horizon under Poisson arrivals of trade requests. Adverse selection is modelled through latency-driven price moves over a delay window, represented by Gaussian marks whose conditional means can depend on the quoted spread, capturing selective client reaction to stale quotes. The dealer can address latency risk through trade rejection when slippage breaches a tolerance threshold. We treat slippage tolerance as an explicit control jointly optimized with quotes: upon receiving a trade request, the dealer chooses an acceptance/rejection rule, which makes the trade economically akin to an embedded option written on the latency price move. We further introduce rejection feedback through an EMA-based rejection score used as a reputation proxy, so that client intensity is endogenously modulated by past rejections via a multiplicative factor. Using dynamic programming, we derive a Markov control problem with state variables (inventory, rejection-score) and show how rejection decision enters the HJB equation through Hamiltonians that include an expectation over the latency mark and a maximization over both quote and rejection rule parameters. For practical control evaluation, we develop an adiabatic-quadratic approximation: fixing reputation on the inventory-control time scale, expanding Hamiltonians to the second order, and adopting quadratic ansatz in inventory, yielding tractable Riccati-type ODE and closed-form expressions for approximate quotes and slippage thresholds. This approximation provides a fast surrogate for policy design and enables self-consistent calibration of rejection behaviour.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM",
+        "q-fin.MF"
+      ],
+      "published": "2026-03-08T18:00:03Z",
+      "updated": "2026-03-08T18:00:03Z",
+      "abs_url": "https://arxiv.org/abs/2603.07752",
+      "pdf_url": "https://arxiv.org/pdf/2603.07752v1",
+      "comment": "18 pages, 10 figures",
+      "journal_ref": "",
+      "keyword_score": 32,
+      "matched_keywords": [
+        "market making",
+        "slippage"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "研究現貨外匯造市中的動態滑價控制與拒絕回饋，採用動態規劃與近似方法，理論完整。",
+      "summary": {
+        "title_zh": "現貨外匯造市中的動態滑價控制與拒單回饋",
+        "verdict": "將拒單機制與報價聯合最佳化，並引入聲譽回饋，透過動態規劃與近似解提供可行的造市策略。",
+        "problem": "在包含延遲與逆向選擇的現貨外匯造市中，造市商如何透過動態調整報價與拒單閾值來管理庫存與滑價風險。",
+        "method": "建構基於 Avellaneda-Stoikov 框架的動態規劃模型，利用指數移動平均（EMA）追蹤拒單率作為聲譽代理變數，並透過絕熱二次近似法求解 HJB 方程。",
+        "findings": "論文未報告具體績效數字，但推導出了可解析計算的 Riccati 型常微分方程式與近似報價及滑價閾值的閉形式解。",
+        "implication": "此方法可用於高頻外匯造市的執行層，前提是需要精確估計延遲價格變動與客戶強度對拒單率的敏感度。",
+        "caveats": "模型依賴於對延遲價格變動與客戶行為的特定分佈假設，且拒單分數如何精確映射至客戶強度需要實證校準。",
+        "practicality": 3,
+        "tags": [
+          "外匯市場",
+          "造市",
+          "逆向選擇",
+          "動態規劃",
+          "高頻交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.01709",
+      "title": "Reinforcement Learning for Option Hedging: Static Implied-Volatility Fit versus Shortfall-Aware Performance",
+      "authors": [
+        "Ziheng Chen",
+        "Minxuan Hu",
+        "Jiayu Yi",
+        "Wenxi Sun"
+      ],
+      "abstract": "We extend the Q-learner in Black-Scholes (QLBS) framework by incorporating risk aversion and trading costs, and propose a novel Replication Learning of Option Pricing (RLOP) approach. Both methods are fully compatible with standard reinforcement learning algorithms and operate under market frictions. Using SPY and XOP option data, we evaluate performance along static and dynamic dimensions. Adaptive-QLBS achieves higher static pricing accuracy in implied volatility space, while RLOP delivers superior dynamic hedging performance by reducing shortfall probability. These results highlight the importance of evaluating option pricing models beyond static fit, emphasizing realized hedging outcomes.",
+      "primary_category": "q-fin.PR",
+      "categories": [
+        "q-fin.PR",
+        "cs.LG"
+      ],
+      "published": "2026-01-05T01:02:41Z",
+      "updated": "2026-01-05T01:02:41Z",
+      "abs_url": "https://arxiv.org/abs/2601.01709",
+      "pdf_url": "https://arxiv.org/pdf/2601.01709v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 31,
+      "matched_keywords": [
+        "reinforcement learning",
+        "implied volatility",
+        "hedging",
+        "option pricing"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "擴展 QLBS 框架並提出複製學習選擇權訂價，強調實現避險結果的重要性。",
+      "summary": {
+        "title_zh": "期權避險的強化學習：靜態隱含波動度配適與虧損意識績效的比較",
+        "verdict": "結合風險趨避與交易成本擴充 QLBS 框架並提出 RLOP 方法，證明動態避險優於靜態隱含波動度配適。",
+        "problem": "傳統選擇權定價模型過於依賴靜態配適，忽略了市場摩擦與實際動態避險的表現。",
+        "method": "將風險趨避與交易成本納入 QLBS 框架，並提出 Replication Learning of Option Pricing (RLOP) 方法。使用 SPY 與 XOP 選項資料進行靜態與動態維度的評估。",
+        "findings": "Adaptive-QLBS 在隱含波動度空間中達到較高的靜態定價準確度，而 RLOP 透過降低虧損機率展現出更優異的動態避險表現。論文未報告具體的報酬率或夏普值數字。",
+        "implication": "選擇權定價模型的評估應超越靜態配適，轉而重視實際的動態避險成果與降低虧損機率。實務上可直接採用此強化學習方法來最佳化帶有摩擦成本的避險策略。",
+        "caveats": "實證結果未提供扣除交易成本後的具體績效數字。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "選擇權避險",
+          "市場摩擦",
+          "動態避險"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.19716",
+      "title": "Optimal Hedge Ratio for Delta-Neutral Liquidity Provision under Liquidation Constraints",
+      "authors": [
+        "Atsushi Hane"
+      ],
+      "abstract": "We study the problem of optimally hedging the price exposure of liquidity positions in constant-product automated market makers (AMMs) when the hedge is funded by collateralized borrowing. A liquidity provider (LP) who borrows tokens to construct a delta-neutral position faces a trade-off: higher hedge ratios reduce price exposure but increase liquidation risk through tighter collateral utilization. We model token prices as correlated geometric Brownian motions and derive the hedge ratio h that maximizes risk-adjusted return subject to a liquidation-probability constraint expressed via a first-passage-time bound. The unconstrained optimum h* admits a closed-form expression, but at h* the liquidation probability is prohibitively high. The practical optimum h** = min(h*, h_bar(alpha)) is determined by the binding liquidation constraint h_bar(alpha), which we evaluate analytically via the first-passage-time formula and confirm with Monte Carlo simulation. Simulations calibrated to on-chain data validate the analytical results, demonstrate robustness across realistic parameter ranges, and show that the optimal hedge ratio lies between 50% and 70% for typical DeFi lending conditions. Practical guidelines for rebalancing frequency and position sizing are also provided.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM"
+      ],
+      "published": "2026-03-20T07:47:03Z",
+      "updated": "2026-03-20T07:47:03Z",
+      "abs_url": "https://arxiv.org/abs/2603.19716",
+      "pdf_url": "https://arxiv.org/pdf/2603.19716v1",
+      "comment": "26 pages, 4 figures",
+      "journal_ref": "",
+      "keyword_score": 30,
+      "matched_keywords": [
+        "market maker",
+        "liquidity",
+        "hedging",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "推導帶有清算約束的最佳避險比例，結合模擬驗證。",
+      "summary": {
+        "title_zh": "在清算限制下 Delta 中性流動性供給的最佳避險比率",
+        "verdict": "研究 AMM 流動性部位的 Delta 中性避險，導出在清算機率限制下的最佳避險比率，建議值為 50% 至 70%。",
+        "problem": "流動性提供者以抵押借貸建構 Delta 中性部位時，面臨避險價格風險與提高清算風險之間的權衡。",
+        "method": "將代幣價格建模為相關幾何布朗運動，利用第一 passage 時間界線推導出最佳避險比率，並以鏈上資料校準的蒙地卡羅模擬進行驗證。",
+        "findings": "未受限制的最佳避險比率會導致過高的清算機率，實際最佳比率受限於清算限制，在典型的 DeFi 放貸條件下落在 50% 至 70% 之間。",
+        "implication": "可用於最佳化 DeFi 流動性供給的部位規模與再平衡頻率，前提是須納入清算機率與抵押品利用率的約束。",
+        "caveats": "模型基於相關幾何布朗運動假設，可能無法完全捕捉極端市場條件下的跳躍風險。",
+        "practicality": 4,
+        "tags": [
+          "自動造市商",
+          "流動性供給",
+          "Delta中性",
+          "風險管理",
+          "去中心化金融"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.06587",
+      "title": "Autonomous AI Agents for Option Hedging: Enhancing Financial Stability through Shortfall Aware Reinforcement Learning",
+      "authors": [
+        "Minxuan Hu",
+        "Ziheng Chen",
+        "Jiayu Yi",
+        "Wenxi Sun"
+      ],
+      "abstract": "The deployment of autonomous AI agents in derivatives markets has widened a practical gap between static model calibration and realized hedging outcomes. We introduce two reinforcement learning frameworks, a novel Replication Learning of Option Pricing (RLOP) approach and an adaptive extension of Q-learner in Black-Scholes (QLBS), that prioritize shortfall probability and align learning objectives with downside sensitive hedging. Using listed SPY and XOP options, we evaluate models using realized path delta hedging outcome distributions, shortfall probability, and tail risk measures such as Expected Shortfall. Empirically, RLOP reduces shortfall frequency in most slices and shows the clearest tail-risk improvements in stress, while implied volatility fit often favors parametric models yet poorly predicts after-cost hedging performance. This friction-aware RL framework supports a practical approach to autonomous derivatives risk management as AI-augmented trading systems scale.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "q-fin.CP",
+        "q-fin.RM"
+      ],
+      "published": "2026-02-01T18:36:27Z",
+      "updated": "2026-02-01T18:36:27Z",
+      "abs_url": "https://arxiv.org/abs/2603.06587",
+      "pdf_url": "https://arxiv.org/pdf/2603.06587v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 29,
+      "matched_keywords": [
+        "reinforcement learning",
+        "implied volatility",
+        "hedging",
+        "option pricing"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出考量資金缺口的強化學習選擇權避險代理人。",
+      "summary": {
+        "title_zh": "用於選擇權避險的自主AI代理：透過對齊短缺風險的強化學習增強金融穩定性",
+        "verdict": "提出結合短缺風險意識的強化學習框架 RLOP 與 QLBS 進行選擇權動態避險，能有效降低尾端風險。",
+        "problem": "衍生性商品市場中，靜態模型校準與實際避險成效存在落差，且傳統方法忽略了下行敏感的避險目標。",
+        "method": "利用掛牌的 SPY 與 XOP 選擇權資料，開發 Replication Learning of Option Pricing 與 QLBS 自適應擴展模型，基於實現路徑的 delta 避險結果分佈進行評估。",
+        "findings": "RLOP 在多數區段降低了短缺頻率，並在壓力情境下展現出最明確的尾端風險改善，而隱含波動度擬合雖然偏好參數模型，卻無法妥善預測扣除成本後的避險表現。",
+        "implication": "此摩擦感知強化學習框架有助於提升自主衍生性商品風險管理的實務水準，可應用於AI增強的交易系統中。",
+        "caveats": "隱含波動度擬合與實際避險表現之間存在摩擦，且論文未報告具體的報酬率或夏普值數字。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "選擇權避險",
+          "風險管理",
+          "衍生性商品"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.08379",
+      "title": "TT-DAC-PS: Twin-Target Deterministic Actor-Critic with Policy Smoothing for Optimal Trade Execution",
+      "authors": [
+        "Ilia Zaznov",
+        "Atta Badii",
+        "Julian Kunkel",
+        "Alfonso Dufour"
+      ],
+      "abstract": "This study addresses the optimal execution of large stock sell programs by introducing TT-DAC-PS (Twin-Target Deterministic Actor-Critic with Policy Smoothing), a deterministic actor-critic architecture that combines twin exponential-moving-average critic targets with pessimistic min backup, TD3-style target policy smoothing noise, delayed actor updates, and conservative Q regularisation to curb overestimation. Exploration uses Ornstein-Uhlenbeck (OU) noise with a hybrid schedule: deterministic episode-wise decay, variance-guided adjustment based on recent reward dispersion, and a Soft Actor-Critic (SAC)-style temperature that is learned and mapped to the noise scale. The environment integrates Almgren-Chriss (AC) trade impact with Limit Order Book (LOB) prices and volumes, normalised state features, per-step volume participation caps, and a utility-based reward. The trade execution algorithm is applied to LOB data for ten U.S. stocks. Performance is assessed against reinforcement-learning baseline algorithms, including Proximal Policy Optimisation (PPO), Soft Actor-Critic (SAC), and Advantage Actor-Critic (A2C), as well as alternative trade execution algorithms, including Time-Weighted Average Price (TWAP), Volume-Weighted Average Price (VWAP), and AC. The proposed model consistently reduces mean implementation shortfall percentage with competitive variance, outperforming classical baselines and standard reinforcement-learning benchmark models.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CE",
+        "cs.LG",
+        "q-fin.CP",
+        "q-fin.TR"
+      ],
+      "published": "2026-06-07T00:20:29Z",
+      "updated": "2026-06-07T00:20:29Z",
+      "abs_url": "https://arxiv.org/abs/2606.08379",
+      "pdf_url": "https://arxiv.org/pdf/2606.08379v1",
+      "comment": "21 pages, 1 figure, 3 tables",
+      "journal_ref": "",
+      "keyword_score": 27,
+      "matched_keywords": [
+        "limit order book",
+        "optimal execution",
+        "order book",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出具備政策平滑機制的雙目標確定性演員評論家模型進行最佳執行。",
+      "summary": {
+        "title_zh": "雙目標確定性演員-評論家模型與策略平滑：用於最佳委託執行的 TT-DAC-PS",
+        "verdict": "提出 TT-DAC-PS 演算法進行最佳委託執行，在降低平均執行落差上優於傳統基準與多種強化學習模型。",
+        "problem": "大型股票賣出程式的 оптима 執行問題，需要克服強化學習在估計 Q 值時的高估偏差，並處理市場衝擊與流動性限制。",
+        "method": "使用結合雙指數移動平均評論家、TD3 風格策略平滑與保守 Q 正規化的確定性演員-評論家架構（TT-DAC-PS）。環境整合 Almgren-Chriss 交易衝擊與限價單簿資料，涵蓋十檔美國股票。",
+        "findings": "所提出的模型持續降低平均執行落差百分比，並維持具競爭力的變異數，表現優於 PPO、SAC、A2C 以及 TWAP、VWAP 與 Almgren-Chriss 等基準，但摘要未報告具體績效數字。",
+        "implication": "可直接應用於大單執行的最佳化排程，前提是需建構整合限價單簿與交易衝擊的模擬環境。",
+        "caveats": "論文摘要未提供扣除交易手續費或滑價後的實際淨報酬數字。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "演算法交易",
+          "限價單簿",
+          "最佳委託執行"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
