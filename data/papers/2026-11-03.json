@@ -1,0 +1,508 @@
+{
+  "date": "2026-11-03",
+  "generated_at": "2026-11-03T11:57:06+08:00",
+  "scanned": 2420,
+  "eligible": 2253,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2604.05699",
+      "title": "Priced risk in corporate bonds",
+      "authors": [
+        "Alexander Dickerson",
+        "Philippe Mueller",
+        "Cesare Robotti"
+      ],
+      "abstract": "Recent studies document strong empirical support for multifactor models that aim to explain the cross-sectional variation in corporate bond expected excess returns. We revisit these findings and provide evidence that common factor pricing in corporate bonds is exceedingly difficult to establish. Based on portfolio- and bond-level analyses, we demonstrate that previously proposed bond risk factors, with traded liquidity as the only marginal exception, do not have any incremental explanatory power over the corporate bond market factor. Consequently, this implies that the bond CAPM is not dominated by either traded- or nontraded-factor models in pairwise and multiple model comparison tests.",
+      "primary_category": "q-fin.PR",
+      "categories": [
+        "q-fin.PR"
+      ],
+      "published": "2026-04-07T10:49:46Z",
+      "updated": "2026-04-07T10:49:46Z",
+      "abs_url": "https://arxiv.org/abs/2604.05699",
+      "pdf_url": "https://arxiv.org/pdf/2604.05699v1",
+      "comment": "",
+      "journal_ref": "Journal of Financial Economics, Volume 150, Issue 2, November 2023, 103707",
+      "keyword_score": 20,
+      "matched_keywords": [
+        "factor model",
+        "liquidity",
+        "cross-sectional",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 9,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "已刊登於 Journal of Financial Economics，實證極為嚴謹。",
+      "summary": {
+        "title_zh": "公司債中已定價的風險",
+        "verdict": "重新審視多因子模型在公司債預期超額報酬的解釋力，發現除了交易流動性外，多數風險因子相對於公司債市場因子並不具備增量解釋力。",
+        "problem": "近年研究指出多因子模型能有效解釋公司債跨橫截面報酬，但這些共同因子定價的真實性與穩健性仍有疑問。",
+        "method": "採用投資組合層級與債券層級的分析方法，對現有的公司債風險因子進行多重模型與成對模型比較檢定。",
+        "findings": "研究顯示除了交易流動性因子具有微弱的邊際例外，先前提出的各類公司債風險因子皆無法對公司債市場因子提供額外的解釋力；論文未報告具體的報酬或夏普值數字。",
+        "implication": "這意味著傳統的公司債 CAPM 在模型比較中並未被其他多因子模型擊敗，實務上在建構公司債 Alpha 模型時應審慎評估多因子的必要性。",
+        "caveats": "主要限制在於未能證明除流動性以外的複雜因子在實務上具有超越市場因子的增量預測價值。",
+        "practicality": 3,
+        "tags": [
+          "公司債",
+          "因子定價",
+          "流動性",
+          "資產定價"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.00502",
+      "title": "Non-Convex Market Makers: Coherence without Convexity, Friction, and Parallel Composition",
+      "authors": [
+        "Peter Cotton"
+      ],
+      "abstract": "Cost-function market makers are always assumed convex, and convexity is not what makes them coherent. For a path-independent maker the exact no-arbitrage condition is a chord condition, that every chord slope of the cost lie in the convex hull of payoffs; convexity enters the standard axiomatics through a separate requirement, monotone information incorporation, and dropping it leaves coherent non-convex makers. Rational flow against such a maker trades the convex envelope, so non-convexity costs expressiveness rather than soundness, and a proportional fee of at least the arbitrage depth restores no-arbitrage, which by conjugation is a bid-ask spread with an exact no-trade interval for any cost whatever. Combining fee-bearing makers is an infimal convolution solved by one monotone clearing-price root-find, with sparse participation and a consolidated limit order book as the aggregate, and a deep quadratic co-quoter is Moreau smoothing, which preserves coherence at every depth. Any quoted configuration outside the coherent hull admits a portfolio priced below its worst payoff, so arbitrageurs act as decentralized separation oracles, and coherence is relative to friction and to the cost of finding certificates.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "q-fin.TR"
+      ],
+      "published": "2026-10-31T00:48:35Z",
+      "updated": "2026-10-31T00:48:35Z",
+      "abs_url": "https://arxiv.org/abs/2611.00502",
+      "pdf_url": "https://arxiv.org/pdf/2611.00502v1",
+      "comment": "17 pages. Code and numerical theorem tests: https://github.com/microprediction/mechanisms",
+      "journal_ref": "",
+      "keyword_score": 33,
+      "matched_keywords": [
+        "limit order book",
+        "market maker",
+        "order book",
+        "bid-ask spread"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "提出非凸造市商理論架構與程式碼測試，推導嚴謹。",
+      "summary": {
+        "title_zh": "非凸造市者：無凸性下的一致性、摩擦與平行組合",
+        "verdict": "證明成本函數造市者不需具備凸性即可維持無套利一致性，透過手續費或買賣價差即可恢復穩健。",
+        "problem": "傳統成本函數造市者總是假設為凸函數，然而凸性是否為維持無套利一致性的必要條件需要被重新檢視。",
+        "method": "運用路徑無關的公理化方法，探討非凸成本函數在造市者模型中的性質，分析平行組合與費率機制的數學結構。",
+        "findings": "研究發現精確的無套利條件是弦條件而非凸性，放棄凸性僅會犧牲表達能力而非健全性，且適當的比例手續費或買賣價差能恢復無套利狀態。",
+        "implication": "交易員在設計造市系統時，可解構傳統對凸性的嚴格限制，透過設定適當的手續費與價差來擴展非凸成本函數的應用。",
+        "caveats": "一致性本質上取決於市場摩擦以及尋找套利證明的成本。",
+        "practicality": 3,
+        "tags": [
+          "造市",
+          "限價單簿",
+          "微結構",
+          "無套利"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.10038",
+      "title": "Evolve on the Host, Predict on the Edge: Deploying Online Neuroevolutionary Architecture Search for Cross-sectional Stock Return Prediction",
+      "authors": [
+        "Jonathan Chang",
+        "Zimeng Lyu"
+      ],
+      "abstract": "Accurate forecasting models are usually large, expensive to update online, and fixed in architecture once trained. We apply ONE-NAS, an online neuroevolutionary architecture search that evolves a population of small recurrent networks as each window of data arrives, to daily cross-sectional stock return prediction, and pilot it on a host and endpoint pipeline: the host runs the search and ships each generation's champion genomes over TCP/IP to a Raspberry Pi 4B, which predicts online. On the Pi a single champion predicts a 50-stock window in 24.6~ms and the ensemble of 40 island champions in 556~ms, far inside the daily decision cycle. On four panels of US mid-cap equities over 2022--2024, reading the population as a rank-mean ensemble of island champions returns $+27.5\\%$ net of realised transaction costs, against $+11.3$ to $+14.8\\%$ for online LSTM, online GRU and monthly-retrained LSTM baselines and $+4.5\\%$ for the single best genome used in prior ONE-NAS work.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE",
+        "cs.LG",
+        "cs.NE"
+      ],
+      "published": "2026-10-07T13:19:22Z",
+      "updated": "2026-10-07T13:19:22Z",
+      "abs_url": "https://arxiv.org/abs/2610.10038",
+      "pdf_url": "https://arxiv.org/pdf/2610.10038v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 20,
+      "matched_keywords": [
+        "transaction cost",
+        "cross-sectional",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "美國中市值股票實證、考慮交易成本，回測完整。",
+      "summary": {
+        "title_zh": "在主機端演化、在終端預測：部署線上神經演化架構搜尋於橫斷面股票報酬預測",
+        "verdict": "提出線上神經演化架構搜尋方法，利用主機訓練、終端預測的管線架構，在美股中型股實測中取得超額報酬。",
+        "problem": "精準預測模型通常規模龐大、線上更新成本高，且訓練後架構即固定不變。",
+        "method": "採用線上神經演化架構搜尋（ONE-NAS）演化一組小型遞歸網路，主機端執行搜尋並透過 TCP/IP 將最佳基因組傳送至 Raspberry Pi 4B 進行線上預測。資料使用美國中型股四個橫斷面面板資料，樣本期間為 2022 至 2024 年。",
+        "findings": "島嶼最佳基因組的排序平均集成報酬率在扣除實現交易成本後達到 $+27.5\\%$，優於線上 LSTM、GRU 及按月重新訓練的 LSTM 基線（$+11.3\\%$ 至 $+14.8\\%$），以及先前 ONE-NAS 研究中單一最佳基因組的 $+4.5\\%$。Raspberry Pi 4B 單一最佳模型預測 50 檔股票視窗僅需 24.6 毫秒，40 個島嶼集成則需 556 毫秒。",
+        "implication": "此邊緣運算架構證明了將繁重的架構搜尋放於主機、輕量預測放於終端的設計可行且極具效率。模型更新速度完全能滿足每日決策週期的需求。",
+        "caveats": "實證僅涵蓋 2022 至 2024 年的美國中型股，其在不同市場環境與資產類別的穩健性仍待驗證。",
+        "practicality": 4,
+        "tags": [
+          "神經演化",
+          "架構搜尋",
+          "機器學習",
+          "邊緣運算",
+          "橫斷面預測"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.08825",
+      "title": "Hybrid Neural-Classical Correction for Frozen Time Series Foundation Models: A Comprehensive Ablation Study on High-Frequency Stock Prediction",
+      "authors": [
+        "Kasun Dewage",
+        "Suranadi De Silva",
+        "Shankhadeep Mondal"
+      ],
+      "abstract": "Foundation models for time series forecasting demonstrate impressive zero-shot generalization but often underperform on specialized domains such as high-frequency finance. We present a comprehensive study of hybrid neural-classical correction for adapting frozen TimesFM (200M parameters) to stock return prediction during the volatile opening trading hour. We compare two neural correction architectures - AttnCorrect (multi-head self-attention, approximately 471K parameters) and GatedLinear (low-rank bilinear projection with gating, approximately 49K parameters) - each augmented with Random Forest residual learning. Through systematic ablation across 10 major technology stocks (NVDA, MSFT, AAPL, GOOG, GOOGL, AMZN, META, AVGO, TSLA, NFLX) spanning 2 million data points, we reveal critical insights: (1) The hybrid neural-classical approach achieves 0.597 pooled correlation and 6.4x mean per-day correlation improvement over frozen TimesFM; (2) Classical residual learning (Random Forest) provides the largest single-component contribution, matching or exceeding the neural correction component; (3) Simpler neural architectures surprisingly outperform complex ones when classical residual learning is removed; (4) Self-attention provides the largest neural-only contribution. GatedLinear+RF achieves best overall performance with 9x fewer neural parameters than AttnCorrect+RF. We report three complementary correlation metrics - mean per-day, cross-day cumulative, and pooled - to provide a complete picture of predictive quality. Our results provide practical guidance: effective foundation model adaptation requires careful integration of neural and classical components, with classical methods playing a crucial complementary role.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "q-fin.ST"
+      ],
+      "published": "2026-08-09T17:15:20Z",
+      "updated": "2026-08-09T17:15:20Z",
+      "abs_url": "https://arxiv.org/abs/2608.08825",
+      "pdf_url": "https://arxiv.org/pdf/2608.08825v1",
+      "comment": "Accepted and presented at IJCNN 2026, part of the IEEE World Congress on Computational Intelligence (WCCI 2026)",
+      "journal_ref": "",
+      "keyword_score": 20,
+      "matched_keywords": [
+        "high-frequency",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "已獲 IJCNN 接受，針對高頻股票預測進行混合神經模型消融實驗。",
+      "summary": {
+        "title_zh": "凍結時間序列基礎模型的混合神經與傳統校正：高頻股票預測的全面消融研究",
+        "verdict": "結合隨機森林與輕量化神經校正來微調凍結的 TimesFM，能顯著提升高頻股票報酬預測表現。",
+        "problem": "時間序列基礎模型雖具備強大的零樣本泛化能力，但在高頻金融等專業領域的表現往往不如預期。本研究旨在探討如何調適凍結的 TimesFM 模型以預測波動劇烈的開盤交易小時股票報酬。",
+        "method": "使用 10 檔主要科技股、涵蓋 200 萬筆資料的高頻資料集，測試凍結的 TimesFM（2 億參數）結合 AttnCorrect 與 GatedLinear 兩種神經校正架構，並輔以隨機森林進行殘差學習。",
+        "findings": "混合神經與傳統方法達到 0.597 的合併相關係數，較凍結的 TimesFM 提升 6.4 倍的每日平均相關係數。其中 GatedLinear 搭配隨機森林達到最佳整體效能，且神經參數數量比 AttnCorrect 少 9 倍。",
+        "implication": "實證顯示有效的基礎模型調適需要整合神經與傳統方法，傳統模型在其中扮演關鍵的互補角色，可直接作為高頻預測模型最佳化的參考。",
+        "caveats": "僅針對開盤後一小時的高波動時段與 10 檔科技股進行測試，泛化至其他市場時段或資產類別的效果仍需驗證。",
+        "practicality": 4,
+        "tags": [
+          "基礎模型",
+          "高頻交易",
+          "時間序列預測",
+          "殘差學習",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.17251",
+      "title": "ORCA -- Online Regime Correlation Analyzer",
+      "authors": [
+        "Boris Kriuk",
+        "Fedor Kriuk"
+      ],
+      "abstract": "Standard risk models reduce the rich dependence structure of financial markets to scalar volatility estimates, discarding the topological information encoded in cross-asset correlation networks. We present ORCA (Online Regime Correlation Analyzer), an end-to-end framework that fuses spectral graph theory, random matrix theory, and supervised machine learning to deliver calibrated probability estimates for both rally and crash events over a ten-day forward horizon. ORCA constructs rolling correlation matrices from 24 diversified exchange-traded instruments using three parallel estimators at different time scales, and extracts 127 spectral features (absorption ratios, eigenvalue entropy, effective rank, spectral gap, eigenvector concentration, and graph-topological descriptors at multiple correlation thresholds), concatenated with 79 traditional price-derived indicators to form a 206-dimensional feature vector. A depth-limited Random Forest with balanced sub-sample weighting is evaluated under a strict eight-fold walk-forward protocol with ten-day anti-leakage gaps spanning fifteen years of daily US market data. ORCA achieves a Balanced Crisis Detection AUC (BCD-AUC, the geometric mean of rally and crash AUC) of 0.741, ranking first against all baselines. Ablation studies show that spectral features contribute +10.3 percentage points of AUC for crash detection and +5.2 for rally detection over traditional features alone, with SHAP analysis revealing that graph-topological descriptors (clustering coefficient, edge density, and dominant-eigenvalue percentile rank) are the three most important crash predictors. A backtested walk-forward strategy mapping the joint rally-crash signal to dynamic equity exposure with risk-on/risk-off rotation achieves a Sharpe ratio of 1.13, a CAGR of 15.6%, and a maximum drawdown of only -7.5%, versus 3.7% CAGR and -33.7% drawdown for buy-and-hold.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE"
+      ],
+      "published": "2026-04-19T04:34:19Z",
+      "updated": "2026-04-19T04:34:19Z",
+      "abs_url": "https://arxiv.org/abs/2604.17251",
+      "pdf_url": "https://arxiv.org/pdf/2604.17251v1",
+      "comment": "11 pages, 5 figures",
+      "journal_ref": "",
+      "keyword_score": 20,
+      "matched_keywords": [
+        "sharpe ratio",
+        "drawdown",
+        "regime"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出線上體制相關性分析器進行危機預測，15年美國市場回測紮實。",
+      "summary": {
+        "title_zh": "ORCA：線上體制相關性分析器",
+        "verdict": "結合光譜圖論與隨機矩陣理論捕捉跨資產相關性網路的拓樸特徵，十天期暴漲暴跌預測的 BCD-AUC 達 0.741。",
+        "problem": "標準風險模型將豐富的市場依賴結構簡化為純量波動率估計，丟失了跨資產相關性網路中編碼的拓樸資訊。",
+        "method": "使用 24 種多元交易所交易商品透過三種平行估計器建構滾動相關矩陣，結合 127 個光譜特徵與 79 個傳統價格指標構成 206 維特徵向量。採用深度受限的隨機森林，並在 15 年的美國日資料上進行嚴格的八折走進測試。",
+        "findings": "ORCA 達到 0.741 的平衡危機偵測 AUC。消融實驗顯示光譜特徵使暴跌偵測 AUC 提升 10.3 個百分點、暴漲偵測提升 5.2 個百分點。回測動態權益暴露與風險開關輪動策略獲得 1.13 的夏普值、15.6% 的年化報酬率，最大回檔僅 -7.5%。",
+        "implication": "可將跨資產相關性網路的拓樸特徵納入總體風險管理或資產配置模型中，作為捕捉極端市場體制轉換的訊號。",
+        "caveats": "使用十天期前瞻視角與日資料，對於高頻交易或盤中風控的適用性有限。",
+        "practicality": 4,
+        "tags": [
+          "相關性網路",
+          "隨機矩陣理論",
+          "體制轉換",
+          "機器學習",
+          "風險管理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2511.06177",
+      "title": "Push-response anomalies in high-frequency S&P 500 price series",
+      "authors": [
+        "Dmitrii Vlasiuk",
+        "Mikhail Smirnov"
+      ],
+      "abstract": "We test the hypothesis that consecutive intraday price changes in the most liquid U.S. equity ETF (SPY) are conditionally nonrandom. Using NBBO event-time data for about 1,500 regular trading days, we form for every lag L ordered pairs of a backward price increment (\"push\") and a forward price increment (\"response\"), standardize them, and estimate the expected responses on a fine grid of push magnitudes. The resulting lag-by-magnitude maps reveal a persistent structural shift: for short lags (1-5,000 ticks), expected responses cluster near zero across most push magnitudes, suggesting high short-term efficiency; beyond that range, pronounced tails emerge, indicating that larger historical pushes increasingly correlate with nonzero conditional responses. We also find that large negative pushes are followed by stronger positive responses than equally large positive pushes, consistent with asymmetric liquidity replenishment after sell-side shocks. Decomposition into symmetric and antisymmetric components and the associated dominance curves confirm that short-horizon efficiency is restored only partially. The evidence points to an intraday, lag-resolved anomaly that is invisible in unconditional returns and that can be used to define tradable pockets and risk controls.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.CP",
+        "q-fin.PR",
+        "q-fin.RM",
+        "q-fin.ST"
+      ],
+      "published": "2025-11-09T01:34:00Z",
+      "updated": "2025-11-09T01:34:00Z",
+      "abs_url": "https://arxiv.org/abs/2511.06177",
+      "pdf_url": "https://arxiv.org/pdf/2511.06177v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 28,
+      "matched_keywords": [
+        "high-frequency",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "檢驗 SPY 高頻價格序列的推拉反應異常，揭露日內微觀結構異象。",
+      "summary": {
+        "title_zh": "高頻標普500價格序列中的推力與反應異常",
+        "verdict": "探討 SPY 高頻價格序列中條件非隨機性，發現短天期具效率，但長天期存在明顯不對稱反應。",
+        "problem": "檢驗美國最具流動性的 ETF (SPY) 的盤中連續價格變動是否具備條件非隨機性，並找出隱藏在無條件報酬背後的結構性異常。",
+        "method": "使用大約 1,500 個常規交易日的 NBBO 事件時間資料，建構落後階數 L 的後向價格變動與前向價格變動的有序對，並在推力規模網格上估計預期反應。",
+        "findings": "短落後階數（1至5,000個 tick）的預期反應接近零，顯示高度短期效率；超過此範圍則出現顯著尾端，且大型負向推力隨後產生的正向反應大於等幅的正向推力，未報告具體績效數字。",
+        "implication": "此盤中落後解析的異常現象可用於定義可交易的機會區間與風險控管，前提是必須處理跨越不同時間尺度的微結構動態。",
+        "caveats": "未在分析中扣除實際交易成本與手續費，其實際執行可行性仍受限於高頻造市摩擦。",
+        "practicality": 3,
+        "tags": [
+          "市場微結構",
+          "高頻交易",
+          "價格動態",
+          "流動性"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.16970",
+      "title": "Herding and Liquidity in Order-Book Markets. II. Fundamental Anchoring and the Resilience of Liquidity",
+      "authors": [
+        "Jan Novotny"
+      ],
+      "abstract": "An order-book market whose liquidity provision is anchored to a fundamental value carries a restoring force: the price mean-reverts to value and the book refills after a shock. We show this restoring force is a robust intrinsic stabiliser and identify it causally-dialling the anchor down removes the mean-reversion, and a leverage-driven fire-sale then self-sustains. Separately, we ask whether a stressed market transmits its liquidity stress to a coupled calmer one, and find that it cannot: across six transmission channels of increasing strength-cross-market herding, arbitrage flow, and market-maker withdrawal up to a funding-constrained population fire-sale and a leverage spiral-the receiver's stress is independent of whether its neighbour is stressed, at every anchor strength. Market-maker withdrawal thins the receiving book but does not ignite it. Our order parameter throughout is the one-sidedness of the book-liquidity stress rather than a directional price crash-so a liquidity crisis here means the sustained one-sidedness a failing anchor produces. A liquidity crisis in this model is a failure of fundamental anchoring, not of market making.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-07-18T21:10:15Z",
+      "updated": "2026-07-18T21:10:15Z",
+      "abs_url": "https://arxiv.org/abs/2607.16970",
+      "pdf_url": "https://arxiv.org/pdf/2607.16970v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 27,
+      "matched_keywords": [
+        "market making",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "探討訂單簿市場中的群聚與流動性，證明基本面錨定的穩定效果。",
+      "summary": {
+        "title_zh": "限價單簿市場中的群聚與流動性：第二部：基本面錨定與流動性的韌性",
+        "verdict": "證明基本面錨定是市場流動性與均異回歸的關鍵穩定機制，且壓力不易跨市場傳導。",
+        "problem": "探討流動性供給錨定於基本面價值時如何影響市場穩定性，以及受壓力的市場是否會將流動性危機傳導至相鄰的平靜市場。",
+        "method": "建構限價單簿市場模型，分析跨市場群聚、套利流、造市商撤退、資金受限的清倉潮與槓桿螺旋等六種傳導管道，未明確報告樣本期間與資料頻率。",
+        "findings": "研究發現調降基本面錨定會消除均異回歸並導致槓桿驅動的自我維持清倉潮；然而，在所有錨定強度下，接收市場的壓力均獨立於相鄰市場是否受壓，造市商撤退僅會使單邊訂單簿變薄但不會引發危機，論文未報告具體績效數字。",
+        "implication": "流動性危機源自基本面錨定的失敗而非造市商本身的問題，交易員在評估系統性風險時應聚焦於資產基本面錨定的強弱。",
+        "caveats": "本研究基於理論模型推導，缺乏真實市場資料的實證檢驗。",
+        "practicality": 2,
+        "tags": [
+          "限價單簿",
+          "流動性",
+          "市場微結構",
+          "系統性風險"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.02014",
+      "title": "Insights on Time-consistent Deep Hedging under Elicitable Dynamic Risk Measures",
+      "authors": [
+        "Shuyi Zhang",
+        "Frédéric Godin"
+      ],
+      "abstract": "We study deep hedging where the objective is expressed in terms of a dynamic risk measure, under which sequential decisions are time-consistent. We tackle the problem of basket option hedging. We show that the approach is feasible and can be used conveniently in the presence of more complex state spaces with higher dimension than what was previously test in the literature. We rely on the conditional elicitability of spectral risk measures to represent the optimization objective. We provide insights on how the choice of scoring function impacts the training of the hedging agent. We also propose an adapted reinforcement learning (RL) algorithm to solve the problem, which contains additions that are crucial to a successful training of the deep RL agent, and without which the agent fails to converge to proper solutions. The time-consistent hedging strategies are also benchmarked against deep hedging approaches relying on static risk measures leading to precommitment.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP"
+      ],
+      "published": "2026-09-02T02:42:12Z",
+      "updated": "2026-10-13T18:39:52Z",
+      "abs_url": "https://arxiv.org/abs/2609.02014",
+      "pdf_url": "https://arxiv.org/pdf/2609.02014v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 22,
+      "matched_keywords": [
+        "reinforcement learning",
+        "hedging"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "應用時間一致性深度避險與譜風險度量，強化學習訓練過程具參考價值。",
+      "summary": {
+        "title_zh": "基於可誘發動態風險量度的時間一致深度避險洞察",
+        "verdict": "提出基於動態風險量度的時間一致深度避險方法，解決籃子選擇權避險並探討評分函數對訓練的影響。",
+        "problem": "傳統深度避險多依賴靜態風險量度導致預先承諾，且在處理高維度狀態空間與時間一致性時遭遇困難。",
+        "method": "利用頻譜風險量度的條件可誘發性來建構最佳化目標，並提出適用於高維度狀態空間的強化學習演算法進行籃子選擇權避險。",
+        "findings": "論文證明此方法可行且能處理比以往文獻更高維度的複雜狀態空間，並指出評分函數的選擇對避險代理人的訓練至關重要，但未報告具體的報酬或夏普值數字。",
+        "implication": "可應用於需要考慮時間一致性的複雜衍生性金融商品避險，但實作時必須仔細調整強化學習的訓練架構與評分函數。",
+        "caveats": "未提供具體的量化績效數字來證明其相較於基準方法的實質超額表現。",
+        "practicality": 3,
+        "tags": [
+          "深度避險",
+          "強化學習",
+          "風險量度",
+          "選擇權避險"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.29994",
+      "title": "Bridging Stochastic Control and Deep Hedging: Structural Priors for No-Transaction Band Networks",
+      "authors": [
+        "Jules Arzel",
+        "Noureddine Lehdili"
+      ],
+      "abstract": "This paper studies the problem of hedging and pricing a European call option under proportional transaction costs, from two complementary perspectives. We first derive the optimal hedging strategy under CARA utility, following the stochastic control framework of Davis et al. (1993), characterising the no-transaction band via the Hamilton-Jacobi-Bellman Quasi-Variational Inequality (HJBQVI) and the Whalley-Wilmott asymptotic approximation. We then adopt a deep hedging approach, proposing two architectures that build on the No-Transaction Band Network of Imaki et al. (2023): NTBN-Delta, which makes delta-centring explicit, and WW-NTBN, which incorporates the Whalley-Wilmott formula as a structural prior on the bandwidth and replaces the hard clamp with a differentiable soft clamp. Numerical experiments show that WW-NTBN converges faster, matches the stochastic control no-transaction bands more closely, and generalises well across transaction cost regimes. We further apply both frameworks to the bull call spread, documenting the breakdown of price linearity under transaction costs.",
+      "primary_category": "q-fin.PR",
+      "categories": [
+        "q-fin.PR",
+        "q-fin.CP",
+        "q-fin.PM",
+        "q-fin.RM"
+      ],
+      "published": "2026-03-31T16:56:17Z",
+      "updated": "2026-03-31T16:56:17Z",
+      "abs_url": "https://arxiv.org/abs/2603.29994",
+      "pdf_url": "https://arxiv.org/pdf/2603.29994v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 20,
+      "matched_keywords": [
+        "transaction cost",
+        "regime",
+        "hedging"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance_reason": "結合隨機控制與深度避險探討無交易區間，數值實驗完整。",
+      "summary": {
+        "title_zh": "橋接隨機控制與深度避險：無交易帶網路的結構先驗",
+        "verdict": "將隨機控制的無交易帶理論解融入深度避險網路，提升收斂速度與泛化能力。",
+        "problem": "在比例交易成本下進行歐式買權避險與定價時，傳統隨機控制方法計算複雜，而純深度學習方法缺乏結構性先驗導致泛化困難。",
+        "method": "結合 CARA 效用下的隨機控制框架（透過 HJBQVI 與 Whalley-Wilmott 近似）與深度避險架構。提出 NTBN-Delta 與 WW-NTBN 兩種神經網路架構，應用於歐式買權與多頭買權價差交易。",
+        "findings": "數值實驗顯示，WW-NTBN 收斂速度更快，能更貼近隨機控制的無交易帶，且在不同交易成本體制下具有良好的泛化能力，同時記錄了交易成本下價格線性的崩潰。",
+        "implication": "可將解析解的結構先驗嵌入深度學習避險模型中，提升模型在交易成本環境下的穩定性與樣本效率。",
+        "caveats": "論文未報告具體的交易績效數字或夏普值改善幅度。",
+        "practicality": 4,
+        "tags": [
+          "隨機控制",
+          "深度避險",
+          "交易成本",
+          "選擇權定價",
+          "結構先驗"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.11232",
+      "title": "Backtrader-Bench: Benchmarking LLM Agents on Algorithmic Trading with Self-Generated MCQs",
+      "authors": [
+        "Ruoxi Zhao",
+        "Maziar Raissi"
+      ],
+      "abstract": "Evaluating LLM coding agents in algorithmic trading is difficult because static benchmarks risk data contamination and numerical backtest outputs require ground truth from actual code execution. We present Backtrader-Bench, a framework with two complementary pipelines. A deterministic multiple-choice question (MCQ) pipeline generates questions from backtest configurations across five trading strategies, 33 templates, and three difficulty tiers, with an independent checker that re-derives every answer. A generator-solver filtering pipeline autonomously mines harder questions: a generator writes questions verified by executable code, converts them to MCQs, and discards any that a no-tool solver can answer without code execution. We evaluate 11 models without tools (10 runs each) and four with-tools configurations on a 30-question curated set. Tool-augmented agents reach 90.0% accuracy in a single pass (GPT-5.5 and Opus 4.7), outperforming the best no-tools baselines (73.0%, averaged over 10 runs) by 17 percentage points. On 38 separately mined questions, no-tools accuracy drops further, with half the models falling to roughly random-chance level (25%). Beyond evaluation, the scalable MCQ infrastructure is designed to produce a training corpus for reinforcement learning, with the ultimate goal of building a specialized agent for quantitative trading workflows.",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-07-31T02:37:57Z",
+      "updated": "2026-07-31T02:37:57Z",
+      "abs_url": "https://arxiv.org/abs/2608.11232",
+      "pdf_url": "https://arxiv.org/pdf/2608.11232v1",
+      "comment": "Accepted to the FinLLM Workshop at IJCAI 2026. Code and data: https://github.com/rzhao999/Backtrader-Bench",
+      "journal_ref": "",
+      "keyword_score": 39,
+      "matched_keywords": [
+        "algorithmic trading",
+        "reinforcement learning",
+        "backtest",
+        "llm"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "建立評估LLM代理人的基準測試框架，已獲IJCAI FinLLM接受。",
+      "summary": {
+        "title_zh": "Backtrader-Bench：利用自生成多選題評估演算法交易中的 LLM 代理",
+        "verdict": "透過自生成多選題評估 LLM 代理的演算法交易能力，工具增強模型準確率達 90.0%。",
+        "problem": "評估 LLM 程式碼代理在演算法交易中的表現面臨靜態基準資料汙染的風險。此外，回測輸出需要實際程式碼執行來提供真實標籤。",
+        "method": "提出包含決定論式多選題與生成器-求解器過濾管線的評估框架，涵蓋 5 種交易策略與 3 個難度級別。測試 11 個無工具與 4 個具工具配置的模型表現。",
+        "findings": "具工具支援的代理在 30 題精選集單次執行下達到 90.0% 準確率，超越最佳無工具基線的 73.0% 達 17 個百分點。在 38 題經挖掘的困難題目中，無工具模型的準確率暴跌至隨機猜測的 25%。",
+        "implication": "此可擴展的多選題基礎設施可有效評估代理能力，未來並可作為透過強化學習建構量化交易專屬代理的訓練語料庫。",
+        "caveats": "該框架主要評估回測配置與程式碼邏輯，未能直接反映真實市場線上交易的獲利能力。",
+        "practicality": 3,
+        "tags": [
+          "演算法交易",
+          "大型語言模型",
+          "基準測試",
+          "強化學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

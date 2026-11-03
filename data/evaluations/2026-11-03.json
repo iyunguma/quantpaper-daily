@@ -1,0 +1,327 @@
+{
+  "date": "2026-11-03",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2611.00502",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出非凸造市商理論架構與程式碼測試，推導嚴謹。"
+    },
+    {
+      "arxiv_id": "2611.00700",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "以強化學習解無短賣限制的投資組合，理論推導完整。"
+    },
+    {
+      "arxiv_id": "2611.00578",
+      "topic": "投組與風險",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "僅用模擬高斯投資組合進行數值實驗，實證偏弱。"
+    },
+    {
+      "arxiv_id": "2610.10038",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "美國中市值股票實證、考慮交易成本，回測完整。"
+    },
+    {
+      "arxiv_id": "2610.01572",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "提出隨機多層最佳化方法，應用於風險趨避投組。"
+    },
+    {
+      "arxiv_id": "2610.00998",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "探討具交易成本與搜尋摩擦的有限期投資組合，理論嚴謹。"
+    },
+    {
+      "arxiv_id": "2609.03106",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 7,
+      "reason": "利用車險投資組合探討表格資料的縮放定律，實證紮實。"
+    },
+    {
+      "arxiv_id": "2608.12583",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "金融擴散生成模型的文獻綜述，提供開源程式碼。"
+    },
+    {
+      "arxiv_id": "2608.08825",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "已獲 IJCNN 接受，針對高頻股票預測進行混合神經模型消融實驗。"
+    },
+    {
+      "arxiv_id": "2608.05991",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 5,
+      "reason": "提出知識最佳化投資決策框架，情境分析架構較抽象。"
+    },
+    {
+      "arxiv_id": "2607.28446",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "提出多模態資產訊號佐證框架，股票與加密貨幣實證完整。"
+    },
+    {
+      "arxiv_id": "2607.24680",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "使用大量標普五百選擇權資料進行參數化校準，實證扎實。"
+    },
+    {
+      "arxiv_id": "2607.22491",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出狀態相依波幅預測架構，具備具體資產回測與顯著性檢定。"
+    },
+    {
+      "arxiv_id": "2607.14373",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "結合逆向強化學習與風險度量，理論推導完整但缺少真實市場回測。"
+    },
+    {
+      "arxiv_id": "2607.01765",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "利用 CRSP 長期資料對 155 個因子進行診斷，實證紮實。"
+    },
+    {
+      "arxiv_id": "2606.26731",
+      "topic": "交易執行",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 5,
+      "reason": "以模擬再平衡探討動態避險評價調整，僅基於模擬資料。"
+    },
+    {
+      "arxiv_id": "2606.23492",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "使用真實股票資料檢驗隱藏馬可夫模型，實證完整且結論清晰。"
+    },
+    {
+      "arxiv_id": "2606.10098",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "於真實量子硬體上執行動態投組最佳化，實證工程完整。"
+    },
+    {
+      "arxiv_id": "2606.07727",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "在 NISQ 量子硬體上對 CVaR 投組進行基準測試，分析硬體限制。"
+    },
+    {
+      "arxiv_id": "2606.04959",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "證明自動造市商公平性與策略防禦性的不可能定理，數學推導嚴謹。"
+    },
+    {
+      "arxiv_id": "2605.25631",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "將凱爾模型推廣至連續時間隱私補貼，理論推導扎實。"
+    },
+    {
+      "arxiv_id": "2605.19146",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 6,
+      "reason": "提出鏈上永續選擇權設計架構，偏向機制設計與理論探討。"
+    },
+    {
+      "arxiv_id": "2605.17628",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "使用真實 D-Wave 量子硬體測試無懲罰項投組最佳化，實證扎實。"
+    },
+    {
+      "arxiv_id": "2605.17117",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "利用幾何可觀測量進行金融體制偵測，歷史危機回測完整。"
+    },
+    {
+      "arxiv_id": "2605.15746",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "推導雜訊干擾下凱爾模型的隱私補貼閉形式解，理論架構清晰。"
+    },
+    {
+      "arxiv_id": "2605.12099",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出已實現波動度的貝氏動態模型，利用標普 ETF 進行實證。"
+    },
+    {
+      "arxiv_id": "2605.09123",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 5,
+      "reason": "探討路徑相依的不對稱波動度管理框架，偏向資產配置方法論。"
+    },
+    {
+      "arxiv_id": "2605.02326",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "使用大量中國 A 股高頻資料進行資產篩選與投組回測，實證完整。"
+    },
+    {
+      "arxiv_id": "2604.17251",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出線上體制相關性分析器進行危機預測，15年美國市場回測紮實。"
+    },
+    {
+      "arxiv_id": "2604.14322",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 8,
+      "reason": "已獲 ICML 接受，提出強健線上隱馬可夫模型，配備極限訂單簿實證。"
+    },
+    {
+      "arxiv_id": "2604.11143",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "將氣候實體風險納入投組最佳化，具備具體回測分析。"
+    },
+    {
+      "arxiv_id": "2604.14439",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "以循環神經網路求解多期均值 DCVaR 最佳化，具備完整驗證。"
+    },
+    {
+      "arxiv_id": "2604.05699",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 9,
+      "reason": "已刊登於 Journal of Financial Economics，實證極為嚴謹。"
+    },
+    {
+      "arxiv_id": "2603.29994",
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 7,
+      "reason": "結合隨機控制與深度避險探討無交易區間，數值實驗完整。"
+    },
+    {
+      "arxiv_id": "2604.09650",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "使用中國 A 股預測股票回購，特徵演化與可解釋性分析完整。"
+    },
+    {
+      "arxiv_id": "2603.15652",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "探討基數限制與黑期爾選擇權的 NP 難題，實證與效能分析完整。"
+    },
+    {
+      "arxiv_id": "2603.05917",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "已刊登於 IEEE Access，結合節點轉換器與 BERT 進行標普 500 預測。"
+    },
+    {
+      "arxiv_id": "2603.05119",
+      "topic": "回測與研究方法",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "高頻跳躍擴散模型的參數估計檢定，主要依賴模擬實驗佐證。"
+    },
+    {
+      "arxiv_id": "2602.21362",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "以標普 500 長期資料進行有號網路降維與回測，實證扎實。"
+    },
+    {
+      "arxiv_id": "2602.21125",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "將凱爾模型推廣至多資產無限維內線交易遊戲，理論推導嚴謹。"
+    }
+  ]
+}
