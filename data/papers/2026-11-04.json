@@ -1,0 +1,520 @@
+{
+  "date": "2026-11-04",
+  "generated_at": "2026-11-04T11:02:35+08:00",
+  "scanned": 2443,
+  "eligible": 2267,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2611.01951",
+      "title": "The Cryptocurrency Trend Factor Revisited: Predictive Information, Portfolio Construction, and Pricing Claims",
+      "authors": [
+        "Yifei Wang",
+        "Zhenling Pang"
+      ],
+      "abstract": "We reassess five economic claims about the cryptocurrency trend factor (CTREND): cross-sectional return predictability, high risk-adjusted performance, incremental information beyond market, size, and momentum, the ability to replace momentum in factor models, and robustness among large and liquid coins and after trading costs. Our reconstruction and code audit identify issues in information timing, technical indicators, forecast coverage, portfolio formation, and return accounting. We first correct future-information use and related settlement rules, then implement broader corrections to indicators, forecast availability, and portfolio accounting. Without additional coin exclusions, the first stage changes CTREND's mean weekly gross return from 4.07% to 4.25%, annualized Sharpe ratio from 2.08 to 1.48, and weekly alpha relative to published market, size, and momentum factors from 2.77% to 3.06%. After comprehensive correction, these become 0.05%, 0.01, and -1.38%; the alpha is no longer significant. Replacing momentum with CTREND yields an advantage in maximum squared Sharpe ratios of 0.058 in the original implementation, 0.024 after the first-stage correction, and -0.0185 after comprehensive correction, with a statistically significant overall decline. Mean weekly gross returns for the largest 100 coins change from 2.93% to 3.99% to 1.00%, while mean weekly net returns for the full long-short portfolio under the lowest assumed trading costs change from 2.93% to 3.35% to -0.87%. These findings show that reported performance and factor-substitution gains depend materially on implementation and sample composition. We distinguish predictive information, an independent return premium, and the incremental value of replacing an existing factor as separate economic claims.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE"
+      ],
+      "published": "2026-11-01T14:31:54Z",
+      "updated": "2026-11-01T14:31:54Z",
+      "abs_url": "https://arxiv.org/abs/2611.01951",
+      "pdf_url": "https://arxiv.org/pdf/2611.01951v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 36,
+      "matched_keywords": [
+        "sharpe ratio",
+        "factor model",
+        "momentum",
+        "cryptocurrency",
+        "cross-sectional",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 9,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "重現加密貨幣趨勢因子，修正未來資訊漏洞後發現Alpha消失，警世且實證嚴謹。",
+      "summary": {
+        "title_zh": "加密貨幣趨勢因子再探：預測資訊、投資組合建構與訂價主張",
+        "verdict": "修正原實證研究中的未來資訊與會計瑕疵後，加密貨幣趨勢因子的顯著超額報酬與因子替代效益完全消失。",
+        "problem": "過去文獻提出加密貨幣趨勢因子（CTREND）具備橫斷面報酬預測力與高風險調整後報酬，但其資訊時間點與回測設定存有疑慮。",
+        "method": "重新檢視並修正原研究的技術指標、資訊可用性與投資組合會計，涵蓋全體加密貨幣與大型流動性幣種，使用週頻資料。",
+        "findings": "修正前原始實現的週平均報酬為 4.07%、年化夏普值 2.08；經全面修正後，週平均報酬降至 0.05%、年化夏普值降至 0.01、阿爾發值不再顯著。在最低交易成本假設下，多空投資組合的週平均淨報酬由修正前的 2.93% 變成 -0.87%。",
+        "implication": "文獻中報告的因子績效高度依賴實證細節與樣本組成，直接套用現有學術因子進行加密貨幣交易風險極高。",
+        "caveats": "研究結論高度取決於對原作者程式碼與資料處理邏輯的修正假設是否全面。",
+        "practicality": 2,
+        "tags": [
+          "加密貨幣",
+          "動能因子",
+          "因子模型",
+          "量化回測"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.03985",
+      "title": "Thinking Fast, Trading Late: System One Decision Models vs the Market",
+      "authors": [
+        "Amir Dehkordi",
+        "Alireza Kargarzadeh",
+        "Nariman Khaledian",
+        "Navid Parvini",
+        "Sid Ghatak",
+        "Arman Khaledian"
+      ],
+      "abstract": "Large language models (LLMs) read company news at scale, and backtests suggest that their readings predict stock returns. We ask how much of that predictability survives a test that rules out look-ahead, memorization and selection. We propose OLIVIA, a protocol for such tests: point-in-time inputs with company identities masked, selection on validation data only, an analysis plan frozen by cryptographic hash, and a test period unblinded once through a logged lock. We apply it to AI decision models, non-generative language models that return probabilities for typed questions, reading news about S&P 500 stocks: an open-weights model we fine-tuned on 2024-2025 data, three commercial models and standard baselines. The fine-tuned model's signal replicated on two validation quarters (daily information coefficients 0.055 and 0.065) but fell to 0.020 (t = 1.7) on the blinded January-July 2026 test. The commercial models' readings line up with the overnight move to the open (information coefficient 0.074 to 0.077) but not with the move after it, so the news is priced by the time a trader can act on it at the open. No model can tell over- from under-reaction, and no pre-registered strategy survives costs and a deflated Sharpe ratio. Commercial models identify masked companies in 62% to 74% of cases against a 28% baseline: masking hides names, not companies. The market reads the news first.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "q-fin.ST"
+      ],
+      "published": "2026-11-02T21:24:49Z",
+      "updated": "2026-11-02T21:24:49Z",
+      "abs_url": "https://arxiv.org/abs/2611.03985",
+      "pdf_url": "https://arxiv.org/pdf/2611.03985v1",
+      "comment": "40 pages, 12 figures, 12 tables; pre-registered (analysis plan frozen by hash before the test period was unblinded); code at https://github.com/AmirDehkordi/NewsAction",
+      "journal_ref": "",
+      "keyword_score": 30,
+      "matched_keywords": [
+        "sharpe ratio",
+        "backtest",
+        "llm",
+        "large language model",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 9,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "嚴格控制前視偏誤測試大語言模型閱讀新聞的報酬，發現在開盤前已被定價。",
+      "summary": {
+        "title_zh": "思考快，交易慢：系統一決策模型與市場的對決",
+        "verdict": "嚴格防範前視偏誤的測試顯示，LLM 讀取新聞的預測能力在計入交易成本與 deflated Sharpe ratio 後無法生存。",
+        "problem": "LLM 閱讀公司新聞的回測通常預測了股票報酬，但這些結果往往受到前視偏誤、記憶效應與挑選偏差的干擾，真實效力存疑。",
+        "method": "提出 OLIVIA 協定進行嚴格測試，包含點對點輸入、公司身份遮蔽、僅在驗證資料上挑選、加密雜湊凍結分析計畫等。應用於閱讀 SPX 股票新聞的微調開源模型、三個商業模型與標準基準。",
+        "findings": "微調模型在驗證季的每日資訊係數為 0.055 與 0.065，但在盲測期跌至 0.020（t = 1.7）。商業模型的解讀與隔夜到開盤的跳空變動一致（資訊係數 0.074 至 0.077），但在開盤後無效，且沒有預先登錄的策略能在扣除成本與 deflated Sharpe ratio 後存活。",
+        "implication": "新聞在交易員能於開盤動作時已被市場定價，模型無法分辨過度反應與反應不足。若要應用必須考量資訊延遲與真實成本的衝擊。",
+        "caveats": "遮蔽公司名稱的效果有限，商業模型仍能在 62% 至 74% 的情況下辨識出被遮蔽的公司。",
+        "practicality": 1,
+        "tags": [
+          "LLM",
+          "Alpha 因子挖掘",
+          "SPX",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.29771",
+      "title": "CLQT: A Closed-Loop, Cost-Aware, Strategy-Consistent Benchmark for Diagnostic Evaluation of LLM Portfolio-Management Agents",
+      "authors": [
+        "Bo Qu",
+        "Mingguang Chen"
+      ],
+      "abstract": "LLM agents are increasingly cast as autonomous portfolio managers, yet the dominant evaluation idiom, a leaderboard of returns over a fixed window, certifies neither the soundness of an agent's process nor the durability of its edge: one period's return is dominated by the market path, and apparent alpha can dissolve once look-ahead bias and trading costs are controlled. We introduce CLQT, a closed-loop benchmark that reframes LLM trading evaluation as diagnosis rather than ranking. CLQT enforces point-in-time data access through a hard TimeGate, models institutional transaction and financing costs, scores strategy consistency across rounds, and seals every gather-analyze-decide-execute-reflect cycle into a recompute-verifiable audit chain; the same model runs as a constrained investment committee or a single autonomous orchestrator, making scaffolding an experimental variable. From the audit trail CLQT computes a five-axis capability scorecard (Coherence, Acuity, Composure, Discipline, Reliability), with coherence scored partly by a held-out LLM judge to curb self-preference bias. We validate CLQT on a contamination-controlled, year-long multi-model backtest campaign with a 13-configuration ablation grid and a four-week live broker paper-trading track on post-cutoff data. The diagnosis-first read shows that the capability leader is not the Sharpe leader; that agents' allocations systematically fail to follow their own stated analysis, a stating-versus-doing gap stable across both tracks (+0.30 backtest, +0.23 live); and that module value registers on the capability and behavioral axes when returns alone cannot separate it. Net of realistic costs, agents clear defensive baselines but do not cleanly beat the index. Credible evaluation of LLM investment agents must therefore diagnose the process rather than rank a period's return, the standard CLQT operationalizes and makes auditable.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "q-fin.CP",
+        "q-fin.PM"
+      ],
+      "published": "2026-06-29T04:26:30Z",
+      "updated": "2026-09-12T07:00:24Z",
+      "abs_url": "https://arxiv.org/abs/2606.29771",
+      "pdf_url": "https://arxiv.org/pdf/2606.29771v3",
+      "comment": "53 pages, 14 figures, 10 tables. Expanded benchmark comparison and related work, compressed and copy-edited presentation, references converted to author-year, appendices consolidated, and a blinded human-anchoring study of the held-out LLM judge added",
+      "journal_ref": "",
+      "keyword_score": 19,
+      "matched_keywords": [
+        "backtest",
+        "llm",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 9,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出封閉迴圈、成本感知、策略一致的基準來診斷投資組合管理代理人。",
+      "summary": {
+        "title_zh": "CLQT：用於評估LLM投資組合管理代理的閉環、考量成本且策略一致的診斷基準",
+        "verdict": "提出名為 CLQT 的基準來診斷 LLM 投資代理的決策過程，發現其分析與實際配置存在落差，且計入成本後未能穩定打敗大盤。",
+        "problem": "現行的 LLM 交易評估過度依賴固定窗口的報酬率排行榜，無法檢驗決策過程的健全性，且容易受到未來視窗偏差與交易成本的干擾。",
+        "method": "採用名為 CLQT 的閉環診斷基準，結合強制時間閘門的時間點資料存取、機構級交易與融資成本模型，並對多個模型進行為期一年的回測與四周的實盤模擬交易驗證。",
+        "findings": "回測與實盤顯示代理的資產配置系統性地未能落實其自身的分析，出現穩定的言行落差（回測 +0.30、實盤 +0.23）；扣除實際成本後，代理能達到防守型基準但未明顯打敗大盤，且夏普值領先者與能力評分領先者並非同一者。",
+        "implication": "評估 LLM 投資代理應轉向診斷決策過程而非單純比較報酬率，此架構可協助團隊在實戰前檢驗代理的紀律與穩定性。",
+        "caveats": "代理在扣除真實成本後的績效並未乾淨俐落打敗指數。",
+        "practicality": 4,
+        "tags": [
+          "基礎模型",
+          "投資組合管理",
+          "量化基準",
+          "成本考量",
+          "代理系統"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.04040",
+      "title": "PanelGP: A Probabilistic Factor Model for Asset-Return Panels",
+      "authors": [
+        "Andrea Ruglioni",
+        "Damir Filipovic"
+      ],
+      "abstract": "We develop PanelGP, a conditional factor model for large panels of stock returns in which firm characteristics determine the factor loadings and economic conditions determine the expected factors. Both relations are estimated nonparametrically with Gaussian-process priors. The kernel choice nests instrumented principal component analysis (IPCA) as well as smooth nonlinear maps. Asset-specific loading innovations and common factor innovations separate idiosyncratic from systematic risk, so one estimated model forecasts both expected returns and their covariance matrix. Estimation uses sparse variational inference with a joint posterior over loadings and factors. Because each predicted return is bilinear in a Gaussian state, the predictive covariance matrix and the cumulants of any portfolio have closed forms. In simulations, the estimator recovers the nonlinear maps and the variance parameters. For S&P 500 constituents over 1995-2024, nonlinear loadings rank stocks better than affine loadings and improve the Gaussian log score. Relative to IPCA, the resulting portfolios have higher Sharpe ratios, also net of trading costs, and the minimum-variance portfolio has lower volatility. The predicted variances rank stocks and months by risk but are too compressed.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "econ.EM",
+        "stat.ML"
+      ],
+      "published": "2026-11-02T22:35:34Z",
+      "updated": "2026-11-02T22:35:34Z",
+      "abs_url": "https://arxiv.org/abs/2611.04040",
+      "pdf_url": "https://arxiv.org/pdf/2611.04040v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 34,
+      "matched_keywords": [
+        "sharpe ratio",
+        "factor model",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合高斯過程與特徵發展條件因子模型，實證改善夏普值與風險表現。",
+      "summary": {
+        "title_zh": "PanelGP：資產報酬面板的機率性因子模型",
+        "verdict": "以高斯過程先驗擴展 IPCA，非線性因子負荷量提升了預測表現與投資組合夏普值。",
+        "problem": "現有的條件式因子模型多假設線性關係，無法捕捉特徵與因子負荷量之間可能存在的複雜非線性對應。",
+        "method": "運用具有高斯過程先驗的條件式因子模型 PanelGP，結合稀疏變分推論來估計，資料涵蓋 1995 至 2024 年的 S&P 500 成分股。",
+        "findings": "實證顯示非線性負荷量的選股表現優於仿射負荷量，並提升了 Gaussian log score。相較於 IPCA，建構出的投資組合在扣除交易成本後有更高的夏普值，最小變異數投資組合的波動度也較低。",
+        "implication": "此方法能同時預測預期報酬與共變異數矩陣且具備封閉解，適合用於改善資產配置與風險管理。",
+        "caveats": "預測的變異數雖然能對風險進行排序，但數值本身有過度壓縮的傾向。",
+        "practicality": 4,
+        "tags": [
+          "因子模型",
+          "高斯過程",
+          "機器學習",
+          "資產配置"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.03453",
+      "title": "Penalize the Common Trade: A Collision-Aware Layer for Learned Portfolios",
+      "authors": [
+        "Eric Benhamou",
+        "Jean-Jacques Ohana",
+        "Beatrice Guez",
+        "Ethan Setrouk",
+        "Chamyl Saadi",
+        "Thomas Jacquot"
+      ],
+      "abstract": "Different learning systems can make nearly the same trade when they share data, objectives, or representations. The market then sees decision concentration even if the models look diverse. We call exposure to this shared direction a signal collision. A linear-impact game shows the basic externality: each allocator chooses too much common exposure because it does not bear the full price effect imposed on others. An overlap-dependent toll recovers the social choice, and a feedback model gives the exact gain at which return-responsive allocation becomes unstable. We also state the restrictive spectral conditions under which a leading eigenportfolio can reveal the collision direction. These results motivate a simple post-model layer: subtract a penalty for loading on the recent common return mode before forming the portfolio. In a frozen panel of ten liquid cross-asset ETFs, 760 completed weeks from January 2012 through July 2026, and exact self-financing costs of 10 basis points per dollar traded, this layer changes maximum drawdown from 23.6% to 14.1%, volatility from 12.6% to 10.7%, and excess-return Sharpe from 0.664 to 0.667. A volatility-matched momentum diagnostic still draws down 19.9%. Paired stationary-bootstrap uncertainty is wide: the 95% interval for drawdown improvement is $[-3.3,18.4]$ percentage points and includes zero. The result establishes a reproducible risk-control association and specifies the holdings-and-flow validation needed to attribute the common direction to AI crowding. AI-use disclosure. Generative AI tools, including OpenAI Codex, assisted manuscript preparation. For this preprint version, Codex assisted with LaTeX editing, author and venue metadata, compilation, and layout checks.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM"
+      ],
+      "published": "2026-11-02T16:59:38Z",
+      "updated": "2026-11-02T16:59:38Z",
+      "abs_url": "https://arxiv.org/abs/2611.03453",
+      "pdf_url": "https://arxiv.org/pdf/2611.03453v1",
+      "comment": "9 pages, 1 figure. Author preprint",
+      "journal_ref": "",
+      "keyword_score": 21,
+      "matched_keywords": [
+        "momentum",
+        "drawdown"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探討群聚交易的訊號衝突並提出懲罰層，實證顯示能降低最大回撤。",
+      "summary": {
+        "title_zh": "懲罰共同交易：學習型投資組合的碰撞感知層",
+        "verdict": "提出碰撞感知懲罰層以緩解模型間的信號擁擠，在跨資產 ETF 樣本中顯著改善最大回檔。",
+        "problem": "當多個學習系統共享資料與目標時，會產生決策集中與信號碰撞，導致配置者承受過度的價格衝擊外部性。",
+        "method": "運用線性衝擊賽局與光譜條件分析，設計出一個針對近期共同報酬模式扣除懲罰的後處理模型層。資料使用 10 檔流動性跨資產 ETF 的固定面板，涵蓋 2012 年 1 月至 2026 年 7 月共 760 週，交易成本假設為每美元 10 個基點。",
+        "findings": "加入此層後，最大回檔由 23.6% 改善至 14.1%，波動度由 12.6% 降至 10.7%，超額報酬夏普值從 0.664 微幅升至 0.667。然而配對靜態拔靴法（stationary-bootstrap）的不確定性區間較寬，95% 的回檔改善區間為 [-3.3, 18.4] 個百分點且包含零。",
+        "implication": "實務上可作為簡單的後處理層來控制擁擠風險，但由於拔靴法檢定包含零，實際歸因於 AI 擁擠仍需進一步的持倉與資金流向驗證。",
+        "caveats": "回檔改善幅度雖大，但在統計檢定上其 95% 信賴區間包含零，顯示效果可能受限於隨機波動。",
+        "practicality": 4,
+        "tags": [
+          "投資組合最佳化",
+          "擁擠風險",
+          "市場衝擊",
+          "資產配置"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2512.11273",
+      "title": "Integrated Prediction and Multi-period Portfolio Optimization",
+      "authors": [
+        "Yuxuan Linghu",
+        "Zhiyuan Liu",
+        "Qi Deng"
+      ],
+      "abstract": "Multi-period portfolio optimization is important for real portfolio management, as it accounts for transaction costs, path-dependent risks, and the intertemporal structure of trading decisions that single-period models cannot capture. Classical methods usually follow a two-stage framework: machine learning algorithms are employed to produce forecasts that closely fit the realized returns, and the predicted values are then used in a downstream portfolio optimization problem to determine the asset weights. This separation leads to a fundamental misalignment between predictions and decision outcomes, while also ignoring the impact of transaction costs. To bridge this gap, recent studies have proposed the idea of end-to-end learning, integrating the two stages into a single pipeline. This paper introduces IPMO (Integrated Prediction and Multi-period Portfolio Optimization), a model for multi-period mean-variance portfolio optimization with turnover penalties. The predictor generates multi-period return forecasts that parameterize a differentiable convex optimization layer, which in turn drives learning via portfolio performance. For scalability, we introduce a mirror-descent fixed-point (MDFP) differentiation scheme that avoids factorizing the Karush-Kuhn-Tucker (KKT) systems, which thus yields stable implicit gradients and nearly scale-insensitive runtime as the decision horizon grows. In experiments with real market data and two representative time-series prediction models, the IPMO method consistently outperforms the two-stage benchmarks in risk-adjusted performance net of transaction costs and achieves more coherent allocation paths. Our results show that integrating machine learning prediction with optimization in the multi-period setting improves financial outcomes and remains computationally tractable.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE",
+        "cs.LG"
+      ],
+      "published": "2025-12-12T04:31:22Z",
+      "updated": "2026-09-09T10:54:21Z",
+      "abs_url": "https://arxiv.org/abs/2512.11273",
+      "pdf_url": "https://arxiv.org/pdf/2512.11273v3",
+      "comment": "23 pages, 6 figures, and 4 tables",
+      "journal_ref": "",
+      "keyword_score": 20,
+      "matched_keywords": [
+        "portfolio optimization",
+        "transaction cost"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合預測與多期投資組合最佳化，提出端到端學習架構，兼顧交易成本。",
+      "summary": {
+        "title_zh": "整合預測與多期投資組合最佳化",
+        "verdict": "提出 IPMO 模型將預測與多期投資組合最佳化端到端整合，在計入交易成本後能改善風險調整後績效。",
+        "problem": "傳統兩階段方法（先預測報酬再做最佳化）會導致預測與決策目標不一致，且忽略交易成本對多期決策的影響。",
+        "method": "使用含換手率懲罰的多期均異異質最佳化模型，結合可微分凸最佳化層與鏡射下降不動點微分法。使用真實市場資料與兩個代表性時間序列預測模型進行實證。",
+        "findings": "IPMO 方法在扣除交易成本後的風險調整後績效一致優於兩階段基準模型，並能產生更具一致性的資產配置路徑。具體數字未在摘要中報告。",
+        "implication": "實務上可採用端到端學習框架來改善多期資產配置，避免傳統預測與最佳化脫節的問題。前提是需要實作可微分的最佳化層與高效率的梯度計算。",
+        "caveats": "論文摘要未提供具體的報酬率與夏普值等量化績效改善幅度。",
+        "practicality": 4,
+        "tags": [
+          "投資組合最佳化",
+          "機器學習",
+          "端到端學習",
+          "交易成本"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.24410",
+      "title": "The Fundamental Structure of Risk: From Characteristics to Covariance",
+      "authors": [
+        "Alexandre Alouadi",
+        "Charles-Albert Lehalle"
+      ],
+      "abstract": "Estimating the covariance structure of financial assets typically relies on historical returns, making risk models dependent on noisy and asset-specific time series. We propose the Characteristic-Driven Dynamic Factor Model (CD-DFM), a non-linear latent factor model that instead constructs a representation of the asset cross-section directly from observable firm characteristics, primarily company fundamentals. The learned latent space jointly determines interpretable factor exposures and a forward covariance estimator, and is trained end to end on an objective that combines a Stein covariance loss with a factor reconstruction term, targeting the out-of-sample second moments used in risk management. Because the latent representation, i.e. the encoder depends only on characteristics, previously unseen assets can be embedded at inference time without retraining. Experiments on S&P 500 equities show that CD-DFM produces economically structured latent representations, interpretable factor portfolios, and competitive covariance forecasts despite relying on substantially lower-frequency information than return-based approaches. Among the benchmarked methods, it is the only model that simultaneously combines characteristic-driven representations, factor interpretability, competitive covariance calibration, and zero-shot onboarding of unseen assets.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.RM"
+      ],
+      "published": "2026-07-27T13:26:53Z",
+      "updated": "2026-07-27T13:26:53Z",
+      "abs_url": "https://arxiv.org/abs/2607.24410",
+      "pdf_url": "https://arxiv.org/pdf/2607.24410v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 19,
+      "matched_keywords": [
+        "factor model",
+        "out-of-sample"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出特徵驅動動態因子模型由公司特徵直接建構共變異數矩陣，方法創新且實證良好。",
+      "summary": {
+        "title_zh": "風險的基本結構：從特徵到共變異數",
+        "verdict": "提出基於公司基本面特徵的非線性潛在因子模型（CD-DFM），實現零樣本新增資產與具競爭力的共變異數預測。",
+        "problem": "傳統金融資產共變異數估計高度依賴歷史報酬，導致風險模型容易受到雜訊與資產特定時間序列的干擾。",
+        "method": "使用特徵驅動動態因子模型（CD-DFM），以 S&P 500 股票為樣本，透過結合 Stein 共變異數損失與因子重建項的目標函數進行端到端訓練。",
+        "findings": "CD-DFM 能夠產生具經濟結構的潛在表示、可解釋的因子投資組合，並在依賴顯著較低頻資訊的情況下，提供具競爭力的共變異數預測，未報告具體績效數字。",
+        "implication": "可用於風險管理中的樣本外二階動態估計，且編碼器僅依賴特徵，可在推論時直接嵌入未見過的資產而無需重新訓練。",
+        "caveats": "模型依賴低頻的公司基本面特徵，未能完全發揮高頻資訊的優勢。",
+        "practicality": 4,
+        "tags": [
+          "動態因子模型",
+          "共變異數矩陣",
+          "風險管理",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.02616",
+      "title": "Herding or Racing? Decomposing Cross-Account Order-Flow Persistence in On-Chain Markets",
+      "authors": [
+        "Yichong Bai",
+        "Dingyue Kan"
+      ],
+      "abstract": "Most of the autocorrelation in trade signs on decentralized exchanges comes from pairs of trades sent by different wallets. For Uniswap v3, this has been read as herding dominating order splitting -- the reverse of what equity markets show. We show that this herding share mixes two quantities: the probability $p$ that consecutive orders come from the same account, which is small when thousands of wallets are trading, and the ratio $κ$ of cross-account to same-account sign correlation. For any $p$, $κ$ equals one under the public-signal benchmark of Tóth et al. and zero under independent order splitting. On Uniswap v3 USDC-WETH (one week each in 2023 and 2024), the herding share is 0.65-0.86, but $κ$ is only 0.05-0.10. On a fully on-chain EVM limit order book, the herding share is similar (0.61-0.87), but $κ$ is 0.72-0.76; among Uniswap swaps above USD 100k, it is 0.34-0.52. Where $κ$ is high, cross-account co-movement is mostly a race for the price on a centralized exchange. It is concentrated in orders a few blocks apart, and a cross-fitted gradient-boosted filter that sees only Binance data removes about three quarters or more of it. This race flow accounts for most of the losses of liquidity providers. We recommend reporting $κ$ alongside the herding share and modeling on-chain order flow as splitting traders plus arbitrageurs who respond to the centralized-exchange price.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE",
+        "q-fin.CP"
+      ],
+      "published": "2026-11-02T06:43:56Z",
+      "updated": "2026-11-02T06:43:56Z",
+      "abs_url": "https://arxiv.org/abs/2611.02616",
+      "pdf_url": "https://arxiv.org/pdf/2611.02616v1",
+      "comment": "N pages, 2 figures, 3 tables. Accepted at the workshop \"AI-Driven Market Microstructure in Centralized and Decentralized Finance\" at the 7th ACM International Conference on AI in Finance (ICAIF '26), Milan, November 2026",
+      "journal_ref": "",
+      "keyword_score": 35,
+      "matched_keywords": [
+        "limit order book",
+        "order flow",
+        "order book",
+        "liquidity",
+        "equity market"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "分解鏈上市場訂單流持續性，解構群聚與套利行為，分析深入。",
+      "summary": {
+        "title_zh": "跟風還是競速？解構鏈上市場的跨帳戶訂單流持續性",
+        "verdict": "鏈上市場的跨帳戶訂單流持續性主要源自對中心化交易所價格的套利競速，而非純粹的群聚效應。",
+        "problem": "去中心化交易所的交易方向自相關性多來自不同錢包的交易對，過去常被解讀為主導的群聚效應，這與權益市場的訂單分割現象相反。",
+        "method": "分析 Uniswap v3 USDC-WETH（2023 與 2024 年各一週）及全鏈 EVM 限價單簿的交易資料，提出跨帳戶與同帳戶符號相關性比率 $\\kappa$ 的分解方法。",
+        "findings": "在 Uniswap v3 上群聚佔比為 0.65-0.86，但 $\\kappa$ 僅 0.05-0.10；全鏈限價單簿的 $\\kappa$ 達 0.72-0.76，大額交易的 $\\kappa$ 為 0.34-0.52。高 $\\kappa$ 代表跨帳戶共動主要為中心化交易所的價格競速，且使用 Binance 資料的梯度提升過濾器可去除約四分之三以上。",
+        "implication": "流動性提供者的大部分損失可歸咎於此競速流，建議在研究中同時報告 $\\kappa$ 並將鏈上訂單流建模為分割交易者加上對中心化交易所價格反應的套利者。",
+        "caveats": "分析主要基於特定時段的 Uniswap v3 與特定 EVM 限價單簿樣本，其結果可能隨區塊鏈網路與市場狀況而異。",
+        "practicality": 4,
+        "tags": [
+          "鏈上市場",
+          "訂單流",
+          "去中心化交易所",
+          "套利",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.03384",
+      "title": "Can We Stop the Backtest Yet? Anytime-Valid Promotion Tests for Adaptive Financial Research Agents",
+      "authors": [
+        "Eric Benhamou",
+        "Jean-Jacques Ohana",
+        "Beatrice Guez",
+        "Ethan Setrouk",
+        "Chamyl Saadi",
+        "Thomas Jacquot"
+      ],
+      "abstract": "Financial research agents can generate and monitor trading rules faster than a human can document the resulting selection process. Candidates appear at data-dependent times, weak rules are abandoned, and promising ones are watched until they cross a reporting threshold. We introduce PROMOTE, a protocol that assigns every candidate predictable testing wealth at birth and accumulates a cost-aware e-process only from subsequent returns. If lifetime allocations sum to at most one, a weighted Ville argument bounds the probability of ever promoting a rule whose declared bounded net score has always had nonpositive conditional mean. The result permits dependent candidates, adaptive births, and indefinite monitoring. We audit the implementation in two settings. A retrospective pseudo-out-of-sample replay contains 24 panel--rule hypotheses, 3,000 shared-sign null paths, injected alternatives, and public ETF and industry data. Repeated unadjusted tests produce a family crossing in 94.5% of null paths, versus 0.0% for PROMOTE; at a 15-bp aligned ETF-component perturbation, PROMOTE has 70.1% target power and median crossing session 2,327. A separate exact mean-zero experiment lets an agent select candidate identities and birth times from past scores; the funded gate has 1.77% false-family crossings across 3,000 programs. The market replay produces zero promotions after costs. The certificate controls historical false promotion under the declared null; it is not a certificate that an earlier edge remains profitable at deployment. AI-use disclosure. Generative AI tools, including OpenAI Codex, assisted manuscript preparation. For this preprint version, Codex assisted with LaTeX editing, author and venue metadata, compilation, and layout checks.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "q-fin.ST"
+      ],
+      "published": "2026-11-02T16:24:43Z",
+      "updated": "2026-11-02T16:24:43Z",
+      "abs_url": "https://arxiv.org/abs/2611.03384",
+      "pdf_url": "https://arxiv.org/pdf/2611.03384v1",
+      "comment": "9 pages, 2 figures. Accepted at ICAIF 2026, Milan, Italy",
+      "journal_ref": "",
+      "keyword_score": 22,
+      "matched_keywords": [
+        "out-of-sample",
+        "backtest"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出隨時有效的推廣檢定協議以控制資料探勘偏差，統計方法嚴謹。",
+      "summary": {
+        "title_zh": "我們能停止回測了嗎？針對自適應金融研究代理人的隨時有效晉升檢定",
+        "verdict": "提出 PROMOTE 協定以控制自適應金融代理人的多重假設檢定誤差，但在市場回測中扣除成本後產生零晉升。",
+        "problem": "金融研究代理人會以依賴資料的時間點生成、篩選並持續監控交易規則，傳統檢定方法會因重複測試而失效。這導致在動態探索過程中容易產生虛假的多重假設檢定錯誤。",
+        "method": "引入 PROMOTE 協定，為每個候選規則分配預測性的測試資本，並僅從後續報酬累積成本敏感的 e-process。透過回顧性偽樣本外重播進行實證，包含 24 個面板規則假設、3,000 條共用正負號虛無路徑，使用公開 ETF 與產業資料。",
+        "findings": "重複未調整的檢定在 94.5% 的虛無路徑中發生族系交叉，而 PROMOTE 則為 0.0%。在 15 個基點的 ETF 成分擾動下，PROMOTE 具有 70.1% 的目標檢定力。然而，市場重播在扣除交易成本後產生了零個晉升。",
+        "implication": "此方法能嚴格控制自適應代理人動態生成策略時的歷史錯誤晉升機率。但由於實測扣除成本後無有效策略存活，實際交易前仍需謹慎評估其獲利能力。",
+        "caveats": "此憑證僅能控制宣告虛無假設下的歷史錯誤晉升，無法保證早期優勢在實際部署時依然具有獲利能力。",
+        "practicality": 4,
+        "tags": [
+          "回測過擬合",
+          "統計檢定",
+          "自動化研究",
+          "交易策略"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.01656",
+      "title": "AIDA: An AI Outage Registry with Evidence from On-Chain MEV",
+      "authors": [
+        "Wenbin Wu"
+      ],
+      "abstract": "Generative AI coding tools have lowered the cost of writing trading software, but no systematic dataset records when these services fail. We introduce the AI Incident and Disruption Archive (AIDA), a multi-vendor registry of 5,868 deduplicated outage incidents across 30 providers from 2025 to 2026, with foundation-model incidents verified against primary status-page or postmortem URLs. Pairing AIDA with 5,041,034 verified maximal extractable value (MEV) transactions by 8,516 Ethereum addresses, their contract creations, and a 22-month Base Layer-2 panel of 1,099,593,191 swaps and 29,120 private executors, we establish two findings. First, entry into MEV expanded where code and public state suffice, as active arbitrage addresses quadrupled from late 2024 to late 2026 and liquidators grew by a third, while sandwich attackers, who need private order flow and builder access, declined. Execution nonetheless remained concentrated, with the top fifty addresses executing two thirds of verified trades. Second, AI outages stall new trading code while deployed bots keep trading. On Ethereum, addresses releasing a private executor fall to 0.67 on the day of an eight-hour disruption (0.68 for executor creations during OpenAI outage hours) and to 0.66 at lag two before rebounding on day three; on Base, operator top-level creations fall to 0.76 during OpenAI hours and executor-deploying operators to 0.88 at lag two. Non-trading creations, automated factory clones, and live arbitrage and sandwich execution across both chains remain unchanged. Cheaper code thus lowers the barrier to building MEV contracts, while private order flow, latency and capital still determine who wins execution.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.CE"
+      ],
+      "published": "2026-11-01T07:05:25Z",
+      "updated": "2026-11-01T07:05:25Z",
+      "abs_url": "https://arxiv.org/abs/2611.01656",
+      "pdf_url": "https://arxiv.org/pdf/2611.01656v1",
+      "comment": "27 pages, 7 figures, 5 tables",
+      "journal_ref": "",
+      "keyword_score": 20,
+      "matched_keywords": [
+        "order flow"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "建立AI中斷事件登記表並配對鏈上MEV交易，分析AI工具故障對交易執行的影響。",
+      "summary": {
+        "title_zh": "AIDA：基於鏈上MEV證據的AI中斷事件登記冊",
+        "verdict": "透過建立 AIDA 登記冊，發現 AI 系統故障會暫停新交易程式開發，但已部署的機器人仍持續運作。",
+        "problem": "生成式 AI 降低了編寫交易軟體的成本，但缺乏系統化資料記錄這些服務中斷對鏈上交易活動的影響。",
+        "method": "利用自建的 AI 中斷事件登記冊（AIDA，涵蓋 30 家供應商共 5,868 起事件），配對以太坊與 Base 鏈上 MEV 交易資料進行實證分析。",
+        "findings": "主動套利地址從 2024 年底到 2026 年底呈現四倍成長，但夾擠攻擊者減少。AI 中斷當天新交易程式建立數量降至 0.66 至 0.88 之間，而現有的即時套利與夾擠執行則保持不變。",
+        "implication": "便宜的程式碼降低了 MEV 合約的進入門檻，但私有訂單流、延遲與資本仍是決定勝負的關鍵。",
+        "caveats": "本研究高度依賴公共狀態頁面與鏈上合約特徵進行推論，可能無法捕捉未公開的服務中斷細節。",
+        "practicality": 3,
+        "tags": [
+          "區塊鏈",
+          "MEV",
+          "人工智慧",
+          "智慧合約"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

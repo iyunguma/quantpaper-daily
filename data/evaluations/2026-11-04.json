@@ -1,0 +1,327 @@
+{
+  "date": "2026-11-04",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2611.03660",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "利用大語言模型模擬閃崩，但全數依賴模擬資料，無真實市場回測。"
+    },
+    {
+      "arxiv_id": "2611.02866",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出張量模型預測訂單簿，在基準資料集上有扎實實證。"
+    },
+    {
+      "arxiv_id": "2611.01951",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 9,
+      "reason": "重現加密貨幣趨勢因子，修正未來資訊漏洞後發現Alpha消失，警世且實證嚴謹。"
+    },
+    {
+      "arxiv_id": "2611.02616",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "分解鏈上市場訂單流持續性，解構群聚與套利行為，分析深入。"
+    },
+    {
+      "arxiv_id": "2611.04040",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "結合高斯過程與特徵發展條件因子模型，實證改善夏普值與風險表現。"
+    },
+    {
+      "arxiv_id": "2611.04217",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "結合大語言模型先驗與新聞語意圖預測股票報酬，實證完整且表現顯著。"
+    },
+    {
+      "arxiv_id": "2611.02091",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "提出具備持續學習的量子神經網路進行預測，但金融應用與量子結合過度繁複。"
+    },
+    {
+      "arxiv_id": "2611.04070",
+      "topic": "回測與研究方法",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "以模擬世界測試大語言模型判斷預測能力的假陽性率，方法合理。"
+    },
+    {
+      "arxiv_id": "2611.03985",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 9,
+      "reason": "嚴格控制前視偏誤測試大語言模型閱讀新聞的報酬，發現在開盤前已被定價。"
+    },
+    {
+      "arxiv_id": "2611.01799",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "建立自動化市場機制的理論模型，分析學習代理人與造市商回饋，偏重理論。"
+    },
+    {
+      "arxiv_id": "2611.04119",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "萃取分析師目標價修訂的多維觀點，實證改善報酬預測，具實務參考價值。"
+    },
+    {
+      "arxiv_id": "2611.03384",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出隨時有效的推廣檢定協議以控制資料探勘偏差，統計方法嚴謹。"
+    },
+    {
+      "arxiv_id": "2611.03453",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "探討群聚交易的訊號衝突並提出懲罰層，實證顯示能降低最大回撤。"
+    },
+    {
+      "arxiv_id": "2611.01656",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "建立AI中斷事件登記表並配對鏈上MEV交易，分析AI工具故障對交易執行的影響。"
+    },
+    {
+      "arxiv_id": "2611.01621",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出金融深度研究系統的診斷性回測基準，檢驗檢索與資料新鮮度。"
+    },
+    {
+      "arxiv_id": "2602.03874",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "建構加密貨幣系統性風險指數，進行歷史危機事件的回顧與檢定。"
+    },
+    {
+      "arxiv_id": "2601.03974",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "利用拓撲資料分析建構投資組合風險指標，實證表現優於傳統模型。"
+    },
+    {
+      "arxiv_id": "2512.20515",
+      "topic": "投組與風險",
+      "evidence": "只有模擬資料",
+      "relevance": 5,
+      "value": 5,
+      "reason": "使用圖神經網路與代理人模型模擬金磚國家銀行系統風險與地緣政治衝擊。"
+    },
+    {
+      "arxiv_id": "2512.16080",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "設計支援任意到期日的去中心化固定收益借貸自動化市場機制，實證表現穩定。"
+    },
+    {
+      "arxiv_id": "2512.11273",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "結合預測與多期投資組合最佳化，提出端到端學習架構，兼顧交易成本。"
+    },
+    {
+      "arxiv_id": "2512.17929",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "比較多種強化學習方法在中央銀行貨幣政策中的應用，發現簡單表格型表現最佳。"
+    },
+    {
+      "arxiv_id": "2512.08851",
+      "topic": "回測與研究方法",
+      "evidence": "看不出來",
+      "relevance": 7,
+      "value": 5,
+      "reason": "將霍夫丁不等式應用於交易策略績效，作為市場體制轉換的早期預警。"
+    },
+    {
+      "arxiv_id": "2512.15739",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "發展貝氏分析框架以量化金融風險預測與合規的不確定性，實證完整。"
+    },
+    {
+      "arxiv_id": "2512.10971",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "建立即時金融市場自主代理人評測基準，發現多數代理人報酬與風險管理不佳。"
+    },
+    {
+      "arxiv_id": "2511.07322",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出自動生成股票研究報告的多代理人框架與評估基準。"
+    },
+    {
+      "arxiv_id": "2611.03022",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "建立可解釋的資產配置與模型預測再平衡系統，在真實與模擬市場進行測試。"
+    },
+    {
+      "arxiv_id": "2609.23703",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出市場摩擦感知的情感轉交易框架，整合新聞語意與真實交易限制。"
+    },
+    {
+      "arxiv_id": "2610.00165",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "實證研究預測合約平臺的結算終局與公開狀態路徑，偏向市場微結構實證。"
+    },
+    {
+      "arxiv_id": "2609.13402",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "開發擴散模型生成動態隱含波動率曲面並應用於避險，實證減少尾部風險。"
+    },
+    {
+      "arxiv_id": "2609.11905",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "發展熵值風險價值平價投資組合，實證顯示能獲得正向夏普值差異。"
+    },
+    {
+      "arxiv_id": "2608.00761",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "利用生成式AI基於總經基本面預測匯率回報，夏普值超過0.7。"
+    },
+    {
+      "arxiv_id": "2607.29220",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出隱含波動率曲面預測的解耦機率預測與無套利精煉框架，實證扎實。"
+    },
+    {
+      "arxiv_id": "2607.26691",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "對Sui區塊鏈進行純寫入分析以評估並行執行效能與擁堵成本，技術分析深入。"
+    },
+    {
+      "arxiv_id": "2610.08801",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "針對選擇權面板資料提出隨機設計抽樣以替代確定性選取，降低聚合誤差。"
+    },
+    {
+      "arxiv_id": "2607.24410",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出特徵驅動動態因子模型由公司特徵直接建構共變異數矩陣，方法創新且實證良好。"
+    },
+    {
+      "arxiv_id": "2608.26174",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "利用多尺度時序卷積網路預測比特幣重大走勢，結合獲利最佳化閾值。"
+    },
+    {
+      "arxiv_id": "2607.09121",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "結合大語言模型與RAG系統自動生成投資人簡報，並由投資人評估實用性。"
+    },
+    {
+      "arxiv_id": "2607.05291",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "系統性比較時序基礎模型與計量經濟學基準預測實現波動率，結論客觀。"
+    },
+    {
+      "arxiv_id": "2606.29771",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 9,
+      "reason": "提出封閉迴圈、成本感知、策略一致的基準來診斷投資組合管理代理人。"
+    },
+    {
+      "arxiv_id": "2606.29591",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "利用傅立葉殘差恆等式分解報酬自相關性，診斷出買賣價差跳動與非同步性。"
+    }
+  ]
+}
