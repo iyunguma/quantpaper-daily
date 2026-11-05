@@ -1,0 +1,503 @@
+{
+  "date": "2026-11-05",
+  "generated_at": "2026-11-05T11:34:04+08:00",
+  "scanned": 2445,
+  "eligible": 2259,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2611.05218",
+      "title": "Beyond Anonymous Order Flow: Wallet Identity as a Feature for Short-Horizon Return Prediction",
+      "authors": [
+        "Jingqiu Ding",
+        "Daojing Zhai"
+      ],
+      "abstract": "Conventional public order-book data summarize trading without identifying the accounts behind it. Hyperliquid's Level-4 record also exposes persistent pseudonymous wallet addresses. We reconstruct full-depth books from consensus-ordered messages and evaluate wallet identity as a feature for short-horizon return prediction. The July 1-27, 2026 record covers 17.1 billion messages, 14.3 million aggressive orders by 147,113 wallets, and $84.3 billion in taker notional across ten markets. In the three model markets, notional-weighted ten-second markout rankings persist across adjacent ten-day windows (Spearman rho = 0.52); covariate-adjusted validation markouts reach 3.11 basis points in the top ventile. On a 100-millisecond grid, eleven features describing previously scored top-decile wallets raise one-second out-of-sample R2 from 10.88% to 12.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.ST"
+      ],
+      "published": "2026-11-03T17:03:36Z",
+      "updated": "2026-11-03T17:03:36Z",
+      "abs_url": "https://arxiv.org/abs/2611.05218",
+      "pdf_url": "https://arxiv.org/pdf/2611.05218v1",
+      "comment": "8 pages, 5 figures, 3 tables. Accepted at ACM ICAIF '26",
+      "journal_ref": "",
+      "keyword_score": 36,
+      "matched_keywords": [
+        "order flow",
+        "out-of-sample"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "已獲 ACM ICAIF '26 接受，使用真實錢包特徵進行實證。",
+      "summary": {
+        "title_zh": "超越匿名訂單流：將錢包身分作為短線報酬預測的特徵",
+        "verdict": "利用 Hyperliquid 的錢包身分特徵進行短線報酬預測，可提升 out-of-sample R2 至 12%。",
+        "problem": "傳統公開 LOB 資料缺乏交易帳戶的識別資訊，無法利用地址追蹤進行短線預測。",
+        "method": "使用 Hyperliquid 的 L4 紀錄與共識排序訊息重建完整深度 LOB，資料涵蓋 2026 年 7 月 1 日至 27 日共十個市場的 171 億筆訊息與 147,113 個錢包。",
+        "findings": "加權 10 秒標記報酬排名在相鄰 10 天窗口具有持續性（Spearman rho = 0.52），前 5% 的共變數調整標記報酬達 3.11 個基點。在 100 毫秒網格上加入頂尖錢包特徵後，1 秒 out-of-sample R2 從 10.88% 提升至 12%。",
+        "implication": "去中心化交易所的公開錢包地址可作為有效的 Alpha 因子來源，適合用於高頻交易的微結構訊號擴充。",
+        "caveats": "資料樣本僅涵蓋特定去中心化交易所的特定月份，且未扣除實際執行時的交易成本。",
+        "practicality": 4,
+        "tags": [
+          "限價單簿",
+          "高頻交易",
+          "Alpha 因子挖掘",
+          "區塊鏈資料"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.04217",
+      "title": "LENS: Reliability-Aware Stock Prediction via LLM-Extracted Priors and News-Driven Semantic Graphs",
+      "authors": [
+        "Hao Zhou",
+        "Tiejun Ma",
+        "Luis Felipe Costa Sperb"
+      ],
+      "abstract": "Predicting stock returns requires modeling persistent company relations and time-varying market signals. Graph Neural Network (GNN) approaches combine static priors with dynamic relational graphs, but treat every extracted edge as a trustworthy binary fact, ignoring heterogeneous reliability across relational sources. We propose LENS (LLM-Extracted priors and News-driven Semantics), a static--dynamic graph framework for stock return prediction and ranking that models relational reliability as a first-class signal across the pipeline. On the static side, we extract a multi-relational company graph from a Large Language Model and aggregate it over multiple runs with confidence weighting to downweight low-consistency edges. On the dynamic side, we build a news-driven semantic graph with exponential-decay temporal aggregation to capture changing market context under uneven coverage. A context-dependent gated fusion module rebalances the two graphs at the per-stock, per-day level. On S&P 500, LENS improves AR@5 by 16.4% and SR@5 by 22.6% over the strongest baseline, and on NASDAQ 100 it achieves comparable improvements (15.5% and 20.9% respectively). Ablations isolate each component's contribution, and a human-validation study of sampled relations supports that the aggregation is grounded, providing evidence that reliability-aware LLM relations and news-based semantic graphs carry complementary information for graph-based financial prediction.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-11-03T03:00:31Z",
+      "updated": "2026-11-03T03:00:31Z",
+      "abs_url": "https://arxiv.org/abs/2611.04217",
+      "pdf_url": "https://arxiv.org/pdf/2611.04217v1",
+      "comment": "Accepted at CIKM 2026. 12 pages, 3 figures",
+      "journal_ref": "",
+      "keyword_score": 30,
+      "matched_keywords": [
+        "llm",
+        "large language model",
+        "graph neural network",
+        "stock",
+        "neural network"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合大語言模型先驗與新聞語意圖預測股票報酬，實證完整且表現顯著。",
+      "summary": {
+        "title_zh": "LENS：透過LLM萃取先驗與新聞驅動語意圖的可靠度感知股票預測",
+        "verdict": "結合LLM靜態關係先驗與動態新聞語意圖，以可靠度加權改善股票報酬預測，在SPX與NASDAQ 100上顯著提升預期報酬與夏普值。",
+        "problem": "現有圖神經網路方法將萃取出的關係邊視為可信的二元事實，忽略了不同關係來源的異質可靠度。",
+        "method": "提出LENS靜態動態圖框架，利用LLM多次執行並以信心加權萃取多關係公司圖，並結合具備時間衰減的新聞驅動動態語意圖；透過上下文相依的閘道融合模組在個股與每日層級重新平衡兩張圖。資料涵蓋S&P 500與NASDAQ 100。",
+        "findings": "在S&P 500上，LENS的AR@5較最強基準提升16.4%，SR@5提升22.6%；在NASDAQ 100上分別提升15.5%與20.9%。消融實驗證實各元件的貢獻，人工驗證亦支援聚合結果的合理性。",
+        "implication": "此方法證明了可靠度感知與動態語意圖的互補性，可應用於基於圖結構的多股票組合排序與選股策略。",
+        "caveats": "依賴LLM萃取與新聞資料的時間涵蓋品質，若新聞覆蓋不均可能影響動態圖的建構。",
+        "practicality": 4,
+        "tags": [
+          "圖神經網路",
+          "大型語言模型",
+          "股票預測",
+          "Alpha因子挖掘",
+          "語意分析"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.06159",
+      "title": "Regret Bounds for Market Making with Persistent Orders",
+      "authors": [
+        "Nicolò Cesa-Bianchi",
+        "Tommaso Cesari",
+        "Roberto Colomboni",
+        "Luigi Foscari",
+        "Vinayak Pathak"
+      ],
+      "abstract": "We study adversarial market making with orders that remain active until execution. The maker operates on two markets: a primary market where orders are made and a secondary market where the resulting positions are hedged. In each round, the maker posts a quote on the primary market before observing both primary and secondary market prices. An order executes when the primary price reaches its quote, and the resulting position is immediately offset at the secondary price. When both price sequences are chosen by an adversary over $T$ rounds, we give a simple deterministic policy with regret of order $\\log T$ against the best fixed quote (static comparator) and $\\sqrt T$ against the best quote for each submission date (dynamic comparator), plus two terms measuring exposure to future primary and secondary prices. These rates remain optimal even when both exposure terms vanish and lower bounds show that the exposure terms are necessary. Our policy naturally extends to simultaneous bids and asks, where we show that static and dynamic regret are both characterized (up to constant factors) by the exposures terms (where the primary price exposure $V_T^{\\mathrm{two}}$ now accounts for both bids and asks) and a term of order $\\sqrt{V_T^{\\mathrm{two}}\\log T}$. Our policy is simple, efficient and fully parameterless. We extend this setting by demonstrating how natural assumptions on the price processes lead to improved guarantees without changing the policy.",
+      "primary_category": "cs.GT",
+      "categories": [
+        "cs.GT",
+        "cs.LG"
+      ],
+      "published": "2026-11-04T08:39:39Z",
+      "updated": "2026-11-04T08:39:39Z",
+      "abs_url": "https://arxiv.org/abs/2611.06159",
+      "pdf_url": "https://arxiv.org/pdf/2611.06159v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 24,
+      "matched_keywords": [
+        "market making"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "對抗式造市的 regret bounds 理論推導與極優性證明。",
+      "summary": {
+        "title_zh": "具有持續性委託單的造市之悔恨界線",
+        "verdict": "提出針對持續性委託單的對抗式造市政策，在靜態與動態基準下分別達到最佳的對數與根號階數悔恨界線。",
+        "problem": "探討在對抗式價格序列下，造市商如何為持續有效至成交的委託單進行報價與避險，並有效控制悔恨值。",
+        "method": "採用對抗式線上學習框架，在主要市場進行無參數且高效的確定性報價政策，並在次級市場進行避險。",
+        "findings": "對單邊報價而言，對抗式下的靜態比較對象可達對數階悔恨，動態比較對象可達根號階悔恨，擴展至雙邊報價時由價格暴露項表徵，未報告具體績效數字。",
+        "implication": "此方法為全無參數的有效政策，可應用於限價單造市與避險，但需注意對未來價格序列的暴露風險。",
+        "caveats": "模型基於對抗式理論框架與價格暴露項，未納入真實市場微結構摩擦與交易成本進行實證。",
+        "practicality": 3,
+        "tags": [
+          "造市",
+          "線上學習",
+          "演算法",
+          "避險",
+          "限價單"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.05917",
+      "title": "Stock Market Prediction Using Node Transformer Architecture Integrated with BERT Sentiment Analysis",
+      "authors": [
+        "Mohammad Al Ridhawi",
+        "Mahtab Haj Ali",
+        "Hussein Al Osman"
+      ],
+      "abstract": "Stock market prediction presents considerable challenges for investors, financial institutions, and policymakers operating in complex market environments characterized by noise, non-stationarity, and behavioral dynamics. Traditional forecasting methods, including fundamental analysis and technical indicators, often fail to capture the intricate patterns and cross-sectional dependencies inherent in financial markets. This paper presents an integrated framework combining a node transformer architecture with BERT-based sentiment analysis for stock price forecasting. The proposed model represents the stock market as a graph structure where individual stocks form nodes and edges capture relationships including sectoral affiliations, correlated price movements, and supply chain connections. A fine-tuned BERT model extracts sentiment information from social media posts and combines it with quantitative market features through attention-based fusion mechanisms. The node transformer processes historical market data while capturing both temporal evolution and cross-sectional dependencies among stocks. Experiments conducted on 20 S&P 500 stocks spanning January 1982 to March 2025 demonstrate that the integrated model achieves a mean absolute percentage error (MAPE) of 0.80% for one-day-ahead predictions, compared to 1.20% for ARIMA and 1.00% for LSTM. The inclusion of sentiment analysis reduces prediction error by 10% overall and 25% during earnings announcements, while the graph-based architecture contributes an additional 15% improvement by capturing inter-stock dependencies. Directional accuracy reaches 65% for one-day forecasts. Statistical validation through paired t-tests confirms the significance of these improvements (p < 0.05 for all comparisons). The model maintains lower error during high-volatility periods, achieving MAPE of 1.50% while baseline models range from 1.60% to 2.10%.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "q-fin.ST"
+      ],
+      "published": "2026-03-06T05:15:22Z",
+      "updated": "2026-05-14T19:26:04Z",
+      "abs_url": "https://arxiv.org/abs/2603.05917",
+      "pdf_url": "https://arxiv.org/pdf/2603.05917v3",
+      "comment": "18 pages, 5 figures, 12 tables. Accepted for publication in IEEE Access",
+      "journal_ref": "IEEE Access, vol. 14, pp. 72613-72631, 2026",
+      "keyword_score": 20,
+      "matched_keywords": [
+        "transformer",
+        "cross-sectional",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "已刊登於 IEEE Access，結合節點轉換器與 BERT 進行標普 500 預測。",
+      "summary": {
+        "title_zh": "結合 Node Transformer 架構與 BERT 情感分析的股票市場預測",
+        "verdict": "結合圖神經網路與 BERT 情感分析能有效捕捉股票間的關聯與情緒，將預測誤差降至 0.80%。",
+        "problem": "傳統預測方法難以捕捉金融市場中充滿雜訊、非平穩性以及複雜的橫截面相依性。",
+        "method": "使用 Node Transformer 架構將市場建模為圖結構，並透過微調的 BERT 模型從社群媒體中萃取情感特徵，資料涵蓋 20 檔 SPX 股票自 1982 年 1 月至 2025 年 3 月的歷史市場資料。",
+        "findings": "模型在單日預測中達到 0.80% 的 MAPE（優於 ARIMA 的 1.20% 與 LSTM 的 1.00%），方向準確率達到 65%，且在財報發布期間情感分析使誤差額外降低 25%。",
+        "implication": "可將社群情緒與圖結構相依性納入多因子 Alpha 模型中，特別適用於財報發布等高波動事件期。",
+        "caveats": "實驗樣本僅涵蓋 20 檔 SPX 股票，且未提及是否計入交易成本。",
+        "practicality": 4,
+        "tags": [
+          "機器學習",
+          "Transformer",
+          "情感分析",
+          "圖神經網路",
+          "SPX"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.07690",
+      "title": "On a Simple Relationship Between Order Imbalance, Skew and Width in Over-The-Counter Trading",
+      "authors": [
+        "Peter Cotton"
+      ],
+      "abstract": "We consider a market maker who can only obtain and dispose of inventory by responding to a sequence of sealed-bid enquiries, and whose customers arrive with imbalanced intent: sellers more often than buyers, or the reverse. Under the assumption that the best competing response is exponentially distributed around a commonly discerned fair price, we observe a symmetry in the steady state solution that compresses the imbalanced problem onto the perfectly balanced one. Order imbalance is absorbed, exactly, by a translation of the market maker's skew, a widening of her quotes, and a multiplication of her effective cost of carry. The adjustment is simple even though the solution it adjusts is not, and it involves no free parameter beyond the observable market width. The exponential assumption is needed only locally, at the quotes actually made, and the width that enters is the locally observed one. Among the consequences: a market maker with zero inventory should still skew; skew responds to imbalance at first order whereas width responds only at second order; and the popular \"constant width, linear skew\" heuristic is recovered as the small-skew solution in the special case of balanced flow and quadratic holding cost.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.MF",
+        "q-fin.ST"
+      ],
+      "published": "2026-08-07T18:30:02Z",
+      "updated": "2026-08-07T18:30:02Z",
+      "abs_url": "https://arxiv.org/abs/2608.07690",
+      "pdf_url": "https://arxiv.org/pdf/2608.07690v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 18,
+      "matched_keywords": [
+        "market maker"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "推導造市商訂單不平衡、歪斜與價差的簡單解析關係式。",
+      "summary": {
+        "title_zh": "關於場外交易中訂單不平衡、報價偏斜與價差寬度的簡單關係",
+        "verdict": "建立場外交易模型，發現造市商透過調整報價偏斜與寬度吸收訂單不平衡，偏斜反應為一階。",
+        "problem": "在客戶訂單意圖不平衡的場外交易市場中，造市商如何調整其報價策略來處理部位風險。這項研究旨在解析訂單不平衡與造市商的報價偏斜及價差寬度之間的數學關係。",
+        "method": "本研究採用理論模型推導，假設市場競爭者的最佳回應在公允價格周圍呈指數分配。分析場外交易的封閉式詢價市場與穩態解，未涉及實際資料頻率與樣本期間。",
+        "findings": "發現訂單不平衡完全由造市商的報價偏斜平移、價差加寬及有效持倉成本相乘所吸收。零庫存造市商仍應進行報價偏斜，且偏斜對不平衡的反應為一階，寬度僅為二階。本論文為純理論推導，未報告具體績效數字。",
+        "implication": "此解析解提供造市商在訂單不平衡時調整報價的無自由參數公式，僅需依賴可觀察的市場寬度。前提是競爭者報價符合區域指數分配假設，可用於指導造市系統的參數設定。",
+        "caveats": "模型高度依賴競爭者回應呈指數分配的理論假設，且缺乏真實市場資料的實證檢驗。",
+        "practicality": 2,
+        "tags": [
+          "場外交易",
+          "造市",
+          "訂單不平衡",
+          "報價偏斜"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.09820",
+      "title": "Learning Predictive Ambiguity Sets for Decision-Focused Distributionally Robust Optimization",
+      "authors": [
+        "Junjie Guo"
+      ],
+      "abstract": "Predict-then-optimize systems usually compress uncertainty into a point forecast and then solve a downstream optimization problem as if the forecast were reliable. Distributionally robust optimization (DRO) offers protection against misspecification, but the ambiguity set is often centered at historical samples and uses a fixed radius. We propose \\emph{learned predictive ambiguity sets} (LPAS): a deep contextual model outputs a finite nominal scenario distribution, a state-dependent Wasserstein radius, and optionally an anisotropic ground metric. These outputs define a contextual ambiguity set that feeds a DRO decision layer. The radius is trained by a combination of conditional quantile calibration, size regularization, and downstream decision loss, so that robustness is adaptive rather than globally fixed. We derive the finite dual form used by the decision layer, present a staged training algorithm, and evaluate the method on distributionally robust portfolio optimization with 20 S&P 500 constituents from 2018--2026. The proposed method substantially improves over equal-weight, predict-then-optimize, and historical Wasserstein DRO baselines, achieving 26.28% annualized return, Sharpe ratio 1.30, final wealth 1.61, and lower tail loss than a deep fixed-radius DRO baseline while using a smaller average radius. The results show that learned ambiguity radii can recover most of the performance of strong fixed-radius DRO while reducing unnecessary conservatism and improving regime adaptivity.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-fin.CP"
+      ],
+      "published": "2026-07-10T07:48:12Z",
+      "updated": "2026-07-10T07:48:12Z",
+      "abs_url": "https://arxiv.org/abs/2607.09820",
+      "pdf_url": "https://arxiv.org/pdf/2607.09820v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 18,
+      "matched_keywords": [
+        "sharpe ratio",
+        "portfolio optimization",
+        "regime"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出學習型預測模糊集以進行決策導向的分布穩健最佳化。",
+      "summary": {
+        "title_zh": "學習用於決策導向分配穩健最佳化的預測模糊集",
+        "verdict": "提出學習型預測模糊集（LPAS），結合深度上下文模型與 DRO，顯著改善投資組合績效。",
+        "problem": "傳統預先預測再最佳化的系統常將不確定性壓縮為點預測，而分配穩健最佳化（DRO）的模糊集常使用固定半徑且以歷史樣本為中心，無法適應不同狀態。",
+        "method": "使用深層上下文模型輸出情境分佈、狀態相依的 Wasserstein 半徑與非等向性地面度量，建構上下文模糊集並輸入 DRO 決策層。評估資料為 2018 至 2026 年間 20 檔標普 500 成分股的分配穩健投資組合最佳化。",
+        "findings": "年化報酬率達 26.28%，夏普值為 1.30，期末財富 1.61，且在維持較小平均半徑的同時，尾部損失低於深層固定半徑 DRO 基線。",
+        "implication": "此方法能減少過度保守並提升體制轉換的適應性，可直接應用於需要動態調整風險邊界的投資組合最佳化。",
+        "caveats": "實證僅針對 20 檔標普 500 成分股，擴展到更大規模資產池時的計算複雜度與訓練穩定性仍需驗證。",
+        "practicality": 4,
+        "tags": [
+          "分配穩健最佳化",
+          "投資組合最佳化",
+          "機器學習",
+          "Wasserstein 距離"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.13402",
+      "title": "Diffusion models for dynamic volatility surface generation and data-driven hedging",
+      "authors": [
+        "Yinbin Han",
+        "Jack Yuxiang Zhang",
+        "Manuel Torres",
+        "Fernando Acero",
+        "Renyuan Xu"
+      ],
+      "abstract": "We develop a diffusion-model framework for dynamic implied-volatility surface generation and evaluate its economic usefulness through data-driven hedging. The framework consists of two models. AD-Seq-Vol jointly learns the conditional evolution of the underlying asset return and the high-dimensional implied-volatility surface, generating adapted multi-period scenarios by sequentially updating the realized market history. AD-Seq-Vol-FT further incorporates option-market structure through post-training penalties for violations of static no-arbitrage conditions. Using daily SPX option data from 2000 to 2023, we show that the proposed models generate coherent surface trajectories while capturing both cross-sectional and temporal dependence. AD-Seq-Vol produces fewer and less severe static-arbitrage violations than the training data and the GAN-based benchmark, while AD-Seq-Vol-FT reduces these violations to nearly zero. We then integrate the generated conditional scenarios into an optimization-based hedging framework. Compared to a range of classical and data-driven benchmarks, the diffusion-based hedges maintain tracking errors near zero, substantially reduce tail risk, and exhibit particularly stable performance during the COVID-19 market disruption. These results establish Adaptive Sequential Diffusion Models as a promising class of market-consistent and economically useful financial scenario generators. Our code is available at: https://github.com/yinbinhan/volatility-surface-simulation.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "q-fin.PM",
+        "q-fin.RM"
+      ],
+      "published": "2026-09-11T18:10:13Z",
+      "updated": "2026-09-17T05:11:16Z",
+      "abs_url": "https://arxiv.org/abs/2609.13402",
+      "pdf_url": "https://arxiv.org/pdf/2609.13402v3",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 19,
+      "matched_keywords": [
+        "hedging",
+        "cross-sectional"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "開發擴散模型生成動態隱含波動率曲面並應用於避險，實證減少尾部風險。",
+      "summary": {
+        "title_zh": "應用擴散模型於動態波動率曲面生成與資料驅動避險",
+        "verdict": "透過擴散模型生成動態隱含波動率曲面，有效降低避險尾端風險與無套利違規。",
+        "problem": "如何動態生成符合市場特徵的高維度隱含波動率曲面？現有方法難以同時捕捉橫截面與時間相依性並維持無套利。",
+        "method": "提出 AD-Seq-Vol 與結合無套利懲罰的 AD-Seq-Vol-FT 擴散模型框架。使用 2000 年至 2023 年的 SPX 日頻期權資料進行實證。",
+        "findings": "模型生成的曲面軌跡具備時間與橫截面相依性，AD-Seq-Vol-FT 將無套利違規降至接近零。避險追蹤誤差維持在接近零的水準且在疫情期間表現穩定，但論文未報告具體績效數字。",
+        "implication": "可作為具市場一致性的情境生成器，直接應用於期權動態避險與風險管理。",
+        "caveats": "需要額外的後訓練懲罰機制來約束無套利條件，增加工程與訓練負擔。",
+        "practicality": 4,
+        "tags": [
+          "擴散模型",
+          "波動率曲面",
+          "期權避險",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.29220",
+      "title": "Decoupled Probabilistic Forecasting and Arbitrage-Aware Refinement of Implied Volatility Surfaces",
+      "authors": [
+        "Lifeng Hao",
+        "Shaolin Ji"
+      ],
+      "abstract": "Implied volatility surface forecasting is essential for option valuation, hedging,and risk management, but remains difficult because future surfaces are stochastic while pricing inputs must satisfy static no-arbitrage shape restrictions. We propose a decoupled generative refinement framework for IVS forecasting as an operational risk surface modeling problem. The first stage uses a conditional diffusion model to learn the conditional distribution of future surfaces. The generated ensemble captures predictive distributional variation, and its median provides a robust representative surface for subsequent refinement. The second stage introduces a Surface Aware Attention Module (SAAM), a cross sectional refinement operator that improves fit to market observations and staticno-arbitrage diagnostics for the representative surface. This design separates distribution learning from surface refinement, allowing the diffusion model to capture stochastic market dynamics while SAAM controls static no-arbitrage residual violations on the final surface. We evaluate the framework on CSI 300 index options from June 2020 to September 2024 under daily and minute level forecasting protocols. The diffusion stage improves forecasting accuracy and produces predictive intervals that vary across moneyness, maturity, and sampling frequency. The refinement stage improves fitting accuracy against market observations and reduces measured static no-arbitrage residual violations, with stronger gains at the minute level. Attention diagnostics suggest that SAAM performs adaptive cross sectional refinement rather than fixed local smoothing",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP"
+      ],
+      "published": "2026-07-31T09:46:02Z",
+      "updated": "2026-07-31T09:46:02Z",
+      "abs_url": "https://arxiv.org/abs/2607.29220",
+      "pdf_url": "https://arxiv.org/pdf/2607.29220v1",
+      "comment": "35 pages",
+      "journal_ref": "",
+      "keyword_score": 19,
+      "matched_keywords": [
+        "implied volatility",
+        "hedging"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出隱含波動率曲面預測的解耦機率預測與無套利精煉框架，實證扎實。",
+      "summary": {
+        "title_zh": "隱含波動率曲面的解耦機率預測與無套利感知修正",
+        "verdict": "提出結合條件擴散模型與表面感知注意力模組的兩階段架構，在預測隱含波動率曲面時兼顧隨機動態與無套利條件。",
+        "problem": "未來隱含波動率曲面具隨機性，且定價輸入必須滿足靜態無套利形狀限制，這使得曲面預測相當困難。",
+        "method": "使用條件擴散模型學習未來曲面的條件分佈，並透過表面感知注意力模組（SAAM）進行橫截面修正。資料使用 CSI 300 指數選擇權，時間自 2020 年 6 月至 2024 年 9 月，涵蓋日頻與分鐘頻預測協議。",
+        "findings": "擴散階段提高了預測準確度並產生物理區間，修正階段則提升了對市場觀察值的擬合準確度並減少靜態無套利殘差違規，且在分鐘頻的改善幅度更強。論文未報告具體的報酬率或夏普值數字。",
+        "implication": "此方法能有效控制無套利違規並捕捉市場動態，適用於需要嚴格形狀約束的選擇權定價與風險管理模組。前提是需要實作複雜的擴散與注意力神經網路架構。",
+        "caveats": "論文未提供扣除交易成本後的實際交易績效或損益數字。",
+        "practicality": 3,
+        "tags": [
+          "隱含波動率曲面",
+          "擴散模型",
+          "選擇權定價",
+          "無套利限制",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.05291",
+      "title": "Forecasting Realized Volatility with Time Series Foundation Models: A Comparison with Econometric Benchmarks",
+      "authors": [
+        "Alessio Brini"
+      ],
+      "abstract": "We ask whether pretrained time series foundation models (TSFMs) improve on established econometric benchmarks for forecasting realized volatility. Using the VOLARE dataset, we conduct the first systematic comparison of nine zero-shot TSFMs against eight econometric specifications, including the Heterogeneous Autoregressive (HAR) family, across 50 assets in equities, foreign exchange, and futures, and three forecast horizons, with formal pairwise and multi-model forecast-comparison tests. Foundation models do not deliver a uniform gain. Pooled losses favor them, but the advantage is concentrated in a few outlier assets; averaging each asset's loss ratio to a well-specified Log-HAR benchmark, so that no single asset dominates, only one small model, Tiny Time Mixers (TTM), beats the benchmark at every horizon, and by a narrow margin. The other foundation models do not improve on Log-HAR, and the econometric benchmarks remain competitive throughout. A Mincer--Zarnowitz recalibration, which removes level and scale bias from every forecast, shows that much of the short-horizon advantage reflects better-scaled forecasts rather than better prediction of volatility dynamics, and only at the monthly horizon does a genuine informational gain remain. Because this edge is thin and even TTM is not best on every asset, a simple equal-weight average of TTM and Log-HAR matches the best single model and enters the Model Confidence Set for 98 to 100\\% of assets, more often than either component alone, so a forecaster need not identify the best model for each asset in advance. Our most durable finding is that performance varies so much across foundation-model architectures that choosing the right architecture matters more than the broader choice between foundation and econometric models.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "econ.EM"
+      ],
+      "published": "2026-07-06T16:30:41Z",
+      "updated": "2026-07-06T16:30:41Z",
+      "abs_url": "https://arxiv.org/abs/2607.05291",
+      "pdf_url": "https://arxiv.org/pdf/2607.05291v1",
+      "comment": "5 figures, 41 pages",
+      "journal_ref": "",
+      "keyword_score": 19,
+      "matched_keywords": [
+        "realized volatility",
+        "futures"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "系統性比較時序基礎模型與計量經濟學基準預測實現波動率，結論客觀。",
+      "summary": {
+        "title_zh": "使用時間序列基礎模型預測已實現波動度：與計量經濟基準的比較",
+        "verdict": "零樣本時間序列基礎模型未能在波動度預測中全面擊敗傳統計量經濟基準，僅 Tiny Time Mixers 以微幅優勢勝過 Log-HAR。",
+        "problem": "預訓練的時間序列基礎模型是否能提升已實現波動度的預測能力，目前尚無系統性的實證對比。",
+        "method": "使用 VOLARE 資料集，涵蓋股票、外匯與期貨的 50 個資產以及三種預測期界，比較 9 個零樣本時間序列基礎模型與 8 種計量經濟規格（包含 HAR 模型家族）。",
+        "findings": "綜合損失偏好基礎模型，但優勢集中於少數離群資產；若對資產的損失比率進行平均，僅 Tiny Time Mixers 在各期界以微幅優勢勝過 Log-HAR 基準。Mincer--Zarnowitz 校準顯示短期優勢多來自較佳的尺度調整而非波動度動態預測，且模型架構間的效能差異大於基礎模型與計量模型的整體選擇。",
+        "implication": "實務上無需押注單一模型，將 Tiny Time Mixers 與 Log-HAR 進行等權重平均即可進入多數資產的模型信心集，達到穩健的預測效果。",
+        "caveats": "基礎模型的效能高度取決於架構選擇且優勢微薄，多數模型無法在資產平均表現上擊敗傳統 Log-HAR。",
+        "practicality": 4,
+        "tags": [
+          "已實現波動度",
+          "基礎模型",
+          "計量經濟學",
+          "時間序列預測"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.29591",
+      "title": "The Bounce Has No Direction: Sign, Magnitude, and the Microstructure of Equity Return Predictability",
+      "authors": [
+        "Victoria Portnaya"
+      ],
+      "abstract": "SPY's lag-1 return autocorrelation ($\\hatρ(1)=-0.081$, $z=-7.4$) is among the most significant regularities in empirical equity finance, yet the standard variance-ratio (VR) test cannot determine whether it reflects directional reversal or magnitude shrinkage - phenomena with entirely different trading implications. We develop the Fourier-Residue Identity (FRI), which decomposes return autocorrelation into a sign ($k=2$) and a magnitude ($k=4$) channel, each independently testable and neither redundant. Applied to six US instruments over 1993--2026 and a 21-instrument cross-asset panel, the FRI delivers a sharp microstructure diagnosis. The lag-1 autocorrelation in SPY is driven entirely by magnitude: the FRI sign test is insignificant ($p=0.11$) while the full test achieves $p<10^{-12}$. A large move yesterday predicts a smaller move today regardless of direction - the fingerprint of bid-ask bounce and non-synchronous constituent staleness, not directional reversal. At lag 3, a significant directional reversal ($p=0.02$) invisible to the scalar ACF reveals a separate partial-price-adjustment channel. We prove the Fejer identity VR(q)=1+2C_q (confirmed to <0.001 on all series), giving the Lo-MacKinlay test a spectral interpretation, and introduce a subsample diagnostic R_N=G_{N/2}/G_N that classifies equity autocorrelation as structural (R_N->1) rather than sampling noise (R_N->sqrt(2)). The cross-asset panel shows mean reversion confined to exchange-traded equities and sovereign bonds; credit ETFs, commodities, FX, and crypto are indistinguishable from random walks. All estimators pass 27 unit tests; Monte Carlo confirms correct 5% size under GARCH.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-06-28T20:22:00Z",
+      "updated": "2026-06-28T20:22:00Z",
+      "abs_url": "https://arxiv.org/abs/2606.29591",
+      "pdf_url": "https://arxiv.org/pdf/2606.29591v1",
+      "comment": "29 pages, 8 tables, no figures",
+      "journal_ref": "",
+      "keyword_score": 19,
+      "matched_keywords": [
+        "mean reversion",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用傅立葉殘差恆等式分解報酬自相關性，診斷出買賣價差跳動與非同步性。",
+      "summary": {
+        "title_zh": "反彈沒有方向：股票報酬預測性的正負號、幅度與微結構",
+        "verdict": "透過傅立葉殘差恆等式拆解報酬自相關，證實SPY的一階自相關純粹來自幅度而非方向反轉。",
+        "problem": "傳統變異數比率檢定與自相關函數無法區分報酬自相關究竟源自方向反轉還是幅度縮減，導致截然不同的交易意涵混淆。",
+        "method": "提出傅立葉殘差恆等式（FRI），將報酬自相關拆解為正負號與幅度兩個獨立通道；實證資料涵蓋1993至2026年六檔美國標的與21檔跨資產面板。",
+        "findings": "SPY的一階自相關完全由幅度驅動（正負號檢定不顯著 p=0.11，整體檢定 p<10^-12），顯示其為買賣價差跳動與成分股不同步滯後所致；三階時則浮現顯著的方向反轉（p=0.02）。跨資產面板顯示均值回歸僅存在於權益類股與主權債，信用債、大宗商品、外匯與加密貨幣皆無法排除隨機漫步。",
+        "implication": "證明短期股票自相關主要來自微結構雜訊而非方向性預測力，有助於交易員最佳化執行演算法與避免無效的均值回歸佈局。",
+        "caveats": "本研究基於特定資產與歷史樣本，實際套用至超高頻實戰時仍須留意即時訂單簿動態與交易成本。",
+        "practicality": 4,
+        "tags": [
+          "市場微結構",
+          "自相關",
+          "計量經濟",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

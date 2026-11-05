@@ -1,0 +1,319 @@
+{
+  "date": "2026-11-05",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2611.05310",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "65個月樣本外回測、納入交易成本、實證完整。"
+    },
+    {
+      "arxiv_id": "2611.05218",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "已獲 ACM ICAIF '26 接受，使用真實錢包特徵進行實證。"
+    },
+    {
+      "arxiv_id": "2611.04555",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "使用 CSI 300/500真實資料，圖形化多目標因子探勘。"
+    },
+    {
+      "arxiv_id": "2611.06159",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 8,
+      "reason": "對抗式造市的 regret bounds 理論推導與極優性證明。"
+    },
+    {
+      "arxiv_id": "2606.27670",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "針對加密貨幣提出圖注意力網路預測，實證扎實。"
+    },
+    {
+      "arxiv_id": "2606.22743",
+      "topic": "Alpha 與因子",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "探討對抗式市場學習的內生隨機性，無真實市場回測。"
+    },
+    {
+      "arxiv_id": "2607.09702",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "已獲 EC'26 Workshop 接受，探討市場設計與代理人對齊。"
+    },
+    {
+      "arxiv_id": "2606.10805",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 2,
+      "reason": "已撤回草稿，文章不完整且缺少充分實證。"
+    },
+    {
+      "arxiv_id": "2606.10245",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出快速隱含波動度求解器，速度與精度優於基準。"
+    },
+    {
+      "arxiv_id": "2605.12764",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "結合變分自動編碼器與無套利PDE進行利率曲線預測。"
+    },
+    {
+      "arxiv_id": "2604.26634",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "挪威電力市場預測，排除前視偏誤且滾動式回測完整。"
+    },
+    {
+      "arxiv_id": "2604.16988",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "正式化情境轉換下的上下文學習，有合成與實證資料。"
+    },
+    {
+      "arxiv_id": "2604.16835",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 4,
+      "reason": "CNN-Transformer-LSTM 綜合模型預測上證指數。"
+    },
+    {
+      "arxiv_id": "2604.13311",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "利用拓撲資料分析量化加密貨幣市場相空間不穩定性。"
+    },
+    {
+      "arxiv_id": "2603.19225",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 8,
+      "reason": "建立金融推理基準測試 FinTradeBench，分析 LLM 失敗原因。"
+    },
+    {
+      "arxiv_id": "2602.18895",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "評估 LLM 作為信用風險模型解釋工具的效能與限制。"
+    },
+    {
+      "arxiv_id": "2602.17865",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "已獲 ICAART-2026 接受，利用 Transformer-GAN 進行金融資料增強。"
+    },
+    {
+      "arxiv_id": "2602.07066",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "建構市場壓力機率指數，樣本外表現良好且具解釋力。"
+    },
+    {
+      "arxiv_id": "2602.07018",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "嚴謹檢驗情緒極端值與比特幣價差關係，結論保守客觀。"
+    },
+    {
+      "arxiv_id": "2601.05924",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出資訊可行性診斷指標 GAER，屬於概念型前置研究。"
+    },
+    {
+      "arxiv_id": "2512.01354",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 3,
+      "reason": "宣稱 A 股 2015 股災降低回撤 47.4%，績效好到不太可信。"
+    },
+    {
+      "arxiv_id": "2511.17304",
+      "topic": "波動度與衍生品",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "探討波動度流形上的無套利強化學習，屬於理論與模擬框架。"
+    },
+    {
+      "arxiv_id": "2511.03314",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "分析比特幣已實現波動度的赫斯特指數與多重分形特性。"
+    },
+    {
+      "arxiv_id": "2610.41019",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "利用神經網路求解高維帶交易成本的布萊茲-休斯方程式。"
+    },
+    {
+      "arxiv_id": "2610.36392",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "建立自動造市商隱含費率的無套利框架，實證 Uniswap 資料。"
+    },
+    {
+      "arxiv_id": "2610.25671",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出具備靜態無套利條件的隱含波動度曲面重建方法。"
+    },
+    {
+      "arxiv_id": "2609.31013",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 8,
+      "reason": "大規模比較 7 種 LLM 在財報電話會議的文字量化分數分歧。"
+    },
+    {
+      "arxiv_id": "2609.27138",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "建立商品期權表面驅動隨機波動度模型，結合蒙地卡羅與神經網路。"
+    },
+    {
+      "arxiv_id": "2608.28399",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "揭示 LLM 交易代理人的結構性負向時機選擇偏誤。"
+    },
+    {
+      "arxiv_id": "2608.21873",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "推導交易成本與模型不確定性下的離散資產定價基本定理。"
+    },
+    {
+      "arxiv_id": "2608.17355",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 7,
+      "reason": "結合文字與圖神經網路進行加密貨幣反洗錢與資金流追蹤。"
+    },
+    {
+      "arxiv_id": "2608.07690",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 8,
+      "reason": "推導造市商訂單不平衡、歪斜與價差的簡單解析關係式。"
+    },
+    {
+      "arxiv_id": "2608.04200",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "嚴謹測試金融情緒分類器，發現高準確率未能轉化為報酬預測優勢。"
+    },
+    {
+      "arxiv_id": "2608.02311",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提出資產管理中代理式 AI 的四層治理架構，具備實務案例。"
+    },
+    {
+      "arxiv_id": "2608.09968",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 7,
+      "reason": "提出基於證據的科學問題發現框架，並進行歷史回測驗證。"
+    },
+    {
+      "arxiv_id": "2607.27099",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 4,
+      "value": 6,
+      "reason": "將降雨資料與金融微結構粗糙波動度模型進行類比與實證。"
+    },
+    {
+      "arxiv_id": "2607.18310",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "探討非西方 LLM 角色模擬中的崩潰與校準問題。"
+    },
+    {
+      "arxiv_id": "2607.11335",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 8,
+      "reason": "推導最小化基準相對回撤持續時間的 HJB 方程式與解析解。"
+    },
+    {
+      "arxiv_id": "2607.09820",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出學習型預測模糊集以進行決策導向的分布穩健最佳化。"
+    }
+  ]
+}
