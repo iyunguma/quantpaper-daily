@@ -1,0 +1,517 @@
+{
+  "date": "2026-11-06",
+  "generated_at": "2026-11-06T11:28:30+08:00",
+  "scanned": 2450,
+  "eligible": 2255,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2611.06607",
+      "title": "Hard to Fool: A Bounded LLM Research Loop for Quantitative Finance, and What Two Dozen Campaigns Found",
+      "authors": [
+        "Henry Zhang"
+      ],
+      "abstract": "Agentic research loops that let a language model propose a change, run a fixed experiment and keep whatever improves the metric work well in machine learning. In trading research the same loop is a machine for producing false discoveries: a backtest that \"improves the metric\" is, by default, overfit, look-ahead, a multiple-comparisons artifact, cost-free, or market drift wearing a strategy. We describe Autonomous Quant Researcher, an open-source loop built on the opposite premise: the model proposes, and only trusted code decides. Proposals are strict declarative JSON over a fixed vocabulary, so there is no model-written code to sandbox. Evaluation runs on immutable chronological stores split into discovery, validation and a final holdout that can be opened exactly once, after a durable receipt is written. Acceptance is a conjunction of absolute gates (positive edge and net P&L after costs, a positive weekly-cluster bootstrap lower bound, survival at elevated costs, per-year stability and sample floors), never a single score. Duplicates are refused before they spend a trial, and every formulation, refusal, crash and result is kept in a hash-chained, append-only ledger. We report every campaign run to date, across 0DTE options priced from traded option bars, overnight SPX verticals, daily ETF rules, technical-analysis premises, Kalshi crypto binaries, earnings options, off-exchange volume and a pre-registered alternative-data campaign. Most hypotheses fail, and we report them. Two results survive their pre-registered bars. The clearest example of the loop working is a failure: a language-model survivor that passed discovery and validation with Sharpe ratios near 3 and fell to 0.26 on its single holdout use. The value of such a loop lies less in what it finds than in how hard it is to make it report something that is not there.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "q-fin.TR"
+      ],
+      "published": "2026-11-04T14:57:39Z",
+      "updated": "2026-11-04T14:57:39Z",
+      "abs_url": "https://arxiv.org/abs/2611.06607",
+      "pdf_url": "https://arxiv.org/pdf/2611.06607v1",
+      "comment": "10 pages, 2 tables. Code: https://github.com/henryzhangpku/autonomous-quant-researcher",
+      "journal_ref": "",
+      "keyword_score": 34,
+      "matched_keywords": [
+        "sharpe ratio",
+        "backtest",
+        "llm"
+      ],
+      "relevance": 9,
+      "value": 9,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "開源自主量化研究迴圈，防範過擬合設計嚴謹",
+      "summary": {
+        "title_zh": "難以被騙：量化金融的有界 LLM 研究循環與二十多次實戰發現",
+        "verdict": "提出自主量化研究員架構，透過嚴格的防過擬合機制與多重絕對門檻來過濾虛假發現，二十多次實驗中多數策略失效，僅極少數存活。",
+        "problem": "在機器學習中運作良好的自主研究循環，應用於交易研究時容易因過擬合、前瞻偏差、多重比較及忽略交易成本而產生成為偽發現製造機。",
+        "method": "使用 Autonomous Quant Researcher 開源循環架構，模型提出宣告式 JSON 方案而非直接寫程式碼，並在不可變的時間序列資料庫（包含發現集、驗證集與僅能開啟一次的最終保留集）上進行評估。涵蓋 0DTE 選擇權、隔夜 SPX 垂直價差、每日 ETF 規則、技術分析、Kalshi 加密貨幣二元合約、財報選擇權、場外交易量及預先註冊的替代資料等。",
+        "findings": "多數假說皆失敗。曾有 LLM 產生的策略在發現集與驗證集的 Sharpe 接近 3，但在單次使用的保留集上驟降至 0.26。",
+        "implication": "此類研究循環的價值在於其嚴格防範錯誤發現的能力，而非能輕易找到有效 Alpha。若要實際應用，必須落實多重絕對門檻（如計入成本後的淨 P&L、拔靴法下限與樣本數限制）與嚴格的保留集隔離。",
+        "caveats": "絕大多數提出的策略最終都無法通過預先註冊的檢驗標準。",
+        "practicality": 4,
+        "tags": [
+          "LLM",
+          "Alpha 因子挖掘",
+          "回測過擬合",
+          "量化研究",
+          "模型驗證"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.06919",
+      "title": "Return Decomposition of Hybrid Strategies in the Brazilian Market: Evidence of Genuine Alpha and Factor Exposure",
+      "authors": [
+        "Francisco Robson do Nascimento de Freitas",
+        "Felipe Macedo Zumba",
+        "Lucio Marassi",
+        "Jian Vingthor Souza Luna de Azevedo"
+      ],
+      "abstract": "This paper decomposes the return sources of a hybrid portfolio combining a fundamentalist screen - based on P/E, ROE, Net Margin, Current Ratio, and P/BV - with a moving-average crossover system (SMA 9/46), applied to the Brazilian stock exchange (B3) from January 2000 to December 2025 (300 monthly observations). CAPM and Fama-French three- and four-factor models estimated by OLS with heteroskedasticity-robust standard errors identify a positive and statistically significant Jensen alpha of 1.11% per month (p = 0.005) in the three-factor model. In the four-factor model with momentum, alpha remains significant (0.98% p.m.; p = 0.009), while momentum is not significant (p = 0.409). The central - and unexpected - finding is the non-significance of the HML factor (beta_h = 0.1266; p = 0.544): despite explicit value criteria, returns do not load on the value premium, likely because ROE and Net Margin tilt selection toward quality firms. By contrast, the SMB factor is highly significant (beta_s = 0.38; p = 0.000), and the portfolio displays a defensive profile (market beta approximately 0.58). Although the descriptive Sharpe ratio of the portfolio (0.443) exceeds that of the Ibovespa (0.039), the difference is not statistically significant under the Jobson-Korkie test (Z = 1.427; p = 0.154). These findings advance the debate on semi-strong efficiency in the Brazilian market and carry direct implications for active strategy pricing and disclosure.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.PM"
+      ],
+      "published": "2026-05-09T19:02:12Z",
+      "updated": "2026-05-09T19:02:12Z",
+      "abs_url": "https://arxiv.org/abs/2611.06919",
+      "pdf_url": "https://arxiv.org/pdf/2611.06919v1",
+      "comment": "300 monthly observations (Jan/2000-Dec/2025). CAPM, Fama-French 3F and Carhart 4F models. OLS with robust standard errors. Jensen alpha: 1.11%/month (p=0.005). HML: p=0.544 (ns); SMB: p=0.000. Market beta approx 0.58. Sharpe difference vs Ibovespa not significant (Jobson-Korkie Z=1.427, p=0.154). Python scripts available",
+      "journal_ref": "",
+      "keyword_score": 34,
+      "matched_keywords": [
+        "sharpe ratio",
+        "factor model",
+        "momentum",
+        "stock",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "25年長期月度資料實證，統計檢定與模型完整",
+      "summary": {
+        "title_zh": "巴西市場混合策略的報酬分解：真實Alpha與因子曝險的實證",
+        "verdict": "結合基本面篩選與均線交叉的混合策略在巴西 B3 市場驗證出顯著的每月超額報酬，但夏普值差異未達統計顯著。",
+        "problem": "探討結合基本面篩選（本益比、股東權益報酬率等）與均線交叉系統的混合策略，其報酬來源究竟是來自因子曝險還是真實超額報酬。",
+        "method": "使用巴西 B3 市場從 2000 年 1 月至 2025 年 12 月共 300 個月的資料，透過 OLS 與異質變異數穩健標準誤估計 CAPM、Fama-French 三因子與四因子模型。",
+        "findings": "三因子模型顯示顯著的正 Jensen Alpha 為每月 1.11%（p = 0.005），四因子模型中 Alpha 仍達每月 0.98%（p = 0.009）。策略的 SMB 因子顯著（beta = 0.38），市場 beta 約為 0.58，但 Jobson-Korkie 檢定顯示夏普值（0.443）與大盤（0.039）的差異不顯著（p = 0.154）。",
+        "implication": "雖然策略展現了防禦型特質與實質 Alpha，但由於多空夏普值檢定未過，實際配置時仍須審慎評估交易成本與參數過適風險。",
+        "caveats": "儘管使用了明確的價值指標，但 HML 因子並不顯著，顯示選股傾向已被品質因子扭曲。",
+        "practicality": 4,
+        "tags": [
+          "報酬分解",
+          "Fama-French模型",
+          "基本面量化",
+          "資產配置",
+          "巴西股市"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.23703",
+      "title": "Financial Language Models as Applied Artificial Intelligence Systems for News-Based Trading under Market Frictions",
+      "authors": [
+        "Kemal Kirtac"
+      ],
+      "abstract": "Financial language models can transform unstructured firm-specific news into structured decision signals, but financial AI research lacks an integrated deployment framework for evaluating whether those signals remain useful in financial decision systems. Computer science research has developed strong methods for time-series forecasting, text classification, multimodal stock prediction, graph-based market modeling, and machine-learning operations, yet these streams do not provide a domain-specific protocol that jointly tests financial language-model outputs under event-time observability, probability calibration, execution timing, transaction costs, liquidity constraints, capacity limits, operational diagnostics, and statistical inference. We introduce MFAST, a Market-Friction-Aware Sentiment-to-Trading framework that converts timestamped financial text into auditable, reproducible, and market-feasible trading decisions. The application is news-based trading, where firm-specific text must be linked to securities before portfolio decisions can be evaluated. The framework links Refinitiv News Analytics to Center for Research in Security Prices (CRSP) equity data, restricts the primary out-of-sample evaluation to post-release news outside disclosed foundation-model data-freshness periods, and adds a public replication arm using open financial text and public price data. Results show that decoder-only language models outperform encoder baselines and dictionary sentiment in classification, calibration, return prediction, and net portfolio performance, while operational diagnostics reveal trade-offs among accuracy, latency, memory, throughput, and inference cost. The paper shows that credible evaluation of financial language models requires an end-to-end engineering approach combining language understanding, temporal discipline, market-friction-aware deployment, and reproducible validation.",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG",
+        "q-fin.TR"
+      ],
+      "published": "2026-09-20T15:24:06Z",
+      "updated": "2026-09-20T15:24:06Z",
+      "abs_url": "https://arxiv.org/abs/2609.23703",
+      "pdf_url": "https://arxiv.org/pdf/2609.23703v1",
+      "comment": "47 pages. Revise and resubmit at Engineering Applications of Artificial Intelligence",
+      "journal_ref": "",
+      "keyword_score": 19,
+      "matched_keywords": [
+        "transaction cost",
+        "out-of-sample",
+        "liquidity",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出市場摩擦感知的情感轉交易框架，整合新聞語意與真實交易限制。",
+      "summary": {
+        "title_zh": "在市場摩擦下應用金融語言模型於基於新聞交易的應用式人工智慧系統",
+        "verdict": "提出名為 MFAST 的框架，整合文字情緒與市場摩擦評估，證實解碼器型語言模型在新聞交易中優於編碼器與字典情緒。",
+        "problem": "金融 AI 研究缺乏整合部署框架，無法在事件時間可觀測性、機率校準、交易成本與流動性限制下全面評估語言模型訊號的實際效用。",
+        "method": "使用解碼器型語言模型與 Refinitiv 新聞資料及 CRSP 股票資料，進行樣本外評估，並納入市場摩擦與執行時間考量。",
+        "findings": "解碼器型語言模型在分類、校準、報酬預測與淨投資組合績效上皆優於編碼器基準與字典情緒，同時揭示了準確度、延遲、記憶體與推論成本的取捨。",
+        "implication": "實務上可透過 MFAST 框架端對端評估文字訊號的真實交易可行性，前提是須嚴格控制時間對齊與交易成本。",
+        "caveats": "論文未明確報告具體的夏普值或絕對報酬數字。",
+        "practicality": 4,
+        "tags": [
+          "語言模型",
+          "新聞交易",
+          "市場摩擦",
+          "情緒分析",
+          "投資組合最佳化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.16365",
+      "title": "FactorEngine: A Program-level Knowledge-Infused Factor Mining Framework for Quantitative Investment",
+      "authors": [
+        "Qinhong Lin",
+        "Ruitao Feng",
+        "Yinglun Feng",
+        "Zhenxin Huang",
+        "Yukun Chen",
+        "Zhongliang Yang",
+        "Linna Zhou",
+        "Binjie Fei",
+        "Jiaqi Liu",
+        "Yu Li"
+      ],
+      "abstract": "We study alpha factor mining, the automated discovery of predictive signals from noisy, non-stationary market data-under a practical requirement that mined factors be directly executable and auditable, and that the discovery process remain computationally tractable at scale. Existing symbolic approaches are limited by bounded expressiveness, while neural forecasters often trade interpretability for performance and remain vulnerable to regime shifts and overfitting. We introduce FactorEngine (FE), a program-level factor discovery framework that casts factors as Turing-complete code and improves both effectiveness and efficiency via three separations: (i) logic revision vs. parameter optimization, (ii) LLM-guided directional search vs. Bayesian hyperparameter search, and (iii) LLM usage vs. local computation. FE further incorporates a knowledge-infused bootstrapping module that transforms unstructured financial reports into executable factor programs through a closed-loop multi-agent extraction-verification-code-generation pipeline, and an experience knowledge base that supports trajectory-aware refinement (including learning from failures). Across extensive backtests on real-world OHLCV data, FE produces factors with substantially stronger predictive stability and portfolio impact-for example, higher IC/ICIR (and Rank IC/ICIR) and improved AR/Sharpe, than baseline methods, achieving state-of-the-art predictive and portfolio performance.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-17T10:51:30Z",
+      "updated": "2026-09-15T08:06:37Z",
+      "abs_url": "https://arxiv.org/abs/2603.16365",
+      "pdf_url": "https://arxiv.org/pdf/2603.16365v3",
+      "comment": "10 pages, 7 figures. Accepted at IEEE ICDM 2026",
+      "journal_ref": "",
+      "keyword_score": 18,
+      "matched_keywords": [
+        "backtest",
+        "llm",
+        "regime",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "IEEE ICDM 接受，程式級智慧化因子探勘，實證扎實",
+      "summary": {
+        "title_zh": "FactorEngine：應用於量化投資的程式級知識注入 Alpha 因子挖掘框架",
+        "verdict": "提出 FactorEngine 結合 LLM 與貝氏最佳化挖掘可執行的程式級 Alpha 因子，顯著提升 IC 與 Sharpe。",
+        "problem": "現有符號方法表達能力受限，神經網路預測模型則犧牲可解釋性且易過擬合，且需要確保產出的因子可直接執行、可稽核且具備規模化運算效率。",
+        "method": "使用 FactorEngine 框架，將因子視為 Turing-complete 程式碼，結合 LLM 引導的定向搜尋與貝氏超參數最佳化。利用 OHLCV 真實資料與財報進行回測。",
+        "findings": "在真實 OHLCV 資料的廣泛回測中，FactorEngine 產出的因子具備更強的預測穩定性與投資組合影響力，相比基準方法獲得更高的 IC/ICIR 與 Rank IC/ICIR，並提升了報酬率與 Sharpe。",
+        "implication": "可直接應用於自動化 Alpha 因子挖掘，透過知識注入與失敗學習機制產出具備可解釋性與可執行性的程式碼。",
+        "caveats": "論文未報告具體的數值改善幅度。",
+        "practicality": 4,
+        "tags": [
+          "Alpha 因子挖掘",
+          "基礎模型",
+          "量化投資",
+          "程式碼生成"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.10245",
+      "title": "A Fast Implied Volatility Method with Expansions",
+      "authors": [
+        "Alper Hekimoglu",
+        "Ismail Hakki Gokgoz"
+      ],
+      "abstract": "We present a regime-split Black--Scholes implied volatility solver in which every initial seed is a fully closed-form analytical expression, derived from the asymptotic structure of the Black--Scholes price in its natural domain. At the money, series reversion of an exact Gaussian identity yields a fourth-order seed with error $\\mathcal{O}(s^8)$. In the moderate out-of-the-money region, successive Gaussian CDF approximations of increasing order produce explicit initial seed formulas whose accuracy is proved numerically, with no iteration or numerical inversion at the seed stage. In the deep out-of-the-money region, a Gaussian tail cancellation identity -- the Mills ratio -- reveals the asymptotic structure of the Black--Scholes price and motivates a ratio-corrected seed that achieves near-machine-precision initialisation for large moneyness. All regime boundaries are derived analytically from CDF truncation tolerances and numerical solver theoretical error bounds, with no empirically tuned constants. A universal fourth-order Householder polisher then drives all regimes to machine precision, with mean update iterations strictly below two on both standard and granular benchmark grids -- meeting and surpassing the two-iteration target established by the highest-accuracy reference implementation in the literature (Jäckel, 2015). The resulting C implementation achieves a $1.6$--$1.89\\times$ throughput gain over the state-of-the-art benchmark (Jäckel, 2015) under identical hardware and compiler conditions, with maximum absolute error $\\mathcal{O}(10^{-14})$, stable across grid configurations. A Python/Numba implementation confirms portability. All source code is publicly available.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP"
+      ],
+      "published": "2026-06-08T23:24:15Z",
+      "updated": "2026-08-31T22:19:30Z",
+      "abs_url": "https://arxiv.org/abs/2606.10245",
+      "pdf_url": "https://arxiv.org/pdf/2606.10245v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 19,
+      "matched_keywords": [
+        "regime",
+        "implied volatility"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出快速隱含波動度求解器，速度與精度優於基準。",
+      "summary": {
+        "title_zh": "利用展開式的快速隱含波動率計算方法",
+        "verdict": "提出一種分區的 Black-Scholes 隱含波動率求解器，達到機器精度且平均疊代次數小於 2 次。",
+        "problem": "現有隱含波動率計算方法在速度與精度之間難以取得最佳平衡，尤其在極端價外區域。",
+        "method": "採用分區（Regime-split）的 Black-Scholes 隱含波動率求解器，結合漸進結構與高斯近似的閉形式解析初值，並以通用第四階 Householder 修正器進行微調。使用標準與細緻的基準網格進行 C 與 Python/Numba 實作測試。",
+        "findings": "平均更新疊代次數嚴格低於 2 次，在相同硬體與編譯器條件下，C 實作較現有先進基準取得 1.6 至 1.89 倍的吞吐量提升，最大絕對誤差達到 $\\mathcal{O}(10^{-14})$。",
+        "implication": "此方法能顯著提升選擇權定價與風險管理的運算效率，可直接應用於高效能交易系統與即時隱含波動率表面計算。",
+        "caveats": "雖然演算法極為高效，但其實際效益仍取決於整體定價管線的記憶體與資料傳輸瓶頸。",
+        "practicality": 5,
+        "tags": [
+          "隱含波動率",
+          "選擇權定價",
+          "數值方法",
+          "高效能運算"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.12764",
+      "title": "Yield Curves Dynamics Using Variational Autoencoders Under No-arbitrage",
+      "authors": [
+        "Fusheng Luo",
+        "H'elyette Geman"
+      ],
+      "abstract": "This paper introduces a physics-informed generative framework that resolves the fundamental conflict between the statistical flexibility of deep learning and the rigorous theoretical constraints of fixed-income modeling. We demonstrate that standard generative models and unconstrained statistical extrapolations suffer from \"manifold collapse\" and severe arbitrage violations when forecasting term structures across diverse macroeconomic regimes. To overcome this, we propose a two-stage architecture. First, a Student-t Conditional Variational Autoencoder with Dynamic Level Injection (CVAEsT+LS) extracts a robust, heavy-tailed term structure manifold, effectively decoupling macroeconomic shape dynamics from absolute base rates. Second, the latent dynamic evolution is governed by a continuous-time Neural Stochastic Differential Equation (SDE) strictly penalized by a No-Arbitrage Partial Differential Equation (PDE). Empirical results across multiple sovereign currencies (USD, GBP, JPY) confirm that our synergistic approach drastically reduces out-of-sample forecasting errors -- achieving an exceptional 6.58 bps Mean Tenor RMSE -- and successfully overcomes the massive parallel drift and zero-lower-bound violations exhibited by the classical HJM model in extreme environments. Furthermore, through phase space vector field analysis, we demonstrate the model's superior capability in unsupervised macroeconomic regime detection and high-quality continuous-time scenario generation. Ultimately, this research provides a highly scalable, mathematically sound evolutionary engine for term structure modeling.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "published": "2026-05-12T21:21:25Z",
+      "updated": "2026-07-04T05:00:21Z",
+      "abs_url": "https://arxiv.org/abs/2605.12764",
+      "pdf_url": "https://arxiv.org/pdf/2605.12764v3",
+      "comment": "This is the full script (version 2) of our paper, which is awaiting submission to financial journals/conferences, after modifying and double-checking the reference lists",
+      "journal_ref": "",
+      "keyword_score": 19,
+      "matched_keywords": [
+        "out-of-sample",
+        "deep learning",
+        "regime",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合變分自動編碼器與無套利PDE進行利率曲線預測。",
+      "summary": {
+        "title_zh": "結合無套利約束與變分自動編碼器的殖利率曲線動態模型",
+        "verdict": "結合神經 SDE 與無套利偏微分方程約束的生成式模型，在 USD、GBP、JPY 實現極佳預測準確度。",
+        "problem": "標準生成模型在預測利率期限結構時，常面臨流形崩潰與嚴重的無套利違約問題。",
+        "method": "使用具動態水準注入的 Student-t 條件變分自動編碼器與受無套利偏微分方程懲罰的神經 SDE，針對多國主權貨幣進行實證。",
+        "findings": "顯著降低樣本外預測誤差，達成 6.58 bps 的平均期限均方根誤差，並克服了傳統 HJM 模型在極端環境下的平行漂移與零利率下限違約。",
+        "implication": "可用於高品質的連續時間情境生成與總體經濟體制轉換偵測，前提是須具備處理物理限制損失函數的工程能力。",
+        "caveats": "模型在極端總體經濟體制下的真實交易成本與實際執行績效仍有待驗證。",
+        "practicality": 4,
+        "tags": [
+          "殖利率曲線",
+          "變分自動編碼器",
+          "無套利定價",
+          "神經 SDE",
+          "利率模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.25671",
+      "title": "Arbitrage-Free Implied Volatility Surface Reconstruction via Additive Martingales",
+      "authors": [
+        "Haochen Luo",
+        "Sifan Lin",
+        "Xiaolong Luo",
+        "An Binh Minh",
+        "Yuan Zhang",
+        "Chen Liu"
+      ],
+      "abstract": "This work focuses on reconstructing a continuous implied volatility (IV) surface from a small number of option quotes, a fundamental task for option pricing and risk management. We propose Additive Martingale (AddMart), a few-shot IV surface reconstruction framework that satisfies static no-arbitrage conditions by construction. Rather than predicting IVs directly, AddMart maps sparse quotes to non-negative increment densities of an exponential additive martingale, from which valid risk-neutral marginals and IVs are recovered. By incorporating the no-arbitrage structure directly into its architecture, rather than enforcing it through regularization in the learning objective, AddMart produces IV surfaces that satisfy static no-arbitrage conditions throughout the domain. Extensive experiments on ten real-option datasets demonstrate that AddMart achieves competitive reconstruction accuracy with no material static arbitrage violations, while directly enabling the estimation of VaR, CVaR, and crash probabilities.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "cs.LG"
+      ],
+      "published": "2026-10-19T02:23:04Z",
+      "updated": "2026-10-19T02:23:04Z",
+      "abs_url": "https://arxiv.org/abs/2610.25671",
+      "pdf_url": "https://arxiv.org/pdf/2610.25671v1",
+      "comment": "41 pages, 15 figures. Includes supplementary proofs and experimental analyses in the appendices",
+      "journal_ref": "",
+      "keyword_score": 18,
+      "matched_keywords": [
+        "implied volatility",
+        "option pricing"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出具備靜態無套利條件的隱含波動度曲面重建方法。",
+      "summary": {
+        "title_zh": "透過可加性鞅重建無套利隱含波動率表面",
+        "verdict": "提出 AddMart 架構，從少量選擇權報價重建符合無套利條件的隱含波動率表面，並能直接估計風險值。",
+        "problem": "如何從少量的選擇權報價中重建出連續的隱含波動率表面，同時滿足靜態無套利條件。",
+        "method": "使用名為 AddMart 的少樣本隱含波動率表面重建框架，將稀疏報價對應到指數可加性鞅的非負增量密度，應用於十個真實選擇權資料集。",
+        "findings": "在十個真實選擇權資料集上的廣泛實驗顯示，AddMart 達到具競爭力的重建準確度，且沒有實質的靜態套利違規，同時能直接估計 VaR、CVaR 與崩盤機率，論文未報告具體的數字績效。",
+        "implication": "可用於選擇權訂價與風險管理，特別適合在報價稀疏時重建無套利的隱含波動率表面。",
+        "caveats": "論文未提供具體的誤差改善幅度或報酬等量化數字效能。",
+        "practicality": 4,
+        "tags": [
+          "選擇權訂價",
+          "隱含波動率表面",
+          "無套利",
+          "機器學習",
+          "風險管理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.11335",
+      "title": "Minimizing Benchmark-Relative Drawdown Duration via Occupation Time Penalization",
+      "authors": [
+        "Jun Sekine",
+        "Marcus Wunsch"
+      ],
+      "abstract": "We study a continuous-time portfolio optimization problem in which an investor is evaluated relative to a non-replicable benchmark and seeks to control the persistence of benchmark-relative underperformance. We introduce a benchmark-relative drawdown-duration criterion that penalizes the expected discounted time spent in unfavorable benchmark-relative performance states. Despite the path dependence induced by benchmark-relative drawdowns, we show that the problem admits a one-dimensional Markovian representation and derive the associated Hamilton-Jacobi-Bellman equation. We obtain an explicit projection-based characterization of the optimal feedback control, establish a verification theorem, and identify geometric settings under which the associated closed-loop reflected diffusion admits a unique strong solution. Our results provide a tractable downside-risk-oriented alternative to classical benchmark-tracking formulations and reveal a novel projection-based control structure for benchmark-relative risk management.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "math.OC"
+      ],
+      "published": "2026-07-13T09:53:18Z",
+      "updated": "2026-07-13T09:53:18Z",
+      "abs_url": "https://arxiv.org/abs/2607.11335",
+      "pdf_url": "https://arxiv.org/pdf/2607.11335v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 18,
+      "matched_keywords": [
+        "portfolio optimization",
+        "drawdown"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance_reason": "推導最小化基準相對回撤持續時間的 HJB 方程式與解析解。",
+      "summary": {
+        "title_zh": "透過佔用時間懲罰最小化基準相對回撤持續時間",
+        "verdict": "建構基準相對回撤持續時間的最佳化模型並推導出顯式控制解。",
+        "problem": "投資人面臨相對不可複製基準表現落後的持續時間問題，傳統追蹤模型未能有效控制。",
+        "method": "利用連續時間投資組合最佳化框架，結合佔用時間懲罰與基準相對回撤持續時間標準，推導出 HJB 方程式。",
+        "findings": "文中未報告具體績效數字，主要貢獻在於證明此問題具備一維馬可夫表示法，並獲得最佳回饋控制的投影特徵。",
+        "implication": "提供重視下檔風險的基準相對風險管理替代方案，有助於機構投資人控制落後時間，但須自行進行數值求解。",
+        "caveats": "本研究為純理論推導，缺乏真實市場資料實證與交易成本考量。",
+        "practicality": 2,
+        "tags": [
+          "投資組合最佳化",
+          "下檔風險",
+          "基準追蹤",
+          "HJB方程式"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.05320",
+      "title": "Screening-Off Information and Conditional Risk in Portfolio Choice",
+      "authors": [
+        "Alejandro Rodriguez Dominguez"
+      ],
+      "abstract": "Conditional portfolio models estimate risk relative to a chosen information set, yet rarely test whether that information removes common cross-asset dependence. When it does not, systematic risk may be treated as idiosyncratic, distorting portfolios and attainable efficient frontiers. We formulate this prior problem as screening-off for portfolio choice. A hierarchy separates causal, distributional and second-moment requirements, while an exact covariance decomposition distinguishes represented systematic response, omitted response risk and residual cross-asset dependence. The two representation errors have different financial implications: omitted response necessarily overstates attainable mean--variance opportunities, whereas incomplete screening can distort them in either direction. Exact finite perturbation identities and non-asymptotic bounds map both errors into changes in constrained portfolio weights and frontier potential. Controlled experiments verify the mechanisms under static, heavy-tailed, dynamic and nonlinear designs. Frozen out-of-sample market tests combine a broad universe of observable economic and financial drivers with 150 U.S. equities and 17 hedge-fund strategy indices. Compact selected representations materially reduce residual dependence in both panels; in equities, residual-aware covariance estimation improves materially on the uncorrected diagonal-residual restriction while remaining competitive with established covariance regularizers. The framework provides a falsifiable information criterion for conditional risk and a direct map from representation failure to portfolio instability.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM"
+      ],
+      "published": "2026-07-06T16:59:25Z",
+      "updated": "2026-09-09T16:48:50Z",
+      "abs_url": "https://arxiv.org/abs/2607.05320",
+      "pdf_url": "https://arxiv.org/pdf/2607.05320v3",
+      "comment": "28 Pages, 6 Figures, 3 Tables. Under peer-revision in a quantitative finance journal",
+      "journal_ref": "",
+      "keyword_score": 18,
+      "matched_keywords": [
+        "out-of-sample",
+        "covariance estimation"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "處理投組選擇中的條件風險，量化期刊審查中",
+      "summary": {
+        "title_zh": "資產配置中的資訊遮蔽與條件風險",
+        "verdict": "探討條件投資組合模型中的資訊選擇對系統性風險的影響，並提出嚴格的協方差分解與表現誤差分析。",
+        "problem": "條件投資組合模型鮮少測試所選資訊集是否能去除跨資產的共同相依性。若未能去除，系統性風險可能被視為特異風險，進而扭曲投資組合與效率前緣。",
+        "method": "利用階層架構分離因果、分配與二階動差要求，並透過精確的協方差分解與有限擾動恆等式進行分析；實證涵蓋靜態、重尾、動態與非線性設計，以及包含 150 檔美國股票與 17 種避險基金策略指數的樣本外市場測試。",
+        "findings": "精簡的表徵顯著減少了兩個面板中的殘差相依性；在股票中，考量殘差的協方差估計明顯改善了未修正的對角殘差限制，同時與已建立的協方差正規化方法保持競爭力。具體數字未在摘要中報告。",
+        "implication": "提供條件風險的可否證資訊準則，並建立從表徵失效到投資組合不穩定性的直接對應，有助於改善資產配置中的協方差矩陣估計。",
+        "caveats": "未報告具體的超額報酬或夏普值等績效改進數字。",
+        "practicality": 4,
+        "tags": [
+          "資產配置",
+          "條件風險",
+          "協方差估計",
+          "系統性風險"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.24514",
+      "title": "Incremental SVD for Large-Scale Dynamic Matrices: Accuracy, Subspace Stability, Refresh Strategies, and Financial Factor-Based Risk Models",
+      "authors": [
+        "Stilyan Staykov"
+      ],
+      "abstract": "Return panels, covariances, and large feature matrices evolve one observation or one entry at a time, yet downstream models require an up-to-date low-rank factorization $A_t \\approx U_t Σ_t V_t^\\top$ on every tick -- a regime where full SVD is prohibitive and existing alternatives sacrifice either singular vectors, singular values, or long-horizon stability. We present a practical, metric-driven study of Brand-style incremental SVD, built around a unified engine that handles row appends, column appends, rank-1 entry updates, and metrics tracking within a single framework, with two core contributions. For rank-1 entry updates, we derive an explicit projection-based rule $U'Σ'(V')^\\top = P_U(\\widehat{A} + δ\\,e_ie_j^\\top)P_V$ that keeps rank fixed while discarding only the out-of-subspace remainder in a quantifiable way, turning Brand's rank-suppression heuristic into an operational scheme. We then treat refresh scheduling as a first-class design axis, systematically comparing periodic, error-threshold, angle-threshold, and adaptive-rank policies on the accuracy-latency frontier. A unified framework tracks error ratios, principal angles, explained variance, and per-update runtime on long synthetic streams and a multi-asset ETF factor model for covariance and portfolio-risk estimation. With a sensible rank and refresh cadence, incremental SVD matches full-SVD accuracy within a few percent at a fraction of the cost, scaling to high-frequency regimes where batch SVDs are infeasible.",
+      "primary_category": "math.NA",
+      "categories": [
+        "math.NA",
+        "q-fin.RM"
+      ],
+      "published": "2026-05-23T10:56:31Z",
+      "updated": "2026-05-23T10:56:31Z",
+      "abs_url": "https://arxiv.org/abs/2605.24514",
+      "pdf_url": "https://arxiv.org/pdf/2605.24514v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 18,
+      "matched_keywords": [
+        "high-frequency",
+        "factor model",
+        "regime"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "動態矩陣的增量 SVD 與財務因子風險模型，實證扎實",
+      "summary": {
+        "title_zh": "大型動態矩陣的增量 SVD：準確度、子空間穩定性、更新策略與金融因子風險模型",
+        "verdict": "提出高效率的增量 SVD 框架，在大規模動態矩陣中兼顧即時更新與準確度。",
+        "problem": "下游模型每筆資料皆需即時的低秩矩陣分解，但傳統全域 SVD 計算成本過高，現有替代方案則會犧牲準確度或長期穩定性。",
+        "method": "採用 Brand 的增量 SVD 框架處理各種矩陣更新，並系統性比較週期、誤差閾值、角度閾值與適應性秩等更新策略；透過合成資料流與多資產 ETF 因子模型進行實證。",
+        "findings": "透過合適的秩與更新節奏，增量 SVD 的準確度能達到與全域 SVD 相差幾個百分點之內，大幅降低運算成本，但文中未報告具體的績效數字。",
+        "implication": "適用於高頻情境下的即時共變異數與投資組合風險估計，能有效解決全域 SVD 的效能瓶頸。",
+        "caveats": "需依賴適當的秩與更新策略設定，否則長期運作可能導致誤差累積。",
+        "practicality": 4,
+        "tags": [
+          "增量 SVD",
+          "矩陣分解",
+          "風險模型",
+          "高頻交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

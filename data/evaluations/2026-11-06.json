@@ -1,0 +1,327 @@
+{
+  "date": "2026-11-06",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2611.07287",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "ICAIF 2026 接受，加密貨幣樣本外表現扎實"
+    },
+    {
+      "arxiv_id": "2611.06607",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 9,
+      "reason": "開源自主量化研究迴圈，防範過擬合設計嚴謹"
+    },
+    {
+      "arxiv_id": "2611.06919",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "25年長期月度資料實證，統計檢定與模型完整"
+    },
+    {
+      "arxiv_id": "2611.07120",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出 RISVIX 模型，VIX 期權定價實證改善"
+    },
+    {
+      "arxiv_id": "2611.07457",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "資訊理論建構增長最佳投組，定價與避險模型完整"
+    },
+    {
+      "arxiv_id": "2611.06495",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "考量限制條件的退休金管理神經網路，實證扎實"
+    },
+    {
+      "arxiv_id": "2606.08285",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "LLM 交易系統執行真實性之系統性回顧審查"
+    },
+    {
+      "arxiv_id": "2607.05320",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "處理投組選擇中的條件風險，量化期刊審查中"
+    },
+    {
+      "arxiv_id": "2607.02795",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 5,
+      "reason": "偵測 Solana 機器人錢包協同，附有重大更正宣告"
+    },
+    {
+      "arxiv_id": "2606.29406",
+      "topic": "投組與風險",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "以 POMDP 處理 AI 委託授權，主要依賴模擬壓力測試"
+    },
+    {
+      "arxiv_id": "2606.27932",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "以分數階導數檢測市場狀態，理論推導結合實證"
+    },
+    {
+      "arxiv_id": "2606.26815",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "結合總經變數與機器學習預測期限結構，實證完整"
+    },
+    {
+      "arxiv_id": "2606.22118",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "AMM 流動性操作的通用閉合公式，純理論推導"
+    },
+    {
+      "arxiv_id": "2610.06856",
+      "topic": "投組與風險",
+      "evidence": "看不出來",
+      "relevance": 6,
+      "value": 4,
+      "reason": "探討 Agentic ETF 資產類別概念，無回測實證"
+    },
+    {
+      "arxiv_id": "2605.30943",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "混合神經馬可夫模型，以實際波動度條件化實證扎實"
+    },
+    {
+      "arxiv_id": "2605.24514",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "動態矩陣的增量 SVD 與財務因子風險模型，實證扎實"
+    },
+    {
+      "arxiv_id": "2605.21707",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 5,
+      "reason": "自適應 Avellaneda-Stoikov 造市架構，缺真實市場回測"
+    },
+    {
+      "arxiv_id": "2605.12151",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "Solana 拒絕交易事件公開資料集，部分章節已撤回"
+    },
+    {
+      "arxiv_id": "2605.09061",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "電力失衡價格預測神經網路，工業應用實證清楚"
+    },
+    {
+      "arxiv_id": "2604.27210",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "高效隱含波動度 Python 函式庫發布，附開源程式碼"
+    },
+    {
+      "arxiv_id": "2604.04430",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 4,
+      "reason": "樣本外夏普值高達 1.5 至 1.8，宣稱績效過高需審慎"
+    },
+    {
+      "arxiv_id": "2604.03946",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "利用效率前緣係數狀態進行資產配置，實證完整"
+    },
+    {
+      "arxiv_id": "2604.02917",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "GPU 加速均異投組最佳化，執行效率與實證俱佳"
+    },
+    {
+      "arxiv_id": "2604.16411",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "非同步多模態融合預測加密貨幣，實證與基準完整"
+    },
+    {
+      "arxiv_id": "2603.27501",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "改進 SABR 模型擬合中國期權市場，實證細緻"
+    },
+    {
+      "arxiv_id": "2603.16365",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "IEEE ICDM 接受，程式級智慧化因子探勘，實證扎實"
+    },
+    {
+      "arxiv_id": "2603.09006",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "建立光譜投組理論，將神經網路權重對應資產配置"
+    },
+    {
+      "arxiv_id": "2602.22069",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "動態權重 AMM 的鏈上套利與 LVR 分析，實證清晰"
+    },
+    {
+      "arxiv_id": "2602.17890",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "揭露內部人申報資訊摩擦，機器學習審計實證完整"
+    },
+    {
+      "arxiv_id": "2602.07046",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "加密貨幣市場對衝擊反應之事件研究，顯著性隨模型而異"
+    },
+    {
+      "arxiv_id": "2601.18991",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "平均場賽局模型探討穩定幣脫鉤，實證校準良好"
+    },
+    {
+      "arxiv_id": "2601.18686",
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 7,
+      "reason": "庫藏股回購計畫的最佳執行與深度避險機器學習框架"
+    },
+    {
+      "arxiv_id": "2601.11097",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "以 KAN 改善 BSDE 選擇權避險表現，實證對比清楚"
+    },
+    {
+      "arxiv_id": "2601.08962",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "財報後跳空與效率價格形成實證，資料獨特"
+    },
+    {
+      "arxiv_id": "2601.07637",
+      "topic": "投組與風險",
+      "evidence": "只有模擬資料",
+      "relevance": 5,
+      "value": 5,
+      "reason": "保險理賠準備金的強化學習模型，僅用合成資料"
+    },
+    {
+      "arxiv_id": "2512.23847",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出偵測 LLM 預測前視偏誤的統計檢定，方法實用"
+    },
+    {
+      "arxiv_id": "2512.21823",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "以條件受限波茲曼機偵測系統性風險體制，實證完整"
+    },
+    {
+      "arxiv_id": "2512.19838",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "DEX 流動性提供與風險抵銷之結構化賽局模型"
+    },
+    {
+      "arxiv_id": "2512.00893",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "2024 美選前後穩定幣市場之人類與演算法行為分析"
+    },
+    {
+      "arxiv_id": "2511.22782",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "已刊登於期刊，加密貨幣影響因素長短期實證"
+    }
+  ]
+}
