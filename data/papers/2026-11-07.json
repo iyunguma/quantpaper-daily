@@ -1,0 +1,506 @@
+{
+  "date": "2026-11-07",
+  "generated_at": "2026-11-07T10:52:32+08:00",
+  "scanned": 2442,
+  "eligible": 2237,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2610.23517",
+      "title": "Combinatorial Arbitrage in Prediction Markets",
+      "authors": [
+        "Hongjian Shi",
+        "Daojing Zhai"
+      ],
+      "abstract": "We develop a framework to identify and quantify arbitrage across logically related prediction-market contracts. We prove that prices outside the convex hull of admissible payoff vectors admit arbitrage and identify optimal arbitrage portfolios through integer programming. Using venue metadata and semantic analysis of resolution criteria, we recover 1.9 million logical relations and compile them into constraint systems covering more than 255,000 contracts. We replay full-depth Polymarket order books to simulate an arbitrageur executing these portfolios against resting orders. Among settled portfolios, an ideal arbitrageur that takes the full displayed depth of every opportunity and reuses its capital at resolution earns a risk-free return of 3.5% a week after spreads and fees. We find that arbitrage opportunities persist longer and attract less observed participation where relation discovery and execution are more costly.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.CP"
+      ],
+      "published": "2026-10-16T14:22:23Z",
+      "updated": "2026-10-25T22:55:00Z",
+      "abs_url": "https://arxiv.org/abs/2610.23517",
+      "pdf_url": "https://arxiv.org/pdf/2610.23517v4",
+      "comment": "47 pages, 10 figures, 10 tables",
+      "journal_ref": "",
+      "keyword_score": 17,
+      "matched_keywords": [
+        "order book"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "Polymarket 歷史訂單簿重播，實證完整且扣除成本後有具體周報酬。",
+      "summary": {
+        "title_zh": "預測市場中的組合套利",
+        "verdict": "利用整數規劃在預測市場中跨合約進行組合套利，實證顯示扣除成本後每週可達 3.5% 的無風險報酬。",
+        "problem": "邏輯相關的預測市場合約之間常出現定價錯誤，需要框架來識別並量化這類組合套利機會。",
+        "method": "透過語意分析與元資料從 Polymarket 恢復 190 萬個邏輯關係並建立限制系統，利用整數規劃尋找最佳套利組合，並回放全深度訂單簿進行交易模擬。",
+        "findings": "在已結算的投資組合中，理想套利者在扣除價差與手續費後，可獲得每週 3.5% 的無風險報酬。發現當關係發現與執行成本較高時，套利機會持續時間較長且參與度較低。",
+        "implication": "可用於自動化監控相關合約的定價偏誤，前提是需要高效率的語意關係解析與低延遲的整數規劃執行能力。",
+        "caveats": "假設套利者能消耗掛單簿的全深度並在結算時重複使用資金，這在實際流動性不足時可能無法完全達成。",
+        "practicality": 4,
+        "tags": [
+          "預測市場",
+          "組合套利",
+          "整數規劃",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.12082",
+      "title": "When Forecast Accuracy Fails: Rank Correlation and Decision Quality in Multi-Market Battery Storage Optimization",
+      "authors": [
+        "Alessandro Falezza"
+      ],
+      "abstract": "Battery energy storage systems (BESS) participating in multi-market electricity trading require price forecasts to optimize dispatch decisions. A widely held assumption is that forecast accuracy, measured by standard metrics such as mean absolute error (MAE), drives trading performance. We challenge this assumption using a hierarchical three-layer optimization system trading simultaneously on frequency containment reserve (FCR), automatic frequency restoration reserve (aFRR), day-ahead, and continuous intraday (XBID) markets in Germany and Switzerland over 2020-2025, with real market data from Regelleistung.net and Swissgrid. We find that rank correlation (Kendall tau), rather than MAE, is the primary predictor of intraday dispatch value: forecasts above an empirical threshold of tau approximately 0.85-0.95 capture up to 97-100% of perfect-foresight revenue, while persistence forecasts with near-zero tau capture only 33%. This threshold is stable across market regimes and volatility levels, and reflects the ordinal structure of the dispatch problem. Furthermore, under reserve market constraints, FCR capacity revenue exceeds XBID by 6.5x per MW, making capacity allocation -- not forecast accuracy -- the primary driver of total revenue. In the Swiss market, hydrological surplus anomalies are significantly associated with balancing market revenue (p = 0.0005), a mechanism absent from existing German-focused literature. These findings reframe forecast evaluation for BESS operators: the relevant question is not what the MAE is, but whether the forecast achieves tau-sufficiency.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.CE",
+        "econ.GN"
+      ],
+      "published": "2026-04-13T21:42:59Z",
+      "updated": "2026-04-26T17:23:21Z",
+      "abs_url": "https://arxiv.org/abs/2604.12082",
+      "pdf_url": "https://arxiv.org/pdf/2604.12082v2",
+      "comment": "32 pages, 5 figures, 5 tables. v2: added Section 3.5 (Note on Synthetic Forecast Generation) documenting variance attenuation in the alpha-interpolation method and robustness findings under rank-perturbation and Gaussian copula. Structural results unchanged",
+      "journal_ref": "",
+      "keyword_score": 17,
+      "matched_keywords": [
+        "regime",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "以五年德國瑞士電力市場真實資料，證明秩相關係數比 MAE 更能驅動電池儲能價值。",
+      "summary": {
+        "title_zh": "當預測準確度失效：多市場電池儲能最佳化中的等級相關性與決策品質",
+        "verdict": "電池儲能多市場交易中，等級相關性（Kendall tau）比 MAE 更能決定日內交易價值，且輔助服務容量配置才是總營收的主導因素。",
+        "problem": "傳統假設認為標準預測誤差指標（如 MAE）能直接驅動電池儲能系統（BESS）的多市場交易績效，這項假設是否成立需要重新檢視。",
+        "method": "使用三層階層式最佳化系統，針對德國與瑞士的 FCR、aFRR、日內與次日市場進行研究，採用 2020-2025 年 Regelleistung.net 與 Swissgrid 的真實市場資料。",
+        "findings": "Kendall tau 達 0.85 至 0.95 時可捕獲 97% 至 100% 的完美預見營收，而 tau 趨近於零的持續性預測僅能捕獲 33%。此外，在備轉容量限制下，FCR 容量營收每 MW 超過日內市場 6.5 倍，瑞士市場中水力發電盈餘異常與平衡市場營收顯著相關（p = 0.0005）。",
+        "implication": "BESS 營運商在評估預測時，應關注預測是否達到 tau 充分性，而非單純追求 MAE 降低，並應將重心放在容量配置策略。",
+        "caveats": "研究結果高度依賴特定電力市場（如德國與瑞士）的法規與市場結構，其門檻值未必能直接套用至其他電力市場。",
+        "practicality": 4,
+        "tags": [
+          "電池儲能",
+          "電力市場",
+          "等級相關性",
+          "預測評估",
+          "最佳化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.07287",
+      "title": "Neural Realized Measures: Forecast-Supervised Intraday Aggregation for Volatility Forecasting",
+      "authors": [
+        "Brian Sing Fan Chan",
+        "Jennifer So Kuen Chan"
+      ],
+      "abstract": "High-frequency volatility forecasting typically separates measurement from prediction: intraday observations are first compressed into a daily realized measure using a fixed aggregation rule, and the resulting statistic is then passed to a forecasting model. This conventional pipeline therefore treats measure construction as forecast-agnostic preprocessing. We ask whether the aggregation stage itself can instead be learned from the downstream forecasting objective while preserving the statistical structure of established realized measures. We propose Neural Realized Measures (NRM), a primitive-preserving, forecast-supervised aggregation framework that retains the original measure-specific intraday contributions but replaces uniform aggregation with positive, mean-normalized context-dependent weights. Uniform weights exactly recover the corresponding raw realized measure (RRM), so the classical construction is nested as a special case. Because NRM remains an explicit weighted sum of established primitive contributions, it also retains direct bar-level attribution. Across SF, HAR, and MIDAS forecasting specifications, NRM is evaluated against corresponding RRM specifications under controlled comparisons. In Heston simulations, NRM reduces RMSE for both contemporaneous and next-day latent integrated variance across all evaluated primitive--regime combinations. On six cryptocurrencies using five-minute data, NRM improves QLIKE in all 54 paired out-of-sample comparisons, with mean gains of 7.23\\%, 8.15\\%, and 9.22\\% under SF, HAR, and MIDAS, respectively. Validation-selected NRM specifications also achieve the lowest mean QLIKE across the six assets among the evaluated approaches. Ablation and SHAP analyses reveal systematic time-of-day and nonlinear local-context effects in the learned allocation.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "stat.ML"
+      ],
+      "published": "2026-11-05T01:10:44Z",
+      "updated": "2026-11-05T01:10:44Z",
+      "abs_url": "https://arxiv.org/abs/2611.07287",
+      "pdf_url": "https://arxiv.org/pdf/2611.07287v1",
+      "comment": "9 pages, 3 figures, 5 tables. Accepted at the ACM International Conference on AI in Finance (ICAIF 2026), Milan, Italy",
+      "journal_ref": "",
+      "keyword_score": 37,
+      "matched_keywords": [
+        "high-frequency",
+        "volatility forecasting",
+        "out-of-sample",
+        "regime"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "ICAIF 2026 接受，加密貨幣樣本外表現扎實",
+      "summary": {
+        "title_zh": "神經實現量值：用於波動率預測的預測監督式日內聚合",
+        "verdict": "提出神經實現量值（NRM），以預測目標監督日內聚合，在加密貨幣預測上顯著改善 QLIKE。",
+        "problem": "傳統的高頻波動率預測將量值建構與預測分離，採用固定聚合規則作為無關預測的前置處理。這忽視了聚合階段本身可以從下游預測目標中學習的可能性。",
+        "method": "提出神經實現量值（NRM）框架，保留原始量值特有的日內貢獻，但將均勻聚合替換為正值、均值正規化的上下文相依權重。在 Heston 模擬與 6 種加密貨幣的 5 分鐘資料上進行評估，結合 SF、HAR 與 MIDAS 預測模型。",
+        "findings": "在 Heston 模擬中，NRM 降低了潛在集成變異數的 RMSE。在 6 種加密貨幣的 5 分鐘資料之 54 項成對樣本外比較中，NRM 在所有比較均改善了 QLIKE，在 SF、HAR 與 MIDAS 下的平均改善幅度分別為 7.23%、8.15% 與 9.22%。",
+        "implication": "可直接替換傳統的實現量值計算方式，透過預測目標反向最佳化日內權重分配來提升波動率預測表現。適用於需要精確日內波動率預測的量化交易策略。",
+        "caveats": "實證僅針對加密貨幣與模擬資料，未見傳統股票或期貨市場的實測結果。",
+        "practicality": 4,
+        "tags": [
+          "波動率預測",
+          "高頻資料",
+          "機器學習",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2511.17462",
+      "title": "Scaling Conditional Autoencoders for Portfolio Optimization via Uncertainty-Aware Factor Selection",
+      "authors": [
+        "Ryan Engel",
+        "Yu Chen",
+        "Pawel Polak",
+        "Ioana Boier"
+      ],
+      "abstract": "Conditional Autoencoders (CAEs) offer a flexible, interpretable approach for estimating latent asset-pricing factors from firm characteristics. However, existing studies usually limit the latent factor dimension to around K=5 due to concerns that larger K can degrade performance. To overcome this challenge, we propose a scalable framework that couples a high-dimensional CAE with an uncertainty-aware factor selection procedure. We employ three models for quantile prediction: zero-shot Chronos, a pretrained time-series foundation model (ZS-Chronos), gradient-boosted quantile regression trees using XGBoost and RAPIDS (Q-Boost), and an I.I.D bootstrap-based sample mean model (IID-BS). For each model, we rank factors by forecast uncertainty and retain the top-k most predictable factors for portfolio construction, where k denotes the selected subset of factors. This pruning strategy delivers substantial gains in risk-adjusted performance across all forecasting models. Furthermore, due to each model's uncorrelated predictions, a performance-weighted ensemble consistently outperforms individual models with higher Sharpe, Sortino, and Omega ratios.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM"
+      ],
+      "published": "2025-11-21T18:04:00Z",
+      "updated": "2025-11-21T18:04:00Z",
+      "abs_url": "https://arxiv.org/abs/2511.17462",
+      "pdf_url": "https://arxiv.org/pdf/2511.17462v1",
+      "comment": "9 pages, 6 figures. Published in Proceedings of the 6th ACM International Conference on AI in Finance (ICAIF '25)",
+      "journal_ref": "ICAIF '25: Proceedings of the 6th ACM International Conference on AI in Finance, pages 123-131, 2025",
+      "keyword_score": 21,
+      "matched_keywords": [
+        "portfolio optimization"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "已發表於 ICAIF，結合條件自編碼器與不確定性因子選擇，實證嚴謹。",
+      "summary": {
+        "title_zh": "透過不確定性感知因子選擇擴展條件自編碼器以進行投資組合最佳化",
+        "verdict": "結合高維條件自編碼器與不確定性感知因子選擇，透過預測不確定性篩選因子並進行集成，顯著提升投資組合的風險調整後報酬。",
+        "problem": "現有研究將條件自編碼器（CAE）的潛在因子維度限制在 K=5 左右，避免維度過高導致效能劣化。如何擴展高維 CAE 並維持效能是本研究要解決的問題。",
+        "method": "使用條件自編碼器結合三種分量預測模型（ZS-Chronos、Q-Boost 與 IID-BS）進行因子預測與排序。依據預測不確定性保留前 k 個可預測因子建構投資組合，並將各模型進行表現加權集成。",
+        "findings": "剪枝策略大幅提升了所有預測模型的風險調整後報酬。此外，由於各模型的預測具備低相關性，表現加權集成在 Sharpe、Sortino 與 Omega 比率上皆持續超越單一模型，但論文未報告具體的績效數值。",
+        "implication": "實務上可利用不確定性感知的分量預測來過濾高維潛在因子，並透過模型集成來改善投資組合表現。前提是需要實作 Chronos 或 XGBoost 等預測模型並進行因子排序。",
+        "caveats": "論文摘要中未提供具體的績效數字來量化改善幅度。",
+        "practicality": 4,
+        "tags": [
+          "投資組合最佳化",
+          "條件自編碼器",
+          "因子選擇",
+          "機器學習",
+          "基礎模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.15144",
+      "title": "From Economic Explanation to Performance Improvement in Machine-Learning Portfolios",
+      "authors": [
+        "Yunqi Liang",
+        "Stefan Zohren",
+        "Mihai Cucuringu"
+      ],
+      "abstract": "To extend conventional model-level feature importance to economically meaningful portfolio outcomes and decisions, we propose a local first-order attribution-propagation framework that maps allocation-function feature exposures to local sensitivities of sequential portfolio performance metrics. We relate the propagated attributions to Shapley values defined directly for portfolio objectives and derive statistical inference for Sharpe-ratio attributions. The resulting attribution-guided feature-exposure intervention enables post-training adaptation, translating portfolio-metric explanations into out-of-sample decisions without retraining the underlying allocation model. We further introduce temporal stabilisation and cross-model averaging as complementary regularisation mechanisms. Empirically, the interventions yield statistically significant improvements in net Sharpe ratios across different model classes.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "q-fin.ST"
+      ],
+      "published": "2026-10-10T19:44:27Z",
+      "updated": "2026-10-10T19:44:27Z",
+      "abs_url": "https://arxiv.org/abs/2610.15144",
+      "pdf_url": "https://arxiv.org/pdf/2610.15144v1",
+      "comment": "70 pages, 19 figures, 13 tables",
+      "journal_ref": "",
+      "keyword_score": 20,
+      "matched_keywords": [
+        "sharpe ratio",
+        "out-of-sample"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出歸因傳遞框架改善機器學習投組表現，方法論創新且實證完整。",
+      "summary": {
+        "title_zh": "從機器學習投資組合的經濟解釋到績效提升",
+        "verdict": "提出區域一階歸因傳播框架，將特徵暴露映射至投資組合績效敏感度，實證顯示能顯著提升淨夏普值。",
+        "problem": "傳統的模型層級特徵重要性難以直接對應到具有經濟意義的投資組合結果與決策。",
+        "method": "結合區域一階歸因傳播框架與 Shapley 值推導 Sharpe 值的統計推論，並透過跨模型平均與時間穩定化進行正規化，針對不同機器學習模型類別進行實證。",
+        "findings": "透過歸因引導的特徵暴露介入進行訓練後調適，在不同模型類別中皆帶來具統計顯著性的淨夏普值提升，未報告其他具體數字。",
+        "implication": "允許交易員在不重新訓練底層配置模型的情況下，將績效指標解釋轉化為樣本外決策，適合用於模型的後訓練調整。",
+        "caveats": "依賴特徵暴露介入的有效性，若模型本身的特徵設定存在結構性缺陷則效果可能受限。",
+        "practicality": 4,
+        "tags": [
+          "機器學習",
+          "投資組合最佳化",
+          "特徵歸因",
+          "夏普值",
+          "模型解釋"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.30943",
+      "title": "Inspectable Neural Markov Models for Non-Stationary Time Series",
+      "authors": [
+        "Jan Rovirosa",
+        "Jesse Schmolze"
+      ],
+      "abstract": "Modeling non-stationary stochastic systems requires balancing the representational capacity of deep learning with the structural transparency of classical probabilistic models. Markov transition matrices provide such a framework, but traditional frequency-based estimation collapses at high resolutions due to data sparsity. We propose a hybrid approach that parameterizes the manifold of stochastic matrices through a neural network, enabling estimation of time-inhomogeneous Markov chains in sparse-data regimes, and use financial markets as a testbed to investigate the Markov state variable as a critical inductive bias. We show that conditioning on realized volatility produces a more internally consistent Markovian structure than return-based states, achieving a $5.6\\%$ reduction in Chapman-Kolmogorov discrepancy and superior held-out likelihood in 9 of 10 assets. Unlike black-box sequence models, our approach generates explicit matrices amenable to direct geometric analysis, surfacing structural findings such as the universal homogenization of transition probabilities under high-volatility regimes.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "stat.ML"
+      ],
+      "published": "2026-05-29T07:29:35Z",
+      "updated": "2026-05-29T07:29:35Z",
+      "abs_url": "https://arxiv.org/abs/2605.30943",
+      "pdf_url": "https://arxiv.org/pdf/2605.30943v1",
+      "comment": "9 pages, 5 figures, 2 tables. Presented at The 2026 ASA Midwest Regional Conference in Statistics and Data Science",
+      "journal_ref": "",
+      "keyword_score": 18,
+      "matched_keywords": [
+        "realized volatility",
+        "deep learning",
+        "regime",
+        "neural network"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "混合神經馬可夫模型，以實際波動度條件化實證扎實",
+      "summary": {
+        "title_zh": "用於非平穩時間序列的可檢視神經馬可夫模型",
+        "verdict": "提出以神經網路參數化隨機矩陣流形的方法，在稀疏資料下估計非齊次馬可夫鏈，發現以實現波動度作為條件能提升結構一致性。",
+        "problem": "深度學習的表達能力與傳統機率模型的結構透明度難以兼顧，且傳統馬可夫轉移矩陣在高效能解析度下會因資料稀疏而失效。",
+        "method": "使用神經網路參數化隨機矩陣流形，以金融市場作為測試平台，探討馬可夫狀態變數的歸納偏置，並評估不同條件變數的表現。",
+        "findings": "以實現波動度作為條件比報酬狀態更能產生內部一致的馬可夫結構，在查普曼-柯爾莫哥洛夫差異上實現了 5.6% 的減少，且在 10 個資產中的 9 個展現出更優異的保留概似度。",
+        "implication": "此方法能產出可直接進行幾何分析的明確矩陣，有助於洞察高波動體制下轉移機率趨於均質化的結構性特徵。",
+        "caveats": "論文未報告實際交易策略的報酬率或夏普值等具體績效數字。",
+        "practicality": 3,
+        "tags": [
+          "馬可夫模型",
+          "非平穩時間序列",
+          "神經網路",
+          "實現波動度",
+          "Alpha 因子"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.02917",
+      "title": "Scalable Mean-Variance Portfolio Optimization via Subspace Embeddings and GPU-Friendly Nesterov-Accelerated Projected Gradient",
+      "authors": [
+        "Yi-Shuai Niu",
+        "Yajuan Wang"
+      ],
+      "abstract": "We develop a sketch-based factor reduction and a Nesterov-accelerated projected gradient algorithm (NPGA) with GPU acceleration, yielding a doubly accelerated solver for large-scale constrained mean-variance portfolio optimization. Starting from the sample covariance factor $L$, the method combines randomized subspace embedding, spectral truncation, and ridge stabilization to construct an effective factor $L_{eff}$. It then solves the resulting constrained problem with a structured projection computed by scalar dual search and GPU-friendly matrix-vector kernels, yielding one computational pipeline for the baseline, sketched, and Sketch-Truncate-Ridge (STR)-regularized models. We also establish approximation, conditioning, and stability guarantees for the sketching and STR models, including explicit $O(\\varepsilon)$ bounds for the covariance approximation, the optimal value error, and the solution perturbation under $(\\varepsilon,δ)$-subspace embeddings. Experiments on synthetic and real equity-return data show that the method preserves objective accuracy while reducing runtime substantially. On a 5440-asset real-data benchmark with 48374 training periods, NPGA-GPU solves the unreduced full model in 2.80 seconds versus 64.84 seconds for Gurobi, while the optimized compressed GPU variants remain in the low-single-digit-second regime. These results show that the full dense model is already practical on modern GPUs and that, after compression, the remaining bottleneck is projection rather than matrix-vector multiplication.",
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC",
+        "cs.CE",
+        "cs.DC",
+        "cs.LG",
+        "math.NA"
+      ],
+      "published": "2026-04-03T09:35:05Z",
+      "updated": "2026-04-03T09:35:05Z",
+      "abs_url": "https://arxiv.org/abs/2604.02917",
+      "pdf_url": "https://arxiv.org/pdf/2604.02917v1",
+      "comment": "28 pages, 7 figures",
+      "journal_ref": "",
+      "keyword_score": 18,
+      "matched_keywords": [
+        "portfolio optimization",
+        "regime"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "GPU 加速均異投組最佳化，執行效率與實證俱佳",
+      "summary": {
+        "title_zh": "透過子空間嵌入與 GPU 友善 Nesterov 加速投影梯度的可擴展均異異質投資組合最佳化",
+        "verdict": "提出結合隨機子空間嵌入與 GPU 加速 Nesterov 梯度法的最佳化求解器，大幅降低大型均異投資組合的運算時間。",
+        "problem": "在大規模資產配置與嚴格限制條件下，傳統均異投資組合最佳化面臨高維度協方差矩陣與求解器運算瓶頸。",
+        "method": "結合隨機子空間嵌入、譜截斷與 Ridge 正規化建構有效因子，並透過純量對偶搜尋與 GPU 矩陣向量核心進行 Nesterov 加速投影梯度法求解，使用真實權益報酬資料進行實驗。",
+        "findings": "在包含 5440 項資產與 48374 個訓練期的真實資料基準測試中，NPGA-GPU 求解完整未壓縮模型僅需 2.80 秒，遠快於 Gurobi 的 64.84 秒，壓縮後的 GPU 變體則維持在極低的秒數區間。",
+        "implication": "現代 GPU 可將高維度投資組合最佳化的運算時間壓低至數秒內，適合高頻率或大規模的即時配置需求。",
+        "caveats": "模型壓縮後的效能瓶頸已轉移至限制條件的投影步驟而非矩陣向量乘法。",
+        "practicality": 5,
+        "tags": [
+          "投資組合最佳化",
+          "GPU 加速",
+          "子空間嵌入",
+          "數值最佳化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.22069",
+      "title": "Pools as Portfolios: Observed arbitrage efficiency & LVR analysis of dynamic weight AMMs",
+      "authors": [
+        "Matthew Willetts",
+        "Christian Harrington"
+      ],
+      "abstract": "Dynamic-weight AMMs (aka Temporal Function Market Makers, TFMMs) implement algorithmic asset allocation, analogous to index or smart beta funds, by continuously updating pools' weights. A strategy updates target weights over time, and arbitrageurs trade the pool back toward those weights. This creates a sequence of small, predictable mispricings that grow until taken, effectively executing rebalances as a series of Dutch reverse auctions. Prior theoretical and simulation work (Willetts & Harrington, 2024) predicted that this mechanism could outperform CEX-style rebalancing. We test that claim on two live pools on the QuantAMM protocol, one on Ethereum mainnet and one on Base, across two short rebalancing windows six months apart (July 2025 and January 2026). We perform block-level arbitrage analysis, and then measure long term outcomes using Loss-vs-Rebalancing (LVR) and Rebalancing-vs-Rebalancing (RVR) benchmarks. On mainnet, rebalancing becomes markedly more efficient over time (more frequent arbitrage trades with lower value extracted per trade), reaching performance comparable to or better than CEX-based models. On Base, rebalancing persists even when per-trade extraction is near (or below) zero, consistent with routing-driven execution, and achieves efficiencies that meet or exceed standard \"perfect rebalancing\" LVR baselines. These results demonstrate dynamic-weight AMMs as a competitive execution layer for tokenised funds, with superior performance on L2s where routing and lower data costs compress arbitrage spreads.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.PM"
+      ],
+      "published": "2026-02-25T16:16:49Z",
+      "updated": "2026-02-25T16:16:49Z",
+      "abs_url": "https://arxiv.org/abs/2602.22069",
+      "pdf_url": "https://arxiv.org/pdf/2602.22069v1",
+      "comment": "9 pages plus appendix",
+      "journal_ref": "",
+      "keyword_score": 18,
+      "matched_keywords": [
+        "market maker"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "動態權重 AMM 的鏈上套利與 LVR 分析，實證清晰",
+      "summary": {
+        "title_zh": "投資組合池：動態權重 AMM 的套利效率與 LVR 分析",
+        "verdict": "實測動態權重 AMM 的套利效率，發現在主網與 L2 上皆能有效執行基金再平衡。",
+        "problem": "檢驗動態權重 AMM（TFMM）作為演算法資產配置工具時的實際套利效率。評估其是否能如預期般以荷蘭反向拍賣機制有效執行再平衡。",
+        "method": "使用 QuantAMM 協議在 Ethereum 主網與 Base 上的真實流動性池資料。分析間隔六個月的兩個短暫窗口（2025 年 7 月與 2026 年 1 月）之區塊級套利，並以 LVR 與 RVR 基準衡量表現。",
+        "findings": "主網上的再平衡效率隨時間顯著提升，交易更頻繁但每次提取價值降低。在 Base 上，效率達到甚至超過標準的「完美再平衡」LVR 基準，且即使每筆交易提取價值趨近零仍持續套利。",
+        "implication": "動態權重 AMM 可作為代幣化基金具競爭力的執行層，特別適合在資料成本較低的 L2 上運行以壓縮套利價差。",
+        "caveats": "實證僅涵蓋兩個鏈上的兩個短期窗口，樣本廣度仍顯不足。",
+        "practicality": 4,
+        "tags": [
+          "自動造市商",
+          "套利效率",
+          "去中心化金融",
+          "資產配置"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.18991",
+      "title": "Who Restores the Peg? A Mean-Field Game Approach to Model Stablecoin Market Dynamics",
+      "authors": [
+        "Hardhik Mohanty",
+        "Bhaskar Krishnamachari"
+      ],
+      "abstract": "USDC and USDT are the dominant stablecoins pegged to \\$1 with a total market capitalization of over \\$300B and rising. Stablecoins make dollar value globally accessible with secure transfer and settlement. Yet in practice, these stablecoins experience periods of stress and de-pegging from their \\$1 target, posing significant systemic risks. The behavior of market participants during these stress events and the collective actions that either restore or break the peg are not well understood. This paper addresses the question: who restores the peg?. We develop a dynamic, agent-based mean-field game framework for fiat-collateralized stablecoins, in which a large population of arbitrageurs and retail traders strategically interact across primary and secondary markets during a de-peg episode. The key advantage of this equilibrium formulation is that it endogenously maps market frictions into a market-clearing price path and implied net order flows, allowing us to attribute peg-reverting pressure by channel and to stress-test when a given infrastructure becomes insufficient for recovery. Using three historical de-peg events, we show that the calibrated equilibrium reproduces observed recovery half-lives and yields an order flow decomposition in which system-wide stress is predominantly stabilized by primary-market arbitrage. Finally, a quantitative sensitivity analysis identifies a non-linear breakdown threshold, beyond which a de-peg becomes markedly slower to reverse.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.GT",
+        "econ.GN"
+      ],
+      "published": "2026-01-26T21:59:54Z",
+      "updated": "2026-05-07T17:10:18Z",
+      "abs_url": "https://arxiv.org/abs/2601.18991",
+      "pdf_url": "https://arxiv.org/pdf/2601.18991v2",
+      "comment": "9 pages, 9 figures, 3 tables",
+      "journal_ref": "",
+      "keyword_score": 18,
+      "matched_keywords": [
+        "order flow"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "平均場賽局模型探討穩定幣脫鉤，實證校準良好",
+      "summary": {
+        "title_zh": "誰修復了錨定？利用平均場賽局模型模擬穩定幣市場動態",
+        "verdict": "建構平均場賽局模型分析穩定幣脫錨事件，發現一級市場套利是主要的穩定力量，且存在非線性的崩潰閾值。",
+        "problem": "穩定幣在壓力期間常發生脫錨，市場參與者在集體行動中如何修復或破壞錨定機制尚不明確。",
+        "method": "針對法幣抵押穩定幣開發動態、基於代理人的平均場賽局框架，模擬套利者與散戶在主次級市場的策略互動，並使用三次歷史脫錨事件進行校準。",
+        "findings": "校準後的均衡狀態能重現觀察到的恢復半衰期，且訂單流分解顯示系統性壓力主要由一級市場套利來穩定；量化敏感度分析識別出非線性的崩潰閾值，超過此閾值脫錨復原速度會顯著變慢。",
+        "implication": "可用於壓力測試基礎設施何時會不足以支撐復原，並評估一級市場套利在極端行情下的動態反應。",
+        "caveats": "論文摘要中未報告具體的報酬率或夏普值等量化績效數字。",
+        "practicality": 3,
+        "tags": [
+          "穩定幣",
+          "平均場賽局",
+          "市場微結構",
+          "套利",
+          "流動性危機"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2512.23847",
+      "title": "Detecting Lookahead Bias in LLM Forecasts",
+      "authors": [
+        "Zhenyu Gao",
+        "Wenxi Jiang",
+        "Yutong Yan"
+      ],
+      "abstract": "We develop a statistical procedure to detect lookahead bias in economic forecasts generated by large language models (LLMs). Using a date-only recall query for a firm-date pair, we estimate the probability that the LLM has internalized information about the realized outcome, a statistic we term Lookahead Propensity (LAP). LAP is materially positive throughout the in-sample period and collapses essentially to zero right after the training-data cutoff. We show that a positive interaction between LAP and the LLM forecast in an accuracy regression indicates lookahead-bias contamination, and apply the test to two forecasting tasks: news headlines predicting stock returns and earnings call transcripts predicting capital expenditures. In both applications, the LLM forecast's predictive power is amplified on high-LAP firm-date pairs, and the interaction loses significance on post-training-cutoff samples. Our test provides a cost-efficient, diagnostic tool for assessing the validity and reliability of LLM-generated forecasts.",
+      "primary_category": "q-fin.GN",
+      "categories": [
+        "q-fin.GN",
+        "cs.LG",
+        "q-fin.TR"
+      ],
+      "published": "2025-12-29T20:20:04Z",
+      "updated": "2026-06-12T10:10:19Z",
+      "abs_url": "https://arxiv.org/abs/2512.23847",
+      "pdf_url": "https://arxiv.org/pdf/2512.23847v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 18,
+      "matched_keywords": [
+        "llm",
+        "large language model",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出偵測 LLM 預測前視偏誤的統計檢定，方法實用",
+      "summary": {
+        "title_zh": "偵測大型語言模型預測中的前視偏差",
+        "verdict": "提出基於「前視傾向」統計檢定法，有效診斷大型語言模型預測中是否遭到前視偏差污染。",
+        "problem": "大型語言模型應用於經濟預測時，常因訓練資料包含未來資訊而產生前視偏差，影響預測真實性。",
+        "method": "設計日期回憶查詢來估計前視傾向（LAP），並應用於新聞標題預測股票報酬及財報電話會議記錄預測資本支出兩項任務，分析樣本期間涵蓋訓練資料截斷前後。",
+        "findings": "前視傾向在樣本內顯著為正，但在訓練資料截斷後崩跌至零；實證顯示高前視傾向會顯著放大模型的預測能力，但在截斷後該交互作用失去顯著性，論文未報告具體的夏普值或報酬數字。",
+        "implication": "可用於檢驗大模型預測的真實有效性，在進行回測前過濾掉受污染的樣本，提升策略穩健性。",
+        "caveats": "該檢定主要依賴模型對特定日期資訊的回憶機率，可能受模型記憶特性的影響。",
+        "practicality": 4,
+        "tags": [
+          "大語言模型",
+          "前視偏差",
+          "統計檢定",
+          "預測評估"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
