@@ -1,0 +1,327 @@
+{
+  "date": "2026-11-08",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2603.10807",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 2,
+      "value": 5,
+      "reason": "探討金融服務中LLM紅隊測試的安全評估，對交易策略無直接幫助。"
+    },
+    {
+      "arxiv_id": "2603.10569",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 8,
+      "reason": "建立整合RFQ市場與總體路由的隨機控制模型，推導嚴謹且具實務洞察。"
+    },
+    {
+      "arxiv_id": "2602.14506",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "將共變異數矩陣融入Transformer以求解二次規劃，應用於投組配置且實證扎實。"
+    },
+    {
+      "arxiv_id": "2602.14354",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 8,
+      "reason": "結合擬蒙地卡羅與全域敏感度分析進行選擇權訂價，已刊登於Wilmott期刊。"
+    },
+    {
+      "arxiv_id": "2602.10071",
+      "topic": "Alpha 與因子",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 5,
+      "reason": "電力價格預測的深度學習文獻回顧，對交易應用提供結構化分類。"
+    },
+    {
+      "arxiv_id": "2602.05007",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 7,
+      "reason": "評估音樂版權資產的風險報酬特徵並與S&P500比較，資產配置視角獨特。"
+    },
+    {
+      "arxiv_id": "2602.01877",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出自相關最佳化估計模型並應用於帶交易成本的投組問題，實證完整。"
+    },
+    {
+      "arxiv_id": "2602.00383",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "運用拓樸顯著性檢定量化加密貨幣與股市動態，分析方法具創新性。"
+    },
+    {
+      "arxiv_id": "2602.00196",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "利用生成式AI自動化特徵工程，夏普值顯著提升且控制檢索品質。"
+    },
+    {
+      "arxiv_id": "2601.20643",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "評估多種均異與最小變異投組的縮減估計量，實證廣泛且結論具參考價值。"
+    },
+    {
+      "arxiv_id": "2601.17247",
+      "topic": "交易執行",
+      "evidence": "只有模擬資料",
+      "relevance": 9,
+      "value": 5,
+      "reason": "使用模擬市場比較深度強化學習在收盤競價流動性執行的表現。"
+    },
+    {
+      "arxiv_id": "2601.13757",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "評估加密貨幣VaR模型，指出傳統定常假設失效，已獲期刊接受。"
+    },
+    {
+      "arxiv_id": "2601.22168",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "利用對抗性多代理人模擬進行穩定幣儲備控制，僅依賴模擬資料。"
+    },
+    {
+      "arxiv_id": "2601.18804",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "以深度FBSDE框架擴展Black-Scholes模型進行選擇權訂價，實證改善顯著。"
+    },
+    {
+      "arxiv_id": "2601.10043",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "結合LoRA與指令微調進行金融實體識別，方法標準且效果良好。"
+    },
+    {
+      "arxiv_id": "2601.05085",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "研究電力市場DART價差預測與最佳訂單配置，實證完整且具市場實務價值。"
+    },
+    {
+      "arxiv_id": "2601.03948",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "提出處理金融隨機環境中強化學習獎勵雜訊的程序化驗證架構。"
+    },
+    {
+      "arxiv_id": "2512.22001",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "將變分量子本徵求解器應用於動態投組最佳化，並在真實量子硬體上驗證。"
+    },
+    {
+      "arxiv_id": "2512.21804",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 4,
+      "reason": "使用CNN預測S&P500股價走勢，方法較為早期且實證相對簡單。"
+    },
+    {
+      "arxiv_id": "2512.20190",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "分析鏈上選擇權報價與基於GARCH模型的理論基準差異。"
+    },
+    {
+      "arxiv_id": "2512.06473",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "運用多重分形去趨勢互相關係數分析加密貨幣市場，已刊登於Entropy期刊。"
+    },
+    {
+      "arxiv_id": "2511.22766",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 6,
+      "reason": "建立結合選擇權避險與Beta相依波動度的理論框架，解釋Gamma擠壓。"
+    },
+    {
+      "arxiv_id": "2610.31436",
+      "topic": "回測與研究方法",
+      "evidence": "只有模擬資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "提出代理人架構搜尋機制，透過自訂模擬環境進行風險敏感評估。"
+    },
+    {
+      "arxiv_id": "2610.26358",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提出Alpha穩定Lévy擴散模型以改善重尾時間序列預測的尾部校準。"
+    },
+    {
+      "arxiv_id": "2610.26919",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "研究連續時間下以區間風險值為基礎的動態投組選擇，推導嚴謹。"
+    },
+    {
+      "arxiv_id": "2610.22839",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 8,
+      "reason": "探讨加密股權永續合約的股利結算機制設計，已獲MARBLE 2026接受。"
+    },
+    {
+      "arxiv_id": "2610.09246",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "將獎勵懲罰機制納入穩健投組管理，推導最佳CVaR閉形式解並佐以實證。"
+    },
+    {
+      "arxiv_id": "2610.07006",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出結合金融先驗與聯合嵌入預測的代理表示學習框架，論證扎實。"
+    },
+    {
+      "arxiv_id": "2610.01897",
+      "topic": "其他",
+      "evidence": "只有模擬資料",
+      "relevance": 4,
+      "value": 5,
+      "reason": "研究合成市場中模型多樣性與訂單流的關係，依賴模擬實驗。"
+    },
+    {
+      "arxiv_id": "2610.00183",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 8,
+      "reason": "比較Polymarket與Kalshi事件合約的制度與 finality 機制，實證規模龐大。"
+    },
+    {
+      "arxiv_id": "2609.06422",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出不對稱長記憶GARCH模型，對多個股指與比特幣進行實證檢定。"
+    },
+    {
+      "arxiv_id": "2609.02660",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "針對外匯高頻資料的時間粒度效應提出調整型ACD模型，實證具說服力。"
+    },
+    {
+      "arxiv_id": "2608.23053",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 8,
+      "reason": "開發解析日經NEEDS Tick資料的開源Python庫，工程實作價值高。"
+    },
+    {
+      "arxiv_id": "2607.22786",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "探討在FPGA上最佳化Transformer以進行即時異常偵測，已刊登於期刊。"
+    },
+    {
+      "arxiv_id": "2607.19005",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "利用可觀測矩陣動態監控S&P500在三次危機中的相關性幾何與演化。"
+    },
+    {
+      "arxiv_id": "2607.06908",
+      "topic": "Alpha 與因子",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出疊代全域因子演算法以解決BBP相變附近的因子偵測，依賴模擬驗證。"
+    },
+    {
+      "arxiv_id": "2606.22719",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "探討控制資訊洩漏的LLM總體因子排序，並與傳統基準進行嚴謹比較。"
+    },
+    {
+      "arxiv_id": "2606.21539",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "解決複雜模型組合中預測差距的歸因問題，提出與順序無關的歸因框架。"
+    },
+    {
+      "arxiv_id": "2606.15701",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "結合位移資料擴增改善Transformer股價指數預測，實證在中規中矩的改進範圍。"
+    },
+    {
+      "arxiv_id": "2606.06089",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 3,
+      "value": 6,
+      "reason": "利用LLM分析非結構化理賠資料以輔助精算準備金估算，屬保險領域應用。"
+    }
+  ]
+}

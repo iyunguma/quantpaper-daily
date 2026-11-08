@@ -1,0 +1,496 @@
+{
+  "date": "2026-11-08",
+  "generated_at": "2026-11-08T10:32:29+08:00",
+  "scanned": 2434,
+  "eligible": 2219,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2603.10569",
+      "title": "Win-score promotion gates in aggregator-routed RFQ markets: A two-tier stochastic control model",
+      "authors": [
+        "Alexander Barzykin"
+      ],
+      "abstract": "We study market making in aggregator-routed RFQ markets where platform routing depends on slowly varying dealer performance scores. We propose a two-tier stochastic control model that separates RFQ-level price competition from a macro routing layer: tier A represents aggregator flow whose opportunity intensity is multiplied by a promotion gate driven by the dealer's win score, while tier B captures background flow that is not gated and does not update the score. RFQs arrive in multiple sizes and the dealer chooses a size-ladder of bid/ask offsets; conditional on winning, trades earn spread minus an adverse selection correction and contribute to inventory risk. The resulting Hamilton-Jacobi-Bellman equation admits a reduced Bergault-Guéant operator form with explicit win/lose branches for the score on tier A. Using the envelope-theorem argument, we express optimal controls through derivatives of the one-dimensional reduced Hamiltonians, yielding an interpretable mapping from optimal win probabilities to optimal offsets. In the long-memory regime, we derive an adiabatic approximation that separates fast inventory dynamics from slow score dynamics. A quadratic inventory ansatz and quadratic Hamiltonian expansion lead to a quasi-stationarity inventory-curvature scaling and a one-dimensional score drift field. For steep (logistic) promotion gates, the score dynamics can exhibit fold bifurcations, bistability, and hysteresis, producing an endogenous \"campaign vs. harvest\" pattern in optimal quoting. Numerical experiments confirm this behaviour and highlight the stabilizing role of background flow in maintaining inventory-mixing capacity even when the dealer is weakly promoted.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM",
+        "q-fin.MF"
+      ],
+      "published": "2026-03-11T09:24:14Z",
+      "updated": "2026-03-11T09:24:14Z",
+      "abs_url": "https://arxiv.org/abs/2603.10569",
+      "pdf_url": "https://arxiv.org/pdf/2603.10569v1",
+      "comment": "12 pages, 8 figures",
+      "journal_ref": "",
+      "keyword_score": 17,
+      "matched_keywords": [
+        "market making",
+        "regime"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "建立整合RFQ市場與總體路由的隨機控制模型，推導嚴謹且具實務洞察。",
+      "summary": {
+        "title_zh": "報價聚合器路由 RFQ 市場中的勝率晉升閘門：雙層隨機控制模型",
+        "verdict": "建構雙層隨機控制模型探討 RFQ 造市，發現陡峭的晉升閘門會導致雙穩態與「競賽與收割」的造市行為。",
+        "problem": "在聚合器路由的報價請求（RFQ）市場中，平台路由依賴緩慢變動的造市商表現分數，造市商需在這種動態下最佳化報價。",
+        "method": "使用雙層隨機控制模型，將 RFQ 層級價格競爭與總體路由層分離，分析 HJB 方程與降維的 Bergault-Guéant 算子，並在長記憶區製訂絕熱近似。",
+        "findings": "推導出最佳勝率到最佳價差偏移的可解釋映射，且在陡峭的邏輯斯晉升閘門下，分數動態會出現摺疊分岔、雙穩態與遲滯現象，論文中未報告具體的報酬數字。",
+        "implication": "可用於設計 RFQ 市場中的動態造市與庫存控制策略，前提是要能精準估計聚合器的路由評分函數與背景流動性。",
+        "caveats": "模型高度依賴數學假設，且缺乏真實交易資料的具體績效驗證。",
+        "practicality": 3,
+        "tags": [
+          "造市",
+          "隨機控制",
+          "限價單簿",
+          "庫存風險"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.00196",
+      "title": "Generative AI for Stock Selection",
+      "authors": [
+        "Keywan Christian Rasekhschaffe"
+      ],
+      "abstract": "We study whether generative AI can automate feature discovery in U.S. equities. Using large language models with retrieval-augmented generation and structured/programmatic prompting, we synthesize economically motivated features from analyst, options, and price-volume data. These features are then used as inputs to a tabular machine-learning model to forecast short-horizon returns. Across multiple datasets, AI-generated features are consistently competitive with baselines, with Sharpe improvements ranging from 14% to 91% depending on dataset and configuration. Retrieval quality is pivotal: better knowledge bases materially improve outcomes. The AI-generated signals are weakly correlated with traditional features, supporting combination. Overall, generative AI can meaningfully augment feature discovery when retrieval quality is controlled, producing interpretable signals while reducing manual engineering effort.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.PM"
+      ],
+      "published": "2026-01-30T10:27:03Z",
+      "updated": "2026-01-30T10:27:03Z",
+      "abs_url": "https://arxiv.org/abs/2602.00196",
+      "pdf_url": "https://arxiv.org/pdf/2602.00196v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 17,
+      "matched_keywords": [
+        "large language model",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用生成式AI自動化特徵工程，夏普值顯著提升且控制檢索品質。",
+      "summary": {
+        "title_zh": "利用生成式人工智慧進行股票選股",
+        "verdict": "利用 LLM 結合檢索增強生成自動挖掘股票特徵，夏普值提升 14% 至 91%。",
+        "problem": "傳統量化投資中人工進行特徵工程耗時費力，需探討生成式人工智慧是否能自動化完成特徵發現。",
+        "method": "使用結合檢索增強生成（RAG）與結構化提示詞的大型語言模型，從分析師預測、期權與價量資料中合成特徵，並輸入表格機器學習模型預測短期報酬，針對美國股票市場。",
+        "findings": "AI 生成特徵在多個資料集上表現具競爭力，夏普值相較基準提升 14% 至 91%。且 AI 訊號與傳統特徵相關性低，適合組合使用。",
+        "implication": "可用於減少手動特徵工程並生成可解釋的訊號，前提是必須確保檢索品質（Knowledge Base）良好。",
+        "caveats": "模型表現高度取決於檢索品質，若知識庫品質不佳則成效有限。",
+        "practicality": 4,
+        "tags": [
+          "生成式AI",
+          "選股",
+          "特徵工程",
+          "機器學習",
+          "另類資料"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.05085",
+      "title": "Trading Electrons: Predicting DART Spread Spikes in ISO Electricity Markets",
+      "authors": [
+        "Emma Hubert",
+        "Dimitrios Lolas",
+        "Ronnie Sircar"
+      ],
+      "abstract": "We study the problem of forecasting and optimally trading day-ahead versus real-time (DART) price spreads in U.S. wholesale electricity markets. Building on the framework of Galarneau-Vincent et al., we extend spike prediction from a single zone to a multi-zone setting and treat both positive and negative DART spikes within a unified statistical model. To translate directional signals into economically meaningful positions, we develop a structural and market-consistent price impact model based on day-ahead bid stacks. This yields closed-form expressions for the optimal vector of zonal INC/DEC quantities, capturing asymmetric buy/sell impacts and cross-zone congestion effects. When applied to NYISO, the resulting impact-aware strategy significantly improves the risk-return profile relative to unit-size trading and highlights substantial heterogeneity across markets and seasons.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-01-08T16:31:39Z",
+      "updated": "2026-05-19T14:00:57Z",
+      "abs_url": "https://arxiv.org/abs/2601.05085",
+      "pdf_url": "https://arxiv.org/pdf/2601.05085v3",
+      "comment": "40 pages",
+      "journal_ref": "",
+      "keyword_score": 17,
+      "matched_keywords": [
+        "price impact"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "研究電力市場DART價差預測與最佳訂單配置，實證完整且具市場實務價值。",
+      "summary": {
+        "title_zh": "交易電子：預測美國電力市場中的日前與即時價差暴衝",
+        "verdict": "提出電力市場價差暴衝預測與結構化交易策略，實證顯示能有效改善風險報酬。",
+        "problem": "美國批發電力市場中，如何準確預測多區域的日前與即時價差暴衝，並將訊號轉化為實際交易部位。",
+        "method": "運用統一統計模型預測多區域正負價差暴衝，並基於日前出價堆疊建立價格衝擊模型。實證對象為紐約獨立系統營運商市場。",
+        "findings": "結合價格衝擊的策略相較於固定大小交易顯著改善風險報酬表現，並凸顯市場與季節異質性，論文未報告具體績效數字。",
+        "implication": "可應用於電力市場的 INC/DEC 交易，前提是需要取得日前出價堆疊與跨區擁塞等結構資料。",
+        "caveats": "策略表現高度依賴各市場與季節的異質性，且高度依賴市場結構資料。",
+        "practicality": 4,
+        "tags": [
+          "電力市場",
+          "價差交易",
+          "價格衝擊"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.22719",
+      "title": "Leakage-Aware Benchmarking of LLM Forecasting: Real-Time Nowcasts as the Decision-Time Input for Macro Factor Ranking",
+      "authors": [
+        "Mao Guan",
+        "Qian Chen"
+      ],
+      "abstract": "Forecasting benchmarks for retrieval-augmented LLMs routinely confound model capability with information leakage: features labeled with a target's timestamp are often not observable at the system's decision time. We study leakage-controlled equity factor ranking with a retrieval-augmented 7B open-source LLM forecaster. At each month-end from 2023-04 to 2026-03, the forecaster observes only decision-time information: lag-shifted FRED macro variables, recent macro-event summaries, and the Cleveland Fed's archived daily CPI nowcast for unreleased current-month inflation. A macro-analog retrieval module selects historical states, a critic LLM compresses them into one tactical rule, and an actor LLM maps the current state and recent rules into scores for seven U.S. equity style factors. The full pipeline obtains a median monthly Spearman rank IC of +0.154, with positive means across three non-overlapping contiguous 12-month subwindows; the mean IC remains statistically underpowered, with a bootstrap 95% confidence interval that includes zero. Non-LLM baselines under the same decision-time constraint demonstrate that a kNN macro-analog model recovers a comparable median IC, indicating that real-time inflation information and macro-similar retrieval explain much of the median signal. The LLM pipeline retains higher mean IC and a stronger long-short allocation sanity check, suggesting that any marginal benefit is concentrated in the extreme rankings that drive long-short portfolio formation. A descriptive audit of the 36 critic rules and per-month case studies appears in the appendix.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "cs.AI"
+      ],
+      "published": "2026-06-21T23:36:04Z",
+      "updated": "2026-06-21T23:36:04Z",
+      "abs_url": "https://arxiv.org/abs/2606.22719",
+      "pdf_url": "https://arxiv.org/pdf/2606.22719v1",
+      "comment": "10 pages, 4 figures. Accepted at the ICML 2026 Workshop on AI Forecasting (Forecasting as a New Frontier of Intelligence). Non-archival. OpenReview: https://openreview.net/forum?id=mi8QiWomm3",
+      "journal_ref": "",
+      "keyword_score": 16,
+      "matched_keywords": [
+        "llm"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探討控制資訊洩漏的LLM總體因子排序，並與傳統基準進行嚴謹比較。",
+      "summary": {
+        "title_zh": "防範資訊洩漏的LLM預測基準測試：以即時Nowcast作為總體因子排序的決策時間輸入",
+        "verdict": "探討防範資訊洩漏的LLM總體因子排序，月度Spearman rank IC為+0.154但平均值統計上顯著性不足。",
+        "problem": "現有的檢索增強LLM預測基準測試常混淆模型能力與資訊洩漏，因標記目標時間戳記的特徵在決策時往往無法觀察。",
+        "method": "使用7B開源LLM預測器，在2023年4月至2026年3月的每月底，僅觀察決策時間資訊（落後調整的FRED總體變數、總體事件摘要及克里夫蘭聯準會封存的CPI nowcast）。結合總體類比檢索模組、評論LLM與行動LLM對七個美國股票風格因子進行評分。",
+        "findings": "完整管線獲得中位數每月Spearman rank IC為+0.154，三個12個月子期間的平均值皆為正；但平均IC在統計上動能不足，bootstrap 95%信賴區間包含零。非LLM的kNN總體類比基準模型也能恢復相近的中位數IC，顯示即時通膨資訊與總體相似檢索解釋了大部分的中位數訊號。",
+        "implication": "LLM管線保留了較高的平均IC與更強的多空配置檢驗，顯示其邊際效益集中在驅動多空投資組合形成的極端排序上。實務上建構此類系統需嚴格控管決策時間的資訊可用性，避免落入洩漏陷阱。",
+        "caveats": "平均IC的bootstrap 95%信賴區間包含零，顯示統計顯著性仍有不足。",
+        "practicality": 3,
+        "tags": [
+          "LLM",
+          "因子排序",
+          "資訊洩漏",
+          "總體經濟",
+          "Nowcasting"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.04200",
+      "title": "From Financial Sentiment Classification to Return Predictability: A QLoRA Benchmark of Large Language Models",
+      "authors": [
+        "Fusheng Luo"
+      ],
+      "abstract": "Financial sentiment classifiers are commonly evaluated against human labels, but strong linguistic performance does not necessarily imply economically useful return predictability. This study separates these questions through two experiments. First, we construct a unified three-class benchmark from five financial text datasets and compare TF--IDF Naive Bayes, off-the-shelf FinBERT and Financial-RoBERTa encoders, zero-shot Qwen2.5-7B, and QLoRA-adapted Qwen2.5-7B, LLaMA3-8B, and Mistral-7B models. Mistral-7B achieves the best test accuracy (0.8840) and macro-F1 (0.8771), while QLoRA raises Qwen2.5's macro-F1 from 0.7274 to 0.8615. An inverse-frequency class-weighted loss does not improve Qwen2.5. Second, we evaluate economic validity on a temporally separate 2019 Benzinga sample containing 10,637 unique headlines and 13,115 headline--stock observations for a fixed S\\&P~100 universe. Model probabilities are converted into continuous sentiment scores, aggregated by stock and signal date, and aligned with next-session returns over one-, two-, three-, and five-day horizons. All seven downstream models produce positive but small mean rank information coefficients at the one-day horizon; the largest is 0.0143 for FinBERT. None of the 28 model--horizon tests remains significant after Newey--West inference and false-discovery-rate correction. Portfolio results likewise fail to establish a robust advantage for the best-performing classifiers. The findings show that QLoRA is effective for financial sentiment adaptation, while also documenting a clear gap between classification accuracy and tradable cross-sectional signals.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "cs.LG"
+      ],
+      "published": "2026-08-04T19:57:40Z",
+      "updated": "2026-08-04T19:57:40Z",
+      "abs_url": "https://arxiv.org/abs/2608.04200",
+      "pdf_url": "https://arxiv.org/pdf/2608.04200v1",
+      "comment": "Waiting to submit to a conference (ICAIF)",
+      "journal_ref": "",
+      "keyword_score": 18,
+      "matched_keywords": [
+        "large language model",
+        "cross-sectional",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "嚴謹測試金融情緒分類器，發現高準確率未能轉化為報酬預測優勢。",
+      "summary": {
+        "title_zh": "從金融情緒分類到報酬可預測性：大型語言模型的 QLoRA 基準測試",
+        "verdict": "研究顯示金融情緒分類準確率高並不代表能轉換為實際的交易 Alpha，QLoRA 微調雖能大幅提升分類表現，但在交叉截面報酬預測上缺乏顯著性。",
+        "problem": "金融情緒分類器通常以人類標籤進行評估，但強大的語言處理能力是否代表具有經濟上的報酬可預測性，這兩者之間的落差尚不清楚。",
+        "method": "使用五個金融文本資料集建構基準，並對比 TF-IDF Naive Bayes、FinBERT、Financial-RoBERTa 以及經 QLoRA 適應的 Qwen2.5-7B、LLaMA3-8B 和 Mistral-7B 模型。經濟效度評估則使用 2019 年 Benzinga 包含 10,637 筆標題與固定 S&P 100 股票池的樣本進行 1 至 5 日的報酬預測。",
+        "findings": "Mistral-7B 達到最佳測試準確度 0.8840 與 macro-F1 0.8771，QLoRA 將 Qwen2.5 的 macro-F1 從 0.7274 提升至 0.8615。然而在下游報酬預測中，所有模型的 1 日資訊係數（IC）最大僅 0.0143（FinBERT），且經 Newey-West 檢定與錯誤發現率修正後，所有 28 項測試皆不具統計顯著性。",
+        "implication": "直接將現成的或微調後的情緒分類器機率值轉為日頻交叉截面交易訊號效果有限，開發者不應假定高分類準確度等同於可交易的 Alpha。",
+        "caveats": "實證僅限於特定的 Benzinga 新聞標題與 S&P 100 股票池，未涵蓋其他另類資料或日內高頻情境。",
+        "practicality": 2,
+        "tags": [
+          "大型語言模型",
+          "情緒分析",
+          "QLoRA",
+          "自然語言處理",
+          "Alpha 因子挖掘"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.30321",
+      "title": "Optimal Block Time for AMM Liquidity Providers under Jump-Diffusion Prices",
+      "authors": [
+        "Nils Bundi"
+      ],
+      "abstract": "Loss-versus-Rebalancing (LVR) is the dominant adverse-selection cost borne by liquidity providers on automated market makers. Under geometric Brownian motion, arbitrage profit scales with the probability of a profitable block, which vanishes as the block time $Δt \\to 0$; this is the standing argument for ever-shorter blocks. Modeling the reference price instead as a jump-diffusion, I show that the constant-product LVR rate splits into a diffusion channel carrying the known multiplier $F(γ/(σ\\sqrt{Δt}))$ and a jump channel $λV \\cdot G(γ;m,δ^2)$ carrying no $Δt$, the two interacting only through an explicitly bounded remainder. The block schedule therefore governs only one channel. For symmetric jump laws the jump channel is moreover an exact lower bound, $\\ell(Δt) \\ge λV G > 0$, so the rate does not vanish as $Δt \\to 0$, and descends slowly, as $\\sqrt{Δt}$. At Ethereum's calibrated 12-second slot the rate is 471 bp/yr against a floor of 125, so only three quarters of LP loss is schedule-addressable. At Solana's 400 ms slot the jump channel already dominates. Netting the rate against per-block consensus cost, the LP-side optimal block time is invariant in pool size and in every jump parameter $(λ,m,δ)$: jumps shift the level of LP loss but not the planner's marginal tradeoff. Volatility, the fee tier, and consensus cost set the optimum, near 8 s. However, LVR is only one input to block-time welfare, so this bounds the LP-side contribution rather than settling the design question.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "math.PR",
+        "q-fin.TR"
+      ],
+      "published": "2026-08-31T06:36:20Z",
+      "updated": "2026-08-31T06:36:20Z",
+      "abs_url": "https://arxiv.org/abs/2608.30321",
+      "pdf_url": "https://arxiv.org/pdf/2608.30321v1",
+      "comment": "Extended version of a paper accepted at MARBLE 2026 (Lecture Notes in Operations Research, Springer); adds Appendix A with the full proofs of every numbered result and Appendix B with supporting illustrations. 25 pages, 2 figures",
+      "journal_ref": "",
+      "keyword_score": 17,
+      "matched_keywords": [
+        "market maker",
+        "liquidity"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "推導跳躍擴散下的 AMM 流動性提供者最佳區塊時間，理論與實際資料兼具。",
+      "summary": {
+        "title_zh": "跳躍擴散價格下自動造市商流動性提供者的最佳區塊時間",
+        "verdict": "將參考價格建模為跳躍擴散模型，證明流動性提供者的 LVR 損失在區塊時間趨近於零時不會消失，且以以太坊參數計算僅有四分之三的損失可透過調整區塊時間解決。",
+        "problem": "自動造市商的流動性提供者面臨的逆向選擇成本 LVR，在幾何布朗運動下會隨區塊時間縮短而消失，但此論點未考慮資產價格跳躍的情況。",
+        "method": "使用跳躍擴散模型分析自動造市商的常數乘積 LVR 率，結合擴散通道與跳躍通道進行數學推導，並以以太坊（12秒）與 Solana（400毫秒）的參數進行校準與實證。",
+        "findings": "以太坊在 12 秒區塊時間下的 LVR 速率為每年 471 基點，其中下限為 125 基點，顯示跳躍通道使損失速率僅隨平方根緩慢下降；在考量每區塊共識成本後，流動性提供者視角的最佳區塊時間約在 8 秒左右。",
+        "implication": "縮短區塊時間無法完全消除流動性提供者的 LVR 損失，設計區塊時間時必須將跳躍風險納入考量。",
+        "caveats": "LVR 僅是區塊時間福利的其中一項輸入，因此本研究僅能對流動性提供者的貢獻設限，無法完全解決整體區塊設計問題。",
+        "practicality": 4,
+        "tags": [
+          "自動造市商",
+          "流動性提供者",
+          "逆向選擇",
+          "市場微結構",
+          "跳躍擴散模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.01494",
+      "title": "Conformal Kelly: When Marginal Coverage Transfers and the Economics Do Not",
+      "authors": [
+        "Robert Jacob Ryan"
+      ],
+      "abstract": "We size portfolio positions from conformal prediction intervals, reading the interval half-width as the scale in a capped fractional-Kelly rule (Conformal Kelly), and evaluate the rule under a pre-registered protocol. The development record is an autonomous LLM-agent search over roughly 200 configurations on a single six-year window (2016-2021) of eight US-listed ETFs. All later data was sealed before the search, and two final configurations, nine comparison books and the mapping from outcomes to conclusions were registered before unsealing. On the sealed 2022-2024 window, realized coverage was 0.745 against a 0.750 target, but the two configurations' annualised net log growth was 8.5% and 7.0% (28.5% and 25.8% in development), below an unlevered equal-weight book (9.5%), the leveraged passive books (15.6-16.8%) and a registered hindsight four-equity book (10.8%, at a 46% drawdown); both ranked last of eleven entries on Sharpe and Calmar. A post-hoc split, outside the registered protocol, shows the passing coverage averaging 0.592 in 2022 and 0.842 afterwards, with the entire loss in the under-covered year. The split does not show that under-coverage caused the loss: the leverage cap bound on every 2022 trading day, so narrow intervals could not enlarge the book, and a long-equity book in an equity bear market is the simpler account. But the registered acceptance test passed a sixteen-point conditional failure, which motivates, without establishing, conditional coverage as an endpoint for rules that read interval width as a scale. On the development window, a slow per-asset conformal quantile out-grew every locally adaptive alternative tested, but only under a binding leverage cap, and block-bootstrap intervals include zero for 11 of the 13 contrasts we could re-derive.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "q-fin.RM"
+      ],
+      "published": "2026-08-02T20:56:06Z",
+      "updated": "2026-10-18T14:47:37Z",
+      "abs_url": "https://arxiv.org/abs/2608.01494",
+      "pdf_url": "https://arxiv.org/pdf/2608.01494v3",
+      "comment": "31 pages, 9 figures. Extended version of a paper accepted at the 7th ACM International Conference on AI in Finance (ICAIF '26), Milan, Italy, November 14-17, 2026; to appear in the ACM proceedings. v3: title changed to match the conference version; content unchanged from v2",
+      "journal_ref": "",
+      "keyword_score": 17,
+      "matched_keywords": [
+        "llm",
+        "drawdown"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "採預先註冊協議進行封閉樣本外測試，Conformal Kelly 績效不如預期，實證誠實。",
+      "summary": {
+        "title_zh": "Conformal Kelly：當邊際覆蓋率轉移與經濟效益失效時",
+        "verdict": "將預測區間半寬應用於 Kelly 準則的投資組合配置，在未見資料中雖然達成覆蓋率目標，但風險調整後報酬表現墊底。",
+        "problem": "如何將機器學習預測的不確定性（如預測區間）對應至部位規模，並在預先註冊的嚴格實證協定下檢驗其經濟效益。",
+        "method": "使用 Conformal Kelly 進行部位大小調整，結合自主 LLM 代理搜尋約 200 種配置，涵蓋 8 檔美國上市 ETF 的 2016 至 2021 年開發期，並在 2022 至 2024 年的未見資料期進行實證。",
+        "findings": "在未見資料期中，實現覆蓋率為 0.745（目標 0.750），但兩項配置的年化淨對數成長率分別為 8.5% 和 7.0%，低於等權重投資組合的 9.5%；在 Sharpe 與 Calmar 比率上，兩者在 11 個比較組中皆排名最後。",
+        "implication": "利用預測區間寬度來調整規模的方法雖然在統計覆蓋率上可行，但在實際交易中容易受限於槓桿上限與市場空頭環境，無法直接轉化為優異的經濟報酬。",
+        "caveats": "區塊拔靴法（block-bootstrap）顯示多數對比在統計上並不顯著，且實證表現落後於簡單的被動與槓桿投資組合。",
+        "practicality": 3,
+        "tags": [
+          "Conformal Prediction",
+          "Kelly準則",
+          "投資組合配置",
+          "不確定性量化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.10857",
+      "title": "SPX-VIX Risk Computations Via Perturbed Optimal Transport",
+      "authors": [
+        "Charlie Che",
+        "Hanxuan Lin",
+        "Yudong Yang",
+        "Guofan Hu",
+        "Lei Fang"
+      ],
+      "abstract": "We propose a model independent framework for generating SPX and VIX risk scenarios based on a joint optimal transport calibration of their market smiles. Starting from the entropic martingale optimal transport formulation of Guyon, we introduce a perturbation methodology that computes sensitivities of the calibrated coupling using a Fisher information linearization. This allows risk to be generated without performing a full recalibration after market shocks. We further introduce a dimension reduction method based on perturbed optimal transport that produces fast and stable risk estimates while preserving the structural properties of the calibrated model. The approach is combined with Skew Stickiness Ratio(SSR) dynamics to translate SPX shocks into perturbations of forward variance and VIX distributions. Numerical experiments show that the proposed method produces accurate risk estimates relative to full recalibration while being computationally much faster. A backtesting study also demonstrates improved hedging performance compared with stochastic local volatility models.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "q-fin.MF"
+      ],
+      "published": "2026-03-11T15:05:28Z",
+      "updated": "2026-09-24T21:02:33Z",
+      "abs_url": "https://arxiv.org/abs/2603.10857",
+      "pdf_url": "https://arxiv.org/pdf/2603.10857v4",
+      "comment": "45 pages, 16 figures",
+      "journal_ref": "",
+      "keyword_score": 17,
+      "matched_keywords": [
+        "backtesting",
+        "hedging"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用微擾最佳運輸計算 SPX 與 VIX 風險，回測顯示良好的避險效能與計算效率。",
+      "summary": {
+        "title_zh": "透過擾動最佳化運輸進行 SPX-VIX 風險計算",
+        "verdict": "提出基於擾動最佳化運輸的模型獨立框架，無需重新校準即可快速生成 SPX 與 VIX 風險情境。",
+        "problem": "市場衝擊後需要完整重新校準模型，導致計算成本高昂，無法即時生成 SPX 與 VIX 的風險情境。",
+        "method": "結合熵降鞅最佳化運輸與 Fisher 資訊線性化擾動方法，配合偏斜黏著比率動態對市場微笑曲線進行聯合校準。論文未明確說明具體資料頻率與樣本期間。",
+        "findings": "數值實驗顯示此方法能以極快速度產生準確的風險估計，回測亦證明避險表現優於隨機區域波動度模型，但未報告具體績效數字。",
+        "implication": "可用於期權造市與風險管理，在市場劇烈波動時省去重新校準時間以進行即時動態避險。",
+        "caveats": "依賴擾動近似與理論模型假設，極端行情下的穩健性仍待實盤檢驗。",
+        "practicality": 4,
+        "tags": [
+          "最佳化運輸",
+          "波動度微笑",
+          "選擇權避險",
+          "風險管理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.14506",
+      "title": "Covariance-Aware Transformers for Quadratic Programming and Decision Making",
+      "authors": [
+        "Kutay Tire",
+        "Yufan Zhang",
+        "Ege Onur Taga",
+        "Samet Oymak"
+      ],
+      "abstract": "We explore the use of transformers for solving quadratic programs and how this capability benefits decision-making problems that involve covariance matrices. We first show that the linear attention mechanism can provably solve unconstrained QPs by tokenizing the matrix variables (e.g.~$A$ of the objective $\\frac{1}{2}x^\\top Ax+b^\\top x$) row-by-row and emulating gradient descent iterations. Furthermore, by incorporating MLPs, a transformer block can solve (i) $\\ell_1$-penalized QPs by emulating iterative soft-thresholding and (ii) $\\ell_1$-constrained QPs when equipped with an additional feedback loop. Our theory motivates us to introduce Time2Decide: a generic method that enhances a time series foundation model (TSFM) by explicitly feeding the covariance matrix between the variates. We empirically find that Time2Decide uniformly outperforms the base TSFM model for the classical portfolio optimization problem that admits an $\\ell_1$-constrained QP formulation. Remarkably, Time2Decide also outperforms the classical \"Predict-then-Optimize (PtO)\" procedure, where we first forecast the returns and then explicitly solve a constrained QP, in suitable settings. Our results demonstrate that transformers benefit from explicit use of second-order statistics, and this can enable them to effectively solve complex decision-making problems, like portfolio construction, in one forward pass.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-02-16T06:39:24Z",
+      "updated": "2026-10-20T17:48:47Z",
+      "abs_url": "https://arxiv.org/abs/2602.14506",
+      "pdf_url": "https://arxiv.org/pdf/2602.14506v2",
+      "comment": "Published in the proceedings of the Conference on Language Modeling (COLM), 2026",
+      "journal_ref": "",
+      "keyword_score": 17,
+      "matched_keywords": [
+        "portfolio optimization",
+        "transformer"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "將共變異數矩陣融入Transformer以求解二次規劃，應用於投組配置且實證扎實。",
+      "summary": {
+        "title_zh": "應用於二次規劃與決策的共變異數感知 Transformer",
+        "verdict": "提出 Time2Decide 模型，透過在基礎模型中明確引入共變異數矩陣，單次前向傳遞即可解決投資組合配置等最佳化問題。",
+        "problem": "傳統預測後最佳化（Predict-then-Optimize）流程繁瑣，且 Transformer 是否能有效處理涉及二次型及共變異數矩陣的複雜決策問題尚不明確。",
+        "method": "結合線性注意力機制與 MLP 的 Transformer 架構，透過模擬梯度下降與迭代軟閾值法來求解二次規劃；實證應用於時間序列與傳統投資組合最佳化問題。",
+        "findings": "實驗顯示 Time2Decide 在經典投資組合最佳化問題上均勻擊敗基礎的時間序列基礎模型，並且在適當設定下也優於傳統的預測後最佳化流程，但論文未報告具體的報酬率或夏普值數字。",
+        "implication": "可用於將時間序列預測與投資組合最佳化合併為單一前向傳遞，省去反覆求解最佳化問題的運算時間，前提是需要將共變異數矩陣明確輸入模型中。",
+        "caveats": "論文主要展示方法論與理論可行性，未提供扣除交易成本後的實際交易績效資料。",
+        "practicality": 3,
+        "tags": [
+          "Transformer",
+          "投資組合最佳化",
+          "機器學習",
+          "二次規劃"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.01877",
+      "title": "Autocorrelated Optimize-via-Estimate: Predict-then-Optimize versus Finite-sample Optimal",
+      "authors": [
+        "Zichun Wang",
+        "Gar Goei Loke",
+        "Ruiting Zuo"
+      ],
+      "abstract": "Models that directly optimize for out-of-sample performance in the finite-sample regime have emerged as a promising alternative to traditional estimate-then-optimize approaches in data-driven optimization. In this work, we compare their performance in the context of autocorrelated uncertainties, specifically, under a Vector Autoregressive Moving Average VARMA(p,q) process. We propose an autocorrelated Optimize-via-Estimate (A-OVE) model that obtains an out-of-sample optimal solution as a function of sufficient statistics, and propose a recursive form for computing its sufficient statistics. We evaluate these models on a portfolio optimization problem with trading costs. A-OVE achieves low regret relative to a perfect information oracle, outperforming predict-then-optimize machine learning benchmarks. Notably, machine learning models with higher accuracy can have poorer decision quality, echoing the growing literature in data-driven optimization. Performance is retained under small mis-specification.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "published": "2026-02-02T09:49:51Z",
+      "updated": "2026-02-02T09:49:51Z",
+      "abs_url": "https://arxiv.org/abs/2602.01877",
+      "pdf_url": "https://arxiv.org/pdf/2602.01877v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 17,
+      "matched_keywords": [
+        "portfolio optimization",
+        "out-of-sample",
+        "regime"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出自相關最佳化估計模型並應用於帶交易成本的投組問題，實證完整。",
+      "summary": {
+        "title_zh": "具自我相關特性的估計後最佳化：預測後最佳化與有限樣本最佳化之比較",
+        "verdict": "提出 A-OVE 模型處理具自我相關的不確定性，在資產配置中展現低追趕誤差，且驗證高預測準確度未必等於高決策品質。",
+        "problem": "在資料驅動最佳化中，傳統的預測後最佳化方法在面對具自我相關的不確定性時表現不足，且有限樣本下的直接最佳化表現需要與之比較。",
+        "method": "針對 VARMA(p,q) 過程提出自我相關的估計後最佳化 A-OVE 模型，以充分統計量的函數取得樣本外最佳解，並於含交易成本的連接埠（此處為資產配置）最佳化問題中進行評估。",
+        "findings": "A-OVE 相較於完全資訊預言機達成低追趕誤差，表現優於機器學習基準，且在模型受到輕微錯誤指定時仍能維持效能，未報告具體績效數字。",
+        "implication": "實務上進行資料驅動最佳化時，應專注於決策導向的目標而非單純追求預測精度，A-OVE 提供了一個有效的架構。",
+        "caveats": "論文未提供具體的報酬與夏普值等實際績效數字。",
+        "practicality": 3,
+        "tags": [
+          "資產配置",
+          "最佳化",
+          "機器學習",
+          "時間序列"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
