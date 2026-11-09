@@ -1,0 +1,520 @@
+{
+  "date": "2026-11-09",
+  "generated_at": "2026-11-09T10:42:33+08:00",
+  "scanned": 2434,
+  "eligible": 2210,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2611.08701",
+      "title": "Does a Trading Policy Need to Know What It Trades? Microstructure Invariance and Zero-Shot Transfer of Execution Policies",
+      "authors": [
+        "Hieu Tran",
+        "Hong Yu"
+      ],
+      "abstract": "Execution algorithms are calibrated asset by asset, because the queues, trade rates and bid-ask spreads they face differ by orders of magnitude across assets. For reinforcement learning this is zero-shot generalisation across contexts of very different scales, and microstructure invariance proposes a normalisation fixed by theory: measured in each asset's own units of time, size and price, markets look alike. In an exact order-by-order replay of public Nasdaq data, we train policies once, on 954 stocks in 2019, to choose between waiting in the queue and crossing the spread, and evaluate them unchanged on 1,964 unseen stocks in 2020-21, 2,629 stocks in 2025-26, crypto pairs and a second exchange. First, a policy that sees a stock only through its recent trade rate, trade size, spread and price increment (tick) costs within 0.015 spreads per share (a fifth of what learning saves) of a policy whose training data included the stock, and the stock's own history does not help it; it comes within a similar margin of policies trained on the second exchange when every episode counts equally, and within a wider one on crypto. Second, in mean cost before fees, invariant units beat raw units, z-scores and asset descriptors, but by under a basis point: most of their advantage is information and a common cost scale that a learner can also take as plain inputs, and none of the representations tested extrapolates to unseen spread regimes. Third, a near-zero transfer gap to a pooled comparator is weak evidence that a representation is right: we show that such a comparator detects only a small share of what a poor representation loses, and confirm it in synthetic markets and on pendulums.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CE",
+        "q-fin.TR"
+      ],
+      "published": "2026-11-05T21:00:31Z",
+      "updated": "2026-11-05T21:00:31Z",
+      "abs_url": "https://arxiv.org/abs/2611.08701",
+      "pdf_url": "https://arxiv.org/pdf/2611.08701v1",
+      "comment": "33 pages, 10 figures",
+      "journal_ref": "",
+      "keyword_score": 19,
+      "matched_keywords": [
+        "reinforcement learning",
+        "bid-ask spread",
+        "regime",
+        "stock"
+      ],
+      "relevance": 10,
+      "value": 9,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "跨資產與交易所的真實訂單簿回測，實證完整且洞察深入",
+      "summary": {
+        "title_zh": "交易策略需要知道它在交易什麼嗎？微結構不變性與執行策略的零樣本轉移",
+        "verdict": "利用微結構不變性進行單位正規化，訓練一次的強化學習執行策略能在跨資產、跨市場與跨時期進行零樣本轉移，且表現接近專用模型。",
+        "problem": "傳統執行演算法需要針對個別資產進行參數校準，因為不同資產的排隊狀況、交易速率和買賣價差存在數量級上的差異。這對強化學習而言，是跨越不同規模情境的零樣本泛化難題。",
+        "method": "使用 Nasdaq 的逐筆訂單歷史資料，以 2019 年 954 檔股票訓練強化學習策略在佇列中等待或跨越價差，並在 2020-2021 年 1,964 檔未見過的股票、2025-2026 年 2,629 檔股票、加密貨幣交易對及第二個交易所進行評估。",
+        "findings": "僅透過近期交易速率、交易大小、價差和價格變動來看待股票的策略，其成本與包含該股票訓練資料的策略相差在每股 0.015 個價差之內。在平均未計費成本中，不變性單位優於原始單位、z 分數和資產描述符，但優勢小於一個基點。",
+        "implication": "透過微結構不變性正規化輸入特徵，能讓執行策略直接部署到未見過的新資產或不同交易所，大幅降低多資產維護的工程負擔。前提是需要準確計算各資產的時間、大小與價格單位。",
+        "caveats": "測試的所有特徵表示法均無法外推至未見過的價差體制。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "訂單簿",
+          "演算法執行",
+          "微結構不變性",
+          "零樣本轉移"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.14670",
+      "title": "FactorMiner: A Self-Evolving Agent with Skills and Experience Memory for Financial Alpha Discovery",
+      "authors": [
+        "Yanlong Wang",
+        "Jian Xu",
+        "Hongkang Zhang",
+        "Shao-Lun Huang",
+        "Danny Dongning Sun",
+        "Xiao-Ping Zhang"
+      ],
+      "abstract": "Formulaic alpha factor mining is a critical yet challenging task in quantitative investment, characterized by a vast search space and the need for domain-informed, interpretable signals. However, finding novel signals becomes increasingly difficult as the library grows due to high redundancy. We propose FactorMiner, a lightweight and flexible self-evolving agent framework designed to navigate this complex landscape through continuous knowledge accumulation. FactorMiner combines a Modular Skill Architecture that encapsulates systematic financial evaluation into executable tools with a structured Experience Memory that distills historical mining trials into actionable insights (successful patterns and failure constraints). By instantiating the Ralph Loop paradigm -- retrieve, generate, evaluate, and distill -- FactorMiner iteratively uses memory priors to guide exploration, reducing redundant search while focusing on promising directions. Experiments on multiple datasets across different assets and Markets show that FactorMiner constructs a diverse library of high-quality factors with competitive performance, while maintaining low redundancy among factors as the library scales. Overall, FactorMiner provides a practical approach to scalable discovery of interpretable formulaic alpha factors under the \"Correlation Red Sea\" constraint.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.MA"
+      ],
+      "published": "2026-02-16T11:48:52Z",
+      "updated": "2026-08-19T04:16:20Z",
+      "abs_url": "https://arxiv.org/abs/2602.14670",
+      "pdf_url": "https://arxiv.org/pdf/2602.14670v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 16,
+      "matched_keywords": [
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出具備技能與經驗記憶的自我演化智能體來發掘因子，架構新穎",
+      "summary": {
+        "title_zh": "FactorMiner：結合技能與經驗記憶體的金融 Alpha 因子挖掘自我演化代理人",
+        "verdict": "提出名為 FactorMiner 的自我演化代理人架構，利用技能與經驗記憶體來挖掘公式化 Alpha 因子，有效降低重複搜尋並維持因子多樣性。",
+        "problem": "在量化投資中，公式化 Alpha 因子的挖掘面臨龐大搜尋空間的挑戰，且隨著因子庫擴大，高度冗餘使得尋找新信號變得日益困難。",
+        "method": "採用輕量且靈活的自我演化代理人框架，結合模組化技能架構與結構化經驗記憶體，並透過「檢索、生成、評估與提煉」的循環機制進行疊代探索。實驗涵蓋多個不同資產與市場的資料集。",
+        "findings": "實驗顯示 FactorMiner 能夠建構出具備競爭力表現且多樣的高品質因子庫，同時在因子庫規模擴大時維持低冗餘度，論文未報告具體的具體績效數字。",
+        "implication": "此框架可應用於自動化因子挖掘的管線中，透過經驗記憶體指引探索方向，適合需要持續擴充可解釋性信號的量化團隊。",
+        "caveats": "論文未提供實際交易成本扣除後的報酬與夏普值等具體回測績效數字。",
+        "practicality": 4,
+        "tags": [
+          "Alpha 因子挖掘",
+          "代理人模型",
+          "經驗記憶體",
+          "量化投資"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.10798",
+      "title": "Trading in CEXs and DEXs with Priority Fees and Stochastic Delays",
+      "authors": [
+        "Philippe Bergault",
+        "Yadh Hafsi",
+        "Leandro Sánchez-Betancourt"
+      ],
+      "abstract": "We develop a mixed control framework that combines absolutely continuous controls with impulse interventions subject to stochastic execution delays. The model extends current impulse control formulations by allowing (i) the controller to choose the mean of the stochastic delay of their impulses, and allowing (ii) for multiple pending orders, so that several impulses can be submitted and executed asynchronously at random times. The framework is motivated by an optimal trading problem between centralized (CEX) and decentralized (DEX) exchanges. In DEXs, traders control the distribution of the execution delay through the priority fee paid, introducing a fundamental trade-off between delays, uncertainty, and costs. We study the optimal trading problem of an agent exploiting trading signals in CEXs and DEXs. From a mathematical perspective, we derive the associated dynamic programming principle of this new class of impulse control problems, and establish the viscosity properties of the corresponding quasi-variational inequalities. From a financial perspective, our model provides insights on how to carry out execution across CEXs and DEXs, highlighting how traders manage latency risk optimally through priority fee selection. We show that employing the optimal priority fee has a significant outperformance over non-strategic fee selection.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "math.OC"
+      ],
+      "published": "2026-02-11T12:39:58Z",
+      "updated": "2026-02-19T09:45:20Z",
+      "abs_url": "https://arxiv.org/abs/2602.10798",
+      "pdf_url": "https://arxiv.org/pdf/2602.10798v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 16,
+      "matched_keywords": [
+        "trading signal"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance_reason": "建立 CEX 與 DEX 混合控制動態規劃模型，數學推導完整",
+      "summary": {
+        "title_zh": "在中心化與去中心化交易所中結合優先費與隨機延遲的最佳化交易",
+        "verdict": "建構包含隨機延遲與優先費的混合控制框架，解決跨 CEX 與 DEX 的最佳化交易問題。",
+        "problem": "交易者在去中心化交易所（DEX）中面臨延遲、不確定性與成本之間的根本權衡，如何透過優先費與延遲控制來最佳化跨市場交易是一個難題。",
+        "method": "運用結合絕對連續控制與具備隨機執行延遲的脈衝干預之混合控制框架。模型延伸現有的脈衝控制公式，允許控制者選擇隨機延遲的平均值並支援多個未完成訂單的非同步執行。",
+        "findings": "論文指出採用最佳優先費策略相較於非策略性費用選擇具有顯著的績效超越表現，但文中未報告具體的報酬率或夏普值等具體績效數字。",
+        "implication": "此模型對跨市場交易與造市策略有實質啟發，能幫助交易員透過選擇優先費來最佳化管理延遲風險，前提是需要建構對應的動態規劃與擬變分不等式求解能力。",
+        "caveats": "模型偏向理論推導與數學框架建立，實際落地時需要處理複雜的市場微結構與計算效率問題。",
+        "practicality": 3,
+        "tags": [
+          "去中心化交易所",
+          "優先費",
+          "演算法交易",
+          "延遲風險",
+          "最佳化控制"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.22119",
+      "title": "Alpha Discovery via Grammar-Guided Learning and Search",
+      "authors": [
+        "Han Yang",
+        "Dong Hao",
+        "Zhuohan Wang",
+        "Qi Shi",
+        "Xingtong Li"
+      ],
+      "abstract": "Automatically discovering formulaic alpha factors is a central problem in quantitative finance. Existing methods often ignore syntactic and semantic constraints, relying on exhaustive search over unstructured and unbounded spaces. We present AlphaCFG, a grammar-based framework for defining and discovering alpha factors that are syntactically valid, financially interpretable, and computationally efficient. AlphaCFG uses an alpha-oriented context-free grammar to define a tree-structured, size-controlled search space, and formulates alpha discovery as a tree-structured linguistic Markov decision process, which is then solved using a grammar-aware Monte Carlo Tree Search guided by syntax-sensitive value and policy networks. Experiments on Chinese and U.S. stock market datasets show that AlphaCFG outperforms state-of-the-art baselines in both search efficiency and trading profitability. Beyond trading strategies, AlphaCFG serves as a general framework for symbolic factor discovery and refinement across quantitative finance, including asset pricing and portfolio construction.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-01-29T18:46:15Z",
+      "updated": "2026-01-29T18:46:15Z",
+      "abs_url": "https://arxiv.org/abs/2601.22119",
+      "pdf_url": "https://arxiv.org/pdf/2601.22119v1",
+      "comment": "24 pages, 10 figures",
+      "journal_ref": "",
+      "keyword_score": 16,
+      "matched_keywords": [
+        "stock",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "透過文法引導學習與樹狀搜尋來發掘公式化 Alpha 因子",
+      "summary": {
+        "title_zh": "透過文法引導學習與搜尋的Alpha因子發掘",
+        "verdict": "提出基於上下文無關文法的 AlphaCFG 框架，結合蒙地卡羅樹狀搜尋與神經網路，有效發掘具經濟解釋性的公式化 Alpha。",
+        "problem": "現有 Alpha 因子發掘方法常忽略語法與語意限制，在無結構且無邊界的空間中進行窮舉搜尋，導致效率低且易產生無效因子。",
+        "method": "使用 Alpha 導向的上下文無關文法定義樹狀搜尋空間，將 Alpha 發掘表述為樹狀結構的語言馬可夫決策過程，並以語法感知的值網路與策略網路引導蒙地卡羅樹狀搜尋。實驗採用中國與美國股票市場資料集。",
+        "findings": "實驗顯示 AlphaCFG 在搜尋效率與交易獲利能力上皆優於現有的先進基準方法，但摘要中未報告具體的報酬率或夏普值等具體績效數字。",
+        "implication": "此方法可作為量化金融中符號化因子發掘與精進的通用框架，適用於資產定價與投資組合建構。",
+        "caveats": "論文摘要未提供扣除交易成本後的實際績效數字與參數細節。",
+        "practicality": 4,
+        "tags": [
+          "Alpha因子",
+          "機器學習",
+          "蒙地卡羅樹狀搜尋",
+          "強化學習",
+          "量化金融"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.07006",
+      "title": "STOCK-JEPA: Prior-Anchored Latent Revision Representation Learning in Equity Markets",
+      "authors": [
+        "Yizhi Luo",
+        "Jiahe Yi",
+        "Jianhui Zhang",
+        "Shuo Sun"
+      ],
+      "abstract": "Learning effective representations helps characterize the structure and dynamics of equity markets from financial data with a low signal-to-noise ratio. Black-box deep models can capture complex patterns but may overfit sample noise and lack explicit economic structure. Meanwhile, classic linear financial models provide interpretable references, but their oversimplified assumptions leave non-linear signals uncaptured. To combine the strengths of these two directions, we propose Stock-JEPA, a joint-embedding predictive framework that learns predictable incremental revisions relative to a point-in-time financial prior. First, we leverage a low-complexity financial model to produce fixed statistics summarizing multi-horizon return and risk. A prior projector then maps these statistics into the target encoder's latent space as an anchor. Second, we design a context-conditioned revision predictor to estimate the future representation's predictable displacement from the anchor. Separate losses update the two branches: the anchor learns from prior statistics, while the revision captures additional predictable information from historical context. Third, we freeze all representation modules and train a downstream readout, evaluating its forecasts through cross-sectional ranking and portfolio performance. Theoretically, we prove that optimal revision reduces the prior anchor's expected squared error for the same future representation by exactly $\\mathbb{E}[\\|\\boldsymbolΔ\\|_2^2]$. This non-negative gain is the expected squared magnitude of the additional signal predictable from historical context. Experimentally, Stock-JEPA outperforms 13 strong baselines across large-scale China and U.S. equity universes on 5 key evaluation metrics. Ablation studies and representation analysis further demonstrate the value of the learned revisions for representation learning in equity markets.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-fin.ST"
+      ],
+      "published": "2026-10-04T12:42:27Z",
+      "updated": "2026-10-04T12:42:27Z",
+      "abs_url": "https://arxiv.org/abs/2610.07006",
+      "pdf_url": "https://arxiv.org/pdf/2610.07006v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 16,
+      "matched_keywords": [
+        "cross-sectional",
+        "stock",
+        "equity market"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出結合金融先驗與聯合嵌入預測的代理表示學習框架，論證扎實。",
+      "summary": {
+        "title_zh": "STOCK-JEPA：股票市場中基於先驗錨定的潛在修正表示學習",
+        "verdict": "結合線性先驗與深度學習的聯合嵌入預測框架，在中美股市中擊敗多個基準模型。",
+        "problem": "傳統線性金融模型過於簡化無法捕捉非線性信號，而黑箱深度模型容易過度擬合樣本雜訊且缺乏經濟結構。",
+        "method": "提出 Stock-JEPA 聯合嵌入預測框架，利用低複雜度金融模型產生先驗統計量作為錨點，並透過上下文條件修正預測器估計未來表示的偏差。使用中國與美國的大規模股票市場資料進行實證。",
+        "findings": "在大型中國與美國股票市場中，Stock-JEPA 在 5 項關鍵評估指標上擊敗了 13 個強基準模型。理論證明最佳修正可減少先驗錨點的期望平方誤差。",
+        "implication": "可將經典財務模型的經濟直覺與深度學習的非線性捕捉能力結合，適合應用於橫截面排序與投資組合建構。",
+        "caveats": "未在論文中報告具體的交易成本與詳細績效數字。",
+        "practicality": 4,
+        "tags": [
+          "表示學習",
+          "機器學習",
+          "量化投資",
+          "Alpha 因子"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.11328",
+      "title": "Strategic OTC market making with reputation feedback",
+      "authors": [
+        "Alexander Barzykin"
+      ],
+      "abstract": "Electronic over-the-counter (OTC) liquidity provision is increasingly shaped not only by the price of the next quote, but also by a dealer's accumulated standing with clients and platforms. We develop a stochastic-control model in which request-for-quote (RFQ) win ratios and streaming fill ratios feed back into future flow through performance-based flow gates, creating an explicit trade-off between immediate spread capture and long-term franchise value. The resulting policy naturally alternates between reputation-building campaigns and franchise monetization phases, and can generate multiple stable client-flow regimes even in a parsimonious single dealer control problem.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "q-fin.RM"
+      ],
+      "published": "2026-07-13T09:47:18Z",
+      "updated": "2026-07-15T15:49:58Z",
+      "abs_url": "https://arxiv.org/abs/2607.11328",
+      "pdf_url": "https://arxiv.org/pdf/2607.11328v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 27,
+      "matched_keywords": [
+        "market making",
+        "regime",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "建立具備商譽回饋機制的策略性場外造市商隨機控制模型。",
+      "summary": {
+        "title_zh": "考慮聲譽回饋的場外市場造市策略",
+        "verdict": "將聲譽回饋納入造市模型，在即時價差捕獲與長期特許經營價值之間取得平衡。",
+        "problem": "電子場外交易市場中，流動性提供者不僅取決於報價，還受到累積聲譽與客戶平台回饋的影響，傳統模型忽略了這種動態。",
+        "method": "建立一個隨機控制模型，將報價請求勝率和串流成交率透過績效基礎的流動閘門回饋至未來訂單流，以單一造市商控制問題進行求解。",
+        "findings": "論文未報告具體績效數字。主要發現是此策略自然會在建立聲譽與變現特許經營價值之間交替，並能在簡潔模型中產生多個穩定的客戶訂單流體制。",
+        "implication": "造市商在設計定價與報價演算法時，應將客戶流的動態回饋與長期聲譽納入考量，不能只看單筆交易的價差。",
+        "caveats": "模型為理論推導性質，缺乏真實市場資料與交易成本的實證檢驗。",
+        "practicality": 2,
+        "tags": [
+          "場外交易",
+          "造市",
+          "隨機控制",
+          "微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.36631",
+      "title": "A Spread-Gated Hawkes-Flocking Model for Best Bid and Ask Dynamics, with an Application to Limit Order Placement",
+      "authors": [
+        "Hyoeun Lee",
+        "Kiseop Lee"
+      ],
+      "abstract": "We study the joint dynamics of the best bid and ask prices with a spread-gated Hawkes-flocking model. The model tracks four types of best-quote movements: spread-narrowing movements are switched off when the spread is at its one-tick minimum, and a cross-side excitation term, whose activation depends on the prevailing spread, links the two sides of the book. We show that the process is non-explosive on every finite horizon, give an $O(N)$ recursive likelihood, and validate the maximum likelihood estimator by simulation. On real intraday limit order book data for two large-tick stocks, INTC and MSFT, the restriction that removes the cross-side term is rejected, and the full model improves fit substantially by AIC and BIC; the likelihood is multimodal on a single day, so estimation uses a multi-start search. As an application, we derive the closed-form optimal size of a single-period limit order placed at the best or second-best quote, given the model's next-event probabilities and externally supplied execution probabilities.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "q-fin.MF"
+      ],
+      "published": "2026-09-29T03:40:21Z",
+      "updated": "2026-09-29T03:40:21Z",
+      "abs_url": "https://arxiv.org/abs/2609.36631",
+      "pdf_url": "https://arxiv.org/pdf/2609.36631v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 26,
+      "matched_keywords": [
+        "limit order book",
+        "order book",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出點差門檻 Hawkes 模型配適訂單簿，實證完整且有對照。",
+      "summary": {
+        "title_zh": "結合價差閘門與群聚特性的 Hawkes 模型用於最佳買賣價動態及其在限價單下單的應用",
+        "verdict": "提出結合價差與群聚特性的 Hawkes 模型來模擬最佳買賣價動態，顯著改善限價單簿的擬合度。",
+        "problem": "如何聯合建模最佳買賣價動態，並捕捉買賣雙方之間的跨側激發與價差限制行為。",
+        "method": "使用包含價差閘門與群聚特性的 Hawkes 模型，分析 INTC 與 MSFT 兩檔大跳動股票的高頻限價單簿資料，並透過最大似然估計進行參數檢定。",
+        "findings": "統計檢定拒絕了移除跨側激發項的限制模型，完整模型在 AIC 與 BIC 準則下顯著提升了模型擬合度，未報告具體績效數字。",
+        "implication": "可利用該模型推導最佳買賣價的下一事件機率，並進一步計算最佳單期限價單的閉合形式大小。",
+        "caveats": "單日資料的似然函數呈現多峰特徵，參數估計必須採用多起點搜尋。",
+        "practicality": 3,
+        "tags": [
+          "Hawkes 模型",
+          "限價單簿",
+          "市場微結構",
+          "高頻交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.18686",
+      "title": "Optimal strategy and deep hedging for share repurchase programs",
+      "authors": [
+        "Stefano Corti",
+        "Roberto Daluiso",
+        "Andrea Pallavicini"
+      ],
+      "abstract": "In recent decades, companies have frequently adopted share repurchase programs to return capital to shareholders or for other strategic purposes, instructing investment banks to rapidly buy back shares on their behalf. When the executing institution is allowed to hedge its exposure, it encounters several challenges due to the intrinsic features of the product. Moreover, contractual clauses or market regulations on trading activity may make it infeasible to rely on Greeks. In this work, we address the hedging of these products by developing a machine-learning framework that determines the optimal execution of the buyback while explicitly accounting for the bank's actual trading capabilities. This unified treatment of execution and hedging yields substantial performance improvements, resulting in an optimized policy that provides a feasible and realistic hedging approach. The pricing of these programs can be framed in terms of the discount that banks offer to the client on the price at which the shares are delivered. Since, in our framework, risk measures serve as objective functions, we exploit the concept of indifference pricing to compute this discount, thereby capturing the actual execution performance.",
+      "primary_category": "q-fin.PR",
+      "categories": [
+        "q-fin.PR",
+        "q-fin.CP"
+      ],
+      "published": "2026-01-26T17:01:54Z",
+      "updated": "2026-01-26T17:01:54Z",
+      "abs_url": "https://arxiv.org/abs/2601.18686",
+      "pdf_url": "https://arxiv.org/pdf/2601.18686v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 18,
+      "matched_keywords": [
+        "optimal execution",
+        "hedging"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance_reason": "庫藏股回購計畫的最佳執行與深度避險機器學習框架",
+      "summary": {
+        "title_zh": "股票回購計畫之最佳策略與深度避險",
+        "verdict": "開發結合執行與避險的機器學習框架，解決無法依賴 Greeks 的股票回購問題。",
+        "problem": "投資銀行在執行客戶的股票回購計畫時，面臨市場法規或合約限制而無法依賴 Greeks 進行避險，且執行與避險分離會產生挑戰。",
+        "method": "利用機器學習框架同時處理最佳執行與避險，針對銀行實際交易能力進行建模，並以無差異定價法計算折扣，未明確指出具體資料頻率與樣本期間。",
+        "findings": "該統一處理方式帶來實質的績效改善，產生可行且實際的避險策略，並透過風險衡量指標作為目標函數來計算定價折扣，但未報告具體的效能數字。",
+        "implication": "適用於受法規限制、無法使用傳統 Greeks 避險的股票回購業務，能提升銀行的風險管理與執行表現。",
+        "caveats": "論文未提供具體的量化績效數字與實際交易成本實證。",
+        "practicality": 3,
+        "tags": [
+          "機器學習",
+          "深度避險",
+          "最佳執行",
+          "股票回購"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.04959",
+      "title": "Intraday Limit Order Price Change Transition Dynamics Across Market Capitalizations Through Markov Analysis",
+      "authors": [
+        "Salam Rabindrajit Luwang",
+        "Kundan Mukhia",
+        "Buddha Nath Sharma",
+        "Md. Nurujjaman",
+        "Anish Rai",
+        "Filippo Petroni"
+      ],
+      "abstract": "Quantitative understanding of stochastic dynamics in limit order price changes is essential for execution strategy design. We analyze intraday transition dynamics of ask and bid orders across market capitalization tiers using high-frequency NASDAQ100 tick data. Employing a discrete-time Markov chain framework, we categorize consecutive price changes into nine states and estimate transition probability matrices (TPMs) for six intraday intervals across High ($\\mathtt{HMC}$), Medium ($\\mathtt{MMC}$), and Low ($\\mathtt{LMC}$) market cap stocks. Element-wise TPM comparison reveals systematic patterns: price inertia peaks during opening and closing hours, stabilizing midday. A capitalization gradient is observed: $\\mathtt{HMC}$ stocks exhibit the strongest inertia, while $\\mathtt{LMC}$ stocks show lower stability and wider spreads. Markov metrics, including spectral gap, entropy rate, and mean recurrence times, quantify these dynamics. Clustering analysis identifies three distinct temporal phases on the bid side -- Opening, Midday, and Closing, and four phases on the ask side by distinguishing Opening, Midday, Pre-Close, and Close. This indicates that sellers initiate end-of-day positioning earlier than buyers. Stationary distributions show limit order dynamics are dominated by neutral and mild price changes. Jensen-Shannon divergence confirms the closing hour as the most distinct phase, with capitalization modulating temporal contrasts and bid-ask asymmetry. These findings support capitalization-aware and time-adaptive execution algorithms.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.TR",
+        "stat.AP"
+      ],
+      "published": "2026-01-08T14:04:02Z",
+      "updated": "2026-01-08T14:04:02Z",
+      "abs_url": "https://arxiv.org/abs/2601.04959",
+      "pdf_url": "https://arxiv.org/pdf/2601.04959v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 16,
+      "matched_keywords": [
+        "high-frequency",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "透過馬可夫分析研究限價單價格變動過渡動態，實證細緻",
+      "summary": {
+        "title_zh": "透過馬可夫分析探討跨市值區間的盤中限價單價格變動轉移動態",
+        "verdict": "利用馬可夫鏈分析不同市值股票的盤中限價單轉移動態，發現高市值股票具備較強價格慣性，且賣方尾盤佈局早於買方。",
+        "problem": "量化理解限價單價格變動的隨機動態對於執行策略設計至關重要，但跨市值與盤中時間段的系統性分析仍顯不足。",
+        "method": "採用離散時間馬可夫鏈框架，將連續價格變動分為九個狀態，並使用 NASDAQ100 的高頻 Tick 資料，針對高、中、低三種市值類別在六個盤中時間段估計轉移機率矩陣。",
+        "findings": "價格慣性在開盤與收盤時段達到頂峰並在盤中趨於穩定，高市值股票展現最強慣性，而低市值股票穩定度較低且價差較寬。未報告具體績效數字。",
+        "implication": "研究結果可直接支援考量市值與時間自適應的演算法執行策略，最佳化訂單分割與執行時機。",
+        "caveats": "本研究主要著重於價格轉移動態的描述性統計與結構分析，尚未提供實際交易績效的回測資料。",
+        "practicality": 3,
+        "tags": [
+          "限價單簿",
+          "馬可夫鏈",
+          "高頻交易",
+          "訂單執行",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.24590",
+      "title": "Fraud Detection in Cryptocurrency Markets with Spatio-Temporal Graph Neural Networks",
+      "authors": [
+        "Lidia Losavio",
+        "Luca Persia",
+        "Madan Sathe",
+        "Dimosthenis Pasadakis"
+      ],
+      "abstract": "Technological advancements in cryptocurrency markets have increased accessibility for investors, but concurrently exposed them to the risks of market manipulations. Existing fraud detection mechanisms typically rely on machine learning methods that treat each financial asset (i.e., token) and its related transactions independently. However, market manipulation strategies are rarely isolated events, but are rather characterized by coordination, repetition, and frequent transfers among related assets. This suggests that relational structure constitutes an integral component of the signal and can be effectively represented through graphical means. In this paper, we propose three graph construction methods that rely on aggregated hourly market data. The proposed graphs are processed by a unified spatio-temporal Graph Neural Network (GNN) architecture that combines attention-based spatial aggregation with temporal Transformer encoding. We evaluate our methodology on a real-world dataset comprised of pump-and-dump schemes in cryptocurrency markets, spanning a period of over three years. Our comparative results showcase that our graph-based models achieve significant improvements over standard machine learning baselines in detecting anomalous events. Our work highlights that learned market connectivity provides substantial gains for detecting coordinated market manipulation schemes.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CE"
+      ],
+      "published": "2026-04-27T15:12:11Z",
+      "updated": "2026-04-27T15:12:11Z",
+      "abs_url": "https://arxiv.org/abs/2604.24590",
+      "pdf_url": "https://arxiv.org/pdf/2604.24590v1",
+      "comment": "9 pages, 3 figures, Accepted at the SDS2026: IEEE Swiss Conference on Data Science and AI",
+      "journal_ref": "",
+      "keyword_score": 27,
+      "matched_keywords": [
+        "transformer",
+        "graph neural network",
+        "cryptocurrency",
+        "neural network"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合時空圖神經網路偵測加密貨幣市場操縱行為，已獲IEEE會議接受。",
+      "summary": {
+        "title_zh": "使用時空圖神經網路偵測加密貨幣市場的詐欺行為",
+        "verdict": "結合時空圖神經網路與圖結構特徵，有效提升加密貨幣市場操縱事件的偵測準確度。",
+        "problem": "現有偵測機制多將各資產及交易視為獨立個體，忽略了市場操縱常具備跨資產的協調性與重複性。這導致難以捕捉群體性與關聯性的異常訊號。",
+        "method": "提出三種基於每小時市場資料的圖建構方法，並透過結合基於注意力的空間聚合與時空 Transformer 編碼的統一時空 Graph Neural Network 架構進行處理。使用涵蓋超過三年、真實世界的加密貨幣拉高出貨詐欺資料集進行評估。",
+        "findings": "圖基模型在偵測異常事件的表現上，顯著優於標準機器學習基準模型。論文未報告具體的夏普值或報酬數字。",
+        "implication": "透過對資產間連接關係建模，能有效捕捉協調性市場操縱，可用於建構更靈敏的異常交易監控系統。前提是需要建立高效率的圖結構資料管線。",
+        "caveats": "雖證明了圖結構的有效性，但未揭露扣除交易成本後的實際交易績效或誤報率細節。",
+        "practicality": 3,
+        "tags": [
+          "圖神經網路",
+          "加密貨幣",
+          "市場操縱",
+          "異常偵測"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
