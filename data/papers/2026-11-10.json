@@ -1,0 +1,526 @@
+{
+  "date": "2026-11-10",
+  "generated_at": "2026-11-10T12:39:17+08:00",
+  "scanned": 2449,
+  "eligible": 2215,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2611.10956",
+      "title": "Risk-Sensitive Reinforcement Learning for an Options Market Maker: An Empirical Study with Real S&P 500 Options",
+      "authors": [
+        "Jacky Chen",
+        "Ing-Haw Cheng",
+        "John Hull",
+        "Landis Li",
+        "Zissis Poulos",
+        "Justin Shi",
+        "Andreas Veneris",
+        "Zeyu Wang"
+      ],
+      "abstract": "Options market makers absorb client order flow and must hedge the resulting inventory risk under trading frictions. We study whether an option hedging reinforcement learning (RL) agent trained on historical market data outperforms three alternatives in tail-risk protection: (i) traditional delta hedging, (ii) simple hedge-ratio rules, and (iii) the same agent trained in simulated markets. Most RL hedging agents are trained in model-generated markets that do not capture the crashes and volatility regimes present in real data. We introduce an empirical replay environment using S&P 500 option data from 1996 to 2017 and compare against a matched geometric Brownian motion (GBM) environment, a stochastic-volatility (SABR) simulator, and a hybrid that values historical paths with Black-Scholes, all sharing the same portfolio mechanics, stochastic arrivals, costs, and test period. We train a distributional Twin Delayed Deep Deterministic Policy Gradient (TD3) agent and evaluate it out of sample over 2018-2023. The agent trained on empirical data reduces Conditional Value-at-Risk (CVaR) tail loss by 3.1% compared to delta hedging and outperforms every hedge-ratio rule chosen during the training period and every alternative training environment. The reduction reaches 8.9% in volatile and falling markets, but reverses to a cost of 7-10% in rising markets. Empirical training induces a state-dependent short net delta: the policy under-hedges negative-delta books, most strongly after prices have fallen. This tilt disappears with GBM training and is weaker with SABR or hybrid training. These findings suggest that exposure to historical market dynamics can materially change a tail-risk hedging policy, although the evidence rests on a single test path and the edge is regime-conditional.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM",
+        "cs.LG",
+        "q-fin.CP"
+      ],
+      "published": "2026-11-07T20:41:35Z",
+      "updated": "2026-11-07T20:41:35Z",
+      "abs_url": "https://arxiv.org/abs/2611.10956",
+      "pdf_url": "https://arxiv.org/pdf/2611.10956v1",
+      "comment": "9 pages, 2 figures, 5 tables. Authors listed alphabetically by last name",
+      "journal_ref": "",
+      "keyword_score": 58,
+      "matched_keywords": [
+        "order flow",
+        "market maker",
+        "reinforcement learning",
+        "regime",
+        "hedging",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "以1996至2017年真實選擇權資料訓練，樣本外檢驗完整並具體量化尾部風險。",
+      "summary": {
+        "title_zh": "SPX選擇權的風險敏感強化學習造市商：真實資料實證研究",
+        "verdict": "實證訓練的強化學習避險代理能降低尾端風險，但在上漲市場會付出成本。",
+        "problem": "選擇權造市商需在交易摩擦下避險庫存風險，但多數強化學習代理在無法捕捉真實市場崩盤的模擬市場中訓練。",
+        "method": "使用 1996 至 2017 年 SPX 選擇權資料建立經驗回放環境，訓練分佈式 TD3 代理，並與幾何布朗運動及 SABR 模擬器對比，於 2018 至 2023 年進行樣本外評估。",
+        "findings": "實證資料訓練的代理較傳統 Delta 避險降低 3.1% 的條件風險值尾端損失，在波動與下跌市場降幅達 8.9%，但在上漲市場中會產生 7-10% 的避險成本。",
+        "implication": "接觸歷史市場動態可實質改變尾端風險避險策略，但其優勢具體制條件限制，實務應用需謹慎評估市場環境。",
+        "caveats": "本研究的實證證據僅基於單一測試路徑且邊際效益受限於特定市場體制。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "選擇權造市",
+          "Delta避險",
+          "尾端風險"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.09834",
+      "title": "The Logic of Factor Portfolios: Boolean Rules, Interactions, and Trading Costs",
+      "authors": [
+        "Ziyao Wang",
+        "Svetlozar T. Rachev",
+        "Frank J. Fabozzi"
+      ],
+      "abstract": "Investors turn signals into holdings through decision rules: buy the top decile, hold stocks with high momentum and low volatility, exclude stocks that fail a screen. Many such rules are Boolean functions of threshold statements about signal ranks, and writing them this way shows both what a rule holds and how often it trades. A Walsh decomposition splits the return of any rule into exposures to individual signals and to interactions among signals; an intersection and a union of the same two screens, for example, have opposite interaction exposures. The same coefficients, together with the persistence of the underlying statements, determine turnover. Interactions are less persistent than their components, so rules that load on higher-order interactions trade more, and thresholds discard information, so at equal risk threshold implementations of interactions trade more than smooth ones. In U.S. stocks from 1973 to 2024, these predictions hold closely: predicted and realized persistence have correlations of at least 0.999, predicted turnover matches realized turnover with a slope of 1.02, and the same interactions are more persistent as products of ranks than as threshold rules. Trading costs rise with order, and because premia fall with order, 58% of single-signal portfolios have absolute premia above their quoted-spread costs over 1995-2024, against 24% of two-signal and 6% of three-signal interaction portfolios. Out of sample, interaction portfolios raise the Sharpe ratio of single-signal tangency portfolios, and over 1995-2024 they reject a six-factor model that conventional sorts on the same signals do not reject.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "q-fin.GN"
+      ],
+      "published": "2026-11-06T18:17:58Z",
+      "updated": "2026-11-06T18:17:58Z",
+      "abs_url": "https://arxiv.org/abs/2611.09834",
+      "pdf_url": "https://arxiv.org/pdf/2611.09834v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 29,
+      "matched_keywords": [
+        "sharpe ratio",
+        "factor model",
+        "momentum",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用華爾士分解分析因子投資組合的布林規則與交易成本，實證極為扎實。",
+      "summary": {
+        "title_zh": "因子投資組合的邏輯：布林規則、互動與交易成本",
+        "verdict": "利用沃爾什分解分析布林規則與訊號互動的週轉率，發現高階互動交易成本高且溢酬遞減。",
+        "problem": "投資人將訊號轉化為持倉的決策規則如何影響週轉率與交易成本？傳統排序法無法系統性評估訊號間的非線性互動與其摩擦。",
+        "method": "本研究運用沃爾什分解理論進行分析。資料涵蓋美國股票市場 1973 年至 2024 年間的各類布林規則與訊號互動。",
+        "findings": "預測與實現的持久度相關係數達 0.999 以上，預測週轉率與實際週轉率的斜率為 1.02。單一、二訊號與三訊號互動投資組合中，絕對溢酬高於報價價差成本的比例分別為 58%、24% 與 6%。",
+        "implication": "實務建構多因子策略時須注意高階互動帶來的沉重交易成本。建議透過平滑化實作來降低不必要的摩擦消耗。",
+        "caveats": "高階互動雖然在統計上顯著，但扣除實際交易成本後可行性大幅下降。",
+        "practicality": 4,
+        "tags": [
+          "因子投資",
+          "布林規則",
+          "交易成本",
+          "週轉率",
+          "訊號互動"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.20093",
+      "title": "Retail Trader's Ruin: An Anatomy of Popular Signal Failure",
+      "authors": [
+        "Adam Darmanin"
+      ],
+      "abstract": "We test whether five widely promoted retail signal families - trend, oscillator, candlestick, volume, and calendar rules - deliver a positive, economically meaningful, net-of-cost, and survivable edge. Practical viability is the conjunction of three predeclared gates: statistical edge after multiplicity correction, economic viability after trading costs, and finite-bankroll survival under leverage. Exposure-matched benchmarks, stationary-bootstrap confidence intervals, hierarchical Benjamini-Yekutieli control, one-sided claim-exclusion tests, and equivalence tests distinguish positive evidence, statistically refuted materiality, and unresolved cases. Four of six candidates - oscillator, volume, calendar, and candlestick - are REFUTED, ruled out on statistical and/or economic materiality grounds; trend and a momentum calibration benchmark are INCONCLUSIVE, with confidence intervals too wide at this sample size to resolve the claim; none is SUPPORTED. Cross-sectional tests use point-in-time membership and delisting corrections. The momentum benchmark itself does not clear the statistical gate and is classified INCONCLUSIVE, not REFUTED - the critical validity signature that a genuinely uncertain positive control is never falsely falsified by this design. Under FINRA- and ESMA-anchored leverage and margin scenarios, survival is not the binding constraint for any tested family at the US headline scenario, though it becomes discriminating for trend and oscillator under the higher-leverage EU CFD scenario. The results reject specific promoted deployability claims where confidence bounds rule out the declared effect threshold and classify the remaining cases as unresolved rather than treating non-significance as proof.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.RM",
+        "q-fin.TR"
+      ],
+      "published": "2026-07-22T12:47:56Z",
+      "updated": "2026-07-22T12:47:56Z",
+      "abs_url": "https://arxiv.org/abs/2607.20093",
+      "pdf_url": "https://arxiv.org/pdf/2607.20093v1",
+      "comment": "Initial draft. 12 pages, 3 figures, 4 tables. Working paper; not externally peer reviewed",
+      "journal_ref": "",
+      "keyword_score": 15,
+      "matched_keywords": [
+        "momentum",
+        "cross-sectional"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "嚴格檢驗散戶常用的五類訊號家族，發現多數無法通過統計與經濟顯著性檢驗。",
+      "summary": {
+        "title_zh": "散戶交易者的毀滅：熱門訊號失效之剖析",
+        "verdict": "檢測五大散戶交易訊號，結果無一獲得支持，多數被推翻或證據不足。",
+        "problem": "檢驗廣受推崇的散戶交易訊號是否具備扣除成本後的經濟價值與槓桿存活能力。如何透過嚴格的統計檢定避免多重假設檢定帶來的偽陽性。",
+        "method": "涵蓋趨勢、震盪指標、K棒、成交量與行事曆等五大散戶訊號族群與動能基準，運用暴露度匹配基準、平穩拔靴法、階層式 Benjamini-Yekutieli 控制及等價檢定。",
+        "findings": "震盪指標、成交量、行事曆與 K棒等四類訊號遭到推翻；趨勢與動能基準則因信賴區間過寬而呈結果未定；沒有任何訊號獲得支持。論文未報告具體績效數字。",
+        "implication": "散戶常用的技術分析訊號在扣除成本並經過嚴格統計檢定後，難以證明具有穩健的 Alpha，實務上直接套用風險極高。",
+        "caveats": "在當前樣本大小下信賴區間過寬，可能導致部分訊號無法完全排除潛在影響。",
+        "practicality": 1,
+        "tags": [
+          "技術分析",
+          "散戶交易",
+          "統計檢定",
+          "Alpha 因子挖掘",
+          "交易成本"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.08232",
+      "title": "Hour-Aware Adaptive Risk Management for Autonomous Memecoin Trading on Solana DEXs: Evidence, Theory, and Design Lessons from a 15-Day Deployment",
+      "authors": [
+        "Arati Uday Kamat"
+      ],
+      "abstract": "We report a 15-day paper-traded autonomous memecoin trading deployment on Solana decentralised exchanges (DEXs), designed as a controlled measurement of three microstructure questions on which classical equity theory offers well-defined predictions but on which the AMM Solana venue lacks published measurement: (i) time-of-day return patterns on a 24/7 permissionless venue; (ii) whether decision-time filter stacks are net-positive against counterfactual returns of rejected tokens; (iii) whether small-sample cumulative-return statistics on a heavy-tailed venue are structurally robust or fragile. The 190-trade sample (March 29 to April 12, 2026) shows a 40.5 percent win rate, mean per-trade return +0.62 percent, cumulative +117.7 percent, skewness -1.21, excess kurtosis 6.61. Mann-Whitney U on three exploratorily identified worst entry hours (n=17, mean -11.60 percent) versus all others (n=173, mean +1.82 percent) yields p = 0.5634; directional and non-confirmatory. A parallel counterfactual rejection-tracker collected 4,874 forward-sample observations across 184 rejection events; of 48 events observed for at least six hours, 27 (56.25 percent) reached a 50 percent drawdown from reference (the full-cohort 17.9 percent is a censored lower bound). Removing the top three trades (1.6 percent of sample) flips cumulative return unprofitable. The three findings connect to Kyle (1985) informed-flow, Precup-Sutton-Singh (2000) off-policy evaluation, and Bailey-Lopez de Prado (2014) deflated-Sharpe predictions. Alongside the trade log and rejection-sample corpus (CC-BY-4.0), we deposit audit.py (MIT), an assertion-based reproduction script that exits zero iff every headline number reproduces from the deposited CSVs. Companion dataset: Zenodo concept DOI 10.5281/zenodo.20043301. The paper's principal contribution is measurement infrastructure and three transferable design lessons.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.CP",
+        "q-fin.RM",
+        "q-fin.ST"
+      ],
+      "published": "2026-06-06T15:40:05Z",
+      "updated": "2026-10-08T13:31:56Z",
+      "abs_url": "https://arxiv.org/abs/2606.08232",
+      "pdf_url": "https://arxiv.org/pdf/2606.08232v4",
+      "comment": "16 pages, 4 figures. v4: patent application numbers removed from two passages; metadata corrected; no change to results. JEL G11/G12/G14/G17. Companion data: https://doi.org/10.5281/zenodo.20043301",
+      "journal_ref": "",
+      "keyword_score": 15,
+      "matched_keywords": [
+        "drawdown"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "以Solana DEX迷因幣交易進行15天實戰部署，微觀結構量測與教訓真實。",
+      "summary": {
+        "title_zh": "Solana去中心化交易所上自主迷因幣交易的小時感知自適應風險管理：15天部署的實證、理論與設計教訓",
+        "verdict": "透過 15 天 Solana 上的迷因幣實測，發現報酬高度依賴少數極端交易，且小樣本統計結構脆弱。",
+        "problem": "傳統權益市場理論在 24/7 無許可的 AMM 交易場所有所不足，缺乏針對時間報酬模式、決策過濾器有效性及小樣本累積報酬強健性的實證測量。",
+        "method": "使用 15 天（2026年3月29日至4月12日）在 Solana DEX 進行的 190 筆虛擬交易樣本與 4,874 筆反事實拒絕樣本進行實證分析。",
+        "findings": "190 筆交易的勝率為 40.5%，平均每筆交易報酬 +0.62%，累積報酬 +117.7%，偏度為 -1.21，峰度為 6.61。移除前三大交易（佔樣本 1.6%）會導致累積報酬轉為負值。",
+        "implication": "實務上交易系統極易受重尾分佈影響，必須對少數極端獲利交易的依賴保持高度警覺。",
+        "caveats": "移除頂部少數交易即翻轉整體獲利，顯示小樣本的累積報酬統計具有結構性脆弱。",
+        "practicality": 4,
+        "tags": [
+          "迷因幣",
+          "去中心化交易所",
+          "市場微結構",
+          "風險管理",
+          "演算法交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.17166",
+      "title": "The Virtue of Sparsity in Complexity",
+      "authors": [
+        "Nima Afsharhajari",
+        "Jonathan Yu-Meng Li"
+      ],
+      "abstract": "Sparsity or complexity? In modern high-dimensional asset pricing, these are often viewed as competing principles: recent empirical evidence favors richer models, while economic intuition has long favored parsimony. We reconcile this tension by distinguishing capacity sparsity-restrictions on effective model capacity-from factor sparsity-the parsimonious structure of priced risks. Revisiting the benchmark empirical design of Didisheim et al. (2025), we combine nonlinear feature expansions with basis pursuit, using column generation and GPU acceleration to scale estimation to 432 million candidate factors. Reaching this scale reveals a reversal in out-of-sample performance: sparse portfolios trail dense ridgeless benchmarks at lower complexity but achieve a higher Sharpe ratio and lower pricing error at the largest candidate set. Capacity expansion and factor sparsity are therefore complements: enlarging the candidate space allows a parsimonious pricing kernel to outperform its dense counterpart.",
+      "primary_category": "q-fin.GN",
+      "categories": [
+        "q-fin.GN",
+        "cs.LG",
+        "econ.EM",
+        "q-fin.PM",
+        "q-fin.PR"
+      ],
+      "published": "2026-04-18T23:25:22Z",
+      "updated": "2026-09-21T21:57:09Z",
+      "abs_url": "https://arxiv.org/abs/2604.17166",
+      "pdf_url": "https://arxiv.org/pdf/2604.17166v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 16,
+      "matched_keywords": [
+        "sharpe ratio",
+        "out-of-sample",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探討高維資產定價中的稀疏性與模型容量，實證嚴謹",
+      "summary": {
+        "title_zh": "複雜度中稀疏性的價值",
+        "verdict": "透過結合非線性特徵擴展與基底追蹤，大規模稀疏投資組合在極大候選集合下超越密集基準。",
+        "problem": "高維資產定價中，實證傾向複雜模型而經濟直覺偏好簡約，兩者存在張力。本研究旨在協調這種容量稀疏性與因子稀疏性之間的矛盾。",
+        "method": "結合非線性特徵擴展與基底追蹤，使用欄生成與 GPU 加速，將估計規模擴展至 4.32 億個候選因子，重訪基準實證設計。",
+        "findings": "達到此規模時，樣本外表現出現反轉，稀疏投資組合在最大候選集合下實現了更高的夏普值與更低的定價誤差。論文未報告具體的夏普值與定價誤差數值。",
+        "implication": "容量擴展與因子稀疏性是互補的，擴大候選空間能讓簡約的定價核心表現優於密集對手。實務上可透過大規模特徵擴展與稀疏化方法來提升投資組合表現。",
+        "caveats": "計算複雜度極高，需依賴欄生成與 GPU 加速才能將估計規模推至 4.32 億個候選因子。",
+        "practicality": 3,
+        "tags": [
+          "資產定價",
+          "稀疏性",
+          "機器學習",
+          "投資組合",
+          "因子模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.14859",
+      "title": "Gate Design and Stage-Dependent Incentives in Retail Proprietary-Trading Evaluations: Why Passing Is Not Standalone Evidence of Skill, and Why the Product Fails to Pay Under Measured Trading Constraints",
+      "authors": [
+        "Nicholas Hall"
+      ],
+      "abstract": "Retail proprietary-trading firms sell a two-stage product: a paid evaluation that must reach a profit target before breaching a trailing drawdown, then a funded account that must survive a minimum window and a consistency rule before a payout. We show the geometry of this contract creates incentives that differ by stage and make passing a poor standalone signal of skill. Under end-of-day trailing the evaluation rewards a fast, lumpy cadence while the funded account punishes it, by a factor of nine in the joint gate. The evaluation is defeatable at zero skill: position sizing alone yields a pass probability near 0.40, against a measured cohort rate of 0.168. Pass probability rises with skill, but a real edge and aggressive sizing move it by nearly the same amount, so a pass rate confounds the two. Under a simplified contract model the seller's margin is bounded by the gap between perceived and actual gate probabilities, the probability analogue of shrouding a price component; the observed design, a permeable marketed evaluation and a hard payout gate, is consistent with that. Across the sector, pass rates are published far more often than payout rates. The same geometry produces negative expected value: within the measured strategy universe, no configuration at observed drifts clears break-even on any account sourced. Break-even lies between a 40.5% and 41.5% win rate at 1:1.5 net of costs, against a driftless 40.0%. The delta-neutral construction firms prohibit is approximately expected-value neutral at the observed payout ceiling. Every account-level result is reported against a zero-edge control.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.GN"
+      ],
+      "published": "2026-09-14T00:16:17Z",
+      "updated": "2026-09-14T00:16:17Z",
+      "abs_url": "https://arxiv.org/abs/2609.14859",
+      "pdf_url": "https://arxiv.org/pdf/2609.14859v1",
+      "comment": "40 pages, 2 figures, 27 tables. Code and figure-generation scripts at https://github.com/nicholasbhall/gate-design-prop-evals",
+      "journal_ref": "",
+      "keyword_score": 15,
+      "matched_keywords": [
+        "drawdown"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "剖析零售自營交易評估機制的幾何結構與負期望值，揭露業界實務陷阱。",
+      "summary": {
+        "title_zh": "散戶自營交易評估的閘門設計與階段相依誘因：為何通過不等於真實技術的獨立證據，以及為何產品在受測交易限制下無法支付",
+        "verdict": "散戶自營交易評估的合約幾何結構導致通過率無法代表真實技術，且在實際限制下預期報酬為負。",
+        "problem": "散戶自營交易公司販售的兩階段評估與資助帳戶機制，其誘因在不同階段衝突，且評估階段無法有效分離真實交易技術與部位規模。",
+        "method": "建構簡化的合約模型分析網關幾何與誘因，使用歷史同群資料與模擬策略宇宙評估通過率與帳戶損益，未明確指出特定資料頻率與樣本期間。",
+        "findings": "純靠部位規模在評估階段即可達到接近 0.40 的通過概率，對照實際同群通過率為 0.168；在受測策略宇宙中，所有配置在觀察到的飄移值下皆無法達到損益平衡，損益平衡點落在勝率介於 40.5% 至 41.5% 之間（1:1.5 報酬風險比且扣除成本）。",
+        "implication": "此類自營交易評估產品的幾何設計偏向行銷導向而非真實發掘交易員，交易員在參與時需高度警惕其隱含成本與極低的實際撥款率。",
+        "caveats": "模型基於簡化的合約假設，且未完全涵蓋所有真實市場的微結構細節。",
+        "practicality": 2,
+        "tags": [
+          "自營交易",
+          "市場微結構",
+          "風險管理",
+          "量化評估"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.27785",
+      "title": "Financial Tail Risk Beyond Lipschitz Continuity via Semi-Discrete Optimal Transport",
+      "authors": [
+        "Ryan M. Engel",
+        "Kibaek Lee",
+        "Namid Stillman"
+      ],
+      "abstract": "Financial returns are heavy-tailed, and accurate tail risk estimation is central to portfolio risk management. Modern neural generators sample by pushing a simple base distribution through a learned map, and for training stability that map is built from Lipschitz components. This is the binding constraint: a Lipschitz map of a Gaussian is sub-Gaussian, so heavier-tailed targets admit no exact match at any finite Lipschitz constant. The Monge--Ampère equation ties the Brenier map's local distortion to the density ratio $f/(g\\circ T)$, so a deeper trough in the target density requires a higher-gain map and yields a higher-variance estimator. The argument needs only bounded distortion, so it covers normalizing flows, flow matching, GANs, and diffusion samplers alike. Semi-Discrete Optimal Transport (SDOT) relaxes the map's regularity rather than the source's tail class. Its power diagram gives every training observation a cell holding exactly $1/N$ of the source measure, and tail observations are reached by crossing a cell boundary rather than by stretching. Our primary experiment sweeps severity over a calibrated Merton jump-diffusion spanning kurtosis 94 to 1,679. SDOT holds tail ratios at $0.85$--$0.94$ with cross-seed standard deviations below $0.025$, while every learned generator either compresses the tails or inflates them with a variance that grows alongside. Further experiments carry the result to real S\\&P~500 returns and to a 21-year backtest, where SDOT gives the best risk-adjusted market-neutral strategy under CVaR optimization (Sharpe $0.70$, max drawdown $-2.60\\%$, against $0.40$ for the next-best generator).",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM",
+        "cs.CE",
+        "q-fin.CP",
+        "stat.ML"
+      ],
+      "published": "2026-08-17T08:44:43Z",
+      "updated": "2026-08-17T08:44:43Z",
+      "abs_url": "https://arxiv.org/abs/2609.27785",
+      "pdf_url": "https://arxiv.org/pdf/2609.27785v1",
+      "comment": "8 pages, 1 figure, 5 tables",
+      "journal_ref": "",
+      "keyword_score": 15,
+      "matched_keywords": [
+        "backtest",
+        "drawdown"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用半離散最佳傳輸改善金融尾部風險估計，實證涵蓋真實資料與長期回測。",
+      "summary": {
+        "title_zh": "透過半離散最佳運輸突破利普希茨連續性的金融尾部風險",
+        "verdict": "提出半離散最佳運輸（SDOT）以突破生成式模型在厚尾分佈擬合上的限制，在 S&P 500 回測中實現較佳的風險調整報酬。",
+        "problem": "現代神經生成器依賴具有利普希茨連續性的映射，導致無法完美擬合金融資產常見的厚尾特性，高斯分佈的利普希茨映射仍為次高斯分佈。",
+        "method": "使用半離散最佳運輸（SDOT）放寬映射的正則性，採用權力圖（power diagram）處理樣本。實驗包含校準的 Merton 跳躍擴散模型、真實 S&P 500 報酬及 21 年回測。",
+        "findings": "SDOT 將尾部比例維持在 0.85 至 0.94 之間，跨隨機種子標準差低於 0.025。在 CVaR 最佳化下的市場中立策略中，SDOT 取得夏普值 0.70 與最大回檔 -2.60%，優於次佳生成器的 0.40。",
+        "implication": "可用於需要精準捕捉尾部風險的投資組合配置與 CVaR 最佳化，前提是能接受半離散最佳運輸的計算複雜度。",
+        "caveats": "模型主要依賴有界失真與幾何分割，未詳述高維度下的計算擴展性極限。",
+        "practicality": 4,
+        "tags": [
+          "尾部風險",
+          "最佳運輸",
+          "風險管理",
+          "CVaR",
+          "生成式模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.09012",
+      "title": "Towards Robust Reinforcement Learning Market Making: Lessons from Loss Function Experimentation",
+      "authors": [
+        "Siddharth Nand",
+        "Bora Guney"
+      ],
+      "abstract": "Market makers play a vital role in ensuring efficient trade within financial markets. Recent literature has delved into training market-making systems using reinforcement learning. This paper delves into the impact of various loss function formulations on risk management behavior within reinforcement-based market making. Through empirical evaluation, we contrast profit-maximizing strategies with risk-averse approaches, finding that penalties for inventory and cash management foster more resilient and adaptable market-making strategies. Our results underscore the significance of striking a balance between profit maximization and risk management in algorithmic trading, providing actionable insights for refining strategies in practical settings.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-fin.CP",
+        "q-fin.TR"
+      ],
+      "published": "2026-11-06T05:42:17Z",
+      "updated": "2026-11-06T05:42:17Z",
+      "abs_url": "https://arxiv.org/abs/2611.09012",
+      "pdf_url": "https://arxiv.org/pdf/2611.09012v1",
+      "comment": "6 pages, 3 figures",
+      "journal_ref": "",
+      "keyword_score": 51,
+      "matched_keywords": [
+        "market making",
+        "market maker",
+        "algorithmic trading",
+        "reinforcement learning",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探討損失函數對強化學習造市策略的影響，實證完整且提供具體洞察。",
+      "summary": {
+        "title_zh": "邁向穩健的強化學習造市：損失函數實驗的啟示",
+        "verdict": "探討強化學習造市中損失函數對風險管理的影響，發現加入庫存與現金懲罰可提升策略韌性。",
+        "problem": "強化學習造市模型中，不同損失函數對風險管理行為的影響尚待系統性評估。",
+        "method": "採用強化學習進行造市策略研究，對比不同的損失函數設定；摘要未提供具體市場、資料頻率與樣本期間。",
+        "findings": "發現針對庫存與現金管理加入懲罰機制，能促使造市策略更具韌性與適應力。論文未報告具體的績效數字。",
+        "implication": "在設計造市模型時，加入庫存與現金的懲罰項有助於平衡利潤與風險，可作為策略調校的參考。",
+        "caveats": "論文摘要未提供具體的市場實證資料與回測細節。",
+        "practicality": 3,
+        "tags": [
+          "強化學習",
+          "造市",
+          "風險管理",
+          "損失函數"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.18867",
+      "title": "HindsightBench: A Black-Box Behavioral Audit Protocol for Parametric Hindsight in Time-Indexed LLM Decision Tasks",
+      "authors": [
+        "Haozhe Jia"
+      ],
+      "abstract": "Large language models leak parametric knowledge of what followed a historical date into decision tasks indexed by that date -- not necessarily a lookup of the realized outcome, but knowledge of the period all the same. Existence is settled; what users lack is a cheap way to audit a given model. We present HindsightBench, a black-box audit protocol that profiles parametric hindsight in any time-indexed LLM decision task at probe-level cost (no backtests, no logprobs, no corpus access). It chains a four-arm date-manipulation matrix (revealed/date-only/masked/transplanted), dual memory probes (date recovery; outcome recall), and six metrics -- trigger strength, transplant effect, post-cutoff placebo, recoverability, behaviorally effective cutoff, and recall-accuracy dissociation -- with explicit gates where identifiability is data-dependent. Applied to 15 models from seven vendors on a 258-node vintage-correct macro panel, it yields three patterns: (i) the date-trigger reflex is not a scale phenomenon -- it tracks training recency, though what installs it is not identified here: absent across every 2024 open-weight row where it is measurable, including a 70B tier with cutoff-aligned recall propensity, present in every tested 2026-generation model, and switching on within one vendor lineage (Qwen3 -> Qwen3.6) in the same MoE family at ~3B active; (ii) effective cutoffs span 22 months across vendors and precede vendor-reported dates by up to eight months, invalidating calendar-window placebos; (iii) results are not invariant to serving -- BF16 serving of an FP8-referenced model breaks the trigger estimate's stability while AWQ-INT4 preserves it, and a provider-locked reasoning regime makes one probe non-convergent -- so the protocol pins quantization and thinking regime as part of its contract. We release the panel, preregistrations, audit rows, transcripts, and one-command regeneration.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-07-21T08:58:36Z",
+      "updated": "2026-08-10T03:16:47Z",
+      "abs_url": "https://arxiv.org/abs/2607.18867",
+      "pdf_url": "https://arxiv.org/pdf/2607.18867v2",
+      "comment": "17 pages, 3 figures. Code, panel, and per-model audit rows: https://github.com/Khaozhe/hindsightbench (v1.0 release archived at doi:10.5281/zenodo.21453191)",
+      "journal_ref": "",
+      "keyword_score": 25,
+      "matched_keywords": [
+        "backtest",
+        "llm",
+        "large language model",
+        "regime"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出黑箱行為稽核協定，檢測大型語言模型在時間索引任務中的參數後見之明偏誤。",
+      "summary": {
+        "title_zh": "後見之明基準：時間索引型基礎模型決策任務之參數化後見之明黑盒行為稽核協議",
+        "verdict": "提出 HindsightBench 黑盒稽核協議，以低成本檢測時間索引型 LLM 決策任務中的參數化後見之明，發現 2026 年世代模型普遍存在後見之明且有效截止日提前。",
+        "problem": "大型語言模型在時間索引的決策任務中會洩漏歷史日期之後的參數化知識，而使用者缺乏一種低成本的方法來稽核特定模型。",
+        "method": "使用四臂日期操作矩陣、雙重記憶探針與六項指標組成的 HindsightBench 協議。對 7 家供應商的 15 個模型進行 258 節點的歷史正確總體經濟面板資料測試。",
+        "findings": "日期觸發反射並非規模現象而是追蹤訓練新鮮度，有效截止日跨越各供應商達 22 個月且比官方宣稱日期早最多 8 個月，且結果對模型量化與推理機制敏感。",
+        "implication": "可用於評估與稽核 LLM 在時間索引決策任務中的資料汙染與後見之明，但需要嚴格鎖定模型量化與推理設定。",
+        "caveats": "模型量化方式（如 BF16 與 AWQ-INT4）會影響觸發估計的穩定性，且部分供應商鎖定的推理機制會導致特定探針無法收斂。",
+        "practicality": 4,
+        "tags": [
+          "基礎模型",
+          "資料汙染",
+          "模型稽核",
+          "時間序列"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.30363",
+      "title": "Enhancing Regime Shift Detection Using Unstructured Data: A Study on the Treasury Market",
+      "authors": [
+        "Mingxuan Yi",
+        "Vidal Mehra",
+        "Jing Chen",
+        "John Cartlidge"
+      ],
+      "abstract": "Regime shifts in financial markets reorganise the joint dynamics of asset prices and macro variables, breaking any single-regime calibration. They are nonetheless hard to identify: the data signal is noisy and heavily multicollinear, while the contemporaneous text that announces them is unstructured. Standard regime shift detection reads only the data panel and ignores this text, even though it typically signals the shift weeks before it materialises in observed prices. We address this with a text-enhanced pipeline that cross-validates the two signals. A large language model (LLM) proposes candidates from text, which a likelihood-ratio vector-autoregression (VAR) test validates on the panel. In parallel, any regime shift detector proposes data-side candidates that a second LLM call accepts via a permissive text check. Because the acceptance stage consumes a candidate set rather than an algorithm's internals, the data channel accepts any data-driven detector. We deploy the pipeline on the US Treasury market, pairing 2010-2024 FOMC minutes with a 14-variable Treasury / macro panel, with every method evaluated on this same panel. The pipeline reaches F1 = 0.82 and F2 = 0.86 against a verified anchor list of monetary-policy regime shifts (best with rolling PCMCI as the data channel), with same-day modal detection latency, and is detector-agnostic: any of four interchangeable data-driven detectors clears the strongest pure data-only baseline on both scores.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "cs.AI",
+        "cs.LG",
+        "q-fin.ST"
+      ],
+      "published": "2026-05-17T15:24:53Z",
+      "updated": "2026-08-02T12:05:34Z",
+      "abs_url": "https://arxiv.org/abs/2605.30363",
+      "pdf_url": "https://arxiv.org/pdf/2605.30363v2",
+      "comment": "9 pages, 4 figures. Selected for Long Oral presentation at the International Symposium on Large Language Models for Financial Services (FinLLM@IJCAI 2026), Bremen, Germany, 15 August 2026 (non-archival). Code available at: https://github.com/mingxuan-yi/regime_shift",
+      "journal_ref": "",
+      "keyword_score": 25,
+      "matched_keywords": [
+        "llm",
+        "large language model",
+        "regime"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合大型語言模型與向量自我迴歸檢定來增強聯準會會議紀錄的體制轉換偵測，獲國際研討會長口頭報告。",
+      "summary": {
+        "title_zh": "利用非結構化資料增強體制轉換偵測：美國公債市場研究",
+        "verdict": "結合 LLM 與計量模型的體制轉換偵測管道，顯著提升辨識準確率。",
+        "problem": "傳統體制轉換偵測僅依賴雜訊多且共線的計量資料，忽略能提前發出訊號的非結構化文字，導致難以即時辨識。",
+        "method": "提出結合 LLM 與概似比 VAR 檢定的雙向交叉驗證管道。資料使用 2010 至 2024 年 FOMC 會議紀錄與 14 個公債及總體經濟變數面板進行實證。",
+        "findings": "對比貨幣政策體制轉換錨定清單，該管道達到 F1 分數 0.82 與 F2 分數 0.86，具備當日同日偵測延遲，且相容於多種資料驅動偵測器。",
+        "implication": "可有效結合文字資訊與計量模型提升總體經濟體制辨識能力，前提是需具備穩健的文字解析與面板資料處理管線。",
+        "caveats": "實證高度依賴聯準會會議紀錄與特定總體經濟變數，對其他資產類別或市場的通用性仍需驗證。",
+        "practicality": 4,
+        "tags": [
+          "體制轉換",
+          "大語言模型",
+          "美國公債",
+          "向量自我迴歸"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
