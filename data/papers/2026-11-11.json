@@ -1,0 +1,514 @@
+{
+  "date": "2026-11-11",
+  "generated_at": "2026-11-11T10:50:29+08:00",
+  "scanned": 2449,
+  "eligible": 2206,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2610.21510",
+      "title": "How Much Screening Buys a Second? Speed, Selection, and the Maker's Spread",
+      "authors": [
+        "Aleksei Adadurov",
+        "Eduard Airapetian",
+        "Anton Chtepine",
+        "Antero Eloranta",
+        "Boris Pletenev",
+        "Andrei Sebyakin",
+        "Arsenii Valitov"
+      ],
+      "abstract": "We study the spread a liquidity provider needs to break even against counterparties that can exploit a stale quote, and we place two defenses on a single scale: repricing sooner and screening informed flow. A break-even condition pins down the exact screening rate at which a slower maker matches a faster unscreened venue: the selection that buys back the extra staleness. The result requires only an integrable price innovation and therefore holds under jumps, atoms, and infinite variance. Predictable drift is a centering problem: it widens a spot-centered quote, but its cost vanishes once the quote is recentered on the expected reference. In four USDC-WETH pools benchmarked against Binance ETH-USDT from June to August 2026, the one-second benchmark innovation is sharply non-Gaussian: 73% of seconds show no price change. Cutting cadence from twelve seconds to one sheds 84.5% of the expected shock, so a twelve-second maker must screen at least 84.5% of informed flow to match a one-second venue, far above the 71.1% that a Gaussian model implies. In trending markets, the stale pool is picked off at execution: with-trend fills obtain an effective spread 11.1 bps lower than against-trend fills, with the same sign in all four pools.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.MF"
+      ],
+      "published": "2026-10-15T08:45:19Z",
+      "updated": "2026-10-15T08:45:19Z",
+      "abs_url": "https://arxiv.org/abs/2610.21510",
+      "pdf_url": "https://arxiv.org/pdf/2610.21510v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 9,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "量化造市商防範資訊流所需的價差與篩選率，結合真實造市資料，實證扎實且具高度實務價值。",
+      "summary": {
+        "title_zh": "篩選交易流能換取多少時間？速度、選樣與造市商價差",
+        "verdict": "分析流動性提供者為抵禦陳舊報價所需的損益平衡價差，量化了更快的更新頻率與篩選知情交易流之間的權衡。",
+        "problem": "探討速度較慢的造市商需要多高的篩選率，才能抵銷遭遇陳舊報價被逆向選擇的損失，並匹配速度較快的交易場所。",
+        "method": "建構理論模型，並以 2026 年 6 月至 8 月的四個 USDC-WETH 流動性池、對標 Binance ETH-USDT 進行實證分析。",
+        "findings": "一秒鐘的價格創新呈現強烈的非高斯分佈，73% 的秒數無價格變動。將報價頻率從十二秒降至一秒可排除 84.5% 的預期衝擊，高於高斯模型推論的 71.1%。在趨勢市場中，順勢成交的有效價差比逆勢成交低 11.1 個基點。",
+        "implication": "造市商若無法提升更新頻率，必須依賴極高的知情交易流篩選率來維持損益平衡，這對低頻造市策略的防禦設計有直接指導意義。",
+        "caveats": "模型依賴於特定期間的去中心化交易所與中心化交易所的對標資料，且未納入動態交易成本的完整考量。",
+        "practicality": 4,
+        "tags": [
+          "造市商",
+          "限價單簿",
+          "逆向選擇",
+          "高頻交易",
+          "流動性提供"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.15531",
+      "title": "Spurious Predictability in Financial Machine Learning",
+      "authors": [
+        "Sotirios D. Nikolopoulos"
+      ],
+      "abstract": "Adaptive specification search generates statistically significant backtests even under martingale-difference nulls. We introduce a falsification audit testing complete predictive workflows against synthetic reference classes, including zero-predictability environments and microstructure placebos. Workflows generating significant walk-forward evidence in these environments are falsified. For passing workflows, we quantify selection-induced performance inflation using an absolute magnitude gap linking optimized in-sample evidence to disjoint walk-forward realizations, adjusted for effective multiplicity. Simulations validate extreme-value scaling under correlated searches and demonstrate detection power under genuine structure. Empirical case studies confirm that many apparent findings represent methodological artifacts rather than genuine predictability.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "stat.ME",
+        "stat.ML"
+      ],
+      "published": "2026-04-16T21:21:29Z",
+      "updated": "2026-04-16T21:21:29Z",
+      "abs_url": "https://arxiv.org/abs/2604.15531",
+      "pdf_url": "https://arxiv.org/pdf/2604.15531v1",
+      "comment": "49 pages, 10 figures. The QuantAudit R package and full replication scripts will be made publicly available upon journal publication",
+      "journal_ref": "",
+      "keyword_score": 15,
+      "matched_keywords": [
+        "backtest",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 9,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探討金融機器學習中的偽預測性並提供檢驗框架，方法嚴謹且具重大實務警示意義。",
+      "summary": {
+        "title_zh": "金融機器學習中的偽預測性",
+        "verdict": "提出偽造稽核來檢測機器學習回測中的虛假預測，量化過擬合帶來的績效膨脹。",
+        "problem": "適應性規格搜尋即使在鞅差虛無假設下，也能產生具統計顯著性的回測結果。這導致許多表面上的發現實際上是方法論的產物，而非真正的預測能力。",
+        "method": "引入 falsification audit，將完整的預測工作流程與合成參考類別進行測試，包含零預測環境與微結構安慰劑。使用模擬與實證案例研究進行驗證。",
+        "findings": "模擬證實了相關搜尋下的極值縮放，並展示在真實結構下的偵測能力。實證案例研究確認許多表面的發現代表的是方法論產物，未報告具體績效數字。",
+        "implication": "可用於交易策略開發前的穩健性檢驗，前提是需要建構適當的合成參考類別與零預測環境來過濾虛假 Alpha。",
+        "caveats": "對於複雜工作流程的計算成本較高，且高度依賴參考類別與模擬環境的設定品質。",
+        "practicality": 4,
+        "tags": [
+          "機器學習",
+          "回測過擬合",
+          "Alpha 因子挖掘",
+          "統計顯著性"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.12389",
+      "title": "Diversification Across Predictors: Heterogeneous Ensemble Learning for Cross-Sectional Return Prediction",
+      "authors": [
+        "Danning Li"
+      ],
+      "abstract": "Cross-sectional stock return prediction remains challenging due to extremely low signal-to-noise ratios, high-dimensional factor spaces, and non-stationary predictor effectiveness. Individual model classes exhibit complementary failure modes in this regime: neural networks overfit noise due to high variance, while linear models underfit nonlinear structure due to high bias. We propose a heterogeneous ensemble framework that extends the financial principle of diversification to the predictor level. Through a bagging procedure combining linear predictors with nonlinear predictors, each model functions as a distinct specialist whose prediction errors exhibit low cross-covariance, enabling error cancellation upon aggregation. We formalize this mechanism via bias-variance-covariance decomposition, establishing an exact mathematical correspondence between portfolio diversification and predictor aggregation. On CSI300 daily-frequency Alpha158 factor datasets, the proposed ensemble achieves a Rank IC improvement exceeding 13\\% over standalone neural networks and surpasses tree-based state-of-the-art methods including XGBoost and Double Ensemble, as measured by both predictive accuracy and portfolio-based evaluation metrics.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP"
+      ],
+      "published": "2026-11-09T13:28:54Z",
+      "updated": "2026-11-09T13:28:54Z",
+      "abs_url": "https://arxiv.org/abs/2611.12389",
+      "pdf_url": "https://arxiv.org/pdf/2611.12389v1",
+      "comment": "Accepted to ICAIF 2026",
+      "journal_ref": "",
+      "keyword_score": 29,
+      "matched_keywords": [
+        "regime",
+        "cross-sectional",
+        "stock",
+        "neural network"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出異質整合學習預測報酬，在中國股市因子資料集上驗證，已被 ICAIF 接受。",
+      "summary": {
+        "title_zh": "預測變數的多元化：應用於橫截面報酬預測的異質集成學習",
+        "verdict": "提出結合線性與非線性模型的異質集成框架，利用錯誤協方差抵消來提升橫截面報酬預測效能。",
+        "problem": "橫截面股票報酬預測面臨極低訊號雜訊比、高維度因子空間與預測變數效能非平穩的挑戰。單一模型類別在此體制下各有缺陷，例如類神經網路過擬合雜訊，線性模型則欠擬合非線性結構。",
+        "method": "結合線性與非線性預測變數的裝袋程序（bagging），資料使用 CSI300 日頻 Alpha158 因子資料集，透過偏差-變異數-協方差分解進行理論形式化。",
+        "findings": "所提出的集成方法在 Rank IC 上相較於單獨的類神經網路實現了超過 13% 的改善，並在預測準確度與投資組合評估指標上超越了 XGBoost 與 Double Ensemble 等樹狀模型最新方法。",
+        "implication": "此方法將投資組合多元化原理延伸至預測變數層級，實務上可直接透過集成具備低交叉協方差的異質模型來降低預測誤差。",
+        "caveats": "未詳細說明在扣除真實交易成本後的具體投資組合淨績效。",
+        "practicality": 4,
+        "tags": [
+          "集成學習",
+          "Alpha 因子挖掘",
+          "橫截面預測",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.11803",
+      "title": "Diversified-Risk-Perception Risk Measures and Portfolio Selection",
+      "authors": [
+        "Yang Liu",
+        "Yuhao Liu",
+        "Jiani Shen"
+      ],
+      "abstract": "Traditional risk measures generally rely on a single probability model, potentially overlooking information from alternative models and leading to biased risk assessments. This limitation cannot be addressed by asset diversification alone in risk management. In this paper, we propose a Diversified-Risk-Perception (DRP) risk measure framework that integrates asset diversification and risk model diversification to provide a more comprehensive assessment of market risk while reducing reliance on any single model. First, we introduce a flexible exponential aggregation function to evaluate the risk of a portfolio, which accounts for the contributions of all loss components while placing greater emphasis on large losses. Second, we incorporate multiple risk models in the risk measure and optimize their weights based on their perceptions on the risk assessments. As a specific example, we introduce DRP expected shortfall (DRP-ES), establish its theoretical properties, and derive bounds quantifying its sensitivity to model parameters. Empirical experiments in the U.S., Chinese A-share, and South Korean stock markets show that trading strategies based on the DRP-ES achieve higher Sharpe ratios and lower maximum drawdowns than market benchmarks across different periods. Compared with asset diversification strategies based on individual probability models, the DRP strategy exhibits more stable and robust performance across different markets and periods. These findings suggest that the DRP framework can adapt to changing market conditions and improve the stability and effectiveness of portfolio risk management.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM"
+      ],
+      "published": "2026-11-09T03:06:01Z",
+      "updated": "2026-11-09T03:06:01Z",
+      "abs_url": "https://arxiv.org/abs/2611.11803",
+      "pdf_url": "https://arxiv.org/pdf/2611.11803v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 38,
+      "matched_keywords": [
+        "sharpe ratio",
+        "portfolio selection",
+        "drawdown",
+        "stock",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "跨多國市場進行實證，夏普值較基準提升且回撤較低，實證完整。",
+      "summary": {
+        "title_zh": "多元風險感知的風險衡量與投資組合選股",
+        "verdict": "提出結合資產與風險模型多元化的 DRP 框架，在美、中、韓股市實證中展現較佳的 Sharpe 比率與穩健性。",
+        "problem": "傳統風險衡量依賴單一機率模型而易產生偏差，且單靠資產分散無法解決此問題。",
+        "method": "建構包含指數聚合函數與多模型權重最佳化的多元風險感知（DRP）架構，推導 DRP-ES 的理論性質與敏感度邊界。實證涵蓋美國、中國 A 股與南韓股市的跨期表現。",
+        "findings": "基於 DRP-ES 的交易策略在不同時期皆實現了較高的 Sharpe 比率與較低的 máxima drawdown（最大回檔），且較單一機率模型更為穩健，論文未報告具體的數值提升幅度。",
+        "implication": "可用於改善投資組合的風險管理，提升對市場體制轉換的適應能力，前提是需要估計多個風險模型的權重。",
+        "caveats": "模型依賴多重機率模型的聚合與權重最佳化，未明確探討計算複雜度與交易成本的影響。",
+        "practicality": 4,
+        "tags": [
+          "風險衡量",
+          "投資組合最佳化",
+          "Expected Shortfall",
+          "模型多元化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.18107",
+      "title": "ARTEMIS: A Neuro Symbolic Framework for Economically Constrained Market Dynamics",
+      "authors": [
+        "Rahul D Ray"
+      ],
+      "abstract": "Deep learning models in quantitative finance often operate as black boxes, lacking interpretability and failing to incorporate fundamental economic principles such as no-arbitrage constraints. This paper introduces ARTEMIS (Arbitrage-free Representation Through Economic Models and Interpretable Symbolics), a novel neuro-symbolic framework combining a continuous-time Laplace Neural Operator encoder, a neural stochastic differential equation regularised by physics-informed losses, and a differentiable symbolic bottleneck that distils interpretable trading rules. The model enforces economic plausibility via two novel regularisation terms: a Feynman-Kac PDE residual penalising local no-arbitrage violations, and a market price of risk penalty bounding the instantaneous Sharpe ratio. We evaluate ARTEMIS against six strong baselines on four datasets: Jane Street, Optiver, Time-IMM, and DSLOB (a synthetic crash regime). Results demonstrate ARTEMIS achieves state-of-the-art directional accuracy, outperforming all baselines on DSLOB (64.96%) and Time-IMM (96.0%). A comprehensive ablation study confirms each component's contribution: removing the PDE loss reduces directional accuracy from 64.89% to 50.32%. Underperformance on Optiver is attributed to its long sequence length and volatility-focused target. By providing interpretable, economically grounded predictions, ARTEMIS bridges the gap between deep learning's power and the transparency demanded in quantitative finance.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CE",
+        "q-fin.ST"
+      ],
+      "published": "2026-03-18T13:00:28Z",
+      "updated": "2026-03-18T13:00:28Z",
+      "abs_url": "https://arxiv.org/abs/2603.18107",
+      "pdf_url": "https://arxiv.org/pdf/2603.18107v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 16,
+      "matched_keywords": [
+        "sharpe ratio",
+        "deep learning",
+        "regime"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合神經符號與經濟限制條件進行預測，消融實驗完整",
+      "summary": {
+        "title_zh": "ARTEMIS：受經濟約束之市場動態的神經符號學框架",
+        "verdict": "結合神經網路與符號學的框架，藉由強制無套利與 Sharpe 限制提升預測準確度與可解釋性。",
+        "problem": "深度學習模型在量化金融中常作為黑盒子運作，缺乏可解釋性且未能納入無套利等基本經濟原則。",
+        "method": "結合連續時間 Laplace Neural Operator 編碼器、物理資訊損失正規化的神經隨機微分方程式，以及可微分符號瓶頸。使用 Jane Street、Optiver、Time-IMM 與 DSLOB 四個資料集進行評估。",
+        "findings": "在 DSLOB 與 Time-IMM 資料集上分別達到 64.96% 與 96.0% 的最佳方向準確率。消融實驗顯示移除 PDE 損失會使方向準確率從 64.89% 降至 50.32%。",
+        "implication": "可用於需要嚴格經濟約束與模型可解釋性的情境，特別適合防範套利違規並產出可解讀的交易規則。",
+        "caveats": "在 Optiver 資料集上表現不佳，歸因於其長序列長度與波動率為焦點的目標。",
+        "practicality": 4,
+        "tags": [
+          "神經符號學",
+          "無套利約束",
+          "隨機微分方程式",
+          "Alpha 因子"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.07659",
+      "title": "Continuous Program Search",
+      "authors": [
+        "Matthew Siper",
+        "Muhammad Umair Nasir",
+        "Ahmed Khalifa",
+        "Lisa Soros",
+        "Jay Azhang",
+        "Julian Togelius"
+      ],
+      "abstract": "Genetic Programming yields interpretable programs, but small syntactic mutations can induce large, unpredictable behavioral shifts, degrading locality and sample efficiency. We frame this as an operator-design problem: learn a continuous program space where latent distance has behavioral meaning, then design mutation operators that exploit this structure without changing the evolutionary optimizer. We make locality measurable by tracking action-level divergence under controlled latent perturbations, identifying an empirical trust region for behavior-local continuous variation. Using a compact trading-strategy DSL with four semantic components (long/short entry and exit), we learn a matching block-factorized embedding and compare isotropic Gaussian mutation over the full latent space to geometry-compiled mutation that restricts updates to semantically paired entry--exit subspaces and proposes directions using a learned flow-based model trained on logged mutation outcomes. Under identical $(μ+λ)$ evolution strategies and fixed evaluation budgets across five assets, the learned mutation operator discovers strong strategies using an order of magnitude fewer evaluations and achieves the highest median out-of-sample Sharpe ratio. Although isotropic mutation occasionally attains higher peak performance, geometry-compiled mutation yields faster, more reliable progress, demonstrating that semantically aligned mutation can substantially improve search efficiency without modifying the underlying evolutionary algorithm.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "q-fin.ST"
+      ],
+      "published": "2026-02-07T18:41:14Z",
+      "updated": "2026-02-07T18:41:14Z",
+      "abs_url": "https://arxiv.org/abs/2602.07659",
+      "pdf_url": "https://arxiv.org/pdf/2602.07659v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 16,
+      "matched_keywords": [
+        "sharpe ratio",
+        "out-of-sample",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "學習連續程式空間來改善基因程式交易策略搜尋效率，實證扎實",
+      "summary": {
+        "title_zh": "連續程式搜尋",
+        "verdict": "透過學習具行為意義的連續潛在空間與幾何編譯變異算子，大幅提升遺傳程式設計的搜尋效率與樣本利用率。",
+        "problem": "傳統遺傳程式設計的語法突變會導致難以預測的行為劇烈變動，缺乏局部性與樣本效率。",
+        "method": "使用包含四個語意元件的精簡交易策略領域專屬語言，結合區塊分解嵌入與基礎流動模型，在五種資產上進行 $(\\mu+\\lambda)$ 演化策略評估。",
+        "findings": "幾何編譯變異算子以少了一個數量級的評估次數發現強健策略，並達成最高的樣本外夏普值中位數，且展現更快速可靠的演化進展。",
+        "implication": "此方法能顯著改善金融策略自動化搜尋的樣本效率，適合應用於交易策略領域專屬語言的最佳化。",
+        "caveats": "等向性高斯突變偶爾能達到較高的峰值績效，顯示幾何編譯突變在極端探索上可能有所犧牲。",
+        "practicality": 4,
+        "tags": [
+          "遺傳程式設計",
+          "領域專屬語言",
+          "演化策略",
+          "交易策略"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.15963",
+      "title": "Risk-Based Auto-Deleveraging",
+      "authors": [
+        "Steven Campbell",
+        "Natascha Hey",
+        "Ciamac C. Moallemi",
+        "Marcel Nutz"
+      ],
+      "abstract": "Auto-deleveraging (ADL) mechanisms are a critical yet understudied component of risk management on cryptocurrency futures exchanges. When available margin and other loss-absorbing resources are insufficient to cover losses following large price moves, exchanges reduce positions and socialize losses among solvent participants via rule-based ADL protocols. We formulate ADL as an optimization problem that minimizes the exchange's risk of loss arising from future equity shortfalls. In a single-asset, isolated-margin setting, the \\emph{minimax leverage} policy -- minimizing the maximum leverage among participants -- is optimal for all monotone risk measures. This policy has a transparent structure: positions are reduced first for the most highly levered accounts, and leverage is progressively equalized via a water-filling (or ``leverage-draining'') rule. The policy is distribution-free, wash-trade resistant, Sybil resistant, and path-independent. It provides a canonical and implementable benchmark for ADL design and clarifies the economic logic underlying queue-based mechanisms used in practice. We further study the multi-asset, cross-margin setting, where the ADL problem becomes genuinely multi-dimensional: the exchange must allocate reductions across accounts with portfolios exposed to correlated price moves. Under the expected loss objective, asset-level shadow prices separate the problem across accounts, yielding a scalable numerical method. Naive gross leverage misleads here, ignoring within-portfolio hedging. When prices are driven by a single risk factor, the optimal policy is again water-filling, but in a factor-adjusted leverage, so better-hedged portfolios are deleveraged less. We apply the framework to the October~10, 2025 Hyperliquid ADL event. Relative to the exchange's realized allocation, our risk-minimizing allocations achieve lower expected shortfall.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM",
+        "q-fin.MF",
+        "q-fin.TR"
+      ],
+      "published": "2026-03-16T22:25:42Z",
+      "updated": "2026-07-16T19:28:13Z",
+      "abs_url": "https://arxiv.org/abs/2603.15963",
+      "pdf_url": "https://arxiv.org/pdf/2603.15963v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 15,
+      "matched_keywords": [
+        "hedging",
+        "cryptocurrency",
+        "futures"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探討加密貨幣期貨的自動減倉機製並建立最佳化模型，結合實務與理論分析。",
+      "summary": {
+        "title_zh": "基於風險的自動減倉機制",
+        "verdict": "提出以極小化最大槓桿為目標的自動減倉機制，能降低交易所預期虧損並具備多項防弊特性。",
+        "problem": "加密貨幣期貨交易所的自動減倉（ADL）機制在面對極端價格波動與穿倉時缺乏系統性最佳化，現行規則多憑經驗設計。",
+        "method": "將自動減倉建構為最佳化問題，針對單一資產隔離保證金與多資產跨保證金情境推導最佳策略，並應用於 2025 年 10 月 10 日的 Hyperliquid 實例進行回測。",
+        "findings": "在單一資產情境下，極小化最大槓桿的分配法則對所有單調風險度量皆為最佳解，具備免分佈、抗洗錢交易與路徑獨立等特性；相較於交易所的實際分配，風險最小化配置可達到較低的預期短缺。",
+        "implication": "交易所可採用此框架改善現行的佇列式自動減倉設計，實務上能更公平且有效率地在有償參與者間分攤風險。",
+        "caveats": "多資產情境下的跨保證金分配仍需依賴特定風險因子假設與數值方法求解。",
+        "practicality": 4,
+        "tags": [
+          "自動減倉",
+          "風險管理",
+          "加密貨幣期貨",
+          "最佳化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.35086",
+      "title": "Retrieval-Augmented Diffusion Modeling for Stochastic Discount Factor Portfolios",
+      "authors": [
+        "Kelvin J. L. Koa",
+        "Xinyang Li",
+        "Ke-Wei Huang"
+      ],
+      "abstract": "In this work, we study portfolio optimization under the stochastic discount factor (SDF) framework by learning market state representations that capture the underlying risk structures of financial data. This is challenging due to several factors: financial markets exhibit non-stationary dynamics with shifting regimes, multimodal inputs such as price and news data often contain stochastic noise, and existing diffusion-based approaches, while effective for modeling stochastic dynamics, rely on assumptions such as isotropic Gaussian noise that fail to capture the state-dependent nature of financial uncertainty. To address these challenges, we introduce RADAR, a retrieval-augmented diffusion framework that learns market representations by conditioning on similar historical regimes. RADAR leverages retrieval to construct context-dependent noise distributions, applies conditional diffusion to denoise multimodal representations, and initializes the diffusion process using empirical statistics to reflect state-dependent uncertainty. Experiments show that RADAR achieves state-of-the-art performance on key risk-adjusted metrics while producing economically meaningful signals on asset returns and correlations.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-fin.CP",
+        "q-fin.PM"
+      ],
+      "published": "2026-09-28T13:03:58Z",
+      "updated": "2026-09-28T13:03:58Z",
+      "abs_url": "https://arxiv.org/abs/2609.35086",
+      "pdf_url": "https://arxiv.org/pdf/2609.35086v1",
+      "comment": "NeurIPS 2026",
+      "journal_ref": "",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "portfolio optimization",
+        "regime",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出檢索增強擴散模型進行隨機折現因子投組最佳化，已被 NeurIPS 接受，方法新穎。",
+      "summary": {
+        "title_zh": "針對隨機貼現因子投資組合的檢索增強擴散模型",
+        "verdict": "提出 RADAR 檢索增強擴散模型，改善非平穩市場的 SDF 投資組合最佳化。",
+        "problem": "金融市場具備非平穩動態與體制轉換特性，且多模態輸入充滿隨機雜訊。傳統擴散模型依賴各向同性高斯雜訊，無法捕捉市場不確定性的狀態相依性。",
+        "method": "提出 RADAR 框架，透過檢索相似歷史體制來學習市場狀態表示，結合條件擴散模型進行去噪並以經驗統計量初始化擴散過程。論文未明確提及具體市場、資料頻率與樣本期間。",
+        "findings": "實驗顯示 RADAR 在關鍵風險調整指標上達到最先進表現，並能產生具經濟意義的資產報酬與相關性訊號。論文未報告具體績效數字。",
+        "implication": "可用於動態捕捉市場狀態與多模態資料整合的投資組合配置，需具備建構檢索機制與擴散模型的工程能力。",
+        "caveats": "未提供真實資料實證的具體回測資料與交易成本考量。",
+        "practicality": 3,
+        "tags": [
+          "擴散模型",
+          "投資組合最佳化",
+          "機器學習",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.21427",
+      "title": "Decision-Focused Learning for Mean-Variance Portfolio Optimization via KKT-Based Reformulation",
+      "authors": [
+        "Kensei Nosaka",
+        "Shunnosuke Ikeda",
+        "Yuichi Takano"
+      ],
+      "abstract": "Mean-variance portfolio optimization (MVO) is a central framework in data-driven asset management. A widely adopted approach is a two-stage framework that first predicts expected returns and then solves the optimization problem based on these predictions, with the predictive models trained by minimizing prediction errors. However, this objective of prediction is not aligned with the quality of the downstream portfolio decision. Decision-focused learning (DFL), which directly minimizes the downstream decision loss within the learning process, has thus emerged as a promising direction. However, existing DFL approaches to MVO rely on surrogate losses or constraint relaxations for tractability, creating a structural mismatch between predictive model training and the constrained MVO solved at evaluation. We propose a single-level optimization formulation that incorporates the Karush-Kuhn-Tucker (KKT) optimality conditions of the lower-level MVO into the upper-level learning problem. This formulation explicitly preserves the budget and short-sale constraints while remaining tractable for standard nonlinear optimization solvers. Rolling-window experiments on real-world ETF (Exchange Traded Funds) data across two asset universes with different correlation structures show that our method achieved the best performance on multiple investment metrics and also demonstrated performance improvement due to the proposed regularization.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-09-18T07:39:47Z",
+      "updated": "2026-09-18T07:39:47Z",
+      "abs_url": "https://arxiv.org/abs/2609.21427",
+      "pdf_url": "https://arxiv.org/pdf/2609.21427v1",
+      "comment": "11 pages, 1 figure, 2 tables. Accepted at PRICAI 2026 (Pacific Rim International Conference on Artificial Intelligence)",
+      "journal_ref": "",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "portfolio optimization"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用 KKT 重構進行均異投組最佳化的決策導向學習，對齊下游任務，已被 PRICAI 接受。",
+      "summary": {
+        "title_zh": "基於 KKT 轉換的均異變異數投資組合最佳化之決策導向學習",
+        "verdict": "提出結合 KKT 條件的決策導向學習方法於均異變異數投資組合，在實證中展現最佳績效。",
+        "problem": "傳統兩階段框架先預測預期報酬再求解投資組合，其預測誤差最小化目標與下游投資組合決策品質不一致。現有方法依賴代理損失或限制放寬，造成訓練與評估間的結構性錯配。",
+        "method": "運用單層最佳化公式，將底層均異變異數投資組合的 Karush-Kuhn-Tucker 最佳性條件納入上層學習問題。使用真實世界 ETF 資料進行滾動視窗實驗，涵蓋兩種不同相關性結構的資產投資組合。",
+        "findings": "在多項投資指標上達成最佳表現，且透過提出的正規化方法展現出績效提升，論文未報告具體的數值指標。",
+        "implication": "能直接最佳化下游決策並嚴格保留預算與放空限制，可嘗試應用於實際的資產配置流程中。",
+        "caveats": "論文未提供具體的報酬與風險數值改善幅度。",
+        "practicality": 4,
+        "tags": [
+          "投資組合最佳化",
+          "機器學習",
+          "決策導向學習",
+          "資產配置"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.16151",
+      "title": "Neural Estimation of Irreversibility in Real and Simulated Limit Order Book Paths",
+      "authors": [
+        "Hyeonjun Yeo",
+        "Doohwi Cha",
+        "Yoontae Hwang"
+      ],
+      "abstract": "A path indistinguishable from its own reverse carries no arrow of time, so time irreversibility is a necessary condition for a directed mechanism to be readable from trajectories alone. In finance it has been measured only on scalar series such as returns and volatility. We define the irreversibility rate of a coarse-grained limit order book path as the forward-to-reverse log-density ratio per event, and estimate it from three weeks of Nasdaq market-by-order data with an order-invariant MLP and a temporal convolutional network that receive identical blocks. For NVDA, the order-invariant and order-sensitive estimates are 0.036 and 0.054 nats per event, respectively. Their difference, the ordering increment, is 0.018. A surrogate preserving the coarse one-step transition table recovers 30 percent less irreversibility than the observed paths. The increment is positive for all twelve symbols on every held-out daytime date, and for NVDA in each session window. It changes more than tenfold with the coarse-graining scale. Neither a linear score nor any single feature group reproduces the full fitted rate. A queue-reactive simulator calibrated on the same days matches the market's ordered rate, 0.052 against 0.054, yet its ordering increment is 0.0006 against 0.018, building temporal asymmetry out of block composition instead of block order. We propose the ordering and scale profile of path irreversibility as a benchmark for order book simulators. Code and audit materials are available at https://github.com/hjyeo30/lob-irreversibility.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-10-12T04:21:33Z",
+      "updated": "2026-10-15T09:08:50Z",
+      "abs_url": "https://arxiv.org/abs/2610.16151",
+      "pdf_url": "https://arxiv.org/pdf/2610.16151v2",
+      "comment": "Accepted for oral presentation at the 7th ACM International Conference on AI in Finance (ICAIF 2026). 9 pages, 5 figures",
+      "journal_ref": "",
+      "keyword_score": 42,
+      "matched_keywords": [
+        "limit order book",
+        "order book"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "評估訂單簿時間不可逆性，ICAIF口頭發表",
+      "summary": {
+        "title_zh": "真實與模擬限價單簿路徑中不可逆性的神經網路估計",
+        "verdict": "提出以神經網路估計限價單簿的時間不可逆性速率，並以此作為檢驗造市模擬器真實性的基準。",
+        "problem": "金融領域過去僅在報酬率與波動度等純量序列上測量時間不可逆性，缺乏對限價單簿動態路徑不可逆性的研究。",
+        "method": "使用訂單不變量多層感知機與時間卷積網路，分析三週那斯達克逐筆市場資料中的粗粒化限價單簿路徑。",
+        "findings": "NVDA 的訂單不變量與訂單敏感估計值分別為每事件 0.036 與 0.054 納特，其差值即排序增量為 0.018。排隊反應模擬器雖能吻合整體有序速率，但其排序增量僅有 0.0006。",
+        "implication": "可用此方法的排序與尺度分佈作為限價單簿模擬器的檢驗基準，評估模擬器是否能真實反映市場微結構的時間不對稱性。",
+        "caveats": "不可逆性速率對粗粒化尺度非常敏感，尺度改變會導致數值發生十倍以上的變化。",
+        "practicality": 3,
+        "tags": [
+          "限價單簿",
+          "微結構",
+          "神經網路",
+          "模擬器驗證"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
