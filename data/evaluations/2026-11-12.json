@@ -1,0 +1,327 @@
+{
+  "date": "2026-11-12",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2611.14245",
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "推導衝擊核心與神經網路近似的連續性，無實證回測。"
+    },
+    {
+      "arxiv_id": "2611.14117",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "微秒級預測超出點差與費用，自然應用於執行與造市。"
+    },
+    {
+      "arxiv_id": "2611.13882",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "發展高維預期短缺回測方法，實證完整且改善統計顯著性。"
+    },
+    {
+      "arxiv_id": "2611.13572",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "11年分鐘級中國A股實證，市場條件化架構表現優異。"
+    },
+    {
+      "arxiv_id": "2611.13616",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "分析區塊鏈升級前後的流動性與費率，實證扎實。"
+    },
+    {
+      "arxiv_id": "2609.15708",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "結合量子與古典演算法進行投組最佳化，已獲QCE接受。"
+    },
+    {
+      "arxiv_id": "2609.12477",
+      "topic": "Alpha 與因子",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "建立信號庫與PnL光譜的母體理論，僅附模擬驗證。"
+    },
+    {
+      "arxiv_id": "2609.08106",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "以Nyström注意力匹配完整注意力，跨股預測實證嚴謹。"
+    },
+    {
+      "arxiv_id": "2610.35887",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 8,
+      "reason": "對期貨機構交易模型進行嚴格定量評估，揭露時機不符問題。"
+    },
+    {
+      "arxiv_id": "2608.21498",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提出四動差機率框架定價籃子選擇權，實證表現良好。"
+    },
+    {
+      "arxiv_id": "2608.20589",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "改進市場模型校準與參數識別，實證SPX選擇權表面。"
+    },
+    {
+      "arxiv_id": "2608.20304",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "探討LLM財務預測的校準退化現象，診斷方法具實用價值。"
+    },
+    {
+      "arxiv_id": "2608.17933",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出自演化代理人進行變點檢測，基準測試完整。"
+    },
+    {
+      "arxiv_id": "2608.11327",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 8,
+      "reason": "專精財務報表長期預測，開源基準與程式碼。"
+    },
+    {
+      "arxiv_id": "2608.10693",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "使用CNN-LSTM預測聯準會開會前後的隱含波動率表面。"
+    },
+    {
+      "arxiv_id": "2608.07032",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "Wasserstein強健投組最佳化，支援千檔資產規模實證。"
+    },
+    {
+      "arxiv_id": "2607.27649",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "探討選擇權價格的多到期一致性與路徑套利，純理論推導。"
+    },
+    {
+      "arxiv_id": "2607.19030",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "利用流動性佳的期貨基準替流動性差的能源選擇權定價。"
+    },
+    {
+      "arxiv_id": "2607.09566",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "增強多目標演化演算法解決基數限制投組最佳化。"
+    },
+    {
+      "arxiv_id": "2607.02632",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出基於Mamba的聯邦學習時間序列預測架構。"
+    },
+    {
+      "arxiv_id": "2608.20377",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "建立區塊鏈交易套利檢測與結構等價正規形，機械化驗證。"
+    },
+    {
+      "arxiv_id": "2606.25808",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出基於梯度抽樣的預測-最佳化解釋框架。"
+    },
+    {
+      "arxiv_id": "2609.05433",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "將永久期貨應用於SpaceX未上市股票市場，實證價格發現。"
+    },
+    {
+      "arxiv_id": "2606.22293",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "擴展幾何非對稱布朗運動模型以捕捉市場偏度與厚尾。"
+    },
+    {
+      "arxiv_id": "2606.21784",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "設計高效能平行GPU訂單簿模擬引擎，僅有模擬效能資料。"
+    },
+    {
+      "arxiv_id": "2606.17423",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "稽核視訊語言模型對K線圖表的理解能力，實驗設計嚴謹。"
+    },
+    {
+      "arxiv_id": "2608.26115",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "重新評估選擇權隱含信號在美股跨時期的預測能力。"
+    },
+    {
+      "arxiv_id": "2606.11798",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "利用確定性政策梯度學習時間不一致控制問題的均衡。"
+    },
+    {
+      "arxiv_id": "2606.08930",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出殘差閘道線性單元以改善股票橫截面排序預測。"
+    },
+    {
+      "arxiv_id": "2606.01274",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "使用優先佇列模型分析區塊鏈交易費與代理人行為。"
+    },
+    {
+      "arxiv_id": "2606.12450",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "正向時間布黑休斯重建與正規化勒讓德約簡，已刊登於期刊。"
+    },
+    {
+      "arxiv_id": "2605.17623",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "稽核D-Wave混合量子古典求解器在投組問題上的實際表現。"
+    },
+    {
+      "arxiv_id": "2605.12653",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出推論時強化學習交易代理人最佳化框架，實證改善夏普值。"
+    },
+    {
+      "arxiv_id": "2605.06220",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出計算Lambda分位數的有效演算法，已獲SIAM期刊接受。"
+    },
+    {
+      "arxiv_id": "2605.03310",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "研究LLM多代理人系統在預測市場中的協調架構與失效模式。"
+    },
+    {
+      "arxiv_id": "2604.23975",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "結合異質偏好與學習機制的多代理人人工市場模擬。"
+    },
+    {
+      "arxiv_id": "2604.22188",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "研究隨機波動率下熵正規化學習與投資組合限制的最佳化。"
+    },
+    {
+      "arxiv_id": "2604.21893",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 4,
+      "value": 6,
+      "reason": "利用環境與視覺預測因子揭示保險索賠頻率模型的地理信號。"
+    },
+    {
+      "arxiv_id": "2604.18576",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提出貝氏語言預測代理人系統，已發表於ICML工作坊。"
+    },
+    {
+      "arxiv_id": "2604.14333",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "將KOL言論轉換為完整交易策略，離線強化學習實證有效。"
+    }
+  ]
+}

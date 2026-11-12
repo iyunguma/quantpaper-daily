@@ -1,0 +1,507 @@
+{
+  "date": "2026-11-12",
+  "generated_at": "2026-11-12T11:50:28+08:00",
+  "scanned": 2451,
+  "eligible": 2198,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2611.13572",
+      "title": "Market-Conditioned JEPA: Learning from Unpredictable Market Shocks",
+      "authors": [
+        "Yuqi Wang",
+        "Fengyuan Liu",
+        "Mukai Li",
+        "Haochen Luo",
+        "Lei Li",
+        "Qi Liu"
+      ],
+      "abstract": "Much of the variation in financial time series is driven by market-wide shocks that cannot be predicted from an asset's own history. Per-asset self-supervised learning treats this variation as irreducible noise. Under a latent factor model, we show that conditioning prediction on the realized market factor makes the asset's market exposure necessary for optimal prediction, while reducing the noise against which the asset-specific component is learned. Building on this insight, we introduce Market-Conditioned JEPA (MC-JEPA), a joint-embedding predictive architecture for financial time series. During training, we construct a leave-one-out market condition for each asset from the future target embeddings of other assets and incorporate it through factor loadings derived from the asset's own representation. On 11 years of minute-level Chinese A-share data, MC-JEPA improves over per-asset JEPA across nine targets spanning returns, market exposure, risk, and liquidity, with the strongest and most statistically significant gains in exposure, risk, and liquidity. It achieves the best RankIC on all liquidity targets and on return horizons from two hours to five days, outperforming time-series foundation models and self-supervised baselines, and delivers the best portfolio performance in a historical backtest. Ablations show that the return and exposure gains require the condition to be aligned with the realized market movement. After restoring the volatility scale removed by normalization, the predictor's factor loadings rank stocks by market beta nearly as well as a supervised probe, without labels. A synthetic factor-model study with known parameters shows that conditioning improves the recovery of both market exposure and the asset-specific component.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CE"
+      ],
+      "published": "2026-11-10T04:40:04Z",
+      "updated": "2026-11-10T04:40:04Z",
+      "abs_url": "https://arxiv.org/abs/2611.13572",
+      "pdf_url": "https://arxiv.org/pdf/2611.13572v1",
+      "comment": "23 pages, 4 figures, 14 tables",
+      "journal_ref": "",
+      "keyword_score": 24,
+      "matched_keywords": [
+        "factor model",
+        "backtest",
+        "liquidity",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "11年分鐘級中國A股實證，市場條件化架構表現優異。",
+      "summary": {
+        "title_zh": "市場條件式 JEPA：從不可預測的市場震盪中學習",
+        "verdict": "提出 Market-Conditioned JEPA (MC-JEPA) 模型，將實現的市場因子納入預測，在流動性、風險與報酬預測上皆優於傳統基礎模型。",
+        "problem": "金融時間序列多數變異來自無法從自身歷史預測的市場整體震盪，傳統資產獨立的自監督學習會將此視為無法消除的雜訊。",
+        "method": "使用結合嵌入預測架構 (JEPA) 與市場條件式因子模型，針對 11 年中國 A 股分鐘級資料進行實證，涵蓋報酬、市場曝險、風險與流動性九種預測目標。",
+        "findings": "MC-JEPA 在所有流動性目標以及兩小時至五日報酬區間的 RankIC 表現最佳，且在歷史回測中提供最佳的投資組合績效，但摘要中未報告具體的報酬率或夏普值數字。",
+        "implication": "此方法能有效分離市場共同因子與資產特異性成分，可直接應用於多因子選股與風險控管中。",
+        "caveats": "報酬與曝險的改善高度依賴條件是否能與實現的市場變動正確對齊。",
+        "practicality": 4,
+        "tags": [
+          "機器學習",
+          "因子模型",
+          "時間序列",
+          "Alpha 因子挖掘"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.08106",
+      "title": "Nyström Attention Matches Full Attention for Cross-Sectional Stock Prediction",
+      "authors": [
+        "Kunhan Guo"
+      ],
+      "abstract": "MASTER's inter-stock multi-head attention -- the module responsible for modeling cross-sectional stock relationships -- accounts for 42.5% of model parameters and 25% of predictive value. We systematically decompose this module and uncover a surprising structure: the learned attention is near-uniform (perplexity 278/300), yet forcing exact uniformity eliminates all cross-sectional discrimination. Spectral analysis resolves this paradox: the deviation from uniformity is low-rank (effective rank ~65, top-10 modes capture 96.5% of energy), explaining why sparse approximations consistently fail while Nystrom low-rank attention (m=32 landmarks) matches full O(N^2) attention at O(mN) cost -- certified equivalent via TOST at both N=300 (5 seeds, Rank IC p=0.003) and N=800 (10 seeds, Rank IC p=0.034). Additional findings include: (i) attention anti-correlates with return similarity (Spearman rho = -0.614; on the industry-labeled subset, -0.645 unconditionally and -0.627 after controlling for industry, beta, and volatility), suggesting complementarity-seeking rather than correlation mining; (ii) all graph-based alternatives degrade performance, with hard masking worse than complete module removal; and (iii) at N ~ 3,500 with adapted architectures, no cross-stock module (GCN, Nystrom, or MASTER-style pipeline) significantly outperforms a per-stock LSTM baseline (n=4 seeds), indicating that the benefits observed at smaller scales do not trivially transfer. These results establish that the inter-stock attention's value resides in a compressible, dynamic, near-global redistribution that rewards low-rank approximation but resists sparsification.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-fin.ST"
+      ],
+      "published": "2026-09-08T01:34:53Z",
+      "updated": "2026-09-08T01:34:53Z",
+      "abs_url": "https://arxiv.org/abs/2609.08106",
+      "pdf_url": "https://arxiv.org/pdf/2609.08106v1",
+      "comment": "14 pages, 4 figures. A short version is under review at the TS-LIMITS workshop, NeurIPS 2026",
+      "journal_ref": "",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "cross-sectional",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "以Nyström注意力匹配完整注意力，跨股預測實證嚴謹。",
+      "summary": {
+        "title_zh": "Nyström Attention 在橫截面股票預測中可媲美完整 Attention",
+        "verdict": "證明跨股 Attention 具低秩特性，Nyström Attention 能以線性成本匹配完整 Attention 績效。",
+        "problem": "MASTER 模型中跨股 Attention 佔據大量參數與運算，其內部結構與高昂的 O(N^2) 成本如何被最佳化與解析。",
+        "method": "對 MASTER 模型進行頻譜分析與消融實驗，測試不同跨股建模方法（如 Nyström、GCN 等），資料涵蓋不同股票池規模（N=300、800、3500）。",
+        "findings": "發現學習到的 attention 近乎均勻但偏離部分具低秩特徵（前 10 個模態捕捉 96.5% 能量）；Nyström attention（m=32）以 O(mN) 成本達到與完整 Attention 相當的 Rank IC，但在 N 約 3500 的大尺度下，跨股模組未顯著優於單股 LSTM 基線。",
+        "implication": "在中小型股票池中可用 Nyström Attention 取代完整 Attention 以降低運算成本，但擴展至更大股票池時需重新評估跨股模組的必要性。",
+        "caveats": "在大規模股票池（N 約 3500）時，跨股模組的優勢無法輕鬆轉移，且未報告扣除交易成本後的實際淨報酬。",
+        "practicality": 4,
+        "tags": [
+          "機器學習",
+          "注意力機制",
+          "橫截面預測",
+          "Alpha 因子挖掘"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.26115",
+      "title": "Option-Implied Signals and Crash Risk: Predictability and Machine-Learning Evidence from U.S. Equity Options",
+      "authors": [
+        "Baichuan Li",
+        "Mengxiao Wang"
+      ],
+      "abstract": "We re-estimate canonical option-implied predictability evidence using a unified 2015--2026 panel of 12.36 million U.S. equity firm-day observations across 10,026 underlyings. We split the sample into three regimes: late-post-crisis low volatility (2015--2019), high-volatility transition (2020--2022), and AI/mega-cap concentration (2023--2026). The Xing et al. (2010) smirk--return relationship weakens steadily: the next-month univariate smirk coefficient falls from $-0.023$ $(t=-5.5)$ in 2015--2019 to an insignificant $-0.006$ $(t=-1.5)$ in 2023--2026, and turns positive at the three-month horizon $(+0.016,\\ t=+2.1)$. In joint specifications with all six canonical signals, the smirk is insignificant throughout and again changes sign in the latest regime. By contrast, the Cremers--Weinbaum IV spread and a Bakshi et al. (2003)-style risk-neutral skewness measure remain significant across regimes and specifications. A boosted-tree benchmark using IV-surface, trading-activity, Greeks, and liquidity features outperforms linear models for next-month return prediction only in the AI/mega-cap regime, with $R^2_{\\mathrm{OOS}}=+1.29%$ versus $+0.07%$. Permutation importance identifies different leading predictors by regime, and no canonical hand-engineered signal enters the top five. For firm-level five-day crash classification, AUC is highest in calm markets $(0.706,\\ \\text{XGBoost})$ and lowest during the high-volatility transition $(0.561)$. Overall, option-implied predictability is real but regime-dependent, and the post-2023 AI/mega-cap period differs sharply from the pre-COVID setting in which the canonical results were established.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST"
+      ],
+      "published": "2026-06-10T10:13:06Z",
+      "updated": "2026-06-10T10:13:06Z",
+      "abs_url": "https://arxiv.org/abs/2608.26115",
+      "pdf_url": "https://arxiv.org/pdf/2608.26115v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "regime",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "重新評估選擇權隱含信號在美股跨時期的預測能力。",
+      "summary": {
+        "title_zh": "期權隱含訊號與崩盤風險：美國股票期權的預測能力與機器學習實證",
+        "verdict": "傳統期權隱含訊號的預測力隨市場體制顯著衰退，而機器學習模型在最新 AI 集中期展現優勢。",
+        "problem": "傳統文獻中的期權隱含預測訊號在近年是否依然穩健，以及不同市場體制如何影響其預測能力。",
+        "method": "使用 2015 至 2026 年美國 1,026 檔標的共 1,236 萬筆日頻資料的面板資料，並以提升樹模型進行機器學習預測與特徵重要性分析。",
+        "findings": "傳統 smirk 預測力在 2023 至 2026 年顯著減弱甚至變號（單變量係數從 -0.023 降至不顯著的 -0.006），而 Cremers-Weinbaum IV 差值與風險中立偏度維持顯著。提升樹模型在最新 AI 集中期的樣本外 $R^2$ 達 +1.29%，優於線性模型。崩盤風險分類的 AUC 在平靜市場最高（0.706），高波動期最低（0.561）。",
+        "implication": "交易員在建構 Alpha 模型時不能依賴單一固定的期權特徵，必須考慮體制轉換（regime switching）並動態調整特徵組合。",
+        "caveats": "傳統人工建構的訊號在機器學習的特徵重要性中未能進入前五名，顯示舊有直覺需要重新檢視。",
+        "practicality": 4,
+        "tags": [
+          "選擇權",
+          "機器學習",
+          "市場微結構",
+          "Alpha 因子挖掘"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.12653",
+      "title": "Plan Before You Trade: Inference-Time Optimization for RL Trading Agents",
+      "authors": [
+        "Eun Go",
+        "Rohan Deb",
+        "Arindam Banerjee"
+      ],
+      "abstract": "Reinforcement learning agents for portfolio management are typically trained and deployed as static policies, with no mechanism for policy adjustments using price forecasts at inference time. We propose FinPILOT (Financial Plugin Inference-time Learning for Optimal Trading), a plugin inference-time policy optimization framework inspired by Model Predictive Control (MPC). Under the price-taker assumption, portfolio actions do not affect future market prices, allowing a multi-step price forecaster to provide imagined market trajectories without iterative action-conditioned rollouts. At each decision step, FinPILOT uses the forecaster's predicted price trajectory to construct an allocation-based imagined return objective and optimizes the pretrained policy at inference time before executing one step of the trade. Our framework is compatible with any pretrained policy and adapts the policy using the forecaster's predictions without modifying the original RL training pipeline. Evaluated with five pretrained policies (PPO, SAC, A2C, TD3, DDPG) across DJ30 equities and foreign exchange (FX) over three rolling held-out test years (30 settings in total), FinPILOT improves Total Return in 28 of 30 settings and Sharpe ratio in 27 of 30, with gains spanning both stochastic and deterministic policies. Direct single- and multi-period portfolio optimizers supplied with the same forecasts do not reproduce these aggregate gains under our evaluation protocol. Further, using controlled forecasts at calibrated quality levels, we show that both the magnitude and consistency of FinPILOT's performance increase as forecast error is reduced.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ],
+      "published": "2026-05-12T18:58:03Z",
+      "updated": "2026-10-15T05:36:39Z",
+      "abs_url": "https://arxiv.org/abs/2605.12653",
+      "pdf_url": "https://arxiv.org/pdf/2605.12653v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "sharpe ratio",
+        "reinforcement learning"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出推論時強化學習交易代理人最佳化框架，實證改善夏普值。",
+      "summary": {
+        "title_zh": "交易前先規劃：強化學習交易代理人的推論期最佳化",
+        "verdict": "提出 FinPILOT 框架在推論期利用價格預測調整強化學習策略，在多數設定下提升總報酬與 Sharpe。",
+        "problem": "傳統投資組合管理的強化學習代理人部署時多為靜態策略，無法在推論期利用價格預測來調整策略。",
+        "method": "提出 FinPILOT 框架，結合多步價格預測與模型預測控制概念，在推論期最佳化預訓練策略。評估涵蓋五種預訓練策略、DJ30 股票與外匯資料，測試三年滾動保留期間。",
+        "findings": "在 30 種設定中，FinPILOT 在 28 種提升總報酬、27 種提升 Sharpe，且預測誤差降低時其績效與穩定性皆會提升。",
+        "implication": "此框架相容於任意預訓練策略且不需修改原始訓練流程，可直接用來提升現有模型的推論表現。",
+        "caveats": "在價格接受者假設下運作，若部位大到會影響市場價格則可能失效。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "投資組合管理",
+          "推論期最佳化",
+          "模型預測控制"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.14333",
+      "title": "When Missing Becomes Structure: Intent-Preserving Policy Completion from Financial KOL Discourse",
+      "authors": [
+        "Yuncong Liu",
+        "Yuan Wan",
+        "Zhou Jiang",
+        "Yao Lu"
+      ],
+      "abstract": "Key Opinion Leader (KOL) discourse on social media is widely consumed as investment guidance, yet turning it into executable trading strategies without injecting assumptions about unspecified execution decisions remains an open problem. We observe that the gaps in KOL statements are not random deficiencies but a structured separation: KOLs express directional intent (what to buy or sell and why) while leaving execution decisions (when, how much, how long) systematically unspecified. Building on this observation, we propose an intent-preserving policy completion framework that treats KOL discourse as a partial trading policy and uses offline reinforcement learning to complete the missing execution decisions around the KOL-expressed intent. Experiments on multimodal KOL discourse from YouTube and X (2022-2025) show that KICL achieves the best return and Sharpe ratio on both platforms while maintaining zero unsupported entries and zero directional reversals, and ablations confirm that the full framework yields an 18.9% return improvement over the KOL-aligned baseline.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-04-15T18:39:40Z",
+      "updated": "2026-04-17T15:04:20Z",
+      "abs_url": "https://arxiv.org/abs/2604.14333",
+      "pdf_url": "https://arxiv.org/pdf/2604.14333v2",
+      "comment": "Main paper with supplementary material included",
+      "journal_ref": "",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "sharpe ratio",
+        "reinforcement learning"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "將KOL言論轉換為完整交易策略，離線強化學習實證有效。",
+      "summary": {
+        "title_zh": "當缺失成為結構：從財經KOL言論中進行保持意圖的策略補全",
+        "verdict": "將社群平台財經KOL的定向意圖結合離線強化學習補全執行細節，實測報酬率提升18.9%。",
+        "problem": "將社群媒體上的財經KOL言論轉化為可執行的交易策略時，往往需要對未明確說明的執行決策注入假設，這是一大難題。",
+        "method": "提出名為KICL的保持意圖策略補全框架，將KOL言論視為部分交易政策並以離線強化學習補全缺失的執行決策。資料使用來自YouTube與X平台的多元模態KOL言論，樣本期間為2022年至2025年。",
+        "findings": "KICL在兩個平台上皆達到最佳的報酬率與Sharpe值，同時維持零無支撐進場與零方向反轉。消融實驗證實完整框架相較於KOL對齊基準可帶來18.9%的報酬率提升。",
+        "implication": "可用於自動化解析社群言論並轉化為具備風控的量化交易策略，前提是需要穩定擷取並解析影音與文字的多元模態KOL資料。",
+        "caveats": "模型依賴KOL言論中明確的定向意圖，若言論本身過於模糊則補全效果可能受限。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "自然語言處理",
+          "另類資料",
+          "交易策略"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.07032",
+      "title": "Certified High-Dimensional Wasserstein Robust Portfolio Optimization",
+      "authors": [
+        "Chung-Han Hsieh",
+        "Rong Gan"
+      ],
+      "abstract": "We develop a certified, scalable approximation for high-dimensional Wasserstein distributionally robust portfolio optimization. For expected-utility maximization under order-one Wasserstein ambiguity, standard duality yields a semi-infinite convex program. For long-only portfolios with box support under the one-norm ground metric, an exact sample-specific vertex reformulation provides an exponential-size computational benchmark. We then majorize the utility by supporting hyperplanes and dualize the support subproblems, obtaining a finite hyperplane--dual formulation over compact polyhedral supports. Under the one-norm ground metric and polyhedral portfolio constraints, this formulation is a polynomial-size linear program. The uniform utility-approximation error bounds both the robust-value error and the near-optimality gap for the original robust problem. Experiments validate the certified approximation and demonstrate monthly 476-asset rebalancing and computational scalability to 1,000 assets.",
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC",
+        "cs.CE",
+        "q-fin.PM"
+      ],
+      "published": "2026-08-07T09:44:24Z",
+      "updated": "2026-08-07T09:44:24Z",
+      "abs_url": "https://arxiv.org/abs/2608.07032",
+      "pdf_url": "https://arxiv.org/pdf/2608.07032v1",
+      "comment": "submitted for possible publication",
+      "journal_ref": "",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "portfolio optimization"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "Wasserstein強健投組最佳化，支援千檔資產規模實證。",
+      "summary": {
+        "title_zh": "具備檢定證明的高維 Wasserstein 穩健投資組合最佳化",
+        "verdict": "提出高維 Wasserstein 穩健投資組合最佳化之多項式規模近似法，實驗證實可規模化至 1,000 項資產。",
+        "problem": "高維度下的 Wasserstein 分布穩健投資組合最佳化面臨計算複雜度過高、難以求解的問題。",
+        "method": "利用超平面近似效用函數並進行對偶轉換，在一範數基礎度量與多面體投資組合限制下，將半無限凸最佳化轉為多項式規模的線性規劃；使用真實月度資料進行最高 1,000 項資產的實驗。",
+        "findings": "實驗驗證了此檢定近似法，並展示了每月 476 項資產的再平衡能力以及高達 1,000 項資產的計算可擴展性，論文未報告具體報酬與夏普值數字。",
+        "implication": "可用於處理高維度資產配置的穩健最佳化問題，提供具備理論保證的計算捷徑。",
+        "caveats": "論文未提供扣除交易成本後的實際投資績效數字。",
+        "practicality": 4,
+        "tags": [
+          "投資組合最佳化",
+          "穩健最佳化",
+          "線性規劃",
+          "資產配置"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.00988",
+      "title": "Exactly solvable model for the diffusive price-dynamics paradox under long-range correlated market-order flow",
+      "authors": [
+        "Yuki Sato",
+        "Shunta Fujiwara",
+        "Kiyoshi Kanazawa"
+      ],
+      "abstract": "We develop an exactly solvable nonlinear time-series model by incorporating the square-root price-impact law into the Lillo--Mike--Farmer (LMF) model to resolve the diffusive price-dynamics paradox under predictable market-order flow. In financial market microstructure, it is well established that the price dynamics are approximately described by Brownian motion at long times. However, it is also well-known that market-order flow is clearly predictable due to long-range correlations, as mathematically formulated by the LMF model. Since market orders have a positive price impact in general, predictable market-order flow seems to contradict Brownian price dynamics. In this work, we resolve this diffusive price-dynamics paradox by developing nonlinear time-series models that generalize the LMF model based on the square-root price-impact law. Our time-series models can be mathematically mapped onto the Lévy-walk framework---an exactly solvable class of non-Markovian stochastic processes developed in statistical physics. We prove that the price dynamics are diffusive at long times under the square-root law even under predictable market-order flow. Our work highlights the crucial practical importance of the square-root law in understanding the microstructural foundation of the Efficient Market Hypothesis.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cond-mat.stat-mech",
+        "econ.GN",
+        "q-fin.GN",
+        "q-fin.MF"
+      ],
+      "published": "2026-08-02T04:38:31Z",
+      "updated": "2026-08-02T04:38:31Z",
+      "abs_url": "https://arxiv.org/abs/2608.00988",
+      "pdf_url": "https://arxiv.org/pdf/2608.00988v1",
+      "comment": "25 pages, 15 figures",
+      "journal_ref": "",
+      "keyword_score": 41,
+      "matched_keywords": [
+        "order flow",
+        "market microstructure",
+        "price impact"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "解決長期相關訂單流下的擴散價格佯謬，嚴謹",
+      "summary": {
+        "title_zh": "長程相關市價單流下擴散式價格動態悖論的精確可解模型",
+        "verdict": "將平方根價格衝擊定律納入 LMF 模型，證明長程相關訂單流仍可對應布朗運動，解決擴散式價格動態悖論。",
+        "problem": "市場訂單流具備長程相關性且具可預測性，理論上會與長期呈現布朗運動的價格動態產生矛盾。",
+        "method": "基於平方根價格衝擊定律推廣 Lillo-Mike-Farmer (LMF) 模型，將時間序列模型對應至統計物理中的 Lévy-walk 非馬可夫隨機過程框架。",
+        "findings": "論文未報告具體績效數字，主要為數學理論推導，證明在平方根定律下，即使訂單流具可預測性，長期價格動態仍維持擴散性質。",
+        "implication": "為市場微結構與效率市場假說的基礎提供理論支撐，有助於理解價格衝擊與訂單流的長期均衡。",
+        "caveats": "本研究為純理論推導，未納入真實交易成本或實際交易回測。",
+        "practicality": 2,
+        "tags": [
+          "市場微結構",
+          "價格衝擊",
+          "LMF模型",
+          "隨機過程"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.16059",
+      "title": "Mojo: A Promising Tool for Scalable Financial AI Efficiency",
+      "authors": [
+        "Henry Han"
+      ],
+      "abstract": "For thirty years, quantitative finance has paid a costly two-language tax: models researched in Python are rewritten in C++ for production, often introducing numerical discrepancies. GPU-accelerated deep learning exacerbates this problem, as nondeterministic floating-point reductions can produce drift in long backtests, challenging regulatory reproducibility and auditability expectations. This article surveys Mojo, Modular's 2026 Python-like systems language, as a structural response for capital markets engineering. While closing the Python-to-C++ performance gap, Mojo uniquely combines native interoperability with the low-level systems control required to construct bit-exact deterministic kernels. Its MLIR compilation infrastructure further allows a single codebase to target scalar, SIMD, multicore, and GPU execution, reducing the translation bottleneck between research and production. We benchmark four core financial AI workloads: Monte Carlo option pricing, LLM sentiment inference, multi-asset backtesting, and portfolio Value at Risk. On Apple Silicon, Mojo demonstrates 20x to 180x speedups over pure Python on directly measured kernels; larger-scale GPU workload results are projections calibrated from published benchmarks. Alongside transparent performance data, we introduce mojo-deterministic, an open-source library of reproducible reduction kernels, and provide a candid assessment of the problems Mojo does and does not yet solve.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-14T23:18:58Z",
+      "updated": "2026-06-14T23:18:58Z",
+      "abs_url": "https://arxiv.org/abs/2606.16059",
+      "pdf_url": "https://arxiv.org/pdf/2606.16059v1",
+      "comment": "15, 3 figures",
+      "journal_ref": "",
+      "keyword_score": 22,
+      "matched_keywords": [
+        "backtesting",
+        "backtest",
+        "llm",
+        "deep learning",
+        "option pricing"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "評估 Mojo 語言在金融運算效能與可重複性上的應用，實務價值高。",
+      "summary": {
+        "title_zh": "Mojo：具備可擴展性的金融人工智慧效率利器",
+        "verdict": "探討 Mojo 語言如何解決量化金融的雙語言稅與浮點數不確定性問題，實測核心工作負載展現顯著加速。",
+        "problem": "量化金融長期支付研究用 Python 與生產用 C++ 的雙語言稅，且 GPU 加速帶來的非確定性浮點數運算導致回測飄移與合規疑慮。",
+        "method": "採用 Modular 於 2026 年推出的 Mojo 系統語言，透過 MLIR 編譯架構與原生互通性，針對蒙地卡羅選擇權定價、LLM 情感推論、多資產回測與投資組合 VaR 等四項核心金融 AI 工作負載進行基準測試。",
+        "findings": "在 Apple Silicon 上，Mojo 對比純 Python 在直接測量的核心上展現 20 倍至 180 倍的加速，更大規模的 GPU 工作負載結果則是基於已發布基準測試校準的預測。",
+        "implication": "可用單一程式碼庫同時滿足研究與生產需求，並建構位元精確（bit-exact）的確定性核心，提升系統可重複現性與審計性。",
+        "caveats": "部分大規模 GPU 工作負載結果為預測值，且該生態系仍有待克服未完全解決的問題。",
+        "practicality": 3,
+        "tags": [
+          "系統語言",
+          "效能最佳化",
+          "機器學習",
+          "蒙地卡羅模擬",
+          "回測系統"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.19380",
+      "title": "Survivorship Bias in Emerging Market Small-Cap Indices: Evidence from India's NIFTY Smallcap 250",
+      "authors": [
+        "Harjot Singh Ranse"
+      ],
+      "abstract": "This study quantifies survivorship bias in India's NIFTY Smallcap 250 index using a dataset of 1,437 stocks over nine years (2016-2025). By reconstructing historical index composition through market capitalization ranking and comparing equal-weight portfolios of current constituents versus all historical members, I show that survivor-only backtesting overstates annual returns by 4.94 percentage points (23.3%) and Sharpe ratios by 0.097 (9.1%). The analysis reveals an 82.5% turnover rate, including delisted (16.1%), graduated (33.1%), and demoted stocks (33.2%), with all categories contributing to bias. Using bhavcopy data that includes delisted securities, the reconstruction achieves 100% accuracy for current constituents and an estimated 85-90% accuracy historically. These findings highlight that survivorship bias is materially larger in emerging market small-caps and that using only current index members can significantly overstate strategy performance. Briefly, the methodology reconstructs historical index membership using a price-volume-based ranking approach to enable survivor-free backtesting.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST"
+      ],
+      "published": "2026-03-19T18:14:04Z",
+      "updated": "2026-03-19T18:14:04Z",
+      "abs_url": "https://arxiv.org/abs/2603.19380",
+      "pdf_url": "https://arxiv.org/pdf/2603.19380v1",
+      "comment": "25 pages, 7 figures. Research paper on survivorship bias in Indian small-cap equities using reconstructed historical index data",
+      "journal_ref": "",
+      "keyword_score": 22,
+      "matched_keywords": [
+        "sharpe ratio",
+        "backtesting",
+        "stock"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "量化新興市場小型股指數的存活者偏差，實證嚴謹且影響重大。",
+      "summary": {
+        "title_zh": "新興市場小型股指數的存活者偏差：來自印度 NIFTY Smallcap 250 的實證",
+        "verdict": "量化印度小型股指數的存活者偏差，指出僅使用現有成份股會大幅高估報酬。",
+        "problem": "回測時若忽略已下市或被剔除的股票，會對新興市場小型股策略帶來多大的績效失真？",
+        "method": "使用 1,437 檔股票、涵蓋 2016 至 2025 年共九年的資料，重建歷史指數成份並比較等權重連接組合。",
+        "findings": "存活者偏差使年化報酬率被高估 4.94 個百分點（23.3%），夏普值高估 0.097（9.1%）。分析顯示換手率高達 82.5%，包含下市、晉升與降級股票。",
+        "implication": "在新興市場小型股進行回測時，必須納入歷史下市與變動股票，否則績效評估將嚴重失真。",
+        "caveats": "歷史重建準確度估計為 85% 至 90%，可能仍存在微幅資料誤差。",
+        "practicality": 4,
+        "tags": [
+          "存活者偏差",
+          "小型股",
+          "新興市場",
+          "指數建構",
+          "回測檢驗"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.20237",
+      "title": "Temporal Coverage Bias in Financial Panel Data: A Coverage-Aware Structuring Framework with Evidence from the Dhaka Stock Exchange",
+      "authors": [
+        "Tashreef Muhammad"
+      ],
+      "abstract": "A common practice in empirical finance is to construct calendar-aligned panels that implicitly treat all instruments as having existed for the full observation period. When securities with different listing histories are combined without explicit coverage constraints, price histories can be inadvertently extended before valid trading ever began. This paper formalizes this problem and proposes a coverage-aware structuring framework built around instrument-level observation windows encoded through structured metadata and an availability matrix. Applied to end-of-day data from the Dhaka Stock Exchange spanning October 2012 to January 2026 and covering 486 instruments, the framework reveals substantial distortions from naive temporal alignment. ARIMA-based experiments establish the mechanism through which padded observations corrupt return dynamics, and volatility analysis across 53 instruments shows that forward-filling alone suppresses return volatility by roughly 20% on average, with GARCH unconditional variance distortions exceeding 26% in over 90% of instruments - a lower bound, as backward extension to the panel start produces 36.6% suppression and causes GARCH non-convergence in 41% of instruments. The distortion affects any method requiring calendar alignment of heterogeneous histories, including dynamic time warping, covariance-based portfolio construction, factor model regression, and temporal foundation model fine-tuning. Although demonstrated on financial data, the framework applies to any panel combining entities with heterogeneous entry dates, including sensor networks, clinical cohorts, and country-level economic panels. Listing coverage is not a minor preprocessing detail but a first-order variable in panel construction.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST"
+      ],
+      "published": "2026-03-09T07:16:13Z",
+      "updated": "2026-03-27T14:35:37Z",
+      "abs_url": "https://arxiv.org/abs/2603.20237",
+      "pdf_url": "https://arxiv.org/pdf/2603.20237v2",
+      "comment": "16 pages, 7 figures, 2 tables",
+      "journal_ref": "",
+      "keyword_score": 22,
+      "matched_keywords": [
+        "factor model",
+        "stock",
+        "empirical"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "指出金融面板資料時間覆蓋偏差，實證完整且具重要方法論價值",
+      "summary": {
+        "title_zh": "金融面板資料的時間覆蓋偏差：覆蓋感知結構化框架與達卡證券交易所實證",
+        "verdict": "揭露傳統面板填補會嚴重扭曲波動度與破壞模型，並提出覆蓋感知結構化框架。",
+        "problem": "實證金融中將異質上市歷史的資產對齊至行事曆面板時，盲目填補會使價格歷史在真實交易前被延伸，進而產生偏差。",
+        "method": "提出結合資產層級觀測視窗與可用性矩陣的覆蓋感知框架，應用於達卡證券交易所 2012 年 10 月至 2026 年 1 月共 486 檔資產的日頻資料。",
+        "findings": "前向填補平均抑制約 20% 報酬波動度，且超過 90% 資產的 GARCH 無條件變異數扭曲超過 26%；回溯延伸則造成 36.6% 波動度抑制，並使 41% 資產的 GARCH 模型無法收斂。",
+        "implication": "處理異質歷史面板資料時必須正視覆蓋偏差，此方法可直接應用於共變異數投資組合建構、因子模型迴歸與時間序列基礎模型微調。",
+        "caveats": "實證研究主要基於單一新興市場的日頻資料。",
+        "practicality": 5,
+        "tags": [
+          "面板資料",
+          "波動度",
+          "計量經濟學",
+          "資料前處理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
