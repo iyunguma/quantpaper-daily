@@ -1,0 +1,505 @@
+{
+  "date": "2026-11-13",
+  "generated_at": "2026-11-13T11:27:16+08:00",
+  "scanned": 2454,
+  "eligible": 2191,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2611.14699",
+      "title": "Conformal Risk Certificates for Portfolio Optimization Under Uncertainty: A Gated Reinforcement-Learning Approach",
+      "authors": [
+        "Mohammad Zarei",
+        "Amirhossein MohammadpourAzari",
+        "Moslem Habibi"
+      ],
+      "abstract": "Reinforcement-learning portfolio policies can optimize allocations from prices, covariances, and prior positions, yet they lack a calibrated, replayable mechanism for certifying that a proposed allocation respects a bounded risk envelope before execution. Regulators increasingly expect automated portfolio systems to provide exactly this kind of pre-trade audit trail, interpretable risk limit, and human-oversight mechanism. Gated Conformal Semantic Risk Control addresses this gap by separating return-seeking allocation from text-conditioned downside-risk verification. An instruction-tuned language model maps timestamped disclosures into schema-validated semantic risk states over macro, liquidity, earnings, and sector channels. These states induce correlated ellipsoidal factor-shock uncertainty sets whose conformal radii are calibrated by rolling finite-sample prediction over localized semantic nonconformity buckets. An asymmetric second-order cone gate then checks each raw PPO proposal against a certified worst-case semantic loss budget. The gate stays inactive for compliant proposals and intervenes only when that budget is exceeded. In walk-forward out-of-sample tests on nine liquid U.S. Select Sector SPDR ETFs, Raw PPO earns a 12.7% annual return while incurring a 4.05% semantic violation rate. Gated-CSRC removes all observed out-of-sample semantic limit breaches while retaining an 11.7% annual return. This 100-basis-point auditable safety premium is smaller than the yield loss imposed by unconditional hard projection, and exact McNemar testing confirms the compliance gain at $p < 10^{-15}$. Loughran-McDonald lexicon controls and time-shuffled text controls fail to reproduce this certificate.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "cs.LG",
+        "math.OC",
+        "q-fin.RM"
+      ],
+      "published": "2026-11-10T20:07:06Z",
+      "updated": "2026-11-10T20:07:06Z",
+      "abs_url": "https://arxiv.org/abs/2611.14699",
+      "pdf_url": "https://arxiv.org/pdf/2611.14699v1",
+      "comment": "26 pages, 5 figures, 10 tables. Submitted to Annals of Operations Research",
+      "journal_ref": "",
+      "keyword_score": 33,
+      "matched_keywords": [
+        "portfolio optimization",
+        "out-of-sample",
+        "liquidity"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合語意風險控制與強化學習，在 ETF 樣本外測試完整，實證扎實。",
+      "summary": {
+        "title_zh": "不確定性下連接風險憑證的投組最佳化：一種閘控強化學習方法",
+        "verdict": "結合大型語言模型與共形預測來控管投組風險，在維持 11.7% 年化報酬的同時完全消除語意風險違規。",
+        "problem": "現有的強化學習投組策略缺乏在執行前驗證且確保配置符合有界風險範圍的校準機制，難以滿足監管對事前稽核軌跡的要求。",
+        "method": "採用指令微調的大型語言模型將揭露資訊對應至語意風險狀態，並透過滾動有限樣本預測校準不確定性集合，配合非對稱二階錐閘控機制來過濾 PPO 策略配置。測試標的為九檔美國流動性佳的 Select Sector SPDR ETF。",
+        "findings": "原始 PPO 策略獲得 12.7% 年化報酬並伴隨 4.05% 的語意違規率；加入 Gated-CSRC 後完全消除了觀察到的樣本外語意極限突破，同時仍維持 11.7% 年化報酬，合規提升顯著 (p < 10^{-15})。",
+        "implication": "此方法能以極小的報酬犧牲換取完全合規的事前風險驗證，適合高度受監管的自動化投組系統直接採用。",
+        "caveats": "依賴大型語言模型解析財報與揭露資訊的品質，若文字資料受到干擾或控制失效則憑證可能失效。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "投組最佳化",
+          "大型語言模型",
+          "風險管理",
+          "共形預測"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.08930",
+      "title": "RankGLU: Residual Gated Score Formation for Cross-Sectional Stock Prediction",
+      "authors": [
+        "Huixiang Xiao",
+        "Jian Xu",
+        "Feiyu Qu",
+        "Zixuan Xie",
+        "Xiangyu Li"
+      ],
+      "abstract": "Cross-sectional stock prediction is closer to a ranking problem than to ordinary return-magnitude regression, since portfolio decisions depend on the relative ordering of assets within each trading date. Existing temporal, graph-based, and market-conditioned attention models have improved stock representation learning, yet the final prediction head is often treated as a minor implementation detail. This paper argues that, under information-coefficient-oriented evaluation, score formation is a critical bottleneck: an over-flexible head can fit unstable return magnitude, whereas an overly linear head may underuse cross-feature interactions. We therefore develop RankGLU, a residual bottleneck gated linear unit for cross-sectional stock ranking. RankGLU keeps a direct linear scoring path and adds a bounded multiplicative branch, thereby preserving a stable ordering route while allowing controlled nonlinear interactions. The method is evaluated on CSI300 and CSI800 under a unified protocol with cross-sectional score normalization and an IC-augmented objective. Multi-seed experiments show that, on CSI300, RankGLU achieves the strongest mean IC among the internally controlled variants, improving from 0.0654+/-0.0052 for the original backbone and 0.0697+/-0.0030 for the ranking-aware backbone to 0.0727+/-0.0037, a gain that is consistent across all five seeds. Its best-seed result also exceeds the corresponding baselines. Ablation results further indicate that removing the GLU prediction head causes the clearest degradation among the tested component changes. Additional relation-path calibrations can produce high single-seed peaks, but their multi-seed behavior is less stable. The evidence suggests that ranking-aware stock models benefit most reliably from bounded residual score formation rather than from indiscriminate architectural expansion.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE"
+      ],
+      "published": "2026-06-08T02:14:16Z",
+      "updated": "2026-06-08T02:14:16Z",
+      "abs_url": "https://arxiv.org/abs/2606.08930",
+      "pdf_url": "https://arxiv.org/pdf/2606.08930v1",
+      "comment": "Code: https://github.com/HuixiangXiao/RankGLU",
+      "journal_ref": "",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "cross-sectional",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出殘差閘道線性單元以改善股票橫截面排序預測。",
+      "summary": {
+        "title_zh": "RankGLU：用於橫截面股票預測的殘差閘控評分生成",
+        "verdict": "提出 RankGLU 殘差閘控線性單元以改善橫截面股票排序，在 CSI300 顯著提升平均資訊係數（IC）。",
+        "problem": "現有模型常將預測頭視為次要細節，導致過度靈活的預測頭會擬合不穩定的報酬規模，而過度線性的預測頭則無法充分利用特徵互動。",
+        "method": "結合直接線性評分路徑與受限相乘分支的 RankGLU 模型，使用 CSI300 與 CSI800 資料集進行多種子實驗與消融研究。",
+        "findings": "在 CSI300 上，RankGLU 的平均 IC 從原模型的 0.0654 提升至 0.0727，且五個隨機種子的結果皆一致改善。",
+        "implication": "排序導向的股票模型應著重於受限的殘差評分生成，而非盲目擴展架構，可直接應用於橫截面選股模型。",
+        "caveats": "額外的關係路徑校準在單一種子表現雖高，但多種子表現不夠穩定。",
+        "practicality": 4,
+        "tags": [
+          "橫截面預測",
+          "Alpha 因子",
+          "機器學習",
+          "特徵互動"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.14005",
+      "title": "Leveraged positions on decentralized lending platforms",
+      "authors": [
+        "Bastien Baude",
+        "Vincent Danos",
+        "Hamza El Khalloufi"
+      ],
+      "abstract": "We develop a mathematical framework to optimize leveraged staking (\"loopy\") strategies in Decentralized Finance (DeFi), in which a staked asset is supplied as collateral, the underlying is borrowed and re-staked, and the loop can be repeated across multiple lending markets. Exploiting the fact that DeFi borrow rates are deterministic functions of pool utilization, we reduce the multi-market problem to a convex allocation problem and obtain closed-form solutions under three interest-rate models: linear, kinked, and adaptive (Morpho's AdaptiveCurveIRM). The framework incorporates market-specific leverage limits, utilization-dependent borrowing costs, and transaction fees. Backtests on the Ethereum and Base blockchains using the largest Morpho wstETH/WETH markets (from January 1 to April 1, 2025) show that rebalanced leveraged positions can reach up to 6.2% APY versus 3.1% for unleveraged staking, with strong dependence on position size and rebalancing frequency. Our results provide a mathematical basis for transparent, automated DeFi portfolio optimization.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF"
+      ],
+      "published": "2026-01-20T14:26:07Z",
+      "updated": "2026-08-24T08:34:36Z",
+      "abs_url": "https://arxiv.org/abs/2601.14005",
+      "pdf_url": "https://arxiv.org/pdf/2601.14005v2",
+      "comment": "21 pages, 15 figures, 3 tables",
+      "journal_ref": "",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "portfolio optimization",
+        "backtest"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "對去中心化金融槓桿質押策略進行數學最佳化與區塊鏈回測，實用性高。",
+      "summary": {
+        "title_zh": "去中心化借貸平臺上的槓桿部位最佳化",
+        "verdict": "建構數學框架解決去中心化金融中循環質押槓桿的最佳化問題，在 Ethereum 與 Base 實測可將年化報酬率提升至 6.2%。",
+        "problem": "如何在考慮資金池利用率、借貸成本與交易費用的情況下，最佳化跨多個去中心化金融借貸市場的循環質押槓桿策略。",
+        "method": "利用借貸利率為資金池利用率之確定性函數的特性，將多市場問題化為凸配置問題，並在三種利率模型下推導出解析解；使用 Ethereum 與 Base 區塊鏈上 Morpho wstETH/WETH 市場 2025 年 1 月至 4 月的資料進行回測。",
+        "findings": "回測顯示，經過平衡的槓桿部位年化報酬率可達 6.2%，相較於未加槓桿質押的 3.1% 有顯著提升，且績效高度取決於部位大小與再平衡頻率。",
+        "implication": "此框架為去中心化金融的自動化連接埠最佳化提供數學基礎，適合用於開發自動化槓桿質押的交易程式。",
+        "caveats": "績效表現高度依賴部位規模與再平衡頻率，且尚未深入探討極端市場波動下的流動性風險。",
+        "practicality": 4,
+        "tags": [
+          "去中心化金融",
+          "槓桿質押",
+          "凸最佳化",
+          "利率模型",
+          "自動化連接埠"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.06507",
+      "title": "Emissions-Robust Portfolios",
+      "authors": [
+        "Khizar Qureshi",
+        "H. Oliver Gao"
+      ],
+      "abstract": "We study portfolio choice when firm-level emissions intensities are measured with error. We introduce a scope-specific penalty operator that rescales asset payoffs as a smooth function of revenue-normalized emissions intensity. Under payoff homogeneity, unit-scale invariance, mixture linearity, and a curvature semigroup axiom, the operator is unique and has the closed form $P^{(m)}_j(r,λ)=\\bigl(1-λ/λ_{\\max,j}\\bigr)^m r$. Combining this operator with norm- and moment-constrained ambiguity sets yields robust mean-variance and CVaR programs with exact linear and second-order cone reformulations and economically interpretable dual variables. In a U.S. large-cap equity universe with monthly rebalancing and uniform transaction costs, the resulting strategy reduces average Scope~1 emissions intensity by roughly 92\\% relative to equal weight while exhibiting no statistically detectable reduction in the Sharpe ratio under block-bootstrap inference and no statistically detectable change in average returns under HAC inference. We report the return-emissions Pareto frontier, sensitivity to robustness and turnover constraints, and uncertainty propagation from multiple imputation of emissions disclosures.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF"
+      ],
+      "published": "2026-01-10T09:56:57Z",
+      "updated": "2026-01-10T09:56:57Z",
+      "abs_url": "https://arxiv.org/abs/2601.06507",
+      "pdf_url": "https://arxiv.org/pdf/2601.06507v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "sharpe ratio",
+        "transaction cost"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出具備碳排強健性的投組配置，實證嚴謹且考慮交易成本。",
+      "summary": {
+        "title_zh": "碳排放穩健投資組合",
+        "verdict": "透過引入特定的懲罰運算子處理碳排放強度測量誤差，在美股大型股實現減碳 92% 且 Sharpe 比率無顯著下降。",
+        "problem": "企業級碳排放強度測量常伴隨誤差，傳統投資組合選擇未妥善將此不確定性納入模型。",
+        "method": "建構範圍特定的懲罰運算子，結合模稜兩可集合進行穩健 Mean-Variance 與 CVaR 最佳化；使用美國大型股權資產池、按月再平衡、uniform 交易成本。",
+        "findings": "策略相較於等權重投資組合，平均 Scope 1 碳排放強度降低約 92%；經 block-bootstrap 推論顯示 Sharpe 比率無統計上顯著的降低，經 HAC 推論顯示平均報酬亦無顯著變化。",
+        "implication": "可用於需要嚴格控制碳排放但又不想犧牲風險調整後報酬的實際資產配置，需預先處理多重插補的碳揭露不確定性。",
+        "caveats": "依賴於回測中對交易成本的特定假設以及排碳量測量的基礎設定。",
+        "practicality": 4,
+        "tags": [
+          "碳排放",
+          "穩健最佳化",
+          "投資組合建構",
+          "CVaR"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.26324",
+      "title": "The Control Layer Behind Rule-Following Agents Trading Across Market Conditions",
+      "authors": [
+        "Saad Naja",
+        "Nasser Odtallah",
+        "Jake Van-Praag",
+        "Sarah May"
+      ],
+      "abstract": "Trading discipline often fails people. Our study tested whether four AI trading agents followed their strategies and risk rules. Offering traders the evidence and an agent evaluation toolkit to separate luck from following the rules, before giving agents meaningful autonomy or capital. Our study analysed 2,627 closed positions from 12 February to 27 August 2026 across the same asset universe and execution conditions. Most positions were simulated against live prices with a 0.09% round-trip fee; 18% involved real Hyperliquid orders. Each position declared a strategy, stop and target, with a limit of five open positions per agent. The fleet finished net positive after fees. Rule adherence was high across all four agents, including the unprofitable one. Profitability tracked how often agents won relative to their break-even win rates. Institutional-style controls ran by default and contained losses through a 29% market drawdown and recovery, with documented exceptions. The discipline held for all four agents. Agents kept 97.5% of gross loss within declared stops, and typical losses closed at declared levels. Declared risk remained stable after losses and broadly stable across calm and volatile months. Twenty-three of 24 runs respected the position limit; logs identify the exception's size and duration. The same live data produced different results across assigned strategies. The trade-log tests can be rerun from the published trade snapshot; regime tests also require the published Bitcoin prices and regime labels. Section 3.5 specifies the stop-breach tolerance. These trade-level results are not account-level returns or proof of a lasting edge. Our study provides an evaluation toolkit to help traders distinguish rule-following from luck before committing capital. For anyone considering allocating capital to agents to trade, discipline should be the entry test, not the only test.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.MA",
+        "q-fin.RM",
+        "q-fin.TR"
+      ],
+      "published": "2026-10-19T13:01:10Z",
+      "updated": "2026-10-29T11:04:56Z",
+      "abs_url": "https://arxiv.org/abs/2610.26324",
+      "pdf_url": "https://arxiv.org/pdf/2610.26324v2",
+      "comment": "47 pages, 0 figures, 16 numbered tables. Includes a trading-agent evaluation toolkit and checklist. V2 Updated boilerplate and added Hygentra product information to section 2.1",
+      "journal_ref": "",
+      "keyword_score": 13,
+      "matched_keywords": [
+        "drawdown",
+        "regime",
+        "bitcoin"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "評估 AI 交易代理人在實際與模擬環境中的紀律與規則遵循，實證詳實。",
+      "summary": {
+        "title_zh": "跨市場條件下遵循規則的交易代理背後的控制層",
+        "verdict": "評估 AI 交易代理的規則遵循度與風險控制，證實其紀律良好且能有效限縮虧損。",
+        "problem": "交易紀律對人類而言往往難以維持，本研究旨在測試 AI 交易代理是否能切實執行既定策略與風險規則。",
+        "method": "分析 4 個 AI 交易代理在 2026 年 2 月 12 日至 8 月 27 日間共 2,627 筆平倉部位，多數以即時價格模擬（含 0.09% 來回手續費），其中 18% 為真實 Hyperliquid 訂單。",
+        "findings": "代理團隊扣除手續費後整體淨利為正，所有代理皆具高度規則遵循度。代理將 97.5% 的毛虧損控制在宣告的停損點內，並在 29% 的市場回檔中成功控制風險。",
+        "implication": "提供評估工具包供交易員在投入資金前，有效區分策略表現是源於運氣還是嚴格遵循規則。",
+        "caveats": "研究所得之交易層級結果不等於帳戶層級報酬，亦不足以證明具備持久的 Alpha。",
+        "practicality": 4,
+        "tags": [
+          "人工智慧",
+          "風險管理",
+          "演算法交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.14539",
+      "title": "Can a search hold its own bar? In-loop deflation and its exploits in autonomous strategy discovery",
+      "authors": [
+        "Eray Gençay"
+      ],
+      "abstract": "Corrections for backtest overfitting such as the deflated Sharpe ratio are applied after a search ends: the searcher maximises raw performance and a separate procedure deflates the reported winner. Autonomous searches driven by large language models perform many implicit backtests before reporting, so this paper asks what changes when the correction moves inside the loop and the acceptance threshold is indexed to the running count and dispersion of the search's own trials. The threshold then becomes an object the search can optimise against: we show analytically that a naive in-loop bar admits a variance-dilution effect, in which mediocre near-duplicate candidates lower the bar because the ledger's dispersion falls faster than its trial-count factor grows. We propose two defences, a pre-registered variance floor and a monotone high-water-mark bar, and evaluate the construction under a protocol frozen before any run, with every in-loop decision replaying exactly from its recorded trace. Across 53 audited hundred-candidate searches over two frontier models, two universes, and two feature spaces, the gated search reports \"no certifiable discovery\" on 36 of 37 runs, un-gated controls report a strategy on all 16, and every arm's out-of-sample confidence interval includes zero. Supporting studies find that state-based stopping reaches the same outcome after 8 to 9 trials at about a twelfth of the trial budget while an adaptive budget adds nothing, that a controlled stress test reproduces the dilution effect and both defences, and that a hundred nominal trials collapse to 6 to 8 effectively independent return streams. We scope these results to the analysed system.",
+      "primary_category": "stat.AP",
+      "categories": [
+        "stat.AP",
+        "cs.LG",
+        "q-fin.ST"
+      ],
+      "published": "2026-10-14T20:21:51Z",
+      "updated": "2026-10-14T20:21:51Z",
+      "abs_url": "https://arxiv.org/abs/2611.14539",
+      "pdf_url": "https://arxiv.org/pdf/2611.14539v1",
+      "comment": "19 pages, 5 figures, 3 tables. Code and data: https://doi.org/10.5281/zenodo.21725589",
+      "journal_ref": "",
+      "keyword_score": 24,
+      "matched_keywords": [
+        "sharpe ratio",
+        "out-of-sample",
+        "backtest",
+        "large language model"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探討過擬合與自動化策略搜尋，架構嚴謹且有公開程式碼與資料。",
+      "summary": {
+        "title_zh": "搜尋能撐起自己的標準嗎？迴圈內 deflated Sharpe ratio 與其在自主策略發掘中的漏洞",
+        "verdict": "將防過擬合修正移入 LLM 自主搜尋迴圈內，結果顯示多數策略在樣本外失效，凸顯搜尋過擬合的嚴峻性。",
+        "problem": "LLM 驅動的自主搜尋在回報前會進行大量隱含的回測，若將修正機製移入搜尋迴圈內，會對策略發掘產生什麼影響？",
+        "method": "使用兩個基礎模型、兩個資產宇宙與兩個特徵空間進行 53 次審計的百候選策略搜尋，透過分析與回放機製評估迴圈內門檻的表現。",
+        "findings": "受控搜尋在 37 次執行中有 36 次回報無可證實的發現，未受控的對照組在所有 16 次執行中皆回報策略，且各組的樣本外信賴區間皆包含零。",
+        "implication": "在自主策略發掘中必須防範迴圈內的變異數稀釋效應，盲目信任 LLM 產生的策略極易導致過擬合。",
+        "caveats": "本研究結果的適用範圍僅限於所分析的特定系統。",
+        "practicality": 4,
+        "tags": [
+          "機器學習",
+          "回測過擬合",
+          "Alpha 因子挖掘",
+          "大語言模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.04153",
+      "title": "A new decomposition approach to modeling financial returns: Conditioning sign on magnitude",
+      "authors": [
+        "Arsène Brou",
+        "Richard Luger"
+      ],
+      "abstract": "Changes in volatility contain valuable information about the likelihood of positive versus negative returns. We propose a new approach to modeling financial returns that exploits this insight by decomposing returns into sign and magnitude (absolute value) components, with magnitude closely related to volatility. The joint distribution used to compute expected returns combines a model for the marginal distribution of magnitude with a model for the distribution of the sign, conditional on the contemporaneous magnitude. Unlike traditional linear predictive regressions, this decomposition framework captures nonlinear predictability in return dynamics. An out-of-sample forecasting evaluation using monthly U.S. stock market excess returns demonstrates substantial statistical and economic gains relative to linear regression and complete subset regression, while delivering performance that is competitive with copula-based return-decomposition methods and other nonlinear benchmarks.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST"
+      ],
+      "published": "2026-06-02T19:20:17Z",
+      "updated": "2026-06-02T19:20:17Z",
+      "abs_url": "https://arxiv.org/abs/2606.04153",
+      "pdf_url": "https://arxiv.org/pdf/2606.04153v1",
+      "comment": "Author accepted manuscript. Accepted for publication in the Journal of Banking and Finance",
+      "journal_ref": "",
+      "keyword_score": 15,
+      "matched_keywords": [
+        "out-of-sample",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "將報酬分解為符號與幅度來建模非線性預測力，實證完整且已獲期刊接受。",
+      "summary": {
+        "title_zh": "金融報酬建模的新分解方法：以幅度條件化正負號",
+        "verdict": "將報酬分解為正負號與幅度，利用波動度資訊捕捉非線性預測力，提升報酬預測表現。",
+        "problem": "傳統線性預測迴歸無法有效捕捉金融報酬動態中的非線性預測力與波動度資訊。",
+        "method": "結合幅度邊際分配模型與給定當期幅度條件下的正負號分配模型，使用美國股票市場超額報酬的月度資料進行樣本外預測評估。",
+        "findings": "相較於線性迴歸與完整子集迴歸，該方法在統計與經濟效益上展現顯著提升，且表現與基於Copula的報酬分解方法及其他非線性基準相當。",
+        "implication": "可應用於月度資產配置與超額報酬預測，前提是須準確建模波動度與正負號的條件分配。",
+        "caveats": "僅在月度美國股市超額報酬進行樣本外評估，高頻或其他資產類別的適用性未知。",
+        "practicality": 3,
+        "tags": [
+          "報酬分解",
+          "波動度",
+          "非線性預測",
+          "資產配置"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.09821",
+      "title": "Global Persistence, Local Residual Structure: Forecasting Heterogeneous Investment Panels",
+      "authors": [
+        "Oleg Roshka"
+      ],
+      "abstract": "On a 93-actor quarterly panel mixing macro indicators, institutional data, and firm-level investment ratios, global factor augmentation degrades prediction for actor subgroups whose dynamics are misrepresented by the shared basis. A two-stage architecture -- global pooled AR(1) for shared persistence, block-specific local models for residual dynamics -- improves full-panel out-of-sample $R^2$ from 0.630 to 0.677 ($Δ= +0.047$, CI $[+0.036, +0.058]$, 10/10 windows, placebo $p \\leq 0.001$). A held-out decade test (block partition frozen on 2005--2014 data, evaluated on unseen 2015--2024 windows) confirms the gain ($Δ= +0.050$, 10/10), and a stratified placebo that fixes the macro/firm data-type split and permutes only firm-sector assignments corroborates ($z = 7.25$, $p \\leq 0.001$). Cross-regime replication on a 109-actor UK/EU heterogeneous panel ($Δ= +0.017$, 8/8 windows) and a combined US + UK/EU panel of 202 actors ($Δ= +0.030$, placebo $z = 9.68$ -- exceeding the original US-only $z = 7.82$) confirms the architecture transfers across regimes. A 146-firm CapEx/Assets robustness check refines the scope condition: the gain depends on cross-sectional dispersion in autoregressive structure, which data-type heterogeneity reliably produces but which is also present in firm-only panels under suitable ratio choices.",
+      "primary_category": "econ.EM",
+      "categories": [
+        "econ.EM",
+        "q-fin.PM",
+        "q-fin.ST"
+      ],
+      "published": "2026-04-10T18:55:09Z",
+      "updated": "2026-05-04T12:44:56Z",
+      "abs_url": "https://arxiv.org/abs/2604.09821",
+      "pdf_url": "https://arxiv.org/pdf/2604.09821v2",
+      "comment": "37 pages, 21 tables, 5 figures, 12 appendices. v2 adds cross-regime replication on a 109-actor UK/EU heterogeneous panel and a combined US + UK/EU panel of 202 actors (new Section 6 and Appendix L); abstract revised. Replication package: https://anonymous.4open.science/r/harp-reproduction",
+      "journal_ref": "",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "out-of-sample",
+        "regime",
+        "cross-sectional"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "跨國與跨產業樣本外檢驗完整，具備安慰劑檢定，實證嚴謹。",
+      "summary": {
+        "title_zh": "全球持續性與區域殘差結構：預測異質性投資面板",
+        "verdict": "提出兩階段架構預測異質投資面板，Out-of-sample R2 顯著提升。",
+        "problem": "在混合總體指標、機構資料與企業投資比率的面板資料中，全域因子擴充會對動態不符的子群體造成預測惡化。",
+        "method": "使用全球 pooled AR(1) 模型與區塊特異區域殘差模型組成的兩階段架構，資料頻率為季頻，樣本涵蓋 93 個主體。",
+        "findings": "全面板的 Out-of-sample R2 從 0.630 提升至 0.677（增幅 0.047，10/10 窗口），在跨體制 UK/EU 面板（109 個主體）與美國合併面板（202 個主體）中亦分別獲得 0.017 與 0.030 的 R2 增幅。",
+        "implication": "適用於處理異質性投資面板的預測任務，前提是橫斷面資料需具備足夠的自我迴歸結構離散度。",
+        "caveats": "預測表現的改善高度依賴於橫斷面自我迴歸結構的離散程度。",
+        "practicality": 4,
+        "tags": [
+          "面板資料",
+          "預測模型",
+          "總體經濟",
+          "計量經濟"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.15373",
+      "title": "Resolution Is Not Settlement, Part II: Protocol Finality and Observed Redemption on Polymarket",
+      "authors": [
+        "Maksym Nechepurenko"
+      ],
+      "abstract": "An Oracle result is not yet a protocol payout, a redeemable position is not yet collateral in a holder's account, and a redemption event is not a complete measure of economic entitlement. This companion paper develops an event-sourced framework for Polymarket conditions from preparation through protocol finality and observed holder realization. The empirical design uses three Conditional Tokens Framework event families derived from a pinned contract application binary interface (ABI): ConditionPreparation, ConditionResolution, and PayoutRedemption. It separates the contract-wide acquisition universe from the frozen Polymarket adapter-question cohort. The exact bridge contains 108,638 linked conditions. Of these, 99,283 have an observed protocol-resolution event by the fixed snapshot at Polygon block 90,114,204 (2026-07-12T17:11:41Z). Among resolved exact-linked conditions, 92,158 have an observed redemption of any amount and 91,817 have an observed positive-payout redemption; condition-specific Kaplan-Meier medians from first protocol resolution are 182 and 200 seconds respectively. The exact-linked payout taxonomy contains 53,847 canonical (0,1) vectors, 45,024 canonical (1,0) vectors, 410 fifty-fifty vectors, two other valid vectors, and 9,355 conditions with no observed resolution. Cross-contract Oracle-adapter-protocol ordering is reported conservatively: 823 conditions have an interval-qualified terminal generation, 48 have multiple candidate generations, 91,638 have no compatible terminal generation in the frozen evidence, and 16,129 are right-censored or otherwise unevaluable. The formal results show that Oracle finality does not identify protocol finality, protocol finality does not identify holder realization, and redemption events alone do not identify the fraction of entitlement redeemed without an independent balance-consistent entitlement denominator.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-09-14T10:58:51Z",
+      "updated": "2026-09-14T10:58:51Z",
+      "abs_url": "https://arxiv.org/abs/2609.15373",
+      "pdf_url": "https://arxiv.org/pdf/2609.15373v1",
+      "comment": "46 pages, 5 figures. Part II of two. SSRN: https://ssrn.com/abstract=7344081",
+      "journal_ref": "",
+      "keyword_score": 13,
+      "matched_keywords": [
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "分析預測市場的協議終局與實際贖回情形，實證資料獨特且完整。",
+      "summary": {
+        "title_zh": "解析度不等同於結算，第二部分：Polymarket 的協議終局性與觀察到的贖回",
+        "verdict": "建構 Polymarket 事件來源框架，分析從預言機結果到協議終局與持有人實際贖回的時間差與分佈，未報告具體投資績效。",
+        "problem": "預言機結果不等同於協議支付，且贖回事件本身無法完全衡量經濟權益，需要釐清狀態轉換的真實時序。",
+        "method": "運用 Conditional Tokens Framework 事件家族與合約應用二進位介面，分析 Polygon 鏈上截至 2026 年 7 月 12 日的資料，包含 108,638 個鏈結條件。",
+        "findings": "在 99,283 個已解析的條件中，有 92,158 個觀察到贖回，其中 91,817 個為正報酬贖回；從協議解析到首次贖回的 Kaplan-Meier 中位數分別為 182 秒與 200 秒。",
+        "implication": "實務上進行預測市場交易或造市時，不能以預言機結果作為資金已入帳的依據，必須將協議終局與資金贖回的延遲納入模型考量。",
+        "caveats": "部分條件存在多個候選世代或右側刪失問題，且未納入交易成本與資金流動性分析。",
+        "practicality": 3,
+        "tags": [
+          "預測市場",
+          "區塊鏈",
+          "市場微結構",
+          "事件分析"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.15901",
+      "title": "Strategic Index Reconstitution: Differential Games, Closed-Loop Equilibria and Mean-Field Dynamics",
+      "authors": [
+        "Lukas-Benedikt Fiechtner",
+        "Jose Blanchet"
+      ],
+      "abstract": "We study a continuous-time, multiasset trading game around index reconstitution, in which opportunistic traders have heterogeneous beliefs about the future index constitution and interact through transient cross-asset price impact and instantaneous execution costs. Opportunistic traders build inventory based on their individual beliefs about the future index constitution before a public announcement, adjust their positions to the revealed composition, and unwind them against the indexer's prescribed rebalancing trades at the implementation date when the new index composition takes effect. Under a no-price-manipulation condition, we construct a subgame-perfect Nash equilibrium. Its affine feedback policies are computed from a non-standard matrix Riccati equation and linear ODEs whose number and dimensions are independent of population size. Under mean-field scaling, we construct a mean-field equilibrium and obtain quantitative convergence and approximate-Nash bounds. Numerical illustrations show that greater competition among opportunists dampens price swings around implementation and that opportunistic trading lowers the indexer's implementation shortfall unless price resilience is very low. Holding the average belief fixed, greater belief dispersion can increase gross trading volume without changing net aggregate opportunist holdings or price impact.",
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC",
+        "q-fin.MF",
+        "q-fin.TR"
+      ],
+      "published": "2026-09-14T17:18:55Z",
+      "updated": "2026-10-20T22:34:17Z",
+      "abs_url": "https://arxiv.org/abs/2609.15901",
+      "pdf_url": "https://arxiv.org/pdf/2609.15901v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 13,
+      "matched_keywords": [
+        "price impact",
+        "execution cost"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance_reason": "研究指數重組的微分賽局與均場動態，理論推導嚴謹。",
+      "summary": {
+        "title_zh": "策略性指數調整：微分賽局、閉迴路均衡與平均場動態",
+        "verdict": "建構指數調整期間的納許均衡，發現投機者競爭可抑制價格波動並降低實施缺口。",
+        "problem": "多資產交易中，具異質信念的投機者在指數調整前後進行部位建立、調整與平倉，其動態價格影響與交易成本的均衡解法。",
+        "method": "利用連續時間多資產交易賽局模型，結合矩陣黎卡提方程式與平均場極限分析，研究跨資產價格衝擊與瞬時執行成本。",
+        "findings": "數值模擬顯示，投機者之間的競爭增加會抑制實施日周遭的價格震盪，且投機交易能降低指數編製者的執行缺口，除非價格韌性極低。在平均信念固定下，信念分歧度增加會提高總交易量，但不改變淨累積部位或價格衝擊。",
+        "implication": "可用於預測指數調整日的價格動態與流動性變化，有助於設計降低衝擊的執行策略。",
+        "caveats": "模型依賴無價格操縱假設及特定的平均場極限設定。",
+        "practicality": 3,
+        "tags": [
+          "指數調整",
+          "微分賽局",
+          "市場衝擊",
+          "平均場遊戲",
+          "演算法交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
