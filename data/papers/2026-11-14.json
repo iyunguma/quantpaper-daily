@@ -1,0 +1,530 @@
+{
+  "date": "2026-11-14",
+  "generated_at": "2026-11-14T11:20:26+08:00",
+  "scanned": 2464,
+  "eligible": 2191,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2611.15657",
+      "title": "Global Seasonality Factor Investing",
+      "authors": [
+        "Andrew Butler",
+        "Adam Butler",
+        "Maciej Zawadzki"
+      ],
+      "abstract": "We study seasonality as a factor for predicting risk-adjusted returns across global futures markets. We document five seasonality anomalies that, in aggregate, are pervasive across bond, commodity and equity markets. We demonstrate that each seasonality factor produces excess returns that are not reasonably explained by established global time series carry, momentum and skewness factors. We apply recent innovations in statistical learning and fit nonlinear seasonality models at the individual market level, thereby allowing each feature-market pair to express its unique seasonal prediction pattern. We discuss candidate economic rationales for the existence and persistence of each seasonality anomaly. Walk-forward out-of-sample testing demonstrates that fast-moving seasonal patterns, such as day-of-week and day-of-month, produce strong gross performance but with extremely high turnover, resulting in negative performance net of transaction costs. In contrast, slower-moving seasonal patterns, such as day-of-quarter, day-of-half-year and day-of-year, produce positive gross performance and, with the exception of day-of-quarter, positive net performance. An equal-weight ensemble of seasonality models produces an out-of-sample Sharpe ratio that is competitive with, and uncorrelated to, established global time series factor portfolios. Empirical results demonstrate that adding seasonality to a global factor portfolio increases the out-of-sample Sharpe ratio by approximately $30\\%$ over the full evaluation period.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "q-fin.PM",
+        "q-fin.ST"
+      ],
+      "published": "2026-11-11T16:06:34Z",
+      "updated": "2026-11-11T16:06:34Z",
+      "abs_url": "https://arxiv.org/abs/2611.15657",
+      "pdf_url": "https://arxiv.org/pdf/2611.15657v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 50,
+      "matched_keywords": [
+        "sharpe ratio",
+        "factor investing",
+        "transaction cost",
+        "out-of-sample",
+        "momentum",
+        "futures"
+      ],
+      "relevance": 10,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "考慮交易成本的樣本外檢驗完整，年化夏普值提升約 30%，實證扎實。",
+      "summary": {
+        "title_zh": "全球季節性因子投資",
+        "verdict": "慢速季節性因子能提供穩健的正報酬，且與傳統全球因子互補並提升整體夏普值。",
+        "problem": "探討季節性是否能作為預測全球期貨市場風險調整後報酬的有效因子，並檢視其是否獨立於現有的價差、動能與偏態因子。",
+        "method": "使用全球債券、商品與股票期貨市場資料，運用統計學習方法在個別市場層級擬合非線性季節性模型，並進行樣本外步進測試。",
+        "findings": "快速季節性因週轉率過高導致扣除成本後報酬為負，但慢速季節性因子扣除成本後呈正報酬。等權重季節性模型組合的樣本外夏普值與傳統因子無相關，並使整體全球因子組合的夏普值提升約 30%。",
+        "implication": "實務上可將慢速季節性因子納入現有全球多因子配置中以分散風險，但須嚴格控管高頻率季節性因子的交易成本。",
+        "caveats": "高頻率的季節性模式會產生極高週轉率，若未妥善處理交易成本將導致淨績效為負。",
+        "practicality": 4,
+        "tags": [
+          "因子投資",
+          "期貨市場",
+          "季節性異常",
+          "統計學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.17170",
+      "title": "Improving Algorithmic Trading for BESS on Intraday Electricity Markets through Distributional Price Forecasts",
+      "authors": [
+        "Simon Hirsch",
+        "David Schaurecker",
+        "David Wozabal"
+      ],
+      "abstract": "Grid-scale battery energy storage systems (BESS) are becoming increasingly important in short-term energy markets, where they help balance fluctuations in variable renewable generation. In many countries, the continuous intraday market is the most important wholesale market for BESS to monetize their flexibility. In this paper, we propose an extension to the myopic rolling intrinsic policy that incorporates intraday price forecasts tailored specifically to the BESS trading problem. While a large literature addresses intraday price forecasting, most existing work focuses on volume-weighted prices during the last hours of trading and consequently fails to capture the features most relevant to BESS trading. Our approach addresses this gap by introducing a novel target variable derived from the limit order book and its dynamics. The resulting forecasts are designed to inform the optimization about future profit opportunities while preserving computational efficiency and avoiding the burden of full stochastic optimization. In a realistic high-frequency simulation setting covering 2023 and 2024, our method improves profits by up to 42% over the naive rolling intrinsic formulation. We further analyze the relationship between forecast accuracy, stability, and financial performance, establishing a clear inverse relationship between accuracy and stability. Finally, we find evidence that BESS size and duration jointly influence both overall profitability and the marginal benefit of incorporating forecasts.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.CP",
+        "q-fin.TR",
+        "stat.AP"
+      ],
+      "published": "2026-11-12T17:43:52Z",
+      "updated": "2026-11-12T17:43:52Z",
+      "abs_url": "https://arxiv.org/abs/2611.17170",
+      "pdf_url": "https://arxiv.org/pdf/2611.17170v1",
+      "comment": "31 pages, 20 figures",
+      "journal_ref": "",
+      "keyword_score": 49,
+      "matched_keywords": [
+        "limit order book",
+        "algorithmic trading",
+        "order book",
+        "high-frequency"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "針對電力市場電池儲能系統提出高頻模擬與預測，利潤改善顯著且細節完整。",
+      "summary": {
+        "title_zh": "透過分配價格預測改善儲能系統在日內電力市場的演算法交易",
+        "verdict": "結合限價單簿動態特徵的分配價格預測，能使電池儲能系統在日內電力市場的交易利潤提升高達 42%。",
+        "problem": "多數現有日內價格預測專注於交易末期的成交量加權價格，無法捕捉對電池儲能系統交易最為關鍵的特徵。",
+        "method": "提出針對電池儲能系統交易問題量身打造的滾動內在策略擴充，利用限價單簿動態衍生出新穎的目標變數進行價格預測，並於 2023 至 2024 年的高頻模擬環境中進行實證。",
+        "findings": "在真實的高頻模擬設定中，該方法相較於單純的滾動內在公式，利潤提升高達 42%。研究同時發現預測準確度與穩定性之間存在明顯的反向關係，且電池容量與持續時間會共同影響整體獲利能力。",
+        "implication": "此方法能以較低運算成本將未來獲利機會納入最佳化，適合應用於電池儲能系統的高頻日內交易策略。",
+        "caveats": "預測準確度與穩定性之間存在反向關係，可能導致策略在實際執行時面臨不穩定風險。",
+        "practicality": 4,
+        "tags": [
+          "演算法交易",
+          "限價單簿",
+          "電力市場",
+          "分配價格預測"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.06117",
+      "title": "Relief-Gated Relative Rotation for QQQ-DIA Allocation: Globally Screened Relative States, Fixed Position Mapping, Incremental Interaction Admission, and Walk-Forward Validation",
+      "authors": [
+        "Zheli Xiong"
+      ],
+      "abstract": "This paper studies Relief-Gated Relative Rotation (RGRR), a two-ETF rule that allocates between QQQ and DIA by mapping screened relative and macro states into a continuous QQQ weight. RGRR is economic rather than mechanical: it rotates between a growth-heavy sleeve and a Dow/value-heavy sleeve only when QQQ-DIA relative states are confirmed by rate, volatility, credit, or broad-market relief conditions. Candidate main effects and interactions are globally screened with horizon-specific HAC regressions and correlation de-duplication, then held fixed during walk-forward validation. Rolling out-of-sample validation re-selects only signal-family lambdas, not the signal universe or the position mapping. The final stack contains one main effect, nine second-order interactions, and two third-order interactions. Third-order terms must also improve rolling out-of-sample Sharpe versus the main plus second-order base and survive economic-family de-duplication. The final mapping uses a fixed bounded weight transformation and includes a 10 bps one-way turnover cost. Across the 2018, 2020, and 2022 out-of-sample starts, RGRR improves Sharpe versus 100% QQQ and 50/50 QQQ-DIA in every tested interval. It improves CAGR versus 50/50 in every interval, but beats 100% QQQ on CAGR only in the 2022 window. In 2018, RGRR earns an 18.33% CAGR and 0.94 Sharpe, versus 20.50% and 0.89 for QQQ and 16.69% and 0.86 for 50/50. In 2022, it earns a 15.19% CAGR and 0.87 Sharpe, versus 14.65% and 0.70 for QQQ. The evidence supports RGRR as a risk-adjusted relative allocation rule, not a pure return-dominance rule. Its main practical weakness is high turnover, ranging from 354% to 506% annualized.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM"
+      ],
+      "published": "2026-07-07T10:26:55Z",
+      "updated": "2026-07-07T10:26:55Z",
+      "abs_url": "https://arxiv.org/abs/2607.06117",
+      "pdf_url": "https://arxiv.org/pdf/2607.06117v1",
+      "comment": "31 pages, 11 figures, 30 tables",
+      "journal_ref": "",
+      "keyword_score": 13,
+      "matched_keywords": [
+        "out-of-sample"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "透過總經與市場狀態進行 QQQ 與 DIA 配置，樣本外驗證完整且表現穩定。",
+      "summary": {
+        "title_zh": "利用救濟閘控相對輪動進行QQQ與DIA資產配置：全域篩選相對狀態、固定部位對應與步行向前驗證",
+        "verdict": "提出 RGRR 規則在 QQQ 與 DIA 間動態配置，顯著改善風險調整後報酬，但伴隨高週轉率。",
+        "problem": "如何在成長股與價值股之間進行經濟邏輯驅動的資產配置，而非單純機械式輪動？",
+        "method": "使用 RGRR 模型在 QQQ 與 DIA 之間分配權重，透過 HAC 迴歸與相關性去重篩選訊號，並使用步行向前驗證，納入 10 bps 的單向週轉成本。",
+        "findings": "在 2018、2020 與 2022 年的樣本外測試中，RGRR 在所有測試區間均提升了夏普值。例如 2018 年報酬率為 18.33%、夏普值 0.94；2022 年報酬率為 15.19%、夏普值 0.87。",
+        "implication": "適用於跨類別的相對價值輪動配置，能有效改善風險調整後表現，但需要嚴格控制交易成本。",
+        "caveats": "主要限制在於年化週轉率高達 354% 至 506%。",
+        "practicality": 4,
+        "tags": [
+          "資產配置",
+          "相對輪動",
+          "步行向前驗證",
+          "ETF"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.16333",
+      "title": "Open vs. Sealed: Auction Format Choice for Maximal Extractable Value",
+      "authors": [
+        "Aleksei Adadurov",
+        "Sergey Barseghyan",
+        "Anton Chtepine",
+        "Antero Eloranta",
+        "Andrei Sebyakin",
+        "Arsenii Valitov"
+      ],
+      "abstract": "We study optimal auction design for Maximum Extractable Value (MEV) auction markets on Ethereum. Using a dataset of 2.2 million transactions across three major orderflow providers, we establish three empirical regularities: extracted values follow a log-normal distribution with extreme right-tail concentration, competition intensity varies substantially across MEV types, and the standard Revenue Equivalence Theorem breaks down due to affiliation among searchers' valuations. We model this affiliation through a Gaussian common factor, deriving equilibrium bidding strategies and expected revenues for five auction formats, first-price sealed-bid, second-price sealed-bid, English, Dutch, and all-pay, across a fine grid of bidder counts $n$ and affiliation parameters $ρ$. Our simulations confirm the Milgrom-Weber linkage principle: English and second-price sealed-bid auctions strictly dominate Dutch and first-price sealed-bid formats for any $ρ> 0$, with a linkage gap of 14-28\\% at moderate affiliation ($ρ=0.5$) and up to 30\\% for small bidder counts. Applied to observed bribe totals, this gap corresponds to \\$10-18 million in foregone revenue over the sample period. We also document a novel non-monotonicity: at large $n$ and high $ρ$, revenue peaks in the interior of the affiliation parameter space and declines thereafter, as near-perfect correlation collapses the order-statistic spread that drives competitive payments.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-03-17T10:04:14Z",
+      "updated": "2026-03-17T10:04:14Z",
+      "abs_url": "https://arxiv.org/abs/2603.16333",
+      "pdf_url": "https://arxiv.org/pdf/2603.16333v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 13,
+      "matched_keywords": [
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "研究以太坊最大可提取價值拍賣格式，資料規模龐大，實證與理論結合極佳。",
+      "summary": {
+        "title_zh": "公開與密封：最大可萃取價值之拍賣機制選擇",
+        "verdict": "實證與理論分析顯示，基於搜尋者估值相關性，英式拍賣與次價密封拍賣在 MEV 市場中顯著優於荷蘭式與首價拍賣。",
+        "problem": "以太坊上的最大可萃取價值拍賣市場中，如何為最大可萃取價值選擇最佳的拍賣機制設計。",
+        "method": "使用涵蓋三個主要訂單流提供者的 220 萬筆交易資料，透過高斯共同因子模型模擬五種拍賣機制在不同投標者數量與相關性參數下的均衡投標策略與預期收入。",
+        "findings": "英式與次價密封拍賣在相關性大於零時表現優於其他格式，在中等相關性下連結差距達 14% 至 28%，在小型投標者群體下高達 30%，造成樣本期間 1000 萬至 1800 萬美元的潛在收入損失。",
+        "implication": "以太坊訂單流拍賣設計應由首價或荷蘭式轉向次價或英式拍賣，以捕捉投值相關性帶來的連結溢價。",
+        "caveats": "模型依賴於高斯共同因子來捕捉估值相關性，可能無法完全涵蓋現實中複雜的搜尋者策略互動。",
+        "practicality": 4,
+        "tags": [
+          "加密貨幣",
+          "拍賣理論",
+          "MEV",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.17327",
+      "title": "Signal or Noise in Multi-Agent LLM-based Stock Recommendations?",
+      "authors": [
+        "George Fatouros",
+        "Kostas Metaxas"
+      ],
+      "abstract": "We present the first portfolio-level validation of MarketSenseAI, a deployed multi-agent LLM equity system. All signals are generated live at each observation date, eliminating look-ahead bias. The system routes four specialist agents (News, Fundamentals, Dynamics, and Macro) through a synthesis agent that issues a monthly equity thesis and recommendation for each stock in its coverage universe, and we ask two questions: do its buy recommendations add value over both passive benchmarks and random selection, and what does the internal agent structure reveal about the source of the edge? On the S&P 500 cohort (19 months) the strong-buy equal-weight portfolio earns +2.18%/month against a passive equal-weight benchmark of +1.15% (approximating RSP), a +25.2% compound excess, and ranks at the 99.7th percentile of 10,000 Monte Carlo portfolios (p=0.003). The S&P 100 cohort (35 months) delivers a +30.5% compound excess over EQWL with consistent direction but formal significance not reached, limited by the small average selection of ~10 stocks per month. Non-negative least-squares projection of thesis embeddings onto agent embeddings reveals an adaptive-integration mechanism. Agent contributions rotate with market regime (Fundamentals leads on S&P 500, Macro on S&P 100, Dynamics acts as an episodic momentum signal) and this agent rotation moves in lockstep with both the sector composition of strong-buy selections and identifiable macro-calendar events, three independent views of the same underlying adaptation. The recommendation's cross-sectional Information Coefficient is statistically significant on S&P 500 (ICIR=+0.489, p=0.024). These results suggest that multi-agent LLM equity systems can identify sources of alpha beyond what classical factor models capture, and that the buy signal functions as an effective universe-filter that can sit upstream of any portfolio-construction process.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "cs.AI",
+        "q-fin.ST"
+      ],
+      "published": "2026-04-19T08:43:31Z",
+      "updated": "2026-04-19T08:43:31Z",
+      "abs_url": "https://arxiv.org/abs/2604.17327",
+      "pdf_url": "https://arxiv.org/pdf/2604.17327v1",
+      "comment": "22 pages, 10 figures",
+      "journal_ref": "",
+      "keyword_score": 46,
+      "matched_keywords": [
+        "factor model",
+        "momentum",
+        "llm",
+        "regime",
+        "cross-sectional",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "即時多代理人選股驗證，排除前視偏誤，結果具說服力。",
+      "summary": {
+        "title_zh": "多代理基礎模型股票推薦中的訊號與雜訊",
+        "verdict": "驗證多代理基礎模型在即時交易中能產生顯著超額報酬，強買投資組合月賺 +2.18%。",
+        "problem": "多代理基礎模型在真實市場中產生的推薦究竟是有效訊號還是純粹雜訊，其內部代理結構的優勢來源為何？",
+        "method": "使用已部署的 MarketSenseAI 系統，結合新聞、基本面、動態與總體經濟四個專家代理與一個綜合代理。針對 S&P 500（19 個月）與 S&P 100（35 個月）樣本進行月度即時評估。",
+        "findings": "S&P 500 的強買等權重投資組合每月賺取 +2.18%，超越被動基準的 +1.15%，達到 +25.2% 的複利超額報酬，在 10,000 個蒙地卡羅模擬中排在 99.7 百分位（p=0.003）。S&P 100 樣本則實現 +30.5% 的複利超額報酬，但因選股數量較少未達顯著水準，資訊係數資訊比率 ICIR 為 +0.489（p=0.024）。",
+        "implication": "多代理基礎模型能識別超越傳統因子模型的 Alpha 來源，其買進訊號可作為投資組合建構流程上游的有效宇宙過濾器。",
+        "caveats": "S&P 100 樣本因每月平均選股僅約 10 檔，導致統計顯著性不足。",
+        "practicality": 4,
+        "tags": [
+          "基礎模型",
+          "多代理系統",
+          "股票推薦",
+          "Alpha 因子挖掘"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.00064",
+      "title": "Forecast collapse of transformer-based models under squared loss in financial time series",
+      "authors": [
+        "Pierre Andreoletti"
+      ],
+      "abstract": "We study trajectory forecasting under squared loss for time series with weak conditional structure, using highly expressive prediction models. Building on the classical characterization of squared-loss risk minimization, we emphasize regimes in which the conditional expectation of future trajectories is effectively degenerate, leading to trivial Bayes-optimal predictors (flat for prices and zero for returns in standard financial settings). In this regime, increased model expressivity does not improve predictive accuracy but instead introduces spurious trajectory fluctuations around the optimal predictor. These fluctuations arise from the reuse of noise and result in increased prediction variance without any reduction in bias. This provides a process-level explanation for the degradation of Transformerbased forecasts on financial time series. We complement these theoretical results with numerical experiments on high-frequency EUR/USD exchange rate data, analyzing the distribution of trajectory-level forecasting errors. The results show that Transformer-based models yield larger errors than a simple linear benchmark on a large majority of forecasting windows, consistent with the variance-driven mechanism identified by the theory.",
+      "primary_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.PR",
+        "math.ST",
+        "q-fin.CP"
+      ],
+      "published": "2026-03-31T09:06:52Z",
+      "updated": "2026-03-31T09:06:52Z",
+      "abs_url": "https://arxiv.org/abs/2604.00064",
+      "pdf_url": "https://arxiv.org/pdf/2604.00064v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 21,
+      "matched_keywords": [
+        "high-frequency",
+        "transformer",
+        "regime"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "深入理論與實證解釋 Transformer 在金融時間序列上的預測崩潰。",
+      "summary": {
+        "title_zh": "基於平方損失的Transformer模型在金融時間序列預測中的崩潰現象",
+        "verdict": "在條件結構微弱的金融時間序列中，使用平方損失的 Transformer 會導致預測崩潰並增加變異數，表現不如線性基準。",
+        "problem": "為何表達能力極高的 Transformer 模型在金融時間序列預測中表現往往不佳，甚至不如簡單模型。",
+        "method": "從理論上分析平方損失風險最小化下的軌跡預測，並使用高頻 EUR/USD 外匯資料進行數值實驗，分析軌跡級別的預測誤差分佈。",
+        "findings": "理論表明條件期望會退化為簡單的貝氏最佳預測器，增加模型表達能力只會引入噪聲並提高預測變異數。實證顯示在絕大多數預測視窗中，Transformer 的誤差大於簡單線性基準，未報告具體績效數字。",
+        "implication": "在處理低訊噪比的金融時間序列時，應避免盲目提高模型複雜度或直接使用平方損失，否則容易因噪聲重用而導致預測失準。",
+        "caveats": "本研究主要針對平方損失與弱條件結構的時間序列，未探討其他損失函數或強趨勢市場的適用性。",
+        "practicality": 3,
+        "tags": [
+          "機器學習",
+          "時間序列",
+          "預測崩潰",
+          "高頻交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.21491",
+      "title": "NEST: Stale-Robust Tokenized-Stock Measurement for a Crypto-Treasury LETF Stack",
+      "authors": [
+        "Doohwi Cha",
+        "Minsuk Sung",
+        "Minjae Lee",
+        "Hyeonjun Yeo",
+        "Hanhee Kim",
+        "Seunghan Son",
+        "Donghwa Seo",
+        "Juyeong Lee"
+      ],
+      "abstract": "Tokenized equities trade while listed markets are closed, so their marks could improve off-hours measurement along layered exposures that link Bitcoin, crypto-treasury stocks, and leveraged ETFs. A token return and the next opening gap, however, share the price move from the previous close to the token mark, so part of their apparent fit is mechanical. We develop NEST, a stale-robust protocol that separates this shared-history fit from conditional measurement value. A shared-history identity and a variance-clock bound show how much fit timing alone can generate. The partial determination index (PDI), the squared partial correlation between token and gap given public controls, measures what remains, and a finite-sample frontier expresses the partial-F decision in PDI units. Product, provenance, timestamp, and execution audits decide whether an informative mark is admissible. For MSTRx, a tracker certificate on MicroStrategy (MSTR), a token-only $R^2$ of 0.916 shrinks to a modest increment once Bitcoin, mark age, and a pre-09:00 MSTR premarket proxy are controlled: the token explains 15.7% of the remaining gap variation (1% frontier 0.031), and 14.0% to 17.0% under stricter clock variants, including one in which every token mark precedes 09:00. A trade-level reconstruction on Gate gives 25.2%; NVDAX and AAPLX clear their frontiers, whereas TSLAX does not. An admitted mark updates, rather than replaces, BTC-unit exposure diagnostics for the BTC-MSTR-LETF chain.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.CR"
+      ],
+      "published": "2026-10-15T08:28:59Z",
+      "updated": "2026-10-15T08:28:59Z",
+      "abs_url": "https://arxiv.org/abs/2610.21491",
+      "pdf_url": "https://arxiv.org/pdf/2610.21491v1",
+      "comment": "20 pages, 3 figures, 7 tables. Extended version of a paper accepted for publication in the proceedings of MARBLE 2026 (Lecture Notes in Operations Research, Springer Nature)",
+      "journal_ref": "",
+      "keyword_score": 20,
+      "matched_keywords": [
+        "bitcoin",
+        "stock"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "已獲 MARBLE 接受，嚴謹過濾代幣化股票的開盤重疊雜訊，實證細緻。",
+      "summary": {
+        "title_zh": "NEST：針對加密貨幣金庫槓桿ETF堆疊的過時穩健代幣化股票衡量機制",
+        "verdict": "提出 NEST 協議分離代幣化股票開盤缺口的機械性擬合與真實資訊，MSTR 代幣可解釋剩餘缺口變異的 15.7%。",
+        "problem": "代幣化股票在傳統市場收盤時代替交易，但其代幣報酬與隔日開盤缺口共用價格變動，導致部分擬合具機械性而高估實際價值。",
+        "method": "利用共享歷史恆等式與變異數時鐘界線發展 NEST 協議，透過部分決定指數（PDI）衡量淨資訊，並對 MSTRx、NVDAX、AAPLX 與 TSLAX 的市場資料進行實證。",
+        "findings": "針對 MSTRx，原始 $R^2$ 為 0.916，但在控制比特幣、標記年齡與盤前代理變數後，代幣僅解釋 15.7% 的剩餘缺口變異（1% 邊界為 0.031）。Gate 交易所的交易級重建得出 25.2%，NVDAX 與 AAPLX 通過邊界檢定，但 TSLAX 未通過。",
+        "implication": "可藉此篩選出具備真實資訊的代幣化股票標記，用以更新比特幣至加密貨幣金庫及槓桿 ETF 鏈的部位曝險診斷。",
+        "caveats": "部分代幣化股票如 TSLAX 無法通過邊界檢定，顯示並非所有標記皆具備有效的條件衡量價值。",
+        "practicality": 4,
+        "tags": [
+          "代幣化股票",
+          "加密貨幣",
+          "市場微結構",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.14322",
+      "title": "Doubly Outlier-Robust Online Infinite Hidden Markov Model",
+      "authors": [
+        "Horace Yiu",
+        "Leandro Sánchez-Betancourt",
+        "Álvaro Cartea",
+        "Gerardo Duran-Martin"
+      ],
+      "abstract": "We derive a robust update rule for the online infinite hidden Markov model (iHMM) for when the streaming data contains outliers and the model is misspecified. Leveraging recent advances in generalised Bayesian inference, we define robustness via the posterior influence function (PIF), and provide conditions under which the online iHMM has bounded PIF. Imposing robustness inevitably induces an adaptation lag for regime switching. Our method, which is called Batched Robust iHMM (BR-iHMM), balances adaptivity and robustness with two additional tunable parameters. Across limit order book data, hourly electricity demand, and a synthetic high-dimensional linear system, BR-iHMM reduces one-step-ahead forecasting error by up to 67% relative to competing online Bayesian methods. Together with theoretical guarantees of bounded PIF, our results highlight the practicality of our approach for both forecasting and interpretable online learning.",
+      "primary_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "published": "2026-04-15T18:23:54Z",
+      "updated": "2026-05-12T14:32:34Z",
+      "abs_url": "https://arxiv.org/abs/2604.14322",
+      "pdf_url": "https://arxiv.org/pdf/2604.14322v2",
+      "comment": "43rd International Conference on Machine Learning (ICML 2026)",
+      "journal_ref": "",
+      "keyword_score": 20,
+      "matched_keywords": [
+        "limit order book",
+        "order book",
+        "regime"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "已獲 ICML 接受，提出強健線上隱馬可夫模型，配備極限訂單簿實證。",
+      "summary": {
+        "title_zh": "雙重離群值強健的線上無限隱馬可夫模型",
+        "verdict": "提出 BR-iHMM 演算法以處理串流離群值，預測誤差最高降低 67%。",
+        "problem": "串流資料常包含離群值且模型設定易有誤，傳統線上無限隱馬可夫模型缺乏強健的更新機制。",
+        "method": "基於廣義貝氏推論與後驗影響函數建立強健更新規則，並在限價單簿、電力需求與合成高維線性系統上進行實證。",
+        "findings": "BR-iHMM 將一步前瞻預測誤差相較於其他線上貝氏方法降低達 67%，並在強健性與體制轉換適應性之間取得平衡。",
+        "implication": "適用於高雜訊環境下的即時預測與線上學習，但需透過額外參數來平衡適應延遲。",
+        "caveats": "強制引入強健性無可避免地會導致體制轉換時的適應延遲。",
+        "practicality": 4,
+        "tags": [
+          "隱馬可夫模型",
+          "貝氏推論",
+          "限價單簿",
+          "線上學習",
+          "強健統計"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.19225",
+      "title": "FinTradeBench: A Financial Reasoning Benchmark for LLMs",
+      "authors": [
+        "Yogesh Agrawal",
+        "Aniruddha Dutta",
+        "Md Mahadi Hasan",
+        "Santu Karmaker",
+        "Aritra Dutta"
+      ],
+      "abstract": "Financial analysis requires reasoning over heterogeneous signals, including company fundamentals from regulatory filings and trading signals derived from market prices. However, existing financial benchmarks focus almost exclusively on regulatory filings, neglecting market dynamics and cross-signal interactions. We introduce FinTradeBench, a benchmark of 1,400 questions covering NASDAQ-100 stocks over a ten-year window. To holistically evaluate financial reasoning, FinTradeBench includes questions in three reasoning categories: fundamentals-focused, trading-signal-focused, and hybrid questions that require cross-signal reasoning. Our benchmark starts with 150 expert-authored seed questions, which are then scaled to 1400. To ensure reliable evaluation, we create a Core400 subset in which every item is expert-reviewed. In zero-shot (No-RAG) response generation, we observe that all models perform substantially worse on trading-focused questions compared to fundamental-focused questions. To identify failure causes, we evaluate LLMs under controlled settings including retrieval-based baselines, tool-assisted computation, oracle conditions, and time-series-specialized pipelines. LLMs' capabilities to do computation and evidence selection contribute most to reasoning failures. Additionally, retrieval significantly improves trading-signal reasoning but does not improve fundamental reasoning, where identifying relevant signals remains the dominant failure mode. Finally, rather than relying on a small, fine-tuned model for time-series reasoning, it is better to summarize the time-series data and leverage LLMs' reasoning capabilities.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE",
+        "cs.AI",
+        "cs.CL",
+        "cs.IR",
+        "q-fin.CP"
+      ],
+      "published": "2026-03-19T17:59:41Z",
+      "updated": "2026-10-13T17:10:20Z",
+      "abs_url": "https://arxiv.org/abs/2603.19225",
+      "pdf_url": "https://arxiv.org/pdf/2603.19225v6",
+      "comment": "8 pages main text, 36 pages total (including references and appendix). 9 figures, 31 tables. Preprint under review. Code and data will be made available upon publication",
+      "journal_ref": "",
+      "keyword_score": 19,
+      "matched_keywords": [
+        "trading signal",
+        "llm",
+        "stock"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "建立金融推理基準測試 FinTradeBench，分析 LLM 失敗原因。",
+      "summary": {
+        "title_zh": "FinTradeBench：針對大型語言模型的金融推理基準",
+        "verdict": "提出涵蓋基本面與市場動態的金融推理基準，發現 LLM 在處理交易訊號與數值計算時表現顯著較差。",
+        "problem": "現有金融評測基準多數僅關注監管申報文件，忽略了市場動態與跨訊號的互動推理。",
+        "method": "使用涵蓋 NASDAQ-100 股票、為期十年的 1,400 道題目（包含 400 道專家審查的核心子集），評估 LLM 在零樣本與各種控制設定下的表現。",
+        "findings": "所有模型在交易導向問題上的表現均顯著劣於基本面問題。運算能力與證據選擇是導致推理失敗的主要原因，且檢索機制雖能提升交易訊號推理，卻對基本面推理無助。",
+        "implication": "交易策略開發者在利用 LLM 處理時序資料時，應將時序資料進行摘要後交由 LLM 推理，而非依賴微調的小型時序模型。",
+        "caveats": "評估主要針對零樣本與特定控制設定，未深入探討完整交易成本下的實盤績效。",
+        "practicality": 3,
+        "tags": [
+          "LLM",
+          "Alpha",
+          "基準測試",
+          "自然語言處理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.03272",
+      "title": "Artificial Intelligence and Systemic Risk: A Unified Model of Performative Prediction, Algorithmic Herding, and Cognitive Dependency in Financial Markets",
+      "authors": [
+        "Shuchen Meng",
+        "Xupeng Chen"
+      ],
+      "abstract": "We develop a unified model in which AI adoption in financial markets generates systemic risk through three mutually reinforcing channels: performative prediction, algorithmic herding, and cognitive dependency. Within an extended rational expectations framework with endogenous adoption, we derive an equilibrium systemic risk coupling $r(φ) = φρβ/λ'(φ)$, where $φ$ is the AI adoption share, $ρ$ the algorithmic signal correlation, $β$ the performative feedback intensity, and $λ'(φ)$ the endogenous effective price impact. Because $λ'(φ)$ is decreasing in $φ$, the coupling is convex in adoption, implying that the systemic risk multiplier $M = (1 - r)^{-1}$ grows superlinearly as AI penetration increases. The model is developed in three layers. First, endogenous fragility: market depth is decreasing and convex in AI adoption. Second, embedding the convex coupling within a supermodular adoption game produces a saddle-node bifurcation into an algorithmic monoculture. Third, cognitive dependency as an endogenous state variable yields an impossibility theorem (hysteresis requires dynamics beyond static frameworks) and a channel necessity theorem (each channel is individually necessary). Empirical validation uses the complete universe of SEC Form 13F filings (99.5 million holdings, 10,957 institutional managers, 2013--2024) with a Bartik shift-share instrument (first-stage $F = 22.7$). The model implies tail-loss amplification of 18--54%, economically significant relative to Basel III countercyclical buffers.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "cs.AI",
+        "cs.GT",
+        "q-fin.GN"
+      ],
+      "published": "2026-03-23T06:47:55Z",
+      "updated": "2026-03-23T06:47:55Z",
+      "abs_url": "https://arxiv.org/abs/2604.03272",
+      "pdf_url": "https://arxiv.org/pdf/2604.03272v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 17,
+      "matched_keywords": [
+        "price impact",
+        "empirical"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "建立 AI 世代金融系統性風險的統一模型，並使用龐大 13F 申報資料進行實證。",
+      "summary": {
+        "title_zh": "人工智慧與系統性風險：金融市場中預測反饋、演算法群聚與認知依賴的統一模型",
+        "verdict": "建構包含預測反饋、演算法群聚與認知依賴的統一模型，證實 AI 滲透率提高會導致超線性成長的系統性風險。",
+        "problem": "探討金融市場採用 AI 如何透過多重強化管道產生系統性風險，並分析其對市場脆弱性的影響。",
+        "method": "運用擴展的理性預期框架與內生採用模型，並使用美國證券交易委員會 13F 申報資料庫（2013年至2024年，包含 9950 萬筆持倉與 10957 家機構經理人）進行 Bartik 差分工具變數實證檢定。",
+        "findings": "模型顯示系統性風險乘數隨 AI 滲透率增加而呈超線性成長。實證結果表明，尾端損失放大幅度達 18% 至 54%，相對於巴塞爾協定 III 的逆景氣循環緩衝資本具有經濟顯著性。",
+        "implication": "機構在導入 AI 模型時需考量群聚效應與市場深度下降的隱性成本，不能僅評估單一策略的績效。",
+        "caveats": "模型依賴特定的理性預期與博弈假設，動態認知依賴的長期滯後效應仍難以完全量化。",
+        "practicality": 2,
+        "tags": [
+          "系統性風險",
+          "人工智慧",
+          "演算法群聚",
+          "市場微結構",
+          "量化研究"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
