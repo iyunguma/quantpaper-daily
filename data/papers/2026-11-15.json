@@ -1,0 +1,517 @@
+{
+  "date": "2026-11-15",
+  "generated_at": "2026-11-15T10:43:54+08:00",
+  "scanned": 2457,
+  "eligible": 2174,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2610.12537",
+      "title": "Market Impact Estimation via Causal Foundation Models",
+      "authors": [
+        "Dennis Thumm",
+        "Ying Chen"
+      ],
+      "abstract": "When a trader executes a large order, the relevant question is not \\emph{what will the price be?} but \\emph{what would the price have been had I not traded?} Market impact is thus a causal quantity, yet classical models (Almgren--Chriss, propagators) regress price on flow, which is biased whenever informed flow moves prices through information as well as trading. We present a proof-of-concept \\emph{Causal Market Simulator}: a continuous-time causal prior-data fitted network (PFN) trained on a synthetic market prior in which a hidden informational flow confounds the flow--price relation by construction, with confounding strength an exact per-episode knob. On this prior, the naive estimator's bias follows a closed form we confirm empirically (up to 68\\% overestimation), while the PFN tracks the unbiased true-parameter oracle at high confounding. Its \\emph{do-ablated twin}, the same model with the intervention inputs removed, collapses onto the pre-window mean. Zero-shot, the model responds at the ground-truth scale to metaorders in an ABIDES limit-order book (+0.38 pre-onset standard deviations against seed-replay counterfactuals), and its intervention response replicates on about 2,300 detected flow bursts in BTC/ETH/SOL perpetuals and 3,800 on Nasdaq equities, evidence consistent with, though not proof of, causal transfer. Off-prior the response degrades gracefully, and split-conformal recalibration repairs interval calibration. Transfer hinges on encoding the metaorder as added flow rather than a clamped price level, not on more training. A recurrent state-space variant closes the remaining shape gap: its impact accrues over execution duration where the transformer's stays flat, raising the correlation with measured metaorder impact from +0.68 to between +0.92 and +0.96, at the cost of weaker on-prior deconfounding that traces to the training recipe rather than to recurrence.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CE",
+        "q-fin.TR"
+      ],
+      "published": "2026-10-08T13:29:39Z",
+      "updated": "2026-11-11T18:06:40Z",
+      "abs_url": "https://arxiv.org/abs/2610.12537",
+      "pdf_url": "https://arxiv.org/pdf/2610.12537v2",
+      "comment": "In 7th ACM International Conference on AI in Finance (ICAIF '26), November 14-17, 2026, Milan, Italy",
+      "journal_ref": "",
+      "keyword_score": 12,
+      "matched_keywords": [
+        "order book",
+        "transformer"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用因果基礎模型估計市場衝擊，已獲ICAIF 2026接受，方法創新。",
+      "summary": {
+        "title_zh": "透過因果基礎模型進行市場衝擊估計",
+        "verdict": "利用因果基礎模型解決資訊混淆帶來的市場衝擊估計偏差，零樣本遷移至加密貨幣與美股實證有效。",
+        "problem": "傳統的市場衝擊模型將價格對訂單流進行迴歸，當受資訊驅動的知情訂單流同時影響價格時，會產生估計偏差。市場衝擊本質上為因果量，需要排除混淆因素。",
+        "method": "提出一個連續時間因果 Prior-Data Fitted Network（PFN），在由合成市場先驗資料訓練的模型。測試環境包含 ABIDES 限價單簿模擬，以及約 2,300 筆加密貨幣（BTC/ETH/SOL）永續合約與 3,800 筆那斯達克股票的實際流動性爆發資料。",
+        "findings": "在合成資料中，樸素估計量的偏差高達 68% 的過度估計，而 PFN 在高度混淆下仍能貼近真實參數。在 ABIDES 模擬中展現 +0.38 個前置標準差的零樣本反應，且遞迴狀態空間變體的元訂單衝擊相關係數從 +0.68 提升至 +0.92 到 +0.96 之間。",
+        "implication": "此方法可應用於真實市場的因果衝擊估計與交易執行成本評估，前提是須將元訂單編碼為附加流動性而非固定價格水準。",
+        "caveats": "遞迴狀態空間變體雖然提高了相關係數，但在先驗去混淆的能力上較弱。",
+        "practicality": 4,
+        "tags": [
+          "市場衝擊",
+          "因果推論",
+          "基礎模型",
+          "訂單流"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2512.23567",
+      "title": "Panel Coupled Matrix-Tensor Clustering Model with Applications to Asset Pricing",
+      "authors": [
+        "Liyuan Cui",
+        "Guanhao Feng",
+        "Yuefeng Han",
+        "Jiayan Li"
+      ],
+      "abstract": "We tackle the challenge of estimating grouping structures and factor loadings in asset pricing models, where traditional regressions struggle due to sparse data and high noise. Existing approaches, such as those using fused penalties and multi-task learning, often enforce coefficient homogeneity across cross-sectional units, reducing flexibility. Clustering methods (e.g., spectral clustering, Lloyd's algorithm) achieve consistent recovery under specific conditions but typically rely on a single data source. To address these limitations, we introduce the Panel Coupled Matrix-Tensor Clustering (PMTC) model, which simultaneously leverages a characteristics tensor and a return matrix to identify latent asset groups. By integrating these data sources, we develop computationally efficient tensor clustering algorithms that enhance both clustering accuracy and factor loading estimation. Simulations demonstrate that our methods outperform single-source alternatives in clustering accuracy and coefficient estimation, particularly under moderate signal-to-noise conditions. Empirical application to U.S. equities demonstrates the practical value of PMTC, yielding higher out-of-sample total $R^2$ and economically interpretable variation in factor exposures.",
+      "primary_category": "stat.ME",
+      "categories": [
+        "stat.ME",
+        "econ.EM"
+      ],
+      "published": "2025-12-29T16:08:26Z",
+      "updated": "2025-12-29T16:08:26Z",
+      "abs_url": "https://arxiv.org/abs/2512.23567",
+      "pdf_url": "https://arxiv.org/pdf/2512.23567v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 13,
+      "matched_keywords": [
+        "out-of-sample",
+        "cross-sectional",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出面板矩陣張量分群模型應用於資產定價，實證樣本外R2佳。",
+      "summary": {
+        "title_zh": "應用於資產定價的面板耦合矩陣張量分群模型",
+        "verdict": "結合特徵張量與報酬矩陣進行資產分群，提升模型準確度與樣本外解釋力。",
+        "problem": "傳統資產定價迴歸在處理高雜訊與稀疏資料時表現不佳，現有方法常假設橫斷面係數同質性或僅依賴單一資料源，缺乏彈性。",
+        "method": "提出面板耦合矩陣張量分群模型（PMTC），同時利用特徵張量與報酬矩陣識別潛在資產群組，開發具計算效率的張量分群演算法。應用於美國股票市場實證。",
+        "findings": "模擬顯示該方法在分群準確度與係數估計上優於單一資料源替代方案，特別是在中等訊雜比條件下表現更佳。美股實證應用顯示，PMTC 能產生較高的樣本外總 $R^2$ 以及具經濟解釋力的因子曝險變異。",
+        "implication": "可應用於資產定價與風格分群，透過整合多源特徵與報酬資料來改善因子負荷量估計。",
+        "caveats": "實證中未報告具體的夏普值或明確的交易成本考量。",
+        "practicality": 3,
+        "tags": [
+          "資產定價",
+          "張量分群",
+          "機器學習",
+          "因子模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.23223",
+      "title": "Stealing profits: Spread-based temporal hierarchy forecasting for day-ahead electricity markets",
+      "authors": [
+        "Arkadiusz Lipiecki",
+        "Nikolaos Kourentzes",
+        "Rafal Weron"
+      ],
+      "abstract": "Day-ahead electricity price forecasts support trading and storage decisions, but for battery arbitrage predicting intraday price spreads is more relevant than predicting individual hourly prices. Here we show that a temporal hierarchy forecasting (THieF) framework that jointly reconciles forecasts of hourly electricity prices and all intraday price spreads consistently improves performance across two major European electricity markets and three different forecasting architectures. Using five years of out-of-sample data from Germany and Spain, we obtain accuracy improvements of up to 19.7% and profit gains of up to 10.4% relative to unreconciled hourly price forecasts. The gains persist even for a highly accurate pretrained TabPFN foundation model. Our results demonstrate that exploiting coherent relationships between economically relevant forecasting targets can improve both predictive accuracy and decision value, and that better statistical forecasts do not necessarily imply better economic decisions.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "cs.LG",
+        "econ.EM"
+      ],
+      "published": "2026-09-19T21:41:59Z",
+      "updated": "2026-09-19T21:41:59Z",
+      "abs_url": "https://arxiv.org/abs/2609.23223",
+      "pdf_url": "https://arxiv.org/pdf/2609.23223v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 12,
+      "matched_keywords": [
+        "out-of-sample"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用價差時間階層預測改善電力市場套利決策，實證利潤提升顯著。",
+      "summary": {
+        "title_zh": "竊取利潤：基於價差的時間階層預測應用於次日前電力市場",
+        "verdict": "結合時間階層預測與價差模型能有效提升電力市場中電池套利利潤。",
+        "problem": "電池套利更關注日內價差而非個別小時價格，但傳統預測未利用兩者間的經濟一致性。現有方法常獨立預測小時價格，忽視了階層關係對交易決策的影響。",
+        "method": "採用時間階層預測架構聯合調和小時價格與日內價差預測。使用德國與西班牙兩大歐洲電力市場的五年樣本外資料，涵蓋三種預測架構與 TabPFN 基礎模型。",
+        "findings": "相較於未調和的小時價格預測，準確度提升高達 19.7%，利潤增長高達 10.4%。此效用在 TabPFN 模型中同樣持續，證實利用經濟目標的相干關係能增進決策價值。",
+        "implication": "適用於儲能與電池套利策略，強調交易目標的經濟價值勝過單純追求統計誤差最小化。團隊可將此調和框架套用到現有的價差預測模型中。",
+        "caveats": "僅針對歐洲特定電力市場進行測試，其效益可能因不同市場結構而異。",
+        "practicality": 5,
+        "tags": [
+          "時間序列",
+          "電力市場",
+          "電池套利",
+          "階層預測"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.13435",
+      "title": "A Learnable Wavelet Transformer for Long-Short Equity Trading and Risk-Adjusted Return Optimization",
+      "authors": [
+        "Shuozhe Li",
+        "Du Cheng",
+        "Leqi Liu"
+      ],
+      "abstract": "Learning profitable intraday trading policies from financial time series is challenging due to heavy noise, non-stationarity, and strong cross-sectional dependence among related assets. We propose \\emph{WaveLSFormer}, a learnable wavelet-based long-short Transformer that jointly performs multi-scale decomposition and return-oriented decision learning. Unlike standard time-series forecasting that optimizes prediction error and typically requires a separate position-sizing or portfolio-construction step, our model directly outputs a market-neutral long/short portfolio and is trained end-to-end on a trading objective with risk-aware regularization. Specifically, a learnable wavelet front-end generates low-/high-frequency components via an end-to-end trained filter bank, guided by spectral regularizers that encourage stable and well-separated frequency bands. To fuse multi-scale information, we introduce a low-guided high-frequency injection (LGHI) module that refines low-frequency representations with high-frequency cues while controlling training stability. The model outputs a portfolio of long/short positions that is rescaled to satisfy a fixed risk budget and is optimized directly with a trading objective and risk-aware regularization. Extensive experiments on five years of hourly data across six industry groups, evaluated over ten random seeds, demonstrate that WaveLSFormer consistently outperforms MLP, LSTM and Transformer backbones, with and without fixed discrete wavelet front-ends. On average in all industries, WaveLSFormer achieves a cumulative overall strategy return of $0.607 \\pm 0.045$ and a Sharpe ratio of $2.157 \\pm 0.166$, substantially improving both profitability and risk-adjusted returns over the strongest baselines.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "q-fin.CP"
+      ],
+      "published": "2026-01-19T22:41:31Z",
+      "updated": "2026-03-12T00:44:46Z",
+      "abs_url": "https://arxiv.org/abs/2601.13435",
+      "pdf_url": "https://arxiv.org/pdf/2601.13435v4",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 28,
+      "matched_keywords": [
+        "sharpe ratio",
+        "high-frequency",
+        "transformer",
+        "cross-sectional"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出可學習的小波 Transformer 模型進行長短倉交易與報酬最佳化。",
+      "summary": {
+        "title_zh": "應用於多空股票交易與風險調整報酬最佳化的可學習小波 Transformer",
+        "verdict": "提出 WaveLSFormer 端到端多空交易模型，平均夏普值達 2.157。",
+        "problem": "金融時間序列具備高雜訊、非平穩性與跨資產相依性，傳統預測與部位配置往往脫節。直接最佳化預測誤差未必能轉化為實際交易獲利。",
+        "method": "採用 WaveLSFormer 模型，結合可學習小波前端與低引導高頻注入模組。使用 6 個產業群組的 5 年小時資料，以端到端交易目標與風險感知正規化進行訓練。",
+        "findings": "在 6 個產業群組的 5 年測試中，平均累積策略報酬為 0.607（±0.045），夏普值為 2.157（±0.166），顯著優於 MLP、LSTM 與傳統 Transformer 等基準。",
+        "implication": "模型直接輸出市場中立的多空投資組合並納入風險預算，可直接應用於日內多空股票交易。前提是需要實際評估交易成本與滑價的影響。",
+        "caveats": "論文未明確報告扣除交易成本後的實際淨績效。",
+        "practicality": 4,
+        "tags": [
+          "小波轉換",
+          "Transformer",
+          "多空策略",
+          "機器學習",
+          "投資組合最佳化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.04555",
+      "title": "CosmosAlpha: Multi-Relational Graph Search with Pareto-Guided Exploration for LLM-Driven Alpha Mining",
+      "authors": [
+        "Zhan-He Wang",
+        "Zi-Yang Lang",
+        "Yi-Yang Li",
+        "Qing-Yu Lan",
+        "Yun-Song Piao"
+      ],
+      "abstract": "Discovering predictive alpha factors from noisy financial data is a fundamental yet challenging problem in quantitative finance. LLM-driven formulaic alpha mining offers an attractive paradigm by combining interpretable symbolic expressions with iterative generation and refinement guided by quantitative feedback. However, existing generation-centric and tree-based search strategies primarily organize factors through generation lineage, leaving structural and statistical relationships across search branches underutilized. Consequently, information remains localized along parent--child trajectories, which can confine exploration to redundant regions. Moreover, effective factor discovery must account for multiple distinct objectives that cannot be adequately captured by a single search criterion. We introduce CosmosAlpha, a graph-based LLM factor-mining framework that represents discovered factors as a multi-relational graph encoding generation lineage, expression-structure similarity, and cross-sectional exposure correlation. A Graph Flow mechanism propagates search utilities across the graph, allowing each factor to be assessed using relational evidence from nearby factors rather than in isolation. Pareto-guided selection jointly considers quality, fertility and diversity, explicitly modeling their trade-offs within a multi-objective search framework. Across CSI 300 and CSI 500, CosmosAlpha-Graph achieves the best mean rank over seven predictive and portfolio metrics and outperforms its controlled CosmosAlpha-MCTS counterpart on every reported metric, showing a consistent advantage for relational graph search in LLM-driven factor mining. The source code is available at https://github.com/wzhmtldswz/CosmosAlpha",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-11-03T09:22:52Z",
+      "updated": "2026-11-03T09:22:52Z",
+      "abs_url": "https://arxiv.org/abs/2611.04555",
+      "pdf_url": "https://arxiv.org/pdf/2611.04555v1",
+      "comment": "41 pages, 3 figures",
+      "journal_ref": "",
+      "keyword_score": 27,
+      "matched_keywords": [
+        "llm",
+        "cross-sectional",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "使用 CSI 300/500真實資料，圖形化多目標因子探勘。",
+      "summary": {
+        "title_zh": "CosmosAlpha：以多重關係圖與柏拉圖導向探索實現 LLM 驅動之 Alpha 因子挖掘",
+        "verdict": "以多重關係圖與柏拉圖導向搜尋改善 LLM 因子挖掘，在中證指數實證中勝過樹狀搜尋。",
+        "problem": "現有基於生成與樹狀結構的因子搜尋策略僅依循血緣關係，忽略分支間的結構與統計關聯性，且單一搜尋準則無法滿足多重目標。",
+        "method": "提出 CosmosAlpha 框架建構多重關係圖編碼因子血緣、結構相似度與暴露相關性，結合圖流動機制與多目標柏拉圖選擇，於中證 300 與中證 500 進行實證。",
+        "findings": "CosmosAlpha-Graph 取得七項預測與投資組合指標的最佳平均排名，並在所有報告指標上優於 CosmosAlpha-MCTS，但論文未報告具體的報酬率數值。",
+        "implication": "可用於自動化 Alpha 因子挖掘，透過圖結構突破傳統樹狀搜尋侷限以平衡多重目標，需建置關聯圖與多目標評估機制。",
+        "caveats": "論文未報告具體的績效改善幅度數字，其實際計算成本與落地效率尚待評估。",
+        "practicality": 4,
+        "tags": [
+          "大型語言模型",
+          "Alpha因子挖掘",
+          "圖搜尋",
+          "多目標最佳化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.14498",
+      "title": "Improving Machine Learning Performance with Synthetic Augmentation",
+      "authors": [
+        "Mel Sohm",
+        "Charles Dezons",
+        "Sami Sellami",
+        "Oscar Ninou",
+        "Axel Pincon"
+      ],
+      "abstract": "Synthetic augmentation is increasingly used to mitigate data scarcity in financial machine learning, yet its statistical role remains poorly understood. We formalize synthetic augmentation as a modification of the effective training distribution and show that it induces a structural bias--variance trade-off: while additional samples may reduce estimation error, they may also shift the population objective whenever the synthetic distribution deviates from regions relevant under evaluation. To isolate informational gains from mechanical sample-size effects, we introduce a size-matched null augmentation and a finite-sample, non-parametric block permutation test that remains valid under weak temporal dependence. We evaluate this framework in both controlled Markov-switching environments and real financial datasets, including high-frequency option trade data and a daily equity panel. Across generators spanning bootstrap, copula-based models, variational autoencoders, diffusion models, and TimeGAN, we vary augmentation ratio, model capacity, task type, regime rarity, and signal-to-noise. We show that synthetic augmentation is beneficial only in variance-dominant regimes, such as persistent volatility forecasting-while it deteriorates performance in bias-dominant settings, including near-efficient directional prediction. Rare-regime targeting can improve domain-specific metrics but may conflict with unconditional permutation inference. Our results provide a structural perspective on when synthetic data improves financial learning performance and when it induces persistent distributional distortion.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "published": "2026-04-16T00:23:01Z",
+      "updated": "2026-04-16T00:23:01Z",
+      "abs_url": "https://arxiv.org/abs/2604.14498",
+      "pdf_url": "https://arxiv.org/pdf/2604.14498v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 17,
+      "matched_keywords": [
+        "high-frequency",
+        "volatility forecasting",
+        "regime"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "分析金融機器學習中合成資料擴增的偏差-變異權衡，實證嚴謹且具警示意義。",
+      "summary": {
+        "title_zh": "利用合成資料擴增提升機器學習效能",
+        "verdict": "合成資料擴增在變異主導的情境下有效，但在偏差主導的設定中會惡化效能。",
+        "problem": "金融機器學習中常使用合成資料擴增來緩解資料稀缺，但其統計角色與帶來的結構性偏差與變異取捨尚不明確。",
+        "method": "使用自主抽樣、Copula 模型、變分自動編碼器、擴散模型與 TimeGAN 等生成器，並在 Markov-switching 環境、高頻選擇權交易資料及每日股票面板資料進行評估。",
+        "findings": "論文未報告具體績效數字。結果顯示合成資料擴增僅在持續性波動率預測等變異主導體制中有益，但在接近效率市場的方向預測等偏差主導設定中會劣化表現。",
+        "implication": "在實際交易中應用合成資料前，需先釐清任務屬於變異主導或偏差主導，避免引入持續性的分佈扭曲。",
+        "caveats": "稀有體制目標設定雖然能改善特定領域指標，但可能與無條件置換推論產生衝突。",
+        "practicality": 3,
+        "tags": [
+          "機器學習",
+          "合成資料",
+          "資料擴增",
+          "波動率預測"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.22839",
+      "title": "Basis-Only Funding Is Not Dividend Fair: Settlement Design in Crypto Equity Perpetuals",
+      "authors": [
+        "Donghwa Seo",
+        "Doohwi Cha",
+        "Seunghan Son",
+        "Juyeong Lee",
+        "Minsuk Sung",
+        "Minjae Lee"
+      ],
+      "abstract": "Crypto venues increasingly list perpetual futures on equities and other real-world assets (RWAs), which trade continuously yet reference dividend-paying stocks: a long equity perpetual marked to the ex-dividend cash price bears the ex-dividend drop without receiving the dividend. We ask whether the premium-index funding architecture these venues run -- funding set from the contemporaneous basis $e_t=P_t-S_t$ rather than a carry target -- can replicate shareholder cash flows for traders entering and exiting at arbitrary times. It cannot. Funding serves two roles that coincide for non-dividend crypto assets but split apart for equities: basis control and settlement. We give the fair-funding identity, cast timing fairness as an optimal-stopping condition, and characterize when the basis is a sufficient statistic for the fair target. The decisive obstruction is measure-theoretic: a predictable dividend is an atom, and no absolutely continuous funding path can replicate an atom over holding intervals even in the weak limit, so fairness must match the atom with an atom -- an event credit. Exchange-native data confirm this: at each covered ex-date one venue posts a discrete funding atom equal to $-D/(\\mathrm{Mark}-D)$ while a standard premium-index venue posts none, transferring the dividend across venues -- from native funding alone, with no external spot.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.PR"
+      ],
+      "published": "2026-10-16T02:30:09Z",
+      "updated": "2026-10-16T02:30:09Z",
+      "abs_url": "https://arxiv.org/abs/2610.22839",
+      "pdf_url": "https://arxiv.org/pdf/2610.22839v1",
+      "comment": "16 pages, 4 figures. Submitted manuscript of a paper accepted at MARBLE 2026 (7th International Conference on Mathematical Research for Blockchain Economy)",
+      "journal_ref": "",
+      "keyword_score": 16,
+      "matched_keywords": [
+        "stock",
+        "futures"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探讨加密股權永續合約的股利結算機制設計，已獲MARBLE 2026接受。",
+      "summary": {
+        "title_zh": "純基差資金費率並非股利公平：加密貨幣權益永續合約的結算設計",
+        "verdict": "傳統的基差資金費率無法在股利發放時維持公平，必須透過事件信用（event credit）來補償股利。",
+        "problem": "加密貨幣交易所的權益永續合約以除息現貨價格標記，多頭會承受除息跌幅卻領不到股利，探討現行的基差資金費率架構是否能複製股東現金流。",
+        "method": "運用數學模型分析基差與資金費率的關係，並以交易所實際資料進行實證檢驗。",
+        "findings": "研究發現預測性股利為一個原子（atom），絕對連續的資金費率路徑無法複製原子，交易所資料證實部分交易所會發布離散的資金費率原子來轉移股利。",
+        "implication": "交易加密貨幣權益永續合約時，必須注意交易所的資金費率設計是否包含股利事件信用，否則會承受隱含的除息損失。",
+        "caveats": "未報告具體的交易績效數字或夏普值改善幅度。",
+        "practicality": 4,
+        "tags": [
+          "永續合約",
+          "股利",
+          "市場微結構",
+          "資金費率"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.07841",
+      "title": "A Nontrivial Upper Bound on the Out-of-Sample $R^2$ in Return Forecasting",
+      "authors": [
+        "Cheng Zhang"
+      ],
+      "abstract": "This study establishes a nontrivial upper bound on the out-of-sample $R^2$ ($R^2_{\\text{OOS}}$) in return forecasting. In particular, we define a coin-flip oracle model that, under the same directional accuracy, theoretically outperforms practical models in terms of MSE. The $R^2_{\\text{OOS}}$ of the oracle model, whose analytical expression is a quadratic function of directional accuracy, can therefore serve as a tractable upper bound on the actual $R^2_{\\text{OOS}}$. Empirical analyses across multiple forecasting scenarios reveal that the $R^2_{\\text{OOS}}$ values of common predictive models are fundamentally bounded by this quadratic function.",
+      "primary_category": "econ.EM",
+      "categories": [
+        "econ.EM",
+        "q-fin.ST",
+        "stat.AP"
+      ],
+      "published": "2026-02-08T06:50:28Z",
+      "updated": "2026-04-06T14:43:30Z",
+      "abs_url": "https://arxiv.org/abs/2602.07841",
+      "pdf_url": "https://arxiv.org/pdf/2602.07841v3",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 15,
+      "matched_keywords": [
+        "out-of-sample",
+        "empirical"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "推導報酬預測中樣本外判定係數的非 trivial 上限，對檢驗預測模型極具參考價值。",
+      "summary": {
+        "title_zh": "報酬預測中樣本外 $R^2$ 的非平凡上界",
+        "verdict": "提出基於方向準確度的樣本外 $R^2$ 理論上界，發現常見預測模型的績效受此二次函數限制。",
+        "problem": "報酬預測中，樣本外 $R^2$ 的理論極限缺乏明確基準，導致難以判斷模型效能是否已達極限。",
+        "method": "透過建立一個在相同方向準確度下均方誤差表現更優的基準模型，推導出以方向準確度為自變數的二次函數作為樣本外 $R^2$ 上界，並於多個預測情境中進行實證。",
+        "findings": "實證結果顯示，常見預測模型的樣本外 $R^2$ 數值確實受此二次函數限制；論文未報告具體的財務績效數字。",
+        "implication": "可用此理論上界來檢視 Alpha 因子或預測模型的極限，避免無謂的過度最佳化。前提是需要準確評估方向準確度。",
+        "caveats": "該上界依賴特定的基準模型假設，可能無法完全適用於所有複雜的市場結構與非線性動態。",
+        "practicality": 3,
+        "tags": [
+          "報酬預測",
+          "統計檢定",
+          "模型評估",
+          "Alpha 因子"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.36899",
+      "title": "Depositing More Should Not Earn Less: Supplier Income Monotonicity and Rate Curve Design in Pooled Lending Markets",
+      "authors": [
+        "Ahzam Khan",
+        "Cavey Cool"
+      ],
+      "abstract": "In utilization dependent interest rate models, adding liquidity can reduce a supplier's total interest income even as the supplier's balance increases. A supplier holding a fraction $α$ of final pool supply keeps income nondecreasing with a marginal deposit exactly when $α(1+η)\\leq1$, where $η$ is the elasticity of the borrow rate with respect to utilization. When the condition fails, the supplier can instead raise its income by withdrawing, which pushes utilization further up. On two public Drift markets, a lender held more of the pool than the curve protected in at least one hour in nine on SOL and one in thirteen on USDC. A protocol turns this into a design constraint by choosing, at each utilization, the largest supplier share it intends to protect. That choice caps the elasticity, and integrating the cap describes every admissible curve. Protecting the same share at every utilization gives a power law boundary, and protecting every fresh depositor gives a hyperbolic one. On a multiple kink USDT market, compliant repairs can lower or raise supplier income, because the constraint governs how income responds to a deposit and not the price level.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-10-27T09:31:12Z",
+      "updated": "2026-10-27T09:31:12Z",
+      "abs_url": "https://arxiv.org/abs/2610.36899",
+      "pdf_url": "https://arxiv.org/pdf/2610.36899v1",
+      "comment": "28 pages, 21 figures. Code, Lean proofs and data: https://github.com/0xahzam/supplier-monotonicity",
+      "journal_ref": "",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "liquidity"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探討質押借貸市場的費率曲線設計與供應商所得單調性，結合賽局與真實鏈上資料分析。",
+      "summary": {
+        "title_zh": "存越多不應賺越少：集中式借貸市場中的流動性提供者收入單調性與利率曲線設計",
+        "verdict": "探討利用率依賴型利率模型中流動性提供者存越多賺越少的異常現象，並提出利率曲線設計的修復條件。",
+        "problem": "在現行利用率依賴的利率模型中，增加流動性可能會導致流動性提供者的總利息收入減少，產生違背直覺的激勵機制。",
+        "method": "透過數學推導找出供應商收入隨邊際存款遞增的條件 $α(1+η)\rceil1$，並分析 Solana 上兩個公開 Drift 市場的歷史資料與多轉折點 USDT 市場。",
+        "findings": "實證發現，在 SOL 市場中，至少有一小時中有九分之一的情況、USDC 市場則是十三分之一，有貸方持有的份額超過利率曲線所能保護的範圍。未報告具體績效數字。",
+        "implication": "協議設計者可透過此條件將最大受保護供應商份額轉化為設計限制，藉此決定容許的利率曲線。這有助於修正借貸池的激勵機制，避免流動性提供者因撤資推高利用率而獲利。",
+        "caveats": "此限制規範的是收入對存款的反應而非價格水準，因此合規修復可能會降低或提高供應商的實際收入。",
+        "practicality": 4,
+        "tags": [
+          "去中心化金融",
+          "借貸市場",
+          "利率模型",
+          "市場微結構",
+          "流動性提供"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.21659",
+      "title": "When Does \"Post-Call\" Begin? An Availability Contract for Earnings-Call NLP Benchmarks",
+      "authors": [
+        "Xiaoyu Ma",
+        "Kelvin J. L. Koa",
+        "Yuncong Liu",
+        "Ke-Wei Huang"
+      ],
+      "abstract": "Corporate financial disclosures often unfold over time, with announcements, prepared remarks, and discussion spanning multiple high-frequency return intervals. Financial NLP benchmarks can therefore suffer from a within-event timing mismatch when the prediction target begins before the textual or audio input used by a model could be complete. Chronological train--test splits do not prevent this mismatch, because it occurs inside individual events rather than across samples. We introduce an Availability Contract, which requires a benchmark to state the input boundary, evidence for input availability, the outcome start, and the claims supported by that evidence. We apply this framework to 552 earnings calls from 24 firms. For each call, we hold the return endpoint fixed and compare the previous close, a documentary call-start proxy, and a completion proxy based on reconstructed audio end plus a stipulated processing allowance. At this baseline, moving from the call-start proxy to the completion proxy flips return signs for 9.4% of calls. Holding completion-clock cutpoints fixed, 28.3% change quintile. In an independent release-session analysis of a public earnings-call volatility benchmark, shifting before-market target windows forward by one trading session raises three-day mean squared error by 18.1-21.4% across four frozen prediction streams, while their point rankings remain unchanged. Together, the results show that labels and losses can depend materially on the declared outcome clock even when model rankings appear stable. The Availability Contract makes this assumption explicit and ties post-input claims to the available timing evidence.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-10-15T10:40:06Z",
+      "updated": "2026-10-15T10:40:06Z",
+      "abs_url": "https://arxiv.org/abs/2610.21659",
+      "pdf_url": "https://arxiv.org/pdf/2610.21659v1",
+      "comment": "ICAIF 2026",
+      "journal_ref": "",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "high-frequency"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出財報電話會議自然語言處理基準的可用性合約，點出時間錯置問題，對回測品質極重要。",
+      "summary": {
+        "title_zh": "「會後」何時開始？財報電話會議自然語言處理基準的可用性合約",
+        "verdict": "財報電話會議 NLP 模型的事件內時間錯配會顯著影響報酬正負號與分位數，本文提出可用性合約以明確界定資料與標籤的時間邊界。",
+        "problem": "金融自然語言處理基準常因預測目標在模型輸入的文字或語音完成前就開始，導致事件內的時間錯配，且傳統的時間序列切分無法解決此問題。",
+        "method": "本文提出可用性合約架構，分析 24 家公司的 552 場財報電話會議，比較前一日收盤價、會議開始代理變數與基於語音重建完成的代理變數。",
+        "findings": "從會議開始代理變數切換至完成代理變數時，9.4% 的會議報酬正負號會反轉，28.3% 的會議分位數會改變。在波動度基準測試中，將目標視窗向前平移一個交易日會使三日均方誤差上升 18.1% 至 21.4%。",
+        "implication": "在建構財報會議文字預測模型時，必須嚴格定義輸入資料的可用時間點與標籤的起始時間，否則回測績效可能因時間錯配而失真。",
+        "caveats": "本研究主要凸顯時間定義對指標的影響，未提供完整交易策略的扣除成本實證。",
+        "practicality": 3,
+        "tags": [
+          "自然語言處理",
+          "財報電話會議",
+          "市場微結構",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
