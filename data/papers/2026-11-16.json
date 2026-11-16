@@ -1,0 +1,526 @@
+{
+  "date": "2026-11-16",
+  "generated_at": "2026-11-16T10:47:09+08:00",
+  "scanned": 2453,
+  "eligible": 2160,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2602.06198",
+      "title": "Insider Purchases Far Below the 52-Week High: Decomposing the Disclosure Reaction in Microcap Equities",
+      "authors": [
+        "Hangyi Zhao"
+      ],
+      "abstract": "Purchases reported under transaction code P on SEC Form 4 by insiders of U.S. equities with an estimated filing-date capitalization of USD 30 million to USD 500 million (13,534 lines, 1,192 issuers, 2018-2024) are followed by a first-day abnormal return that rises steeply with the stock's distance below its 52-week high: 4.13% in the quintile farthest below the high against 0.86% nearest it (two-way clustered t = 9.77); random non-event days of the same issuers show 0.14%. Five tests with decision rules fixed in advance characterize the gradient. Most of it is scale: the beaten-down stocks are 3.10 times as volatile, and with a full set of controls the raw gap fails its pre-specified bar (0.94 points, t = 2.11). Per unit of the stock's own volatility the reaction is 2.51 times as large far below the high (t = 7.49), 1.28 to 3.50 on other estimators, though a variance-weighted slope shows none. The gradient is larger than for insider sales by the same issuers and for positive earnings surprises as a class; against the strongest surprises the difference is imprecise. Dropping purchases with a concurrent 8-K leaves the raw gradient intact (t = 7.13), but the per-risk gradient no longer clears the controls (t = 2.52). The reaction runs for two to three sessions; the 29-day drift is imprecise (two-way t = 1.70) and a calendar-time portfolio that skips the first day earns no significant alpha. The analysis quantifies sensitivity to price adjustment and benchmark specification: mixing price bases misassigns run-up buckets, and carrying the estimation-window intercept supplies 57% of the 30-day gradient under that benchmark. A gradient-boosting classifier (test AUC 0.676) is indistinguishable from logistic regression. A separate large-cap extension schedules USD 29,075,559 a year of buyer-cluster flow but fails every matched-comparison gate.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.TR"
+      ],
+      "published": "2026-02-05T21:19:28Z",
+      "updated": "2026-09-24T03:15:12Z",
+      "abs_url": "https://arxiv.org/abs/2602.06198",
+      "pdf_url": "https://arxiv.org/pdf/2602.06198v2",
+      "comment": "52 pages, 5 figures, 28 tables. v2 corrects and supersedes v1: corrects its data-source, filter and robustness statements; withdraws the run-up (momentum) claim, the classifier-superiority claim and the priority claim; replaces the intercept-carrying benchmark; adds pre-specified identification tests and a separate liquid-universe extension. Appendix E lists every change",
+      "journal_ref": "",
+      "keyword_score": 12,
+      "matched_keywords": [
+        "stock",
+        "alpha"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "深入分解微型股內部人買進揭露反應，控制變數嚴謹且修正過度宣稱",
+      "summary": {
+        "title_zh": "內部人買進遠低於 52 週高點：解構微型股揭露反應",
+        "verdict": "內部人買進遠低於 52 週高點時首日超額報酬顯著較高，但多數由波動度規模解釋。",
+        "problem": "內部人買進股票時，市場的揭露反應如何隨股價距離 52 週高點的程度而變化？",
+        "method": "使用美國微型股市值 3000 萬至 5 億美元的 SEC Form 4 交易代碼 P 內部人買進資料（2018-2024 年，13,534 筆），進行計量與實證檢定。",
+        "findings": "距離 52 週高點最遠的五分位群組首日超額報酬達 4.13%，最近的群組為 0.86%（t = 9.77）；控制波動度後原始落差縮小，且 29 天的價格漂移並不顯著（t = 1.70）。",
+        "implication": "此效應主要集中在最初兩到三個交易日，略過首日的日曆時間連接埠無法賺取顯著的 Alpha。",
+        "caveats": "當控制波動度等變數後，每單位風險的斜率無法完全通過控制檢定。",
+        "practicality": 3,
+        "tags": [
+          "內部人交易",
+          "微型股",
+          "市場微結構",
+          "事件研究"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.01325",
+      "title": "PPO-HRAP: Proximal Policy Optimization with a Hybrid Regime-Aware Policy for Risk-Controlled Trading",
+      "authors": [
+        "Duong Hien Chi Kien",
+        "Thanh Trung Huynh"
+      ],
+      "abstract": "Reinforcement learning for trading often struggles to balance upside participation with drawdown control. Profit-only policies can collapse toward passive long exposure on upward-drifting assets, while aggressively risk-penalized rewards can become too defensive during volatile periods. This paper proposes PPO-HRAP, a hybrid regime-aware policy that combines Proximal Policy Optimization with an interpretable regime prior. The agent observes both market features and portfolio-state variables, receives a reward combining portfolio log return, VIX-conditioned drawdown-increase penalty, target-exposure deviation, and turnover cost, and executes a blended action between the PPO actor output and a regime-derived target exposure. On the held-out 2020-2022 SPY test window, PPO-HRAP achieves 27.62% total return, 8.48% annualized return, 0.6447 Sharpe ratio, 0.8588 Sortino ratio, and 0.4592 Calmar ratio, while reducing maximum drawdown from 34.10% for Buy and Hold to 18.47%. Across five SPY seeds, PPO-HRAP remains stable with mean total return $0.2725 \\pm 0.0109$ and mean Sharpe ratio $0.6219 \\pm 0.0565$. Single-run cross-asset tests on QQQ and DIA further show that the proposed method ranks first on total return and Sharpe ratio for all three reported assets. These results suggest that blending learned actions with a volatility-aware regime prior is a practical way to improve risk-adjusted trading behavior, although the current policy still incurs high turnover and cross-asset robustness beyond SPY remains limited to single-run evidence.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "q-fin.TR"
+      ],
+      "published": "2026-10-01T08:49:44Z",
+      "updated": "2026-10-01T08:49:44Z",
+      "abs_url": "https://arxiv.org/abs/2610.01325",
+      "pdf_url": "https://arxiv.org/pdf/2610.01325v1",
+      "comment": "8 pages, 6 figures, 8 tables. Code: https://github.com/chikien07012006/PPO_Regime-Aware-Trading",
+      "journal_ref": "",
+      "keyword_score": 27,
+      "matched_keywords": [
+        "sharpe ratio",
+        "reinforcement learning",
+        "drawdown",
+        "regime"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合 PPO 與混合體制感知策略進行風險控制交易，實證穩健。",
+      "summary": {
+        "title_zh": "PPO-HRAP：結合混合體制感知策略與近端策略最佳化的風險控制交易",
+        "verdict": "提出結合體制感知先驗的 PPO 交易策略，在 SPY 測試中有效降低最大回檔並提升夏普值。",
+        "problem": "強化學習在交易中難以平衡上檔參與與回檔控制，純利潤策略在牛市易過度曝險，而重罰風險的策略在波動期間則過於保守。",
+        "method": "採用 PPO 與可解釋的體制感知先驗相結合的混合策略。模型觀察市場特徵與投資組合狀態變數，在 SPY 資料集（2020-2022 年測試窗格）進行實證。",
+        "findings": "在 2020-2022 年 SPY 測試窗格中，PPO-HRAP 達到 27.62% 總報酬、8.48% 年化報酬、0.6447 夏普值、0.8588 Sortino 比率以及 0.4592 Calmar 比率，最大回檔從買入持有策略的 34.10% 降至 18.47%。跨資產測試顯示其在 QQQ 與 DIA 的總報酬與夏普值皆排第一。",
+        "implication": "將學習到的動作與波動率感知體制先驗進行混合，是改善風險調整後交易行為的實用方法，可直接嘗試複製並應用於 ETF 交易。",
+        "caveats": "目前策略仍會產生較高的週轉率，且 SPY 以外的跨資產穩健性證據仍限於單次執行。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "風險控制",
+          "體制轉換",
+          "演算法交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.15841",
+      "title": "Self-Supervised Auxiliary Task Discovery for Stable Reinforcement Learning in Stock Trading",
+      "authors": [
+        "Arishi Orra",
+        "Himanshu Choudhary",
+        "Manoj Thakur"
+      ],
+      "abstract": "Reinforcement learning has gained increasing attention as a data-driven approach for stock trading. However, learning a policy that is both profitable and stable remains challenging due to non-stationary market behaviour and noisy reward signals. Auxiliary tasks are often used to improve representation learning and stabilize training, yet they are usually designed manually and depend heavily on prior assumptions about targets and prediction horizons. Such fixed designs may not remain suitable across changing market regimes. In this work, we propose a self-supervised framework that automatically discovers auxiliary tasks to support reinforcement learning for stock trading. The auxiliary tasks are formulated as General Value Functions so that their predictions enrich the learned state representation and assist policy optimization. The framework consists of two networks. The main network learns the trading policy along with the auxiliary predictions, while the secondary network generates the definitions of auxiliary tasks through learned cumulants and discount factors. These tasks are updated using a meta gradient mechanism that accounts for their long-term impact on trading performance and improves training stability. We evaluate the proposed approach across four major equity indices: DJI, FTSE, Sensex, and TAIEX. The empirical results demonstrate that automatically discovered auxiliary tasks lead to more robust learning and improved trading performance compared to existing baselines.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-fin.CP",
+        "stat.ML"
+      ],
+      "published": "2026-08-16T16:20:40Z",
+      "updated": "2026-08-16T16:20:40Z",
+      "abs_url": "https://arxiv.org/abs/2608.15841",
+      "pdf_url": "https://arxiv.org/pdf/2608.15841v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 27,
+      "matched_keywords": [
+        "reinforcement learning",
+        "regime",
+        "stock",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出自監督輔助任務自動發現機制以穩定股票交易強化學習，多市場實證。",
+      "summary": {
+        "title_zh": "用於股票交易穩定強化學習的自監督輔助任務發現",
+        "verdict": "提出自動發現輔助任務的自監督強化學習框架，提升股票交易穩定性與績效。",
+        "problem": "股票交易市場具非平穩性且獎勵訊號雜訊高，導致強化學習策略難以兼顧獲利與穩定；手動設計的輔助任務亦無法適應多變的市場體制轉換。",
+        "method": "結合通用價值函數與雙網路架構，主網路負責交易策略與輔助預測，次網路透過元梯度機制動態生成輔助任務；實證涵蓋 DJI、FTSE、Sensex 與 TAIEX 四大股價指數。",
+        "findings": "實證結果顯示，自動發現的輔助任務相較於現有基準能帶來更穩健的學習過程與較佳的交易表現，但文中未報告具體的績效數字。",
+        "implication": "此方法有助於降低手動設計輔助任務的負擔，並增強強化學習在市場變遷時的適應能力，可作為策略開發的架構參考。",
+        "caveats": "論文僅展示相較基準的優勢，未提供具體績效數字及包含交易成本的實測表現。",
+        "practicality": 3,
+        "tags": [
+          "強化學習",
+          "自監督學習",
+          "股票交易",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.35887",
+      "title": "Evaluating the Predictive Validity of ICT's Accumulation-Manipulation-Distribution (AMD) Model on CME E-Mini NASDAQ-100 Futures",
+      "authors": [
+        "Veer Taylor"
+      ],
+      "abstract": "To our knowledge, this paper provides the first systematic quantitative evaluation of the ICT Accumulation-Manipulation-Distribution (AMD) model on CME E-Mini NASDAQ-100 futures (NQ). The AMD model proposes that institutional participants structure intraday price delivery in three phases: overnight accumulation in the Asian session, a deliberate false breakout during London, and directional delivery to the opposing liquidity pool during the New York morning session. Using four years of real 15-minute OHLCV data from Databento (January 2022 to July 2026), we operationalize the AMD rules into a strict mechanical strategy and analyze the statistical properties of the resulting signal across N = 484 manipulation signal days using chi-square testing, Benjamini-Hochberg multiple comparisons correction, and regime-conditional analysis. Three principal findings emerge. First, the AMD manipulation signal fires on 44% of trading days. Second, 57% of valid signals see full target delivery before the 9:40 AM New York entry window opens, revealing a structural mismatch between the model's timing assumptions and actual price delivery. Third, within this operationalization of the AMD model, no directional information beyond the daily trend regime was observed: when the signal aligns with the trend it is correct 62-71% of the time (Cohen's h = 0.23-0.43); when it opposes the trend it is correct only 25-30% of the time (Cohen's h = 0.42-0.53). All four trending-regime cells survive Benjamini-Hochberg correction. Key findings are robust to variation in the manipulation breach threshold (5-20 NQ points), Asia range filter percentile, and stop buffer. The regime-dependent signal pattern constitutes a specific, testable hypothesis for follow-on research.",
+      "primary_category": "stat.AP",
+      "categories": [
+        "stat.AP",
+        "q-fin.ST",
+        "q-fin.TR"
+      ],
+      "published": "2026-09-07T18:44:20Z",
+      "updated": "2026-09-07T18:44:20Z",
+      "abs_url": "https://arxiv.org/abs/2610.35887",
+      "pdf_url": "https://arxiv.org/pdf/2610.35887v1",
+      "comment": "25 pages, 3 figures, 7 tables",
+      "journal_ref": "",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "regime",
+        "liquidity",
+        "futures"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "對期貨機構交易模型進行嚴格定量評估，揭露時機不符問題。",
+      "summary": {
+        "title_zh": "評估 ICT 的 AMD 模型在 CME E-Mini NASDAQ-100 期貨上的預測有效性",
+        "verdict": "對 ICT 的 AMD 模型進行首次系統性量化評估，發現其方向性僅取決於日趨勢體制。",
+        "problem": "業界廣泛使用的 ICT 累積-操縱-分發模型缺乏嚴謹的量化檢驗。本研究旨在評估其在期貨市場上的預測有效性與時間假設。",
+        "method": "使用 Databento 自 2022 年 1 月至 2026 年 7 月的 4 年期真實 15 分鐘 OHLCV 資料，將 AMD 規則操作化為機械式策略，針對 NQ 期貨進行卡方檢定。",
+        "findings": "在 484 個訊號日中，57% 的有效訊號在紐約開盤前已完成目標交付。順勢時正確率為 62% 至 71%（Cohen's h = 0.23-0.43），逆勢時正確率僅 25% 至 30%（Cohen's h = 0.42-0.53）。",
+        "implication": "該模型本身無獨立的預測能力，若要套用必須結合日趨勢體制過濾訊號。",
+        "caveats": "本研究的機械式規則操作化可能無法完全涵蓋主觀交易者對 ICT 模型的所有詮釋。",
+        "practicality": 3,
+        "tags": [
+          "期貨",
+          "價格行為",
+          "量化回測",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.17223",
+      "title": "Temporal Leakage in Financial News NLP: A Multi-Architecture Audit with a Regime-Specific M&A Signal",
+      "authors": [
+        "Chenhao Xue",
+        "Raslen Guesmi",
+        "Siwei Feng",
+        "Yucheng Gong",
+        "Jacob Xavier Sundram",
+        "Jordan Pang",
+        "Lan Wang",
+        "Julian Kaljuvee"
+      ],
+      "abstract": "Financial-news direction prediction has become a popular NLP benchmark, yet reported gains depend critically on whether the train-test split is chronological or random, i.e., on temporal leakage. We audit this dependence on a 49,799-article corpus across 16 feature-model combinations spanning TF-IDF, MiniLM, FinBERT, and fine-tuned RoBERTa-large / DeBERTa-v3-large, plus separate zero/few-shot and LoRA probes of Llama-3 and Qwen2.5 LLMs: random splits inflate MCC by $1.1\\times$ to $6.5\\times$, tracking model capacity and feature richness, and end-to-end FinBERT fine-tuning re-amplifies rather than closes the gap (size-matched ratio $1.75\\times$). Conditioning on event type, mergers and acquisitions (M&A) is the only audited category with a positive locked-test signal under near-temporal chronological evaluation (TF-IDF MCC $= 0.138$ train-only, $0.068$ under train$\\cup$val refit; 10,000-permutation $p < 10^{-3}$); the signal does not transfer to FNSPID's 2009-2020 U.S. corpus, localising the headline to our 2024-2025 European-tilted M&A semantics rather than a universal predictor. Three independent role labellers converge on acquirer-tagged articles as the signal locus, a power-limited qualitative convergence rather than a hypothesis-tested asymmetry. Chronological splitting plays for financial NLP the role characteristics-purging plays for asset pricing: it strips the predictable, stale component of news and leaves a residual that is small, event-localized, and lexically shallow. We advocate leakage audits as a required disclosure for financial-NLP benchmarks.",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-08-18T00:23:25Z",
+      "updated": "2026-09-06T11:00:30Z",
+      "abs_url": "https://arxiv.org/abs/2608.17223",
+      "pdf_url": "https://arxiv.org/pdf/2608.17223v2",
+      "comment": "Paper accepted at EMNLP 2026",
+      "journal_ref": "",
+      "keyword_score": 13,
+      "matched_keywords": [
+        "llm",
+        "regime"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "EMNLP 接受，審計金融新聞自然語言處理的時間洩漏問題，方法論極具警示價值。",
+      "summary": {
+        "title_zh": "金融新聞自然語言處理中的時間洩漏：結合特定體制併購訊號的多架構審計",
+        "verdict": "隨機切分會將預測表現膨脹 1.1 到 6.5 倍，嚴格時間切分下僅併購新聞具顯著訊號。",
+        "problem": "金融新聞方向預測的報告增益高度取決於訓練與測試集是依時間切分還是隨機切分，導致時間洩漏問題嚴重。",
+        "method": "使用 49,799 篇新聞語料，測試 16 種特徵與模型組合（涵蓋 TF-IDF、MiniLM、FinBERT、微調的 RoBERTa/DeBERTa 與 Llama-3、Qwen2.5 等），探討不同切分方式的影響。",
+        "findings": "隨機切分會將馬修相關係數（MCC）膨脹 1.1 到 6.5 倍，端到端 FinBERT 微調反而放大了差距（大小匹配比率 1.75 倍）。在嚴格時間切分下，僅有併購（M&A）事件類別在近期的資料中具有正向鎖定測試訊號（TF-IDF 的 MCC 為 0.068 至 0.138，顯著性 $p < 10^{-3}$）。",
+        "implication": "金融自然語言處理基準測試應強制進行時間洩漏審計，以剝除新聞中可預測的陳舊成分，避免高估模型能力。",
+        "caveats": "識別出的併購訊號無法轉移至 2009-2020 年美國語料，顯示其為特定區域與時期之語意特徵而非通用預測器。",
+        "practicality": 3,
+        "tags": [
+          "自然語言處理",
+          "時間洩漏",
+          "大型語言模型",
+          "併購訊號",
+          "基準測試"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.10928",
+      "title": "Polynomial-Preserving Processes and Volatility Modelling in Discrete Time",
+      "authors": [
+        "Maciej Augustyniak",
+        "Alexandru Badescu",
+        "Zekun Zhang"
+      ],
+      "abstract": "This paper develops a discrete-time framework for volatility modelling and derivative pricing based on polynomial preservation. The framework provides exact moments of arbitrary order and serial cross-moments of variance and return processes over any finite horizon through finite-dimensional matrix representations. This analytical tractability is maintained while accommodating flexible leverage and variance-of-variance dynamics and non-Gaussian innovations. We introduce two novel classes of stochastic volatility models that nest widely used discrete-time specifications and study their statistical properties. Under two distinct scaling regimes, we establish weak convergence to polynomial diffusions and jump-diffusions and convergence of polynomial moments, linking discrete-time moment recursions to continuous-time matrix-exponential formulas. An empirical analysis of S\\&P~500 returns and a large panel of options spanning 1996--2023 shows that the proposed specifications improve return fit and reduce mean weekly implied volatility root mean squared errors by approximately 8--41\\% relative to their nested benchmarks, depending on the variance dynamics and innovation distribution.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "econ.EM"
+      ],
+      "published": "2026-11-07T19:33:52Z",
+      "updated": "2026-11-07T19:33:52Z",
+      "abs_url": "https://arxiv.org/abs/2611.10928",
+      "pdf_url": "https://arxiv.org/pdf/2611.10928v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 12,
+      "matched_keywords": [
+        "regime",
+        "implied volatility",
+        "empirical"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "發展離散時間多項式保持波動度模型，S&P 500與選擇權資料實證。",
+      "summary": {
+        "title_zh": "離散時間中的多項式保持過程與波動度建模",
+        "verdict": "提出多項式保持的離散時間波動度與訂價框架，隱含波動度預測誤差降低 8-41%。",
+        "problem": "傳統離散時間模型在處理高階動差時缺乏分析易處理性，難以同時捕捉靈活的槓桿效應與非高斯創新。",
+        "method": "建立基於多項式保持性質的新型隨機波動度模型。使用 S&P 500 指數報酬與 1996 至 2023 年大型選擇權面板資料進行實證。",
+        "findings": "相較於基準模型，新模型在報酬擬合上有顯著改善，且平均每週隱含波動度均方根誤差降低了約 8% 至 41%。",
+        "implication": "此方法能提供精確的任意階動差，適用於改善衍生性商品訂價與波動度建模，前提是須具備矩陣運算的程式實作能力。",
+        "caveats": "實證表現會隨變異數動態與創新分配的設定而有所差異。",
+        "practicality": 4,
+        "tags": [
+          "波動度建模",
+          "衍生性商品訂價",
+          "隨機波動度",
+          "計量經濟"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.20456",
+      "title": "Neural Hidden Markov Model with Adaptive Granularity Attention for High-Frequency Order Flow Modeling",
+      "authors": [
+        "Tianzuo Hu"
+      ],
+      "abstract": "We propose a Neural Hidden Markov Model (HMM) with Adaptive Granularity Attention (AGA) for high-frequency order flow modeling. The model addresses the challenge of capturing multi-scale temporal dynamics in financial markets, where fine-grained microstructure signals and coarse-grained liquidity trends coexist. The proposed framework integrates parallel multi-resolution encoders, including a dilated convolutional network for tick-level patterns and a wavelet-LSTM module for low-frequency dynamics. A gating mechanism conditioned on local volatility and transaction intensity adaptively fuses multi-scale representations, while a multi-head attention layer further enhances temporal dependency modeling. Within this architecture, a Neural HMM with conditional normalizing flow emissions is employed to jointly model latent market regimes and complex observation distributions. Empirical results on high-frequency limit order book data demonstrate that the proposed model outperforms fixed-resolution baselines in predicting short-term price movements and liquidity shocks. The adaptive granularity mechanism enables the model to dynamically adjust its focus across time scales, providing improved performance particularly during volatile market conditions.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.TR"
+      ],
+      "published": "2026-03-20T19:36:00Z",
+      "updated": "2026-03-20T19:36:00Z",
+      "abs_url": "https://arxiv.org/abs/2603.20456",
+      "pdf_url": "https://arxiv.org/pdf/2603.20456v1",
+      "comment": "23 pages, 3 figures. Empirical study of multi-scale sequence modeling and latent regime dynamics in high-frequency financial data",
+      "journal_ref": "",
+      "keyword_score": 63,
+      "matched_keywords": [
+        "limit order book",
+        "order flow",
+        "order book",
+        "high-frequency",
+        "regime",
+        "liquidity"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出具適應性粒度注意力的類神經 HMM，高頻訂單流預測實證完整。",
+      "summary": {
+        "title_zh": "結合自適應粒度注意力的神經隱馬可夫模型用於高頻訂單流建模",
+        "verdict": "提出結合多尺度編碼器與神經隱馬可夫模型的架構，有效提升高頻限價單簿的短期價格與流動性衝擊預測。",
+        "problem": "金融市場同時存在細粒度的微結構訊號與粗粒度流動性趨勢，傳統模型難以捕捉此類多尺度時間動態。",
+        "method": "使用結合擴大卷積網路與小波LSTM的多解析度編碼器，搭配基於波動度與交易強度的閘門機制，以及條件式正規化流發射分佈的神經隱馬可夫模型；資料為高頻限價單簿資料。",
+        "findings": "實證結果顯示該模型在預測短期價格變動與流動性衝擊時，表現優於固定解析度的基準模型；自適應粒度機制在波動市場條件下特別能提升表現，但論文未報告具體績效數字。",
+        "implication": "此方法可應用於高頻造市與短期Alpha因子挖掘，前提是需要處理多尺度特徵融合的運算開銷。",
+        "caveats": "模型架構複雜，且文中未提供具體的計算成本與扣除交易成本後的淨報酬表現。",
+        "practicality": 3,
+        "tags": [
+          "限價單簿",
+          "隱馬可夫模型",
+          "高頻交易",
+          "注意力機制",
+          "微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.06085",
+      "title": "Explainable Deep Learning for Price-Trade Dynamics: From Black-Box Forecasts to Effective Parametric Models",
+      "authors": [
+        "Manuel Naviglio",
+        "Fabrizio Lillo"
+      ],
+      "abstract": "Understanding the joint dynamics of prices and trades is central to market microstructure, where returns and order flow interact through nonlinear and state-dependent mechanisms. Linear models are interpretable but may miss these effects, while deep neural networks improve forecasting at the cost of transparency. We use neural networks as tools for structural discovery rather than only for prediction. A deep feed-forward network is trained on high-frequency returns and signed volumes for large- and small-tick stocks and compared with a linear VAR benchmark. The neural network improves predictive performance, especially for returns, revealing nonlinear dependencies beyond the linear specification. Using Shapley-based explainability, we show that the dominant contributions are concentrated at the most recent lags. Model-implied responses are consistent with conditional averages reconstructed from the data. Unlike empirical averages, however, the neural-network decomposition isolates individual regressor contributions to the aggregate dependence. Lagged signed volume generates sign-preserving and saturating effects, consistent with nonlinear price impact and order-flow persistence. Lagged returns act as state variables: when the previous trade does not move the price, the model predicts continuation in the direction of past order flow, whereas non-zero returns generate attenuation or reversal. Building on these findings, we introduce a parsimonious SHAP-inspired nonlinear parametric model. It reproduces the main return-volume dependencies, outperforms the linear VAR benchmark, and achieves performance comparable to the neural network. A multi-lag extension captures residual longer-memory effects while preserving interpretability. Overall, explainability offers a route from black-box prediction to economically meaningful parametric models of price and trade dynamics.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.AI",
+        "physics.data-an"
+      ],
+      "published": "2026-09-05T13:25:40Z",
+      "updated": "2026-09-05T13:25:40Z",
+      "abs_url": "https://arxiv.org/abs/2609.06085",
+      "pdf_url": "https://arxiv.org/pdf/2609.06085v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 59,
+      "matched_keywords": [
+        "order flow",
+        "market microstructure",
+        "price impact",
+        "high-frequency",
+        "deep learning",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用 Shapley 值解構價格與交易動態，將深度學習轉化為可解釋的參數模型。",
+      "summary": {
+        "title_zh": "價格與交易動態的色彩深度學習：從黑盒子預測到有效的參數化模型",
+        "verdict": "利用類神經網路進行結構探索並結合 SHAP 解釋性，成功建構出兼具非線性捕捉能力與經濟意義的參數化模型。",
+        "problem": "線性模型無法捕捉價格與訂單流之間的非線性與狀態相依機制，而深層神經網路雖能提升預測力卻缺乏透明度。",
+        "method": "使用深層前饋網路訓練高頻報酬與有號成交量，涵蓋大跳動與小跳動股票，並與線性 VAR 模型進行基準比較。",
+        "findings": "神經網路提升了預測表現，特別是針對報酬部分，揭示了線性規格之外的非線性相依性。論文未報告具體績效數字或夏普值。",
+        "implication": "透過 SHAP 解釋性工具可將黑盒子模型轉化為具有經濟意義的參數化模型，有助於設計捕捉非線性價格衝擊的交易策略。",
+        "caveats": "模型主要依賴最近期的落後期（lagged）特徵，對更長記憶效應的殘差依賴多期擴展處理。",
+        "practicality": 4,
+        "tags": [
+          "市場微結構",
+          "深度學習",
+          "可解釋性AI",
+          "價格衝擊",
+          "高頻交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.00082",
+      "title": "Design and Empirical Study of a Large Language Model-Based Multi-Agent Investment System for Chinese Public REITs",
+      "authors": [
+        "Zheng Li"
+      ],
+      "abstract": "This study addresses the low-volatility Chinese Public Real Estate Investment Trusts (REITs) market, proposing a large language model (LLM)-driven trading framework based on multi-agent collaboration. The system constructs four types of analytical agents-announcement, event, price momentum, and market-each conducting analysis from different dimensions; then the prediction agent integrates these multi-source signals to output directional probability distributions across multiple time horizons, then the decision agent generates discrete position adjustment signals based on the prediction results and risk control constraints, thereby forming a closed loop of analysis-prediction-decision-execution. This study further compares two prediction model pathways: for the prediction agent, directly calling the general-purpose large model DeepSeek-R1 versus using a specialized small model Qwen3-8B fine-tuned via supervised fine-tuning and reinforcement learning alignment. In the backtest from October 2024 to October 2025, both agent-based strategies significantly outperformed the buy-and-hold benchmark in terms of cumulative return, Sharpe ratio, and maximum drawdown. The results indicate that the multi-agent framework can effectively enhance the risk-adjusted return of REITs trading, and the fine-tuned small model performs close to or even better than the general-purpose large model in some scenarios.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "cs.AI",
+        "q-fin.TR"
+      ],
+      "published": "2026-01-22T16:35:27Z",
+      "updated": "2026-01-22T16:35:27Z",
+      "abs_url": "https://arxiv.org/abs/2602.00082",
+      "pdf_url": "https://arxiv.org/pdf/2602.00082v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 57,
+      "matched_keywords": [
+        "sharpe ratio",
+        "reinforcement learning",
+        "backtest",
+        "momentum",
+        "llm",
+        "large language model"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "中國 REITs 市場的多代理人 LLM 投資系統，實證結果完整且結合微調小模型。",
+      "summary": {
+        "title_zh": "基於大型語言模型的中國公募不動產投資信託基金多智慧體投資系統設計與實證研究",
+        "verdict": "提出基於 LLM 的多智慧體框架應用於中國公募不動產投資信託基金市場，顯著優於買入並持有基準。",
+        "problem": "中國公募不動產投資信託基金市場具有低波動特性，傳統投資框架難以有效捕捉多維度訊號與動態風險。",
+        "method": "建構包含公告、事件、價格動能與市場四類分析智慧體，結合預測智慧體與決策智慧體形成閉環系統；比較 DeepSeek-R1 與微調後的 Qwen3-8B 兩種預測模型路徑，回測期間為 2024 年 10 月至 2025 年 10 月。",
+        "findings": "在 2024 年 10 月至 2025 年 10 月的回測中，兩種智慧體策略在累積報酬、夏普值與最大回撤上皆顯著優於買入並持有基準，微調後的小型模型在部分場景下的表現接近甚至優於通用大型模型，未報告具體的精確數值。",
+        "implication": "多智慧體協同架構能有效提升不動產投資信託基金交易的風險調整後報酬，且透過監督式微調與強化學習對齊的專門小模型具備高性價比的實用價值。",
+        "caveats": "回測期間僅有一年（2024 年 10 月至 2025 年 10 月），樣本期間相對較短。",
+        "practicality": 4,
+        "tags": [
+          "LLM",
+          "多智慧體",
+          "不動產投資信託基金",
+          "Alpha 因子挖掘"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.10785",
+      "title": "A novel approach to trading strategy parameter optimization using double out-of-sample data and walk-forward techniques",
+      "authors": [
+        "Tomasz Mroziewicz",
+        "Robert Ślepaczuk"
+      ],
+      "abstract": "This study introduces a novel approach to walk-forward optimization by parameterizing the lengths of training and testing windows. We demonstrate that the performance of a trading strategy using the Exponential Moving Average (EMA) evaluated within a walk-forward procedure based on the Robust Sharpe Ratio is highly dependent on the chosen window size. We investigated the strategy on intraday Bitcoin data at six frequencies (1 minute to 60 minutes) using 81 combinations of walk-forward window lengths (1 day to 28 days) over a 19-month training period. The two best-performing parameter sets from the training data were applied to a 21-month out-of-sample testing period to ensure data independence. The strategy was only executed once during the testing period. To further validate the framework, strategy parameters estimated on Bitcoin were applied to Binance Coin and Ethereum. Our results suggest the robustness of our custom approach. In the training period for Bitcoin, all combinations of walk-forward windows outperformed a Buy-and-Hold strategy. During the testing period, the strategy performed similarly to Buy-and-Hold but with lower drawdown and a higher Information Ratio. Similar results were observed for Binance Coin and Ethereum. The real strength was demonstrated when a portfolio combining Buy-and-Hold with our strategies outperformed all individual strategies and Buy-and-Hold alone, achieving the highest overall performance and a 50 percent reduction in drawdown. A conservative fee of 0.1 percent per transaction was included in all calculations. A cost sensitivity analysis was performed as a sanity check, revealing that the strategy's break-even point was around 0.4 percent per transaction. This research highlights the importance of optimizing walk-forward window lengths and emphasizing the value of single-time out-of-sample testing for reliable strategy evaluation.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.MF",
+        "q-fin.PM"
+      ],
+      "published": "2026-02-11T12:19:24Z",
+      "updated": "2026-02-11T12:19:24Z",
+      "abs_url": "https://arxiv.org/abs/2602.10785",
+      "pdf_url": "https://arxiv.org/pdf/2602.10785v1",
+      "comment": "40 pages, 8 figures, 11 tables",
+      "journal_ref": "",
+      "keyword_score": 54,
+      "matched_keywords": [
+        "trading strategy",
+        "sharpe ratio",
+        "out-of-sample",
+        "drawdown",
+        "bitcoin"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "雙重樣本外與滑動窗口測試，實證方法完整",
+      "summary": {
+        "title_zh": "利用雙重樣本外資料與走進測試技術進行交易策略參數最佳化的新方法",
+        "verdict": "提出結合參數化訓練與測試窗口大小的走進測試最佳化方法，在比特幣等加密貨幣上實證能降低回檔並提升資訊比率。",
+        "problem": "傳統走進測試中訓練與測試窗口長度的選擇高度主觀，且策略績效對窗口大小極度敏感，容易導致過擬合。",
+        "method": "使用指數移動平均策略搭配強健夏普率，以 1 分鐘到 60 分鐘等六種頻率的比特幣日內資料進行 81 種窗口長度組合測試，並在幣安幣與以太幣上進行跨資產驗證。",
+        "findings": "訓練期間所有窗口組合皆擊敗買進持有策略；測試期間表現與買進持有相當，但具有較低的回檔與較高的資訊比率。結合買進持有與該策略的組合投資組合達到最佳整體績效，回檔減少 50%，且交易成本損益平衡點約為每筆 0.4%。",
+        "implication": "此方法能有效降低過擬合風險並改善風險調整後報酬，特別適合作為投資組合配置的輔助策略，且已計入 0.1% 的保守交易成本。",
+        "caveats": "策略僅在測試期間執行一次，且高度依賴窗口長度的參數化選擇。",
+        "practicality": 4,
+        "tags": [
+          "參數最佳化",
+          "走進測試",
+          "演算法交易",
+          "加密貨幣",
+          "風險管理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
