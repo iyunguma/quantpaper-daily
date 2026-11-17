@@ -1,0 +1,327 @@
+{
+  "date": "2026-11-17",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2611.19903",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "七十三個月樣本外、扣成本，實證完整"
+    },
+    {
+      "arxiv_id": "2611.19530",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "揭露LLM交易代理人無顯著Alpha，實證扎實"
+    },
+    {
+      "arxiv_id": "2611.18802",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 2,
+      "value": 5,
+      "reason": "保險精算類預測，與交易策略距離較遠"
+    },
+    {
+      "arxiv_id": "2611.18934",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 8,
+      "reason": "審查91篇LLM交易論文，點出成本與回測缺陷"
+    },
+    {
+      "arxiv_id": "2611.18150",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "ICAIF 2026發表，提出任務條件化選角機制"
+    },
+    {
+      "arxiv_id": "2611.19937",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "端到端流匹配組合配置，加密貨幣實證"
+    },
+    {
+      "arxiv_id": "2611.20363",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "S&P 500主成分 eigenportfolio Beta避險實證"
+    },
+    {
+      "arxiv_id": "2611.18937",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "推導隱含波動度無靜態套利條件，理論嚴謹"
+    },
+    {
+      "arxiv_id": "2611.20589",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "探討ESG與市場脆弱性，控制傳統風險後顯著性降低"
+    },
+    {
+      "arxiv_id": "2611.20550",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 6,
+      "reason": "討論BSDEs解析展開的理論與誤差分解"
+    },
+    {
+      "arxiv_id": "2611.19783",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 7,
+      "reason": "提出Transformer分解條件預期報酬與因子風險"
+    },
+    {
+      "arxiv_id": "2611.18493",
+      "topic": "交易執行",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "僅透過模擬限價訂單簿測試合規控制，無真實績效"
+    },
+    {
+      "arxiv_id": "2611.20163",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "體制轉換模型下對數最佳化投組的理論推導"
+    },
+    {
+      "arxiv_id": "2611.19792",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "隨機特徵法進行選擇權訂價與校準，計算效率高"
+    },
+    {
+      "arxiv_id": "2611.18677",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "用適應性Wasserstein距離衡量信用風險資訊流"
+    },
+    {
+      "arxiv_id": "2511.18614",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 3,
+      "value": 5,
+      "reason": "探討債務循環槓桿策略，偏向個人理財與稅務"
+    },
+    {
+      "arxiv_id": "2611.18214",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "區域隨機波動度模型之固定點迭代校準方法"
+    },
+    {
+      "arxiv_id": "2610.41689",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "ICAIF 2026發表，提出Alpha程式編譯與審計系統"
+    },
+    {
+      "arxiv_id": "2610.38056",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "ICAIF 2026發表，評估LLM在醫療股票排名的增益"
+    },
+    {
+      "arxiv_id": "2610.07162",
+      "topic": "投組與風險",
+      "evidence": "只有模擬資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "針對非平穩市場的對抗式深度避險，僅於模擬動態測試"
+    },
+    {
+      "arxiv_id": "2610.01187",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "利用RBSDE框架對美式選擇權進行訂價與數值驗證"
+    },
+    {
+      "arxiv_id": "2609.33143",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "EMNLP 2026發表，結合財報與文本進行營收預測"
+    },
+    {
+      "arxiv_id": "2609.25965",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "用MSGARCH模型捕捉利率交換波動度之體制轉換"
+    },
+    {
+      "arxiv_id": "2609.17609",
+      "topic": "Alpha 與因子",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "探討橫截面信號庫的數學性質與頻譜極限，理論推導"
+    },
+    {
+      "arxiv_id": "2609.02535",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "建立財務穩定邊界的均勻推論與檢定架構，數學推導為主"
+    },
+    {
+      "arxiv_id": "2608.20020",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "衡量共動結構重組速率並證實其具備定價溢酬"
+    },
+    {
+      "arxiv_id": "2608.14014",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "ICAIF 2026發表，大規模實證新聞定價與市場反應"
+    },
+    {
+      "arxiv_id": "2608.03616",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "利用鏈上資料實證分析加密貨幣清算瀑布的分支比率"
+    },
+    {
+      "arxiv_id": "2607.21687",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "保險公司資產配置與盈餘管理的HJB方程理論求解"
+    },
+    {
+      "arxiv_id": "2607.18813",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "探討常態均異混合模型的混合律不確定性與穩健決策"
+    },
+    {
+      "arxiv_id": "2607.17865",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "建立路徑簽名回歸的統計理論與收斂速率"
+    },
+    {
+      "arxiv_id": "2607.17502",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 6,
+      "reason": "探討單一違約風險下的均場均衡價格形成，純理論推導"
+    },
+    {
+      "arxiv_id": "2607.14361",
+      "topic": "其他",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 6,
+      "reason": "提出NeuralChaos神經算子近似可預測隨機過程，理論為主"
+    },
+    {
+      "arxiv_id": "2607.06340",
+      "topic": "波動度與衍生品",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "利用路徑簽名識別波動度模型，僅於模擬路徑進行實驗"
+    },
+    {
+      "arxiv_id": "2606.27335",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出時變模型下美式選擇權與彈性遠期契約的頻譜訂價法"
+    },
+    {
+      "arxiv_id": "2606.22796",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "結合Lévy過程與Malliavin微積分改善Black-Scholes模型"
+    },
+    {
+      "arxiv_id": "2606.21800",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 8,
+      "reason": "已刊登於Risk Magazine，提出違約強度模型的半解析定價"
+    },
+    {
+      "arxiv_id": "2606.09274",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "建立多變量情境的反向壓力測試框架並透過市場資料驗證"
+    },
+    {
+      "arxiv_id": "2606.05631",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "探討ESG在市場壓力下的聯合脆弱性與抗壓能力"
+    },
+    {
+      "arxiv_id": "2605.21409",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "機構交叉盤的投資組合偏好引導與機制設計，實證完整"
+    }
+  ]
+}

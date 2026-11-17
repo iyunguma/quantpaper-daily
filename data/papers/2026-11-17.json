@@ -1,0 +1,527 @@
+{
+  "date": "2026-11-17",
+  "generated_at": "2026-11-17T13:07:34+08:00",
+  "scanned": 2477,
+  "eligible": 2174,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2611.19530",
+      "title": "LLM Trading Agents Earn Beta, Not Alpha: A Look-Ahead-Free Benchmark",
+      "authors": [
+        "Jackson Wang"
+      ],
+      "abstract": "Large language model (LLM) trading agents now trade stocks for their users, and benchmarks rank models by their agents' returns. Yet a single run's return says little about skill. In our study, two runs of the same model that differed only in the random seed ended 5.2 points apart on average, so telling skill from luck takes many backtests across markets, models and seeds. However, live arenas trade each day only once, and backtests either use the few months after a model's training cutoff or run on years the model may remember, often with news joined to prices by calendar date. In this paper, we present rta-bench-1, a backtest over three US markets (a rally, a bear market and a crash). It shows each headline only after its publication minute, plays each period blind and named, and checks every run for look-ahead. It also splits each return into factor exposure and alpha and scores every decision against random choices of the same day and sector. In 91 runs of six models from four vendors, no alpha was significant, market and style exposure accounted for a median 78% of the return, and the decisions did no better than random stocks of the same sector. The agents bought the stocks with the most positive news, yet in ablations they earned as much without their headlines. Still, the agents carried out rules reliably, since a single cash rule in the prompt cut a GPT-based agent's share in stocks by 30.3 points in all six pairs. Builders should therefore supply the edge themselves and report exposures and alpha, and benchmarks should replay news by publication time.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "published": "2026-11-14T17:57:11Z",
+      "updated": "2026-11-14T17:57:11Z",
+      "abs_url": "https://arxiv.org/abs/2611.19530",
+      "pdf_url": "https://arxiv.org/pdf/2611.19530v1",
+      "comment": "23 pages, 10 figures, 15 tables. Code, frozen markets and leaderboard: https://github.com/jackson-cmd/risk-aware-trading-agents. Original empirical study: a backtest benchmark for LLM trading agents and measurements from 91 runs of six models",
+      "journal_ref": "",
+      "keyword_score": 32,
+      "matched_keywords": [
+        "backtest",
+        "llm",
+        "large language model",
+        "stock",
+        "alpha"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "揭露LLM交易代理人無顯著Alpha，實證扎實",
+      "summary": {
+        "title_zh": "LLM 交易代理賺取的是貝他而非阿爾法：無前視偏差的基準測試",
+        "verdict": "測試六種 LLM 交易代理發現其無法產生顯著的 Alpha，報酬多來自市場與風格暴露，且表現不優於隨機選股。",
+        "problem": "現有基準測試常因單次執行報酬受隨機性影響大而無法區分實力與運氣，且回測常面臨資料汙染或前視偏差。",
+        "method": "建構無前視偏差的基準測試 rta-bench-1，涵蓋三個美國市場時期（牛市、熊市、崩盤），嚴格控制新聞發布時間並分解報酬因子，測試 4 家廠商的 6 種模型共 91 次執行。",
+        "findings": "在 91 次執行中，沒有任何模型的 Alpha 具顯著性，市場與風格暴露占報酬的中位數 78%，決策表現與同產業隨機選股無異。儘管模型偏好買進正面新聞最多的股票，但消融實驗顯示移除新聞後報酬並未下降。",
+        "implication": "模型開發者應自行提供交易優勢並明確報告因子暴露與 Alpha，基準測試則應嚴格按真實發布時間重播新聞。",
+        "caveats": "實驗僅針對特定提示詞與部分主流模型，可能未完全發揮 LLM 在其他交易策略下的潛力。",
+        "practicality": 4,
+        "tags": [
+          "LLM",
+          "Alpha 因子挖掘",
+          "回測",
+          "因子暴露"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.41689",
+      "title": "QBX: A Compiler for Well-Formed, Auditable Alpha Programs",
+      "authors": [
+        "Yichong Bai",
+        "Kaigui Bian"
+      ],
+      "abstract": "Formulaic alpha miners increasingly differ in how they generate candidates, yet each system typically couples its own representation, evaluator, and selector into a bespoke pipeline whose results are difficult to reproduce or compare. We present QBX, a compiler that defines a well-formed, auditable space of alpha programs. A finite, versioned block registry and whole-strategy port-DAG language define the candidate space; the compiler either rejects a proposal with structured diagnostics or emits an evidence-carrying IR with types, time-availability effects, executable linkage, and Merkle-style content identities. Compiler-closed actions keep search inside the admitted space, node identities support incremental evaluation, and context-bound root identities govern program deduplication and trial provenance. The availability-effect system rejects contract-visible look-ahead while admitting legal point-in-time forecasts. On Chinese A-share panels, evaluation-valid proposals increase from 26.8% for free strings and 36.4% for a grammar-only control to 97.7% for typed programs. Incremental evaluation replays search lineages 7.5 times faster with numerical parity, while the availability checker admits zero registered-contract violations across 23,342 candidates. Under matched LLM-call budgets, compiler-closed search reaches the pool-specific diagnostic frontier with substantially fewer calls. These results concern validity, reuse, and search efficiency within the registered vocabulary, not an increase in the information available from the market panel.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE",
+        "q-fin.CP"
+      ],
+      "published": "2026-10-30T12:55:44Z",
+      "updated": "2026-10-30T12:55:44Z",
+      "abs_url": "https://arxiv.org/abs/2610.41689",
+      "pdf_url": "https://arxiv.org/pdf/2610.41689v1",
+      "comment": "Accepted at the 7th ACM International Conference on AI in Finance (ICAIF 2026), November 14-17, 2026, Milan, Italy. 8 pages, 3 figures. Author-prepared preprint",
+      "journal_ref": "",
+      "keyword_score": 11,
+      "matched_keywords": [
+        "llm",
+        "alpha"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "ICAIF 2026發表，提出Alpha程式編譯與審計系統",
+      "summary": {
+        "title_zh": "QBX：結構良好且可稽核的 Alpha 程式編譯器",
+        "verdict": "提出 QBX 編譯器來定義可稽核的 Alpha 程式空間，透過型別與時間效果檢查大幅提升有效提案比例與搜尋效率。",
+        "problem": "現今的公式化 Alpha 因子挖掘系統通常將表示法、評估器與選擇器耦合為專屬管線，導致結果難以重現或比較，且容易產生前瞻性偏誤。",
+        "method": "採用基於區塊註冊表與連接埠有向無環圖語言的編譯器架構，使用中國 A 股面板資料進行實證，未提及具體樣本期間。",
+        "findings": "在中國 A 股面板上，評估有效的提案從自由字串的 26.8% 與純文法控制組的 36.4% 提升至型別程式的 97.7%。增量評估以數值平價使搜尋血統重播速度快 7.5 倍，可用性檢查器在 23,342 個候選項目中達到零合約違規。",
+        "implication": "可用於建構更具結構性與可重現性的 Alpha 挖掘系統，透過編譯器關閉的動作確保搜尋空間合法性。",
+        "caveats": "這些結果主要關於註冊詞彙內的有效性、重複使用與搜尋效率，並未增加市場面板可用的資訊量。",
+        "practicality": 4,
+        "tags": [
+          "Alpha 因子挖掘",
+          "編譯器",
+          "量化研究",
+          "程式碼生成"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.20020",
+      "title": "The Reconfiguration Premium: Co-movement Structure as an Unspanned Dimension of the Variance Risk Premium",
+      "authors": [
+        "Lucas Carvalho"
+      ],
+      "abstract": "Hedge ratios, factor models and diversified portfolios all rest on an estimate of which firms move together. That estimate is not stable: firms migrate between the groupings the market treats as coherent, and when enough migrate the organizing axes of the cross-section turn. We measure the rate of that turning as the mean squared sine of the principal angles between subdominant eigenspaces of consecutive twelve-month S&P 500 correlation matrices. A typical month rewrites a fifth of the structure and carries four-fifths forward. That rate is priced: it couples to the aggregate variance risk premium at t = 5.40, no level measure correlates above 0.32, and the implied-correlation surface spans at most 6.7 percent of it. Only the persistent component is priced - the premium compensates the pace of revision, not the distance traveled. The mechanism is prepayment: implied variance rises on impact, volatility follows two to three quarters later (simulated-null p < 0.03 at h = 1-9), and the premium converges as it arrives. Three pre-registered boundaries hold: no timing alpha, no crash protection, and a downside version inseparable from intensity. The premium is, in part, rent on exposure held over a map still being redrawn.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "q-fin.PR",
+        "q-fin.ST"
+      ],
+      "published": "2026-08-20T13:31:24Z",
+      "updated": "2026-08-20T13:31:24Z",
+      "abs_url": "https://arxiv.org/abs/2608.20020",
+      "pdf_url": "https://arxiv.org/pdf/2608.20020v1",
+      "comment": "33 pages, 10 figures, 16 tables. Replication code and data: https://github.com/lucas-p-carvalho/rec-anatomy",
+      "journal_ref": "",
+      "keyword_score": 11,
+      "matched_keywords": [
+        "factor model",
+        "alpha"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "衡量共動結構重組速率並證實其具備定價溢酬",
+      "summary": {
+        "title_zh": "重組溢酬：共動結構作為變異數風險溢酬的未涵蓋維度",
+        "verdict": "市場共動結構重組的速度會被定價，並構成變異數風險溢酬的未涵蓋維度。",
+        "problem": "實務上的共動結構估計並不穩定，當企業在同質群體間遷移時，市場的組織軸會隨之轉動。本研究旨在衡量這種結構轉動的速率並檢驗其是否被定價。",
+        "method": "使用連續十二個月的 SPX 相關矩陣，透過次主導特徵空間之間主角的均方正弦值來衡量結構轉動速率。分析其與總體變異數風險溢酬的關聯性。",
+        "findings": "該轉動速率與總體變異數風險溢酬在 t = 5.40 時耦合，水準測量值的相關性低於 0.32，隱含相關性曲面最多涵蓋 6.7%。隱含變異數在衝擊時上升，波動度在兩到三季後跟進（模擬虛無假設 p < 0.03）。",
+        "implication": "此溢酬補償了結構修訂的步調而非位移距離，為資產配置提供了一個新的未涵蓋風險維度。然而其不具備時機 Alpha 或崩盤保護功能。",
+        "caveats": "下檔版本與強度密不可分且不提供崩盤保護，限制了其直接作為避險工具的應用。",
+        "practicality": 3,
+        "tags": [
+          "變異數風險溢酬",
+          "共動結構",
+          "主成分分析",
+          "SPX"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.14014",
+      "title": "Buy the Rumor, Sell the News: When Is News Priced In?",
+      "authors": [
+        "Alireza Kargarzadeh",
+        "Nariman Khaledian",
+        "Navid Parvini",
+        "Sid Ghatak",
+        "Arman Khaledian"
+      ],
+      "abstract": "Two old market sayings hold that news is already priced in by the time it is published, and that the rumor is bought while the news is sold. Both are empirical claims about event time: they place the price move associated with a piece of news before and at publication rather than after it. Whether the claims hold, for which kinds of news, and by how much are basic questions about how fast markets absorb public information. We test them on 4.57 million financial news articles covering roughly 3,000 US stocks (2023-2026). A large language model teacher, distilled into a compact classifier through active learning, assigns each article one of 17 event tags and five attributes; articles are clustered into stories to separate first reports from follow-up coverage; and beta-adjusted abnormal returns are measured around the resulting 1.68 million stock-day events, with 364{,}405 neutral-sentiment events as a placebo group. Three results follow. First, the price move associated with news concentrates before and at publication: pooled across all signed events, the cumulative move in the news direction by the close of publication day is 2.8 times its value twenty days later, and for rumor-flagged events the directional return is concentrated around the rumor event, with little incremental return at the subsequent linked non-rumor event. Second, measured against the placebo of comparable stocks, markets underreact to numbers and overreact to stories: quantified fundamental news (earnings, dividends, guidance, analyst actions) keeps drifting in the direction of the news for weeks, while soft story-driven news (launches, macro commentary, leadership) gives back its move. Third, news carries width as well as direction: neutral news raises publication-day volatility. The study also produces a table of measured drift for each event tag, usable as a prior in news-conditioned forecasting models.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "q-fin.ST"
+      ],
+      "published": "2026-08-14T07:02:41Z",
+      "updated": "2026-10-18T14:20:27Z",
+      "abs_url": "https://arxiv.org/abs/2608.14014",
+      "pdf_url": "https://arxiv.org/pdf/2608.14014v2",
+      "comment": "Revised version accepted at the 3rd Workshop on LLMs and Generative AI for Finance (AI4F 2026), held in conjunction with ICAIF 2026, Milan, Italy. https://ai4f.org/",
+      "journal_ref": "",
+      "keyword_score": 11,
+      "matched_keywords": [
+        "large language model",
+        "stock",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "ICAIF 2026發表，大規模實證新聞定價與市場反應",
+      "summary": {
+        "title_zh": "買耳語，賣新聞：新聞究竟何時被定價？",
+        "verdict": "研究顯示價格變動主要集中在新聞發布前與發布當下，基本面新聞會持續漂移，而故事型新聞則會回吐漲幅。",
+        "problem": "市場消化公開資訊的速度究竟有多快？傳統俗諺「買耳語、賣新聞」與「新聞發布時已完成定價」在事件時間上是否成立？",
+        "method": "使用 2023 年至 2026 年涵蓋約 3,000 檔美股的 457 萬篇財經新聞，透過主動學習蒸餾大型語言模型分類器進行 17 種事件標籤標註，並以 beta 調整異常報酬衡量 168 萬個股票日事件。",
+        "findings": "所有有方向性事件在發布日收盤時的累積報酬為二十天後的 2.8 倍；量化基本面新聞（如財報、股利）會在數週內持續往該方向漂移；軟性故事型新聞（如產品發表、總體評論）則會回吐其價格變動。",
+        "implication": "交易員可利用本研究所產出的各事件標籤漂移表，作為新聞條件預測模型的先驗分布，並區分基本面與故事型新聞採取不同持倉策略。",
+        "caveats": "部分事件分類與情感判讀依賴模型蒸餾與主動學習，可能存在標註噪聲影響實證結果的精確度。",
+        "practicality": 4,
+        "tags": [
+          "自然語言處理",
+          "事件研究",
+          "市場微結構",
+          "異常報酬",
+          "基礎模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.28446",
+      "title": "CoLAS: Multimodal Corroboration of Latent Asset Signals for Financial Trading",
+      "authors": [
+        "Yanzheng Jin",
+        "Pengyang Shao",
+        "Xiaohao Liu",
+        "Xi Ai",
+        "Fei Shen",
+        "Kenji Kawaguchi"
+      ],
+      "abstract": "Financial trading relies on extracting reliable signals from heterogeneous market modalities such as price series, breaking news, and investor sentiment. Existing multimodal methods primarily combine heterogeneous modalities to exploit complementarity, treating each modality as equally valuable while overlooking whether different modalities provide mutually supportive evidence for the same trading signal. However, this task-conditioned and non-canceling support, termed multimodal corroboration, is particularly valuable, especially for financial trading. Because individual financial views are noisy and weakly informative, support that persists across heterogeneous views may provide a more stable task-relevant signal than evidence appearing in only one view. To exploit this property, we propose CoLAS (multimodal Corroboration of Latent Asset Signals), a framework that operationalizes multimodal corroboration as a trainable task-conditioned representation for trading prediction. The modality representations are organized into a per-instance matrix, where a softmax-based spectral objective strengthens its dominant shared component. Signed modality contributions then determine whether this component provides non-canceling support and construct the resulting corroborated signal. A coupled robustness-aware consistency objective further preserves the resulting corroborated signal when a modality is corrupted or missing. Extensive experiments on stock and cryptocurrency datasets demonstrate the effectiveness of our proposed CoLAS, yielding consistent improvements in both annualized return and Sharpe ratio over existing methods.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE"
+      ],
+      "published": "2026-07-30T16:16:48Z",
+      "updated": "2026-10-08T11:17:57Z",
+      "abs_url": "https://arxiv.org/abs/2607.28446",
+      "pdf_url": "https://arxiv.org/pdf/2607.28446v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 20,
+      "matched_keywords": [
+        "sharpe ratio",
+        "trading signal",
+        "cryptocurrency",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出多模態資產訊號佐證框架，股票與加密貨幣實證完整。",
+      "summary": {
+        "title_zh": "CoLAS：金融交易中潛在資產信號的多模態佐證機制",
+        "verdict": "提出 CoLAS 框架透過多模態交叉佐證提取穩健的交易信號，有效提升報酬與夏普值。",
+        "problem": "現有方法將不同市場模態視為等價並僅利用其互補性，忽略了不同模態是否能對同一交易信號提供相互支持的佐證，導致雜訊過高。",
+        "method": "提出 CoLAS 框架，利用 softmax 光譜目標函數強化主導共享成分，並透過帶符號的模態貢獻建構佐證信號，結合強健性一致性目標處理資料遺失；資料涵蓋股票與加密貨幣。",
+        "findings": "在股票與加密貨幣資料集上的廣泛實驗顯示，與現有方法相比，CoLAS 在年化報酬率與夏普值上皆取得一致性的改善，但文中未報告具體的數值。",
+        "implication": "可用於整合價格序列、新聞與情緒等多模態資料，當需要過濾雜訊並提高信號穩定性時特別有效。",
+        "caveats": "論文摘要中未具體說明交易成本的假設與實際扣除後的淨績效。",
+        "practicality": 4,
+        "tags": [
+          "多模態學習",
+          "Alpha 因子挖掘",
+          "機器學習",
+          "加密貨幣",
+          "股票"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.18934",
+      "title": "Short Windows, Unmodelled Costs, Unknown Cutoffs: A Pre-Registered Evidence Audit of 91 LLM Trading Papers",
+      "authors": [
+        "Henry Zhang"
+      ],
+      "abstract": "Papers on large-language-model (LLM) trading agents and alpha mining report Sharpe ratios that would be remarkable in any other part of empirical finance. We audit the evidence behind those numbers. Before coding a single paper we pre-registered a population of 91 papers from a curated corpus of LLM trading research, a ten-field coding rubric, an analysis script and five directional hypotheses, and committed all of them to version control. Every code is backed by a verbatim quote that a script checks against the paper's text, and a second, blind coder recoded a random 20%. Of the 75 papers with a trading test, 51% deduct no trading costs and only 9% model costs from data; the median test window is 12 months, and a quarter of windows are six months or shorter. Among the 51 papers whose test window is not known to lie after the model's training cutoff, 98% neither test after the cutoff, nor evaluate live, nor use a chronologically consistent model. Only 9% report a multiplicity-adjusted result, and just five papers combine deducted costs, a leakage control and a reported trial count. Two of the five hypotheses pass (short windows; uncontrolled look-ahead). Three fail: more papers report a trial count than we predicted, though most of those counts are repeated random seeds rather than the number of strategies searched; and the predicted links between headline Sharpe and test-window length, and between headline Sharpe and costs, are not detectable in the 13 papers that state a headline Sharpe in their abstract or conclusion. We release the codes, quotes and script, and propose a six-line reporting minimum.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "q-fin.GN",
+        "q-fin.TR"
+      ],
+      "published": "2026-11-13T20:37:42Z",
+      "updated": "2026-11-13T20:37:42Z",
+      "abs_url": "https://arxiv.org/abs/2611.18934",
+      "pdf_url": "https://arxiv.org/pdf/2611.18934v1",
+      "comment": "6 pages, 1 table. Data and code: https://github.com/henryzhangpku/llm-trading-evidence-audit. Also on SSRN: https://ssrn.com/abstract=7687481",
+      "journal_ref": "",
+      "keyword_score": 30,
+      "matched_keywords": [
+        "sharpe ratio",
+        "llm",
+        "empirical",
+        "alpha"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "審查91篇LLM交易論文，點出成本與回測缺陷",
+      "summary": {
+        "title_zh": "短窗口、未建模成本與未知截斷期：91篇LLM交易論文的預先註冊實證審計",
+        "verdict": "審計91篇LLM交易論文發現多數存在未扣除交易成本、樣本窗口過短及資訊外洩等嚴重問題。",
+        "problem": "LLM交易代理人與Alpha因子挖掘論文報告了極高的夏普值，其實證證據的真實性與嚴謹度需要被檢驗。",
+        "method": "透過預先註冊研究設計，對91篇精選的LLM交易研究論文進行十個欄位的編碼審計，並透過指令碼與雙盲覆核確保準確性。",
+        "findings": "在75篇包含交易測試的論文中，51%未扣除交易成本，僅9%從資料中建模成本；中位數測試窗口為12個月，四分之一為6個月或更短。僅有5篇論文同時扣除成本、控制資訊外洩並報告試驗次數。",
+        "implication": "現有文獻中的極端績效數字多數在嚴格成本與外洩控制下無法複製，實務界切勿直接依據這些回測結果進行配置。",
+        "caveats": "樣本僅限於被選定的91篇LLM交易研究論文，且部分論文未在摘要或結論中明確標示夏普值。",
+        "practicality": 1,
+        "tags": [
+          "LLM",
+          "回測過擬合",
+          "交易成本",
+          "資訊外洩",
+          "實證審計"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.21800",
+      "title": "Semi-Analytical Pricing for General Default Intensity Models",
+      "authors": [
+        "Ryan Parker",
+        "Mark Stedman",
+        "Luca Capriotti"
+      ],
+      "abstract": "Using the path-integral formalism, we develop an accurate and easy-to-compute semi-analytical approximation for a general class of {default intensity} models. We illustrate the accuracy of the method by presenting results for the Black-Karasinski model for which the proposed approximation provides remarkably accurate results, even in regimes of high volatility and multi-year time horizons. The accuracy and the computational efficiency of the proposed approximation makes it a viable alternative to fully numerical schemes for a variety of applications in econometrics and derivatives pricing, including the computation of XVA for credit products. As a practical example, we consider the pricing of a quanto Credit Default Swap (CDS) under stochastic intensity of default and an FX devaluation model.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "cond-mat.stat-mech",
+        "quant-ph"
+      ],
+      "published": "2026-06-19T23:41:20Z",
+      "updated": "2026-06-19T23:41:20Z",
+      "abs_url": "https://arxiv.org/abs/2606.21800",
+      "pdf_url": "https://arxiv.org/pdf/2606.21800v1",
+      "comment": "6 pages, 1 figure",
+      "journal_ref": "Risk Magazine 1 Jul 2025",
+      "keyword_score": 11,
+      "matched_keywords": [
+        "regime"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "已刊登於Risk Magazine，提出違約強度模型的半解析定價",
+      "summary": {
+        "title_zh": "一般違約強度模型的半解析訂價法",
+        "verdict": "利用路徑積分形式為一般違約強度模型開發出準確且易計算的半解析近似法，適用於衍生品訂價與XVA計算。",
+        "problem": "傳統違約強度模型在複雜設定下需要耗時的全數值計算，缺乏高效率的解析解法。",
+        "method": "運用路徑積分形式推導半解析近似模型，針對 Black-Karasinski 模型等進行實證，涵蓋高波動度與多年期時間範圍。",
+        "findings": "在 Black-Karasinski 模型的高波動與多年期情境下，該近似法展現出極高的準確度與計算效率，論文未報告具體績效數字。",
+        "implication": "可用於計量經濟學、信用衍生品訂價及信用調整值（XVA）的計算，作為全數值模擬的有效替代方案。",
+        "caveats": "模型準確度高度依賴所選取的基礎動態設定與參數假設。",
+        "practicality": 3,
+        "tags": [
+          "違約強度",
+          "衍生品訂價",
+          "路徑積分",
+          "信用風險"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.00776",
+      "title": "Explainable Patterns in Cryptocurrency Microstructure",
+      "authors": [
+        "Bartosz Bieganowski",
+        "Robert Ślepaczuk"
+      ],
+      "abstract": "We document stable cross-asset patterns in cryptocurrency limit-order-book microstructure: the same engineered order book and trade features exhibit remarkably similar predictive importance and SHAP dependence shapes across assets spanning an order of magnitude in market capitalization (BTC, LTC, ETC, ENJ, ROSE). The data covers Binance Futures perpetual contract order books and trades on 1-second frequency starting from January 1st, 2022 up to October 12th, 2025. Using a unified CatBoost modeling pipeline with a direction-aware GMADL objective and time-series cross validation, we show that feature rankings and partial effects are stable across assets despite heterogeneous liquidity and volatility. We connect these SHAP structures to microstructure theory (order flow imbalance, spread, and adverse selection) and validate tradability via a conservative top-of-book taker backtest as well as fixed depth maker backtest. Our primary novelty is a robustness analysis of a major flash crash, where the divergent performance of our taker and maker strategies empirically validates classic microstructure theories of adverse selection and highlights the systemic risks of algorithmic trading. Our results suggest a portable microstructure representation of short-horizon returns and motivate universal feature libraries for crypto markets.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.CP",
+        "q-fin.ST"
+      ],
+      "published": "2026-01-31T15:33:06Z",
+      "updated": "2026-01-31T15:33:06Z",
+      "abs_url": "https://arxiv.org/abs/2602.00776",
+      "pdf_url": "https://arxiv.org/pdf/2602.00776v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 54,
+      "matched_keywords": [
+        "order flow",
+        "algorithmic trading",
+        "order book",
+        "backtest",
+        "liquidity",
+        "cryptocurrency"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "跨資產微結構特徵穩定性分析，含真實回測",
+      "summary": {
+        "title_zh": "加密貨幣市場微結構中的可解釋模式",
+        "verdict": "證實跨資產的限價單簿特徵與預測重要性具高度穩定性，且在閃崩期間驗證了逆向選擇理論。",
+        "problem": "不同市值與流動性的加密貨幣資產，其微結構特徵的預測力是否具有跨資產的穩定性？",
+        "method": "使用 CatBoost 模型搭配方向感知 GMADL 目標函數與時間序列交叉驗證。資料涵蓋 Binance 永續合約的 1 秒級限價單簿與交易紀錄，樣本期間為 2022 年 1 月 1 日至 2025 年 10 月 12 日，涵蓋 BTC、LTC、ETC、ENJ、ROSE 等資產。",
+        "findings": "跨資產的特徵排序與 SHAP 依賴形狀在流動性與波動度異質的資產間展現出驚人的穩定性。未報告具體的夏普值或報酬數字。",
+        "implication": "支援加密貨幣市場的通用特徵庫開發，提供可攜式的短期報酬微結構表示法。透過保守的 taker 與 maker 回測驗證了可交易性。",
+        "caveats": "閃崩期間 taker 與 maker 策略的分歧表現凸顯了演算法交易的系統性風險與逆向選擇。",
+        "practicality": 4,
+        "tags": [
+          "市場微結構",
+          "限價單簿",
+          "加密貨幣",
+          "機器學習",
+          "可解釋性人工智慧"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2512.12420",
+      "title": "Deep Hedging with Reinforcement Learning: A Practical Framework for Option Risk Management",
+      "authors": [
+        "Travon Lucius",
+        "Christian Koch",
+        "Jacob Starling",
+        "Julia Zhu",
+        "Miguel Urena",
+        "Carrie Hu"
+      ],
+      "abstract": "We present a reinforcement-learning (RL) framework for dynamic hedging of equity index option exposures under realistic transaction costs and position limits. We hedge a normalized option-implied equity exposure (one unit of underlying delta, offset via SPY) by trading the underlying index ETF, using the option surface and macro variables only as state information and not as a direct pricing engine. Building on the \"deep hedging\" paradigm of Buehler et al. (2019), we design a leak-free environment, a cost-aware reward function, and a lightweight stochastic actor-critic agent trained on daily end-of-day panel data constructed from SPX/SPY implied volatility term structure, skew, realized volatility, and macro rate context. On a fixed train/validation/test split, the learned policy improves risk-adjusted performance versus no-hedge, momentum, and volatility-targeting baselines (higher point-estimate Sharpe); only the GAE policy's test-sample Sharpe is statistically distinguishable from zero, although confidence intervals overlap with a long-SPY benchmark so we stop short of claiming formal dominance. Turnover remains controlled and the policy is robust to doubled transaction costs. The modular codebase, comprising a data pipeline, simulator, and training scripts, is engineered for extensibility to multi-asset overlays, alternative objectives (e.g., drawdown or CVaR), and intraday data. From a portfolio management perspective, the learned overlay is designed to sit on top of an existing SPX or SPY allocation, improving the portfolio's mean-variance trade-off with controlled turnover and drawdowns. We discuss practical implications for portfolio overlays and outline avenues for future work.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "q-fin.RM"
+      ],
+      "published": "2025-12-13T18:18:08Z",
+      "updated": "2025-12-13T18:18:08Z",
+      "abs_url": "https://arxiv.org/abs/2512.12420",
+      "pdf_url": "https://arxiv.org/pdf/2512.12420v1",
+      "comment": "All code, configuration files, and experiment scripts are available at https://github.com/tlucius16/deep-hedging-rl",
+      "journal_ref": "",
+      "keyword_score": 54,
+      "matched_keywords": [
+        "reinforcement learning",
+        "transaction cost",
+        "realized volatility",
+        "momentum",
+        "drawdown",
+        "implied volatility"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "實證檢驗選擇權動態避險，代碼與框架公開",
+      "summary": {
+        "title_zh": "以強化學習進行深度避險：選擇權風險管理的實務框架",
+        "verdict": "提出結合成本考量與強化學習的深度避險框架，能有效改善選擇權組合的風險調整後報酬。",
+        "problem": "如何在考量真實交易成本與部位限制的條件下，對股票指數選擇權部位進行動態避險。",
+        "method": "使用隨機 Actor-Critic 代理人，透過日頻面板資料（包含隱含波動率期限結構、偏斜度、實現波動率與總體利率環境）進行訓練，並以 SPY 進行避險。",
+        "findings": "學到的策略在點估計上提升了夏普值，優於無避險、動態與波動率目標基準；不過僅有特定策略的測試樣本夏普值在統計上顯著異於零，且與長倉 SPY 基準的信賴區間重疊。",
+        "implication": "此避險模組可作為現有 SPX 或 SPY 配置的額外覆蓋層，在控制換手率與回檔的同時改善均異資產配置表現。",
+        "caveats": "測試樣本的夏普值信賴區間與長倉 SPY 基準重疊，無法聲稱具有形式上的絕對優勢。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "選擇權",
+          "動態避險",
+          "風險管理",
+          "資產配置"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.20636",
+      "title": "Continuous Timing Signals for Growth-Defensive Style Allocation: Factor Attribution, Risk Matching, and Out-of-Sample Evidence",
+      "authors": [
+        "Zheli Xiong"
+      ],
+      "abstract": "This paper studies conditional allocation between a growth/technology ETF basket, denoted by $G$, and a defensive income/value-oriented ETF basket, denoted by $D$. The objective is not to discover a new standalone alpha factor, but to examine whether known style exposures can be dynamically allocated using macro-market timing signals. Fama-French five-factor plus momentum attribution shows that the relative portfolio $G-D$ is a recognizable style portfolio: its market beta is 0.273, its HML beta is -0.552, its momentum beta is 0.117, and its annualized alpha is 1.95\\% with a Newey-West t-statistic of only 0.81. The empirical object is therefore interpreted as a growth-versus-defensive style allocation problem rather than a new return anomaly. The allocation framework replaces discrete regime labels and if-then trading rules with a continuous smooth score. The score combines rate relief, SPY drawdown depth, high-VIX stress relief, and a growth-crowding penalty. Interaction terms are smoothed with softplus functions, the total score is mapped to G/D weights through a hyperbolic tangent function, and realized weights are smoothed with EWMA. In the main aligned comparison window from June 28, 2017 to May 15, 2026, with 10bp transaction costs, the selected smooth-score policy uses a 50\\% maximum active tilt and obtains a 19.24\\% CAGR, a Sharpe ratio of 1.01, and a maximum drawdown of -31.63\\%. It improves over 50/50 G/D, matched TNX-only, matched core-only, SPY, and volatility-matched 100\\% G benchmarks. It does not, however, exceed 100\\% G or the best high-G static portfolios in raw CAGR. Walk-forward and post-2022 validations provide additional evidence of drawdown reduction and risk-adjusted allocation value. Overall, the evidence supports continuous, interpretable style timing, while also showing that high static growth exposure remains a strong benchmark.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM"
+      ],
+      "published": "2026-05-20T02:45:07Z",
+      "updated": "2026-05-29T03:38:46Z",
+      "abs_url": "https://arxiv.org/abs/2605.20636",
+      "pdf_url": "https://arxiv.org/pdf/2605.20636v2",
+      "comment": "19 pages, 10 figures, 18 tables",
+      "journal_ref": "",
+      "keyword_score": 52,
+      "matched_keywords": [
+        "sharpe ratio",
+        "transaction cost",
+        "out-of-sample",
+        "momentum",
+        "drawdown",
+        "regime"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "連續計時訊號風格配置，扣除成本後實證完整",
+      "summary": {
+        "title_zh": "成長與防禦風格配置的連續時機訊號：因子歸因、風險匹配與樣本外證據",
+        "verdict": "透過連續平滑評分進行成長與防禦風格的動態配置，在 2017 至 2026 年間獲得 1.01 的夏普值與 19.24% 的複年成長率。",
+        "problem": "探討是否能利用總體市場時機訊號，動態配置已知的成長與防禦風格部位，而非尋找新的獨立 Alpha 因子。",
+        "method": "結合利率寬鬆、SPY 回檔深度、高 VIX 壓力緩解與成長擁擠度懲罰建構連續平滑評分，並以 EWMA 平滑實現權重。研究對象為成長/科技 ETF 籃子與防禦價值型 ETF 籃子，樣本期間為 2017 年 6 月 28 日至 2026 年 5 月 15 日。",
+        "findings": "在扣除 10 基點交易成本後，選定的平滑評分策略使用 50% 的最大主動傾斜，達成 19.24% 的複年成長率、1.01 的夏普值，以及 -31.63% 的最大回檔，表現優於 50/50 基準與 SPY 等基準。",
+        "implication": "此方法證明連續且具可解釋性的風格時機選擇可行，適合用於降低組合回檔與提升風險調整後報酬，但前提是須接受無法在原始複年成長率上全面超越 100% 成長股靜態配置的結果。",
+        "caveats": "該策略的原始複年成長率仍無法超越 100% 成長股或表現最好的高成長靜態投資組合。",
+        "practicality": 4,
+        "tags": [
+          "風格配置",
+          "動態時機",
+          "因子歸因",
+          "資產配置"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
