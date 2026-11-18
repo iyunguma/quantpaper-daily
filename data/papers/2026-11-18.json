@@ -1,0 +1,535 @@
+{
+  "date": "2026-11-18",
+  "generated_at": "2026-11-18T12:26:38+08:00",
+  "scanned": 2480,
+  "eligible": 2167,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2611.22604",
+      "title": "Beyond Strike Remapping: Conditional-Gamma Pricing of Leveraged ETF Options under Local Volatility",
+      "authors": [
+        "Guolin Chen",
+        "Jiang Zhou",
+        "Richard Ma",
+        "Xia Sheng",
+        "Anson Tse",
+        "Terry Wei"
+      ],
+      "abstract": "Options on leveraged ETFs (LETFs) are priced and hedged off the LETF volatility surface, but path-dependent variance drag makes that surface difficult to build consistently with the underlying index smile. We study three methods for constructing it: a closed-form first-order strike remapping, a new conditional-Gamma method, and a two-dimensional joint-law PDE that makes no distributional assumption and serves as the benchmark. The conditional-Gamma method is our main contribution. It conditions on the terminal underlying return, which preserves the state dependence of variance drag that a single remapped strike discards. Three one-dimensional forward PDEs under a calibrated local-volatility model give the conditional mean and variance of integrated variance, and a Gamma law matched to these moments keeps realised variance non-negative and prices the option in closed form. A shifted-Gamma variant that also matches the conditional third moment gives its clearest gains for inverse products at longer maturities, and a Gamma-mixture extension covers the full range of conditional skewness compatible with non-negative realised variance. On S&P 500 and Nikkei 225 surfaces the conditional-Gamma smile tracks the benchmark closely at every leverage tested, including the wings where the strike remapping drifts. A full LETF smile takes 0.85-1.42 seconds against 197-224 seconds for the benchmark, a 158- to 236-fold speed-up. Against listed TQQQ quotes the conditional-Gamma smile lies inside the market bid-ask at most strikes.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP"
+      ],
+      "published": "2026-11-17T11:21:48Z",
+      "updated": "2026-11-17T11:21:48Z",
+      "abs_url": "https://arxiv.org/abs/2611.22604",
+      "pdf_url": "https://arxiv.org/pdf/2611.22604v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 13,
+      "matched_keywords": [],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出槓桿 ETF 選擇權的條件 Gamma 定價法，推導嚴謹且實證完整。",
+      "summary": {
+        "title_zh": "超越履約價映射：在區域波動度下槓桿 ETF 選擇權的條件 Gamma 定價",
+        "verdict": "提出條件 Gamma 方法對槓桿 ETF 選擇權定價，比傳統履約價映射準確且速度快上兩百倍。",
+        "problem": "槓桿 ETF 具有路徑相依的變異數拖累，導致其波動度表面難以與標的指數微笑曲線保持一致。",
+        "method": "使用三種方法（封閉式一階履約價映射、條件 Gamma 方法、二維聯合機率偏微分方程式基準）在已校準的區域波動度模型下對 S&P 500 與 Nikkei 225 選擇權表面進行建模。",
+        "findings": "條件 Gamma 產生的波動度微笑在各種槓桿率下皆緊密貼合基準，特別是履約價映射會偏移的尾部；計算完整微笑曲線僅需 0.85 至 1.42 秒，較基準快 158 至 236 倍，且對 TQQQ 掛單報價多能落在買賣價差內。",
+        "implication": "此方法能極大化槓桿 ETF 選擇權的定價與避險計算效率，可直接應用於即時造市與定價系統。",
+        "caveats": "模型依賴於區域波動度假設及動差配適的準確度。",
+        "practicality": 5,
+        "tags": [
+          "選擇權定價",
+          "槓桿 ETF",
+          "波動度表面",
+          "區域波動度",
+          "量化金融"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.22886",
+      "title": "Conditionally Identifiable Latent Representation for Multivariate Time Series with Structural Dynamics",
+      "authors": [
+        "Minkey Chang",
+        "Jae-Young Kim"
+      ],
+      "abstract": "We propose the Identifiable Variational Dynamic Factor Model (iVDFM) for multivariate time series. The model combines variational inference with partial identifiability guarantees up to a known ambiguity class. Innovations follow a conditional exponential-family prior over observed auxiliary context and regime embeddings. Linear diagonal dynamics map innovations to factors and preserve that class, so factors are partially identifiable up to permutation and component-wise affine maps. We train by maximizing the ELBO and estimate uncertainty in both latent trajectories and forecasts. Under explicit assumptions, we prove partial identifiability up to the stated class and provide the full proof in the appendix. We evaluate factor recovery on synthetic DGPs, intervention behavior on synthetic SCMs, and forecasting on real benchmarks with CRPS and MSE.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-fin.GN",
+        "q-fin.ST"
+      ],
+      "published": "2026-03-24T07:35:27Z",
+      "updated": "2026-10-18T08:17:23Z",
+      "abs_url": "https://arxiv.org/abs/2603.22886",
+      "pdf_url": "https://arxiv.org/pdf/2603.22886v2",
+      "comment": "Published in Proceedings of The 1st Symposium on Probabilistic Machine Learning (ProbML 2026), PMLR 327:189-213. 25 pages. Code: https://github.com/minkeymouse/iVDFM",
+      "journal_ref": "Proceedings of Machine Learning Research 327:189-213, 2026",
+      "keyword_score": 11,
+      "matched_keywords": [
+        "factor model",
+        "regime"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出可識別變分動態因子模型，已發表於機器學習會議，實證與理論兼備。",
+      "summary": {
+        "title_zh": "具結構動態的多變數時間序列之條件可辨識潛在表示",
+        "verdict": "提出可辨識變分動態因子模型，透過條件指數族先驗與線性對角動態來確保部分可辨識性。",
+        "problem": "多變數時間序列的潛在表示常面臨不可辨識性問題，導致模型學到的因子缺乏經濟或結構上的解釋力。",
+        "method": "結合變分推論與部分可辨識性保證，使用線性對角動態將創新對應至因子。於合成資料與真實基準上評估因子復原、介入行為與預測表現。",
+        "findings": "論文在合成資料與真實基準上評估預測表現（使用 CRPS 與 MSE），但摘要中未報告具體的數值改善幅度。",
+        "implication": "可用於需要潛在因子具備可解釋性的多變數時間序列預測，前提是須滿足其條件指數族與線性動態的假設。",
+        "caveats": "因子僅能在排列與分量層級仿射映射的已知模糊類別下達到部分可辨識，並非完全可辨識。",
+        "practicality": 3,
+        "tags": [
+          "時間序列",
+          "動態因子模型",
+          "變分推論",
+          "可辨識性"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.03948",
+      "title": "Trade-R1: Bridging Verifiable Rewards to Stochastic Environments via Process-Level Reasoning Verification",
+      "authors": [
+        "Rui Sun",
+        "Yifan Sun",
+        "Sheng Xu",
+        "Li Zhao",
+        "Jing Li",
+        "Daxin Jiang",
+        "Cheng Hua",
+        "Zuo Bai"
+      ],
+      "abstract": "Reinforcement Learning (RL) has enabled Large Language Models (LLMs) to achieve remarkable reasoning in domains like mathematics and coding, where verifiable rewards provide clear signals. However, extending this paradigm to financial decision is challenged by the market's stochastic nature: rewards are verifiable but inherently noisy, causing standard RL to degenerate into reward hacking. To address this, we propose Trade-R1, a model training framework that bridges verifiable rewards to stochastic environments via process-level reasoning verification. Our key innovation is a verification method that transforms the problem of evaluating reasoning over lengthy financial documents into a structured Retrieval-Augmented Generation (RAG) task. We construct a triangular consistency metric, assessing pairwise alignment between retrieved evidence, reasoning chains, and decisions to serve as a validity filter for noisy market returns. We explore two reward integration strategies: Fixed-effect Semantic Reward (FSR) for stable alignment signals, and Dynamic-effect Semantic Reward (DSR) for coupled magnitude optimization. Experiments on different country asset selection demonstrate that our paradigm reduces reward hacking, with DSR achieving superior cross-market generalization while maintaining the highest reasoning consistency.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "q-fin.TR"
+      ],
+      "published": "2026-01-07T14:03:22Z",
+      "updated": "2026-01-08T02:48:58Z",
+      "abs_url": "https://arxiv.org/abs/2601.03948",
+      "pdf_url": "https://arxiv.org/pdf/2601.03948v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 17,
+      "matched_keywords": [
+        "reinforcement learning",
+        "llm",
+        "large language model"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出處理金融隨機環境中強化學習獎勵雜訊的程序化驗證架構。",
+      "summary": {
+        "title_zh": "Trade-R1：透過過程層級推理驗證將可驗證獎勵串接至隨機環境",
+        "verdict": "提出 Trade-R1 訓練框架，利用過程層級推理驗證解決金融市場隨機性帶來的獎勵駭客問題。",
+        "problem": "將 LLM 的強化學習推理範式延伸至金融決策時，市場的隨機性會導致獎勵充滿雜訊，使標準強化學習退化為獎勵駭客行為。",
+        "method": "使用 Trade-R1 框架結合 RAG 任務、三角形一致性指標與固定效果語義獎勵（FSR）、動態效果語義獎勵（DSR）等策略，對不同國家的資產選擇進行實驗。",
+        "findings": "實驗證明該範式能有效減少獎勵駭客，其中 DSR 策略在保持最高推理一致性的同時，實現了優異的跨市場泛化能力，但摘要未報告具體績效數字。",
+        "implication": "可用於改善金融決策中的 LLM 推理品質，前提是需建構完善的檢索增強與推理驗證管線。",
+        "caveats": "金融市場的隨機噪音本質上難以完全消除，三角形一致性指標的有效性仍受限於檢索品質。",
+        "practicality": 3,
+        "tags": [
+          "強化學習",
+          "大型語言模型",
+          "資產配置",
+          "檢索增強生成",
+          "Alpha 因子挖掘"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.19783",
+      "title": "Conditional Asset Pricing Transformer",
+      "authors": [
+        "Hao Fu",
+        "Xinbing Kong",
+        "Zeyu Li",
+        "Junfan Mao"
+      ],
+      "abstract": "In this paper, we propose a conditional asset pricing transformer (CAP-T) that captures nonlinear interactions among firms through attention to forecast excess returns. In the first stage, a transformer estimates conditional expected returns, and kernel-weighted principal component analysis of its residuals estimates the local factor loading space. Projecting the conditional mean onto this space separates factor risk compensation from conditional mispricing. Then, in the second stage, separate transformers learn these two components, whose predictions are combined to forecast returns. As a result, the proposed framework decomposes returns into conditional mispricing, factor risk compensation, a centered factor component, and an unpredictable innovation. We establish approximation and generalization bounds and characterize how first-stage prediction errors propagate through local factor estimation and component learning, providing statistical guaranties for conditional mispricing, factor loadings, and factor risk premia. Finally, simulations and empirical studies demonstrate the predictive and interpretive benefits of the proposed method.",
+      "primary_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "published": "2026-11-15T04:18:44Z",
+      "updated": "2026-11-15T04:18:44Z",
+      "abs_url": "https://arxiv.org/abs/2611.19783",
+      "pdf_url": "https://arxiv.org/pdf/2611.19783v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 13,
+      "matched_keywords": [
+        "transformer",
+        "empirical"
+      ],
+      "relevance": 9,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出Transformer分解條件預期報酬與因子風險",
+      "summary": {
+        "title_zh": "條件式資產定價 Transformer 模型",
+        "verdict": "提出 CAP-T 模型透過 Attention 機制捕捉公司間非線性互動來預測超額報酬，並將報酬拆解為風險補償與定價偏誤。",
+        "problem": "傳統資產定價模型難以有效捕捉公司間的非線性互動，且無法妥善分離因子風險補償與條件式定價偏誤。",
+        "method": "使用 Transformer 架構與核權重主成分分析（KW-PCA），針對市場股票資料進行兩階段條件式預測與因子結構分解。",
+        "findings": "透過模擬與實證研究，展示了該方法在超額報酬預測與模型解釋性上的優勢，但論文未報告具體的夏普值或報酬數字。",
+        "implication": "此方法能提供更細緻的因子風險與定價偏誤分解，有助於建構更穩健的量化選股策略與風險管理模型。",
+        "caveats": "模型架構較為複雜，且第一階段的預測誤差會向下傳遞影響後續的因子估計與元件學習。",
+        "practicality": 3,
+        "tags": [
+          "Transformer",
+          "資產定價",
+          "Alpha 因子挖掘",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.11477",
+      "title": "OOM-RL: Out-of-Money Reinforcement Learning Market-Driven Alignment for LLM-Based Multi-Agent Systems",
+      "authors": [
+        "Kun Liu",
+        "Liqun Chen"
+      ],
+      "abstract": "The alignment of Multi-Agent Systems (MAS) for autonomous software engineering is constrained by evaluator epistemic uncertainty. Current paradigms, such as Reinforcement Learning from Human Feedback (RLHF) and AI Feedback (RLAIF), frequently induce model sycophancy, while execution-based environments suffer from adversarial \"Test Evasion\" by unconstrained agents. In this paper, we introduce an objective alignment paradigm: Out-of-Money Reinforcement Learning (OOM-RL). By deploying agents into the non-stationary, high-friction reality of live financial markets, we utilize critical capital depletion as an externally imposed negative gradient. Our longitudinal 20-month empirical study chronicles the system's evolution from a high-turnover, sycophantic baseline to a robust, liquidity-aware architecture. We show that the economic consequences of financial loss---real execution costs, slippage, and capital depletion---exposed failure modes not apparent under internal evaluation alone and motivated architectural and governance changes that were later formalized as the Strict Test-Driven Agentic Workflow (STDAW), a Byzantine-inspired uni-directional state lock (RO-Lock) anchored to a deterministically verified >= 95% code coverage constraint matrix. During the final 94-trading-day observation window, the production system exhibited improved execution-aware performance, including an annualized Sharpe ratio of approximately 2.06. These financial results are observational and temporally bounded; they should not be interpreted as evidence of persistent investment alpha or as a causal estimate of STDAW's contribution. The primary contribution of this work is the use of externally imposed economic consequences as an epistemic constraint on agentic development, laying the groundwork for generalized paradigms where real-world resource depletion acts as an objective physical constraint.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.SE",
+        "q-fin.TR"
+      ],
+      "published": "2026-04-13T13:45:42Z",
+      "updated": "2026-10-07T15:46:41Z",
+      "abs_url": "https://arxiv.org/abs/2604.11477",
+      "pdf_url": "https://arxiv.org/pdf/2604.11477v2",
+      "comment": "14 pages, 3 figures",
+      "journal_ref": "",
+      "keyword_score": 52,
+      "matched_keywords": [
+        "sharpe ratio",
+        "reinforcement learning",
+        "execution cost",
+        "slippage",
+        "llm",
+        "liquidity"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance_reason": "長達二十個月的實盤對齊研究，記錄資本消耗",
+      "summary": {
+        "title_zh": "OOM-RL：基於市場驅動對齊的LLM多代理系統破產強化學習",
+        "verdict": "利用真實市場的資本耗盡作為外部懲罰，對齊LLM多代理系統。",
+        "problem": "LLM多代理系統的對齊常受限於評估者的認知不確定性，導致模型奉承或測試規避。現有環境缺乏客觀的真實世界懲罰機制來修正代理行為。",
+        "method": "透過將LLM代理部署至真實金融市場，利用資本耗盡、滑價與實際執行成本作為外部負梯度進行強化學習。進行20個月的縱向研究，並觀察最後94個交易日的表現。",
+        "findings": "系統演化為具備流動性意識的架構，並催生出嚴格測試驅動代理工作流程（STDAW）。在最後94個交易日的觀察視窗中，系統展現出約2.06的年化夏普值。",
+        "implication": "以真實資源耗盡作為代理開發的客觀實體限制，能有效暴露出內部評估無法發現的系統失敗模式。這為複雜環境下的代理治理提供了新架構方向。",
+        "caveats": "財務結果僅具觀察性質與時間侷限，不應被解讀為具持續性的投資Alpha或方法的因果貢獻。",
+        "practicality": 3,
+        "tags": [
+          "強化學習",
+          "多代理系統",
+          "LLM",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.08169",
+      "title": "Modelling Regime Shifts in Continuous Intraday Electricity Markets with State-dependent Hawkes Processes",
+      "authors": [
+        "Ayoub Jhabli",
+        "Tarek AlSkaif",
+        "Kwabena E. Bennin",
+        "Bedir Tekinerdogan",
+        "Axel Naumann",
+        "Joost M. E. Pennings"
+      ],
+      "abstract": "The growing importance of intraday trading in Europe, driven by the increasing penetration of renewable energy sources, has led to higher volatility and periods of market stress. Understanding how order flow behaves under varying liquidity conditions requires models that adapt to the state of the market. This paper proposes a multivariate state-dependent Hawkes process to model the flow of orders across different liquidity regimes in the intraday continuous electricity market. The observed market states are identified using a proposed Liquidity Stress Index (LSI), which quantifies stress using the bid-ask spread in the limit order book, order book volume, and mid-price volatility. Transitions between states induce changes in the intensity parameters, resulting in piecewise dynamics that reflect regime-specific order-flow behavior. The model is calibrated on January-March 2024 Dutch intraday continuous cross-border intraday (XBID) hourly order data from EPEX SPOT. The estimated dynamics show that order flow is strongly self-exciting and near-critical, that executed trades trigger new same-side orders while the reverse effect is negligible, and that liquidity stress mainly strengthens transaction self-excitation rather than reshaping the cross-side structure. Robustness checks over the LSI composition and the state partition show that the results are driven by the regime construction itself: alternative index compositions fit within a narrow band, three states fit better than two, and removing the states clearly degrades the fit relative to a single-regime Hawkes benchmark. The results highlight both the value of conditioning order-flow models on liquidity stress and the limits of a single-exponential specification when event frequencies are highly imbalanced.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-10-06T11:25:09Z",
+      "updated": "2026-10-06T11:25:09Z",
+      "abs_url": "https://arxiv.org/abs/2610.08169",
+      "pdf_url": "https://arxiv.org/pdf/2610.08169v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 51,
+      "matched_keywords": [
+        "limit order book",
+        "order flow",
+        "order book",
+        "bid-ask spread",
+        "regime",
+        "liquidity"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "運用狀態相依過程建模電力市場訂單流",
+      "summary": {
+        "title_zh": "利用狀態相依的 Hawkes 過程對連續日內電力市場的體制轉換進行建模",
+        "verdict": "提出狀態相依的多元 Hawkes 過程來建模日內電力市場的訂單流，發現在流動性壓力下交易的自我激發顯著增強。",
+        "problem": "再生能源滲透率提高導致歐洲日內電力市場波動加劇與市場壓力期增加，現有模型難以適應不同的流動性狀態。",
+        "method": "使用多元狀態相依的 Hawkes 過程與流動性壓力指數（LSI），對 2024 年 1 至 3 月 EPEX SPOT 荷蘭跨邊境日內連續（XBID）每小時訂單資料進行校準。",
+        "findings": "訂單流呈現強烈的自我激發且接近臨界狀態，已執行的交易會觸發同側的新訂單，且流動性壓力主要增強交易的自我激發而非重塑跨側結構；未報告具體的報酬或夏普值績效數字。",
+        "implication": "將訂單流模型條件化於流動性壓力具有實際價值，適用於日內電力市場的微結構分析與訂單流預測。",
+        "caveats": "結果高度依賴於體制構建本身，單一指數配置的擬合效果存在侷限。",
+        "practicality": 3,
+        "tags": [
+          "Hawkes過程",
+          "電力市場",
+          "訂單流",
+          "體制轉換",
+          "流動性"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.36257",
+      "title": "When Hedging Changes the Payoff: Option Replication with Price Impact and Execution Costs",
+      "authors": [
+        "David Itkin",
+        "Leandro Sánchez-Betancourt"
+      ],
+      "abstract": "Hedging a derivative by trading the underlying asset changes the payoff that the hedging intended to replicate. We study this phenomenon when trading generates price impact and execution costs. In a binomial model, we characterize replication through a fixed-point equation. In continuous time, we derive a nonlinear pricing PDE whose implicit terminal condition captures the nature of the moving target problem of the hedger. For monotone convex Lipschitz payoffs (such as calls and puts) we establish exact replication under midpoint execution costs. Numerical experiments illustrate: (i) how price impact shifts the effective strike, (ii) the non-linear dependence of the option price on the number of contracts, (iii) how execution costs smooth terminal holdings, (iv) the extent to which the hedger's own trading can bring an otherwise worthless option into the money, and (v) we explain the spread and the shape of the limit order book in the options market based on the price impact and the shape of the limit order book of the underlying.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "math.PR",
+        "q-fin.TR"
+      ],
+      "published": "2026-09-28T20:47:12Z",
+      "updated": "2026-09-28T20:47:12Z",
+      "abs_url": "https://arxiv.org/abs/2609.36257",
+      "pdf_url": "https://arxiv.org/pdf/2609.36257v1",
+      "comment": "52 pages, 9 figures",
+      "journal_ref": "",
+      "keyword_score": 51,
+      "matched_keywords": [
+        "limit order book",
+        "price impact",
+        "order book",
+        "execution cost",
+        "hedging"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance_reason": "推導考慮價格衝擊的選擇權複製偏微分方程",
+      "summary": {
+        "title_zh": "當避險改變了報酬：考量價格衝擊與執行成本的選擇權複製",
+        "verdict": "探討造市者透過交易標的資產進行選擇權避險時，價格衝擊如何改變最終報酬與選擇權定價。",
+        "problem": "當避險交易本身會對標的資產造成價格衝擊與執行成本時，傳統的選擇權複製與定價理論會失效。",
+        "method": "使用二項式模型以不動點方程式刻畫複製過程，並在連續時間下導出非線性定價偏微分方程式。研究涵蓋單調凸 Lipschitz 報酬（如買權與賣權），並透過數值實驗說明相關效應。",
+        "findings": "研究發現價格衝擊會平移有效履約價、選擇權價格對合約數量呈現非線性相依、執行成本會平滑終端持倉，且避險者的自身交易甚至能讓原本價外 worthless 的選擇權變成價內。",
+        "implication": "在處理大額選擇權部位或流動性較差的標的時，必須將避險引起的價格衝擊納入定價模型中，否則會嚴重誤判避險成本。",
+        "caveats": "論文主要基於理論模型推導與數值實驗，未報告真實市場資料的具體績效數字。",
+        "practicality": 3,
+        "tags": [
+          "選擇權定價",
+          "價格衝擊",
+          "避險",
+          "微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.02424",
+      "title": "In-Network Market Prediction Using Machine Learning and Limit Order Books",
+      "authors": [
+        "Xinpeng Hong",
+        "Changgang Zheng",
+        "Joshua Lilley",
+        "Stefan Zohren",
+        "Noa Zilberman"
+      ],
+      "abstract": "Machine learning is significantly transforming algorithmic trading, yet the requirement for rapid execution speeds persists. While both aspects aim to boost profitability, embedding advanced machine-learning techniques with reduced trading latency presents a notable challenge. Adopting in-network machine learning, which involves offloading inference to programmable network devices, offers a delicate equilibrium in this trade-off. In this paper, we present LOBIN, a solution that utilizes machine learning within the network for market prediction based on high-frequency market data feeds. LOBIN is adept at constructing limit order books and performing inference directly within programmable switches. When compared to server-based benchmarks, LOBIN not only predicts future stock price movements with higher throughput but also maintains robust machine learning performance. It achieves over a 10% reduction in latency compared to the NASDAQ order-matching server benchmark and delivers microsecond-level latency. Furthermore, the machine learning performance of LOBIN can be further enhanced through the adoption of a hybrid deployment approach that integrates both the switch and the servers. Our evaluation demonstrates that among all data feeds of evaluated stocks, the application of hybrid deployment results in approximately 45% of the traffic and 38\\% of the total potential transaction value being processed within switches without server intervention, reducing latency while ensuring that the average change in error rate of predictions remains at around 3% relative to benchmarks based solely on server use.",
+      "primary_category": "cs.NI",
+      "categories": [
+        "cs.NI",
+        "cs.CE",
+        "cs.ET"
+      ],
+      "published": "2026-08-03T16:05:49Z",
+      "updated": "2026-08-03T16:05:49Z",
+      "abs_url": "https://arxiv.org/abs/2608.02424",
+      "pdf_url": "https://arxiv.org/pdf/2608.02424v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 50,
+      "matched_keywords": [
+        "limit order book",
+        "algorithmic trading",
+        "order book",
+        "high-frequency",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "透過交換器進行網路內機器學習預測，降延遲",
+      "summary": {
+        "title_zh": "使用機器學習與限價單簿的網路內市場預測",
+        "verdict": "透過可程式化網路交換器進行網路內機器學習推論，實現微秒級延遲並降低整體交易延遲。",
+        "problem": "如何在維持機器學習預測效能的同時，縮減高頻交易與演算法交易所要求的極致執行延遲。",
+        "method": "提出 LOBIN 方案，直接在可程式化交換器中建構限價單簿並執行機器學習推論；使用高頻市場資料流進行評估。",
+        "findings": "相較於納斯達克訂單撮合伺服器基準，LOBIN 實現了超過 10% 的延遲降低並達微秒級延遲；混合部署模式下，約 45% 的流量與 38% 的潛在交易價值可在交換器內處理，預測錯誤率平均變化維持在約 3%。",
+        "implication": "可將部分機器學習推論下放至網路硬體，適合對延遲極度敏感的高頻造市與套利策略。",
+        "caveats": "混合部署方案下，硬體資源與交換器運算能力的限制可能會對複雜模型的部署造成瓶頸。",
+        "practicality": 4,
+        "tags": [
+          "機器學習",
+          "限價單簿",
+          "高頻交易",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.09164",
+      "title": "Slippage-at-Risk (SaR): A Forward-Looking Liquidity Risk Framework for Perpetual Futures Exchanges",
+      "authors": [
+        "Otar Sepper"
+      ],
+      "abstract": "We introduce $\\textbf{Slippage-at-Risk (SaR)}$, a quantitative framework for measuring liquidity risk in perpetual futures exchanges. Unlike backward-looking metrics such as Value-at-Risk computed on historical returns or realized deficit distributions, SaR provides a \\emph{forward-looking} assessment of liquidation execution risk derived from current order book microstructure. The framework comprises three complementary metrics: $SaR(α)$, the cross-sectional slippage quantile; $ESaR(α)$, the expected slippage in the distributional tail; and $TSaR(α)$, the aggregate dollar-denominated tail slippage. We extend the base framework with a \\emph{concentration adjustment} that penalizes fragile liquidity structures where a small number of market makers dominate quote provision. Drawing on recent work by Chitra et al. (2025) on autodeleveraging mechanisms and insurance fund optimization, we establish a direct mapping from SaR metrics to optimal capital requirements. Empirical analysis using Hyperliquid order book data, including the October 10, 2025 liquidation cascade, demonstrates SaR's predictive validity as a leading indicator of systemic stress. We conclude with practical implementation guidance and discuss philosophical implications for risk management in decentralized financial systems.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM"
+      ],
+      "published": "2026-03-10T04:01:37Z",
+      "updated": "2026-03-10T04:01:37Z",
+      "abs_url": "https://arxiv.org/abs/2603.09164",
+      "pdf_url": "https://arxiv.org/pdf/2603.09164v1",
+      "comment": "32 pages, 8 fugures",
+      "journal_ref": "",
+      "keyword_score": 50,
+      "matched_keywords": [
+        "market maker",
+        "order book",
+        "slippage",
+        "liquidity",
+        "cross-sectional",
+        "futures"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出流動性風險框架，透過永續合約資料驗證",
+      "summary": {
+        "title_zh": "滑價風險：永續期貨交易所的前瞻性流動性風險框架",
+        "verdict": "提出結合訂單簿微結構與流動性集中的前瞻性滑價風險框架，可作為系統性壓力的領先指標。",
+        "problem": "傳統的歷史 VaR 等指標具有回顧性，無法有效衡量永續期貨交易所中清算執行的前瞻性流動性風險。",
+        "method": "利用現有訂單簿微結構推導跨截面滑價分位數、尾部預期滑價與總美元尾部滑價，並加入流動性集中度調整；使用 Hyperliquid 訂單簿資料進行實證分析，包含 2025 年 10 月 10 日的清算瀑布事件。",
+        "findings": "實證結果顯示 SaR 具備預測有效性，可作為系統性壓力的領先指標，並能直接對應至最佳資本適足率要求；論文未報告具體的報酬率或夏普值數字。",
+        "implication": "可用於去中心化交易所的保證金與保險基金最佳化管理，前提是需要即時且高品質的訂單簿微結構資料。",
+        "caveats": "極端市場下造市商撤單可能導致訂單簿極度脆弱，模型假設可能面臨極端衝擊。",
+        "practicality": 4,
+        "tags": [
+          "流動性風險",
+          "限價單簿",
+          "永續期貨",
+          "風險管理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.01344",
+      "title": "Pricing and hedging for liquidity provision in Constant Function Market Making",
+      "authors": [
+        "Jimmy Risk",
+        "Shen-Ning Tung",
+        "Tai-Ho Wang"
+      ],
+      "abstract": "This paper develops a robust mathematical framework for Constant Function Market Makers (CFMMs) by transitioning from traditional token reserve analyses to a coordinate system defined by price and intrinsic liquidity. We establish a canonical parametrization of the bonding curve that ensures dimensional consistency across diverse trading functions, such as those employed by Uniswap and Balancer, and demonstrate that asset reserves and value functions exhibit a linear dependence on this intrinsic liquidity. This linear structure facilitates a streamlined approach to arbitrage-free pricing, delta hedging, and systematic risk management. By leveraging the Carr-Madan spanning formula, we characterize Impermanent Loss (IL) as a weighted strip of vanilla options, thereby defining a fine-grained implied volatility structure for liquidity profiles. Furthermore, we provide a path-dependent analysis of IL using the last-passage time. Empirical results from Uniswap v3 ETH/USDC pools and Deribit option markets confirm a volatility smile consistent with crypto-asset dynamics, validating the framework's utility in characterizing the risk-neutral fair value of liquidity provision.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF"
+      ],
+      "published": "2026-03-02T00:51:06Z",
+      "updated": "2026-03-02T00:51:06Z",
+      "abs_url": "https://arxiv.org/abs/2603.01344",
+      "pdf_url": "https://arxiv.org/pdf/2603.01344v1",
+      "comment": "36 pages, 15 figures",
+      "journal_ref": "",
+      "keyword_score": 50,
+      "matched_keywords": [
+        "market making",
+        "market maker",
+        "liquidity",
+        "implied volatility",
+        "hedging",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "建立流動性提供定價框架，並以真實資料驗證",
+      "summary": {
+        "title_zh": "常數函數自動造市商中流動性提供之定價與避險",
+        "verdict": "建立以價格與內在流動性為座標的 CFMMs 數學框架，成功將無常損失解析為選擇權組合並驗證波動率微笑。",
+        "problem": "傳統 CFMMs 代幣儲備分析缺乏維度一致性，且難以系統化進行無套利定價與風險管理。",
+        "method": "使用價格與內在流動性座標系統建構結合曲線參數化模型，分析 Uniswap v3 ETH/USDC 池與 Deribit 選擇權市場的經驗資料。",
+        "findings": "利用 Carr-Madan 展開公式將無常損失表徵為一般選擇權帶狀組合，實證結果確認了符合加密資產動態的波動率微笑，未報告具體績效數字。",
+        "implication": "該框架有助於流動性提供者進行無套利定價、Delta 避險與系統性風險管理，可在滿足前提下應用於造市策略。",
+        "caveats": "實證採用歷史資料分析，未完全納入區塊鏈高頻執行時的真實滑價與交易成本。",
+        "practicality": 4,
+        "tags": [
+          "自動造市商",
+          "無常損失",
+          "選擇權定價",
+          "Delta避險",
+          "去中心化金融"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

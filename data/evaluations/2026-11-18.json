@@ -1,0 +1,319 @@
+{
+  "date": "2026-11-18",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2611.20839",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 5,
+      "value": 5,
+      "reason": "提出新型 Hawkes 過程與極限定理，僅附上比特幣高頻資料的簡單數值範例。"
+    },
+    {
+      "arxiv_id": "2611.23126",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "使用美股日內資料與捲動驗證進行完整實證，分析訓練歷史與預測視角的互動。"
+    },
+    {
+      "arxiv_id": "2611.21897",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "探討跨資產 ETF 最佳化與尾端風險，實證扎實但均等權重配置表現最佳。"
+    },
+    {
+      "arxiv_id": "2611.20242",
+      "topic": "其他",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 5,
+      "reason": "探討運算力與推理市場的結構與風險移轉，偏向期貨與衍生工具設計。"
+    },
+    {
+      "arxiv_id": "2611.21952",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "推導狀態空間模型的對數尺度擾動界線，並使用訂單簿資料進行評估。"
+    },
+    {
+      "arxiv_id": "2611.21326",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 3,
+      "value": 5,
+      "reason": "使用神經標記點過程處理健康保險理賠，偏向精算應用。"
+    },
+    {
+      "arxiv_id": "2611.21262",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 5,
+      "reason": "探討金融網路中的策略性償還與流動性凍結，屬於理論模型推導。"
+    },
+    {
+      "arxiv_id": "2611.22604",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出槓桿 ETF 選擇權的條件 Gamma 定價法，推導嚴謹且實證完整。"
+    },
+    {
+      "arxiv_id": "2611.20911",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "分析動態投組子空間的二階傳輸方案，幾何推導嚴謹並透過歷史資料驗證。"
+    },
+    {
+      "arxiv_id": "2605.14976",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "擴展多政權 Markov 切換模型並應用於公債殖利率，實證完整且開源程式碼。"
+    },
+    {
+      "arxiv_id": "2605.23979",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "探討路徑微分的降維隨機避險比率，主要為數學推導與演算法改進。"
+    },
+    {
+      "arxiv_id": "2605.12977",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出加入暫時統計因子的風險模型增強方法，實證完整且具實務價值。"
+    },
+    {
+      "arxiv_id": "2605.23955",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "探討金融 AI 系統中決定論與可審計性的調查與實驗，具備實際參考價值。"
+    },
+    {
+      "arxiv_id": "2605.02040",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 5,
+      "reason": "推導 Bachelier 選擇權價格的解析近似與控制變量，偏向純計量與定價理論。"
+    },
+    {
+      "arxiv_id": "2604.10375",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出風險貢獻的 leave-one-out 分解，提供明確的診斷訊號與實證展示。"
+    },
+    {
+      "arxiv_id": "2604.10005",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 4,
+      "reason": "探討機構流動性進入預測市場的影響，論文已撤回且主要基於合成實驗。"
+    },
+    {
+      "arxiv_id": "2604.04963",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "發展半參數狀態空間模型來學習非線性體制轉換，實證改善分類效果。"
+    },
+    {
+      "arxiv_id": "2603.22886",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出可識別變分動態因子模型，已發表於機器學習會議，實證與理論兼備。"
+    },
+    {
+      "arxiv_id": "2603.17151",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "探討選擇權隱含資訊的神經表示法，透過淺層網路避免過擬合，實驗完整。"
+    },
+    {
+      "arxiv_id": "2603.14546",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "推導金融系統中早期清算的穩健最佳策略，屬於理論與模型最佳化。"
+    },
+    {
+      "arxiv_id": "2603.14438",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出選擇權損益調整的幾何層與不變二次預測器，實務應用導向強烈。"
+    },
+    {
+      "arxiv_id": "2603.07600",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "針對 0DTE 選擇權提出差分機器學習方法，兼顧定價與避險表現。"
+    },
+    {
+      "arxiv_id": "2603.05277",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 6,
+      "reason": "擴展財富稅中立性框架，探討隨機波動度與效用函數下的資產配置影響。"
+    },
+    {
+      "arxiv_id": "2603.05264",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 5,
+      "reason": "分析比例財富稅對資產報酬與投資組合選擇的影響，偏向總經與稅制理論。"
+    },
+    {
+      "arxiv_id": "2603.02898",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "評估基於價格區間的波動度估計器在商品市場的表現，實證完整且具實用性。"
+    },
+    {
+      "arxiv_id": "2602.20867",
+      "topic": "回測與研究方法",
+      "evidence": "看不出來",
+      "relevance": 2,
+      "value": 5,
+      "reason": "探討 LLM 代理程式中可重複使用程序能力的調查論文，與量化交易無直接關聯。"
+    },
+    {
+      "arxiv_id": "2603.12274",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 2,
+      "value": 6,
+      "reason": "提出用於新創評估的多代理系統，已獲 EACL 接受，但偏向創投篩選。"
+    },
+    {
+      "arxiv_id": "2601.20336",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 4,
+      "value": 5,
+      "reason": "檢驗加密貨幣白皮書宣稱與市場結構的關聯，結果顯示無顯著對齊。"
+    },
+    {
+      "arxiv_id": "2601.12839",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出結合領域邏輯的圖神經網路用於加密貨幣異常偵測，實驗細緻。"
+    },
+    {
+      "arxiv_id": "2601.01410",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 3,
+      "value": 6,
+      "reason": "評估安全性電力系統預測模型與風險指標，屬於能源預測。"
+    },
+    {
+      "arxiv_id": "2512.22606",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 2,
+      "reason": "宣稱三個月報酬率達 171%，績效高得不合理且缺乏嚴謹的樣本外成本考量。"
+    },
+    {
+      "arxiv_id": "2511.22101",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "結合 Mamba 與 DDQN 進行 Uniswap V3 流動性提供複製與改進，具備創新想法。"
+    },
+    {
+      "arxiv_id": "2611.17515",
+      "topic": "其他",
+      "evidence": "只有模擬資料",
+      "relevance": 3,
+      "value": 5,
+      "reason": "探討框架效應對 LLM 代理人合謀行為的影響，屬於行為經濟學模擬。"
+    },
+    {
+      "arxiv_id": "2611.06459",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 5,
+      "reason": "證明解析分位數表示法的通用技術，偏向純數學與定價公式推導。"
+    },
+    {
+      "arxiv_id": "2611.02258",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 3,
+      "value": 5,
+      "reason": "探討財經問答中的幻覺分析與階層式偵測，偏向自然語言處理。"
+    },
+    {
+      "arxiv_id": "2611.01185",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "建構包含投資人反身性迴圈的市場動態模型，模擬實證總體風格與定價事實。"
+    },
+    {
+      "arxiv_id": "2611.00338",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "分析預測市場與巴西總統大選開票資料的即時交易表現，具備高度實證價值。"
+    },
+    {
+      "arxiv_id": "2610.41990",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 6,
+      "reason": "探討隨機漫步中最深回撤與最長回撤的數學性質，屬於機率論證明。"
+    },
+    {
+      "arxiv_id": "2610.41740",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 5,
+      "reason": "介紹用於檢驗動態傳染效應的 GAUSS 軟體元件與實證範例。"
+    }
+  ]
+}
