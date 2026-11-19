@@ -1,0 +1,327 @@
+{
+  "date": "2026-11-19",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2611.24028",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "以隨機梯度下降模型解釋造市行為並推導粗糙波動度，有六個月幣安實證。"
+    },
+    {
+      "arxiv_id": "2611.23952",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "利用共同波動率動態進行高維度共變異數預測與投組選擇，實證完整。"
+    },
+    {
+      "arxiv_id": "2611.23723",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "利用視覺模型檢索歷史價格圖表預測報酬，夏普值翻倍且具備可解釋性。"
+    },
+    {
+      "arxiv_id": "2611.24912",
+      "topic": "其他",
+      "evidence": "理論或工具",
+      "relevance": 3,
+      "value": 5,
+      "reason": "證明有限參與模型中狀態價格 deflated 股價程序為嚴格區域性鞅。"
+    },
+    {
+      "arxiv_id": "2611.24266",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 3,
+      "value": 5,
+      "reason": "對實質選擇權文獻進行系統性文獻回顧與敏感度分析建議，偏方法論。"
+    },
+    {
+      "arxiv_id": "2611.24845",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提出代理人原生交易框架，強調研究到執行的狀態追蹤與授權控制。"
+    },
+    {
+      "arxiv_id": "2611.23587",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提出廊道產品的光譜定價方法，計算速度顯著優於有限差分網格。"
+    },
+    {
+      "arxiv_id": "2601.08721",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出具備尺度意識的可行性優先衛星資產配置框架，強調固定成本與韌性。"
+    },
+    {
+      "arxiv_id": "2610.40129",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 5,
+      "reason": "將凱斯勒症候群廣義化應用於供應鏈與波斯灣局勢，偏概念探討。"
+    },
+    {
+      "arxiv_id": "2610.32970",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 7,
+      "reason": "探討蒙地卡羅模擬中神經網路分層因子的連續性與泛近近似定理。"
+    },
+    {
+      "arxiv_id": "2610.29652",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 8,
+      "reason": "發展最差情況風險評估的凸變分理論，推導出封閉解並應用於高維投組。"
+    },
+    {
+      "arxiv_id": "2610.26101",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出金融策略開發的雙層代理人框架與基準測試，顯著提升任務成功率。"
+    },
+    {
+      "arxiv_id": "2610.25756",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "運用拓樸資料分析壓縮預測市場信念狀態以改善預測模型。"
+    },
+    {
+      "arxiv_id": "2610.24386",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 6,
+      "reason": "提出將 GARCH 波動率嵌入 LSTM 遺忘門的架構，改善股價預測準確度。"
+    },
+    {
+      "arxiv_id": "2610.21540",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 4,
+      "value": 6,
+      "reason": "探討加密協定隱私修復帶來的可驗證性折扣，結合鏈上流向與事件面板分析。"
+    },
+    {
+      "arxiv_id": "2610.17481",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出短相關面板中價格實驗的引導疊代方法，以獨立變異解決識別不足。"
+    },
+    {
+      "arxiv_id": "2610.16019",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 5,
+      "reason": "建立消費慣性與追趕潮流的平均場模型均衡證明。"
+    },
+    {
+      "arxiv_id": "2610.09641",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "探討光子混合量子類神經網路在金融市場預測的設計空間探索框架。"
+    },
+    {
+      "arxiv_id": "2610.07701",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "利用注入真實協定評估量化策略研究中的準入閘門機制。"
+    },
+    {
+      "arxiv_id": "2610.06412",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "驗證 Polymarket 公共交易足跡與鏈上結算，並評估不同成交方向識別法的影響。"
+    },
+    {
+      "arxiv_id": "2610.05922",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "將線上實驗重構為誘因設計問題，透過樣本分割與收縮解決代理人衝突。"
+    },
+    {
+      "arxiv_id": "2610.04040",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出代理人政策價值審計，分離轉換組成與事件選擇技能，糾正虛假績效。"
+    },
+    {
+      "arxiv_id": "2610.02838",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "為鏈上金融協定開發包含 manifest 繫結與七層證明的證據架構。"
+    },
+    {
+      "arxiv_id": "2610.02834",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "建立槓桿事件市場的規範協定圖與單一狀態權威架構。"
+    },
+    {
+      "arxiv_id": "2610.01562",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "證明動態雙向拍賣機制的固定點與瓦拉斯均衡相符。"
+    },
+    {
+      "arxiv_id": "2609.38545",
+      "topic": "Alpha 與因子",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 5,
+      "reason": "研究金融市場中機構言論與實際持倉的策略性敘事，僅使用模擬市場。"
+    },
+    {
+      "arxiv_id": "2609.38230",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "推導資產籃子短期隱含波動率與偏度黏性比率的漸近展開式。"
+    },
+    {
+      "arxiv_id": "2609.32848",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "透過 CME 超過一年的市場資料分析封包與佇列，提出高頻交易系統設計原則。"
+    },
+    {
+      "arxiv_id": "2609.32773",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "運用大語言模型與統計歸因方法預測美元兌加幣匯率，分析貨幣政策通訊。"
+    },
+    {
+      "arxiv_id": "2609.23272",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "建立多資產隨機系統中 drawdown 控制的有限地平線強健不變性與最佳化框架。"
+    },
+    {
+      "arxiv_id": "2609.21301",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提出透過 Strang 算子分裂近似來模擬隨機波動率模型的通用框架，證明二階收斂。"
+    },
+    {
+      "arxiv_id": "2610.00173",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "研究 Kalshi 預測市場合約可決策性邊界處的價格發現，偏基礎基礎設施分析。"
+    },
+    {
+      "arxiv_id": "2609.16642",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "定義 Kalshi 預測市場的首次與穩定可決策性時鐘並進行經驗識別測試。"
+    },
+    {
+      "arxiv_id": "2609.15368",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "重建 Polymarket 預測市場的甲骨文裁決與語意治理狀態。"
+    },
+    {
+      "arxiv_id": "2609.14029",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "提出報酬與共變異數聯合正規化的特殊馬可夫 thermodynamic 法則。"
+    },
+    {
+      "arxiv_id": "2609.13961",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "推導連續區域性鞅模型中 Black-Scholes 隱含變異數的一階表示式。"
+    },
+    {
+      "arxiv_id": "2609.09405",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "對 Log S-fBM 隨機波動率模型進行統計分析與假設檢定。"
+    },
+    {
+      "arxiv_id": "2609.09137",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 1,
+      "value": 5,
+      "reason": "提出識別與優先排序醫療流程自動化機會的資料驅動框架，與金融交易無關。"
+    },
+    {
+      "arxiv_id": "2609.07169",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "開發 Volterra-Heston 模型中離散監控亞洲選擇權的半封閉定價公式與避險方法。"
+    },
+    {
+      "arxiv_id": "2609.02447",
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "分類非線性瞬態衝擊模型中的價格操縱可能性與記憶性條件。"
+    }
+  ]
+}

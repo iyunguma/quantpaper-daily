@@ -1,0 +1,515 @@
+{
+  "date": "2026-11-19",
+  "generated_at": "2026-11-19T12:14:44+08:00",
+  "scanned": 2484,
+  "eligible": 2161,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2611.24028",
+      "title": "Algorithmic Market Making Can Lead to Rough Volatility Through the Order Book",
+      "authors": [
+        "Sai Niranjan Ramachandran"
+      ],
+      "abstract": "Existing work suggests that markets can show volatility with paths rougher than those of Brownian motion. In theory this can happen when the order flow is close to instability with memory that decays as a power law. However, it is not fully clear how such order flow could arise from the predominantly algorithmic market making that characterizes order book dynamics. We show one such consistent mechanism. We treat each market maker as a desk that uses a first-order gradient rule to move the distances of its orders from the mid price toward target distances provided by an unknown oracle. We assume that distinct desks do not act synchronously in time but act whenever new information relevant to their respective oracles arrives, which each desk samples over its own characteristic lookback horizon. Across all desks the rule therefore takes the form of stochastic gradient descent (SGD) with information-driven (mini-batch) noise. In the continuum limit this update rule makes the volume of the order book follow a conservative stochastic partial differential equation (the Dean--Kawasaki equation) whose fluctuations drive the order flow. The distinct horizons of the desks further induce a persistent memory in the order flow that decays as a power law. Standard scaling arguments then lead to rough volatility. We confirm the key predictions of the model on simulated agents and on six months of Binance data with about 790 million orders. In liquid markets governed mainly by market makers, such as the perpetual futures of Binance, the order books are consistent with how our desks change the book.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-fin.MF",
+        "q-fin.TR"
+      ],
+      "published": "2026-11-18T08:16:22Z",
+      "updated": "2026-11-18T08:16:22Z",
+      "abs_url": "https://arxiv.org/abs/2611.24028",
+      "pdf_url": "https://arxiv.org/pdf/2611.24028v1",
+      "comment": "65 pages (including appendix) , 2 figures, 20 tables",
+      "journal_ref": "",
+      "keyword_score": 57,
+      "matched_keywords": [
+        "market making",
+        "order flow",
+        "market maker",
+        "order book",
+        "futures"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "以隨機梯度下降模型解釋造市行為並推導粗糙波動度，有六個月幣安實證。",
+      "summary": {
+        "title_zh": "演算法造市如何透過限價單簿導致粗糙波動率",
+        "verdict": "證明非同步造市商的隨機梯度下降更新會引發冪次衰減記憶與粗糙波動率，經幣安資料驗證。",
+        "problem": "市場波動率路徑較 Brownian motion 更為粗糙，且常與訂單流的冪次衰減記憶有關，但此現象如何從演算法造市中產生尚不明確。",
+        "method": "建構使用第一階梯度規則、透過各自觀察期非同步更新的造市商代理人模型，並使用六個月包含約 7.9 億筆訂單的幣安永續合約資料進行實證。",
+        "findings": "在連續極限下，更新規則使限價單簿體積遵循保守型隨機偏微分方程式，其波動驅動訂單流，而不同的觀察期則引發冪次衰減的持續性記憶，論文未報告具體的報酬或夏普值數字。",
+        "implication": "可用於理解高頻市場中由造市商行為引起的波動率結構，前提是市場主要由具有不同回看週期的非同步造市商主導。",
+        "caveats": "模型假設造市商使用未知的目標距離以及特定的隨機梯度下降規則，可能無法完全捕捉所有真實市場的動態。",
+        "practicality": 3,
+        "tags": [
+          "造市",
+          "限價單簿",
+          "波動率",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.23723",
+      "title": "When Price Charts Rhyme: Historical Visual Retrieval for Stock Return Prediction",
+      "authors": [
+        "Hui Chen",
+        "Haoyu Liu",
+        "Ke Wu",
+        "Dexin Zhou"
+      ],
+      "abstract": "We study whether visually similar price histories predict similar future returns, using a vision model to retrieve each stock's most similar charts from three decades of U.S. price histories. A representation pretrained only on natural images already retrieves neighbors whose realized returns predict the cross-section of stock returns. Aligning the representation with subsequent returns more than doubles the strategy's Sharpe ratio and outperforms a convolutional neural network trained directly on chart images. The predictability is concentrated among stocks with greater limits to arbitrage. Returns and order imbalances around portfolio formation indicate that the signal identifies temporary selling pressure that partially reverts. A sparse autoencoder traces the return-aligned signal to recurring visual states that determine which historical charts are retrieved. Our approach traces each forecast to dated historical charts, making it more transparent than direct image-to-return models and linking rule-based technical analysis with machine-learning chart reading.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.CP"
+      ],
+      "published": "2026-11-18T02:27:12Z",
+      "updated": "2026-11-18T02:27:12Z",
+      "abs_url": "https://arxiv.org/abs/2611.23723",
+      "pdf_url": "https://arxiv.org/pdf/2611.23723v1",
+      "comment": "155 pages",
+      "journal_ref": "",
+      "keyword_score": 26,
+      "matched_keywords": [
+        "sharpe ratio",
+        "stock",
+        "neural network"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用視覺模型檢索歷史價格圖表預測報酬，夏普值翻倍且具備可解釋性。",
+      "summary": {
+        "title_zh": "價格圖表何以押韻：用於股票報酬預測的歷史視覺檢索",
+        "verdict": "透過視覺模型檢索歷史相似價格圖表來預測股票報酬，報酬對齊後的夏普值顯著提升且具備高透明度。",
+        "problem": "探討視覺上相似的價格歷史是否能有效預測未來的橫截面報酬，並解決傳統機器學習圖表模型缺乏透明度的問題。",
+        "method": "使用視覺模型與稀疏自編碼器，對美國三十年的股票價格歷史圖表進行視覺檢索；比較自然影像預訓練表徵、報酬對齊表徵及卷積神經網路的成效。",
+        "findings": "僅自然影像預訓練表徵即可檢索出具預測力的歷史圖表；將表徵與後續報酬對齊後，策略的夏普值提升超過兩倍，且預測能力主要集中在套利限制較大的股票中。",
+        "implication": "此方法成功將傳統技術分析與機器學習結合，並能將每個預測追溯至具體的歷史圖表，具備高度可解釋性以捕捉暫時性賣壓的反轉。",
+        "caveats": "預測訊號主要反映短期賣壓反轉，其實際交易成本與在大規模資金下的策略容量仍需進一步驗證。",
+        "practicality": 4,
+        "tags": [
+          "視覺檢索",
+          "機器學習",
+          "技術分析",
+          "Alpha 因子挖掘"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.06412",
+      "title": "Measuring Trade Direction in a Prediction Market: Settlement Ground Truth and Trading-Cost Measurement on Polymarket",
+      "authors": [
+        "Philipp D. Dubach"
+      ],
+      "abstract": "Trade-sign errors can change measured trading costs even when classification accuracy is high. We validate the side of Polymarket's public trade prints against the taker leg of each print's on-chain settlement. On twelve selected days between April and August 2026, spanning both exchange generations, 92.1% to 100.0% of prints match a settled taker leg, with exact side and token agreement on all 24.5 million matched pairs. Mint-and-merge settlement makes that taker leg essential: pooling maker and taker legs changes the measured buy share. Signing the full cached tape before settlement selection yields 16.6 million prints signed by every rule; equal-day balanced accuracy is 0.942 for Lee-Ready, 0.768 for the tick test and 0.670 for retrospective bulk volume classification. On 16.4 million identical eligible fills, Lee-Ready raises effective spread by 0.429 cents per share under equal-fill weights; its realised-spread difference is -0.209 cents. Under share-volume weights, taker five-minute midpoint impact is 0.689 cents, while tick and bulk classifications give -0.374 and -0.119 cents. That aggregate sign reversal disappears when tied print rows are excluded. Distortion depends on error-weighted signed outcomes, sample selection and weighting. Receipt-time ordering and unobserved future-quote age limit these delivered-quote accounting quantities; they do not identify causal impact or private information. Supporting venue and collector analyses provide descriptive diagnostics.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "econ.EM"
+      ],
+      "published": "2026-10-05T14:29:30Z",
+      "updated": "2026-10-05T14:29:30Z",
+      "abs_url": "https://arxiv.org/abs/2610.06412",
+      "pdf_url": "https://arxiv.org/pdf/2610.06412v1",
+      "comment": "41 pages, 7 figures, 17 tables. Companion to arXiv:2604.24366. Replication package: doi:10.5281/zenodo.23164515",
+      "journal_ref": "",
+      "keyword_score": 10,
+      "matched_keywords": [],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "驗證 Polymarket 公共交易足跡與鏈上結算，並評估不同成交方向識別法的影響。",
+      "summary": {
+        "title_zh": "預測市場的交易方向衡量：Polymarket 上的結算真實基準與交易成本衡量",
+        "verdict": "驗證 Polymarket 交易方向，發現 Lee-Ready 準確率達 0.942，標籤錯誤會顯著扭曲交易成本。",
+        "problem": "交易方向誤判會改變測得的交易成本，縱使分類準確率高。預測市場的特殊結算機制使得精準識別 taker 腿成為關鍵。",
+        "method": "比對 Polymarket 公開交易紀錄與鏈上結算 taker 腿，採用 2026 年 4 月至 8 月間 12 天共 2,450 萬筆配對資料，評估 Lee-Ready、tick 檢定與回顧性大宗量分類法。",
+        "findings": "92.1% 至 100.0% 的成交紀錄與已結算 taker 匹配，方向與 Token 完全一致。Lee-Ready 平衡準確率為 0.942（tick 檢定 0.768、大宗分類 0.670）。Lee-Ready 使有效價差增加 0.429 美分/股，而 taker 五分鐘中價衝擊為 0.689 美分。",
+        "implication": "交易方向分類影響真實交易成本計算，研究人員在分析預測市場時需審慎選擇分類規則並排除平手列影響。",
+        "caveats": "收條時間排序與未觀察到的未來報價年齡限制了會計數量的估計，無法直接辨識因果衝擊與私有資訊。",
+        "practicality": 4,
+        "tags": [
+          "預測市場",
+          "交易成本",
+          "微結構",
+          "訂單流"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.32848",
+      "title": "Packets, Transactions and Queues: Design Principles for HFT Systems from a Measurement Study of CME Market Data",
+      "authors": [
+        "Vincent Maciejewski"
+      ],
+      "abstract": "HFT systems are conventionally built as a single-threaded event loop, on the rule that every thread hop adds latency. We test that rule against a measurement study of more than a year of CME market data for the NQ front-month contract, following every packet and matching-engine transaction through the feed's two exchange timestamps, and checking the results against a live production receiver. Packets arrive in near-critical self-exciting clusters that belong to the matching engine's transactions, not to how the exchange packs them. The engine often processes consecutive transactions within a fraction of a microsecond, while the market-data publisher sends at most one packet per publisher period of about 7.5 microseconds, so a burst reaches the receiver as a train of packets one period apart. This yields design principles for HFT systems. First, a receiver that handles each packet within one publisher period never queues on arrivals, however bursty the market; there one thread is best. Second, above that period a queueing tail appears, driven by the timing of transactions, not by packet rate or size, and two threads can be better than one: splitting the servicing chain into two stages on separate threads removes most of the tail at the cost of one hop on the median. Third, only the slowest stage matters, so a split pays only if it shortens it. Fourth, just under the period, where the production receiver runs, the remaining tail comes from multi-message packets and variable service times, and the levers are cost per message and spread of service, not thread count. An analytic framework, a burst-limit throughput identity and an exact reduction of the tandem to a single bottleneck server, supports these results.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.DC",
+        "cs.PF",
+        "q-fin.ST"
+      ],
+      "published": "2026-09-26T18:22:45Z",
+      "updated": "2026-10-05T01:12:25Z",
+      "abs_url": "https://arxiv.org/abs/2609.32848",
+      "pdf_url": "https://arxiv.org/pdf/2609.32848v2",
+      "comment": "123 pages, 36 figures, 31 tables. Code in the Kaspar-HFT repository (https://github.com/vincent212/kaspar-hft)",
+      "journal_ref": "",
+      "keyword_score": 10,
+      "matched_keywords": [],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "透過 CME 超過一年的市場資料分析封包與佇列，提出高頻交易系統設計原則。",
+      "summary": {
+        "title_zh": "封包、交易與佇列：從CME市場資料計量研究探討高頻交易系統設計原則",
+        "verdict": "透過CME資料分析高頻交易系統執行緒架構，依據發布週期與處理時間來配置單或多執行緒以最佳化延遲。",
+        "problem": "傳統高頻交易系統常為避免執行緒切換延遲而採用單執行緒事件迴圈，此假設是否適用於實際交易所資料需透過實證檢驗。",
+        "method": "使用超過一年的CME微那斯達克主力合約市場資料，追蹤封包與撮合引擎交易，並以實際生產環境接收器驗證與分析。",
+        "findings": "發現撮合引擎交易產生的爆發性封包會影響佇列尾端延遲，若處理時間大於發布週期，多執行緒架構可優於單執行緒；未報告具體績效數字。",
+        "implication": "提供高頻交易系統架構設計準則，可依發布週期與訊息服務時間決定是否採用多執行緒分流。",
+        "caveats": "研究結論基於CME交易所的資料特性，套用至其他市場時需重新評估。",
+        "practicality": 4,
+        "tags": [
+          "高頻交易",
+          "市場微結構",
+          "延遲最佳化",
+          "佇列理論"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.29652",
+      "title": "Distributions or Quantiles? A Convex Variational Theory of Worst-Case Risk",
+      "authors": [
+        "Jianjun Gao",
+        "Jonathan Yu-Meng Li",
+        "Zhen Wang",
+        "Yang Zhang"
+      ],
+      "abstract": "Worst-case risk evaluation is central to finance and operations research, yet existing analytical results remain fragmented and largely confined to ambiguity sets with specific structures. Using spectral risk measures as the underlying class, we develop a convex variational theory that unifies these analyses and extends them to richer ambiguity models. The theory rests on a representation principle: use the quantile or distribution formulation that preserves convexity of the full ambiguity set. In both representations, the resulting optimality conditions provide a systematic route to identify the worst-case law and determine its risk value. This approach recovers classical central-moment bounds and yields closed-form or semi-closed-form solutions for practically motivated models involving Wasserstein ambiguity with tail stress, two-sided expected shortfall (ES) bands, asymmetric partial moments, geometric-moment bounds, and exponential- or Gaussian-reference Kullback--Leibler (KL) neighborhoods. Beyond these analytical results, the same theory yields projection-based algorithms with fixed-grid convergence under the stated assumptions. In a high-dimensional portfolio application, we establish an exact projection identity for mean-anchored joint KL ambiguity under a Gaussian reference. The resulting standardized worst-case ES coefficient applies to every portfolio, reducing robust portfolio selection to an exact second-order cone program after a single calibration.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM",
+        "q-fin.MF"
+      ],
+      "published": "2026-10-21T12:34:06Z",
+      "updated": "2026-10-23T01:25:42Z",
+      "abs_url": "https://arxiv.org/abs/2610.29652",
+      "pdf_url": "https://arxiv.org/pdf/2610.29652v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 10,
+      "matched_keywords": [
+        "portfolio selection"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance_reason": "發展最差情況風險評估的凸變分理論，推導出封閉解並應用於高維投組。",
+      "summary": {
+        "title_zh": "分佈還是分位數？最差情況風險的凸變分理論",
+        "verdict": "提出一個統一的凸變分理論來評估最差情況風險，能導出多種模型解析解並簡化投資組合最佳化。",
+        "problem": "現有的最差情況風險評估分析結果相當零散，且大多侷限於具特定結構的不確定集合。",
+        "method": "以譜風險測度為基礎，運用分位數或分佈表述建立凸變分理論，並應用於高維度投資組合與各種 Wasserstein 及 KL 距離不確定模型。",
+        "findings": "該理論成功恢復了古典的中心矩界限，並為 Wasserstein 模糊性搭配尾部壓力、雙邊預期 shortfall 帶等模型提供解析解或半解析解。在高效能投資組合應用中，將強韌投資組合選擇簡化為單次校準後的二階錐程式。",
+        "implication": "可直接應用於強韌風險管理與投資組合最佳化，大幅降低複雜不確定集合的求解計算負擔。",
+        "caveats": "理論依賴於特定假設條件下的固定網格收斂性。",
+        "practicality": 4,
+        "tags": [
+          "風險管理",
+          "投資組合最佳化",
+          "凸最佳化",
+          "量化金融"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.04917",
+      "title": "Artificial Intelligence in Equity and Crypto Markets: Progress, Profitability Evidence, and the Limits of Automated Investing",
+      "authors": [
+        "Linsen Zhu",
+        "Mengqing Cai"
+      ],
+      "abstract": "Artificial intelligence (AI) now supports investment workflows from data and prediction through research, portfolios, execution, and tool use. Technical capability, however, is not evidence of investment profitability. This critical state-of-the-art review examines public research available through 31 August 2026 on listed equities, exchange-traded funds, centralized crypto spot, perpetual futures, and on-chain markets. We organize evidence with an alpha-translation chain: point-in-time information must yield a stable signal, feasible positions, executable orders, and risk-adjusted returns after costs. Across machine learning, time-series foundation models, financial language models, reinforcement learning, and agents, the examined record shows real but mainly upstream progress in prediction, text processing, portfolio design, and workflow integration. Evidence is thinner for durable net performance. Temporal contamination, repeated selection, survivorship, weak benchmarks, implementation costs, venue mechanics, and capacity can break translation to net alpha. Strong historical results coexist with predictor decay, corrected look-ahead failures, mixed prospective evidence, and few audited live-capital records. Crypto adds informative state but requires separate treatment of spot, perpetual, and decentralized cash flows and execution. Within the public evidence examined here, no general AI architecture is shown to deliver persistent, cross-regime, capacity-aware net alpha. More credible claims require point-in-time data and models, decision-aligned objectives, joint portfolio--execution evaluation, controlled adaptation, prospective tests, and authority-matched governance. These conditions can improve evidence and implementation; they do not guarantee profit.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "q-fin.PM",
+        "q-fin.TR"
+      ],
+      "published": "2026-09-04T09:19:51Z",
+      "updated": "2026-09-04T09:19:51Z",
+      "abs_url": "https://arxiv.org/abs/2609.04917",
+      "pdf_url": "https://arxiv.org/pdf/2609.04917v1",
+      "comment": "Review article. 32 pages, 1 figure, 5 tables. Literature cutoff: 31 August 2026",
+      "journal_ref": "",
+      "keyword_score": 17,
+      "matched_keywords": [
+        "reinforcement learning",
+        "regime",
+        "futures",
+        "alpha"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "全面審視 AI 在加密與股票市場的獲利證據，指出缺乏持久的Alpha。",
+      "summary": {
+        "title_zh": "權益與加密貨幣市場中的人工智慧：進展、獲利實證與自動化投資的極限",
+        "verdict": "審視 AI 在股票與加密貨幣市場的應用，發現預測有進展但缺乏持久淨 Alpha。",
+        "problem": "檢視現有公開研究中，人工智慧技術能否實際轉化為扣除成本後的穩定超額報酬，探討技術能力與投資獲利的落差。",
+        "method": "涵蓋機器學習、時間序列基礎模型、金融語言模型、強化學習與代理人技術的綜合文獻回顧。研究範圍包含上市股票、ETF、加密貨幣現貨與永續合約，考察至 2026 年 8 月的公開研究。",
+        "findings": "研究顯示 AI 在預測與文字處理上有實質上游進展，但持久淨績效證據薄弱，未報告具體績效數字。時間污染、回測過擬合與交易成本會破壞 Alpha 的轉化，且沒有通用 AI 架構能提供跨體制的淨報酬。",
+        "implication": "實務交易若要提升可信度，須採用歷史時間點資料、決策對齊目標與聯合投資組合執行評估。這些前提能改善實施，但無法保證獲利。",
+        "caveats": "公開文獻普遍缺乏真實資金稽核紀錄，且面臨倖存者偏差與回測過擬合的嚴重限制。",
+        "practicality": 2,
+        "tags": [
+          "機器學習",
+          "加密貨幣市場",
+          "Alpha 因子挖掘",
+          "強化學習",
+          "基礎模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.23283",
+      "title": "Market Efficiency in a Changing Asset Population: Mobility, Entry, and Survival over Cryptocurrency's Full History",
+      "authors": [
+        "Antonis Ballis",
+        "Christos Ioannidis"
+      ],
+      "abstract": "Weak-form efficiency implies symmetry restrictions on the Markov chain governing movement across the cryptocurrency capitalisation distribution. We test them on the full listed population: 8,970 assets, 690 weekly cross-sections, 2013 to 2026, with entry, exit and survival observed rather than inferred. Symmetry is rejected in every era, but the asymmetry falls by seventy percent, and what converged is entry-driven compositional churn rather than coins' own valuations. The bottom decile earns 27.5% per week on paper and nothing among assets that trade, on capacity of $293,000. Compensation for neglect exists precisely where trading does not.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "econ.GN",
+        "q-fin.PR"
+      ],
+      "published": "2026-10-16T10:53:42Z",
+      "updated": "2026-10-19T10:18:47Z",
+      "abs_url": "https://arxiv.org/abs/2610.23283",
+      "pdf_url": "https://arxiv.org/pdf/2610.23283v2",
+      "comment": "63 pages, 2 figures, 20 tables",
+      "journal_ref": "",
+      "keyword_score": 14,
+      "matched_keywords": [
+        "cryptocurrency"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "分析加密貨幣歷史全貌的弱式市場效率與生存率，樣本極大且實證扎實。",
+      "summary": {
+        "title_zh": "變化資產群體中的市場效率：加密貨幣完整歷史的流動性、進入與存活率",
+        "verdict": "檢驗加密貨幣市值分佈的馬可夫鏈，發現弱式效率被拒絕，但非對稱性隨時間顯著下降。",
+        "problem": "弱式市場效率隱含了支配加密貨幣市值分佈移動的馬可夫鏈需符合對稱限制，這是否在歷史資料中成立？",
+        "method": "使用 2013 年至 2026 年間共 8,970 種加密貨幣與 690 個週度橫斷面資料，直接觀察資產的進入、退出與存活。",
+        "findings": "對稱性在每個時期都被拒絕，但非對稱性下降了 70%，且收斂的主因是新幣進入造成的組成變動而非幣值本身。底線十分位數在紙面上每週可賺取 27.5%，但在實際交易的資產中為零，且容量僅有 29.3 萬美元。",
+        "implication": "市場效率的改善主要來自於新資產的動態進入與退出，而非現存資產價格行為的改善。忽視溢酬僅存在於無交易流動性的資產中。",
+        "caveats": "紙面報酬與實際可交易資產存在巨大落差，且容量極小限制了其實際執行的可行性。",
+        "practicality": 2,
+        "tags": [
+          "市場效率",
+          "加密貨幣",
+          "馬可夫鏈",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.17307",
+      "title": "Deep Reinforcement Learning Framework for Diversified Portfolio Management Across Global Equity Markets",
+      "authors": [
+        "Kamil Kashif",
+        "Robert Ślepaczuk"
+      ],
+      "abstract": "This study develops and evaluates a deep reinforcement learning framework for dynamic portfolio allocation across global equity markets. The Soft Actor-Critic algorithm is used to learn continuous portfolio weights within a Markov Decision Process, incorporating transaction costs, turnover penalties, and diversification constraints into the reward function. Five model configurations are compared, varying in reward formulation, policy structure (flat versus hierarchical Dirichlet), portfolio constraints, and temporal encoder (LSTM versus Transformer), and evaluated via walk-forward optimization across sixteen out-of-sample folds spanning 2003-2026 on the Nasdaq-100, Nikkei 225, and Euro Stoxx 50. Results show that RL strategies achieve competitive risk-adjusted performance primarily in the Euro Stoxx 50, where statistically significant abnormal returns are observed, but the central hypothesis is only partially confirmed: no strategy achieves statistically significant excess returns relative to Buy and Hold under HAC-robust inference across all markets. Regime analysis reveals that RL adds the most value during periods of elevated uncertainty, while ensemble aggregation across markets improves risk-adjusted performance and confirms the benefits of geographic diversification.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "cs.AI",
+        "cs.LG",
+        "cs.NE",
+        "q-fin.TR"
+      ],
+      "published": "2026-05-17T07:50:37Z",
+      "updated": "2026-05-17T07:50:37Z",
+      "abs_url": "https://arxiv.org/abs/2605.17307",
+      "pdf_url": "https://arxiv.org/pdf/2605.17307v1",
+      "comment": "67 pages, 11 figures, 16 tables",
+      "journal_ref": "",
+      "keyword_score": 48,
+      "matched_keywords": [
+        "reinforcement learning",
+        "transaction cost",
+        "out-of-sample",
+        "transformer",
+        "regime",
+        "equity market"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "多年樣本外走勢驗證，未顯著打敗買入持有，實證客觀。",
+      "summary": {
+        "title_zh": "應用於全球股票市場多元化投資組合管理的深度強化學習框架",
+        "verdict": "利用 Soft Actor-Critic 進行動態投資組合配置，實證顯示強化學習策略在不確定性高的時期最具價值，但未能全面擊敗買入持有策略。",
+        "problem": "如何在納入交易成本、換手率懲罰與多元化限制下，於全球股票市場進行動態投資組合配置。",
+        "method": "使用 Soft Actor-Critic 演算法與馬可夫決策過程，結合 LSTM 與 Transformer 時間編碼器。資料涵蓋 2003 至 2026 年 Nasdaq-100、Nikkei 225 與 Euro Stoxx 50 指數，透過往前行進最佳化（walk-forward optimization）進行評估。",
+        "findings": "Euro Stoxx 50 市場中觀察到具統計顯著性的異常報酬，但在 HAC 穩健推論下，沒有任何策略在所有市場皆能取得顯著優於買入持有（Buy and Hold）的超額報酬，具體績效數字未在摘要中報告。",
+        "implication": "跨市場組合聚合能提升風險調整後績效並發揮地理多元化優勢，適合在市場高度不確定時期作為動態配置的輔助工具。",
+        "caveats": "在 HAC 穩健推論下，強化學習策略無法在所有市場中穩定取得顯著優於買入持有的超額報酬。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "投資組合管理",
+          "資產配置",
+          "Transformer",
+          "LSTM"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.27848",
+      "title": "Regime-Based Portfolio Allocation Using Hidden Markov Models and Reinforcement Learning",
+      "authors": [
+        "Ajay Kumar Verma",
+        "Nunik Srikandi Putri",
+        "Neo Paul Lesupi"
+      ],
+      "abstract": "This study develops a regime-aware portfolio allocation framework that integrates Markov switching models with Reinforcement Learning (RL) to dynamically allocate across equities (SPY), long-term Treasuries (TLT), and gold (GLD). Using daily ETF data from 2004-2025, we first characterize market behavior through a discrete Markov chain and then estimate a three-state Gaussian Hidden Markov Model (HMM) selected by the Bayesian Information Criterion (BIC). The estimated regimes-low-volatility, transitional, and high-volatility-exhibit strong persistence and state-dependent return dynamics consistent with recent findings on nonlinear market states (Ardia et al., 2024; Gupta & Pierdzioch, 2023). State-conditional analysis shows that SPY dominates in stable regimes, while TLT and GLD provide protection during stressed periods, motivating regime-conditioned allocation rules. We evaluate rule-based rotation and RL-driven strategies using a 30% out-of-sample test window with a one-day execution lag to avoid look-ahead bias. Both HMM-based allocations outperform a passive SPY benchmark, while the RL policy achieves the highest risk-adjusted performance, delivering the strongest Sharpe ratio and materially lower drawdowns, yet remains fully interpretable through discrete regime-dependent actions. Sensitivity analysis confirms the robustness of the three-state specification relative to two-state alternatives. Overall, the results demonstrate that RL can systematically enhance HMM-based regime detection, providing a transparent, adaptive, and empirically grounded framework for tactical asset allocation. The combined HMM-RL system provides a transparent, rules-based approach to tactical allocation that improves risk-adjusted performance relative to standard benchmark strategies.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "econ.EM",
+        "q-fin.CP",
+        "q-fin.MF",
+        "q-fin.ST"
+      ],
+      "published": "2026-05-27T02:04:31Z",
+      "updated": "2026-05-27T02:04:31Z",
+      "abs_url": "https://arxiv.org/abs/2605.27848",
+      "pdf_url": "https://arxiv.org/pdf/2605.27848v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 47,
+      "matched_keywords": [
+        "sharpe ratio",
+        "reinforcement learning",
+        "out-of-sample",
+        "drawdown",
+        "regime"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合隱馬可夫模型與強化學習，樣本外檢驗完整。",
+      "summary": {
+        "title_zh": "基於隱藏馬可夫模型與強化學習的體制轉換資產配置",
+        "verdict": "結合隱藏馬可夫模型與強化學習進行動態配置，能提升夏普值並降低回檔。",
+        "problem": "傳統資產配置無法有效適應市場狀態的非線性轉變，需建立能識別不同總經體制的動態配置框架。",
+        "method": "採用 2004 至 2025 年 SPY、TLT 與 GLD 的日頻資料，以 BIC 選定三狀態高斯隱藏馬可夫模型，並搭配強化學習進行戰術配置，使用 30% 樣本外視窗與一日執行延遲。",
+        "findings": "HMM 結合強化學習策略優於被動 SPY 基準，實現最佳夏普值與顯著較低的最大回檔，但論文未報告具體的報酬率數字。",
+        "implication": "此系統提供透明且具適應力的戰術配置規則，可作為實務中動態調整跨資產部位的有效方法。",
+        "caveats": "僅透過一日延遲處理前瞻偏誤，未深入探討實際交易成本與摩擦力的影響。",
+        "practicality": 4,
+        "tags": [
+          "隱藏馬可夫模型",
+          "強化學習",
+          "資產配置",
+          "體制轉換"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.37872",
+      "title": "A Generalized Langevin Model of Latent Liquidity and Concave Price Impact",
+      "authors": [
+        "Andrey Itkin"
+      ],
+      "abstract": "We model market impact as the response to submitted order flow net of counterflow from latent traders, activated when price displacements from the level that would prevail without the order exceed individual thresholds. Order flow depletes this pool, and a generalized Langevin equation governs its recovery over several time scales. Its memory kernels are finite sums of exponentials, so its Markovian lift is exact rather than an approximation. For an undepleted pool, aggregation under explicit assumptions on individual trading responses yields an intermediate square-root regime between linear small- and large-order limits, without imposing a square-root impact law. Scaling thresholds and responses with price noise makes impact in this regime proportional to volatility, and thresholds that grow with the execution horizon make it independent of duration. With constant displayed depth, expected round-trip costs are nonnegative under the log-price convention, independently of the memory. Numerical experiments show that depletion narrows the square-root range and that memory spectra producing similar single-order impacts can respond differently after substantial prior trading. Calibration to market data is left to a companion paper.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.CP",
+        "q-fin.MF",
+        "q-fin.ST"
+      ],
+      "published": "2026-09-29T15:48:47Z",
+      "updated": "2026-09-29T15:48:47Z",
+      "abs_url": "https://arxiv.org/abs/2609.37872",
+      "pdf_url": "https://arxiv.org/pdf/2609.37872v1",
+      "comment": "4 figures, 9 tables",
+      "journal_ref": "",
+      "keyword_score": 44,
+      "matched_keywords": [
+        "order flow",
+        "price impact",
+        "regime",
+        "liquidity"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance_reason": "建立潛在流動性與凹性價格衝擊的廣義朗之萬模型，理論推導為主。",
+      "summary": {
+        "title_zh": "潛在流動性與凹性價格衝擊的廣義 Langevin 模型",
+        "verdict": "建構包含潛在流動性與記憶效應的廣義 Langevin 模型，導出中間的平方根價格衝擊區間。",
+        "problem": "如何從微觀訂單流與潛在交易者反向流量的互動中，理論上解釋市場價格衝擊的非線性與平方根定律。",
+        "method": "使用廣義 Langevin 方程描述潛在流動性池的枯竭與恢復，記憶核心為指數的有限和，並進行數值實驗。",
+        "findings": "當潛在交易者的觸發閾值與價格雜訊成比例時，價格衝擊在中間區間與波動率成正比；若閾值隨執行時間擴展則與期間無關。未報告具體績效數字。",
+        "implication": "可用於最佳化大單執行的動態路徑與市場衝擊預測，前提是需要將模型對應至真實市場資料。",
+        "caveats": "論文僅進行數值實驗，實際對市場資料的校準留待後續論文處理。",
+        "practicality": 2,
+        "tags": [
+          "價格衝擊",
+          "市場微結構",
+          "訂單流",
+          "流動性"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
