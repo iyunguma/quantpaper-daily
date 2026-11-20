@@ -1,0 +1,519 @@
+{
+  "date": "2026-11-20",
+  "generated_at": "2026-11-20T12:00:34+08:00",
+  "scanned": 2490,
+  "eligible": 2157,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2611.25732",
+      "title": "Auto-Alpha: A Framework for Autonomous Factor Research",
+      "authors": [
+        "Hui Cai",
+        "Kangcheng Deng",
+        "Tianyi Ma",
+        "Qixuan Yang",
+        "Jiacheng Lu",
+        "Rui Sun",
+        "Beidi Luan",
+        "Jing Li",
+        "Zuo Bai"
+      ],
+      "abstract": "Autonomous factor research requires generating economic hypotheses as well as implementing and testing them. We present Auto-Alpha, a framework that connects report-guided initialization to self-directed research through a test-driven implementation loop. An idea agent proposes economic mechanisms and signal constructions; a research agent develops them with backtest feedback. Semantic audit, quantitative review, and human admission select factors for a persistent library, while an Experience Library retains research insights. Starting from 120 research reports, Auto-Alpha builds an initial library of 32 factors. It then generates new ideas and refines existing candidates, producing 420 implementations and retaining 62 additional factors. We evaluate factor quality and portfolio performance using a fixed library snapshot of 105 factors. The median 1-day Rank IC is 0.0301, and a weekly Top-300 portfolio returns 16.81% annualized after stated costs over 2020-2026, versus 1.71% for the CSI 1000 price index. These retrospective results document an operating research process and its artifacts; controlled evaluation is needed to isolate the contribution of its components.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "published": "2026-11-19T08:44:01Z",
+      "updated": "2026-11-19T08:44:01Z",
+      "abs_url": "https://arxiv.org/abs/2611.25732",
+      "pdf_url": "https://arxiv.org/pdf/2611.25732v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 25,
+      "matched_keywords": [
+        "backtest",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "十年樣本外、扣成本後夏普與報酬具體，實證完整。",
+      "summary": {
+        "title_zh": "Auto-Alpha：自主化因子研究的框架",
+        "verdict": "透過智慧代理與測試驅動迴圈自動化研究因子，能在扣除成本後顯著跑贏指數。",
+        "problem": "自主化因子研究需要同時產生經濟假設、實作與測試，過程繁複且缺乏系統性。手動研究效率低，難以大規模迭代。",
+        "method": "使用 Auto-Alpha 框架結合報告引導初始化與自我導向研究，透過點子代理與研究代理進行回測反饋，評估 2020 至 2026 年間的投資組合表現。",
+        "findings": "從 120 篇研究報告出發建立 32 個因子的初始庫，總共產生 420 個實作並保留 62 個額外因子。固定 105 個因子的庫中，中位數 1 日 Rank IC 為 0.0301，每週 Top-300 投資組合在扣除成本後的年化報酬率為 16.81%，表現優於中證 1000 價格指數的 1.71%。",
+        "implication": "此框架能自動化生成與篩選 Alpha 因子，大幅提升研究效率。團隊可直接借鏡其點子代理與回測反饋的迴圈設計來擴充因子庫。",
+        "caveats": "這是回顧性結果記錄了整個研究流程與產物，仍需進行控制實驗以分離各個組件的實際貢獻。",
+        "practicality": 4,
+        "tags": [
+          "Alpha 因子挖掘",
+          "自動化研究",
+          "機器學習",
+          "量化投資"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.25047",
+      "title": "A joint framework for SPX, VIX and VXX",
+      "authors": [
+        "Martino Grasselli",
+        "Andrea Stanghellini",
+        "Sara Svaluto-Ferro"
+      ],
+      "abstract": "Options on VXX bring the dynamics of the VIX futures curve into the joint SPX-VIX calibration problem. We construct a common model by specifying the VIX and then recovering instantaneous SPX variance from the requirement that its risk-neutral conditional expected average over the next thirty days equals the squared VIX. With truncated signatures of time-extended polynomial diffusions, this recovery reduces to finite-dimensional linear algebra and gives explicit access to the futures underlying VXX. The same specification therefore governs equity variance and rolling volatility exposure. To accommodate flexible specifications while respecting variance nonnegativity, we develop a regularized model and quantify the pricing errors of its tractable VIX and VXX proxies. Applications to short-dated option smiles illustrate joint calibration across the three markets, with Monte Carlo estimates of the proxy error bounds well below quoted bid-ask spreads.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF"
+      ],
+      "published": "2026-11-18T19:00:45Z",
+      "updated": "2026-11-18T19:00:45Z",
+      "abs_url": "https://arxiv.org/abs/2611.25047",
+      "pdf_url": "https://arxiv.org/pdf/2611.25047v1",
+      "comment": "37 pages, 5 figures",
+      "journal_ref": "",
+      "keyword_score": 13,
+      "matched_keywords": [
+        "bid-ask spread",
+        "futures"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合 SPX 與 VXX 的聯合定價模型，實證誤差極低。",
+      "summary": {
+        "title_zh": "SPX、VIX 與 VXX 的聯合框架",
+        "verdict": "結合 VXX 期權將 VIX 期貨曲線納入 SPX-VIX 聯合校準，代理誤差低於買賣價差。",
+        "problem": "如何將 VXX 期權所帶有的 VIX 期貨曲線動態納入 SPX-VIX 的聯合校準問題中。",
+        "method": "使用時間擴展多項式擴散的截斷特徵，並透過正規化模型來確保變異數非負。應用於 SPX、VIX 與 VXX 三個市場的短期選擇權微笑曲線聯合校準。",
+        "findings": "透過有限維度線性代數恢復瞬時 SPX 變異數，蒙地卡羅估計的代理誤差邊界遠低於報價的買賣價差，實現三個市場的有效聯合校準。",
+        "implication": "可用於 SPX、VIX 與 VXX 的跨市場聯合定價與校準，前提是須實作多項式擴散與正規化模型。",
+        "caveats": "需要處理變異數非負性與代理機制的定價誤差。",
+        "practicality": 3,
+        "tags": [
+          "SPX",
+          "VIX",
+          "VXX",
+          "選擇權定價",
+          "聯合校準"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.10711",
+      "title": "Optimal Pricing and Hedging of SOFR Derivatives",
+      "authors": [
+        "Teemu Pennanen",
+        "Waleed Taoum"
+      ],
+      "abstract": "Thousands of SOFR derivatives are available in exchanges and OTC, but the market remains illiquid and incomplete. Such a market is beyond the scope of classic risk-neutral approaches that imply linear pricing rules and, at best, approximate hedging strategies whose hedging error may be difficult to quantify. This paper develops an indifference pricing model which is consistent with observed derivative quotes, the agent's financial position and views about the uncertain future as well as risk preferences as described by a convex risk measure. In addition to prices and hedging strategies, the model gives an explicit description of the hedging error and the associated risk. The approach is illustrated numerically using hundreds of CME-listed derivatives to price and hedge unreplicable OTC SOFR derivatives. The indifference prices are computed in less than a minute on a regular PC. We find that the optimal hedging portfolios tend to be sparse but still provide good approximations of the derivative payouts.",
+      "primary_category": "q-fin.PR",
+      "categories": [
+        "q-fin.PR"
+      ],
+      "published": "2026-08-11T09:31:19Z",
+      "updated": "2026-08-11T09:31:19Z",
+      "abs_url": "https://arxiv.org/abs/2608.10711",
+      "pdf_url": "https://arxiv.org/pdf/2608.10711v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 10,
+      "matched_keywords": [
+        "hedging"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "開發 SOFR 衍生品無異動定價模型，CME 資料實證。",
+      "summary": {
+        "title_zh": "SOFR 衍生性商品的最佳訂價與避險",
+        "verdict": "提出一種基於凸風險度量的 indifference pricing 模型，用以解決流動性不足且不完整的 SOFR 衍生性商品市場中的訂價與避險問題。",
+        "problem": "SOFR 衍生性商品市場流動性不足且不完整，傳統風險中立方法產生的線性訂價規則與近似避險策略無法準確量化避險誤差。",
+        "method": "使用 indifference pricing 模型，結合市場報價、交易人財務部位、對未來的看法及凸風險度量所描述的風險偏好。對應市場為交易所與店頭市場（OTC）的 CME 上市 SOFR 衍生性商品。",
+        "findings": "模型能在一般個人電腦上一分鐘內計算出 indifference prices，且最佳化避險投資組合傾向於稀疏，但仍能提供良好且可量化風險的派發近似。",
+        "implication": "可用於無法完全複製的店頭市場 SOFR 衍生性商品之訂價與避險，且運算效率高，適合實務應用。",
+        "caveats": "未報告具體的報酬、夏普值或誤差改善幅度的具體數字。",
+        "practicality": 4,
+        "tags": [
+          "衍生性商品",
+          "利率商品",
+          "避險",
+          "訂價模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.08500",
+      "title": "Estimating the Stochastic Discount Factor from Option Prices and Predicting the Equity Premium",
+      "authors": [
+        "Kenichiro Shiraya",
+        "Tomohisa Yamakami",
+        "Akira Yamazaki"
+      ],
+      "abstract": "This paper proposes a stochastic discount factor (SDF) scaled by time-varying volatility. By utilizing prices and market data implied solely from S\\&P 500 options, the proposed framework recovers a stable, non-monotonic SDF that captures the pure forward-looking expectations of market participants while mitigating observation noise. Our empirical analysis reveals that the SDF exhibits a distinctive hump on the shallow put side, which transitions into a more clearly defined W-shape as the time to maturity increases, identifying maturity as a key factor influencing the intensity of the central hump. We show that this structural feature can be theoretically rationalized by stochastic volatility dynamics under a constant market price of risk. The equity premium derived from the time-varying volatility scaled SDF demonstrates superior out-of-sample predictive performance relative to existing benchmarks, such as the Martin bounds.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "q-fin.ST"
+      ],
+      "published": "2026-07-09T13:59:19Z",
+      "updated": "2026-09-26T13:37:07Z",
+      "abs_url": "https://arxiv.org/abs/2607.08500",
+      "pdf_url": "https://arxiv.org/pdf/2607.08500v3",
+      "comment": "34 page, 5 figures",
+      "journal_ref": "",
+      "keyword_score": 10,
+      "matched_keywords": [
+        "out-of-sample",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "從選擇權價格估計隨機貼現因子並預測股票溢價。",
+      "summary": {
+        "title_zh": "從選擇權價格估計隨機折現因子與預測權益溢價",
+        "verdict": "利用 SPX 選擇權價格建構具時間變異波動率的隨機折現因子，展現優異的樣本外預測能力。",
+        "problem": "傳統隨機折現因子的估計常受觀測雜訊干擾，且難以捕捉市場參與者的前瞻性預期。",
+        "method": "使用 SPX 選擇權的隱含市場資料，提出經時間變異波動率調整的隨機折現因子框架進行實證分析。",
+        "findings": "隨機折現因子在淺價外賣權呈現獨特的駝峰狀，隨到期天數增加轉為 W 型，且其導出的權益溢價在樣本外預測表現優於 Martin bounds 等現有基準，未報告具體的數值改善幅度。",
+        "implication": "此方法能提供穩健且具前瞻性的市場風險價格與權益溢價預測，可用於資產配置與衍生性商品訂價模型。",
+        "caveats": "理論合理化高度依賴常數市場風險價格下的隨機波動率動態假設。",
+        "practicality": 4,
+        "tags": [
+          "隨機折現因子",
+          "選擇權",
+          "權益溢價",
+          "SPX",
+          "波動率"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.25403",
+      "title": "Corporate Bond Yield Curve Modeling: A Rating-Based Regime-Switching Generalized CIR Approach",
+      "authors": [
+        "Maochun Xu",
+        "Yunqi Liang",
+        "Yi Hong"
+      ],
+      "abstract": "Persistent shifts in term-structure dynamics undermine the stability of single-regime models in long samples. We develop an arbitrage-free regime-switching generalized CIR (RS-GCIR) model that jointly prices the Chinese government bond (CGB) curve and corporate bond curves. To capture the systematic transmission from interest-rate conditions to credit spreads, we structure the model into two blocks and price corporate bonds conditional on the prevailing rate regime. The rate block features a two-state RS-GCIR short-rate process estimated from CGB zero-coupon curves, while the credit block embeds CIR-type credit factors in an intensity-based framework for rating migration and default. We implement a block-recursive Unscented Kalman Filter (UKF) procedure--filtering the rate block first and the credit block next--using weekly data from 2014--2025, a period that begins with the onset of China's modern corporate default cycle. We identify two persistent rate regimes with distinct level--volatility profiles. Relative to single-regime benchmarks, regime switching improves joint curve fit, delivers economically interpretable filtered regime probabilities, and sharpens the decomposition of corporate yields into discounting and credit compensation.",
+      "primary_category": "q-fin.PR",
+      "categories": [
+        "q-fin.PR"
+      ],
+      "published": "2026-04-28T09:15:37Z",
+      "updated": "2026-04-28T09:15:37Z",
+      "abs_url": "https://arxiv.org/abs/2604.25403",
+      "pdf_url": "https://arxiv.org/pdf/2604.25403v1",
+      "comment": "65 pages, 10 figures, 16 tables. JEL Classification: G12, E43, C58",
+      "journal_ref": "",
+      "keyword_score": 10,
+      "matched_keywords": [
+        "regime"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "建立評級基礎體制轉換的廣義 CIR 模型聯合定價公債。",
+      "summary": {
+        "title_zh": "公司債殖利率曲線建模：基於信評的體制轉換廣義 CIR 模型",
+        "verdict": "開發無套利體制轉換廣義 CIR 模型聯合定價中國公債與公司債曲線，改善擬合效果。",
+        "problem": "長期樣本中持續變動的期限結構動態，破壞了單一體制模型的穩定性。如何捕捉利率條件對信用利差的系統性傳導是個挑戰。",
+        "method": "採用兩區制體制轉換廣義 CIR 短率過程與強度架構的信用因子，使用 2014 至 2025 年的週資料，透過區塊遞迴無跡卡爾曼濾波器進行估計。",
+        "findings": "辨識出兩個具備不同水準與波動特徵的利率體制。相較於單一體制基準，體制轉換改善了聯合曲線擬合，並提供具經濟解釋力的體制機率。",
+        "implication": "可用於精確分解公司債殖利率為貼現與信用補償，前提是需實作區塊遞迴濾波流程。",
+        "caveats": "論文摘要未報告具體的數值績效改善幅度。",
+        "practicality": 3,
+        "tags": [
+          "殖利率曲線",
+          "體制轉換",
+          "公司債",
+          "信用利差",
+          "無跡卡爾曼濾波"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.09286",
+      "title": "The End-of-Day Reversal After 2019: A Pre-Registered Test on S&P 500 Stocks Excluding Heavily Traded Names",
+      "authors": [
+        "Alex Vidovich",
+        "Zivana Zerjal"
+      ],
+      "abstract": "Baltussen, Da and Soebhag (2025) document an end-of-day reversal in U.S. stocks through December 2019: intraday losers outperform intraday winners over the last half hour of trading. We test it on later data, on point-in-time S&P 500 members excluding about 80 heavily traded stocks we had examined in earlier, unpublished work. Under a private pre-registration, the 2016-2019 data had to reproduce the published sign before any statistic linking the sort to the outcome was computed on later primary-sample data. Measured to the last trade before the closing auction, the dollar-volume-weighted reversal is 3.13 bps per day (t = 7.5) in 2016-2019 and 3.05 bps (t = 3.0) in 2023-2026, with a one-sided 95% bound on the decline of 61%. The result depends on the window: the reversal is indistinguishable from zero in 2020-2022, 2023 carries much of the later estimate, and from 2020 onward it is 1.69 bps (t = 2.3), with a bound of 91%. A proxy sample, added after the run, gives 2.81 and 3.86 bps. On the full index the reversal falls from 3.40 to 0.74 bps (t of the change -1.83, short of the registered bar of -3); descriptive comparisons concentrate this weakness in the very largest stocks. No pre-registered mechanism test passes.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.TR"
+      ],
+      "published": "2026-11-06T10:40:26Z",
+      "updated": "2026-11-06T10:40:26Z",
+      "abs_url": "https://arxiv.org/abs/2611.09286",
+      "pdf_url": "https://arxiv.org/pdf/2611.09286v1",
+      "comment": "15 pages, 1 figure, 9 tables. Replication archive (code, point-in-time membership, leveraged-ETF launch table, pre-registration documents): https://doi.org/10.5281/zenodo.24003093. The paper makes no claim net of costs and does not propose a trading strategy",
+      "journal_ref": "",
+      "keyword_score": 12,
+      "matched_keywords": [
+        "stock"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "事前註冊檢驗S&P 500尾盤反轉效應，實證嚴謹且明確不主張交易策略。",
+      "summary": {
+        "title_zh": "2019年後的收盤反轉現象：排除高交易量個股的 S&P 500 預先註冊檢定",
+        "verdict": "檢定 2019 年後的收盤反轉現象，發現 2023-2026 年仍有每天 3.05 個基點的反轉，但 2020-2022 年間不顯著。",
+        "problem": "先前文獻記錄了美國股市在 2019 年 12 月前的收盤反轉現象，作者欲檢定此現象在後續樣本及排除極大市值個股後是否依然存在。",
+        "method": "使用 S&P 500 成份股資料（排除約 80 檔高交易量股票），採用預先註冊檢定，樣本區分為 2016-2019 年、2020-2022 年及 2023-2026 年。",
+        "findings": "2016-2019 年的成交金額加權反轉為每天 3.13 個基點（t = 7.5），2023-2026 年為 3.05 個基點（t = 3.0），但在 2020-2022 年間該反轉效應與零無異。",
+        "implication": "收盤反轉在排除最大市值股票後於近期資料依然存在，可作為建構收盤前短線 Alpha 因子的參考。",
+        "caveats": "反轉效應高度依賴時間窗口，在 2020-2022 年間完全消失，且所有預先註冊的機制檢定皆未通過。",
+        "practicality": 4,
+        "tags": [
+          "收盤反轉",
+          "微結構",
+          "S&P 500",
+          "Alpha 因子"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.34787",
+      "title": "Do Round Numbers Hold Prices? Occupation Densities and Depth-Conditioned Hazards in the Limit Order Book",
+      "authors": [
+        "Jiwon Jung",
+        "Kiseop Lee"
+      ],
+      "abstract": "Prices cluster at round numbers, a pattern often interpreted as evidence that these levels act as price barriers. This pattern also admits a mechanical explanation: more liquidity rests there, and prices take longer to leave deeper queues. Limit order book data allow us to distinguish these mechanisms through a tick-grid framework in which local time counts departures and level-wise volatility reflects the departure hazard. Using data for five Nasdaq stocks throughout 2025, we find that round levels attract more liquidity but do not exhibit longer depth-adjusted durations. Intel and SoFi show directional effects, with departures biased away from round levels.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.ST"
+      ],
+      "published": "2026-10-26T03:31:11Z",
+      "updated": "2026-10-26T03:31:11Z",
+      "abs_url": "https://arxiv.org/abs/2610.34787",
+      "pdf_url": "https://arxiv.org/pdf/2610.34787v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 49,
+      "matched_keywords": [
+        "limit order book",
+        "order book",
+        "liquidity",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探討整數價位對訂單簿的影響，使用納斯達克真實資料進行實證。",
+      "summary": {
+        "title_zh": "整數關卡能支撐價格嗎？限價單簿中的職業密度與深度條件危險率",
+        "verdict": "研究顯示整數關卡能吸引流動性，但調整深度後停留時間並未較長，推翻了整數作為價格屏障的傳統看法。",
+        "problem": "價格常在整數關卡聚集，此現象究竟是因其作為價格屏障，還是僅因流動性較深而導致的機械性解釋？",
+        "method": "採用 tick 網格框架分析局部的時間 departure 與水準波動率的 departure hazard。使用 2025 年整年五檔那斯達克股票的限價單簿資料進行實證。",
+        "findings": "整數關卡確實能吸引更多流動性，但在調整深度後，並沒有展現出較長的停留時間。Intel 與 SoFi 顯示出方向性效果，其離開整數關卡的機率有偏向。",
+        "implication": "交易員不應盲目將整數關卡視為強力的價格支撐或阻力屏障。在建構短期 Alpha 或造市策略時，需將流動性深度與離開率納入考量。",
+        "caveats": "僅針對五檔那斯達克股票在 2025 年的資料進行分析，樣本範圍與資產類別受限。",
+        "practicality": 3,
+        "tags": [
+          "限價單簿",
+          "流動性",
+          "微結構",
+          "高頻交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.02917",
+      "title": "Event History Over Scale: Compact Transformers for Low-Latency Limit Order Book Forecasting",
+      "authors": [
+        "David Schaurecker",
+        "Lasse B. Strand",
+        "Kevin O'Sullivan",
+        "Robert Jakob"
+      ],
+      "abstract": "Short-horizon price-trend prediction from limit order books in equity and intraday electricity markets requires models that combine predictive quality with low single-sample latency and a small serialized model size to keep pace with rapid and continuous market updates. We introduce MBOFormer, a 7,203-parameter causal transformer, and MBOFusion, a 14,371-parameter extension with a slow temporal-context branch. Both models process market-by-order (level-3) histories of individual order submissions, cancellations, and executions. We compare them with level-2-based baselines that process sampled order-book snapshots and simple statistics instead of their underlying messages. Across three markets and four prediction horizons, our models achieve the highest mean macro-F1 in eleven of the twelve settings in a comparison against other benchmark models of varying sizes. Both our models achieve sub-millisecond median inference on a single Apple M2 CPU thread and have serialized state dictionaries below 70 kB. MBOFormer is 5.1x-8.1x faster than the million-parameter baselines at comparable predictive quality. Our results show that fine-grained market event history can reduce the need for model size under tight deployment constraints for short-term equity and electricity price forecasting tasks.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "cs.CE"
+      ],
+      "published": "2026-10-02T07:05:15Z",
+      "updated": "2026-10-02T07:05:15Z",
+      "abs_url": "https://arxiv.org/abs/2610.02917",
+      "pdf_url": "https://arxiv.org/pdf/2610.02917v1",
+      "comment": "*Equal contribution",
+      "journal_ref": "",
+      "keyword_score": 49,
+      "matched_keywords": [
+        "limit order book",
+        "order book",
+        "transformer"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出輕量級模型進行低延遲預測，實證扎實",
+      "summary": {
+        "title_zh": "事件歷史跨尺度：用於低延遲限價單簿預測的輕量化 Transformer",
+        "verdict": "提出超輕量級 Transformer 處理逐筆訂單，在極低延遲與小體積下取得優異預測表現。",
+        "problem": "短期價格趨勢預測需要兼顧預測品質、極低延遲與極小的模型體積，以應對頻繁且持續更新的市場。現有方法往往依賴較大的模型或快照資料。",
+        "method": "提出 MBOFormer（7,203 個參數）與 MBOFusion（14,371 個參數）模型，直接處理 Level-3 市場逐筆訂單歷史資料。實證涵蓋股票與日內電力市場的三種市場與四種預測時間窗口。",
+        "findings": "在 12 種設定中的 11 種取得最高的平均 macro-F1。模型在單一 Apple M2 CPU 執行緒上實現毫秒級以下推論延遲，序列化狀態字典小於 70 kB，速度比百萬參數基準模型快 5.1 到 8.1 倍。",
+        "implication": "非常適合需要極低延遲與嚴格硬體限制的高頻交易部署，能直接利用微結構層級資料進行高效預測。可直接嘗試複製。",
+        "caveats": "主要針對短期價格趨勢與特定市場進行評估，其泛化能力仍需更多市場驗證。",
+        "practicality": 5,
+        "tags": [
+          "限價單簿",
+          "Transformer",
+          "高頻交易",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.27100",
+      "title": "LOB-Impact Benchmark: Emergent Market Impact in Generative Limit Order Book Models",
+      "authors": [
+        "George Nigmatulin",
+        "Valentin Mohl",
+        "Sascha Frey",
+        "Kang Li",
+        "Aramis Marti-Shahandeh",
+        "Mihai Cucuringu",
+        "Anisoara Calinescu",
+        "Jakob Foerster",
+        "Stefan Zohren"
+      ],
+      "abstract": "Realistic market impact is essential for generative limit order book (LOB) models to serve as world models for trading agents. If a simulator misprices this mechanism, agents learn policies that are optimal in the simulator but wrong in the real market. Existing metrics assess generated streams purely through distributional comparison with historical data, leaving counterfactual response to an agent's own orders largely unexplored. Here, we show that market impact emerges naturally in neural LOB generators trained solely for next-token prediction. We inject execution-style metaorders into the generated message flow of five autoregressive models across five NASDAQ stocks and measure the response using estimators from the empirical impact literature, validated on baselines whose physics is known in advance. Our benchmark evaluates any message-level generator in three phases: free generation (reading order-flow persistence against price diffusivity); metaorder injection (yielding the impact law's exponent and amplitude); and a post-execution window (measuring relaxation). In addition, comparing each visible injection to a blind, simulator-only control isolates the model's learned response from standard book mechanics. For every model on every stock, we measure how the impact responds as a function of cumulative metaorder participation. Interestingly, we observe emergent impact in generative models of market data, with exponents in the range of 0.63 to 1.21, slightly above the traditional 0.5 of the square-root law of impact. In the family of models tested, we are so far unable to observe impact decay during relaxation. We tentatively attribute this to the still-short context windows of the models. We release the benchmark as open source to validate future generative models for market data.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.LG"
+      ],
+      "published": "2026-10-19T18:01:00Z",
+      "updated": "2026-10-19T18:01:00Z",
+      "abs_url": "https://arxiv.org/abs/2610.27100",
+      "pdf_url": "https://arxiv.org/pdf/2610.27100v1",
+      "comment": "9 pages, 4 figures, 3 tables. Accepted at ICAIF '26 (7th ACM International Conference on AI in Finance), Milan, Italy. Code: https://github.com/george-nigmatulin/lob-impact",
+      "journal_ref": "",
+      "keyword_score": 48,
+      "matched_keywords": [
+        "limit order book",
+        "order book",
+        "stock",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "檢驗生成式 LOB 模型市場衝擊",
+      "summary": {
+        "title_zh": "LOB-Impact 基準：生成式限價單簿模型中湧現的市場衝擊",
+        "verdict": "證明僅靠下一個 token 預測訓練的生成式限價單簿模型會自然湧現市場衝擊，指數在 0.63 到 1.21 之間。",
+        "problem": "現有生成式限價單簿模型的評估指標僅做歷史資料分佈比較，忽略了對代理自身訂單的反事實響應，可能導致交易代理學到錯誤的模擬器策略。",
+        "method": "提出包含自由生成、元訂單注入與執行後視窗的三階段基準，測試 5 個自迴歸模型在 5 檔 NASDAQ 股票的表現，並透過元訂單注入測量衝擊定律。",
+        "findings": "所有測試模型皆湧現市場衝擊，衝擊指數介於 0.63 至 1.21 之間，略高於傳統平方根定律的 0.5；但受限於上下文視窗較短，目前尚未觀察到鬆弛期間的衝擊衰減。",
+        "implication": "此開源基準可用於驗證市場資料生成模型的真實性，確保其作為交易代理世界模型時不會錯誤定價市場衝擊。",
+        "caveats": "受限於模型目前的上下文視窗仍較短，無法有效捕捉執行後的衝擊衰減現象。",
+        "practicality": 3,
+        "tags": [
+          "限價單簿",
+          "市場衝擊",
+          "生成式模型",
+          "自迴歸模型",
+          "交易代理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.19903",
+      "title": "Dynamic Spatio-Temporal Graph Attention Networks with Nested Clustered Optimization for Multi-Asset Portfolios",
+      "authors": [
+        "Supriadi"
+      ],
+      "abstract": "Nested Clustered Optimization (NCO) insulates asset allocation from Markowitz covariance ill-conditioning. However, classical tree clustering relies on static pairwise Pearson correlation, failing to capture time-varying, asymmetric downside risk contagion across multi-asset markets. We propose a unified deep graph machine learning architecture: Dynamic Spatio-Temporal Graph Attention Networks with Nested Clustered Optimization (ST-GAT-NCO) for multi-asset tactical allocation. The framework extracts temporal momentum and downside risk dynamics via causal dilated 1D-convolutions, then deploys a multi-head Graph Attention Network (GAT) over dynamic market topologies to learn latent spatial node representations. These learned embeddings define an angular metric distance space that guides two-stage downside NCO optimization under institutional constraints and turnover smoothing. Evaluated over a 73-month non-anticipative walk-forward out-of-sample window (January 2020 to January 2026) across 13 global asset classes net of 10 bps transaction costs, ST-GAT-NCO achieves a 5.32% CAGR and 37.06% cumulative net return, delivering an excess Sharpe ratio of 0.30 and a Sortino ratio of 0.48. This substantially outperforms classical Minimum Variance (3.68% CAGR, 0.08 Sharpe), Hierarchical Risk Parity (2.65% CAGR), and Plain Symmetric NCO (4.11% CAGR, 0.15 Sharpe), while restricting maximum drawdown to -13.07% (versus -19.44% for Equal-Weight and -16.36% for Downside NCO) under a controlled one-way turnover of 15.31%/month. Regime analysis confirms active capital preservation across the 2020 COVID-19 crash, 2022 monetary tightening, and 2023-2026 disinflation rallies.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "cs.LG"
+      ],
+      "published": "2026-11-15T09:31:57Z",
+      "updated": "2026-11-15T09:31:57Z",
+      "abs_url": "https://arxiv.org/abs/2611.19903",
+      "pdf_url": "https://arxiv.org/pdf/2611.19903v1",
+      "comment": "10 pages, 7 figures, 2 tables. Replication package and dataset available at https://github.com/obo-cloud/multiasset-stgat-nco",
+      "journal_ref": "",
+      "keyword_score": 46,
+      "matched_keywords": [
+        "sharpe ratio",
+        "transaction cost",
+        "risk parity",
+        "out-of-sample",
+        "momentum",
+        "drawdown"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "七十三個月樣本外、扣成本，實證完整",
+      "summary": {
+        "title_zh": "動態時空圖注意力網路與巢狀分群最佳化之多資產投資組合",
+        "verdict": "結合圖注意力網路與巢狀分群最佳化進行多資產動態配置，在扣除交易成本後顯著提升夏普值與下檔保護。",
+        "problem": "傳統巢狀分群最佳化依賴靜態皮爾森相關係數，無法捕捉多資產市場中隨時間變化的非對稱下檔風險傳染。",
+        "method": "運用因果膨脹一維卷積與多頭圖注意力網路萃取時空特徵，建構動態市場拓樸並導引兩階段下檔巢狀分群最佳化；測試 13 個全球資產類別、2020 年至 2026 年共 73 個月的步進式樣本外視窗，扣除 10 個基點交易成本。",
+        "findings": "達成 5.32% 年化複合成長率與 37.06% 累積淨報酬，超額夏普值 0.30、索提諾比率 0.48，最大回檔限制在 -13.07%，表現全面優於傳統最小變異數與階層風險平價模型。",
+        "implication": "適用於具備下檔風險控管需求的多資產戰術配置，考慮交易成本與換手率約束後具備實戰落地價值。",
+        "caveats": "僅在 13 個全球大類資產進行測試，其動態拓樸的參數設定與過擬合風險仍需留意。",
+        "practicality": 5,
+        "tags": [
+          "圖注意力網路",
+          "資產配置",
+          "機器學習",
+          "下檔風險",
+          "投資組合最佳化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

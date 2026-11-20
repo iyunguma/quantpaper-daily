@@ -1,0 +1,327 @@
+{
+  "date": "2026-11-20",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2611.25732",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "十年樣本外、扣成本後夏普與報酬具體，實證完整。"
+    },
+    {
+      "arxiv_id": "2611.25860",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "使用日經指數相關性圖進行幾何分析與群集劃分。"
+    },
+    {
+      "arxiv_id": "2611.25762",
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "貝氏執行賽局理論推導，無具體實證資料。"
+    },
+    {
+      "arxiv_id": "2611.25388",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "探討時間序列模型在體制轉換下的失效與可證偽假設。"
+    },
+    {
+      "arxiv_id": "2611.25047",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "結合 SPX 與 VXX 的聯合定價模型，實證誤差極低。"
+    },
+    {
+      "arxiv_id": "2611.25344",
+      "topic": "波動度與衍生品",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "提出量子區域波動率校準，僅使用模擬資料測試。"
+    },
+    {
+      "arxiv_id": "2611.25171",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出時間序列預測的測試期計算演算法，多基準實證。"
+    },
+    {
+      "arxiv_id": "2608.12259",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "探討財務預測模型量化校準的影響，實證完整。"
+    },
+    {
+      "arxiv_id": "2608.10711",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "開發 SOFR 衍生品無異動定價模型，CME 資料實證。"
+    },
+    {
+      "arxiv_id": "2608.09378",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "分析穩定幣區塊鏈交易的尾部縮放行為，資料龐大。"
+    },
+    {
+      "arxiv_id": "2608.09188",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "探討加密永續合約價格預言機的跨場域價格發現問題。"
+    },
+    {
+      "arxiv_id": "2608.04532",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 5,
+      "reason": "推導退休金最佳化與壽險決策的封閉解，偏理論。"
+    },
+    {
+      "arxiv_id": "2608.03925",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出分數布朗運動時間變換模型，S&P 500 實證。"
+    },
+    {
+      "arxiv_id": "2608.03259",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "建立金融時間序列基準 FinVerse，評估多種模型。"
+    },
+    {
+      "arxiv_id": "2607.27485",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 5,
+      "reason": "使用 TVP-VAR 模型分析關鍵礦產投資風險溢出。"
+    },
+    {
+      "arxiv_id": "2607.17427",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "研究大模型去審查對金融決策的副作用，實證清楚。"
+    },
+    {
+      "arxiv_id": "2609.18975",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "比較鏈上資料收集管線的覆蓋率差異，測量嚴謹。"
+    },
+    {
+      "arxiv_id": "2607.14518",
+      "topic": "波動度與衍生品",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "提出量子籃子選擇權定價的變分狀態準備，僅模擬驗證。"
+    },
+    {
+      "arxiv_id": "2607.11653",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出條件分位數預測的稽核框架，並實測主流模型。"
+    },
+    {
+      "arxiv_id": "2608.19217",
+      "topic": "波動度與衍生品",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "使用 KAN 網路近似 CAT 債券定價，基於模擬資料。"
+    },
+    {
+      "arxiv_id": "2607.08500",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "從選擇權價格估計隨機貼現因子並預測股票溢價。"
+    },
+    {
+      "arxiv_id": "2607.03239",
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "推導點過程的精確條件模擬以估計路徑市場衝擊。"
+    },
+    {
+      "arxiv_id": "2607.02823",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "審核 Pump.fun 標籤的測量誤差與時間推移失效問題。"
+    },
+    {
+      "arxiv_id": "2606.27462",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "推導最小變異數投組在重尾下的決策幾何與後悔率。"
+    },
+    {
+      "arxiv_id": "2607.16229",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出具備時間閘門與不確定性基準的金融預測框架。"
+    },
+    {
+      "arxiv_id": "2606.14798",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "連結空間統計與投組配置的 Schur 補體縮減。"
+    },
+    {
+      "arxiv_id": "2605.29413",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "比較貝氏整合與古典最佳化在系統性投組管理之表現。"
+    },
+    {
+      "arxiv_id": "2605.28647",
+      "topic": "其他",
+      "evidence": "看不出來",
+      "relevance": 2,
+      "value": 3,
+      "reason": "探討大模型沙盒與角色動態的倫理問題，無量化實證。"
+    },
+    {
+      "arxiv_id": "2605.26363",
+      "topic": "投組與風險",
+      "evidence": "只有模擬資料",
+      "relevance": 4,
+      "value": 5,
+      "reason": "建立多期地下水市場的動態隨機模型，數值模擬求解。"
+    },
+    {
+      "arxiv_id": "2605.22792",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出短期選擇權無模型密度提取框架，具備套利過濾。"
+    },
+    {
+      "arxiv_id": "2605.06730",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出語意狀態抽象介面並在美股面板上進行強化學習實測。"
+    },
+    {
+      "arxiv_id": "2605.02287",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "比較去中心化預測市場中知情交易偵測的三種方法。"
+    },
+    {
+      "arxiv_id": "2605.15210",
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出不改變對手風險的多邊淨額清算機制，推導完整。"
+    },
+    {
+      "arxiv_id": "2605.00459",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "在 Polymarket 上評估人口規模的資訊外洩分數。"
+    },
+    {
+      "arxiv_id": "2604.25403",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "建立評級基礎體制轉換的廣義 CIR 模型聯合定價公債。"
+    },
+    {
+      "arxiv_id": "2604.25224",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出大模型投資理由的一致性閘門壓力測試協議。"
+    },
+    {
+      "arxiv_id": "2605.06677",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "推導隨機時鐘波動率模型的極端值與半解析槓桿校正。"
+    },
+    {
+      "arxiv_id": "2604.20067",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "嘗試獨立複製市場碎片化與延遲套利代理人模型。"
+    },
+    {
+      "arxiv_id": "2605.00862",
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "探討衍生品流動性預測與融資敏感度調整，偏理論與工具。"
+    },
+    {
+      "arxiv_id": "2604.17622",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出信用違約預測的特徵群組感知堆疊框架，實證完整。"
+    }
+  ]
+}
