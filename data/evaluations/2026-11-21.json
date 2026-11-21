@@ -1,0 +1,327 @@
+{
+  "date": "2026-11-21",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2611.26568",
+      "topic": "Alpha 與因子",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 7,
+      "reason": "推導配對交易負冪次效用函數的最適控制，理論嚴謹。"
+    },
+    {
+      "arxiv_id": "2611.26119",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提出區塊重排演算法建構籃子選擇權子複製投組，數學嚴謹。"
+    },
+    {
+      "arxiv_id": "2611.26466",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "多國公債殖利率曲線模型，結合真實資料進行實證。"
+    },
+    {
+      "arxiv_id": "2604.13334",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "探討造市與交易演算法的極限，屬理論與框架探討。"
+    },
+    {
+      "arxiv_id": "2604.03499",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "選擇權部位的 VaR 校準，採用真實市場資料且實證完整。"
+    },
+    {
+      "arxiv_id": "2605.06670",
+      "topic": "波動度與衍生品",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "處理不確定波動度模型的隨機政策梯度，僅透過數值實驗。"
+    },
+    {
+      "arxiv_id": "2604.08590",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "使用大型語言模型進行自主量化研究，橫跨多個最佳化領域。"
+    },
+    {
+      "arxiv_id": "2603.28198",
+      "topic": "回測與研究方法",
+      "evidence": "只有模擬資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "線上切換預測的通用框架，主要在控制的合成資料上評估。"
+    },
+    {
+      "arxiv_id": "2603.25285",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "將貿易政策不確定性納入 DCC 模型，實證分析股票與公債。"
+    },
+    {
+      "arxiv_id": "2603.15974",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 6,
+      "reason": "探討各類財產與所得稅對投組中立性的影響，為理論推導。"
+    },
+    {
+      "arxiv_id": "2603.12375",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "以類神經網路求解利率衍生品 PDE，並與蒙地卡羅基準比較。"
+    },
+    {
+      "arxiv_id": "2603.18021",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "利用交易圖譜的拓樸特徵預測加密貨幣異常價格波動。"
+    },
+    {
+      "arxiv_id": "2602.16212",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "退休金分紅基金的類神經網路最佳化，結合真實長壽與市場資料。"
+    },
+    {
+      "arxiv_id": "2602.15177",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 7,
+      "reason": "推導考量資本利得稅時的最適投資理論，數學證明完整。"
+    },
+    {
+      "arxiv_id": "2602.14860",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "研究 Solana 迷因幣發行平台的成功機率與綁定曲線動態。"
+    },
+    {
+      "arxiv_id": "2602.14154",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提出二次規劃求解的懲罰項微分框架，包含多期投組實證。"
+    },
+    {
+      "arxiv_id": "2602.12120",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 4,
+      "value": 5,
+      "reason": "評估時間序列基礎模型在高等教育入學預測的應用。"
+    },
+    {
+      "arxiv_id": "2602.08888",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 7,
+      "reason": "證明測試下注策略在虛無假設下幾乎必然破產，理論深入。"
+    },
+    {
+      "arxiv_id": "2602.08228",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "比較資產負債管理的分配強固最佳化方法，實證資料扎實。"
+    },
+    {
+      "arxiv_id": "2602.03461",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 8,
+      "reason": "提出軟徑向投影層解決約束端對端學習，並進行投組最佳化實證。"
+    },
+    {
+      "arxiv_id": "2601.22200",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "將過度參數化遞迴最小平方法應用於外匯與電力預測。"
+    },
+    {
+      "arxiv_id": "2602.00121",
+      "topic": "回測與研究方法",
+      "evidence": "只有模擬資料",
+      "relevance": 4,
+      "value": 5,
+      "reason": "提出用於資料稀缺市場的先驗預測蒙地卡羅定價框架。"
+    },
+    {
+      "arxiv_id": "2601.17248",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "研究短到期 VIX 與歐式選擇權的漸近性質，並輔以數值驗證。"
+    },
+    {
+      "arxiv_id": "2602.00049",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "探討能源平衡市場價格預測模型的準確度與可解釋性。"
+    },
+    {
+      "arxiv_id": "2601.10143",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出適應性資料流系統以合成金融時間序列，改善強化學習交易。"
+    },
+    {
+      "arxiv_id": "2601.08641",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "針對迷因幣跟單交易提出多代理人防禦框架，實證經濟表現良好。"
+    },
+    {
+      "arxiv_id": "2601.01871",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "改進高頻點過程的領先落後關係估計，實證分析扎實。"
+    },
+    {
+      "arxiv_id": "2601.00593",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出不確定性調整的排序法來改善機器學習資產定價表現。"
+    },
+    {
+      "arxiv_id": "2601.00293",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 3,
+      "reason": "類比量子諧振子推廣布萊克修休斯模型，缺乏嚴謹實證。"
+    },
+    {
+      "arxiv_id": "2601.00281",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 4,
+      "reason": "提出三元組模型尋找全域最佳投組，但績效宣稱過於理想。"
+    },
+    {
+      "arxiv_id": "2512.16411",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 3,
+      "value": 6,
+      "reason": "推導樣本相對熵的漸近與有限樣本分佈，屬純數學與統計理論。"
+    },
+    {
+      "arxiv_id": "2512.12334",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "擴展動態貝氏網路以計算市場風險，回測顯示傳統模型表現較佳。"
+    },
+    {
+      "arxiv_id": "2512.05661",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "評估動態貝氏網路預測風險值的表現，與傳統模型進行比較。"
+    },
+    {
+      "arxiv_id": "2512.05559",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "提出統一的 AI 資料品質控制與管理框架，著重系統工程。"
+    },
+    {
+      "arxiv_id": "2512.03107",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 7,
+      "reason": "提出資訊理論方法偵測金融領域的 AI 幻覺，實驗控制嚴格。"
+    },
+    {
+      "arxiv_id": "2512.00630",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "評估 Qwen3 模型在金融文本分類的微調表現，中規中矩。"
+    },
+    {
+      "arxiv_id": "2611.15619",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出實現共變異數矩陣的簡潔彈性參數化方法，實證完整。"
+    },
+    {
+      "arxiv_id": "2611.04116",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 8,
+      "reason": "分解時間非平穩性下的模型排名反轉，理論與實證俱佳。"
+    },
+    {
+      "arxiv_id": "2611.03302",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 7,
+      "reason": "預訓練銀行客戶行為的階層式因果轉換器，資料規模龐大。"
+    },
+    {
+      "arxiv_id": "2611.00466",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 8,
+      "reason": "利用快速體制轉換模型對證券與衍生品定價，實證與開源程式齊全。"
+    }
+  ]
+}

@@ -1,0 +1,512 @@
+{
+  "date": "2026-11-21",
+  "generated_at": "2026-11-21T12:00:21+08:00",
+  "scanned": 2488,
+  "eligible": 2145,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2604.03499",
+      "title": "Marking-Aware Sequential VaR Recalibration for Standardized Option Books",
+      "authors": [
+        "Tenghan Zhong",
+        "Keyuan Wu"
+      ],
+      "abstract": "Daily Value-at-Risk (VaR) for option books requires more than an accurate quantile forecast. It first requires a precise definition of the loss target. Before any model is evaluated, the protocol must fix the book construction rule, the marking rule for the next day, the loss scale, and the information set available at forecast time. Common pipelines instead apply VaR methods to underlying returns or preconstructed book loss series, leaving these operational choices outside the statistical target. We propose a marking-aware sequential VaR recalibration framework that targets normalized book-level loss directly, restricts the forecast state to information available at forecast time, and recalibrates an upper tail VaR using only past forecast residuals. In out-of-sample evaluation on S\\&P 500 index (SPX) and QQQ exchange-traded fund (ETF) options, the reference VaR undercovers all three books in both markets. Sequential VaR recalibration moves exceedance rates close to the target and delivers the best aggregate performance across books, with the lowest average violation, lowest pinball loss, and smallest maximum exceedance over rolling 50 trading day windows among the evaluated methods. Robustness checks preserve the same conclusion under strict direct marking, stricter book selection screens, and removal of the VaR floor. The result is also stable across alternative quantile learners, residual recalibration windows, and decay rates. These findings support marking-aware sequential VaR recalibration as a leakage-safe risk control layer for option-book VaR under realistic quote and marking frictions.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM",
+        "q-fin.ST"
+      ],
+      "published": "2026-04-03T22:45:54Z",
+      "updated": "2026-08-13T05:37:50Z",
+      "abs_url": "https://arxiv.org/abs/2604.03499",
+      "pdf_url": "https://arxiv.org/pdf/2604.03499v3",
+      "comment": "",
+      "journal_ref": "2026 IEEE Symposium on Computational Intelligence for Financial Engineering and Economics (CIFEr), pp. 90-97",
+      "keyword_score": 10,
+      "matched_keywords": [
+        "out-of-sample"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "選擇權部位的 VaR 校準，採用真實市場資料且實證完整。",
+      "summary": {
+        "title_zh": "針對標準化選擇權部位的計價感知序列 VaR 重新校準",
+        "verdict": "提出計價感知序列 VaR 校準框架，透過僅使用過去預測殘差來修正選擇權部位的 VaR 違約率，降低違約與 pinball 損失。",
+        "problem": "選擇權部位的每日 VaR 需要精確的損失目標，但常見管線將 VaR 方法應用於標的報酬或預先建構的部位損失序列，忽略了部位建構與隔日計價規則等營運選擇。",
+        "method": "使用計價感知序列 VaR 重新校準框架，直接針對標準化部位層級的損失，將預測狀態限制於預測時可用的資訊。對 SPX 與 QQQ 選擇權進行樣本外評估。",
+        "findings": "參考 VaR 在兩個市場的三個部位中皆出現覆蓋不足。序列 VaR 重新校準將超越率推近目標，並在評估的方法中提供最佳的整體績效，具有最低的平均違約、最低的 pinball 損失，以及在 50 個交易日滾動窗口中最小的最大超越率。",
+        "implication": "此方法可作為在真實報價與計價摩擦下，選擇權部位 VaR 的無洩漏風險控制層，能直接套用並改善風控表現。",
+        "caveats": "極端市場條件下的報價摩擦與流動性乾涸可能會對計價規則的穩定性造成影響。",
+        "practicality": 4,
+        "tags": [
+          "風險管理",
+          "選擇權",
+          "VaR",
+          "計價規則",
+          "統計套利"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.12375",
+      "title": "Feynman-Kac Derivatives Pricing on the Full Forward Curve",
+      "authors": [
+        "Kevin Mott"
+      ],
+      "abstract": "This paper introduces a no-arbitrage, Monte Carlo-free approach to pricing path-dependent interest rate derivatives. The Heath-Jarrow-Morton model gives arbitrage-free contingent claims prices but is infinite-dimensional, making traditional numerical methods computationally prohibitive. To make the problem computationally tractable, I cast the stochastic pricing problem as a deterministic partial differential equation (PDE). Finance-Informed Neural Networks (FINNs) solve this PDE directly by minimizing violations of the differential equation and boundary condition, with automatic differentiation efficiently computing the exact derivatives needed to evaluate PDE terms. FINNs achieve pricing accuracy within 0.04 to 0.07 cents per dollar of contract value compared to Monte Carlo benchmarks. Once trained, FINNs price caplets in a few microseconds regardless of dimension, delivering speedups ranging from 300,000 to 4.5 million times faster than Monte Carlo simulation as the state space discretization of the forward curve grows from 10 to 150 nodes. The major Greeks-theta and curve deltas-come for free, computed automatically during PDE evaluation at zero marginal cost, whereas Monte Carlo requires complete re-simulation for each sensitivity. The framework generalizes naturally beyond caplets to other path-dependent derivatives-caps, swaptions, callable bonds-requiring only boundary condition modifications while retaining the same core PDE structure.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "q-fin.MF",
+        "q-fin.PR"
+      ],
+      "published": "2026-03-12T18:52:52Z",
+      "updated": "2026-03-12T18:52:52Z",
+      "abs_url": "https://arxiv.org/abs/2603.12375",
+      "pdf_url": "https://arxiv.org/pdf/2603.12375v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 10,
+      "matched_keywords": [
+        "neural network"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "以類神經網路求解利率衍生品 PDE，並與蒙地卡羅基準比較。",
+      "summary": {
+        "title_zh": "基於完整遠期曲線的芬曼-卡克衍生性商品訂價",
+        "verdict": "利用金融資訊神經網路直接求解偏微分方程式，實現利率衍生性商品的毫秒級無套利訂價與希臘值計算。",
+        "problem": "海斯-賈羅-莫頓模型具備無套利性質但維度無限，傳統數值方法計算成本過高，難以對路徑依賴型利率衍生性商品進行高效率訂價。",
+        "method": "將隨機訂價問題轉化為確定性偏微分方程式，採用金融資訊神經網路透過最小化微分方程與邊界條件違約來直接求解。模型基於利率遠期曲線，未提及特定樣本期間。",
+        "findings": "與蒙地卡羅基準相比，其訂價準確度在每美元合約價值 0.04 至 0.07 分錢以內。隨著狀態空間離散化節點從 10 個增至 150 個，訂價速度較蒙地卡羅模擬快 30 萬至 450 萬倍，且希臘值（theta 與曲線 delta）可零邊際成本自動算出。",
+        "implication": "訓練完成後可用於極高速的利率衍生性商品即時訂價與風險敏感度分析，且架構可自然推廣至其他路徑依賴型商品。",
+        "caveats": "神經網路的訓練成本與邊界條件的設定精確度可能會影響整體穩定性。",
+        "practicality": 4,
+        "tags": [
+          "利率衍生性商品",
+          "神經網路",
+          "偏微分方程式",
+          "無套利定價",
+          "高效能運算"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.08641",
+      "title": "Resisting Manipulative Bots in Meme Coin Copy Trading: A Multi-Agent Approach with Chain-of-Thought Reasoning",
+      "authors": [
+        "Yichen Luo",
+        "Yebo Feng",
+        "Jiahua Xu",
+        "Yang Liu"
+      ],
+      "abstract": "Copy trading has become the dominant entry strategy in meme coin markets. However, due to the market's extremely illiquid and volatile nature, the strategy exposes an exploitable attack surface: adversaries deploy manipulative bots to front-run trades, conceal positions, and fabricate sentiment, systematically extracting value from naïve copiers at scale. Despite its prevalence, bot-driven manipulation remains largely unexplored, and no robust defensive framework exists. We propose a manipulation-resistant copy-trading system based on a multi-agent architecture powered by a multi-modal large language model (LLM) and chain-of-thought (CoT) reasoning. Our approach outperforms zero-shot and most statistic-driven baselines in prediction accuracy as well as all baselines in economic performance, achieving an average copier return of 3% per meme coin investment under realistic market frictions. Overall, our results demonstrate the effectiveness of agent-based defenses and predictability of trader profitability in adversarial meme coin markets, providing a practical foundation for robust copy trading.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "q-fin.TR"
+      ],
+      "published": "2026-01-13T15:13:41Z",
+      "updated": "2026-02-05T13:52:14Z",
+      "abs_url": "https://arxiv.org/abs/2601.08641",
+      "pdf_url": "https://arxiv.org/pdf/2601.08641v3",
+      "comment": "",
+      "journal_ref": "Proceedings of the ACM Web Conference 2026 (WWW'26)",
+      "keyword_score": 10,
+      "matched_keywords": [
+        "llm",
+        "large language model"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance_reason": "針對迷因幣跟單交易提出多代理人防禦框架，實證經濟表現良好。",
+      "summary": {
+        "title_zh": "迷因幣跟單交易中對抗操縱機器人：結合思維鏈推理的多代理人方法",
+        "verdict": "提出基於多代理人與LLM的防禦系統，在迷因幣市場中有效對抗操縱機器人，每筆投資平均報酬達3%。",
+        "problem": "迷因幣市場流動性差且波動劇烈，攻擊者常部署操縱機器人進行搶先交易、隱藏部位並製造虛假情緒，使跟單交易者遭受剝削。目前缺乏穩健的防禦框架。",
+        "method": "採用多代理人架構，結合多模態LLM與思維鏈推理，針對迷因幣市場的跟單交易進行防禦與預測。",
+        "findings": "在計入真實市場摩擦成本下，此方法在預測準確度上優於零樣本與多數統計基準，並在經濟績效上超越所有基準，實現每檔迷因幣平均3%的跟單者報酬。",
+        "implication": "可用於高風險的加密貨幣跟單交易系統中，作為過濾操縱行為與辨識具獲利潛力交易者的防禦基礎。",
+        "caveats": "實際應用時高度依賴LLM與多代理人架構的即時推論效能與延遲控制。",
+        "practicality": 4,
+        "tags": [
+          "加密貨幣",
+          "跟單交易",
+          "LLM",
+          "多代理人",
+          "市場操縱"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.00593",
+      "title": "Uncertainty-Adjusted Sorting for Asset Pricing with Machine Learning",
+      "authors": [
+        "Yan Liu",
+        "Ye Luo",
+        "Zigan Wang",
+        "Xiaowei Zhang"
+      ],
+      "abstract": "Machine learning is central to empirical asset pricing, but portfolio construction still relies on point predictions and largely ignores asset-specific estimation uncertainty. We propose a simple change: sort assets using uncertainty-adjusted prediction bounds instead of point predictions alone. Across a broad set of ML models and a U.S. equity panel, this approach improves portfolio performance relative to point-prediction sorting. These gains persist even when bounds are built from partial or misspecified uncertainty information. They arise mainly from reduced volatility and are strongest for flexible machine learning models. Identification and robustness exercises show that these improvements are driven by asset-level rather than time or aggregate predictive uncertainty.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "stat.ML"
+      ],
+      "published": "2026-01-02T06:53:47Z",
+      "updated": "2026-01-02T06:53:47Z",
+      "abs_url": "https://arxiv.org/abs/2601.00593",
+      "pdf_url": "https://arxiv.org/pdf/2601.00593v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 10,
+      "matched_keywords": [
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出不確定性調整的排序法來改善機器學習資產定價表現。",
+      "summary": {
+        "title_zh": "利用機器學習進行資產定價的不確定性調整排序法",
+        "verdict": "提出以不確定性調整的預測邊界進行資產排序，能有效降低投資組合波動並提升績效。",
+        "problem": "現有機器學習資產定價的投資組合建構過度依賴點預測，忽略了個別資產的估計不確定性。",
+        "method": "使用美國股票面板資料，跨多種 ML 模型，提出以不確定性調整的預測邊界替代單純點預測進行資產排序。",
+        "findings": "相較於純點預測排序，此方法能改善投資組合表現，績效提升主要來自波動度的降低，且對具彈性的機器學習模型效果最強；未報告具體績效數字。",
+        "implication": "可直接套用於現有的機器學習 Alpha 策略，只需在投資組合建構的排序階段納入預測不確定性即可。",
+        "caveats": "雖然證實改善由資產層級不確定性驅動，但未提供詳細的交易成本實證考量。",
+        "practicality": 4,
+        "tags": [
+          "機器學習",
+          "資產定價",
+          "投資組合建構",
+          "Alpha 因子"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.03461",
+      "title": "Soft-Radial Projection for Constrained End-to-End Learning",
+      "authors": [
+        "Philipp J. Schneider",
+        "Daniel Kuhn"
+      ],
+      "abstract": "Constrained end-to-end learning trains neural networks whose outputs must satisfy feasibility constraints, such as resource, budget, or operational limits. While projection and optimization layers guarantee constraint satisfaction, boundary-based projections can introduce unfavorable optimization geometry: regions of the unconstrained output space are mapped to the same active face of the feasible set. This makes the resulting map locally rank-deficient, suppressing gradients in constrained directions and potentially impairing optimization - a bottleneck known as gradient saturation. We propose Soft-Radial Projection (SRP), a differentiable reparameterization layer that maps unconstrained network outputs into the relative interior of a convex feasible set by smoothly rescaling rays from a strictly feasible anchor point. Unlike hard radial or orthogonal projections, the resulting map is one-to-one and has a full-rank Jacobian almost everywhere, while guaranteeing strict feasibility. We prove that constrained networks equipped with SRP retain universal approximation guarantees. For polytopes and balls, the layer admits a closed-form forward pass, while for general convex sets, the ray-boundary intersection reduces to a one-dimensional search. Experiments on decision-focused learning benchmarks demonstrate strong solution quality at low computational cost, with particularly favorable results in portfolio optimization and substantially lower inference latency than differentiable optimization layers in the evaluated settings.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "math.OC",
+        "q-fin.CP",
+        "stat.ML"
+      ],
+      "published": "2026-02-03T12:33:44Z",
+      "updated": "2026-11-06T22:14:15Z",
+      "abs_url": "https://arxiv.org/abs/2602.03461",
+      "pdf_url": "https://arxiv.org/pdf/2602.03461v2",
+      "comment": "Accepted at NeurIPS 2026",
+      "journal_ref": "",
+      "keyword_score": 10,
+      "matched_keywords": [
+        "portfolio optimization",
+        "neural network"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出軟徑向投影層解決約束端對端學習，並進行投組最佳化實證。",
+      "summary": {
+        "title_zh": "針對受限端到端學習的軟徑向投影",
+        "verdict": "提出軟徑向投影解決端到端學習的梯度飽和問題，在投資組合最佳化中具低延遲與高效能。",
+        "problem": "傳統邊界投影層會導致梯度飽和瓶頸。這會抑制受限方向的梯度並妨礙最佳化過程。",
+        "method": "提出軟徑向投影（Soft-Radial Projection, SRP）可微分重參數化層。在決策導向學習與投資組合最佳化基準測試中進行實驗。",
+        "findings": "論文未報告具體績效數字，但指出在決策導向學習基準測試中展現良好的解品質。在投資組合最佳化設定下，其推論延遲顯著低於傳統的可微分最佳化層。",
+        "implication": "可用於受限端到端學習任務以改善梯度流。前提是可行集合需為多面體、球體或可透過一維搜尋求解的凸集。",
+        "caveats": "對於一般凸集，射線與邊界的交集仍需透過一維搜尋求解。",
+        "practicality": 4,
+        "tags": [
+          "端到端學習",
+          "投資組合最佳化",
+          "神經網路",
+          "最佳化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.04116",
+      "title": "Decomposing Rank Reversals under Temporal Nonstationarity: Alignment, Aggressiveness, and Instability",
+      "authors": [
+        "Deying Song",
+        "Xueying Ding"
+      ],
+      "abstract": "Under temporal nonstationarity, model performance rankings reverse across training horizons due to heterogeneous sensitivities to memory. While existing literature addresses adaptive lookbacks, effective model complexity, and empirical forecast evaluation in isolation, no unified framework explains the structural mechanics driving these rank reversals. We bridge this gap by deriving a model-agnostic decomposition of out-of-sample $R^2$ into target alignment, miscalibrated aggressiveness, and predictive instability. Within this framework, we mathematically characterize complexity phase boundaries, establish closed-form optimal-memory equations for ridge regression under local drift, and extend these guarantees to complex model architectures via surrogate bounds. We validate these theoretical dynamics by benchmarking 14 linear, tree-based, and neural architectures across large-scale financial panels. In doing so, our framework demonstrates that empirical model rank reversals are driven by predictable surges in miscalibrated aggressiveness, providing a rigorous mechanistic diagnosis of generalization under temporal shift.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-fin.ST"
+      ],
+      "published": "2026-11-03T00:46:03Z",
+      "updated": "2026-11-03T00:46:03Z",
+      "abs_url": "https://arxiv.org/abs/2611.04116",
+      "pdf_url": "https://arxiv.org/pdf/2611.04116v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 9,
+      "matched_keywords": [
+        "out-of-sample",
+        "empirical"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "分解時間非平穩性下的模型排名反轉，理論與實證俱佳。",
+      "summary": {
+        "title_zh": "在時間非定常性下分解排名反轉：對齊、激進性與不穩定性",
+        "verdict": "提出一個與模型無關的樣本外 $R^2$ 分解框架，證明模型排名反轉源自可預測的激進性失準，並在金融面板資料中進行驗證。",
+        "problem": "在時間非定常性下，模型效能排名會在不同訓練期之間反轉，現有文獻缺乏解釋此一現象的統一結構性機制框架。",
+        "method": "推導 $R^2$ 分解至目標對齊、失準激進性與預測不穩定性，並對 14 種線性、樹狀與神經網路架構進行大型金融面板資料的基準測試。",
+        "findings": "實證表明，經驗上的模型排名反轉是由失準激進性的可預測激增所驅動，論文未報告具體績效數字。",
+        "implication": "可用於診斷不同模型在動態市場中的泛化能力，幫助調整最適記憶長度與控制複雜度。",
+        "caveats": "理論保證依賴於局部飄移與替代界線的假設，對真實市場複雜非平穩性的貼合度仍需實務檢驗。",
+        "practicality": 3,
+        "tags": [
+          "非定常性",
+          "泛化能力",
+          "模型評估",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.00466",
+      "title": "Security and Derivative Pricing with Fast Regime Switches",
+      "authors": [
+        "Peter Cotton"
+      ],
+      "abstract": "A regime-switching model lets any parameter of a standard model take a different value in each state of a hidden Markov chain. For the affine and exponential-Lévy models in common use the pricing problem reduces to one linear system, a' = (Q + diag g(t)) a, with the chain's generator Q and a model-specific forcing g as its only ingredients. We expand its solution in the mean holding time of the chain to any order, with an initial layer for the starting regime, and identify the first correction as a Green-Kubo matrix from the group inverse of Q. The same system prices bonds, swaptions, caps, credit default swaps, Asian and digital options, and equity options under stochastic rates, with the Gil-Pelaez integrals conditioned on the regime at expiry where a payoff depends on it; barrier, American and Bermudan instruments go to the coupled equations on a grid. Every numerical claim is checked against QuantLib in the limit where the regimes coincide and against an independent referee with switching on, and the implementation is public.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "q-fin.PR"
+      ],
+      "published": "2026-10-30T23:44:56Z",
+      "updated": "2026-10-30T23:44:56Z",
+      "abs_url": "https://arxiv.org/abs/2611.00466",
+      "pdf_url": "https://arxiv.org/pdf/2611.00466v1",
+      "comment": "12 pages, 5 tables. Code: https://github.com/microprediction/regimelib",
+      "journal_ref": "",
+      "keyword_score": 9,
+      "matched_keywords": [
+        "regime"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用快速體制轉換模型對證券與衍生品定價，實證與開源程式齊全。",
+      "summary": {
+        "title_zh": "具備快速體制轉換的證券與衍生性金融商品訂價",
+        "verdict": "提出基於體制轉換模型的快速訂價方法，透過平均持有時間展開解法，實作與 QuantLib 進行驗證。",
+        "problem": "標準模型中的參數在隱藏馬可夫鏈的各個狀態下需要不同的數值，這導致衍生性金融商品訂價問題在體制轉換下變得複雜。",
+        "method": "使用仿射與指數 Lévy 模型，將訂價問題簡化為線性系統，並將其解在馬可夫鏈的平均持有時間上進行任意階數的展開。研究涵蓋債券、交換選擇權、上限選擇權、信用違約交換與權益選擇權等多種金融商品。",
+        "findings": "文中識別出第一階修正項為來自 Q 矩陣群逆的 Green-Kubo 矩陣，且所有數值宣告皆已對照 QuantLib 與獨立驗證器進行檢查。",
+        "implication": "此方法能統一處理多種衍生性金融商品的訂價，且公開了實作程式碼，可直接用於需要考量體制轉換的定價系統中。",
+        "caveats": "對於障礙選擇權、美式與百慕達選擇權等複雜商品，需要求解網格上的耦合方程式。",
+        "practicality": 4,
+        "tags": [
+          "體制轉換",
+          "衍生性金融商品",
+          "馬可夫鏈",
+          "量化訂價"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.11708",
+      "title": "Systematic Trend-Following with Adaptive Portfolio Construction: Enhancing Risk-Adjusted Alpha in Cryptocurrency Markets",
+      "authors": [
+        "Duc Bui",
+        "Thanh Nguyen"
+      ],
+      "abstract": "Cryptocurrency markets exhibit pronounced momentum effects and regime-dependent volatility, presenting both opportunities and challenges for systematic trading strategies. We propose AdaptiveTrend, a multi-component algorithmic trading framework that integrates high-frequency trend-following on 6-hour intervals with monthly adaptive portfolio construction and asymmetric long-short capital allocation. Our framework introduces three key innovations: (1) a dynamic trailing stop mechanism calibrated to intra-day volatility regimes, (2) a rolling Sharpe-ratio-based asset selection procedure with market-capitalization-aware filtering, and (3) a theoretically motivated asymmetric 70/30 long-short allocation scheme grounded in the empirical positive drift of crypto markets. Through extensive out-of-sample backtesting across 150+ cryptocurrency pairs over a 36-month evaluation window (2022-2024), AdaptiveTrend achieves an annualized Sharpe ratio of 2.41, a maximum drawdown of -12.7%, and a Calmar ratio of 3.18, significantly outperforming benchmark trend-following strategies (TSMOM, time-series momentum) and equal-weighted buy-and-hold portfolios. We further conduct rigorous robustness analyses including parameter sensitivity, transaction cost modeling, and regime-conditional performance decomposition, demonstrating the strategy's resilience across bull, bear, and sideways market conditions.",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE"
+      ],
+      "published": "2026-02-12T08:38:17Z",
+      "updated": "2026-02-12T08:38:17Z",
+      "abs_url": "https://arxiv.org/abs/2602.11708",
+      "pdf_url": "https://arxiv.org/pdf/2602.11708v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 71,
+      "matched_keywords": [
+        "algorithmic trading",
+        "sharpe ratio",
+        "high-frequency",
+        "transaction cost",
+        "out-of-sample",
+        "backtesting"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "加密貨幣動能策略涵蓋多空配置與交易成本，實證完整且表現穩健。",
+      "summary": {
+        "title_zh": "加密貨幣市場的系統化趨勢追蹤與適應性資產配置：提升風險調整後超額報酬",
+        "verdict": "提出 AdaptiveTrend 框架，結合高頻趨勢與動態配置，在 2022-2024 年加密市場中實現 2.41 的年化夏普值。",
+        "problem": "加密貨幣市場具備顯著的動能效應與體制相依的波動性，傳統趨勢追蹤策略在此類環境下面臨風險控制與資產選擇的挑戰。",
+        "method": "使用 AdaptiveTrend 演算法交易框架，針對 150 多個加密貨幣交易對進行 6 小時頻率的高頻趨勢追蹤、月度適應性資產配置及非對稱多空配置，樣本期間為 2022 至 2024 年的 36 個月。",
+        "findings": "AdaptiveTrend 達到 2.41 的年化夏普值、最大回檔為 -12.7%、卡瑪比率為 3.18，顯著優於時間序列動能（TSMOM）與等權重買入持有策略。",
+        "implication": "其非對稱 70/30 多空配置與動態停損機制可直接應用於加密貨幣資產管理，前提是須妥善處理高頻交易的執行成本。",
+        "caveats": "儘管經過穩健性檢驗，策略績效仍高度依賴加密貨幣市場長期的正向漂移特性。",
+        "practicality": 4,
+        "tags": [
+          "趨勢追蹤",
+          "加密貨幣",
+          "資產配置",
+          "動態停損",
+          "夏普值"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.09478",
+      "title": "Volatility Forecasting and Return Prediction under Market Regimes: Evidence from High-Frequency Chinese Equity Data",
+      "authors": [
+        "Xinyue Fang",
+        "Robert Ślepaczuk"
+      ],
+      "abstract": "This study investigates whether regime-dependent volatility forecasting and machine-learning-based return prediction can be jointly integrated to improve both statistical forecasting performance and economic strategy outcomes in equity markets. Using high-frequency CSI 300 Index data from 2005 to 2023, a sequential twostage framework is developed. In the first stage, realized volatility is modeled using regime-augmented HARQ specifications combined with Markov-switching GJR-GARCH filtering to capture long-memory dynamics, asymmetry, and structural market regimes. In the second stage, volatility forecasts, regime indicators, and return-related predictors are incorporated into an XGBoost return-prediction model estimated through a strictly walk-forward out-of-sample procedure. The empirical results demonstrate that regime-aware volatility forecasting consistently outperforms baseline HARQ models across forecast evaluation metrics and is generally supported by formal forecast comparison tests. In contrast, return predictability remains weak, state-dependent, and concentrated primarily in low-volatility regimes. Although naive predictive trading strategies generally fail after accounting for realistic transaction costs, carefully designed implementations incorporating volatility scaling, low-volatility gating, threshold calibration, and turnover controls can improve defensive economic performance. The findings suggest that the practical value of predictive systems in financial markets may depend less on generating strong unconditional return forecasts and more on transforming weak state-dependent signals into economically robust portfolio allocation rules. Overall, the study contributes by integrating econometric volatility modeling, regime classification, machine-learning return prediction, and implementation realism within a unified framework.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "q-fin.CP",
+        "q-fin.MF"
+      ],
+      "published": "2026-06-08T13:36:57Z",
+      "updated": "2026-06-08T13:36:57Z",
+      "abs_url": "https://arxiv.org/abs/2606.09478",
+      "pdf_url": "https://arxiv.org/pdf/2606.09478v1",
+      "comment": "41 pages, 16 figures, 21 tables",
+      "journal_ref": "",
+      "keyword_score": 67,
+      "matched_keywords": [
+        "high-frequency",
+        "volatility forecasting",
+        "transaction cost",
+        "out-of-sample",
+        "realized volatility",
+        "regime"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合體制轉換波動度與機器學習預測報酬，考慮成本後的經濟效益分析完整。",
+      "summary": {
+        "title_zh": "市場體制下的波動度預測與報酬預測：來自中國高頻股票資料的實證",
+        "verdict": "結合體制轉換與機器學習預測中國股市，發現報酬預效力微弱但透過波動度控管可改善防禦性績效。",
+        "problem": "探討是否能將體制相依的波動度預測與機器學習報酬預測相結合，以提升統計預測表現與交易策略成效。",
+        "method": "使用 2005 至 2023 年 CSI 300 指數高頻資料。第一階段採用融合 Markov-switching GJR-GARCH 的體制增強 HARQ 模型，第二階段則透過嚴格的逐步前行（walk-forward）樣本外程序，將預測值輸入 XGBoost 進行報酬預測。",
+        "findings": "體制感知波動度預測在評估指標上持續優於基準 HARQ 模型。相對地，報酬可預測性依然微弱且具體制相依性，主要集中於低波動體制；未計入成本前的交易策略在考量真實交易成本後通常失效。",
+        "implication": "實務上可利用波動度縮放、低波動過濾與控制周轉率等設計，將微弱的狀態信號轉化為穩健的投資組合配置規則。",
+        "caveats": "納入真實交易成本後，單純的預測交易策略會面臨失效的問題。",
+        "practicality": 3,
+        "tags": [
+          "波動度預測",
+          "機器學習",
+          "體制轉換",
+          "高頻資料",
+          "中國股市"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.23619",
+      "title": "Cross-product Modelling in Continuous Intraday Electricity Markets via Hawkes Processes",
+      "authors": [
+        "Ayoub Jhabli",
+        "Tarek Alskaif",
+        "Kwabena E. Bennin",
+        "Bedir Tekinerdogan",
+        "Joost M. E. Pennings"
+      ],
+      "abstract": "As renewable energy integration accelerates, intraday continuous (IDC) electricity markets have become essential for short-term balancing. However, the simultaneous trading of overlapping contracts with varying granularities creates complex, hidden liquidity dependencies that are critical to market stability but remain poorly understood. This paper proposes a multivariate State-Dependent Hawkes Process (SDHP) to model cross-product liquidity dynamics between Quarter-Hourly and Hourly IDC contracts. To determine how cross-product effects vary under different market conditions, we classify the trading sessions into two distinct regimes: 'Normal' and 'Stressed', based on a composite metric of the bid-ask spread, mid-price volatility and queue imbalance. The model is calibrated on the first month of each quarter of 2024 using level 3 limit order book (LOB) data from the Dutch EPEX SPOT IDC market. We find that order flow is overwhelmingly self-driven, with roughly 95\\% of orders arriving in reaction to earlier orders in both regimes. Cross-excitation runs mainly from the Quarter-Hourly to the Hourly contract, but this leadership weakens under stress: the ratio of cumulative cross-excitation falls from 2.8 to 1.5, so the two contracts influence each other almost equally. Stress also makes the Quarter-Hourly to Hourly channel much faster, cutting its mean lag from 6.05 to 0.93 seconds. The strong seasonal variation found in calm periods largely disappears under stress, where all four months converge to the same structure.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-10-16T15:30:01Z",
+      "updated": "2026-10-16T15:30:01Z",
+      "abs_url": "https://arxiv.org/abs/2610.23619",
+      "pdf_url": "https://arxiv.org/pdf/2610.23619v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 47,
+      "matched_keywords": [
+        "limit order book",
+        "order flow",
+        "order book",
+        "bid-ask spread",
+        "regime",
+        "liquidity"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用真實訂單簿資料檢驗跨商品Hawkes過程，實證紮實且洞察明確。",
+      "summary": {
+        "title_zh": "透過 Hawkes Processes 進行連續日內電力市場的跨商品建模",
+        "verdict": "以狀態相依 Hawkes Processes 模型分析日內電力市場跨商品流動性，發現壓力下市場主導關係改變且反應速度加快。",
+        "problem": "再生能源整合下，日內連續電力市場中重疊合約的同時交易創造了複雜且未被充分理解的隱含流動性相依性。",
+        "method": "使用多元狀態相依 Hawkes Process (SDHP) 模型，針對荷蘭 EPEX SPOT 日內連續市場 2024 年每季首月的 Level 3 限價單簿資料進行校準，並依據價差、中間價波動度與排隊失衡將交易時段分為正常與壓力兩種體制。",
+        "findings": "訂單流主要由自我驅動，約 95% 的訂單是為了回應早期訂單。跨商品激發主要由 15 分鐘合約流向每小時合約，但在壓力下此領導效應減弱，兩合約的累積跨激發比率從 2.8 下降至 1.5，且平均落後時間從 6.05 秒縮短至 0.93 秒。",
+        "implication": "交易員在設計跨商品造市或套利策略時，必須考量市場壓力下合約間主導權轉移與反應速度加快的動態變化。此模型架構可直接應用於捕捉限價單簿中的交叉流動性。",
+        "caveats": "僅使用荷蘭 EPEX SPOT 市場 2024 年各季首月的資料進行實證，樣本涵蓋期間較短。",
+        "practicality": 4,
+        "tags": [
+          "Hawkes Process",
+          "限價單簿",
+          "電力市場",
+          "微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
