@@ -1,0 +1,521 @@
+{
+  "date": "2026-11-22",
+  "generated_at": "2026-11-22T11:14:19+08:00",
+  "scanned": 2484,
+  "eligible": 2132,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2608.29372",
+      "title": "FORESIGHT-9: Prospective and Process-Aware Evaluation of Adaptive Trading Agents",
+      "authors": [
+        "Xiangxin Luo",
+        "Chengtian Hong",
+        "Haohua Li",
+        "Yongyi Xie"
+      ],
+      "abstract": "Retrospective backtests provide a limited test of adaptive trading agents: they cannot rule out historical contamination, expose sensitivity to a single realized market path, or reveal internal degeneration during long-horizon adaptation. We introduce FORESIGHT-9, a prospective and process-aware benchmark built from nine auditable counterfactual stress worldlines branching from a common July 2026 information boundary. Each worldline specifies staged macro-financial events and joint multi-asset anchors; a deterministic generator realizes the trajectories, while observations are disclosed according to in-world time. A common contract standardizes observations and execution while preserving each agent's native adaptation loop. We evaluate two adaptive trading-agent frameworks with two foundation-model backbones across 36 long-horizon runs. Agent rankings vary substantially across worldlines and backbones, and a fixed equal-weight policy outperforms 31 of 36 runs. Process telemetry exposes failures that terminal returns conceal: in one high-return run, the live factor library collapsed while executed holdings converged to the equal-weight fallback, even though decision records continued to report an active factor ensemble. FORESIGHT-9 therefore evaluates not only portfolio outcomes, but whether adaptive agent state and execution remain coherent across alternative futures. We release the worldlines, trajectories, audit traces, and regeneration scripts.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-08-29T17:12:49Z",
+      "updated": "2026-09-04T14:31:11Z",
+      "abs_url": "https://arxiv.org/abs/2608.29372",
+      "pdf_url": "https://arxiv.org/pdf/2608.29372v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 9,
+      "matched_keywords": [
+        "backtest",
+        "futures"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出前瞻性基準 FORESIGHT-9 評估自適應交易代理人，揭露內部崩潰等盲點。",
+      "summary": {
+        "title_zh": "FORESIGHT-9：適應性交易代理人的前瞻性與過程感知評估",
+        "verdict": "提出 FORESIGHT-9 基準測試評估適應性交易代理人，發現固定等權重策略在多數情況下表現優於代理人。",
+        "problem": "回溯測試無法排除歷史資料污染、單一市場路徑敏感性，或揭露長期適應過程中的內部退化。因此需要更能檢視代理人狀態與執行 coherence 的前瞻性評估方式。",
+        "method": "使用基於 2026 年 7 月資訊邊界的九個反事實壓力世界線之 FORESIGHT-9 基準，評估兩個適應性交易代理人框架與兩個基礎模型骨幹，共進行 36 次長期執行。",
+        "findings": "代理人排名在不同世界線與骨幹間變動顯著，且固定等權重策略在 36 次執行中有 31 次表現較佳。過程遙測揭露了終端報酬所掩蓋的失敗，例如高報酬執行中因子庫崩潰但決策紀錄仍顯示活躍。",
+        "implication": "實務上開發適應性交易代理人時，不能只看終端績效，必須監控內部狀態與執行的過程一致性。這套基準與開源指令碼可用於壓力測試交易代理人。",
+        "caveats": "世界線基於人工設定的總體金融事件與聯合多資產錨點，可能無法完全反映真實市場的所有動態。",
+        "practicality": 4,
+        "tags": [
+          "交易代理人",
+          "基準測試",
+          "基礎模型",
+          "壓力測試"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.09420",
+      "title": "Benchmarking Deep Time Series Models for Equity Portfolios",
+      "authors": [
+        "Aoxin Zhang",
+        "Yuhan Cheng",
+        "Kwanting Leung"
+      ],
+      "abstract": "Benchmarking forecasting architectures for daily equity portfolios is not just a prediction exercise. It also asks which model remains usable after preferences, costs, and portfolio constraints are imposed. We build a CRSP daily-stock benchmark for 15 deep and statistical time-series architectures over 2018--2024. The protocol combines common-window decile portfolios, stochastic multi-criteria acceptability analysis, a deployment-adjusted acceptability index, and a constrained quadratic portfolio layer with capacity, beta, industry, risk, leverage, and turnover controls. The index starts from the SMAA rank-acceptability distribution and downweights models whose criteria-level wins produce high portfolio regret; its Gibbs form is characterized as an entropic update from the SMAA prior. Empirically, no architecture dominates the raw benchmark: TransEnc-8 has the largest rank-1 acceptability, 0.352, and no model exceeds about 0.36. Rankings vary with preferences, market state, feature universe, and transaction costs. In the promoted five-model constrained-portfolio comparison, TransEnc-8 is selected throughout, while return-oriented raw rankings can favor TS-RIDGE. Broad-universe decile signals can survive costs, but the baseline constrained-QP net Sharpe at 20 bps is negative for every promoted model. The benchmark supports model selection and diagnosis rather than a standalone trading-strategy claim.",
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC",
+        "q-fin.PM"
+      ],
+      "published": "2026-06-08T12:36:12Z",
+      "updated": "2026-06-08T12:36:12Z",
+      "abs_url": "https://arxiv.org/abs/2606.09420",
+      "pdf_url": "https://arxiv.org/pdf/2606.09420v1",
+      "comment": "51 pages, 28 figures, 43 tables; includes appendices",
+      "journal_ref": "",
+      "keyword_score": 9,
+      "matched_keywords": [
+        "transaction cost",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "對 15 種深度與統計時間序列模型進行每日股票投組基準測試，考量交易成本。",
+      "summary": {
+        "title_zh": "深度時間序列模型於股票投資組合之基準測試",
+        "verdict": "評估15種時間序列模型在股票投資組合的表現，無單一模型勝出且計入成本後淨夏普值均為負。",
+        "problem": "評估預測模型時常忽略偏好、成本與投資組合限制，導致實際部署表現未知。本研究旨在建立一個全面考量上述真實限制的基準測試架構。",
+        "method": "使用CRSP日頻股票資料（2018至2024年）測試15種深度與統計時間序列模型。方法結合隨機多準則可接受性分析（SMAA）、部署調整可接受性指數，以及具備多重風險與換手率控制的二次規劃投資組合層。",
+        "findings": "無單一架構在原始基準上全面勝出，TransEnc-8 的最高第一名可接受性僅 0.352。模型排名會隨偏好與成本變動，且在 20 基點交易成本下，所有模型的基準限制二次規劃投資組合淨夏普值皆為負。",
+        "implication": "此基準適用於模型選擇與診斷而非直接作為交易策略。實務應用時必須嚴格克服交易成本與投資組合限制的衝擊。",
+        "caveats": "在 20 基點交易成本假設下，所有模型的淨夏普值均為負數。",
+        "practicality": 3,
+        "tags": [
+          "時間序列",
+          "投資組合",
+          "模型基準",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.36317",
+      "title": "Event definition and the branching ratio: Hawkes estimates of price-change clustering in the consolidated quote feed",
+      "authors": [
+        "Hyoeun Lee"
+      ],
+      "abstract": "Hawkes models of price changes in the consolidated US quote feed find a sub-millisecond kernel component and a branching ratio near criticality. We show that in large-tick stocks the first is the feed's construction: half of NBBO changes are locks or depleted quotes, resolved within a millisecond, which the model reads as excitation. Defining the event as a mid-price level persisting for one millisecond removes the component. Raw fits put three times the clean kernel mass within one second, which a simulation reproduces. Since the total branching ratio trades off against the baseline, we report kernel mass on a fixed window.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.CP",
+        "q-fin.TR"
+      ],
+      "published": "2026-10-26T21:42:56Z",
+      "updated": "2026-10-26T21:42:56Z",
+      "abs_url": "https://arxiv.org/abs/2610.36317",
+      "pdf_url": "https://arxiv.org/pdf/2610.36317v1",
+      "comment": "Submitted to the Journal of Financial Econometrics",
+      "journal_ref": "",
+      "keyword_score": 9,
+      "matched_keywords": [
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "分析報價餵送的 Hawkes 模型分支比，指出微秒級雜訊並修正事件定義。",
+      "summary": {
+        "title_zh": "事件定義與分支比：美國綜合報價源中價格變動群聚的Hawkes估計",
+        "verdict": "證實高頻報價源中的極短時距 Hawkes 激發分量多半是資料構建的產物，重新定義事件可消除此假象。",
+        "problem": "在美國綜合報價源的價格變動 Hawkes 模型中，常發現亞毫秒級的核函數分量與接近臨界點的分支比，這可能反映了真實市場動態或僅是資料源的構造問題。",
+        "method": "分析美國綜合報價源的大型跳動股票資料，透過調整事件定義（將持續一毫秒的中間價水準視為事件）並配合模擬進行驗證。",
+        "findings": "原始擬合顯示在一秒內有三倍於乾淨核心質量的成分，其中半數的 NBBO 變動是鎖價或耗盡的報價並在一毫秒內解決。重新定義事件後即可移除該亞毫秒分量，且模擬結果成功重現此現象。",
+        "implication": "在使用高頻資料進行 Hawkes 模型擬合時，必須小心排除報價源微觀結構所造成的假性激發，以免高估價格變動的分支比。",
+        "caveats": "總分支比與基準強度之間存在取捨，因此必須在固定窗口上報告核函數質量。",
+        "practicality": 4,
+        "tags": [
+          "Hawkes",
+          "限價單簿",
+          "微觀結構",
+          "高頻交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.37705",
+      "title": "Decorrelating the Advice Layer: A Calibrated Fragility Metric and Tested Mitigations for Synchronized Liquidation in Agentic Wealth Management",
+      "authors": [
+        "Saurabh Kohli"
+      ],
+      "abstract": "Conversational AI agents are turning wealth management into a continuous loop of market analysis, allocation, risk checks and execution, run for millions of clients on a handful of foundation models. We build a multi-asset agent-based model of this layer, calibrated to measured model concentration, cross-model correlation, retail turnover and 33 years of real equity returns, and ask when the layer amplifies market declines and what prevents it. The effective number of independent decision-makers is bounded however many clients the layer serves: about 2.0 at today's consumer concentration. This monoculture of views drives crowding in individual securities and sets the blast radius of a compromised model provider, but it does not drive market-wide liquidation. Index tail losses rise with the square root of agentic adoption, are 1.47-1.90 times larger under an agentic than under a periodic robo-advice architecture, and do not rise with model concentration; synchronized automation (risk overlays, drawdown cuts and attention-driven execution) drives them. A fragility index computed from aggregate flow, public returns and an impact estimate forecasts tail liquidation out of sample (hold-out R^2 of 0.56) far better than concentration or correlation measures. Decorrelating the automation, not the models, works: dispersing overlay parameters, staging execution and a participation breaker together cut tail liquidation by 63% at no measurable cost to client welfare, whereas provider diversification has no effect. Because the statistics required are sums, they can be computed across platforms under secure aggregation with differential privacy at negligible cost for realistic client populations. In historical replays, an agentic layer holding 10% of the market would have deepened the 2020 crash by about 858 basis points.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM",
+        "q-fin.PM",
+        "q-fin.TR"
+      ],
+      "published": "2026-10-26T18:30:56Z",
+      "updated": "2026-10-26T18:30:56Z",
+      "abs_url": "https://arxiv.org/abs/2610.37705",
+      "pdf_url": "https://arxiv.org/pdf/2610.37705v1",
+      "comment": "30 pages, 13 figures, 9 tables",
+      "journal_ref": "",
+      "keyword_score": 9,
+      "matched_keywords": [
+        "drawdown"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "以 33 年真實股票資料校準代理人財富管理模型，分析自動化同步清算風險。",
+      "summary": {
+        "title_zh": "裝飾諮詢層的相關性：代理式財富管理中同步清算的已校準脆弱性指標與測試緩解措施",
+        "verdict": "探討交由少數基礎模型驅動的代理式財富管理系統如何放大市場尾端風險，並提出透過打破自動化同步來降低清算風險的方案。",
+        "problem": "當財富管理轉由少數基礎模型驅動時，客戶的獨立決策者數量受限，這會引發擁擠交易並放大市場下跌時的清算風險。",
+        "method": "建構多資產代理人為基礎的模型，校準模型集中度、跨模型相關性、散戶週轉率與 33 年真實股票報酬率。",
+        "findings": "指數尾端損失隨代理採用率平方根上升，較定期機器人理財高出 1.47 至 1.90 倍；歷史回測顯示持有 10% 市場的代理層會使 2020 年崩盤加深約 858 個基點，而提出的緩解措施能將尾端清算減少 63%。",
+        "implication": "實務上應著重於打散自動化機制的同步性（如分散風控參數、分段執行與參與熔斷），而非盲目追求模型供應商的多樣化。",
+        "caveats": "模型依賴於代理人為基礎的模擬與歷史重演推估，對未來真實市場行為的預測仍存在結構性假設限制。",
+        "practicality": 3,
+        "tags": [
+          "財富管理",
+          "基礎模型",
+          "流動性風險",
+          "代理人為基礎模型",
+          "微觀結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.02866",
+      "title": "DIVINE: Simple Cross-Market Stock Pretraining via Diverse Indicator Reconstruction",
+      "authors": [
+        "Kuan-Yu Chen",
+        "Shu-Cheng Zheng",
+        "Yu-Chen Den",
+        "Wei-Cheng Liao",
+        "Tien-Hao Chang"
+      ],
+      "abstract": "Financial time-series pretraining typically learns from masked observations, contrastive relations, or future outcomes---yet existing objectives struggle to simultaneously avoid future-supervision uncertainty and maintain return-prediction alignment. We propose DIVINE (DIVerse INdicator rEconstruction), a simple cross-market pretraining framework that reconstructs technical indicators from raw OHLCV history. Computed from observed price-volume history, technical indicators provide consistently defined supervision across markets while summarizing diverse market dynamics with established relevance to return prediction. Pretrained jointly on six-equity market datasets, DIVINE reconstructs 77 targets derived from 16 standard indicators and transfers only the learned encoder to downstream stock ranking. Across all six markets, DIVINE achieves the strongest average portfolio performance with a lightweight 0.05M-parameter encoder, outperforming pretraining baselines and matching or exceeding substantially larger financial foundation models, while remaining robust and data-efficient. Systematic analyses show that indicator diversity and market diversity provide complementary gains in transfer. Together, these results suggest that supervision design and cross-market diversity---rather than model scale---are the key drivers of strong, transferable financial representations.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CE"
+      ],
+      "published": "2026-10-02T06:04:56Z",
+      "updated": "2026-10-02T06:04:56Z",
+      "abs_url": "https://arxiv.org/abs/2610.02866",
+      "pdf_url": "https://arxiv.org/pdf/2610.02866v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 9,
+      "matched_keywords": [
+        "stock",
+        "equity market"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出 DIVINE 跨市場預訓練框架重建技術指標，實證表現優異且資料效率高。",
+      "summary": {
+        "title_zh": "DIVINE：透過多元指標重建的簡單跨市場股票預訓練",
+        "verdict": "提出名為 DIVINE 的跨市場預訓練框架，透過重建技術指標來學習股票表徵，在下游選股任務中表現優異。",
+        "problem": "現有的金融時間序列預訓練方法在避免未來監督的不確定性與維持報酬預測的一致性之間難以取得平衡。",
+        "method": "提出 DIVINE 框架，利用原始 OHLCV 歷史資料重建 16 種標準指標衍生出的 77 個目標。模型在六個股票市場資料集上進行聯合預訓練，並將學習到的編碼器轉移至下游股票排序任務。",
+        "findings": "使用僅 0.05M 參數的輕量級編碼器，DIVINE 在所有六個市場中皆達到最強的平均投資組合績效，超越多個預訓練基準，且效能匹配甚至超越體積大得多的金融基礎模型。論文未報告具體的夏普值或絕對報酬數字。",
+        "implication": "監督設計與跨市場多樣性是建立強大且可轉移之金融表徵的關鍵驅動因素，而非模型規模。此輕量級方法易於實作且具備良好的資料效率。",
+        "caveats": "論文未提供扣除實際交易成本後的績效表現。",
+        "practicality": 4,
+        "tags": [
+          "機器學習",
+          "基礎模型",
+          "Alpha 因子挖掘",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.27447",
+      "title": "Sampler-Robust Optimization under Generative Models",
+      "authors": [
+        "Ziwei Zhang",
+        "Jonathan Yu-Meng Li"
+      ],
+      "abstract": "Modern stochastic optimization pipelines increasingly rely on learned generative models to represent uncertainty, while downstream decisions are evaluated almost entirely through Monte Carlo scenarios. This shifts the operational object of uncertainty from an explicit probability law to the sampler induced by the learned generator. Reliability therefore depends on two errors: sampler misspecification and finite-simulation error. We propose Sampler-Robust Optimization (SRO), which optimizes decisions against the worst-case sampler induced by perturbing the learned generator. This sampler-first formulation aligns with simulation-based decision pipelines and admits a sharpness-aware interpretation: it favors decisions whose performance is stable under generator perturbations, rather than merely under the nominal sampler. Under a coverage assumption, we show that the empirical worst-case objective provides a high-probability upper certificate for the true population objective, with finite-simulation error partially absorbed by the robustification used to guard against sampler misspecification. The framework accommodates generative models with or without explicit densities and admits efficient minimax procedures. Portfolio-optimization experiments show that SRO produces more stable decisions and improves out-of-sample performance under distribution shift.",
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC",
+        "cs.AI",
+        "cs.LG",
+        "q-fin.PM",
+        "q-fin.RM"
+      ],
+      "published": "2026-04-30T05:33:15Z",
+      "updated": "2026-04-30T05:33:15Z",
+      "abs_url": "https://arxiv.org/abs/2604.27447",
+      "pdf_url": "https://arxiv.org/pdf/2604.27447v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 9,
+      "matched_keywords": [
+        "out-of-sample",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出採樣器穩健最佳化以防範生成模型誤設，改善投組樣本外表現。",
+      "summary": {
+        "title_zh": "生成模型下的抽樣穩健最佳化",
+        "verdict": "提出抽樣穩健最佳化框架，對抗生成模型偏差與有限模擬誤差，提升樣本外表現。",
+        "problem": "現代隨機最佳化依賴學得的生成模型與 Monte Carlo 情境，決策面臨模型設定誤判與有限模擬的雙重誤差。",
+        "method": "運用抽樣穩健最佳化（SRO），對生成模型擾動下的最差情況抽樣進行決策最佳化。適用於具備或不具備顯式機率密度的生成模型，並透過投資組合最佳化實驗進行驗證。",
+        "findings": "投資組合實驗顯示，SRO 能產生更穩健的決策，並在分佈位移下改善樣本外表現，但未報告具體的報酬或夏普值數字。",
+        "implication": "適用於依賴生成模型模擬情境的資產配置流程，能有效降低模型偏差帶來的衝擊，前提是需滿足覆蓋假設。",
+        "caveats": "理論成立依賴特定的覆蓋假設，且未提供具體的計算時間與交易成本資料。",
+        "practicality": 4,
+        "tags": [
+          "隨機最佳化",
+          "生成模型",
+          "投資組合最佳化",
+          "蒙地卡羅模擬"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2512.12727",
+      "title": "EXFormer: A Multi-Scale Trend-Aware Transformer with Dynamic Variable Selection for Foreign Exchange Returns Prediction",
+      "authors": [
+        "Dinggao Liu",
+        "Robert Ślepaczuk",
+        "Zhenpeng Tang"
+      ],
+      "abstract": "Accurately forecasting daily exchange rate returns represents a longstanding challenge in international finance, as the exchange rate returns are driven by a multitude of correlated market factors and exhibit high-frequency fluctuations. This paper proposes EXFormer, a novel Transformer-based architecture specifically designed for forecasting the daily exchange rate returns. We introduce a multi-scale trend-aware self-attention mechanism that employs parallel convolutional branches with differing receptive fields to align observations on the basis of local slopes, preserving long-range dependencies while remaining sensitive to regime shifts. A dynamic variable selector assigns time-varying importance weights to 28 exogenous covariates related to exchange rate returns, providing pre-hoc interpretability. An embedded squeeze-and-excitation block recalibrates channel responses to emphasize informative features and depress noise in the forecasting. Using the daily data for EUR/USD, USD/JPY, and GBP/USD, we conduct out-of-sample evaluations across five different sliding windows. EXFormer consistently outperforms the random walk and other baselines, improving directional accuracy by a statistically significant margin of up to 8.5--22.8%. In nearly one year of trading backtests, the model converts these gains into cumulative returns of 18%, 25%, and 18% for the three pairs, with Sharpe ratios exceeding 1.8. When conservative transaction costs and slippage are accounted for, EXFormer retains cumulative returns of 7%, 19%, and 9%, while other baselines achieve negative. The robustness checks further confirm the model's superiority under high-volatility and bear-market regimes. EXFormer furnishes both economically valuable forecasts and transparent, time-varying insights into the drivers of exchange rate dynamics for international investors, corporations, and central bank practitioners.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "cs.CE"
+      ],
+      "published": "2025-12-14T15:00:36Z",
+      "updated": "2026-01-19T18:39:04Z",
+      "abs_url": "https://arxiv.org/abs/2512.12727",
+      "pdf_url": "https://arxiv.org/pdf/2512.12727v2",
+      "comment": "85 pages, 11 figures",
+      "journal_ref": "",
+      "keyword_score": 58,
+      "matched_keywords": [
+        "sharpe ratio",
+        "high-frequency",
+        "transaction cost",
+        "out-of-sample",
+        "backtest",
+        "transformer"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "外匯預測模型結合多尺度注意力與動態變數選擇，考慮成本後表現穩健。",
+      "summary": {
+        "title_zh": "EXFormer：結合多尺度趨勢感知與動態變數選擇之外匯報酬預測模型",
+        "verdict": "提出 EXFormer 模型預測外匯日報酬，計入交易成本後仍具正報酬與高夏普值。",
+        "problem": "外匯報酬受多重相關市場因子驅動且具高頻波動，難以準確進行日報酬預測。",
+        "method": "採用基於 Transformer 的 EXFormer 架構，包含多尺度趨勢感知注意力機制與動態變數選擇器。使用 EUR/USD、USD/JPY 與 GBP/USD 的日資料，透過五個滑動視窗進行樣本外評估。",
+        "findings": "方向準確率顯著提升 8.5% 至 22.8%。近一年回測顯示三貨幣對的夏普值皆超過 1.8，計入保守交易成本與滑價後仍分別保有 7%、19% 與 9% 的累積報酬。",
+        "implication": "模型具備可解釋性與實質交易價值，能在高波動與熊市體制下保持穩健。",
+        "caveats": "樣本主要涵蓋三組主要貨幣對，其在其他市場的泛用性仍需進一步驗證。",
+        "practicality": 5,
+        "tags": [
+          "外匯",
+          "Transformer",
+          "機器學習",
+          "Alpha 因子挖掘"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.21081",
+      "title": "StochLOB: Heavy-Tailed Score Matching for Robust Limit Order Book Trend Prediction",
+      "authors": [
+        "Arshia Abolghasemi",
+        "Seyed Reza Tavakoli",
+        "Parsa Naderi",
+        "Nazanin Mirzaei",
+        "Behrad Jahani",
+        "Saba Yousefzadeh",
+        "Tahereh Javaheri",
+        "Mohammad Hosein Rohban",
+        "Gholamali Aminian",
+        "Ali Habibnia"
+      ],
+      "abstract": "Score-based diffusion methods usually perturb data with Brownian Gaussian noise, corresponding to a light-tailed forward stochastic differential equation (SDE). For market time series this SDE can be a poor abstraction: limit order book (LOB) order flow is heavy-tailed, bursty, and occasionally jump-like. We study STOCHLOB, a training-only score-matching framework that changes the forward diffusion corruption law while leaving the deployed predictor deterministic. Instead of Brownian-only Gaussian corruption, the noising process uses two non-Gaussian SDE-inspired alternatives: jump-Lévy noise through a compound-Poisson variance mixture, and clipped $α$-stable noise through a positive-stable Gaussian scale mixture. These corruptions inject finite jumps and heavy-tailed residuals into training without requiring reverse-time diffusion sampling at inference. The resulting score target has a useful interpretation: its radial factor $h_t(r)$ is the posterior expected corruption precision, so large residuals are weighted according to the latent corruption scale that most plausibly generated them. On chronologically held-out Coinbase LOB data, the proposed variants remain competitive on uncorrupted BTC and altcoin test horizons and improve several realized tail-window stress diagnostics. An exploratory Feishu A-share transfer study further tests whether the probability outputs remain usable under transaction costs and trading-rule constraints. Code and configuration files are available at https://github.com/ArshiAbolghasemi/Penny.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-fin.TR",
+        "stat.ML"
+      ],
+      "published": "2026-10-15T01:33:30Z",
+      "updated": "2026-10-24T20:30:31Z",
+      "abs_url": "https://arxiv.org/abs/2610.21081",
+      "pdf_url": "https://arxiv.org/pdf/2610.21081v2",
+      "comment": "32 pages, 5 figures. NeurIPS 2026 Workshop: AI for Stochastic Dynamics",
+      "journal_ref": "",
+      "keyword_score": 46,
+      "matched_keywords": [
+        "limit order book",
+        "order flow",
+        "order book",
+        "transaction cost"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "改進擴散模型處理重尾特徵，以真實資料驗證",
+      "summary": {
+        "title_zh": "StochLOB：應用於穩健限價單簿趨勢預測的重尾分數匹配方法",
+        "verdict": "提出以非高斯 SDE 進行訓練期的分數匹配，改善限價單簿的極端尾部壓力診斷，未報告具體績效數字。",
+        "problem": "標準的基於分數的擴散方法採用高斯雜訊，無法適應限價單簿訂單流具有重尾、突發與偶發跳躍的特性。",
+        "method": "使用 STOCHLOB 訓練期分數匹配框架，將前向擴散機制替換為跳躍 Lévy 雜訊與截斷 $\\alpha$-穩定雜訊；測試資料採用 Coinbase 的限價單簿資料與探索性 A 股資料。",
+        "findings": "在未受損的比特幣與山寨幣測試期間保持競爭力，並改善了數個已實現的尾部窗口壓力診斷。未報告具體績效數字。",
+        "implication": "可在訓練時注入重尾雜訊以提升模型對極端行情的穩健性，且不增加推論時的計算複雜度。",
+        "caveats": "論文僅指出改善壓力診斷並保持競爭力，未提供具體的報酬率或夏普值等量化績效改善幅度。",
+        "practicality": 3,
+        "tags": [
+          "限價單簿",
+          "分數匹配",
+          "擴散模型",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.19369",
+      "title": "Directional Liquidity and Geometric Shear in Pregeometric Order Books",
+      "authors": [
+        "João P. da Cruz"
+      ],
+      "abstract": "We introduce a structural framework for the geometry of financial order books in which liquidity, supply, and demand are treated as emergent observables rather than primitive market variables. The market is modeled as a relational substrate without assumed metric, temporal, or price coordinates. Observable quantities arise only through observation, implemented here as a reduction of relational degrees of freedom followed by a low-dimensional spectral projection. A one-dimensional projection induces a price-like coordinate and a projected liquidity density around the mid price, from which bid and ask sides emerge as two complementary restrictions. We show that directional liquidity imbalances decompose naturally into a rigid drift of the projected density and a geometric shear mode that deforms the bid--ask structure without inducing price motion. Under a minimal single-scale hypothesis, the shear geometry constrains the projected liquidity to a gamma-like functional form, appearing as an integrated-gamma profile in discrete data. Empirical analysis of high-frequency Level~II data across multiple U.S. equities confirms this geometry and shows that it outperforms standard alternative cumulative models under explicit model comparison and residual diagnostics.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "physics.soc-ph"
+      ],
+      "published": "2026-01-27T08:51:45Z",
+      "updated": "2026-01-27T08:51:45Z",
+      "abs_url": "https://arxiv.org/abs/2601.19369",
+      "pdf_url": "https://arxiv.org/pdf/2601.19369v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 42,
+      "matched_keywords": [
+        "order book",
+        "high-frequency",
+        "liquidity",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出訂單簿幾何剪力模型，高頻資料實證支援",
+      "summary": {
+        "title_zh": "前幾何限價單簿中的方向性流動性與幾何剪力",
+        "verdict": "將限價單簿視為前幾何關聯基質，透過光譜投影導出流動性幾何結構，實證顯示其優於傳統累積模型。",
+        "problem": "傳統金融限價單簿模型將流動性、供給與需求視為原始市場變數，缺乏從更基礎的關係基質中導出這些可觀測量的結構性框架。",
+        "method": "建構不假設度量、時間或價格座標的關係基質模型，透過自由度約簡與低維光譜投影分析多檔美國股票的高頻 Level 2 資料。",
+        "findings": "方向性流動性失衡可分解為剛性漂移與幾何剪力模式，且在單一尺度假設下，剪力幾何將投影流動性約束為伽瑪函數形式，實證顯示其在模型比較與殘差診斷中優於標準替代累積模型，未報告具體績效數字。",
+        "implication": "可用於改善限價單簿流動性與訂單簿動態的微觀結構建模，提供更精確的價格附近流動性密度估計。",
+        "caveats": "基於高度抽象的前幾何與光譜投影框架，實際套用到高頻交易策略時需要龐大的工程實作與資料轉換。",
+        "practicality": 2,
+        "tags": [
+          "限價單簿",
+          "市場微結構",
+          "流動性",
+          "高頻交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2512.17923",
+      "title": "Inferring Latent Market Forces: Evaluating LLM Detection of Gamma Exposure Patterns via Obfuscation Testing",
+      "authors": [
+        "Christopher Regan",
+        "Ying Xie"
+      ],
+      "abstract": "We introduce obfuscation testing, a novel methodology for validating whether large language models detect structural market patterns through causal reasoning rather than temporal association. Testing three dealer hedging constraint patterns (gamma positioning, stock pinning, 0DTE hedging) on 242 trading days (95.6% coverage) of S&P 500 options data, we find LLMs achieve 71.5% detection rate using unbiased prompts that provide only raw gamma exposure values without regime labels or temporal context. The WHO-WHOM-WHAT causal framework forces models to identify the economic actors (dealers), affected parties (directional traders), and structural mechanisms (forced hedging) underlying observed market dynamics. Critically, detection accuracy (91.2%) remains stable even as economic profitability varies quarterly, demonstrating that models identify structural constraints rather than profitable patterns. When prompted with regime labels, detection increases to 100%, but the 71.5% unbiased rate validates genuine pattern recognition. Our findings suggest LLMs possess emergent capabilities for detecting complex financial mechanisms through pure structural reasoning, with implications for systematic strategy development, risk management, and our understanding of how transformer architectures process financial market dynamics.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2025-12-08T15:48:57Z",
+      "updated": "2025-12-27T16:04:45Z",
+      "abs_url": "https://arxiv.org/abs/2512.17923",
+      "pdf_url": "https://arxiv.org/pdf/2512.17923v2",
+      "comment": "10 pages, 8 figures. Accepted at IEEE Big Data 2025. Extended journal version in preparation. ISBN: 979-8-3315-9447-3/25. Page numbers: 7226-7235",
+      "journal_ref": "2025 IEEE International Conference on Big Data (Big Data)",
+      "keyword_score": 37,
+      "matched_keywords": [
+        "transformer",
+        "llm",
+        "large language model",
+        "regime",
+        "hedging",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "LLM 檢測選擇權 Gamma 曝險，已刊登",
+      "summary": {
+        "title_zh": "推斷潛在市場力量：透過混淆測試評估 LLM 對 Gamma 曝險模式的偵測能力",
+        "verdict": "透過混淆測試證實 LLM 能以因果推理偵測市場 Gamma 曝險模式，無須依賴時間特徵。",
+        "problem": "探討大型語言模型在偵測結構性市場模式時，究竟是依賴真正的因果推理，還是僅靠時間關聯。具體檢驗造市商避險限制的相關模式。",
+        "method": "採用混淆測試與因果框架，針對標普 500 指數選擇權共 242 個交易日（95.6% 覆蓋率）的資料進行分析，測試 Gamma 定位、股票釘住與零日到期選擇權避險等三種造市商避險限制模式。",
+        "findings": "在僅提供原始 Gamma 且無體制標籤的無偏提示下，LLM 達到 71.5% 的偵測率；即使經濟獲利按季波動，偵測準確度仍穩定維持在 91.2%。若提供體制標籤，偵測率則進一步提升至 100%。",
+        "implication": "顯示 LLM 具備透過純結構推理偵測複雜金融機制的能力，對系統化策略開發與風險管理具有高度應用潛力。",
+        "caveats": "雖然證實了結構推理能力，但在實際交易中仍需依賴正確的資料與提示詞工程來解讀潛在市場力量。",
+        "practicality": 4,
+        "tags": [
+          "大型語言模型",
+          "市場微結構",
+          "選擇權",
+          "因果推理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
