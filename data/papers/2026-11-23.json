@@ -1,0 +1,511 @@
+{
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T11:44:19+08:00",
+  "scanned": 2490,
+  "eligible": 2128,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2610.24558",
+      "title": "Optimal Trading Filters and the Value of Predictive Signals",
+      "authors": [
+        "Matteo Smerlak"
+      ],
+      "abstract": "The value of a forecast depends on its accuracy, but also on its actionability. In trading, an investor must translate return forecasts into positions while accounting for trading costs and the lingering impact of earlier trades. We solve the stationary quadratic trading problem with transient price impact using tools from prediction theory: Wiener-Hopf factorization gives the optimal policy as the composition of a conditional forecast and an explicit causal linear filter. We recover the Gârleanu-Pedersen aim-portfolio under exponential resilience and derive fractional trading filters under power-law impact decay, requiring memory beyond finite-dimensional LQR control. At fixed positive risk penalty, signals of equal instantaneous predictive strength have equal frictionless Markowitz value. With trading costs, net attainable value is determined by the mean square of the friction-weighted conditional forecast. Under power-law impact with exposure bleeding, we find an intermediate optimal mean-reversion rate for Ornstein-Uhlenbeck signals.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "math.OC",
+        "physics.soc-ph",
+        "q-fin.PM"
+      ],
+      "published": "2026-10-17T08:29:14Z",
+      "updated": "2026-10-17T08:29:14Z",
+      "abs_url": "https://arxiv.org/abs/2610.24558",
+      "pdf_url": "https://arxiv.org/pdf/2610.24558v1",
+      "comment": "15 pages, 3 figures",
+      "journal_ref": "",
+      "keyword_score": 8,
+      "matched_keywords": [
+        "price impact"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "交易執行",
+      "evidence": "理論或工具",
+      "relevance_reason": "運用預測理論求解瞬時價格衝擊的最佳交易過濾器。",
+      "summary": {
+        "title_zh": "最佳交易濾波器與預測信號的價值",
+        "verdict": "推導出考慮暫時性價格衝擊與交易成本下的最佳交易策略，證明冪次律衝擊下需要無限記憶的濾波器。",
+        "problem": "投資人如何將報酬預測轉換為部位，同時在交易成本與早期交易的殘留衝擊下實現價值最大化？",
+        "method": "利用預測理論中的 Wiener-Hopf 分解來求解平穩二次交易問題，涵蓋指數韌性與冪次律衝擊衰減模型。",
+        "findings": "在固定風險懲罰下，具備相同瞬時預測強度的信號擁有相同的無摩擦 Markowitz 價值。計入交易成本後，淨可達成價值由摩擦加權條件預測的均方值決定。",
+        "implication": "實務上處理具備冪次律衝擊的資產時，不能僅依賴有限維度的 LQR 控制，必須納入歷史記憶。",
+        "caveats": "模型基於理論推導與平穩二次交易假設，未報告實際市場回測的具體績效數字。",
+        "practicality": 3,
+        "tags": [
+          "最佳執行",
+          "價格衝擊",
+          "線性濾波器",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.27616",
+      "title": "Do Econophysics-Inspired Inputs Improve Neural Covariance Forecasting? A Leakage-Free Walk-Forward Study of Intraday DJIA Data",
+      "authors": [
+        "Gabriele Ranco"
+      ],
+      "abstract": "Tools from econophysics, including Random Matrix Theory (RMT), Tsallis q-Gaussian tails, Hawkes self-excitation and diffusion-inspired regularization, are often proposed as ingredients for financial risk models, but their incremental value over strong contemporary benchmarks remains unclear. We introduce a Physics-Inspired Neural Covariance (PINC) framework for one-day-ahead covariance forecasting using 1-minute data from the 29 Dow Jones Industrial Average constituents over 545 trading days. The model incorporates RMT-cleaned correlations, Tsallis tail indices and Hawkes intensities as inputs and optionally includes a Fokker-Planck-inspired regularization term selected strictly on validation data. Evaluation is performed through a nested walk-forward design with 11 folds, 231 out-of-sample trading days and multiple random seeds, with explicit leakage controls and reproducibility tests. Neural models outperform static covariance estimators such as sample, Ledoit-Wolf, RMT and EVT-based estimators, but show no statistically significant improvement over HAR-RV or LSTM benchmarks. Validation consistently rejects the physics-inspired regularizer, and ablation studies find no measurable contribution from the RMT, Tsallis or Hawkes features. Portfolio experiments show no statistically significant Sharpe ratio improvement after transaction costs. These results suggest that, for this dataset and forecasting horizon, econophysics-inspired components do not provide measurable benefits beyond strong financial forecasting benchmarks.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP"
+      ],
+      "published": "2026-11-20T13:45:40Z",
+      "updated": "2026-11-20T13:45:40Z",
+      "abs_url": "https://arxiv.org/abs/2611.27616",
+      "pdf_url": "https://arxiv.org/pdf/2611.27616v1",
+      "comment": "8 pages, 7 figures, 4 tables. Empirical study on covariance forecasting, econophysics-inspired machine learning, portfolio optimization, and risk forecasting. Submitted to Results in Physics",
+      "journal_ref": "",
+      "keyword_score": 28,
+      "matched_keywords": [
+        "sharpe ratio",
+        "transaction cost",
+        "out-of-sample"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "實證完整，發現經濟物理特徵無顯著助益。",
+      "summary": {
+        "title_zh": "經濟物理學特徵能改善類神經網路共變異數預測嗎？道瓊工業平均指數高頻資料的無資料洩漏前瞻性研究",
+        "verdict": "將經濟物理學特徵納入神經網路進行共變異數預測，在扣除交易成本後未顯著改善表現。",
+        "problem": "經濟物理學工具常被用於金融風險模型，但其相較於現代基準模型的增量價值仍不明確。",
+        "method": "提出物理啟發類神經網路共變異數（PINC）框架，使用道瓊工業平均指數 29 檔成分股的 1 分鐘高頻資料、共 545 個交易日進行隔日共變異數預測，並透過巢狀前瞻性設計進行評估。",
+        "findings": "神經網路模型優於靜態共變異數估計量，但對 HAR-RV 或 LSTM 基準模型並無顯著改善。消融實驗顯示物理特徵無可測量的貢獻，且投資組合實驗在扣除交易成本後未展現顯著的夏普值提升。",
+        "implication": "實證顯示此類經濟物理學特徵在該預測視野下無法提供超越傳統強大基準的額外好處，開發時應謹慎評估其邊際效益。",
+        "caveats": "實證僅限於道瓊工業平均指數成分股與特定的預測視野，未必適用於其他資產類別。",
+        "practicality": 4,
+        "tags": [
+          "共變異數預測",
+          "經濟物理學",
+          "高頻資料",
+          "神經網路",
+          "投資組合管理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.27635",
+      "title": "Report2Alpha-Bench: Evaluating LLM Agents on End-to-End Quantitative Research",
+      "authors": [
+        "Yun Zhang",
+        "Hui Yang",
+        "Wei Meng"
+      ],
+      "abstract": "We evaluate whether LLM agents can independently carry out a several-hour quantitative research project: read a brokerage research report, make a plan, and over 7 rounds of iteration propose hypotheses, write factor code and improve it from backtest feedback, seeing only 2022-2023 market data. Like Terminal-Bench-Science, the task evaluates overall research ability; unlike it, there is no directly checkable unique answer: the model must repeatedly propose hypotheses on very noisy data, revise its understanding from experiments, disentangle multiple factors and design ablations without overfitting in-sample, much like complex real-world decisions with many interacting factors. After the research, a fixed rule using only 2022-2023 results selects a low-correlated factor pool from all candidates the model produced, and scores it on unseen 2024-2025 data after removing common style returns such as size and momentum; the same rule on round-0 candidates alone gives a report baseline that \"implements the report without iterating\". We run gpt-6.1-sol (reasoning effort xhigh), gpt-6.1-terra (xhigh), muse-spark-1.3 (xhigh) and deepseek-v4.1-flash (max) once on each of 7 reports. Of the 28 runs, 19 factor pools pass the usability threshold; the average score is 48.4 (0-100 scale), against 25.4 for the report baseline and 35.9 for the models' own picks. From similar report baselines (17.0-31.0), the models separate after iteration to 74.7 (gpt-6.1-sol), 56.6 (gpt-6.1-terra), 35.8 (deepseek-v4.1-flash) and 26.2 (muse-spark-1.3); their candidates look equally good in training and diverge only in testing, with the leaders proposing more diverse ideas per round and ending with more effective factors in the pool. Evaluating research agents thus requires scoring on frozen future data after removing styles, and measuring \"what the research produced\" separately from \"what was finally picked\".",
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE"
+      ],
+      "published": "2026-11-20T14:00:32Z",
+      "updated": "2026-11-20T14:00:32Z",
+      "abs_url": "https://arxiv.org/abs/2611.27635",
+      "pdf_url": "https://arxiv.org/pdf/2611.27635v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 23,
+      "matched_keywords": [
+        "backtest",
+        "momentum",
+        "llm"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "多輪量化研究基準，實證扎實且具參考價值。",
+      "summary": {
+        "title_zh": "Report2Alpha-Bench：評估 LLM 代理進行端對端量化研究的能力",
+        "verdict": "評估 LLM 代理能否透過多輪迭代自主完成量化研究與 Alpha 因子挖掘，實測顯示頂尖模型在未見過的測試集上表現顯著超越基準。",
+        "problem": "現有基準無法有效評估 LLM 代理在充滿雜訊且無單一正確答案的真實市場環境中，進行長期量化研究與反覆迭代的能力。",
+        "method": "使用 7 份券商研究報告與 2022-2023 年市場資料，讓多款高推理強度的 LLM 代理進行 7 輪迭代以提出假設、編寫因子程式碼並依回測結果改進，最後在 2024-2025 年未見過資料上評估。",
+        "findings": "28 次執行中有 19 個因子池通過可用性門檻，平均分達 48.4 分，優於報告基準的 25.4 分；頂尖模型（如 gpt-6.1-sol）迭代後的分數大幅提升至 74.7 分，且領先模型在每輪能提出更多樣化的點子。",
+        "implication": "評估研究代理時必須使用凍結的未來資料並剝除風格因子，且需將研究產出與最終挑選分開衡量；此架構有助於自動化量化研究流程。",
+        "caveats": "實驗僅涵蓋 7 份報告，且不同模型的表現差異極大，部分模型迭代後的實際泛化能力有限。",
+        "practicality": 4,
+        "tags": [
+          "Alpha 因子挖掘",
+          "基礎模型",
+          "量化研究",
+          "回測"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.25320",
+      "title": "Semi-Static Variance-Optimal Hedging of Covariance Risk in Multi-Asset Derivatives",
+      "authors": [
+        "Konstantinos Chatziandreou",
+        "Sven Karbach"
+      ],
+      "abstract": "We develop a semi-static framework for the variance-optimal hedging of multi-asset derivatives exposed to correlation and covariance risk. The approach combines continuous-time dynamic trading in the underlying assets with a static portfolio of auxiliary contingent claims. Using a multivariate Galtchouk--Kunita--Watanabe decomposition, we show that the resulting global mean-variance problem decouples naturally into an inner continuous-time projection onto the space spanned by the underlying assets and an outer finite-dimensional quadratic optimization over the static hedging instruments. To systematically select suitable auxiliary claims, we leverage multidimensional functional spanning theory, establishing that otherwise unhedgeable cross-gamma exposures can be structurally mitigated through static strips of vanilla, product, and spread options. As a central application, we derive explicit semi-static replication formulas for covariance swaps and geometric dispersion trades. Our framework accommodates a broad class of asset dynamics, including quadratic and stochastic Volterra covariance models, as well as affine stochastic covariance models with jumps, yielding tractable semi-closed-form solutions via Fourier transform techniques. Extensive numerical experiments demonstrate that incorporating optimally weighted static strips of cross-asset instruments substantially reduces the mean-squared hedging error relative to purely dynamic benchmark strategies across various model classes.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF",
+        "q-fin.RM"
+      ],
+      "published": "2026-03-26T11:09:20Z",
+      "updated": "2026-03-26T11:09:20Z",
+      "abs_url": "https://arxiv.org/abs/2603.25320",
+      "pdf_url": "https://arxiv.org/pdf/2603.25320v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 9,
+      "matched_keywords": [
+        "hedging"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "多資產衍生品協方差風險的半靜態變異最佳避險。",
+      "summary": {
+        "title_zh": "多資產衍生性商品中共變異數風險的半靜態變異數最佳化避險",
+        "verdict": "結合動態交易與靜態輔助選擇權，建構多資產共變異數風險的半靜態變異數最佳化避險框架。",
+        "problem": "多資產衍生性商品暴露於相關性與共變異數風險中，純動態避險策略在處理這類交叉風險時效率不足。",
+        "method": "運用多變量 Galtchouk-Kunita-Watanabe 分解與多維函數跨期理論，針對隨機 Volterra 與具跳躍的仿射隨機共變異數模型進行半封閉解推導。",
+        "findings": "廣泛數值實驗顯示，納入最佳權重的跨資產工具靜態部位，能顯著降低相較於純動態基準策略的均方避險誤差，具體績效未報告具體數字。",
+        "implication": "可用於共變異數交換與幾何分散交易的實務避險，透過加入原生、商品與價差選擇權來結構性地緩解無法避險的交叉 Gamma 暴露。",
+        "caveats": "模型依賴特定的資產動態假設，且需依賴傅立葉轉換技術求解。",
+        "practicality": 4,
+        "tags": [
+          "衍生性商品",
+          "避險",
+          "共變異數",
+          "選擇權",
+          "隨機波動度"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.19278",
+      "title": "Do Better Volatility Forecasts Lead to Better Portfolios? Evidence from Graph Neural Networks",
+      "authors": [
+        "Rylan Wade"
+      ],
+      "abstract": "This paper tests whether graph neural networks improve realized volatility forecasts and whether those forecasts improve portfolio performance. Using weekly realized volatility for 465 S&P 500 equities from 2015-2025, Heterogeneous Autoregressive and Long Short-Term Memory baselines are compared against GraphSAGE models built on rolling correlation, sector, and Granger-causal graphs, with and without macro regime features. The empirical finding is that the model with the lowest forecast MSE, the model with the highest cross-sectional ranking accuracy, and the model with the highest portfolio Sharpe ratio are three different models. Forecast accuracy, ranking quality, and portfolio performance are related but not interchangeable objectives. Graph volatility models add value only when the portfolio rule can exploit the cross-sectional structure they encode.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "cs.LG"
+      ],
+      "published": "2026-05-19T02:52:00Z",
+      "updated": "2026-05-20T14:49:39Z",
+      "abs_url": "https://arxiv.org/abs/2605.19278",
+      "pdf_url": "https://arxiv.org/pdf/2605.19278v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 44,
+      "matched_keywords": [
+        "sharpe ratio",
+        "realized volatility",
+        "regime",
+        "graph neural network",
+        "cross-sectional",
+        "neural network"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "實證檢驗圖神經網路波動度預測與投組績效的關聯，結論客觀。",
+      "summary": {
+        "title_zh": "更好的波動率預測能帶來更好的投資組合嗎？來自圖神經網路的實證",
+        "verdict": "圖神經網路提升了波動率預測，但預測誤差最低的模型不等同於投資組合表現最佳的模型。",
+        "problem": "探討波動率預測準確度提升是否能直接轉化為投資組合績效的改善，並檢驗圖神經網路在其中的效果。",
+        "method": "使用 2015 年至 2025 年間 465 檔 SPX 股票的週度實現波動率，比較異質自我迴歸模型（HAR）、長短期記憶網路（LSTM）與基於滾動相關性、產業及 Granger 因果關係圖的 GraphSAGE 模型。",
+        "findings": "實證發現預測均方誤差最低的模型、橫截面排序準確度最高的模型以及投資組合 Sharpe 最高模型的為三個不同的模型。圖神經網路波動率模型僅在投資組合規則能利用其編碼的橫截面結構時才能增加價值。",
+        "implication": "投資組合最佳化不能僅依賴最小化預測誤差，必須配合能利用圖結構特徵的配置策略才能發揮價值。",
+        "caveats": "使用週度資料且未明確報告扣除交易成本後的具體報酬數字。",
+        "practicality": 3,
+        "tags": [
+          "圖神經網路",
+          "波動率預測",
+          "投資組合最佳化",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.04602",
+      "title": "Forecasting Equity Correlations with Hybrid Transformer Graph Neural Network",
+      "authors": [
+        "Jack Fanshawe",
+        "Rumi Masih",
+        "Alexander Cameron"
+      ],
+      "abstract": "This paper studies forward-looking stock-stock correlation forecasting for S\\&P 500 constituents and evaluates whether learned correlation forecasts can improve graph-based clustering used in basket trading strategies. We cast 10-day ahead correlation prediction in Fisher-z space and train a Temporal-Heterogeneous Graph Neural Network (THGNN) to predict residual deviations from a rolling historical baseline. The architecture combines a Transformer-based temporal encoder, which captures non-stationary, complex, temporal dependencies, with an edge-aware graph attention network that propagates cross-asset information over the equity network. Inputs span daily returns, technicals, sector structure, previous correlations, and macro signals, enabling regime-aware forecasts and attention-based feature and neighbor importance to provide interpretability. Out-of-sample results from 2019-2024 show that the proposed model meaningfully reduces correlation forecasting error relative to rolling-window estimates. When integrated into a graph-based clustering framework, forward-looking correlations produce adaptable and economically meaningfully baskets, particularly during periods of market stress. These findings suggest that improvements in correlation forecasts translate into meaningful gains during portfolio construction tasks.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "q-fin.TR"
+      ],
+      "published": "2026-01-08T05:16:06Z",
+      "updated": "2026-01-08T05:16:06Z",
+      "abs_url": "https://arxiv.org/abs/2601.04602",
+      "pdf_url": "https://arxiv.org/pdf/2601.04602v1",
+      "comment": "23 pages, 9 large figures, detailed appendix",
+      "journal_ref": "",
+      "keyword_score": 44,
+      "matched_keywords": [
+        "out-of-sample",
+        "transformer",
+        "regime",
+        "graph neural network",
+        "stock",
+        "neural network"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合Transformer與圖神經網路預測股票相關係數，實證完整。",
+      "summary": {
+        "title_zh": "使用混合 Transformer 圖神經網路預測股票相關性",
+        "verdict": "提出結合 Transformer 與圖注意力網路的 THGNN 模型來預測 SPX 成分股相關性，有效改善籃子交易的投組建構。",
+        "problem": "傳統滾動視窗估計無法有效捕捉非平穩且複雜的跨資產相關性動態，影響投資組合與籃子交易的表現。",
+        "method": "使用時間異質圖神經網路（THGNN）在 Fisher-z 空間預測 10 天前的殘差相關性。模型結合 Transformer 時間編碼器與邊緣感知圖注意力網路，輸入資料包含日報酬、技術指標、產業結構、歷史相關性與巨集訊號，樣本期間為 2019 年至 2024 年。",
+        "findings": "樣本外結果顯示，該模型顯著降低了相較於滾動視窗估計的相關性預測誤差。整合至基於圖的分群框架後，前瞻性相關性產生了具適應性且經濟意義顯著的交易籃子，特別是在市場壓力期間。",
+        "implication": "提升相關性預測能直接轉化為投資組合建構任務中的實際效益，適合應用於動態籃子交易與風險管理策略。",
+        "caveats": "論文未報告具體的報酬率或夏普值等具體績效數字。",
+        "practicality": 4,
+        "tags": [
+          "圖神經網路",
+          "相關性預測",
+          "籃子交易",
+          "投資組合建構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.05310",
+      "title": "Mitigating Return Drag and Regime Whipsaws in Sector Rotation: An Asymmetric Downside-Aware Nested Clustered Optimization Framework",
+      "authors": [
+        "Supriadi"
+      ],
+      "abstract": "Hierarchical clustering and Nested Clustered Optimization (NCO) mitigate the mathematical ill-conditioning of classical Markowitz covariance matrices. However, two structural vulnerabilities persist in equity markets: (1) symmetric variance penalizes upside and downside return dispersion identically, inducing acute return drag against soaring momentum sectors; and (2) unconstrained Hidden Markov Models (HMM) exhibit hyper-active regime switching (whipsaw instability), incurring excessive turnover and transaction drag. We propose Asymmetric Downside-Risk Nested Clustered Optimization with Sticky Regime Dynamics (Asym-Sticky-NCO) for tactical sector rotation across all 11 S&P 500 GICS sectors. The framework substitutes symmetric covariance with the Bawa-Lindenberg downside semi-covariance matrix across both hierarchical tree clustering and two-stage allocation. Furthermore, we introduce a Sticky Gaussian HMM incorporating a diagonal self-transition persistence prior (\\k{appa}) and confidence-adaptive boundaries (δ) to enforce macroeconomic persistence. Strictly non-anticipative walk-forward backtesting across 65 out-of-sample months (August 2020 to December 2025) demonstrates that the architecture elevates CAGR from 10.65% (Plain NCO) to 13.41% (+276 bps/year), delivers a 97.74% total return versus 72.99%, suppresses maximum drawdown to 14.22% (versus 23.93% for the S&P 500), and achieves a Calmar ratio of 0.94 (+38.2% over S&P 500; +84.3% over Baseline Regime-NCO). Crucially, sticky dynamics cut regime whipsaws by 75.0% (from 16 to 4 switches) and reduce monthly turnover from 60.78% to 30.48%, addressing core limitations of machine learning asset allocation.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM"
+      ],
+      "published": "2026-11-03T18:19:23Z",
+      "updated": "2026-11-03T18:19:23Z",
+      "abs_url": "https://arxiv.org/abs/2611.05310",
+      "pdf_url": "https://arxiv.org/pdf/2611.05310v1",
+      "comment": "7 pages, 6 figures, 4 tables. Code available at: https://github.com/obo-cloud/sp500-asymmetric-nco",
+      "journal_ref": "",
+      "keyword_score": 40,
+      "matched_keywords": [
+        "out-of-sample",
+        "backtesting",
+        "momentum",
+        "drawdown",
+        "regime",
+        "equity market"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "65個月樣本外回測、納入交易成本、實證完整。",
+      "summary": {
+        "title_zh": "緩解產業輪動中的報酬拖累與體制假突破：非對稱下檔感知巢狀分群最佳化框架",
+        "verdict": "提出非對稱下檔風險與黏性體制動態的 NCO 架構，顯著提升 CAGR 並抑制換手率。",
+        "problem": "傳統 Markowitz 的對稱變異數懲罰了上檔報酬導致報酬拖累，且無約束的隱馬可夫模型會產生過度頻繁的體制轉換與交易成本。",
+        "method": "結合 Bawa-Lindenberg 下檔半共變異數矩陣與具備黏性持續性先驗的 Gaussian HMM。應用於 S&P 500 的 11 個 GICS 產業，進行 2020 年 8 月至 2025 年 12 月共 65 個月的步行向前回測。",
+        "findings": "相較於傳統 NCO，CAGR 從 10.65% 提升至 13.41%（增加 276 bps/year），總報酬達 97.74%，最大回檔壓低至 14.22%，Calmar 比率達 0.94。黏性動態使體制轉換次數減少 75.0%（從 16 次降至 4 次），每月換手率從 60.78% 降至 30.48%。",
+        "implication": "此方法能有效解決動態資產配置中的假突破與過度換手問題，適合用於產業輪動策略的實戰部署。",
+        "caveats": "回測期間包含特定的市場環境，其實際績效在不同總經體制下的穩健性仍需持續驗證。",
+        "practicality": 5,
+        "tags": [
+          "產業輪動",
+          "資產配置",
+          "隱馬可夫模型",
+          "下檔風險",
+          "最佳化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.17428",
+      "title": "Uniform-Loss Automated Market Making for Prediction Markets",
+      "authors": [
+        "Ciamac C. Moallemi",
+        "Dan Robinson",
+        "Brian Zhu"
+      ],
+      "abstract": "Automated market makers (AMMs) for prediction markets descend from market scoring rules, where a mechanism operator subsidizes a market to aggregate beliefs about uncertain events. The existing literature has focused on bounding the total worst-case loss to the subsidizer, but has not addressed how that loss is distributed across price states or over time. We use the framework of loss-versus-rebalancing (LVR) to study this distribution and introduce \\textit{uniform AMMs}, defined by the property that instantaneous LVR is proportional to pool value and independent of the current token price. In a static setting, we show that for a broad class of \\textit{win-martingales} -- processes that converge to 0 or 1 at a fixed resolution time -- there exists a pricing function that achieves uniform LVR under that process, and conversely, that any sufficiently regular pricing function induces a win-martingale under which it is uniform. We then extend the framework to dynamic liquidity management, showing that liquidity levels can be adjusted over time to implement a prescribed target expected cumulative loss schedule. This theory is illustrated with canonical examples of win-martingales and pricing functions. Our results can inform AMM designers and liquidity providers on how the inevitable cost of subsidizing price discovery can be shaped and controlled across both price and time.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-07-19T22:35:00Z",
+      "updated": "2026-07-23T12:13:27Z",
+      "abs_url": "https://arxiv.org/abs/2607.17428",
+      "pdf_url": "https://arxiv.org/pdf/2607.17428v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 40,
+      "matched_keywords": [
+        "market making",
+        "market maker",
+        "liquidity"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "提出預測市場的均勻損失自動造市商理論模型",
+      "summary": {
+        "title_zh": "預測市場的均勻損失自動造市者",
+        "verdict": "提出均勻 LVR 的自動造市者架構，讓預測市場補貼成本在價格與時間上可控。",
+        "problem": "現有預測市場的自動造市者文獻僅專注於限制補貼者的總最糟情況損失，未探討損失如何在不同價格狀態或時間分佈。",
+        "method": "利用重新平衡損失（LVR）框架，研究靜態與動態流動性管理下的損失分佈，並引入均勻 AMM 定義與 win-martingales 模型進行理論推導。",
+        "findings": "未報告具體績效數字，主要為理論證明與性質推導，展示如何透過定價函數在特定贏家鞅過程下實現均勻 LVR。",
+        "implication": "可協助造市者與造市商設計並控制價格發現過程中的補貼成本，適用於預測市場的流動性管理。",
+        "caveats": "主要為理論推導架構，尚未提供真實交易資料或扣除交易成本的實證績效。",
+        "practicality": 2,
+        "tags": [
+          "自動造市者",
+          "預測市場",
+          "流動性管理",
+          "市場微結構"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.13697",
+      "title": "On Reference-Regulated Multiperiod Mean-Variance Portfolio Optimization in High Dimensions",
+      "authors": [
+        "Yutao Deng",
+        "Jianjun Gao",
+        "Weichen Wang"
+      ],
+      "abstract": "The multiperiod mean-variance (MV) portfolio optimization serves as a vital expansion of Markowitz's static MV portfolio selection framework. Just like its static counterpart, the multiperiod MV portfolio remains susceptible to estimation errors. We propose a reference-regulated multiperiod mean-variance (RRMV) framework that penalizes deviations from a reference policy. Therefore, this new optimization successfully combines the advantages of dynamic strategies and reference portfolios. A key contribution of this paper is the characterization of the out-of-sample Sharpe ratio under high-dimensional asymptotics with estimation errors in both the mean vector and the covariance matrix. We show how the reference penalty and the investment horizon jointly affect the optimized portfolio performance, and how regularization operates differently from the single-period portfolio optimization. Extensive simulation and real data studies demonstrate that the proposed framework improves the stability and out-of-sample Sharpe ratios of multiperiod policies significantly.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "stat.ME"
+      ],
+      "published": "2026-05-31T14:05:52Z",
+      "updated": "2026-05-31T14:05:52Z",
+      "abs_url": "https://arxiv.org/abs/2606.13697",
+      "pdf_url": "https://arxiv.org/pdf/2606.13697v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 40,
+      "matched_keywords": [
+        "sharpe ratio",
+        "portfolio optimization",
+        "portfolio selection",
+        "out-of-sample"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出參考規範多期均異投組最佳化，漸近分析嚴謹",
+      "summary": {
+        "title_zh": "高維度參考規範多期均值-變異數投資組合最佳化",
+        "verdict": "提出參考規範多期均值-變異數框架，在高維度下顯著改善樣本外 Sharpe。",
+        "problem": "多期均值-變異數投資組合容易受到期望報酬向量與共變異數矩陣估計誤差的負面影響。",
+        "method": "提出參考規範多期均值-變異數（RRMV）最佳化框架並結合高維度漸近分析，透過模擬與真實資料進行實證研究。",
+        "findings": "透過模擬與真實資料研究證明，該框架顯著提升多期策略的穩定性與樣本外 Sharpe，但論文未報告具體的績效數字。",
+        "implication": "可用於多期資產配置以降低估計誤差的衝擊，前提是須妥善設定參考策略與懲罰參數。",
+        "caveats": "依賴高維度漸近理論，懲罰參數與投資期限的設定對實際表現影響重大。",
+        "practicality": 3,
+        "tags": [
+          "投資組合最佳化",
+          "均值-變異數",
+          "高維度統計",
+          "資產配置"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.05716",
+      "title": "When the Rules Change: Adaptive Signal Extraction via Kalman Filtering and Markov-Switching Regimes",
+      "authors": [
+        "Sungwoo Kang"
+      ],
+      "abstract": "Most empirical microstructure research assumes that order flow--return parameters are constant, yet these relationships shift substantially across market regimes. Combining adaptive Kalman filtering, Markov-switching regime identification, and asymmetric response estimation, we characterize regime-dependent investor behavior in the Korean stock market during 2020--2024 using daily transaction data disaggregated by investor type. Three principal findings emerge: foreign investor predictive power increases several-fold during crisis periods relative to bull markets; individual investors chase momentum asymmetrically, reacting far more strongly to positive than to negative shocks; and independent information-theoretic validation corroborates both patterns. Rigorous out-of-sample testing reveals that these in-sample regularities do not generalize reliably, underscoring the need for proper validation methodology in microstructure research.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP"
+      ],
+      "published": "2026-01-09T11:00:57Z",
+      "updated": "2026-02-25T10:36:08Z",
+      "abs_url": "https://arxiv.org/abs/2601.05716",
+      "pdf_url": "https://arxiv.org/pdf/2601.05716v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 40,
+      "matched_keywords": [
+        "order flow",
+        "out-of-sample",
+        "momentum",
+        "regime",
+        "stock",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合卡爾曼濾波與體制轉換分析投資人行為，發現樣本外檢驗無法泛化。",
+      "summary": {
+        "title_zh": "當規則改變時：透過卡爾曼濾波與馬可夫體制轉換進行適應性信號萃取",
+        "verdict": "結合卡爾曼濾波與馬可夫體制轉換分析韓國市場，發現外資預測力在危機時大增，但樣本外泛化能力不足。",
+        "problem": "多數實證市場微結構研究假設訂單流與報酬參數為常數，忽略了這些關係會在不同市場體制間大幅變動。",
+        "method": "使用自我調整卡爾曼濾波、馬可夫體制轉換識別與非對稱反應估計，分析韓國股市 2020 年至 2024 年依投資人類別拆分的日頻交易資料。",
+        "findings": "外資的預測能力在危機期間較多頭市場增加數倍；散戶會非對稱地追逐動能，對正面衝擊的反應遠大於負面衝擊。論文未報告具體績效數字。",
+        "implication": "雖然能捕捉到體制轉換下的投資人行為差異，但由於嚴格的樣本外測試顯示規律無法可靠泛化，實際交易前需重新設計驗證方法。",
+        "caveats": "實證發現的樣本內規律無法可靠地進行樣本外泛化。",
+        "practicality": 2,
+        "tags": [
+          "市場微結構",
+          "卡爾曼濾波",
+          "體制轉換",
+          "訂單流",
+          "Alpha 因子挖掘"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
