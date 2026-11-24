@@ -1,0 +1,513 @@
+{
+  "date": "2026-11-24",
+  "generated_at": "2026-11-24T15:01:10+08:00",
+  "scanned": 2507,
+  "eligible": 2135,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2611.27987",
+      "title": "Empirical Limits of Risk-Averse Reinforcement Learning versus Gas-Aware Routing in Deterministic DeFi Execution",
+      "authors": [
+        "Sri Sairam Gautam B"
+      ],
+      "abstract": "The migration of order execution to Automated Market Makers (AMMs) introduces two deterministic frictions absent from classical microstructure: closed-form constant-product slippage and Maximal Extractable Value (MEV) sandwich attacks gated by gas costs. We construct an end-to-end execution environment calibrated to live Uniswap V2 reserves, an EIP-1559 AR(1) gas process, and real Swap events, utilising stress-volatility gas shocks to make the MEV trigger informative. A Proximal Policy Optimisation (PPO) agent with a Rockafellar-Uryasev Conditional Value-at-Risk (CVaR) penalty and a dual-head Chow-Ghavamzadeh critic is trained for one million steps across five risk-aversion levels and seeds, benchmarked against a myopic gas-aware oracle. We document a reproducible specification-gaming pathology: prior to a patch, a forced terminal liquidation routed through a no-MEV code path artificially inflated returns threefold and was preferentially exploited by higher-$λ$ runs. On the corrected environment, the strongest PPO variant captures 79\\% of the myopic gas-aware oracle (46,542 $\\pm$ 673 vs 58,786 $\\pm$ 616 USDC), and extending the observation with three blocks of gas history fails to close the gap. We find no empirical evidence that the tested model-free MLP policies dominate this myopic gas-aware oracle, which can be evaluated in $\\mathcal{O}(\\log ε^{-1})$ time per block. This result is robust to a $\\sim$16x trunk-capacity expansion and a variance-controlled gas-history ablation. Code and reproducibility materials are available upon request.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.LG",
+        "math.OC"
+      ],
+      "published": "2026-05-18T22:27:20Z",
+      "updated": "2026-05-18T22:27:20Z",
+      "abs_url": "https://arxiv.org/abs/2611.27987",
+      "pdf_url": "https://arxiv.org/pdf/2611.27987v1",
+      "comment": "6 pages, 6 figures, 4 tables. Code and deterministic test suite available on GitHub",
+      "journal_ref": "",
+      "keyword_score": 43,
+      "matched_keywords": [
+        "market maker",
+        "reinforcement learning",
+        "slippage",
+        "empirical"
+      ],
+      "relevance": 10,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "校準真實 Uniswap 資料與 Gas 歷程，實證完整且基準明確。",
+      "summary": {
+        "title_zh": "決定性DeFi執行中風險規避強化學習與考量Gas路由的實證極限",
+        "verdict": "實證顯示強化學習無法擊敗簡單的貪婪式Gas感知預言機，且易出現規格博弈漏洞。",
+        "problem": "自動造市商執行訂單時面臨恆定乘積滑價與受Gas成本限制的MEV夾擊攻擊，探討強化學習在此環境下的極限。",
+        "method": "採用結合CVaR懲罰與雙頭評論家的PPO代理人，對應Uniswap V2儲備池與EIP-1559的Gas過程進行100萬步訓練，並與貪婪式Gas感知預言機進行基準對比。",
+        "findings": "修正規格博弈漏洞後，最強的PPO變體僅能捕捉貪婪式預言機79%的表現（46,542 ± 673 對比 58,786 ± 616 USDC），多層感知機策略未能超越該預言機。",
+        "implication": "複雜的強化學習在特定DeFi路由問題上不一定能贏過計算高效的貪婪式演算法，實務上應優先評估基準預言機。",
+        "caveats": "本研究僅測試無模型的MLP策略，且侷限於特定的Uniswap V2與EIP-1559環境設定。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "DeFi",
+          "MEV",
+          "自動造市商",
+          "路由"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.30584",
+      "title": "Do Candlestick Charts Suffice? The Incremental Economic Value of Technical Indicators in Stock Return Prediction",
+      "authors": [
+        "Peng Liu",
+        "Yanyan Zheng"
+      ],
+      "abstract": "Although technical analysis remains widely used in practice, the need for manually constructed indicators is increasingly questioned as deep learning models can extract features directly from OHLC price data. This paper examines the standalone economic value of trading volume and manually constructed technical-indicator groups and whether adding these groups to OHLC candlestick charts provides incremental economic value. Using daily data for 1,707 Chinese A-share stocks from 2013 to 2025, we construct approximately 3.36 million stock-window samples and encode them as multi-channel images containing candlestick charts, trading volume, and seven widely used manually constructed technical indicators. The primary analysis uses a 2D CNN on these images; complementary tests apply a logistic regression, a 1D CNN, and an LSTM to numerical representations of the same samples. Out-of-sample performance from 2021 to 2025 is evaluated using decile portfolios, Sharpe ratios, Fama--French alphas, and formal pairwise tests. Our empirical results yield two central findings. First, specifications based separately on OHLC, trading volume, and each technical-indicator group produce significantly positive high-minus-low returns and factor-adjusted alphas, together with economically meaningful Sharpe ratios; the OHLC-only specifications generally perform best under the nonlinear models. Second, adding these technical-indicator groups to OHLC does not systematically improve any of these performance measures in our setting. Together, these results provide the first large-scale evidence from the Chinese A-share market on the standalone and incremental economic value of these technical-indicator groups across multiple representations and model architectures.",
+      "primary_category": "econ.GN",
+      "categories": [
+        "econ.GN",
+        "cs.CE",
+        "cs.LG",
+        "q-fin.PM",
+        "q-fin.TR"
+      ],
+      "published": "2026-11-23T12:26:04Z",
+      "updated": "2026-11-23T12:26:04Z",
+      "abs_url": "https://arxiv.org/abs/2611.30584",
+      "pdf_url": "https://arxiv.org/pdf/2611.30584v1",
+      "comment": "This paper has been published in International Review of Economics & Finance under the CC BY 4.0 international license (https://creativecommons.org/licenses/by/4.0/)",
+      "journal_ref": "International Review of Economics & Finance 112, 106009 (2026)",
+      "keyword_score": 36,
+      "matched_keywords": [
+        "sharpe ratio",
+        "out-of-sample",
+        "deep learning",
+        "stock",
+        "empirical",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "使用龐大 A 股資料，探討技術指標的增量經濟價值，已刊登於期刊。",
+      "summary": {
+        "title_zh": "K線圖足夠了嗎？技術指標在股票報酬預測中的增量經濟價值",
+        "verdict": "探討深度學習中K線圖搭配技術指標是否有增量價值，發現在此設定下技術指標並無系統性助益。",
+        "problem": "深度學習模型可直接從OHLC價格資料提取特徵，使傳統手動建構的技術指標之必要性受到質疑。探討技術指標相對於純K線圖是否具備增量經濟價值。",
+        "method": "採用2D CNN、1D CNN、LSTM與羅吉斯迴歸，使用2013年至2025年間1,707檔中國A股日資料（約336萬個樣本，樣本外期間為2021至2025年），將其編碼為包含K線、交易量與七大技術指標的多通道圖像進行實證。",
+        "findings": "單獨使用OHLC、交易量或技術指標皆能產生顯著的正向多空報酬與因子調整後Alpha，其中僅用OHLC的模型表現通常最佳；然而，在OHLC中加入技術指標並未系統性提升任何績效指標（未報告具體夏普值與報酬數字）。",
+        "implication": "顯示在深度學習架構下，直接輸入OHLC價格資料已足夠捕捉大部分資訊，交易員可省去手動建構複雜技術指標的工程成本。",
+        "caveats": "僅針對中國A股日資料與特定深度學習架構進行測試，結果可能受資料頻率或市場特性限制。",
+        "practicality": 5,
+        "tags": [
+          "技術分析",
+          "K線圖",
+          "深度學習",
+          "Alpha因子挖掘",
+          "中國A股"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.27992",
+      "title": "Per-Prediction Uncertainty Is Not a Regime Detector: A Detectability Bound and Two-Level Deployment for Cross-Sectional Equity Rankers",
+      "authors": [
+        "Ursina Sanderink"
+      ],
+      "abstract": "Quantitative finance is increasingly exploring AI-native and agent-mediated allocation: when should an allocator trust a cross-sectional ranker after a silent regime shift that volatility controls miss? Aleatoric scaling addresses market noise; it does not detect epistemic invalidity when ranking structure breaks without a volatility footprint. Building on Sanderink (2026), \"When Alpha Breaks\" (arXiv:2603.13252), which established per-stock epistemic uncertainty, rank-geometry coupling, and a two-level gate on a walk-forward LightGBM US AI-exposure panel, this paper asks whether per-stock scores can be pooled into portfolio-wide health, or whether strategy-level abstention must condition on realised outcomes. RQ1 (Separation): Does epistemic uncertainty capture model-specific failure distinct from volatility? RQ2 (Decision value): Does a two-level architecture beat baselines on risk-adjusted return and drawdown? RQ3 (Robustness): Do answers hold across regimes, a second ranker, falsification tests, and a universe-readiness gate? We prove a detectability bound: score-only aggregates of per-prediction error predictors cannot beat chance under strict concept shift. CIFAR-10-C confirms the covariate-versus-concept dichotomy (AUROC 0.955 vs 0.500); equity cross-sectional aggregates stay near chance (bad-day AUROC ~0.55) despite valid per-stock signals. The constructive escape is Y-conditioning: partial-horizon RankIC CUSUM (k=5; AUROC 0.796) and a matured-RankIC regime-trust index. Falsification tests and a universe-readiness stop verdict bound allocator claims. Rank-geometry coupling (rho=0.616) forces a discrete tail-cap and strategy gate. Evidence is historical walk-forward simulation on one thematic universe (N<=100) through February 2025; the validated object is reliability architecture, not transportable alpha.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.PM"
+      ],
+      "published": "2026-07-02T22:28:10Z",
+      "updated": "2026-07-02T22:28:10Z",
+      "abs_url": "https://arxiv.org/abs/2611.27992",
+      "pdf_url": "https://arxiv.org/pdf/2611.27992v1",
+      "comment": "66 pages, 15 figures (11 external + 4 TikZ), 38 tables, 7 appendices. Author affiliation: Quant Signal Lab. Builds on prior deployment study arXiv:2603.13252 (\"When Alpha Breaks\"). Keywords: epistemic uncertainty, aleatoric uncertainty, regime detection, selective prediction, cross-sectional equity ranking, distribution shift, regime-trust monitoring. JEL: G11, G17, C53, C58",
+      "journal_ref": "",
+      "keyword_score": 33,
+      "matched_keywords": [
+        "drawdown",
+        "regime",
+        "cross-sectional",
+        "stock",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探討特徵不確定性與體制轉換，具備嚴謹的理論界線與實證檢驗。",
+      "summary": {
+        "title_zh": "單一預測不確定性無法作為體制偵測器：橫截面股票排序器的可偵測性界線與雙層部署",
+        "verdict": "證明純粹聚合每檔股票的不確定性無法偵測體制轉換，必須改用部分時間窗的 RankIC CUSUM 進行策略層級的停用控制。",
+        "problem": "當市場發生波動率控制無法捕捉的無聲體制轉換時，資本配置者應如何決定是否信任橫截面排序器？每檔股票的認知不確定性是否能聚合為投資組合整體的健康指標？",
+        "method": "使用美國 AI 主題股票池（N<=100）的 LightGBM 進行向前走勢（walk-forward）歷史模擬，時間涵蓋至 2025 年 2 月。探討模型失敗與波動率的區分、決策價值以及跨體制的穩健性。",
+        "findings": "理論證明在嚴格的概念漂移下，純粹分數聚合無法超越隨機猜測（壞日 AUROC 約 0.55）。透過建構 Y 條件化方法，部分時間窗 RankIC CUSUM 達到 0.796 的 AUROC，且排序幾何耦合係數達 0.616。",
+        "implication": "實務上不能依賴單一預測的不確定性來偵測模型失效，必須結合報酬結果（Y-conditioning）如 RankIC CUSUM 來建立策略層級的防禦機制。",
+        "caveats": "實證僅基於單一主題股票池的歷史向前走勢模擬，驗證的是可靠度架構而非可轉移的 Alpha。",
+        "practicality": 3,
+        "tags": [
+          "機器學習",
+          "體制轉換",
+          "模型不確定性",
+          "Alpha 因子挖掘"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2611.29747",
+      "title": "Sharpe Ratio Inference after Machine Learning",
+      "authors": [
+        "Sander Barendse",
+        "Ming Cheng"
+      ],
+      "abstract": "The economic value of return signals is often assessed using the Sharpe ratios of portfolios based on those signals. In modern asset pricing, return signals often depend on many features, including state variables and firm-specific characteristics, and machine-learning methods are increasingly used to estimate them. But how much confidence can we place in the estimated Sharpe ratios? We find that signal-estimation error can remain consequential for inference even in large asset panels. Moreover, pooling observations across assets does not necessarily make this uncertainty negligible when predictors contain common features or exhibit substantial cross-sectional dependence. As a remedy, we develop a debiased Sharpe-ratio estimator that accounts for signal-estimation error and provides valid confidence intervals and tests against benchmarks. Our target is the population Sharpe ratio of a specified portfolio rule evaluated at the true conditional expected returns given the features. The framework covers market-timing, long-short, and other signal-based portfolios, allowing the number of assets to grow with and greatly exceed the time-series sample size. The method combines orthogonal portfolio moments with time-series cross-fitting and remains valid under suitable estimation-error bounds for machine-learning forecasts. Empirically, we revisit the setting of Gu et al. (2020) using machine-learning estimators of the return signals. The strongest long-short Sharpe-ratio gains relative to market benchmarks remain significant after debiasing, providing statistical evidence of the economic value of their feature set. Conventional and debiased Sharpe-ratio estimates are generally similar, while the associated confidence intervals and tests can differ substantially. These differences vary across signal estimators and portfolio rules and do not uniformly weaken the evidence of portfolio performance.",
+      "primary_category": "econ.EM",
+      "categories": [
+        "econ.EM",
+        "stat.ME"
+      ],
+      "published": "2026-11-22T20:22:11Z",
+      "updated": "2026-11-22T20:22:11Z",
+      "abs_url": "https://arxiv.org/abs/2611.29747",
+      "pdf_url": "https://arxiv.org/pdf/2611.29747v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 22,
+      "matched_keywords": [
+        "sharpe ratio",
+        "cross-sectional"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "針對機器學習後的夏普值推論進行修正，理論與實證皆相當紮實。",
+      "summary": {
+        "ok": false,
+        "error": "伺服器錯誤 503",
+        "source": "none",
+        "title_zh": "Sharpe Ratio Inference after Machine Learning",
+        "verdict": "這篇的自動摘要沒有成功產生，請直接閱讀原文。",
+        "problem": "",
+        "method": "",
+        "findings": "",
+        "implication": "",
+        "caveats": "",
+        "tags": [],
+        "practicality": 0
+      }
+    },
+    {
+      "arxiv_id": "2609.31379",
+      "title": "How Much Must a Private Mempool Hide? Exact Leakage Thresholds for Sandwich Attacks",
+      "authors": [
+        "Tingyi Lin",
+        "Jiazhuo Li",
+        "Ruoran Lai"
+      ],
+      "abstract": "Private and encrypted mempools hide pending transactions to stop sandwich attacks and other forms of maximal extractable value (MEV), but what they hide is rarely everything: a transaction's pair, direction, and a coarse range for its size can still leak. How much leakage makes sandwiching pay? We answer exactly for a fee-free constant-product automated market maker, the pricing rule behind Uniswap v2. Traders observe an interval containing the victim's size and bid in a first-price auction for the right to sandwich it, and the winning front-run must keep the victim's trade executable at every size in the interval. The answer turns on the smallest size consistent with the leak. It alone determines the feasible front-runs, the largest feasible front-run is optimal for pointwise, expected, and worst-case profit alike, and the guaranteed profit has a closed form. When execution is costly, a privacy layer that wants to rule out sandwiches profitable at every consistent size may therefore reveal anything about the size except a lower bound above an explicit threshold; the upper end of the range is irrelevant. With two or more symmetric traders, every pure-strategy perfect Bayesian equilibrium of the auction hands the entire expected net rent to the auctioneer. If the direction is hidden too, no non-contingent first leg front-runs both possible directions, while post-trade arbitrage can survive even perfect pre-trade hiding.",
+      "primary_category": "cs.GT",
+      "categories": [
+        "cs.GT",
+        "cs.CR",
+        "q-fin.TR"
+      ],
+      "published": "2026-09-25T15:15:24Z",
+      "updated": "2026-10-13T15:36:24Z",
+      "abs_url": "https://arxiv.org/abs/2609.31379",
+      "pdf_url": "https://arxiv.org/pdf/2609.31379v2",
+      "comment": "Accepted at NeurIPS 2026",
+      "journal_ref": "https://neurips.cc/virtual/2026/loc/atlanta/poster/148297",
+      "keyword_score": 8,
+      "matched_keywords": [
+        "market maker"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "精確推導私人記憶池中夾擊攻擊的洩漏閾值，已被 NeurIPS 接受。",
+      "summary": {
+        "ok": false,
+        "error": "伺服器錯誤 503",
+        "source": "none",
+        "title_zh": "How Much Must a Private Mempool Hide? Exact Leakage Thresholds for Sandwich Attacks",
+        "verdict": "這篇的自動摘要沒有成功產生，請直接閱讀原文。",
+        "problem": "",
+        "method": "",
+        "findings": "",
+        "implication": "",
+        "caveats": "",
+        "tags": [],
+        "practicality": 0
+      }
+    },
+    {
+      "arxiv_id": "2611.30843",
+      "title": "Cleaning correlation matrices with external information: the Maximum Variance estimat",
+      "authors": [
+        "Sébastien Valeyre"
+      ],
+      "abstract": "Rotationally invariant estimators clean the eigenvalues of an empirical correlation matrix but keep its noisy eigenvectors. We study an estimator that corrects the eigenvectors by using external information, namely a partition of the assets into groups such as asset classes or regions. The Maximum Variance (MaxVar) estimator restricts the leading eigenvectors to linear combinations of the maximum-variance portfolios of the groups and replaces the rest of the spectrum by a single eigenvalue. It is a factor model with about n parameters instead of n2/2, and it is positive de nite even when the number of observations is smaller than the number of assets n. We apply it to the correlation matrix of 47 futures on stock indices, bonds and currencies, with the three asset classes as groups. In an illustrative Monte Carlo test, in which the reference matrix has the structure assumed by the estimator, the distance to the reference is reduced by one third with respect to the empirical matrix, against less than 10% for the rotationally invariant estimator. The decisive test is the performance of a portfolio on real data: over 1993-2018, the Sharpe ratio of the risk parity portfolio, which involves the inverse of the matrix, is 1.28 with the MaxVar estimator, 1.24 with the rotationally invariant estimator and 1.17 with the empirical matrix, and the advantage increases when the estimation window is shortened.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM"
+      ],
+      "published": "2026-11-23T15:27:00Z",
+      "updated": "2026-11-23T15:27:00Z",
+      "abs_url": "https://arxiv.org/abs/2611.30843",
+      "pdf_url": "https://arxiv.org/pdf/2611.30843v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 42,
+      "matched_keywords": [
+        "sharpe ratio",
+        "factor model",
+        "risk parity",
+        "stock",
+        "futures",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用外部群組資訊改善相關矩陣估計，實證扎實且回測期長。",
+      "summary": {
+        "title_zh": "利用外部資訊清理相關係數矩陣：Maximum Variance 估計量",
+        "verdict": "利用資產分組的外部資訊修正特徵向量，MaxVar 估計量在真實資料中提升了風險平價連接埠的夏普值。",
+        "problem": "旋轉不變估計量僅清理了相關係數矩陣的特徵值，卻保留了雜訊特徵向量，導致矩陣品質受限。",
+        "method": "提出 Maximum Variance 估計量，使用資產類別或地區等分組資訊來限制主要特徵向量，應用於 47 種期貨（股票指數、債券、貨幣）的資料，樣本期間為 1993 至 2018 年。",
+        "findings": "在 Monte Carlo 測試中，與參考矩陣的距離減少了三分之一；在真實資料的風險平價連接埠測試中，夏普值達到 1.28，優於旋轉不變估計量的 1.24 與經驗矩陣的 1.17。",
+        "implication": "當估計窗口縮短時，MaxVar 估計量的優勢更為顯著，適合需要對矩陣求逆的資產配置策略。",
+        "caveats": "模型高度依賴資產分組的外部資訊品質，若分組不當可能影響效果。",
+        "practicality": 4,
+        "tags": [
+          "相關係數矩陣",
+          "資產配置",
+          "風險平價",
+          "因子模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.05198",
+      "title": "The Mathematics of Volatility Surfaces",
+      "authors": [
+        "Miquel Noguer i Alonso"
+      ],
+      "abstract": "This paper develops a unified mathematical theory of implied, local, and learned volatility surfaces. Total variance $w_t(k,τ)=τσ_t^2(k,τ)$ is an infinite-dimensional state constrained by positivity, calendar monotonicity, and the butterfly differential inequality. We establish the topology and tangent geometry of this arbitrage set and prove that a nondegenerate Gaussian shock at an active constraint exits with probability tending to one half. Exact invariance therefore requires tangency, reflection, or confinement to an arbitrage-free manifold. We separate this static invariance problem from dynamic no-arbitrage, derive the Musiela maturity-transport identity, and identify the additional fixed-contract martingale restriction. We formulate Hilbert-space dynamics, prove an exact modal reduction with closed-form truncation error, derive Karhunen--Loève factors, identify the portfolio derivative as a vega field, and obtain the covariance-optimal hedge $α^\\ast=(H^\\ast C H)^{-1}H^\\ast Cν$. The local-volatility chart completes the geometry: Dupire local variance is the ratio $a=\\partial_τw/g[w]$ of the calendar and butterfly constraint functionals. Neural operators provide arbitrage-free universal approximation through simplex and cone heads. Normalizing-flow maps then add tractable conditional densities: we derive exact change-of-variables formulae for exponential local-variance flows and invertible stick-breaking price-simplex flows, while stating the quasi-invariance conditions required in genuine function space. Finally, fading-signature fields encode surface history and yield autonomous finite-dimensional controlled dynamics. The result is one framework for representation, dynamics, arbitrage, dimension reduction, likelihood-based learning, simulation, and hedging, together with a falsifiable empirical protocol.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF"
+      ],
+      "published": "2026-08-04T20:19:53Z",
+      "updated": "2026-08-04T20:19:53Z",
+      "abs_url": "https://arxiv.org/abs/2608.05198",
+      "pdf_url": "https://arxiv.org/pdf/2608.05198v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 8,
+      "matched_keywords": [
+        "hedging",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance_reason": "建立隱含、本地與學習波動率曲面的統一數學理論，推導極為深入。",
+      "summary": {
+        "title_zh": "波動率曲面的數學理論",
+        "verdict": "建立涵蓋隱含、本地與學習型波動率曲面的統一數學框架，推導出共變異數最佳避險公式。",
+        "problem": "傳統波動率曲面缺乏統一架構來整合無套利靜態約束、動態演化與機器學習模型。",
+        "method": "運用希爾伯特空間動態學、正規化流與神經算子，建立涵蓋表示、降維與避險的數學架構。",
+        "findings": "未報告具體績效數字，但推導出共變異數最佳避險策略與確切的模態降維截斷誤差。",
+        "implication": "提供系統化的無套利曲面建模與 vega 避險方法，適合用於量化系統開發，但需實作複雜的數學算子。",
+        "caveats": "本文為純理論數學推導與架構建立，缺乏真實市場資料的實證回測。",
+        "practicality": 2,
+        "tags": [
+          "波動率曲面",
+          "無套利",
+          "正規化流",
+          "神經算子",
+          "避險"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.01176",
+      "title": "Don't You Know, Pump it Up! Investigating Cryptocurrency Manipulation in Telegram-Driven Activity",
+      "authors": [
+        "Filipe Moura",
+        "Giordano Paoletti",
+        "Carlos H. G Ferreira",
+        "Jussara Almeida"
+      ],
+      "abstract": "Telegram plays a pivotal role in cryptocurrency communication and has been repeatedly associated with coordinated schemes, such as pump-and-dump manipulation. However, existing studies typically focus on known manipulation chats or a limited set of cryptocurrencies, leaving open the question of how Telegram is leveraged for mass promotional activity (shilling) at scale. Moving beyond these limitations, this work analyzes the interplay between information flows and market activity across public Telegram channels. To this end, we propose a scalable framework that (i) classifies crypto-related messages using a fine-tuned encoder model to filter semantic noise, (ii) detects anomalous spikes in cryptocurrency mentions via adaptive thresholding, and (iii) validates temporal associations between social bursts and market movements using quasi-experimental econometric methods (RDD and DiD). We apply this framework to one year of public Telegram data (14,499 channels and over 20 million messages) aligned with transaction data for more than 17,000 cryptocurrencies. Our analysis identifies 47 events consistent with potential pump-and-dump activity and 73 sustained market reactions, showing that manipulative signals are characterized by extreme temporal synchronization and precede price movements by seconds. Notably, psycholinguistic analysis reveals that pump-and-dump messages are linguistically indistinguishable from organic discussions, highlighting the limits of text-based detection alone. Finally, we estimate the cumulative financial volume of detected pump-and-dump events to exceed $200 million and release a public cryptocurrency dictionary and a fine-tuned classifier to support future research.",
+      "primary_category": "cs.SI",
+      "categories": [
+        "cs.SI",
+        "cs.CE",
+        "cs.CY"
+      ],
+      "published": "2026-09-01T12:51:41Z",
+      "updated": "2026-09-01T12:51:41Z",
+      "abs_url": "https://arxiv.org/abs/2609.01176",
+      "pdf_url": "https://arxiv.org/pdf/2609.01176v1",
+      "comment": "To appear at 21st International AAI Conference on Web and Social Media (ICWSM 2027)",
+      "journal_ref": "",
+      "keyword_score": 8,
+      "matched_keywords": [
+        "cryptocurrency"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "分析 Telegram 頻道推動的加密貨幣操縱與拉高出貨現象，已被 ICWSM 接受。",
+      "summary": {
+        "title_zh": "你不知道嗎，泵起來！調查 Telegram 驅動的加密貨幣操縱活動",
+        "verdict": "分析 Telegram 上的大規模推廣活動與市場波動，發現操縱訊號具備極端時間同步性且領先價格數秒，但純文字無法辨識。",
+        "problem": "現有研究多半聚焦於已知的操縱群組或少數加密貨幣，缺乏在大規模公開 Telegram 頻道中系統性分析資訊流與市場活動互動的方法。",
+        "method": "使用微調的編碼器模型、適應性閾值與計量經濟學方法（RDD 與 DiD），分析一年期 14,499 個 Telegram 頻道逾 2,000 萬則訊息，對應超過 17,000 種加密貨幣的交易資料。",
+        "findings": "識別出 47 起潛在的拉高出貨活動與 73 起持續市場反應，估計累積金融交易量超過 2 億美元。心理語言學分析顯示，拉高出貨訊息在語言上與有機討論無法區分。",
+        "implication": "交易系統若要防範此類操縱，不能僅依賴文字內容分析，必須結合極短期的高頻時間同步性與市場微結構異常偵測。",
+        "caveats": "拉高出貨訊息與有機討論在語言上高度相似，導致單靠文字特徵的偵測效果受限。",
+        "practicality": 4,
+        "tags": [
+          "加密貨幣",
+          "市場操縱",
+          "自然語言處理",
+          "計量經濟學",
+          "社群網路"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.22880",
+      "title": "Portfolio Optimization under Recursive Utility via Reinforcement Learning",
+      "authors": [
+        "Minkey Chang"
+      ],
+      "abstract": "We study whether a risk-sensitive objective from asset-pricing theory -- recursive utility -- improves reinforcement learning for portfolio allocation. The Bellman equation under recursive utility involves a certainty equivalent (CE) of future value that has no closed form under observed returns; we approximate it by $K$-sample Monte Carlo and train actor-critic (PPO, A2C) on the resulting value target and an approximate advantage estimate (AAE) that generalizes the Bellman residual to multi-step with state-dependent weights. This formulation applies only to critic-based algorithms. On 10 chronological train/test splits of South Korean ETF data, the recursive-utility agent improves on the discounted (naive) baseline in Sharpe ratio, max drawdown, and cumulative return. Derivations, world model and metrics, and full result tables are in the appendices.",
+      "primary_category": "q-fin.GN",
+      "categories": [
+        "q-fin.GN",
+        "cs.CE",
+        "q-fin.PM"
+      ],
+      "published": "2026-03-24T07:25:30Z",
+      "updated": "2026-03-24T07:25:30Z",
+      "abs_url": "https://arxiv.org/abs/2603.22880",
+      "pdf_url": "https://arxiv.org/pdf/2603.22880v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 40,
+      "matched_keywords": [
+        "sharpe ratio",
+        "reinforcement learning",
+        "portfolio optimization",
+        "drawdown"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "將遞歸效用融入強化學習做投組最佳化，使用ETF真實資料進行多期驗證。",
+      "summary": {
+        "title_zh": "基於遞迴效用與強化學習的投資組合最佳化",
+        "verdict": "結合遞迴效用與強化學習進行投資組合配置，實證可改善夏普值與最大回檔。",
+        "problem": "資產定價理論中的遞迴效用函數其貝爾曼方程式包含無法以觀察報酬封閉求解的確定性等價。這使得將其直接應用於強化學習的價值函數目標時遭遇困難。",
+        "method": "採用 K 樣本蒙地卡羅近似確定性等價，並訓練 PPO 與 A2C 等 Actor-Critic 演算法。資料使用南韓 ETF 的 10 個時間序列訓練與測試切分樣本。",
+        "findings": "遞迴效用代理人在夏普值、最大回檔與累積報酬等指標上，皆優於傳統折扣因子的基準模型。論文未報告具體的效能改善數值。",
+        "implication": "此方法提供將資產定價的風險敏感目標納入機器學習的框架，可用於改善投資組合配置的風險調整後報酬。前提是需克服蒙地卡羅近似帶來的計算開銷。",
+        "caveats": "確定性等價在觀測報酬下缺乏封閉解，需依賴蒙地卡羅近似，可能引入估計誤差。",
+        "practicality": 3,
+        "tags": [
+          "強化學習",
+          "投資組合最佳化",
+          "資產定價",
+          "蒙地卡羅模擬"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2512.02227",
+      "title": "Orchestration Framework for Financial Agents: From Algorithmic Trading to Agentic Trading",
+      "authors": [
+        "Jifeng Li",
+        "Arnav Grover",
+        "Abraham Alpuerto",
+        "Yupeng Cao",
+        "Xiao-Yang Liu"
+      ],
+      "abstract": "The financial market is a mission-critical playground for AI agents due to its temporal dynamics and low signal-to-noise ratio. Building an effective algorithmic trading system may require a professional team to develop and test over the years. In this paper, we propose an orchestration framework for financial agents, which aims to democratize financial intelligence to the general public. We map each component of the traditional algorithmic trading system to agents, including planner, orchestrator, alpha agents, risk agents, portfolio agents, backtest agents, execution agents, audit agents, and memory agent. We present two in-house trading examples. For the stock trading task (hourly data from 04/2024 to 12/2024), our approach achieved a return of $20.42\\%$, a Sharpe ratio of 2.63, and a maximum drawdown of $-3.59\\%$, while the S&P 500 index yielded a return of $15.97\\%$. For the BTC trading task (minute data from 27/07/2025 to 13/08/2025), our approach achieved a return of $8.39\\%$, a Sharpe ratio of $0.38$, and a maximum drawdown of $-2.80\\%$, whereas the BTC price increased by $3.80\\%$. Our code is available on \\href{https://github.com/Open-Finance-Lab/AgenticTrading}{GitHub}.",
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.CE",
+        "cs.LG"
+      ],
+      "published": "2025-12-01T21:50:22Z",
+      "updated": "2025-12-01T21:50:22Z",
+      "abs_url": "https://arxiv.org/abs/2512.02227",
+      "pdf_url": "https://arxiv.org/pdf/2512.02227v1",
+      "comment": "Accepted at the Workshop on Generative AI in Finance, 39th Conference on Neural Information Processing Systems (NeurIPS 2025)",
+      "journal_ref": "",
+      "keyword_score": 40,
+      "matched_keywords": [
+        "algorithmic trading",
+        "sharpe ratio",
+        "backtest",
+        "drawdown",
+        "stock",
+        "alpha"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出金融代理人協調框架，已獲NeurIPS Workshop接受，實證績效合理。",
+      "summary": {
+        "title_zh": "金融代理人的協調框架：從演算法交易到代理人式交易",
+        "verdict": "提出金融代理人協調框架，股票任務報酬率 20.42%、夏普值 2.63。",
+        "problem": "傳統量化交易系統開發門檻高且耗時，需建立一個能降低金融智慧門檻的自動化代理人架構。",
+        "method": "將傳統交易系統各組件對應至不同代理人（如 Alpha 因子、風險、投資組合、執行等），測試股票（2024/04-2024/12 小時資料）與 BTC（2025/07-2025/08 分鐘資料）。",
+        "findings": "股票任務報酬率達 20.42%、夏普值 2.63、最大回檔 -3.59%，優於 S&P 500 的 15.97%；BTC 任務報酬率 8.39%、夏普值 0.38、最大回檔 -2.80%，優於比特幣價格漲幅的 3.80%。",
+        "implication": "可用於快速搭建自動化交易與回測工作流程，適合希望導入多代理人系統的研究團隊。",
+        "caveats": "實測樣本期間較短，且未詳細說明交易成本的扣除細節。",
+        "practicality": 3,
+        "tags": [
+          "代理人式交易",
+          "自動化交易",
+          "Alpha 因子",
+          "投資組合最佳化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "date": "2026-11-24",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2611.27987",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 10,
+      "value": 8,
+      "reason": "校準真實 Uniswap 資料與 Gas 歷程，實證完整且基準明確。"
+    },
+    {
+      "arxiv_id": "2611.30843",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "利用外部群組資訊改善相關矩陣估計，實證扎實且回測期長。"
+    },
+    {
+      "arxiv_id": "2611.30584",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "使用龐大 A 股資料，探討技術指標的增量經濟價值，已刊登於期刊。"
+    },
+    {
+      "arxiv_id": "2611.29552",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出具備成本閘門的線上投資組合選擇策略，多資料集實證完整。"
+    },
+    {
+      "arxiv_id": "2611.27992",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "探討特徵不確定性與體制轉換，具備嚴謹的理論界線與實證檢驗。"
+    },
+    {
+      "arxiv_id": "2611.30046",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "探討 Wasserstein 懲罰在均異投組中的角色，數學推導嚴謹但缺乏實證。"
+    },
+    {
+      "arxiv_id": "2611.29829",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 7,
+      "reason": "稽核加密貨幣監督的代理人 LLM 管線，分析決策來源與盲點。"
+    },
+    {
+      "arxiv_id": "2611.29747",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "針對機器學習後的夏普值推論進行修正，理論與實證皆相當紮實。"
+    },
+    {
+      "arxiv_id": "2611.27990",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出指數傾斜的量子啟發風險投組最佳化，對比多種求解方法。"
+    },
+    {
+      "arxiv_id": "2611.29565",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "發展 rough Hawkes-Heston 模型的離散蒙地卡羅演算法，推導完整。"
+    },
+    {
+      "arxiv_id": "2611.27988",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "全樣本鏈上實證，指出行為早期預警對跟單爆倉的預測效果有限。"
+    },
+    {
+      "arxiv_id": "2611.27989",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "以三角定價一致性檢驗以太坊跨 numeraire 的相對定價效率。"
+    },
+    {
+      "arxiv_id": "2611.30880",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 6,
+      "reason": "推導線性神經元隨機梯度下降的臨界步長與輸入頻譜關係，解法明確。"
+    },
+    {
+      "arxiv_id": "2611.30737",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "重建金融新聞資料集並提供發行商連結，對量化研究具備實用工具價值。"
+    },
+    {
+      "arxiv_id": "2611.28524",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "結合 Copula 與半母數框架預測聯合尾部風險，比特幣實證完整。"
+    },
+    {
+      "arxiv_id": "2610.14959",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出結合文獻與強化學習的符號化因子探勘框架，跨市場表現優異。"
+    },
+    {
+      "arxiv_id": "2610.13044",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "分析 FLEX 選擇權活動對一般期權與標的資產的影響，實證清晰。"
+    },
+    {
+      "arxiv_id": "2610.10037",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "探討硬體時間尺度與雜訊相關性對實體儲集層運算預測的影響。"
+    },
+    {
+      "arxiv_id": "2610.05873",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "分解代幣化實體資產的鏈上轉移與擁有權，釐清流動性指標盲點。"
+    },
+    {
+      "arxiv_id": "2610.03841",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出基於演算法中央銀行的穩定幣設計，已刊登於金融科技期刊。"
+    },
+    {
+      "arxiv_id": "2610.03406",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "提出具備評分機制的互動式機器人理財框架，結合逆向強化學習。"
+    },
+    {
+      "arxiv_id": "2609.31379",
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance": 9,
+      "value": 8,
+      "reason": "精確推導私人記憶池中夾擊攻擊的洩漏閾值，已被 NeurIPS 接受。"
+    },
+    {
+      "arxiv_id": "2609.26303",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "探討橫截面預測的目標對齊與稀釋問題，模擬與實證分析深入。"
+    },
+    {
+      "arxiv_id": "2609.11144",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "指出金融 NLP 中人類觀點一致性與報酬關聯性不能互換，實證嚴謹。"
+    },
+    {
+      "arxiv_id": "2609.08959",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 7,
+      "reason": "定義變異數交換的 Delta 並透過 Carr-Madan 公式分析，推導清晰。"
+    },
+    {
+      "arxiv_id": "2609.01176",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 8,
+      "reason": "分析 Telegram 頻道推動的加密貨幣操縱與拉高出貨現象，已被 ICWSM 接受。"
+    },
+    {
+      "arxiv_id": "2608.19447",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出多尺度對比學習框架來量化事件對時間序列的衝擊。"
+    },
+    {
+      "arxiv_id": "2608.18783",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 6,
+      "reason": "以分佈建構器方法探討資產最佳賣出時機，數學理論連結 Skorokhod 嵌入。"
+    },
+    {
+      "arxiv_id": "2609.26242",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "探討金融預測模型的機器遺忘與精確重新訓練預言機的差異。"
+    },
+    {
+      "arxiv_id": "2608.04832",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出靜態模糊下的穩健控制，確保避險策略在動態環境中保持強健性。"
+    },
+    {
+      "arxiv_id": "2608.05198",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 8,
+      "value": 8,
+      "reason": "建立隱含、本地與學習波動率曲面的統一數學理論，推導極為深入。"
+    },
+    {
+      "arxiv_id": "2609.04239",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出專為金融時間序列設計的免注意力機制基礎模型，架構具參考價值。"
+    },
+    {
+      "arxiv_id": "2608.01181",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "透過數位雙身訪談將選擇性揭露轉化為可測量的市場觀點面板，方法創新。"
+    },
+    {
+      "arxiv_id": "2607.27611",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "對企業外匯避險揭露進行可稽核的弱監督測量，評估與實證完整。"
+    },
+    {
+      "arxiv_id": "2607.21826",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "結合 LPPL 與 PSY 模型分析比特幣與以太坊的泡沫現象，已刊登於 Risk 期刊。"
+    },
+    {
+      "arxiv_id": "2607.09906",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "將量子拓撲資料分析應用於金融壓力偵測，但指出跨體制泛化能力不足。"
+    },
+    {
+      "arxiv_id": "2607.05484",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出機器學習風險模型的 SHAP 解釋框架以符合監管資本要求，實用性高。"
+    },
+    {
+      "arxiv_id": "2606.31122",
+      "topic": "投組與風險",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "利用大偏差原理產生合理的壓力測試情境，僅使用模擬網路模型。"
+    },
+    {
+      "arxiv_id": "2606.27561",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出量子生成擴散模型用於時間序列合成，在量子處理器上進行驗證。"
+    },
+    {
+      "arxiv_id": "2606.24062",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "提出體制感知變動上下文專家網路來預測累積對數報酬，實驗扎實。"
+    }
+  ]
+}
