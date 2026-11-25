@@ -1,0 +1,327 @@
+{
+  "date": "2026-11-25",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2611.32790",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "結合模擬與實盤 S&P 500 選擇權檢驗，避險成效顯著。"
+    },
+    {
+      "arxiv_id": "2611.32638",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "下行風險投組模型實證完整，採滾動視窗與拔靴檢定。"
+    },
+    {
+      "arxiv_id": "2611.32769",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "量子相關編碼應用於大規模串流投組，實證與基準比較扎實。"
+    },
+    {
+      "arxiv_id": "2611.31491",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "利用表格基礎模型特徵衡量經濟鄰近性，應用於資產訂價。"
+    },
+    {
+      "arxiv_id": "2611.32791",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "推導粗糙隨機波動率模型性質並擬合加密貨幣選擇權微笑曲線。"
+    },
+    {
+      "arxiv_id": "2611.30982",
+      "topic": "其他",
+      "evidence": "只有模擬資料",
+      "relevance": 3,
+      "value": 4,
+      "reason": "僅透過模擬資料評估預測型 PID 穩定幣，缺乏真實市場考驗。"
+    },
+    {
+      "arxiv_id": "2611.32488",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 4,
+      "reason": "提出分數階隨機優勢決策模型，僅有數值範例說明。"
+    },
+    {
+      "arxiv_id": "2611.31626",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "建立線性算子方程式的核函數框架，包含選擇權定價範例。"
+    },
+    {
+      "arxiv_id": "2611.31190",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 3,
+      "value": 6,
+      "reason": "Text-to-SQL 置信度估計，對量化交易應用較為間接。"
+    },
+    {
+      "arxiv_id": "2611.30980",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "推導美式回顧選擇權的無模型定價與避險對偶性，理論嚴謹。"
+    },
+    {
+      "arxiv_id": "2606.16961",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "以混合卷積 VAE 預測加密貨幣隱含波動率曲面，實證扎實。"
+    },
+    {
+      "arxiv_id": "2606.12872",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "非跨期識別總經事件對選擇權定價的影響，實證分析嚴謹。"
+    },
+    {
+      "arxiv_id": "2606.05623",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "自 10-K 財報文字萃取指標預測企業破產，預測力提升顯著。"
+    },
+    {
+      "arxiv_id": "2606.04235",
+      "topic": "投組與風險",
+      "evidence": "只有模擬資料",
+      "relevance": 5,
+      "value": 5,
+      "reason": "提出保證金與 CSA 最佳化的量子框架，僅使用合成資料。"
+    },
+    {
+      "arxiv_id": "2606.02657",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "探討體制轉換下的泛化界線與風險分解，具備市場指數實證。"
+    },
+    {
+      "arxiv_id": "2606.11237",
+      "topic": "波動度與衍生品",
+      "evidence": "只有模擬資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "混合 LSMC-PDE 美式選擇權定價方法，僅透過模擬路徑測試。"
+    },
+    {
+      "arxiv_id": "2605.30442",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "分析加密貨幣與傳統市場的跨資產溢出與網路結構演變。"
+    },
+    {
+      "arxiv_id": "2605.29376",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "建立三貨幣 HJM 框架應用於巴西信用市場，實證明確。"
+    },
+    {
+      "arxiv_id": "2606.07575",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "結合高斯過程迴歸與歷史模擬進行前瞻性壓力測試。"
+    },
+    {
+      "arxiv_id": "2605.18784",
+      "topic": "其他",
+      "evidence": "看不出來",
+      "relevance": 2,
+      "value": 5,
+      "reason": "探討 AI 風險的可保性邊界與承保範圍，交易應用間接。"
+    },
+    {
+      "arxiv_id": "2605.03460",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出金融時間序列推理模型，在 S&P 股票表現優異。"
+    },
+    {
+      "arxiv_id": "2604.27041",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出預測市場的信號可信度指數，有蒙地卡羅驗證。"
+    },
+    {
+      "arxiv_id": "2604.17167",
+      "topic": "其他",
+      "evidence": "看不出來",
+      "relevance": 3,
+      "value": 5,
+      "reason": "分析穩定幣的金融與技術風險，偏向監管與總體探討。"
+    },
+    {
+      "arxiv_id": "2604.00415",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "以隨機模型預測控制最佳化雙線性政策，改善風險調整表現。"
+    },
+    {
+      "arxiv_id": "2603.28256",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 5,
+      "reason": "研究強套利下之或有權益評價，純理論推導。"
+    },
+    {
+      "arxiv_id": "2603.23480",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "利用 Copula 分析穩定幣對加密貨幣市場的波動傳遞。"
+    },
+    {
+      "arxiv_id": "2603.21842",
+      "topic": "Alpha 與因子",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "探討 Kyle 模型中的彈性資訊獲取，純理論推導。"
+    },
+    {
+      "arxiv_id": "2603.11897",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 4,
+      "value": 6,
+      "reason": "利用存活分析估計 IFRS 9 下的貸款撇帳風險期限結構。"
+    },
+    {
+      "arxiv_id": "2603.10327",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出加權廣義風險度量與風險四邊形，並有指數實證分析。"
+    },
+    {
+      "arxiv_id": "2603.20243",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "詳細分析兩因子 Hull-White 模型的相關性結構與 CVA 計算。"
+    },
+    {
+      "arxiv_id": "2603.07863",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "研究差額交換中擔保貨幣的選擇與評價避險策略。"
+    },
+    {
+      "arxiv_id": "2603.04328",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 4,
+      "value": 4,
+      "reason": "研究加密貨幣反洗錢系統的法規損失與合規脆弱性（已撤稿）。"
+    },
+    {
+      "arxiv_id": "2602.19092",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "提出二維 Bates 模型選項定價的高階有限差分方案。"
+    },
+    {
+      "arxiv_id": "2602.13544",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "引入遞迴擾動效用求解默頓投資問題，理論推導完整。"
+    },
+    {
+      "arxiv_id": "2602.11918",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "以多代理人與投資論點模擬金融市場演化，實證表現佳。"
+    },
+    {
+      "arxiv_id": "2602.03903",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "利用共形預測進行非平穩投組 VaR 校準，實證扎實。"
+    },
+    {
+      "arxiv_id": "2601.20533",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 7,
+      "reason": "納入資料飄移改進信用風險存活分析，實證完整。"
+    },
+    {
+      "arxiv_id": "2601.12414",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 6,
+      "reason": "比較標準差與吉尼平均差在精算保費載具的性質。"
+    },
+    {
+      "arxiv_id": "2601.19943",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 8,
+      "reason": "證明競爭足以引發學習者族群的專業化分工，實證廣泛。"
+    },
+    {
+      "arxiv_id": "2601.08540",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出 DeFi 相關性脆弱性指標與風險貢獻分數。"
+    }
+  ]
+}

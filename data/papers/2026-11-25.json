@@ -1,0 +1,515 @@
+{
+  "date": "2026-11-25",
+  "generated_at": "2026-11-25T13:29:35+08:00",
+  "scanned": 2515,
+  "eligible": 2133,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2611.32790",
+      "title": "Delta-Vega Hedging with Deep Reinforcement Learning: From Simulation to Reality",
+      "authors": [
+        "Michele Colombi",
+        "Marco Di Francesco",
+        "Pietro Rossi"
+      ],
+      "abstract": "Hedging an option portfolio with the underlying asset alone leaves the position exposed to changes in volatility, which can be managed by trading another derivative, at higher transaction costs. We propose a deep reinforcement learning approach to hedge both price and volatility risk under discrete-time trading and transaction costs, by trading the underlying asset and a second, longer-dated option. We train the agent with Proximal Policy Optimization (PPO) on synthetic data from a stochastic volatility model, and restrict its state to quantities observable in the market, so that the policy learned in simulation applies directly to market data. In simulation, we validate the policy against semi-analytical Delta and Delta-Vega hedging benchmarks. PPO matches Delta-Vega's objective at baseline transaction costs and increasingly outperforms it as costs rise, with both two-instrument strategies consistently outperforming the single-instrument Delta hedge. On historical S&P 500 index option data, we benchmark our approach against practitioner Black-Scholes Delta and Delta-Vega hedging strategies. The two-instrument strategies roughly halve the profit-and-loss dispersion of the Delta hedge, and PPO attains a lower profit-and-loss volatility than Delta-Vega at comparable transaction costs. PPO holds more of the hedging option than Delta-Vega, in line with the stochastic-volatility model hedge, and its advantage is concentrated in high-volatility episodes.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "q-fin.RM"
+      ],
+      "published": "2026-11-24T15:18:34Z",
+      "updated": "2026-11-24T15:18:34Z",
+      "abs_url": "https://arxiv.org/abs/2611.32790",
+      "pdf_url": "https://arxiv.org/pdf/2611.32790v1",
+      "comment": "34 pages, 10 figures",
+      "journal_ref": "",
+      "keyword_score": 41,
+      "matched_keywords": [
+        "reinforcement learning",
+        "transaction cost",
+        "hedging"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合模擬與實盤 S&P 500 選擇權檢驗，避險成效顯著。",
+      "summary": {
+        "title_zh": "利用深度強化學習進行Delta-Vega避險：從模擬到真實",
+        "verdict": "以 PPO 結合標的資產與遠期選擇權進行 Delta-Vega 避險，能有效降低損益波動，在實質資料中展現優於傳統方法的表現。",
+        "problem": "僅以標的資產避險選擇權組合會面臨波動度風險，而透過交易第二個衍生性商品則會提高交易成本，如何在離散時間與交易成本下最佳化 Delta 與 Vega 避險是一個難題。",
+        "method": "使用 PPO 演算法在隨機波動率模型的合成資料上訓練 agent，透過僅使用市場可觀測量的狀態設計，使其能直接應用於 SPX 歷史選擇權資料。",
+        "findings": "在歷史 S&P 500 選擇權資料中，雙資產策略將損益離散度減少約一半，PPO 在可比擬的交易成本下達到比 Delta-Vega 更低的損益波動，且優勢集中於高波動時期。",
+        "implication": "此方法能直接應用於真實市場資料，在面對高波動時期時特別具備避險優勢，適合實務上需要兼顧價格與波動度風險的選擇權部位管理。",
+        "caveats": "模型是在隨機波動率模型的合成資料上訓練，其效能仍可能受限於模擬環境與真實市場動態的差距。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "衍生性商品",
+          "波動度風險",
+          "選擇權避險",
+          "交易成本"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2610.14959",
+      "title": "AlphaRLM: Aligning Language Models for Literature-Grounded Symbolic Factor Discovery",
+      "authors": [
+        "Jie Huang",
+        "Yuecheng Hong",
+        "Yao Chen",
+        "Hao Zhong",
+        "Linfeng Xiao",
+        "Xudong Liu",
+        "Qiang Ye",
+        "Hao Xia",
+        "Jianxuan Xin"
+      ],
+      "abstract": "Formulaic alpha mining seeks to discover executable expressions that capture predictive market signals in a vast, noisy search space. Recent LLM-based approaches use prompting, iterative search, or seed-factor evolution, leaving direct factor construction through policy learning less explored. To address this, we introduce AlphaRLM, a reinforcement-learning framework that trains LLMs to construct executable symbolic factors from financial literature without input factor expressions. AlphaRLM incorporates Literature-Guided Operator Assembly (LEGO), which conditions factor construction on literature-derived ideas and executable operators, providing semantic priors for exploration. It further aligns the generation policy with market feedback through executable-validity and grouped-return-separation rewards that capture non-monotonic structures across factor quantiles. Extensive experiments on CSI 300, CSI 1000, and S&P 500 show that AlphaRLM outperforms strong factor-mining and LLM-based baselines in annualized excess return. Notably, the 8B model achieves strong cross-market performance, highlighting the promise of literature-conditioned, market-aligned factor generation.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "q-fin.PM"
+      ],
+      "published": "2026-10-10T14:32:10Z",
+      "updated": "2026-10-15T03:53:15Z",
+      "abs_url": "https://arxiv.org/abs/2610.14959",
+      "pdf_url": "https://arxiv.org/pdf/2610.14959v3",
+      "comment": "25 pages, 5 figures",
+      "journal_ref": "",
+      "keyword_score": 8,
+      "matched_keywords": [
+        "llm",
+        "alpha"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出結合文獻與強化學習的符號化因子探勘框架，跨市場表現優異。",
+      "summary": {
+        "title_zh": "AlphaRLM：對齊基礎模型以進行基於文獻的符號化 Alpha 因子挖掘",
+        "verdict": "透過強化學習與文獻引導，訓練基礎模型直接自金融文獻生成可執行的符號化 Alpha 因子，顯著提升超額報酬。",
+        "problem": "現有基於基礎模型的 Alpha 因子挖掘多依賴提示詞、迭代搜尋或種子因子演化，直接透過策略學習進行因子建構的研究仍不足。",
+        "method": "提出 AlphaRLM 強化學習框架，結合文獻引導算子組合（LEGO）模組並利用市場回饋對齊生成策略。實驗涵蓋 CSI 300、CSI 1000 與 S&P 500 指數。",
+        "findings": "在年化超額報酬上優於多個強大的因子挖掘與基礎模型基準，8B 模型展現出色的跨市場表現，但未報告具體績效數字。",
+        "implication": "可將非結構化金融文獻與市場回饋有效結合，自動化生成具預測力的符號化 Alpha 因子，適合用於量化研究流程。",
+        "caveats": "論文摘要中未提供明確的交易成本考量與具體績效資料。",
+        "practicality": 4,
+        "tags": [
+          "Alpha 因子挖掘",
+          "強化學習",
+          "基礎模型",
+          "符號化回歸"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.24062",
+      "title": "RAVEN: A Regime-Aware Variable-context Expert Network for Financial Time Series Forecasting",
+      "authors": [
+        "Cheng He",
+        "Zhenyu Guan",
+        "Xijie Liang",
+        "Defu Lian",
+        "Jiajia Li",
+        "Enhong Chen",
+        "Patrick P. C. Lee",
+        "Geng Hu",
+        "Zehao Chen"
+      ],
+      "abstract": "Financial time series forecasting presents structural challenges absent from standard benchmarks. Log-returns are non-stationary, exhibit exceptionally low signal-to-noise (SNR) ratios, and are governed by regime-dependent temporal dependencies. We identify a key limitation of state-of-the-art (SOTA) time series models in financial settings. A fixed context window is mismatched to the time-varying optimal look-back of non-stationary price processes. We propose the Regime-Aware Variable-context Expert Network (RAVEN), a Mixture-of-Experts framework designed to adaptively determine the temporal context for each input sample. Instead of relying on a fixed look-back horizon, RAVEN constructs a hierarchy of nested contiguous windows whose lengths are determined by the data itself. Specifically, RAVEN scores patches by learned importance in reverse chronological order and applies the Cumulative Importance Thresholding (CIT) mechanism to derive nested prefix windows, each routed to a scale-specialized expert. A Global Compressed Representation (GCR) branch runs in parallel over the full context, preserving global temporal coherence that local experts cannot guarantee. Because the nested routing induces structured overlap among expert inputs, we introduce a Correlation-Aware Weighting (CAW) to align variable-length expert outputs and penalize pairwise cosine similarity prior to aggregation. Experiments on cumulative log-return prediction (HS300, S&P500) and fund sales forecasting demonstrate that RAVEN achieves SOTA performances, improves Pearson correlation by 9.2% on HS300 and 20.2% on S&P500, and reduces MSE by 18.2% on fund sales forecasting, while achieving the best results in 14 of 16 metrics on four PEMS traffic benchmarks.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-23T02:11:04Z",
+      "updated": "2026-06-23T02:11:04Z",
+      "abs_url": "https://arxiv.org/abs/2606.24062",
+      "pdf_url": "https://arxiv.org/pdf/2606.24062v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 8,
+      "matched_keywords": [
+        "regime"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出體制感知變動上下文專家網路來預測累積對數報酬，實驗扎實。",
+      "summary": {
+        "title_zh": "RAVEN：適用於金融時間序列預測之體制感知變動上下文專家網路",
+        "verdict": "提出動態決定時間上下文的專家混合模型，在多個金融與交通預測基準上顯著改善表現。",
+        "problem": "金融時間序列具有非平穩性、極低訊雜比，且固定回溯窗口無法適應隨時間變動的最佳歷史長度。",
+        "method": "使用 Mixture-of-Experts 架構，透過累積重要性閾值機制建構巢狀前綴窗口，結合全域壓縮表示分支，並在 HS300、S&P500 與基金銷售資料進行實驗。",
+        "findings": "在 HS300 上提升 Pearson 相關係數 9.2%，在 S&P500 上提升 20.2%，基金銷售預測的 MSE 降低 18.2%。",
+        "implication": "能自適應不同體制下的時間脈絡，適用於需要動態回溯長度的多變量金融預測任務。",
+        "caveats": "巢狀路由與相關性感知加權增加了模型結構與運算複雜度。",
+        "practicality": 3,
+        "tags": [
+          "時間序列預測",
+          "專家混合模型",
+          "機器學習",
+          "Alpha 因子"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.16961",
+      "title": "Beyond the Smile: A Hybrid Convolutional VAE for Crypto Volatility Surfaces",
+      "authors": [
+        "Sadanand Singh",
+        "Allam Reddy",
+        "Manan Chopra"
+      ],
+      "abstract": "We present a convolutional variational autoencoder for cryptocurrency implied-volatility surfaces, together with a deployable predictor that combines it with a quadratic smile re-fit through a deterministic per-tenor routing rule. Trained on 6,034 fully-filled hourly Binance Options surfaces of BTC and ETH spanning May-October 2023 and parameterised on a common $6 \\times 7$ tenor-delta grid, the model attains a hidden-cell surface-completion RMSE in the 0.94-1.56 vol-point range across both markets and mask rates 10-50%. The hybrid predictor attains 0.83 vol points at 50% masking against 7.00 for the smile re-fit alone, an eightfold reduction obtained at no additional inference cost. Under structurally-correlated hole patterns that emulate the withdrawal of an entire tenor of strikes, the smile re-fit incurs 9.6-13.1 vol points of error while the learned model remains at 1.5-1.9, isolating a regime in which the generative model is the only viable predictor. Joint training on BTC and ETH improves the in-distribution model on both markets by 9-27% relative to the better-performing single-symbol counterpart, indicating a substantially shared vol-surface manifold across the two largest cryptocurrencies over the observation window. The hybrid is calendar- and butterfly-arbitrage-free at the listed strikes, a property that the parametric smile re-fit alone fails at high mask rates. The per-snapshot reconstruction error of the trained model flags the late-October ETF-anticipation rally and the August $17$, $2023$ flash crash as elevated-error periods without supervision. All training and evaluation infrastructure is released to support reproducible follow-on work.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-fin.CP"
+      ],
+      "published": "2026-06-15T17:01:00Z",
+      "updated": "2026-06-15T17:01:00Z",
+      "abs_url": "https://arxiv.org/abs/2606.16961",
+      "pdf_url": "https://arxiv.org/pdf/2606.16961v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 8,
+      "matched_keywords": [
+        "regime",
+        "cryptocurrency"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "以混合卷積 VAE 預測加密貨幣隱含波動率曲面，實證扎實。",
+      "summary": {
+        "title_zh": "超越波動率微笑：用於加密貨幣波動率曲面的混合式卷積變分自encoder",
+        "verdict": "提出結合卷積變分自encoder與二次微笑擬合的混合預測器，在加密貨幣選擇權波動率曲面補全上達到顯著誤差改善。",
+        "problem": "加密貨幣隱含波動率曲面常有缺失值或資料空洞，傳統的參數化微笑擬合在資料缺失或結構性缺口時表現不佳。",
+        "method": "使用卷積變分自encoder與確定性路由規則結合二次微笑擬合的混合預測器。資料為 2023 年 5 月至 10 月 Binance 交易所 BTC 與 ETH 每小時完整填補的選擇權波動率曲面，基於 6x7 期限-delta 網格。",
+        "findings": "隱藏單元曲面補全 RMSE 在 0.94 至 1.56 波動率點範圍內。混合預測器在 50% 遮罩下達到 0.83 波動率點的誤差，相較單獨微笑擬合的 7.00 減少達八倍；在結構性相關空洞模式下，誤差維持在 1.5 至 1.9 波動率點，顯著優於傳統方法。",
+        "implication": "此混合模型能有效應用於波動率曲面補全與異常偵測，且在掛牌履約價上保持無日曆與無蝴蝶套利性質，可直接應用於造市與定價系統。",
+        "caveats": "樣本期間僅涵蓋 2023 年 5 月至 10 月的特定市場環境。",
+        "practicality": 4,
+        "tags": [
+          "機器學習",
+          "隱含波動率",
+          "加密貨幣",
+          "選擇權"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.12872",
+      "title": "Non-Spanning Identification of Scheduled Event Risk in Option Pricing",
+      "authors": [
+        "Tenghan Zhong"
+      ],
+      "abstract": "Short-dated index options make scheduled macro-announcement risk visible in market prices, but visibility does not imply identification: a flexible no-event surface fitted to event-spanning quotes can absorb event premia, while a jump calibrated without event-spanning quotes is unidentified. To separate the continuous surface from the scheduled jump, we model Federal Open Market Committee (FOMC) decisions, Consumer Price Index (CPI) releases, and nonfarm payroll (NFP) reports as deterministic-time jumps in risk-neutral option pricing and propose a non-spanning identification protocol. Non-spanning expiries identify the no-event volatility surface, event-spanning training quotes calibrate the scheduled jump, and held-out event-spanning quotes are used only for pricing evaluation. On PM-settled S\\&P 500 index (SPX) options from May 2022 to August 2025, Gaussian and two-component mixture jumps improve held-out event-spanning pricing, with the clearest gains in robust median pricing errors and in event-volatility option combinations (straddles and strangles) rather than directional risk reversals. A contaminated-surface stress test confirms the identification concern: allowing event-spanning training quotes into the no-event surface fit produces strong held-out performance by absorbing event premia rather than identifying scheduled jump risk. An amortized mixture density network (MDN) benchmark shows limited cross-event transfer: pure leave-one-event-out amortization reduces implied-volatility errors but not mean dollar or mean spread-normalized pricing errors, while the scale-calibrated variant restores Gaussian-level performance yet remains below event-specific mixture calibration. Scheduled-jump identification is strongest for CPI and FOMC and weaker for NFP.",
+      "primary_category": "q-fin.PR",
+      "categories": [
+        "q-fin.PR"
+      ],
+      "published": "2026-06-11T03:59:32Z",
+      "updated": "2026-06-15T22:51:29Z",
+      "abs_url": "https://arxiv.org/abs/2606.12872",
+      "pdf_url": "https://arxiv.org/pdf/2606.12872v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 8,
+      "matched_keywords": [
+        "option pricing"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "非跨期識別總經事件對選擇權定價的影響，實證分析嚴謹。",
+      "summary": {
+        "title_zh": "期權定價中預定事件風險的非跨期識別",
+        "verdict": "提出非跨期識別協定，分離無事件波動率曲面與預定跳躍風險，有效改善 SPX 選擇權的事件定價表現。",
+        "problem": "短期指數選擇權雖能反映總體公告風險，但事件跨期報價會干擾波動率曲面擬合，導致事件溢酬與跳躍風險難以正確分離。",
+        "method": "將聯準會決議、CPI 與非農就業報告建模為風險中立期權定價中的確定性時間跳躍，提出非跨期識別協定。使用 2022 年 5 月至 2025 年 8 月的午盤結算 SPX 選擇權資料進行實證。",
+        "findings": "高斯與雙成份混合跳躍模型改善了保留事件跨期資料的定價表現，在穩健中位數定價誤差與跨式及勒式等事件波動率組合上獲得最清晰的改善，未報告具體夏普值與絕對報酬數字。",
+        "implication": "交易員可利用非跨期識別協定來分離事件溢酬，提升跨期期權組合的定價與避險品質，特別適用於 CPI 與 FOMC 事件。",
+        "caveats": "非農就業報告的事件跳躍識別效果較弱，且 MDN 基準模型的跨事件轉移能力有限。",
+        "practicality": 4,
+        "tags": [
+          "期權定價",
+          "跳躍擴散模型",
+          "巨集事件風險",
+          "SPX",
+          "波動率曲面"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2602.03903",
+      "title": "Taming Tail Risk in Financial Markets: Conformal Calibration for Nonstationary Portfolio VaR",
+      "authors": [
+        "Marc Schmitt"
+      ],
+      "abstract": "Value-at-risk (VaR) forecasts drive trading constraints and capital allocation, yet realized exceedance rates concentrate in stress periods, when losses are largest. This paper studies sequential one-sided VaR calibration via conformal prediction. It proposes regime-weighted conformal calibration (RWC), which builds a safety buffer from past forecast errors using exponential time decay and regime-similarity weights. RWC is model-agnostic and wraps any conditional quantile forecaster to target a desired exceedance rate, with time-weighted calibration (TWC) as a special case. Coverage bounds are derived for arbitrary data-driven weights under smooth regime drift, without assuming weighted exchangeability. On the CRSP index and sixteen U.S. equity portfolios, RWC and TWC are benchmarked against modern online conformal methods at the Basel-relevant 99% and 97.5% levels. TWC is a strong default under drift, while regime weighting improves stress-period calibration for slowly adapting forecasters, and diagnostics indicate when localization is reliable.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM"
+      ],
+      "published": "2026-02-03T12:34:19Z",
+      "updated": "2026-08-03T07:09:44Z",
+      "abs_url": "https://arxiv.org/abs/2602.03903",
+      "pdf_url": "https://arxiv.org/pdf/2602.03903v3",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 8,
+      "matched_keywords": [
+        "regime"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "利用共形預測進行非平穩投組 VaR 校準，實證扎實。",
+      "summary": {
+        "title_zh": "駕馭金融市場的尾部風險：針對非平動態投資組合 VaR 的共形校準",
+        "verdict": "提出體制加權共形校準法（RWC），修正 VaR 在壓力時期的超額違約率，提升風險預測品質。",
+        "problem": "實務上的 VaR 預測在市場壓力時期常出現超額違約率集中暴增的問題，導致風險控管失準。",
+        "method": "運用共形預測技術提出體制加權共形校準（RWC），結合指數時間衰減與體制相似度權重；以 CRSP 指數與 16 個美國股票投資組合進行實證，測試 99% 與 97.5% 水準。",
+        "findings": "時間加權校準（TWC）在資料漂移下表現強健，而體制加權能在適應緩慢的預測模型中改善壓力時期的校準效果。論文未報告具體的報酬與夏普值數字。",
+        "implication": "此方法可作為任何條件分位數預測模型的包裝器，無需重新訓練原模型即可直接修正 VaR 覆蓋率，適合實務風控系統採用。",
+        "caveats": "體制加權的可靠性高度依賴診斷指標，且未明確扣除交易與調整成本。",
+        "practicality": 4,
+        "tags": [
+          "尾部風險",
+          "數值風險評估",
+          "共形預測",
+          "風險管理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.19943",
+      "title": "Emergent Specialization in Learner Populations: Competition as the Source of Diversity",
+      "authors": [
+        "Yuhao Li"
+      ],
+      "abstract": "How can populations of learners develop coordinated, diverse behaviors without explicit communication or diversity incentives? We demonstrate that competition alone is sufficient to induce emergent specialization -- learners spontaneously partition into specialists for different environmental regimes through competitive dynamics, consistent with ecological niche theory. We introduce the NichePopulation algorithm, a simple mechanism combining competitive exclusion with niche affinity tracking. Validated across six real-world domains (cryptocurrency trading, commodity prices, weather forecasting, solar irradiance, urban traffic, and air quality), our approach achieves a mean Specialization Index of 0.75 with effect sizes of Cohen's d > 20. Key findings: (1) At lambda=0 (no niche bonus), learners still achieve SI > 0.30, proving specialization is genuinely emergent; (2) Diverse populations outperform homogeneous baselines by +26.5% through method-level division of labor; (3) Our approach outperforms MARL baselines (QMIX, MAPPO, IQL) by 4.3x while being 4x faster.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.NE"
+      ],
+      "published": "2026-01-16T23:11:18Z",
+      "updated": "2026-01-16T23:11:18Z",
+      "abs_url": "https://arxiv.org/abs/2601.19943",
+      "pdf_url": "https://arxiv.org/pdf/2601.19943v1",
+      "comment": "15 pages, 5 figures, code available at https://github.com/HowardLiYH/NichePopulation",
+      "journal_ref": "",
+      "keyword_score": 8,
+      "matched_keywords": [
+        "regime",
+        "cryptocurrency"
+      ],
+      "relevance": 7,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "證明競爭足以引發學習者族群的專業化分工，實證廣泛。",
+      "summary": {
+        "title_zh": "學習者群體中的湧現專門化：競爭作為多樣性的來源",
+        "verdict": "透過競爭機制促使學習者群體自動分工，在加密貨幣與商品交易等多個領域中，多樣化群體表現超越傳統基準。",
+        "problem": "學習者群體如何在沒有明確溝通或多樣性誘因的情況下，發展出協調且多樣化的行為？",
+        "method": "提出 NichePopulation 演算法，結合競爭排斥與生態位親和力追蹤。驗證於加密貨幣交易、商品價格等六個真實世界領域。",
+        "findings": "平均專門化指數達 0.75（Cohen's d > 20）。多樣化群體透過分工比同質基準表現高出 +26.5%，且效能為 MARL 基準（QMIX、MAPPO、IQL）的 4.3 倍且速度快 4 倍。",
+        "implication": "此方法可直接應用於量化交易策略的多樣化配置，無須依賴複雜的多代理人強化學習通訊協定。",
+        "caveats": "論文主要展示生態位與競爭帶來的表現提升，但在實際交易成本與高頻資料下的穩定性仍需進一步實證。",
+        "practicality": 4,
+        "tags": [
+          "機器學習",
+          "多代理人系統",
+          "加密貨幣交易",
+          "演算法交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.29347",
+      "title": "Does Regime-Gated Attention Help Stock Return Prediction? A Leakage-Controlled, Pre-Registered Evaluation",
+      "authors": [
+        "Dishan Sarkar"
+      ],
+      "abstract": "Regime-aware attention is an appealing inductive bias for stock-return prediction, but claims about it are rarely tested under leakage-controlled, out-of-sample conditions. We re-examine the Adaptive Financial Transformer (AFT), which biases self-attention with feature-group similarities weighted by gates that a market-regime encoder produces. First, on a single stock under a corrected protocol (aligned and purged windows, identical test dates for all models, cost-aware non-overlapping backtests, five seeds, Diebold-Mariano tests), no learned model beats the historical-mean forecast. The AFT's regime and context components are numerically inert: the learned gates have 0.9982 of maximal entropy, the context bias has 0.020 of the scale of the attention logits, and we show that the product of two simplex-normalised weightings attenuates it by a factor 1/G. Removing these components changes nothing. Second, we build a point-in-time S&P 500 panel (500 stocks, 1,390,254 stock-days) with 63 stationary features whose causality is verified exactly, and evaluate a model zoo and a layered meta-model with yearly walk-forward refits, a development period (2016-2022) and a sealed, pre-registered holdout (2023-2025). Cross-sectional breadth turns weak signals into detectable ones; the AFT is statistically indistinguishable from a vanilla Transformer and less stable than gradient boosting or ridge regression; six learned meta-learners fail to beat an equal-weight rank combination; and a hysteresis rule roughly halves turnover. On the holdout, the pre-registered primary system (21-day horizon) fails (rank IC 0.0003, one-sided p=0.49), whereas the same system at a 5-day horizon, a pre-registered secondary result, attains a rank IC of 0.0172 (one-sided p=0.038) and a net long-short Sharpe ratio of 0.34 at 5 bp per side. Code: https://github.com/Dishan18/FinancialTransformer",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-28T11:33:19Z",
+      "updated": "2026-11-21T23:05:47Z",
+      "abs_url": "https://arxiv.org/abs/2606.29347",
+      "pdf_url": "https://arxiv.org/pdf/2606.29347v2",
+      "comment": "6 pages, 4 tables, 1 figure. v2: substantially revised and retitled. v1 reported results that were not produced by its experiments and used a flawed evaluation protocol (see Appendix A); all results were regenerated with a leakage-controlled, pre-registered evaluation on a point-in-time S&P 500 panel",
+      "journal_ref": "",
+      "keyword_score": 46,
+      "matched_keywords": [
+        "sharpe ratio",
+        "out-of-sample",
+        "backtest",
+        "transformer",
+        "regime",
+        "gradient boosting"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出體制閘控注意力機制的適應性金融變壓器",
+      "summary": {
+        "title_zh": "體制門控注意機制有助於股票報酬預測嗎？一個控制資料洩漏與事前註冊的評估",
+        "verdict": "嚴格控制資料洩漏與過度擬合後，AFT 模型在日線報酬預測上並未擊敗基準，僅在 5 日短天期取得微弱的預測力與夏普值。",
+        "problem": "探討體制感知注意機制在股票報酬預測中的實際效果是否禁得起嚴格的樣本外檢驗，並修正過去研究中可能存在的資料洩漏問題。",
+        "method": "使用 Adaptive Financial Transformer、各種機器學習模型與層疊式元模型，資料涵蓋單一股票及 S&P 500 指數成分股的 500 檔股票、1,390,254 個股票日資料，特徵包含 63 個平穩特徵，開發期為 2016 至 2022 年，並在 2023 至 2025 年進行事前註冊的盲測。",
+        "findings": "單一股票測試中所有學習模型皆無法打敗歷史平均預測，且 AFT 的體制與上下文組件幾乎無效；在 S&P 500 面板資料中，預註冊的主系統（21日預測期）失敗（rank IC 0.0003，p=0.49），而預註冊的次要系統在 5 日預測期達到 rank IC 0.0172（p=0.038），在每邊 5 個基點交易成本下的淨多空夏普值為 0.34。",
+        "implication": "複雜的注意機制在日線預測上未必優於傳統模型，跨股橫斷面廣度比單一股票更能萃取微弱訊號，且必須嚴格控制洩漏與檢驗過擬合。",
+        "caveats": "多數複雜模型在嚴格控制洩漏後表現與簡單基準無異，且有效的天期（5日）夏普值偏低（0.34）。",
+        "practicality": 4,
+        "tags": [
+          "Transformer",
+          "體制轉換",
+          "Alpha 因子挖掘",
+          "機器學習",
+          "預測評估"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2512.05734",
+      "title": "KANFormer for Predicting Fill Probabilities via Survival Analysis in Limit Order Books",
+      "authors": [
+        "Jinfeng Zhong",
+        "Emmanuel Bacry",
+        "Agathe Guilloux",
+        "Jean-François Muzy"
+      ],
+      "abstract": "This paper introduces KANFormer, a novel deep-learning-based model for predicting the time-to-fill of limit orders by leveraging both market- and agent-level information. KANFormer combines a Dilated Causal Convolutional network with a Transformer encoder, enhanced by Kolmogorov-Arnold Networks (KANs), which improve nonlinear approximation. Unlike existing models that rely solely on a series of snapshots of the limit order book, KANFormer integrates the actions of agents related to LOB dynamics and the position of the order in the queue to more effectively capture patterns related to execution likelihood. We evaluate the model using CAC 40 index futures data with labeled orders. The results show that KANFormer outperforms existing works in both calibration (Right-Censored Log-Likelihood, Integrated Brier Score) and discrimination (C-index, time-dependent AUC). We further analyze feature importance over time using SHAP (SHapley Additive exPlanations). Our results highlight the benefits of combining rich market signals with expressive neural architectures to achieve accurate and interpretabl predictions of fill probabilities.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2025-12-05T14:15:02Z",
+      "updated": "2025-12-05T14:15:02Z",
+      "abs_url": "https://arxiv.org/abs/2512.05734",
+      "pdf_url": "https://arxiv.org/pdf/2512.05734v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 40,
+      "matched_keywords": [
+        "limit order book",
+        "order book",
+        "transformer",
+        "futures"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "結合KAN與Transformer預測訂單簿成交機率，使用真實指數期貨資料。",
+      "summary": {
+        "title_zh": "透過生存分析與 KANFormer 預測限價單簿成交機率",
+        "verdict": "提出 KANFormer 結合生存分析預測限價單成交機率，在多項指標上優於現有方法。",
+        "problem": "現有模型僅依賴限價單簿快照序列，忽略委託人行為與訂單佇列位置的影響。這導致預測成交機率的精準度受限。",
+        "method": "使用結合膨脹因果卷積網路、Transformer 編碼器與 KANs 的 KANFormer 模型，以帶標記的 CAC 40 指數期貨訂單資料進行評估。",
+        "findings": "KANFormer 在校準度與區辨度指標上皆優於現有工作，並透過 SHAP 分析特徵重要性，但未報告具體績效數字。",
+        "implication": "能提供準確且具可解釋性的成交機率預測，有助於提升訂單執行的決作品質。",
+        "caveats": "論文僅評估統計指標，未納入交易成本與延遲等實務考量。",
+        "practicality": 4,
+        "tags": [
+          "限價單簿",
+          "生存分析",
+          "深度學習",
+          "演算法交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2604.00346",
+      "title": "Forecasting duration in high-frequency financial data using a self-exciting flexible residual point process",
+      "authors": [
+        "Kyungsub Lee"
+      ],
+      "abstract": "This paper presents a method for forecasting limit order book durations using a self-exciting flexible residual point process. High-frequency events in modern exchanges exhibit heavy-tailed interarrival times, posing a significant challenge for accurate prediction. The proposed approach incorporates the empirical distributional features of interarrival times while preserving the self-exciting and decay structure. This work also examines the stochastic stability of the process, which can be interpreted as a general state-space Markov chain. Under suitable conditions, the process is irreducible, aperiodic, positive Harris recurrent, and has a stationary distribution. An empirical study demonstrates that the model achieves strong predictive performance compared with several alternative approaches when forecasting durations in ultra-high-frequency trading data.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "q-fin.TR",
+        "stat.AP"
+      ],
+      "published": "2026-04-01T00:47:50Z",
+      "updated": "2026-08-18T02:59:11Z",
+      "abs_url": "https://arxiv.org/abs/2604.00346",
+      "pdf_url": "https://arxiv.org/pdf/2604.00346v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 39,
+      "matched_keywords": [
+        "limit order book",
+        "order book",
+        "high-frequency",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "使用自激發殘差點過程預測高頻極限訂單簿持續時間，實證完整。",
+      "summary": {
+        "title_zh": "使用自激發彈性殘差點過程預測高頻金融資料的持續時間",
+        "verdict": "提出自激發彈性殘差點過程來預測極高頻限價單簿的事件間隔時間，實證顯示預測效能優於傳統方法。",
+        "problem": "現代交易所的高頻事件具備厚尾的事件間隔時間特徵，對精準預測構成重大挑戰。",
+        "method": "結合事件間隔時間的經驗分佈特徵與自激發遞減結構，並探討其隨機穩定性（可視為一般狀態空間馬可夫鏈）。資料為極高頻交易資料。",
+        "findings": "在超高頻交易資料的持續時間預測上，該模型相較於數個替代方法展現出強健的預測效能，但論文未報告具體的績效數字。",
+        "implication": "可用於高頻交易的限價單簿動態建模與事件預測，前提是需要正確估計其點過程的參數。",
+        "caveats": "文中未提供具體的交易成本考量與回測績效數字。",
+        "practicality": 3,
+        "tags": [
+          "點過程",
+          "限價單簿",
+          "高頻交易",
+          "統計模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
