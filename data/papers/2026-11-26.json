@@ -1,0 +1,528 @@
+{
+  "date": "2026-11-26",
+  "generated_at": "2026-11-26T13:10:36+08:00",
+  "scanned": 2520,
+  "eligible": 2128,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2611.34209",
+      "title": "Graph-Informed Deep Factor Model for Statistical Arbitrage",
+      "authors": [
+        "Evelyn Zhu",
+        "Mucheng Zhu",
+        "Brendan Martin",
+        "Mihai Cucuringu"
+      ],
+      "abstract": "Statistical arbitrage exploits temporary mispricings between similar assets in the cross-section of daily equity returns. We propose a nonlinear single-factor model, called a Graph-Informed Deep Factor (GIDF) model, whose per-stock loadings have cross-sectional dependence conditional on a latent network. The network captures cross-sectional return dependencies that remain after removing the dominant eigenmodes of the return correlation matrix, thereby providing a complementary representation of inter-asset relationships beyond the leading sources of systematic variation. It is reconstructed from data using a novel method that we call the Factor-Adjusted Dynamic EWMA (FADE). A signed-edge graph attention mechanism then combines the reconstructed network with exogenous firm characteristics and macroeconomic variables. This graph-informed specification is designed to produce residuals that more effectively separate idiosyncratic mean-reverting dynamics from cross-sectional co-movements, yielding economically useful signals for daily statistical arbitrage. In a comprehensive empirical study on daily U.S. equities from 2015 to 2024, GIDF outperforms classical factor models and state-of-the-art deep learning methods, achieving an out-of-sample Sharpe ratio of 1.78 under the canonical Avellaneda--Lee rule.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST"
+      ],
+      "published": "2026-11-25T11:32:29Z",
+      "updated": "2026-11-25T11:32:29Z",
+      "abs_url": "https://arxiv.org/abs/2611.34209",
+      "pdf_url": "https://arxiv.org/pdf/2611.34209v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 72,
+      "matched_keywords": [
+        "statistical arbitrage",
+        "sharpe ratio",
+        "factor model",
+        "out-of-sample",
+        "deep learning",
+        "cross-sectional"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "十年美股實證、夏普值 1.78 合理，方法嚴謹。",
+      "summary": {
+        "title_zh": "用於統計套利之圖形感知深度因子模型",
+        "verdict": "結合圖形注意力與 FADE 的 GIDF 模型，美股日資料實證的樣本外夏普值達 1.78。",
+        "problem": "統計套利需要精確捕捉資產間的暫時性定價錯誤。然而，傳統模型難以有效分離市場共同變動與個別資產的均異回歸動態。",
+        "method": "提出非線性單因子 GIDF 模型，透過 Factor-Adjusted Dynamic EWMA 重建潛在網路，並使用帶符號邊的圖形注意力機制結合企業特徵與總體經濟變數。樣本涵蓋 2015 至 2024 年美國日頻股票。",
+        "findings": "在 Avellaneda-Lee 規則下，GIDF 模型顯著優於傳統因子模型與現有先進深度學習方法。實證結果顯示其樣本外夏普值達到 1.78。",
+        "implication": "該模型能有效產生適用於日常統計套利的經濟訊號，適合具備圖神經網路建模能力的量化團隊進行複製與實作。",
+        "caveats": "實際交易表現仍高度依賴真實市場環境下的交易成本控制與潛在網路重建的穩健性。",
+        "practicality": 5,
+        "tags": [
+          "統計套利",
+          "圖神經網路",
+          "深度學習",
+          "因子模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.20145",
+      "title": "Volatility Forecasts with Market Trends",
+      "authors": [
+        "Sara A. Safari",
+        "Christoph Schmidhuber"
+      ],
+      "abstract": "We show how volatility forecasts for financial markets can be refined by accounting for the current trends in these markets. Empirically, volatilities tend to increase day after day in times of strong up- or down-trends. This effect is particularly pronounced during down-trends. We find that it can accurately be modeled by including quadratic polynomials of the current trend strength as explanatory factors. Such factors can improve the predictive power of a wide range of volatility models, ranging from linear EWMA-based models over GARCH models and range-based models to stochastic volatility models. Our results are based on a robust statistical analysis of three decades of daily futures prices across equity-, bond-, FX- and commodity markets.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST",
+        "cond-mat.stat-mech",
+        "physics.data-an",
+        "q-fin.MF",
+        "q-fin.RM"
+      ],
+      "published": "2026-06-18T12:07:48Z",
+      "updated": "2026-11-25T12:30:26Z",
+      "abs_url": "https://arxiv.org/abs/2606.20145",
+      "pdf_url": "https://arxiv.org/pdf/2606.20145v2",
+      "comment": "Significantly revised version with focus exclusively on volatility forecasting. The empirical analysis has been extended to GARCH- and other models. The key finding about the predictive power of trends remains unchanged. Previous sections on correlations, skewness, and kurtosis have been removed. 32 pages, 5 figures",
+      "journal_ref": "",
+      "keyword_score": 9,
+      "matched_keywords": [
+        "futures"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "三十年期貨資料，實證市場趨勢對波動預測的改善。",
+      "summary": {
+        "title_zh": "結合市場趨勢的波動度預測",
+        "verdict": "將趨勢強度的二次多項式加入波動度模型，能有效提升跨資產類別的預測準確度。",
+        "problem": "傳統波動度預測模型未充分考慮市場趨勢對波動度的影響，尤其在強烈多頭或空頭期間表現受限。",
+        "method": "使用跨越三十年的權益類、債券、外匯與大宗商品市場的日頻期貨價格資料。方法涵蓋將趨勢強度的二次多項式作為解釋變數，並應用於 EWMA、GARCH、區間基底模型及隨機波動度模型中。",
+        "findings": "實證顯示，在強烈上下趨勢中波動度會持續放大，且在空頭趨勢時此效應特別顯著。加入趨勢因子後，各類傳統波動度模型的預測能力皆有顯著提升，論文未報告具體的數值績效指標。",
+        "implication": "交易員可直接將趨勢因數納入現有的波動度預測架構中，以改善風險管理與選擇權訂價品質。",
+        "caveats": "論文主要基於日頻期貨價格進行統計分析，未明確探討高頻資料下的適用性與實際交易成本。",
+        "practicality": 4,
+        "tags": [
+          "波動度預測",
+          "GARCH模型",
+          "趨勢分析",
+          "風險管理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.14733",
+      "title": "WaVeFuse: Regime-Adaptive Equity Index Forecasting via Channel-Wise Wavelet Denoising and Vertical Attention Fusion",
+      "authors": [
+        "Aashish Bohra",
+        "Vivek Vijay"
+      ],
+      "abstract": "Hybrid Deep Learning for equity index forecasting is limited by three problems: propagation of OHLCV noise into derived technical indicators (TIs), channel-indiscriminate multi-scale decomposition that conflates heterogeneous frequency signatures, and static multi-branch fusion that cannot adapt to market regime shifts. WaVeFuse addresses these limitations through a unified dual-branch architecture. Symlet-4 wavelet denoising (level 2, MAD soft threshold) suppresses microstructure noise in OHLCV. Seven low-lag TIs computed from denoised prices are encoded by a causal channel-wise continuous wavelet transform (Morlet, 32 scales) into a per-timestep scale-space matrix. A CNN-BiLSTM branch captures temporal dynamics, while a dual-layer Transformer (heads=4, dk in {16, 32}) models inter-scale spectral dependencies, and their representations are integrated by a 2-token softmax gate Vertical Attention Fusion (VAF) that dynamically reweights branches as market regimes shift. Evaluated under walk-forward validation (WFV) on KOSPI, DAX, NYSE Composite, and Russell 2000 (2010-2023), WaVeFuse achieves R2 = 0.81-0.96 and directional accuracy 70.5-78.3%. It outperforms seven state-of-the-art models by 8.9-20.2% MAE across twelve dataset-period configurations. Diebold-Mariano statistics (4.62-10.38, p<0.001) confirm superiority over a well-tuned XGBoost benchmark across four indices. Ablation verifies component-wise contributions. Under realistic backtesting with 10 basis point transaction costs, WaVeFuse's directional strategy achieves a mean Sharpe ratio of 3.69 across four markets and limits maximum drawdown to 7.5% during the COVID-19 crash. With 152k parameters (0.68MB) and sub-1.3ms GPU inference, WaVeFuse delivers a computationally efficient, regime-robust framework suitable for research and decision-support deployment.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-fin.ST"
+      ],
+      "published": "2026-09-13T18:50:33Z",
+      "updated": "2026-09-13T18:50:33Z",
+      "abs_url": "https://arxiv.org/abs/2609.14733",
+      "pdf_url": "https://arxiv.org/pdf/2609.14733v1",
+      "comment": "40 pages, 13 Figures, 15 Tables, Preprint, Under Review",
+      "journal_ref": "",
+      "keyword_score": 42,
+      "matched_keywords": [
+        "sharpe ratio",
+        "transaction cost",
+        "backtesting",
+        "transformer",
+        "drawdown",
+        "deep learning"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "小波去雜訊結合注意力機制預測指數，實證完整",
+      "summary": {
+        "title_zh": "WaVeFuse：透過通道化小波去噪與垂直注意力融合的體制自適應權益指數預測",
+        "verdict": "結合小波去噪、連續小波轉換與動態門控融合，在四大指數實測中交出優異預測表現與 3.69 的夏普值。",
+        "problem": "現有深度學習模型預測權益指數時，面臨 OHLCV 雜訊汙染技術指標、跨通道多尺度分解混淆異質頻率特徵，以及靜態多分支融合無法適應市場體制轉換等三大問題。",
+        "method": "使用 Symlet-4 小波去噪處理日資料與高頻特徵，並透過因果通道化連續小波轉換與 Morlet 小波編碼尺度空間矩陣。結合 CNN-BiLSTM 捕捉時間動態、雙層 Transformer 模型處理頻譜相依性，再以垂直注意力融合機制動態調整分支權重。評估涵蓋 KOSPI、DAX、NYSE Composite 與 Russell 2000 指數（2010至2023年）的逐步向前驗證。",
+        "findings": "在各資料集配置中達成 R2 為 0.81 至 0.96、方向準確率 70.5% 至 78.3%，MAE 較七個先進模型最佳化 8.9% 至 20.2%。在 10 個基點交易成本的真實回測下，方向策略平均夏普值達 3.69，且在新冠疫情崩盤期間最大回檔限制在 7.5%。",
+        "implication": "模型僅有 15.2 萬個參數且 GPU 推論時間小於 1.3 毫秒，具備高運算效率與體制強健性，非常適合直接部署於研究與決策支援。",
+        "caveats": "回測假設 10 個基點交易成本，但在流動性較差的市場中實際執行摩擦可能更高。",
+        "practicality": 5,
+        "tags": [
+          "深度學習",
+          "指數預測",
+          "小波去噪",
+          "市場微結構",
+          "注意力機制"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.00060",
+      "title": "Machine Learning-Based Bitcoin Trading Under Transaction Costs: Evidence From Walk-Forward Forecasting",
+      "authors": [
+        "Andrei Bysik",
+        "Robert Ślepaczuk"
+      ],
+      "abstract": "This paper investigates whether machine learning forecasts of hourly BTC-USDT returns can be converted into economically meaningful trading performance after transaction costs. Using approximately 70,000 hourly observations from 2018-2026, XGBoost, LSTM, and iTransformer are evaluated in a 27-fold walk-forward protocol. All three models produce positive gross trading performance in selected configurations, but naive sign-based strategies fail once transaction costs of ten basis points are imposed. A cost-aware execution filter, which prevents trades only when the forecast magnitude exceeds a transaction-cost-based threshold, sharply reduces turnover and restores profitability in selected configurations. The strongest long-only XGBoost strategy produces annualised returns above 65% with a Sharpe ratio above one. Additional tests show that technical indicators improve performance in selected cases, EGARCH-derived features do not provide uniformly robust gains, and XGBoost is descriptively stronger than the neural alternatives, although bootstrap evidence does not support formal statistical dominance. Loss-function and model-selection effects are secondary and statistically fragile. The results show that the main obstacle in hourly cryptocurrency trading is not only weak predictability, but also the way forecasts are converted into trades.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "cs.CE",
+        "cs.LG"
+      ],
+      "published": "2026-05-19T14:30:49Z",
+      "updated": "2026-05-19T14:30:49Z",
+      "abs_url": "https://arxiv.org/abs/2606.00060",
+      "pdf_url": "https://arxiv.org/pdf/2606.00060v1",
+      "comment": "42 pages,",
+      "journal_ref": "",
+      "keyword_score": 41,
+      "matched_keywords": [
+        "sharpe ratio",
+        "transaction cost",
+        "cryptocurrency",
+        "bitcoin"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "評估成本對比特幣機器學習交易影響，實證扎實",
+      "summary": {
+        "title_zh": "基於機器學習與交易成本的比特幣交易：來自步進式滾動預測的實證",
+        "verdict": "導入成本過濾機制後，機器學習模型在比特幣小時頻率交易中可轉為獲利。",
+        "problem": "傳統機器學習的比特幣報酬率預測模型，在計入交易成本後往往無法獲利。本研究探討如何克服此障礙並轉化為實際交易表現。",
+        "method": "使用 2018 至 2026 年約 70,000 筆 BTC-USDT 小時資料，在 27 折步進式滾動框架下評估 XGBoost、LSTM 與 iTransformer。同時測試了技術指標與 EGARCH 特徵的影響。",
+        "findings": "納入 10 個基點交易成本後基礎策略失效，但成本感知過濾器能大幅降低週轉率並恢復獲利。最強的長倉 XGBoost 策略年化報酬率超過 65%，夏普值大於 1。",
+        "implication": "加密貨幣交易的核心障礙在於預測轉換為交易的方式，此成本過濾機制可有效應用於高週轉策略。",
+        "caveats": "拔靴檢定顯示 XGBoost 並未對神經網路展現出形式上的絕對統計優勢。",
+        "practicality": 4,
+        "tags": [
+          "機器學習",
+          "加密貨幣",
+          "交易成本",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2601.17245",
+      "title": "Pregeometric Origins of Liquidity Geometry in Financial Order Books",
+      "authors": [
+        "João P. da Cruz"
+      ],
+      "abstract": "We propose a structural framework for the geometry of financial order books in which liquidity, supply, and demand are treated as emergent observables rather than primitive economic variables. The market is modeled as an inflationary relational system without assumed metric, temporal, or price coordinates. Observable quantities arise only through projection, implemented here via spectral embeddings of the graph Laplacian. A one-dimensional projection induces a price-like coordinate, while the projected density defines liquidity profiles around the mid price. Under a minimal single-scale hypothesis -- excluding intrinsic length scales beyond distance to the mid and finite visibility -- we show that projected supply and demand are constrained to gamma-like functional forms. In discrete data, this prediction translates into integrated-gamma cumulative profiles. We test these results using high-frequency Level~II data for several U.S. equities and find robust agreement across assets and intraday windows. Explicit comparison with alternative cumulative models using information criteria demonstrates a systematic preference for the integrated-gamma geometry. A minimal simulation of inflationary relational dynamics reproduces the same structure without invoking agent behavior or price formation mechanisms. These results indicate that key regularities of order-book liquidity reflect geometric constraints induced by observation rather than detailed microstructural dynamics. Supplementary Material is available at the arXiv submission.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR",
+        "physics.soc-ph"
+      ],
+      "published": "2026-01-24T00:42:11Z",
+      "updated": "2026-01-24T00:42:11Z",
+      "abs_url": "https://arxiv.org/abs/2601.17245",
+      "pdf_url": "https://arxiv.org/pdf/2601.17245v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 39,
+      "matched_keywords": [
+        "order book",
+        "high-frequency",
+        "liquidity"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探討訂單簿流動性幾何結構的預幾何起源，利用高等美國股票高頻資料。",
+      "summary": {
+        "title_zh": "金融限價單簿中流動性幾何的前幾何起源",
+        "verdict": "證明限價單簿流動性分佈源自觀測的幾何約束，其累積特徵符合積分伽瑪分佈。",
+        "problem": "探討限價單簿的流動性、供給與需求是否能從無先驗座標的關聯系統中自然湧現，而非視為原始經濟變數。",
+        "method": "以圖拉普拉斯算子的頻譜嵌入建立關聯系統，透過單一尺度假設推導出伽瑪函數型態。使用美國股票高頻 Level II 資料進行實證與資訊準則比較。",
+        "findings": "實證顯示累積流動性曲線系統性地偏好積分伽瑪幾何，且微觀模擬亦能重現此結構。論文未報告具體績效數字。",
+        "implication": "提供不需依賴代理人行為或價格形成機制的流動性建模方式，有助於更穩健的限價單簿曲線擬合。",
+        "caveats": "屬於方法論與結構性觀察，離實際交易應用與具體獲利策略尚有距離。",
+        "practicality": 2,
+        "tags": [
+          "限價單簿",
+          "流動性幾何",
+          "市場微結構",
+          "圖拉普拉斯算子"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.06610",
+      "title": "Deep Reinforcement Learning for Reliability Based Bi-Objective Portfolio Optimization",
+      "authors": [
+        "Sounaq Das",
+        "Tanmay Sen",
+        "Raghu Nandan Sengupta",
+        "Aditya Gupta"
+      ],
+      "abstract": "Portfolio optimization under uncertainty is inherently a multi-objective decision problem involving complex interactions among return, risk, market dynamics, and practical investment constraints. Existing reliability based portfolio optimization approaches primarily rely on static optimization frameworks and often fail to capture sequential decision making, tail risk, and market frictions such as transaction costs. To address these limitations, we propose a deep reinforcement learning framework for multi-objective reliability based portfolio optimization (MORP-DRL). The proposed framework jointly optimizes expected return and downside risk using three complementary risk measures: variance, Conditional Value-at-Risk (CVaR), and Entropic Value-at-Risk (EVaR). To model uncertainty and heavy-tailed market behavior, asset returns are represented using GARCH(1,1), Extreme Value Theory, and a t-copula dependence structure, while realistic scenarios are generated through quasi-Monte Carlo simulation. A Proximal Policy Optimization (PPO) based strategy is developed under practical constraints including transaction costs and portfolio bounds, and is benchmarked against NSGA-II. Experiments on ten global equity indices across pre-COVID, COVID, and post-COVID market regimes demonstrate that MORP-DRL achieves competitive risk-return performance, reduced downside risk during periods of market stress, and scalability to high-dimensional portfolio settings.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.OC"
+      ],
+      "published": "2026-07-07T06:24:32Z",
+      "updated": "2026-07-07T06:24:32Z",
+      "abs_url": "https://arxiv.org/abs/2607.06610",
+      "pdf_url": "https://arxiv.org/pdf/2607.06610v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 38,
+      "matched_keywords": [
+        "reinforcement learning",
+        "portfolio optimization",
+        "transaction cost",
+        "regime"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出深度強化學習進行多目標信賴導向投組最佳化，並考量極端風險。",
+      "summary": {
+        "title_zh": "基於深度強化學習的可靠度雙目標投資組合最佳化",
+        "verdict": "提出基於深度強化學習的雙目標投資組合最佳化框架，有效降低尾端風險。",
+        "problem": "現有基於可靠度的投資組合最佳化多依賴靜態框架，無法捕捉動態序列決策、尾端風險與市場摩擦。因此需要能處理不確定性與交易成本的動態方法。",
+        "method": "提出 MORP-DRL 框架並採用 PPO 策略，透過 GARCH(1,1)、極值理論與 t-copula 建立資產報酬與不確定性模型。資料涵蓋十個全球股票指數在疫情前後的多個市場體制。",
+        "findings": "實驗顯示 MORP-DRL 取得具競爭力的風險報酬表現，並能在市場壓力期間降低尾端風險、具備高維擴展性，但論文未報告具體績效數字。",
+        "implication": "可用於考量尾端風險與交易成本的動態資產配置，前提是須具備穩健的情境生成與模擬管線。",
+        "caveats": "模型表現高度依賴模擬情境的準確度。",
+        "practicality": 4,
+        "tags": [
+          "強化學習",
+          "投資組合最佳化",
+          "CVaR",
+          "風險管理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.09576",
+      "title": "Anomaly detection in European cryptocurrency exchange-traded products",
+      "authors": [
+        "Julia Kończal",
+        "Rafał Połoczański"
+      ],
+      "abstract": "Cryptocurrency exchange-traded products (ETPs) listed on European exchanges provide a regulated environment for studying intraday market anomalies. We study four Bitcoin and Ethereum ETPs traded on Xetra and Nasdaq Stockholm over the period January 2024 - December 2025 using one-minute bars. As a benchmark, we adopt an extreme value theory approach in which anomalous bars are defined as returns falling below a threshold estimated by fitting a generalised Pareto distribution to left-tail exceedances. We then propose three new binary anomaly indicators. The first, a cross-venue divergence anomaly, identifies venue-specific price divergence between the two exchanges. The second is a no-recovery anomaly that identifies extreme price drops followed by little or no recovery over the next ten active bars. The third is a momentum-reversal anomaly that identifies extreme price drops following positive short-term momentum. Although each anomaly type represents fewer than 1% of one-minute bars, statistical analysis using Mann-Whitney U tests shows that anomaly observations exhibit significantly higher effective spreads, higher values of liquidity-related ratios, and more pronounced order-flow imbalances than non-anomalous bars. Furthermore, employing an out-of-sample prediction methodology with four classifiers - random forest, logistic regression, extreme gradient boosting, and light gradient boosting machine - shows that all four anomaly types are predictable one bar ahead, with AUC-ROC values of up to 0.82. Permutation importance indicates that short-term volatility and drawdown measures are generally more useful for prediction than microstructure variables.",
+      "primary_category": "q-fin.MF",
+      "categories": [
+        "q-fin.MF"
+      ],
+      "published": "2026-08-10T13:11:31Z",
+      "updated": "2026-08-10T13:11:31Z",
+      "abs_url": "https://arxiv.org/abs/2608.09576",
+      "pdf_url": "https://arxiv.org/pdf/2608.09576v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 37,
+      "matched_keywords": [
+        "out-of-sample",
+        "momentum",
+        "drawdown",
+        "liquidity",
+        "gradient boosting",
+        "cryptocurrency"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "研究歐洲加密貨幣ETP的日內市場異常現象，資料明確且分類檢定完整。",
+      "summary": {
+        "title_zh": "歐洲加密貨幣交易所交易產品的異常偵測",
+        "verdict": "提出三個新的二元異常指標，並證實一分鐘頻率的加密貨幣 ETP 異常可透過機器學習模型在一個 bar 前預測。",
+        "problem": "歐洲交易所的加密貨幣 ETP 存在盤中市場異常，需要系統性地辨識與預測這些低頻率的微結構異常事件。",
+        "method": "使用 Xetra 與納斯達克斯德哥爾摩交易所 2024 年 1 月至 2025 年 12 月期間四檔比特幣與以太幣 ETP 的一分鐘 K 線資料。比較極值理論基準模型與所提出的三種二元異常指標（跨市場分歧、無反彈、動量反轉），並使用隨機森林、羅吉斯迴歸、XGBoost 與 LightGBM 四種分類器進行樣本外預測。",
+        "findings": "各類異常占不到一分鐘 K 線的 1%，但 Mann-Whitney U 檢定顯示異常時的有效價差、流動性比率顯著較高且訂單流不平衡更明顯。四種分類器皆能提前一個 bar 預測各類異常，AUC-ROC 值最高可達 0.82，特徵重要性分析顯示短期波動度與回撤指標比微結構變數更有助於預測。",
+        "implication": "交易員可利用短期波動度與回撤特徵搭配機器學習模型，在極端價格行為發生前進行預測以調整造市或風控策略。前提是需要取得乾淨的跨交易所一分鐘高頻資料。",
+        "caveats": "異常發生的樣本比例極低（小於 1%），分類器在實際交易中的真實損益與交易成本影響仍待驗證。",
+        "practicality": 4,
+        "tags": [
+          "異常偵測",
+          "加密貨幣",
+          "微結構",
+          "機器學習"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2603.17692",
+      "title": "Can Blindfolded LLMs Still Trade? An Anonymization-First Framework for Portfolio Optimization",
+      "authors": [
+        "Joohyoung Jeon",
+        "Hongchul Lee"
+      ],
+      "abstract": "For LLM trading agents to be genuinely trustworthy, they must demonstrate understanding of market dynamics rather than exploitation of memorized ticker associations. Building responsible multi-agent systems demands rigorous signal validation: proving that predictions reflect legitimate patterns, not pre-trained recall. We address two sources of spurious performance: memorization bias from ticker-specific pre-training, and survivorship bias from flawed backtesting. Our approach is to blindfold the agents--anonymizing all identifiers--and verify whether meaningful signals persist. BlindTrade anonymizes tickers and company names, and four LLM agents output scores along with reasoning. We construct a GNN graph from reasoning embeddings and trade using PPO-DSR policy. On 2025 YTD (through 2025-08-01), we achieved Sharpe 1.40 +/- 0.22 across 20 seeds and validated signal legitimacy through negative control experiments. To assess robustness beyond a single OOS window, we additionally evaluate an extended period (2024--2025), revealing market-regime dependency: the policy excels in volatile conditions but shows reduced alpha in trending bull markets.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "q-fin.CP",
+        "q-fin.PM"
+      ],
+      "published": "2026-03-18T13:09:11Z",
+      "updated": "2026-03-18T13:09:11Z",
+      "abs_url": "https://arxiv.org/abs/2603.17692",
+      "pdf_url": "https://arxiv.org/pdf/2603.17692v1",
+      "comment": "Accepted at the ICLR 2026 Workshop on Advances in Financial AI (FinAI). 18 pages, 7 figures",
+      "journal_ref": "",
+      "keyword_score": 37,
+      "matched_keywords": [
+        "portfolio optimization",
+        "backtesting",
+        "llm",
+        "regime",
+        "alpha"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "匿名化 LLM 投資組合，夏普 1.4",
+      "summary": {
+        "title_zh": "矇眼 LLM 還能交易嗎？用於投資組合最佳化的去識別化優先框架",
+        "verdict": "透過將代號去識別化與圖神經網路結合，消除模型記憶偏誤，在 2025 年初至 8 月的測試中達成 1.40 的夏普值。",
+        "problem": "LLM 交易代理人常利用預訓練時對特定代號的記憶與倖存者偏差來產生虛假績效，而非真正理解市場動態。",
+        "method": "使用 BlindTrade 框架將代號與公司名稱匿名化，由四個 LLM 代理人輸出分數與推論，利用推論嵌入建構 GNN 圖並採用 PPO-DSR 策略。資料涵蓋 2025 年初至 2025-08-01 及 2024-2025 年的延伸期間。",
+        "findings": "在 20 種隨機種子測試下達到夏普值 1.40 +/- 0.22，透過負控制實驗驗證了訊號的合法性。延伸期間評估顯示其在波動市場表現優秀，但在盤整或強勢多頭市場中 Alpha 降低，具備體制轉換相依性。",
+        "implication": "此方法能有效過濾掉基於記憶的虛假績效，適用於需要高信賴度的多代理人投資組合系統。實作時需注意其在強勢多頭市場中超額報酬表現較差。",
+        "caveats": "策略在強勢多頭市場中的 Alpha 表現有限，且未明確提及交易成本的扣除狀況。",
+        "practicality": 4,
+        "tags": [
+          "LLM",
+          "投資組合最佳化",
+          "圖神經網路",
+          "強化學習",
+          "量化交易"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2606.07059",
+      "title": "Diffusive in plain sight: An inconspicuous law of market impact",
+      "authors": [
+        "Julius F. Bonart"
+      ],
+      "abstract": "Decomposing market impact as the difference between realized and counterfactual returns, and requiring both to be diffusive, yields a structural identity that restricts admissible impact dynamics at the level of individual participants. This constraint implies the square-root law in the information-neutral regime and a crossover toward linear impact under strong informational coupling, consistent with empirical observations. It further implies that impact must adapt to each participant's order-flow statistics, with consequences for theories of optimal execution and no-arbitrage. In the information-neutral regime, cumulative impact is itself diffusive, providing a diagnostic that many propagator and latent-liquidity models fail to satisfy. Under this regime, market impact retains an undetermined all-pass degree of freedom that prevents its reduction to a pure surprise model. This residual freedom accommodates transient impact dynamics and can generate strictly positive impact costs. Keywords: Market impact, Price impact, Square-root law, Optimal execution, Arbitrage, Latent liquidity, Metaorder",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-06-05T09:00:19Z",
+      "updated": "2026-10-24T16:40:16Z",
+      "abs_url": "https://arxiv.org/abs/2606.07059",
+      "pdf_url": "https://arxiv.org/pdf/2606.07059v6",
+      "comment": "To be published in Quantitative Finance",
+      "journal_ref": "",
+      "keyword_score": 36,
+      "matched_keywords": [
+        "optimal execution",
+        "price impact",
+        "regime",
+        "liquidity",
+        "empirical"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "理論或工具",
+      "relevance_reason": "推導市場衝擊的結構性恆等式，理論推導嚴謹。",
+      "summary": {
+        "title_zh": "隱而顯現的擴散：市場衝擊的不顯眼法則",
+        "verdict": "透過分解市場衝擊並要求其具備擴散性，推導出限制參與者衝擊動態的結構性恆等式，成功解釋平方根定律。",
+        "problem": "如何從理論上統一解釋市場衝擊的平方根定律以及在強資訊耦合下的線性衝擊過渡現象。",
+        "method": "建構將實現報酬與反事實報酬之差視為市場衝擊的模型，探討個體參與者的訂單流統計特性與無套利條件。",
+        "findings": "在資訊中立體制下，此模型導出平方根定律，且累積衝擊本身具備擴散性，同時能容納暫態衝擊動態並產生嚴格為正的衝擊成本，論文未報告具體績效數字。",
+        "implication": "可用於最佳化執行策略與無套利理論的建構，但需要根據各參與者的訂單流統計特性進行適應性調整。",
+        "caveats": "模型在資訊中立體制下保留了未確定的全通自由度，可能無法簡化為純粹的驚奇模型。",
+        "practicality": 2,
+        "tags": [
+          "市場衝擊",
+          "平方根定律",
+          "最佳執行",
+          "無套利",
+          "潛在流動性"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2605.24564",
+      "title": "Summoning the Oracle to Slay It: Mitigating Look-Ahead Bias in Financial Backtesting with Large Language Models",
+      "authors": [
+        "Weixian Waylon Li",
+        "Mengyu Wang",
+        "Tiejun Ma"
+      ],
+      "abstract": "Backtesting large language models (LLMs) on historical financial data is unreliable when their pre-training data include the evaluated events. An LLM trained in 2024 may already encode how stocks moved during 2018-2020. We name this failure parametric look-ahead bias and propose FinCAD, an inference-time adaptation of Context-Aware Decoding that attenuates contributions from memorised historical outcomes without retraining. FinCAD pairs an adversarial bias-discovery pipeline that learns a model-specific memory-activating prior prompt with an entity- and date-adaptive rule that scales the CAD strength using a per-(entity, date) confidence signal. Across five 7-14B LLMs and five mega-cap equities, the largest model-level mean in-sample return correction is -67.1%. For the three larger models, 2025 out-of-sample returns remain within $8K and mean Sharpe within $\\pm$0.10 of baseline; mean general-benchmark accuracy remains positive or within -1.7 points for four of five models. On an eleven-model leaderboard, FinCAD raises the subset-averaged in-sample/out-of-sample Spearman correlation from +0.779 to +0.846, yielding rankings that are more closely aligned with post-cutoff performance.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CE",
+        "cs.LG"
+      ],
+      "published": "2026-05-23T12:57:18Z",
+      "updated": "2026-08-29T15:11:57Z",
+      "abs_url": "https://arxiv.org/abs/2605.24564",
+      "pdf_url": "https://arxiv.org/pdf/2605.24564v2",
+      "comment": "EMNLP 2026, Main Conference",
+      "journal_ref": "",
+      "keyword_score": 36,
+      "matched_keywords": [
+        "out-of-sample",
+        "backtesting",
+        "llm",
+        "large language model",
+        "stock"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "緩和 LLM 回測前視偏誤，EMNLP 2026",
+      "summary": {
+        "title_zh": "召喚神諭以斬殺神諭：利用大型語言模型緩解財務回測中的前瞻偏差",
+        "verdict": "提出 FinCAD 推論時適應方法，消除 LLM 記憶歷史資料造成的參數前瞻偏差，使回測結果更貼近真實表現。",
+        "problem": "LLM 預訓練資料常包含評估期間的歷史事件，導致回測時產生嚴重的參數前瞻偏差。",
+        "method": "使用 FinCAD（Context-Aware Decoding 的推論時適應方法），結合對抗性偏差發現管線與實體暨日期自適應規則。測試 5 個 7B 至 14B 的 LLM 與 5 檔大型權值股。",
+        "findings": "最大模型層級的樣本內平均報酬修正幅度達 -67.1%。對於較大的三個模型，2025 年樣本外報酬與基準差距在 8K 美元以內，平均夏普值差距在 $\\pm$0.10 以內。在 11 個模型的排行榜上，將樣本內與樣本外的 Spearman 相關係數從 +0.779 提升至 +0.846。",
+        "implication": "可用於修正基於 LLM 的歷史回測績效，提升策略排名與實際發布後表現的一致性，且無需重新訓練模型。",
+        "caveats": "需要額外的對抗性偏差發現管線與信心訊號計算，增加了推論時的複雜度。",
+        "practicality": 4,
+        "tags": [
+          "大型語言模型",
+          "回測",
+          "前瞻偏差",
+          "推論最佳化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}

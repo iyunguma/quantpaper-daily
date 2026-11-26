@@ -1,0 +1,327 @@
+{
+  "date": "2026-11-26",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2611.34209",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 9,
+      "value": 8,
+      "reason": "十年美股實證、夏普值 1.78 合理，方法嚴謹。"
+    },
+    {
+      "arxiv_id": "2603.22305",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "中文 ETF 競賽綜述，提供基準與實質發現。"
+    },
+    {
+      "arxiv_id": "2611.34171",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "對四大投組權重進行等級規模分析，方法扎實。"
+    },
+    {
+      "arxiv_id": "2611.34771",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "碳交易結構模型，以歐洲電力公司校準，實證合理。"
+    },
+    {
+      "arxiv_id": "2611.34567",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 7,
+      "reason": "推導高斯伏特拉行程的短期大偏差，理論嚴謹。"
+    },
+    {
+      "arxiv_id": "2606.20145",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "三十年期貨資料，實證市場趨勢對波動預測的改善。"
+    },
+    {
+      "arxiv_id": "2601.02276",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 6,
+      "reason": "建構多重違約風險下的前瞻效用，數學推導完整。"
+    },
+    {
+      "arxiv_id": "2512.20027",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "以 GIF 情緒做為投資人情緒代理變數，有顯著預測力。"
+    },
+    {
+      "arxiv_id": "2601.00815",
+      "topic": "波動度與衍生品",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "擴展 Heston 模型的幾乎精確模擬，數值實驗驗證效率。"
+    },
+    {
+      "arxiv_id": "2512.14615",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "拓撲資料分析應用於以太坊網路異常偵測與預測。"
+    },
+    {
+      "arxiv_id": "2512.17945",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "五個公開資料集評估信用違約預測的單調性約束成本。"
+    },
+    {
+      "arxiv_id": "2512.11976",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "對去中心化信貸的風險策展進行實證對標分析。"
+    },
+    {
+      "arxiv_id": "2512.10823",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "統一債券與股票市場的隱含殖利率曲線，視角新穎。"
+    },
+    {
+      "arxiv_id": "2512.07787",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 6,
+      "reason": "研究 VaR 極端情形下的次可加性與條件，理論嚴謹。"
+    },
+    {
+      "arxiv_id": "2512.03922",
+      "topic": "波動度與衍生品",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 5,
+      "reason": "評估 Heston 校準的共演化框架，分析過擬合與多樣性。"
+    },
+    {
+      "arxiv_id": "2512.00280",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "結合財報公告與散戶投資期限，實證具備經濟意義。"
+    },
+    {
+      "arxiv_id": "2611.34192",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 4,
+      "value": 6,
+      "reason": "刻劃動態風險衡量標準的時間一致性，推導嚴謹。"
+    },
+    {
+      "arxiv_id": "2611.15211",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "提出低成本標準年金支付流設計，數學理論扎實。"
+    },
+    {
+      "arxiv_id": "2611.08968",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 7,
+      "reason": "以勞合社資料估計保險準備金情境轉移，實證扎實。"
+    },
+    {
+      "arxiv_id": "2611.07110",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "將信用加權與分群結合自動化人壽保險費率調整。"
+    },
+    {
+      "arxiv_id": "2611.04826",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出安全投資組合學習架構以應對不可信預測。"
+    },
+    {
+      "arxiv_id": "2610.42119",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 8,
+      "reason": "應用泛函張量火車求解高階希臘字母，計算效率高。"
+    },
+    {
+      "arxiv_id": "2610.36476",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "稽核順序交易代理人的行為一致性，實證框架完整。"
+    },
+    {
+      "arxiv_id": "2610.32959",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "研究監管不確定性下的最佳集體投資與福利損失。"
+    },
+    {
+      "arxiv_id": "2610.28847",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 7,
+      "reason": "將阻尼 sinc 方法擴展至 3/2 等非仿射隨機波動模型。"
+    },
+    {
+      "arxiv_id": "2610.21867",
+      "topic": "造市與微結構",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "稽核 Q-learning 定價代理人的演算法合謀懲罰機制。"
+    },
+    {
+      "arxiv_id": "2610.21447",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "研究均異歸返市場中資訊延遲對長期投資的影響。"
+    },
+    {
+      "arxiv_id": "2610.21196",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 7,
+      "reason": "利用 Gittins 指數刻劃期貨合約的月底選擇權。"
+    },
+    {
+      "arxiv_id": "2610.19254",
+      "topic": "波動度與衍生品",
+      "evidence": "只有模擬資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "提出結構化條件神經求解器求解 Heston 偏微分方程。"
+    },
+    {
+      "arxiv_id": "2610.18823",
+      "topic": "其他",
+      "evidence": "理論或工具",
+      "relevance": 3,
+      "value": 5,
+      "reason": "賽局模型探討荷姆茲海峽過路費與航運攻擊之互補性。"
+    },
+    {
+      "arxiv_id": "2610.16800",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "開源機器學習與計量經濟學應用程式設計與驗證。"
+    },
+    {
+      "arxiv_id": "2610.14584",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "探討條件常態化流在殖利率曲線情境的尾部不穩定性。"
+    },
+    {
+      "arxiv_id": "2610.11822",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "推導橢圓分佈加權選擇的隨機表示與基金分離。"
+    },
+    {
+      "arxiv_id": "2610.09622",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 7,
+      "reason": "解決 Wasserstein 不確定性下的穩健失真風險度量。"
+    },
+    {
+      "arxiv_id": "2610.05926",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "比較信用卡違約損失率的羅盤與迴歸模型，實證扎實。"
+    },
+    {
+      "arxiv_id": "2610.01955",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "透過強化學習訓練代理人進行預測與網路搜尋。"
+    },
+    {
+      "arxiv_id": "2610.01348",
+      "topic": "回測與研究方法",
+      "evidence": "只有模擬資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出模組化代理人的基於證據驗證稽核框架。"
+    },
+    {
+      "arxiv_id": "2610.00951",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "建立極端商品期貨價格的迴饋模型，解釋負油價。"
+    },
+    {
+      "arxiv_id": "2609.39569",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 7,
+      "reason": "開發具備配偶保護機制的壽金神經網路最佳化模型。"
+    },
+    {
+      "arxiv_id": "2609.37903",
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "探討日內訂單簿資訊與失衡價格形成的跨市場互動。"
+    }
+  ]
+}
