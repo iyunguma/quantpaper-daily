@@ -1,0 +1,483 @@
+{
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T13:05:43+08:00",
+  "scanned": 2508,
+  "eligible": 2106,
+  "lookback_days": 365,
+  "ranking": "llm",
+  "summary_model": "gemini-3.5-flash-lite",
+  "summary_source": "abstract",
+  "papers": [
+    {
+      "arxiv_id": "2608.23393",
+      "title": "KellyBoost: Growth-Optimal Portfolio Construction with Gradient-Boosted Trees",
+      "authors": [
+        "Jiayu Li"
+      ],
+      "abstract": "KellyBoost is a single multi-output XGBoost model whose softmax output is the portfolio: with y the vector of per-asset holding-period returns, the training loss is - log(1 + w y), the negative log growth rate, so the fitted model is the growth-optimal (Kelly) allocation conditioned on the features. The objective is exact rather than a surrogate: we derive the gradient, the analytic diagonal Hessian and the full Hessian in closed form, verify them by finite differences, and ship a dependency-free reference engine.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "cs.LG"
+      ],
+      "published": "2026-08-24T15:38:36Z",
+      "updated": "2026-08-24T15:38:36Z",
+      "abs_url": "https://arxiv.org/abs/2608.23393",
+      "pdf_url": "https://arxiv.org/pdf/2608.23393v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 7,
+      "matched_keywords": [],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "理論或工具",
+      "relevance_reason": "提出梯度提升樹的凱利最佳化投資組合建構，目標函數嚴謹且開源。",
+      "summary": {
+        "title_zh": "KellyBoost：利用梯度提升樹建構成長最佳化投資組合",
+        "verdict": "以 XGBoost 直接最佳化 Kelly 成長率，無需替代損失函數，提供高效能且相依性極低的實作引擎。",
+        "problem": "傳統機器學習模型在建構投資組合時多採用替代損失函數，未能直接針對成長最佳化（Kelly 準則）進行訓練。同時，直接將 Kelly 準則結合樹狀模型缺乏解析解的梯度與 Hessian 推導。",
+        "method": "使用單一多輸出 XGBoost 模型，以每項資產持有期報酬的向量進行訓練。訓練損失函數設定為負對數成長率 -log(1 + w y)，並推導出梯度、解析對角 Hessian 與完整 Hessian 的封閉形式。",
+        "findings": "論文推導出梯度、解析對角 Hessian 與完整 Hessian 的封閉形式，並透過有限差分進行驗證，最終提供一個無外部相依性的參考引擎。未報告具體績效數字。",
+        "implication": "可用於直接將特徵條件化代入 Kelly 投資組合配置中，省去額外轉換損失函數的工程負擔。需要確保特徵品質與模型過擬合防範機制。",
+        "caveats": "未在真實市場資料上提供具體的夏普值或報酬率等實證表現。",
+        "practicality": 3,
+        "tags": [
+          "機器學習",
+          "投資組合配置",
+          "XGBoost",
+          "最適化"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.09880",
+      "title": "Financial Numerical Prediction and Allocation as Token Generation",
+      "authors": [
+        "Xu Ouyang",
+        "Moontae Lee"
+      ],
+      "abstract": "Financial prediction typically relies on task-specific regression, ranking, or policy heads, separating the language model from the numerical object ultimately evaluated. We investigate whether a causal language model can instead represent forecasts and decisions directly through constrained token generation. FinATOM introduces a unified, head-free interface for three-step stock-return forecasting and dynamic five-ETF allocation. The forecasting model autoregressively emits volatility-standardized return tokens and is trained with ordinal and ranking supervision followed by a one-epoch token-level policy stage. The allocation model generates normalized long-only weights; supervised fine-tuning imitates a causal mean--variance anchor, and DAPO-augmented GRPO optimizes realized 21-day Sharpe subject to anchor consistency. In 2023--2025 ETF tests, the allocation policy improves pooled gross Sharpe from 1.428 to 1.529 and net Sharpe under a 5-bp transaction-cost model from 1.394 to 1.494. The multimodal allocation input attains the highest three-period mean Sharpe of 1.540, with its clearest advantage in 2025. On FinTexTS, the SFT and policy strategies achieve 73.52\\%/2.68 and 73.72\\%/2.69 cumulative-return/Sharpe, respectively. These results support the feasibility of direct language-model token generation for financial numerical prediction and decision-making, while motivating broader tests across assets, regimes, and random seeds.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-08-10T17:33:10Z",
+      "updated": "2026-08-10T17:33:10Z",
+      "abs_url": "https://arxiv.org/abs/2608.09880",
+      "pdf_url": "https://arxiv.org/pdf/2608.09880v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 7,
+      "matched_keywords": [
+        "regime",
+        "stock"
+      ],
+      "relevance": 9,
+      "value": 8,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "將金融數值預測與資產配置轉化為語言模型代幣生成，實證完整且創新。",
+      "summary": {
+        "title_zh": "以 Token 生成進行金融數值預測與資產配置",
+        "verdict": "提出 FinATOM 架構，利用大型語言模型直接透過受限 token 生成進行報酬預測與資產配置，提升淨夏普值。",
+        "problem": "傳統金融預測仰賴特定任務的迴歸、排序或決策頭，將語言模型與最終評估的數值目標分離。",
+        "method": "使用因果語言模型，針對 3 步驟股票報酬預測與 5 檔 ETF 動態資產配置，結合順序與排序監督、策略階段以及 DAPO 增強的 GRPO 進行訓練，測試期間為 2023 至 2025 年。",
+        "findings": "在 2023 至 2025 年 ETF 測試中，在 5 基點交易成本模型下，配置策略將淨夏普值從 1.394 提升至 1.494，總夏普值從 1.428 提升至 1.529。多模態配置輸入達到最高的三個時期平均夏普值 1.540。",
+        "implication": "證明直接透過語言模型生成 token 進行金融數值預測與決策的可行性，適用於需要端到端處理的資產配置任務。",
+        "caveats": "需要更廣泛地跨資產、市場體制與隨機種子進行測試以驗證穩健性。",
+        "practicality": 4,
+        "tags": [
+          "語言模型",
+          "資產配置",
+          "強化學習",
+          "報酬預測"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.06137",
+      "title": "Unbiased Monte Carlo Greeks for Discontinuous Payoffs",
+      "authors": [
+        "Evgeny Lakshtanov"
+      ],
+      "abstract": "Pathwise differentiation of Monte Carlo estimators fails at payoff discontinuities, producing zero or biased sensitivities for barriers, autocallables, and digital options. The industry workaround --- smoothing the indicator functions --- introduces bias and requires per-product calibration. We derive a correction formula that restores unbiased Greeks without smoothing. For a payoff $F(Z,θ)$ that is piecewise smooth with discontinuities on surfaces $\\{g_i = 0\\}$, we show that the sensitivity decomposes into a pathwise term (computed by standard AAD) plus a sum of boundary corrections, each involving the payoff jump, the Gaussian density at the boundary, and the sensitivity of the boundary to the parameter. The correction is computed by Newton root-finding in the normal-random space, with the jump evaluated by two forward replays of the pricing kernel. The implementation uses AADC (\\texttt{pip install aadc}), whose tape replay and automatic discontinuity tracking make the method fully automatic --- the quant writes standard pricing code, and the correction driver identifies and handles all discontinuities. We prove the formula for arbitrary compositions of smooth functions and indicator functions (not just outer products), covering real autocallable payoff structures with recursive alive/dead logic. Benchmarks on QuantLib models (GBM, Heston, Hull-White) show all Greeks within 0.1--4\\% of analytic or bump-and-revalue references.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "q-fin.PR"
+      ],
+      "published": "2026-09-05T15:20:50Z",
+      "updated": "2026-10-05T09:58:38Z",
+      "abs_url": "https://arxiv.org/abs/2609.06137",
+      "pdf_url": "https://arxiv.org/pdf/2609.06137v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 7,
+      "matched_keywords": [],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "推導不連續支付函數的不偏蒙地卡羅 Greeks，實證完整且實用。",
+      "summary": {
+        "title_zh": "針對不連續收益的無偏蒙地卡羅 Greeks 計算",
+        "verdict": "提出一套無須平滑化的無偏 Greeks 修正公式，解決障礙選擇權等不連續問題。",
+        "problem": "蒙地卡羅估計器的路徑微分法在收益不連續時失效，會對障礙選擇權、自動提前出場與數位選擇權產生零值或有偏的敏感度。",
+        "method": "結合標準自動伴隨微分法的路徑項與邊界修正項，在常態隨機空間中以牛頓求根法計算邊界，並使用 AADC 進行自動化實作，測試於幾何布朗運動、Heston 與 Hull-White 模型。",
+        "findings": "基準測試顯示所有 Greeks 皆在分析解或有限差分參考值的 0.1% 至 4% 誤差範圍內，未報告具體交易績效數字。",
+        "implication": "量化研究員只需寫標準定價程式，透過 AADC 即可自動處理複雜自動提前出場結構的遞迴邏輯，適合直接整合進定價系統。",
+        "caveats": "邊界修正需要透過牛頓求根法與前向重放定價核心，計算成本可能較傳統平滑法高。",
+        "practicality": 4,
+        "tags": [
+          "蒙地卡羅模擬",
+          "衍生性商品定價",
+          "自動伴隨微分",
+          "風險敏感度"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.04087",
+      "title": "Global Multi-Maturity SPX-VIX Calibration Beyond Markovian Stitching",
+      "authors": [
+        "Atithi Acharya",
+        "Charlie Che",
+        "Yue Sun",
+        "Brandon Augustino",
+        "Shouvanik Chakrabarti",
+        "Shree Hari Sureshbabu"
+      ],
+      "abstract": "We develop a global martingale optimal transport framework for joint S&P 500 (SPX)-VIX smile calibration across multiple maturities, without the conditional independence that Markovian stitching imposes between months. We prove that exact local and global feasibility are equivalent, yet the stitched laws, which carry earlier months only through the current SPX level, can form a strict subset of the global ones, so adjacent smiles cannot identify the dependence across months. We show that relative entropy against the standard Markov reference selects the stitched law, so this dependence must be supplied deliberately. We supply it through a finite-memory reference, in which a latent autoregressive state drives the VIX levels while every VIX marginal stays exact, and calibrate the resulting law on a junction tree whose size grows linearly with the number of maturities. On market data with up to nine SPX maturities, a law with memory and a law without it fit the same quotes but price VIX-conditioned SPX Asian claims differently: on every calendar, memory makes a claim on the maximum VIX cheaper and a claim on the minimum VIX dearer. Varying the memory strength on one calendar moves these differences steadily from zero, so the vanilla quotes, which fix the law of each date, do not determine prices that depend on the joint law across dates.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP",
+        "math.OC",
+        "q-fin.MF"
+      ],
+      "published": "2026-09-03T16:54:16Z",
+      "updated": "2026-10-15T17:59:32Z",
+      "abs_url": "https://arxiv.org/abs/2609.04087",
+      "pdf_url": "https://arxiv.org/pdf/2609.04087v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 7,
+      "matched_keywords": [],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "開發跨期限 S&P 500 與 VIX 笑截面校準框架，應用市場資料實證。",
+      "summary": {
+        "title_zh": "超越馬可夫拼接的全域多天期 SPX-VIX 聯合校準",
+        "verdict": "提出基於全域鞅最佳化運輸的多天期 SPX-VIX 微笑曲線聯合校準框架，證明跨期相依性無法僅由相鄰選擇權定價決定。",
+        "problem": "傳統的馬可夫拼接假設月份間具備條件獨立性，無法正確捕捉多天期 SPX 與 VIX 之間的跨期相依性。",
+        "method": "利用有限記憶參考模型與潛在自我迴歸狀態來驅動 VIX 水準，並在隨到期日數量線性成長的 junction tree 上進行校準，使用涵蓋多達九個 SPX 到期日的真實市場資料進行實證。",
+        "findings": "具備記憶與不具備記憶的模型可以擬合相同的標準選擇權報價，但在對 VIX 條件式 SPX 亞洲選擇權進行定價時會產生差異，記憶模型會使最高 VIX 選擇權變便宜、最低 VIX 選擇權變貴。論文未報告具體夏普值或報酬等績效數字。",
+        "implication": "標準選擇權報價無法完全決定跨期聯合機率分佈下的衍生性商品價格，交易員在定價跨期路徑相依商品時必須顯式引入記憶參數。",
+        "caveats": "模型引入的記憶強度與潛在自我迴歸狀態需要透過額外假設或調整來決定，無法純粹由標準選擇權報價唯一確定。",
+        "practicality": 3,
+        "tags": [
+          "最佳化運輸",
+          "選擇權定價",
+          "波動率",
+          "跨期相依"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.29423",
+      "title": "Improving Swaption Calibration in Factor HJM Stochastic Volatility Models: A First-Order Correction to Frozen Swap-Rate Loadings",
+      "authors": [
+        "Bram Brongers"
+      ],
+      "abstract": "The factor HJM stochastic volatility model introduced by Sepp and Rakhmonov (2025) obtains tractable swaption pricing by freezing the nonlinear swap-rate loading along a deterministic expected-state path. This removes the dependence of conditional swap-rate variance on the current yield-curve state. We introduce a first-order Taylor correction to the loading that adds no calibration parameters. Conditional on retaining the frozen annuity-measure drift, we show that the first variation of the swap-rate transform is affine in the centered rate states and reduces to one-dimensional equations in volatility. For quadratic-drift lognormal stochastic volatility, these equations yield a finite-dimensional ODE representation and a direct log-volatility formulation. Calibrations to independently generated nonlinear-model prices show substantially lower stochastic volatility parameter bias and held-out pricing error, with only modest changes in local calibration identifiability.",
+      "primary_category": "q-fin.CP",
+      "categories": [
+        "q-fin.CP"
+      ],
+      "published": "2026-08-29T20:01:54Z",
+      "updated": "2026-08-29T20:01:54Z",
+      "abs_url": "https://arxiv.org/abs/2608.29423",
+      "pdf_url": "https://arxiv.org/pdf/2608.29423v1",
+      "comment": "38 pages, code available at https://github.com/quaere-verum/FHJM-SV-Calibration",
+      "journal_ref": "",
+      "keyword_score": 7,
+      "matched_keywords": [],
+      "relevance": 8,
+      "value": 8,
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance_reason": "改進因子 HJM 模型中交換期權校準的修正方法，提供開源程式碼。",
+      "summary": {
+        "title_zh": "改善因子 HJM 隨機波動度模型的遠期交換選擇權校準：對凍結交換利率負荷的一階修正",
+        "verdict": "針對 HJM 隨機波動度模型的凍結負荷提出一階泰勒修正，大幅降低參數偏差與定價誤差。",
+        "problem": "現有 HJM 隨機波動度模型為求易於處理，將非線性交換利率負荷沿著決定性預期狀態路徑凍結，導致條件交換利率變異數無法反映當前殖利率曲線狀態。",
+        "method": "引入對負荷的一階泰勒修正，不增加額外校準參數。適用於二次飄移對數常態隨機波動度模型，透過有限維度常微分方程式進行。",
+        "findings": "對獨立產生的非線性模型價格進行校準，顯示隨機波動度參數偏差與保留樣本的定價誤差皆大幅降低，且僅對區域校準可識別性產生微幅改變。",
+        "implication": "此修正可在不增加參數複雜度的前提下提升選擇權定價準確度，適合應用於利率衍生性商品的定價與校準流程。",
+        "caveats": "僅在保留凍結年金衡量標準飄移的條件下驗證。",
+        "practicality": 4,
+        "tags": [
+          "利率衍生性商品",
+          "隨機波動度",
+          "模型校準",
+          "HJM 模型"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.17481",
+      "title": "A generic nonparametric value-at-risk estimator for high dimensions",
+      "authors": [
+        "Siyuan Sun"
+      ],
+      "abstract": "We present in this article a non-parametric value-at-risk (VaR+CVaR) algorithm that remains accurate for an arbitrarily large number of underlying positions. The algorithm solves the two inherent problems of VaR estimation. First, past history is not directly applicable to the future, but all predictions of the future are based on the past. Second, VaR estimation is equivalent to modeling a single corner of a high-dimensional space (the corner where all bets lose simultaneously). The algorithm only uses mathematical methods that strictly do not degrade in accuracy at high-dimensions. Historical data are then directly incorporated with all high-dimensional relationships present, without manipulation. We test the algorithm with an ensemble of 500 portfolios with random positions across 49 distinct liquid futures of different expiries (VIX, equity indexes, gov. bonds, rates, energy, metals, livestock, agriculture, and softs). All VaR estimations are performed strictly blind to the future. The median portfolio rate of loss exceeding the 99% confidence daily VaR estimate is between $1.0\\pm0.1$% depending on algorithm input parameters. 68% of portfolios have a rate of loss exceeding 99% VaR between $1.0\\pm0.3$%, and 95% of portfolios between $1.0\\pm0.5$%.",
+      "primary_category": "q-fin.RM",
+      "categories": [
+        "q-fin.RM"
+      ],
+      "published": "2026-08-18T08:10:34Z",
+      "updated": "2026-08-18T08:10:34Z",
+      "abs_url": "https://arxiv.org/abs/2608.17481",
+      "pdf_url": "https://arxiv.org/pdf/2608.17481v1",
+      "comment": "Published in the Journal of Risk (2026)",
+      "journal_ref": "(2026) Journal of Risk 28(4), 1-31",
+      "keyword_score": 7,
+      "matched_keywords": [
+        "futures"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出適用於高維度的通用非母數 VaR 估計器，已刊登於 Journal of Risk。",
+      "summary": {
+        "title_zh": "高維度下的通用非母數風險值估計模型",
+        "verdict": "提出能處理高維度資產組合的非母數 VaR 與 CVaR 估計演算法，實證顯示能精準控制尾端風險。",
+        "problem": "歷史資料無法直接對應未來，且高維度空間中同時虧損的極端尾端風險難以有效建模。",
+        "method": "採用嚴格不隨維度增加而降低精準度的數學方法，結合歷史資料與高維度相關性。測試樣本包含 49 種流動性期貨商品所組成的 500 個隨機部位投資組合，資料頻率為日頻。",
+        "findings": "中位數投資組合超過 99% 信心水準日 VaR 估計值的虧損率介於 1.0±0.1%；68% 的投資組合超額虧損率在 1.0±0.3% 之間，95% 的投資組合在 1.0±0.5% 之間。",
+        "implication": "可用於多資產部位的即時風險控管，在不依賴參數假設下提供穩健的尾端風險預估。",
+        "caveats": "隨機投資組合的實證結果可能無法完全反映真實市場中的極端流動性枯竭情境。",
+        "practicality": 4,
+        "tags": [
+          "風險值",
+          "條件風險值",
+          "非母數估計",
+          "高維度統計"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2608.15667",
+      "title": "Scalable Pontryagin-Guided Adjoint-to-Control Recovery for Constrained Dynamic Portfolio Choice",
+      "authors": [
+        "Jaegi Jeon",
+        "Jeonggyu Huh",
+        "Hyeng Keun Koo",
+        "Byung Hwa Lim"
+      ],
+      "abstract": "We study continuous-time multi-asset portfolio choice and consumption under smooth pointwise constraints, including state-dependent feasible sets. The method separates dynamic information acquisition from local constrained recovery. A pointwise-feasible neural actor generates reference rollouts; after training, its realized latent outputs are frozen and first- and second-order adjoints are harvested from a fixed-latent open-loop backpropagation-through-time graph. Feedback therefore generates the reference trajectory without restricting the adjoint formulation to Markov controls. Conditional on the harvested adjoints, deployment solves a local generalized Pontryagin-Hamiltonian problem: quadratic-affine portfolio blocks are recovered exactly by a quadratic program, while a log barrier approximates more general regular KKT branches. We establish local chart representations, an OL-BPTT-to-adjoint correspondence retaining orthogonal martingale residuals, and an end-to-end bound from reference value loss and numerical errors to recovered-policy and local QP-gap errors. Analytical constant- and predictable-opportunity benchmarks validate the adjoints. Common-input experiments show that recovery reduces residual PMP/KKT error left by finite-budget direct policy optimization, including under a state-dependent consumption cap and with up to 100 risky assets. Scalability concerns the constrained action block rather than dimension-free state-space complexity.",
+      "primary_category": "q-fin.PM",
+      "categories": [
+        "q-fin.PM",
+        "math.OC",
+        "q-fin.MF"
+      ],
+      "published": "2026-08-16T10:16:33Z",
+      "updated": "2026-08-31T07:06:34Z",
+      "abs_url": "https://arxiv.org/abs/2608.15667",
+      "pdf_url": "https://arxiv.org/pdf/2608.15667v3",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 7,
+      "matched_keywords": [],
+      "relevance": 8,
+      "value": 8,
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance_reason": "研究受限動態投資組合選擇的伴隨控制恢復法，數學推導與實證皆備。",
+      "summary": {
+        "title_zh": "具備可擴展性的龐特里亞金引導之有條件動態投資組合選擇控制恢復",
+        "verdict": "提出結合神經網路與龐特里亞金極大化原理的動態投資組合方法，能有效處理多資產與複雜限制條件。",
+        "problem": "在具有平滑逐點限制與狀態相依可行集的連續時間多資產投資組合選擇中，如何兼顧動態資訊獲取與區域限制恢復的計算效率。",
+        "method": "使用神經網路生成參考軌跡，並利用反向傳播圖提取一階與二階伴隨變數；部署時透過區域廣義龐特里亞金-漢彌爾頓問題求解，應用於高達 100 種風險資產的實驗。",
+        "findings": "實驗顯示此恢復方法能減少有限預算直接政策最佳化所殘留的 PMP/KKT 誤差，且適用於具備狀態相依消費上限與高達 100 種風險資產的情境，論文未報告具體夏普值或報酬數字。",
+        "implication": "可用於需要嚴格滿足動態限制與大規模資產配置的量化投資策略，有助於降低直接最佳化的殘餘誤差。",
+        "caveats": "擴展性的瓶頸在於受限制的動作區塊而非狀態空間的維度複雜度。",
+        "practicality": 3,
+        "tags": [
+          "動態投資組合",
+          "神經網路",
+          "最佳化",
+          "資產配置"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2607.10810",
+      "title": "Diachronic Sample Integration: Robust Tail-Risk Estimation with Generative Models",
+      "authors": [
+        "Shuning Zhao",
+        "Patrick Wong",
+        "Leran Zhang",
+        "Xiaolin Hu"
+      ],
+      "abstract": "Deep generative models are increasingly used as simulators for downstream decision-making under data scarcity, but in risk-sensitive applications their usefulness depends on rare adverse scenarios rather than typical samples. Standard generative objectives prioritize bulk distributional fidelity, leaving low-probability tails vulnerable to localized optimization noise and making tail-dependent functionals unstable under finite simulation budgets. We introduce Diachronic Sample Integration (DSI), a test-time inference framework that ensembles generated samples across checkpoints from a stochastic training trajectory. DSI targets a checkpoint-mixture distribution that averages checkpoint-specific tail fluctuations rather than relying on a single brittle endpoint. We formalize this mechanism through a finite-budget bias-variance theory. Empirically, across multivariate synthetic processes and high-frequency trading data, DSI substantially reduces tail-estimation error compared to single-checkpoint baselines under fixed simulation budgets, outperforming standard diffusion and state-of-the-art tail-aware baselines without modifying the generative objective.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "q-fin.RM"
+      ],
+      "published": "2026-07-12T15:45:23Z",
+      "updated": "2026-07-12T15:45:23Z",
+      "abs_url": "https://arxiv.org/abs/2607.10810",
+      "pdf_url": "https://arxiv.org/pdf/2607.10810v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 7,
+      "matched_keywords": [
+        "high-frequency"
+      ],
+      "relevance": 8,
+      "value": 8,
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance_reason": "提出雙時序樣本整合以改善生成模型的尾部風險估計，高頻交易資料實證扎實。",
+      "summary": {
+        "title_zh": "歷時性樣本整合：以生成式模型進行穩健的尾部風險估計",
+        "verdict": "提出歷時性樣本整合（DSI）框架，結合隨機訓練軌跡中的多個檢查點來降低尾部風險估計誤差。",
+        "problem": "標準生成式模型偏重整體分佈的擬合，導致低機率的尾部風險容易受到區域最佳化雜訊影響，在有限模擬預算下使尾部相依函數不穩定。",
+        "method": "使用測試時推論框架 DSI，對隨機訓練軌跡中不同檢查點所生成的樣本進行集成，平均各檢查點的尾部波動。實證涵蓋多元合成過程與高頻交易資料。",
+        "findings": "在固定模擬預算下，DSI 顯著降低了尾部估計誤差，表現優於標準擴散模型與現有的尾部感知基準模型，但原文未報告具體的報酬或夏普值數字。",
+        "implication": "可用於改善風險敏感應用中的尾部風險估計，且不需修改原有的生成式目標函數，能直接應用於現有的模型架構。",
+        "caveats": "需要額外保留並組合多個訓練檢查點的樣本，增加了推論時的計算與儲存開銷。",
+        "practicality": 4,
+        "tags": [
+          "尾部風險",
+          "生成式模型",
+          "高頻交易",
+          "風險管理"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.35359",
+      "title": "From Cointegration to Out-of-Sample Failure: A Pairs-Trading Case Study on PEP-KO",
+      "authors": [
+        "Davide Graziano"
+      ],
+      "abstract": "This paper examines whether a cointegration-based pairs trading strategy between PepsiCo and The Coca-Cola Company is statistically robust and economically exploitable. We first test for cointegration and estimate the spread's mean-reversion dynamics over 2013-2018, then hold these statistical parameters fixed and optimise a threshold-based trading strategy in-sample over 2018-2023. Robustness is assessed through transaction-cost and parameter sensitivity tests, walk-forward validation, and Adjusted and Deflated Sharpe Ratios. The strategy is then evaluated out-of-sample from 2023 to the present, including an analysis of time-varying hedge ratios using rolling OLS and a Kalman filter. The results show that weakening mean-reversion dynamics in the spread undermine the effectiveness of the strategy out-of-sample.",
+      "primary_category": "q-fin.ST",
+      "categories": [
+        "q-fin.ST"
+      ],
+      "published": "2026-09-28T15:06:47Z",
+      "updated": "2026-09-28T15:06:47Z",
+      "abs_url": "https://arxiv.org/abs/2609.35359",
+      "pdf_url": "https://arxiv.org/pdf/2609.35359v1",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 40,
+      "matched_keywords": [
+        "trading strategy",
+        "sharpe ratio",
+        "pairs trading",
+        "out-of-sample"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance_reason": "探討配對交易樣本外失效原因，實證務實",
+      "summary": {
+        "title_zh": "從共整合到樣本外失效：PEP-KO 配對交易個案研究",
+        "verdict": "PEP-KO 配對交易策略在樣本外失效，主因是價差均值回歸特性減弱。",
+        "problem": "探討基於共整合的百事與可口可樂配對交易策略是否具備統計穩健性與經濟開採價值。",
+        "method": "利用 2013-2018 年資料檢驗共整合並估計價差的均值回歸動態，在 2018-2023 年樣本內最佳化閾值策略，並透過調整後與平減後 Sharpe 進行評估，樣本外則使用滾動 OLS 與 Kalman 濾波器分析。",
+        "findings": "未報告具體績效數字。研究發現價差的均值回歸動態減弱，直接破壞了策略在樣本外的有效性。",
+        "implication": "實務上若遇到資產間共整合關係與均值回歸特性減弱時，靜態參數策略將難以獲利，需注意動態調整避險比例。",
+        "caveats": "策略在樣本外失效，且文中未提供具體的報酬率或 Sharpe 改善數字。",
+        "practicality": 2,
+        "tags": [
+          "配對交易",
+          "共整合",
+          "統計套利",
+          "Kalman 濾波器"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    },
+    {
+      "arxiv_id": "2609.37963",
+      "title": "Not All LPs Are Equal: The Active-Passive Gap in Automated Market Maker Liquidity Provision",
+      "authors": [
+        "Agathe Sadeghi",
+        "Dingyue Liu",
+        "Ciamac Moallemi",
+        "Xin Wan",
+        "Brian Zhu"
+      ],
+      "abstract": "Liquidity provision in automated market makers is typically analyzed at the pool level, implicitly assuming LP homogeneity. This aggregate view can hide how liquidity provision outcomes differ between LP strategies, particularly as concentrated liquidity AMM designs operating on high-performance blockchains allow liquidity to be actively repositioned around trades. We develop a markout-based framework to decompose Uniswap LP profitability into active and passive components using two complementary methods: a LIFO subtraction method that matches short-lived mint-burn positions and attributes swap-level markouts by liquidity share; and an infinitesimal LP benchmark that estimates the performance of a fully passive, always-in-range marginal LP directly from the AMM price path. We apply these methods to Uniswap v2, v3, and v4 pools on Ethereum, Arbitrum, and Base chains, and find passive profitability can materially differ from aggregate pool profitability. In Uniswap v2, with liquidity distributed evenly and active LP behavior nearly absent, the overall and passive markouts are almost the same. In contrast, concentrated-liquidity pools have a systematic active-passive gap: passive LPs tend to underperform aggregate pool-level measures. The gap is wider on Ethereum than on L2s, consistent with active liquidity provision being more useful when block times and ordering conditions allow LPs to react to incoming flow. In general, passive LPs perform better on higher fee pools. The LIFO and infinitesimal estimates are generally consistent directionally across most pools, providing evidence of the robustness of the decomposition. The results suggest that adverse selection in AMMs is not evenly distributed among LPs, with important implications for LP strategy, fee-tier design and measurement of DEX market quality.",
+      "primary_category": "q-fin.TR",
+      "categories": [
+        "q-fin.TR"
+      ],
+      "published": "2026-09-29T16:34:10Z",
+      "updated": "2026-10-05T18:21:13Z",
+      "abs_url": "https://arxiv.org/abs/2609.37963",
+      "pdf_url": "https://arxiv.org/pdf/2609.37963v2",
+      "comment": "",
+      "journal_ref": "",
+      "keyword_score": 34,
+      "matched_keywords": [
+        "market maker",
+        "liquidity"
+      ],
+      "relevance": 8,
+      "value": 7,
+      "topic": "造市與微結構",
+      "evidence": "真實市場資料",
+      "relevance_reason": "標記法分解 AMM 流動性提供者主被動盈虧落差",
+      "summary": {
+        "title_zh": "並非所有 LP 皆平等：自動化造市商流動性提供中的主動與被動差距",
+        "verdict": "提出標記框架將 AMM 流動性提供者拆解為主動與被動績效，發現集中流動性池存在系統性的主動-被動落差。",
+        "problem": "傳統 AMM 分析常假設流動性提供者具同質性，忽略了支援動態調整的集中流動性設計中，主動與被動策略的實際盈虧差異。",
+        "method": "使用基於標記的框架與兩種互補方法（LIFO 減法與微量 LP 基準），分析 Ethereum、Arbitrum 與 Base 鏈上 Uniswap v2、v3 與 v4 池的交易資料。",
+        "findings": "在 Uniswap v2 中整體與被動表現一致，但在集中流動性池中存在系統性差距，被動 LP 表現往往落後於整體池水準；以太坊上的差距大於 L2，且被動 LP 在較高費率池中表現較佳，論文未報告具體績效數字。",
+        "implication": "顯示 AMM 中的逆向選擇並未均勻分布，對 LP 策略、費率級別設計與 DEX 市場品質衡量有重要意涵，可用於評估真實流動性成本。",
+        "caveats": "拆解主動與被動盈虧的方法依賴標記框架與理論假設，其實際應用效果受限於特定估算模型。",
+        "practicality": 3,
+        "tags": [
+          "自動化造市商",
+          "去中心化金融",
+          "流動性提供",
+          "市場微結構",
+          "逆向選擇"
+        ],
+        "ok": true,
+        "source": "abstract"
+      }
+    }
+  ]
+}
