@@ -1,0 +1,327 @@
+{
+  "date": "2026-11-28",
+  "rubric": 1,
+  "model": "gemini-3.5-flash-lite",
+  "scores": [
+    {
+      "arxiv_id": "2607.06204",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提出無套利風險中立邊際分佈的顯式建構法"
+    },
+    {
+      "arxiv_id": "2606.30040",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 7,
+      "reason": "利用預測市場價格分析總經信念分佈"
+    },
+    {
+      "arxiv_id": "2606.27455",
+      "topic": "其他",
+      "evidence": "理論或工具",
+      "relevance": 3,
+      "value": 6,
+      "reason": "提出有向網路拓樸推斷演算法，具備數值驗證"
+    },
+    {
+      "arxiv_id": "2606.27100",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "評估金融時間序列基礎模型，優勢微弱"
+    },
+    {
+      "arxiv_id": "2606.26835",
+      "topic": "投組與風險",
+      "evidence": "只有模擬資料",
+      "relevance": 4,
+      "value": 5,
+      "reason": "研究價格風險歸因的階三障礙，僅用合成資料"
+    },
+    {
+      "arxiv_id": "2606.23510",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提供百慕達交換選擇權的解析定價公式"
+    },
+    {
+      "arxiv_id": "2606.20977",
+      "topic": "其他",
+      "evidence": "理論或工具",
+      "relevance": 3,
+      "value": 6,
+      "reason": "提供金融預測與隨機動態的統一數學框架"
+    },
+    {
+      "arxiv_id": "2606.19052",
+      "topic": "投組與風險",
+      "evidence": "只有模擬資料",
+      "relevance": 4,
+      "value": 5,
+      "reason": "提出信貸風險壓力測試的整合模擬框架"
+    },
+    {
+      "arxiv_id": "2606.13618",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "提出目標日期基金的 CVaR 衰減路徑框架"
+    },
+    {
+      "arxiv_id": "2606.12717",
+      "topic": "波動度與衍生品",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提出波動度曲面模型的無套利混合插值法"
+    },
+    {
+      "arxiv_id": "2606.11318",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 6,
+      "reason": "研究含學習與模型模糊的均異最佳化"
+    },
+    {
+      "arxiv_id": "2606.08797",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "結合拉格朗日分解擴展決策導向學習"
+    },
+    {
+      "arxiv_id": "2606.01131",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 3,
+      "value": 7,
+      "reason": "分析真實世界資產代幣化的實際流動性"
+    },
+    {
+      "arxiv_id": "2605.30610",
+      "topic": "其他",
+      "evidence": "理論或工具",
+      "relevance": 0,
+      "value": 5,
+      "reason": "應用於分子設計的受限流動最佳化"
+    },
+    {
+      "arxiv_id": "2605.29689",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "建立代幣化真實資產的可解釋風險評分框架"
+    },
+    {
+      "arxiv_id": "2605.29102",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 8,
+      "reason": "提出低延遲黑修斯隱含波動度求解器"
+    },
+    {
+      "arxiv_id": "2606.11223",
+      "topic": "回測與研究方法",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 6,
+      "reason": "提出具記憶之情境限制的自動機驗證框架"
+    },
+    {
+      "arxiv_id": "2605.27658",
+      "topic": "其他",
+      "evidence": "理論或工具",
+      "relevance": 3,
+      "value": 6,
+      "reason": "梳理資產定價中機率測度的歷史發展"
+    },
+    {
+      "arxiv_id": "2605.26508",
+      "topic": "其他",
+      "evidence": "理論或工具",
+      "relevance": 3,
+      "value": 6,
+      "reason": "為自主 AI 代理建立時間一致的精算執行層"
+    },
+    {
+      "arxiv_id": "2605.22892",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 3,
+      "value": 6,
+      "reason": "實證評估 TabPFN 在保險定價的表現"
+    },
+    {
+      "arxiv_id": "2605.06570",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出平滑神經伴隨政策最佳化，支援可微分模擬"
+    },
+    {
+      "arxiv_id": "2605.05140",
+      "topic": "波動度與衍生品",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提供期權帽波動度剝離的實務工作流程"
+    },
+    {
+      "arxiv_id": "2605.02666",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 6,
+      "reason": "提出波動度不確定下的柏拉圖前緣投資組合"
+    },
+    {
+      "arxiv_id": "2605.02974",
+      "topic": "其他",
+      "evidence": "真實市場資料",
+      "relevance": 2,
+      "value": 6,
+      "reason": "建立預測新創融資的基準資料集"
+    },
+    {
+      "arxiv_id": "2604.27700",
+      "topic": "交易執行",
+      "evidence": "真實市場資料",
+      "relevance": 8,
+      "value": 7,
+      "reason": "提出再生能源日內電力交易的隨機最佳控制"
+    },
+    {
+      "arxiv_id": "2604.27287",
+      "topic": "Alpha 與因子",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "解釋槓桿 ETF 異常現象，歸因於協方差"
+    },
+    {
+      "arxiv_id": "2604.25406",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出基於模體的風險溢出分解框架"
+    },
+    {
+      "arxiv_id": "2604.23087",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 6,
+      "reason": "研究創投組合中相關性驅動的尾部風險"
+    },
+    {
+      "arxiv_id": "2604.20147",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出強健分佈外隨機最佳化與泛化保證"
+    },
+    {
+      "arxiv_id": "2604.19290",
+      "topic": "其他",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 7,
+      "reason": "提出 NSS 利率曲線模型的正交重新參數化"
+    },
+    {
+      "arxiv_id": "2604.17579",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 6,
+      "value": 7,
+      "reason": "推導 DeFi 借貸金庫的可衡量信用風險指標"
+    },
+    {
+      "arxiv_id": "2604.15463",
+      "topic": "投組與風險",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "結合自由能熵對偶性與風險敏感投資管理"
+    },
+    {
+      "arxiv_id": "2604.08180",
+      "topic": "其他",
+      "evidence": "理論或工具",
+      "relevance": 3,
+      "value": 7,
+      "reason": "全面綜述金融量子計算之應用與挑戰"
+    },
+    {
+      "arxiv_id": "2604.07159",
+      "topic": "回測與研究方法",
+      "evidence": "真實市場資料",
+      "relevance": 7,
+      "value": 7,
+      "reason": "提出結合薛丁格-巴斯橋的合成時間序列生成"
+    },
+    {
+      "arxiv_id": "2604.05398",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "提出連續時間跳躍擴散控制的演員-評論家框架"
+    },
+    {
+      "arxiv_id": "2604.04649",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "研究阿爾法強健效用最大化與分位數最佳化"
+    },
+    {
+      "arxiv_id": "2604.00389",
+      "topic": "波動度與衍生品",
+      "evidence": "只有模擬資料",
+      "relevance": 5,
+      "value": 6,
+      "reason": "提出量子計算機定價回看選擇權的變分演算法"
+    },
+    {
+      "arxiv_id": "2603.27370",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 8,
+      "reason": "回顧與擴展最佳化中的風險四邊形理論"
+    },
+    {
+      "arxiv_id": "2603.27274",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 6,
+      "value": 7,
+      "reason": "研究金融網路中帶預算限制的強健干預設計"
+    },
+    {
+      "arxiv_id": "2603.26901",
+      "topic": "投組與風險",
+      "evidence": "理論或工具",
+      "relevance": 5,
+      "value": 7,
+      "reason": "提出偏置均值迴歸與風險四邊形的聯繫"
+    }
+  ]
+}
